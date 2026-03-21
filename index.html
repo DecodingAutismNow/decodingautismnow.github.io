@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biology of Autism — Decoding Autism Now</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:        #0f2342;
+    --teal:        #1e6b72;
+    --teal-light:  #2a9da6;
+    --gold:        #c8923a;
+    --gold-light:  #e8b86d;
+    --cream:       #faf7f2;
+    --warm-white:  #ffffff;
+    --text-dark:   #1a1a2e;
+    --text-mid:    #3d4560;
+    --text-light:  #6b7494;
+    --rule:        #d8cfc4;
+    --accent-bg:   #eef8f9;
+    --gold-bg:     #fdf6ec;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  /* ── MASTHEAD ── */
+  .masthead { position: sticky; top: 0; z-index: 100; background: var(--navy); padding: 10px 28px; border-bottom: 3px solid var(--gold); }
+  .masthead-inner { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .masthead-brand { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal-light); }
+  .masthead-title { font-family: 'Source Serif 4', serif; font-size: 14px; font-weight: 600; color: white; margin-top: 2px; }
+
+  /* ── HERO ── */
+  .site-header { background: var(--navy); color: #fff; position: relative; overflow: hidden; }
+  .header-stripe { height: 5px; background: linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%); }
+  .header-inner { max-width: 960px; margin: 0 auto; padding: 64px 44px 60px; position: relative; z-index: 1; }
+
+  .brand-line {
+    font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--teal-light); margin-bottom: 20px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .brand-line::after { content: ''; display: block; height: 1px; width: 60px; background: var(--teal-light); opacity: 0.45; }
+
+  .hero-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 700; line-height: 1.12; color: #fff; margin-bottom: 20px;
+  }
+  .hero-title em { color: var(--gold-light); font-style: italic; }
+
+  .hero-sub {
+    font-family: 'Source Serif 4', serif; font-style: italic; font-weight: 300;
+    font-size: 1.15rem; color: rgba(255,255,255,0.65); max-width: 620px; line-height: 1.6; margin-bottom: 32px;
+  }
+
+  .hero-stats {
+    display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px;
+  }
+  .stat-pill {
+    font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--teal-light);
+    background: rgba(42,157,166,0.12); border: 1px solid rgba(42,157,166,0.35);
+    border-radius: 4px; padding: 5px 14px;
+  }
+
+  .header-deco {
+    position: absolute; right: -80px; top: -80px;
+    width: 420px; height: 420px; border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.04); pointer-events: none;
+  }
+  .header-deco::after {
+    content: ''; position: absolute; inset: 40px; border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.03);
+  }
+
+  /* ── FRAMEWORK NOTICE ── */
+  .framework-notice { background: #fffbf2; border-top: 1px solid rgba(200,146,58,0.25); border-bottom: 1px solid rgba(200,146,58,0.25); }
+  .framework-notice-inner { max-width: 960px; margin: 0 auto; padding: 20px 44px; display: flex; gap: 16px; align-items: flex-start; }
+  .notice-icon {
+    flex-shrink: 0; margin-top: 2px; width: 20px; height: 20px; border-radius: 50%;
+    background: rgba(200,146,58,0.15); border: 1px solid rgba(200,146,58,0.4);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; color: var(--gold); line-height: 1;
+  }
+  .notice-text { font-family: 'Source Serif 4', serif; font-size: 0.875rem; color: #6b5a3a; line-height: 1.65; }
+  .notice-text strong { color: #4a3a1e; font-weight: 600; }
+
+  /* ── MAIN ── */
+  .main-wrap { max-width: 960px; margin: 0 auto; padding: 60px 44px 100px; }
+
+  /* ── INTRO ── */
+  .intro-block { margin-bottom: 64px; }
+  .intro-block p { color: var(--text-mid); font-size: 1.05rem; line-height: 1.85; margin-bottom: 16px; max-width: 760px; }
+  .intro-block p:last-child { margin-bottom: 0; }
+  .intro-block strong { color: var(--navy); font-weight: 600; }
+
+  /* ── SECTION DIVIDER ── */
+  .section-divider {
+    display: flex; align-items: center; gap: 14px; margin: 0 0 44px;
+  }
+  .section-divider span {
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--text-light); white-space: nowrap;
+  }
+  .section-divider::before, .section-divider::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+
+  /* ── DOCUMENT CARDS ── */
+  .doc-grid { display: flex; flex-direction: column; gap: 16px; margin-bottom: 64px; }
+
+  .doc-card {
+    background: var(--warm-white); border: 1px solid var(--rule); border-radius: 8px;
+    padding: 0; overflow: hidden; position: relative;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    text-decoration: none; display: flex;
+  }
+  .doc-card:hover { border-color: rgba(42,157,166,0.5); box-shadow: 0 4px 20px rgba(15,35,66,0.08); }
+
+  .doc-card-accent {
+    width: 4px; flex-shrink: 0;
+    background: linear-gradient(180deg, var(--teal), var(--teal-light));
+  }
+  .doc-card-accent.gold { background: linear-gradient(180deg, var(--gold), var(--gold-light)); }
+  .doc-card-accent.navy { background: linear-gradient(180deg, var(--navy), #1a3a6e); }
+  .doc-card-accent.teal-gold { background: linear-gradient(180deg, var(--teal), var(--gold)); }
+
+  .doc-card-body { padding: 22px 26px; flex: 1; }
+
+  .doc-card-num {
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--text-light); margin-bottom: 6px;
+  }
+
+  .doc-card-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.1rem; font-weight: 700; color: var(--navy);
+    line-height: 1.25; margin-bottom: 8px;
+  }
+  .doc-card:hover .doc-card-title { color: var(--teal); }
+
+  .doc-card-desc {
+    font-size: 0.9rem; color: var(--text-light); line-height: 1.65; margin-bottom: 12px;
+  }
+
+  .doc-card-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .doc-tag {
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.04em;
+    background: rgba(30,107,114,0.07); color: var(--teal);
+    border: 1px solid rgba(30,107,114,0.2); border-radius: 3px; padding: 2px 8px;
+  }
+  .doc-tag.gold { background: rgba(200,146,58,0.08); color: #8a5c1a; border-color: rgba(200,146,58,0.25); }
+
+  .doc-card-arrow {
+    display: flex; align-items: center; padding: 0 24px;
+    color: var(--rule); font-size: 1.2rem; flex-shrink: 0;
+    transition: color 0.2s, transform 0.2s;
+  }
+  .doc-card:hover .doc-card-arrow { color: var(--teal-light); transform: translateX(4px); }
+
+  /* ── HOW TO USE ── */
+  .how-box {
+    background: var(--navy); border-radius: 8px; padding: 36px 40px; margin-bottom: 64px;
+    position: relative; overflow: hidden;
+  }
+  .how-box::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+    background: linear-gradient(180deg, var(--teal-light), var(--gold));
+  }
+  .how-box-label {
+    font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--teal-light); margin-bottom: 14px;
+  }
+  .how-box h2 {
+    font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700;
+    color: #fff; margin-bottom: 20px; line-height: 1.25;
+  }
+  .how-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+  @media (max-width: 680px) { .how-grid { grid-template-columns: 1fr; } }
+
+  .how-item { }
+  .how-num {
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em;
+    color: var(--gold-light); margin-bottom: 6px;
+  }
+  .how-item p { font-size: 0.88rem; color: rgba(255,255,255,0.72); line-height: 1.65; }
+  .how-item strong { color: rgba(255,255,255,0.92); font-weight: 600; }
+
+  /* ── FOOTER ── */
+  .site-footer { background: var(--navy); }
+  .footer-stripe { height: 3px; background: linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%); }
+  .footer-inner { max-width: 960px; margin: 0 auto; padding: 44px 44px 36px; }
+  .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap; }
+  .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: rgba(255,255,255,0.92); margin-bottom: 6px; }
+  .footer-tagline { font-family: 'Source Serif 4', serif; font-style: italic; font-weight: 300; font-size: 0.88rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
+  .footer-channels { display: flex; flex-direction: column; gap: 10px; }
+  .footer-channels-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 2px; }
+  .footer-channel-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: rgba(255,255,255,0.65); font-size: 0.88rem; transition: color 0.15s; }
+  .footer-channel-link:hover { color: var(--teal-light); }
+  .ch-icon { width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: rgba(255,0,0,0.18); }
+  .footer-bottom { padding-top: 24px; display: flex; flex-direction: column; gap: 8px; }
+  .footer-disclaimer { font-family: 'Source Serif 4', serif; font-style: italic; font-size: 0.8rem; color: rgba(255,255,255,0.35); max-width: 700px; line-height: 1.6; }
+  .footer-meta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.2); margin-top: 4px; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 680px) {
+    .header-inner, .framework-notice-inner, .main-wrap, .footer-inner { padding-left: 24px; padding-right: 24px; }
+    .hero-title { font-size: 2rem; }
+    .doc-card-arrow { display: none; }
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  .hero-title { animation: fadeUp 0.6s 0.1s ease both; }
+  .hero-sub { animation: fadeUp 0.6s 0.2s ease both; }
+  .hero-stats { animation: fadeUp 0.6s 0.3s ease both; }
+</style>
+</head>
+<body>
+
+<nav class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <div class="masthead-brand">Decoding Autism Now</div>
+      <div class="masthead-title">Biology of Autism — Document Suite</div>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HEADER ═══ -->
+<header class="site-header">
+  <div class="header-stripe"></div>
+  <div class="header-inner">
+    <div class="header-deco"></div>
+    <p class="brand-line">Decoding Autism Now</p>
+    <h1 class="hero-title">Biology of Autism —<br><em>The Complete Suite</em></h1>
+    <p class="hero-sub">A systems-biology framework explaining autism as a cascade of interconnected biological events — from upstream immune and metabolic pressures to the neural architecture that shapes behavior.</p>
+    <div class="hero-stats">
+      <span class="stat-pill">10 documents</span>
+      <span class="stat-pill">Over 60 citations</span>
+      <span class="stat-pill">3 audiences</span>
+      <span class="stat-pill">Free to share</span>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ FRAMEWORK NOTICE ═══ -->
+<aside class="framework-notice" role="note">
+  <div class="framework-notice-inner">
+    <div class="notice-icon">i</div>
+    <p class="notice-text">
+      <strong>Theoretical framework — not clinical guidance.</strong>
+      The ASD Cascade is a systems-biology model integrating peer-reviewed findings into a proposed mechanistic map. Individual components are supported by published research; the full integrated cascade has not been validated as a unified model in large clinical trials. All intervention decisions require qualified clinical oversight.
+    </p>
+  </div>
+</aside>
+
+<!-- ═══ MAIN ═══ -->
+<main class="main-wrap">
+
+  <!-- INTRO -->
+  <div class="intro-block">
+    <p>The Biology of Autism suite presents one of the first plausible explanations of autism as a <strong>cascade of interconnected biological events</strong> — beginning with upstream immune and metabolic pressures, building through a series of reinforcing failures, and culminating in a self-sustaining cycle that explains not just how autism emerges, but why it persists.</p>
+    <p>The ten documents below move from overview to molecular detail, from visual maps to clinical intervention logic. They are designed for three audiences — <strong>families and caregivers</strong>, <strong>clinicians and researchers</strong>, and <strong>motivated general readers</strong> — and can be read in any order, though the sequence below builds understanding progressively.</p>
+  </div>
+
+  <!-- DOCUMENT LIST -->
+  <div class="section-divider"><span>The Ten Documents</span></div>
+
+  <div class="doc-grid">
+
+    <a class="doc-card" href="1_Molecular_Origins_Biology_of_Autism.html">
+      <div class="doc-card-accent teal-gold"></div>
+      <div class="doc-card-body">
+        <p class="doc-card-num">Document 01 — Start Here</p>
+        <h2 class="doc-card-title">Biology of Autism — Molecular Origins</h2>
+        <p class="doc-card-desc">The core hypothesis: autism as the neurological expression of a chronically inflamed system. Covers the upstream triggers, the inflammatory cascade, synaptic consequences, and intervention implications. The foundational overview for all audiences.</p>
+        <div class="doc-card-tags">
+          <span class="doc-tag">Overview</span>
+          <span class="doc-tag">All audiences</span>
+          <span class="doc-tag">Start here</span>
+        </div>
+      </div>
+      <div class="doc-card-arrow">→</div>
+    </a>
+
+    <a class="doc-card" href="2_Summary_Map_Cascade_Biology_of_Autism.html">
+      <div class="doc-card-accent"></div>
+      <div class="doc-card-body">
+        <p class="doc-card-num">Document 02 — Visual</p>
+        <h2 class="doc-card-title">Biology of Autism — Cascade Summary Map</h2>
+        <p class="doc-card-desc">A simplified visual overview of the mechanistic chain connecting upstream biological triggers to autism's core neural and behavioral features. The at-a-glance map of the full cascade.</p>
+        <div class="doc-card-tags">
+          <span class="doc-tag">Visual map</span>
+          <span class="doc-tag">All audiences</span>
+        </div>
+      </div>
+      <div class="doc-card-arrow">→</div>
+    </a>
+
+    <a class="doc-card" href="3_Summary_Map_Explanation_Biology_of_Autism.html">
+      <div class="doc-card-accent"></div>
+      <div class="doc-card-body">
+        <p class="doc-card-num">Document 03 — Explained</p>
+        <h2 class="doc-card-title">Biology of Autism — Cascade Map Explained</h2>
+        <p class="doc-card-desc">Node-by-node explanation of the Summary Map. Each cascade level unpacked in plain language — what it is, what it does, and how it connects to the levels above and below it.</p>
+        <div class="doc-card-tags">
+          <span class="doc-tag">Plain language</span>
+          <span class="doc-tag">Families</span>
+          <span class="doc-tag">Educators</span>
+        </div>
+      </div>
+      <div class="doc-card-arrow">→</div>
+    </a>
+
+    <a class="doc-card" href="4_Detailed_Map_Interactive_Biology_of_Autism_Cascade.html">
+      <div class="doc-card-accent navy"></div>
+      <div class="doc-card-body">
+        <p class="doc-card-num">Document 04 — Interactive</p>
+        <h2 class="doc-card-title">Biology of Autism — Cascade Detailed Map (Interactive)</h2>
+        <p class="doc-card-desc">The full molecular cascade with all 29 levels, color-coded by pathway. Hover any node to expand its mechanism. Includes the master chain formula and self-sustaining loop. For deep exploration.</p>
+        <div class="doc-card-tags">
+          <span class="doc-tag">Interactive</span>
+          <span class="doc-tag">Full detail</span>
+          <span class="doc-tag">Clinicians</span>
+        </div>
+      </div>
+      <div class="doc-card-arrow">→</div>
+    </a>
+
+    <a class="doc-card" href="5_Detailed_Map_Print_Biology_of_Autism_Cascade.html">
+      <div class="doc-card-accent navy"></div>
+      <div class="doc-card-body">
+        <p class="doc-card-num">Document 05 — Print</p>
+        <h2 class="doc-card-title">Biology of Autism — Cascade Detailed Map (Print)</h2>
+        <p class="doc-card-desc">The same full molecular cascade as Document 04 with all content visible without hovering — optimized for printing and sharing as a reference document.</p>
+        <div class="doc-card-tags">
+          <span class="doc-tag">Print version</span>
+          <span class="doc-tag">Full detail</span>
+          <span class="doc-tag">Reference</span>
+        </div>
+      </div>
+      <div class="doc-card-arrow">→</div>
+    </a>
+
+    <a class="doc-card" href="6_Molecular_Pathways_Explained_Clinically_Biology_of_Autism.html">
+      <div class="doc-card-accent gold"></div>
+      <div class="doc-card-body">
+        <p class="doc-card-num">Document 06 — Clinical Reference</p>
+        <h2 class="doc-card-title">Biology of Autism — Molecular Pathways Explained</h2>
+        <p class="doc-card-desc">Full mechanistic systems-biology reference covering all 29 cascade levels in precise molecular detail. Covers IDO1/kynurenine, SIRT1/NAD⁺, NLRP3, SPARC/hevin, thalamocortical synaptogenesis, and the self-sustaining feedback loop.</p>
+        <div class="doc-card-tags">
+          <span class="doc-tag">Molecular detail</span>
+          <span class="doc-tag">Researchers</span>
+          <span class="doc-tag">Clinicians</span>
+        </div>
+      </div>
+      <div class="doc-card-arrow">→</div>
+    </a>
+
+    <a class="doc-card" href="7_Connecting_Testing_Biology_Interventions_BoA_Cascade.html">
+      <div class="doc-card-accent gold"></div>
+      <div class="doc-card-body">
+        <p class="doc-card-num">Document 07 — Diagnostic Bridge</p>
+        <h2 class="doc-card-title">Biology of Autism — Diagnosis to Intervention</h2>
+        <p class="doc-card-desc">Identifies the five upstream trigger channels and explains how targeted testing can determine which are active in an individual. Includes a complete test reference, interpretation guide, protocol map, and a section on working collaboratively with your doctor.</p>
+        <div class="doc-card-tags">
+          <span class="doc-tag">Testing</span>
+          <span class="doc-tag">Families</span>
+          <span class="doc-tag">Clinicians</span>
+        </div>
+      </div>
+      <div class="doc-card-arrow">→</div>
+    </a>
+
+    <a class="doc-card" href="8_Intervention_Logic_BoA_Cascade.html">
+      <div class="doc-card-accent teal-gold"></div>
+      <div class="doc-card-body">
+        <p class="doc-card-num">Document 08 — Interventions</p>
+        <h2 class="doc-card-title">Biology of Autism — Intervention Logic</h2>
+        <p class="doc-card-desc">Interventions mapped to cascade nodes with evidence tiers. Covers the three-wave sequencing logic (Plug the Leak → Fill the Tank → Rebuild the Architecture), compound mechanisms, dosing ranges, and safety notes. Clinician detail and parent summary included.</p>
+        <div class="doc-card-tags">
+          <span class="doc-tag">Interventions</span>
+          <span class="doc-tag">Evidence-tiered</span>
+          <span class="doc-tag">Wave sequencing</span>
+        </div>
+      </div>
+      <div class="doc-card-arrow">→</div>
+    </a>
+
+    <a class="doc-card" href="9_FAQ_ASD_Cascade_Biology_of_Autism.html">
+      <div class="doc-card-accent"></div>
+      <div class="doc-card-body">
+        <p class="doc-card-num">Document 09 — Questions &amp; Answers</p>
+        <h2 class="doc-card-title">Biology of Autism — Questions &amp; Answers</h2>
+        <p class="doc-card-desc">17 plain-language answers to the most common questions about the biological cascade model — including why autism affects more boys than girls, how the cascade explains sound sensitivity, the appetite paradox, and what a healing pathway looks like.</p>
+        <div class="doc-card-tags">
+          <span class="doc-tag">FAQ</span>
+          <span class="doc-tag">Plain language</span>
+          <span class="doc-tag">All audiences</span>
+        </div>
+      </div>
+      <div class="doc-card-arrow">→</div>
+    </a>
+
+    <a class="doc-card" href="10_ASD_Cascade_Citations_Biology_of_Autism_Cascade.html">
+      <div class="doc-card-accent gold"></div>
+      <div class="doc-card-body">
+        <p class="doc-card-num">Document 10 — Evidence Base</p>
+        <h2 class="doc-card-title">Biology of Autism — The Evidence</h2>
+        <p class="doc-card-desc">Over 60 peer-reviewed references organized by cascade level — from MIA and gut dysbiosis through SIRT1, synaptic architecture, connectivity signatures, sex ratio biology, interoception, and therapeutic interventions. All citations hyperlinked to PubMed or PMC.</p>
+        <div class="doc-card-tags">
+          <span class="doc-tag">Citations</span>
+          <span class="doc-tag">PubMed linked</span>
+          <span class="doc-tag">Researchers</span>
+        </div>
+      </div>
+      <div class="doc-card-arrow">→</div>
+    </a>
+
+  </div>
+
+  <!-- HOW TO USE -->
+  <div class="section-divider"><span>How to Use This Suite</span></div>
+
+  <div class="how-box">
+    <p class="how-box-label">Reading Guide</p>
+    <h2>Three paths through the material</h2>
+    <div class="how-grid">
+      <div class="how-item">
+        <p class="how-num">For Families &amp; Caregivers</p>
+        <p>Start with <strong>Document 01</strong> for the big picture, then <strong>Document 03</strong> for a plain-language walkthrough of the cascade. <strong>Document 09</strong> (FAQ) answers the most common questions. <strong>Document 07</strong> guides the conversation with your doctor.</p>
+      </div>
+      <div class="how-item">
+        <p class="how-num">For Clinicians &amp; Researchers</p>
+        <p>Begin with <strong>Document 06</strong> for full molecular detail, then <strong>Document 04</strong> for the interactive cascade map. <strong>Document 08</strong> covers intervention logic with evidence tiers. <strong>Document 10</strong> provides all citations.</p>
+      </div>
+      <div class="how-item">
+        <p class="how-num">For General Readers</p>
+        <p>Start with <strong>Document 01</strong>, then explore <strong>Document 02</strong> for the visual overview. <strong>Document 09</strong> addresses the questions most people ask first. Follow your curiosity — each document stands alone.</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="site-footer">
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">Decoding Autism Now</p>
+        <p class="footer-tagline">Systems biology of autism —<br>for families, clinicians, and researchers.</p>
+      </div>
+      <div class="footer-channels">
+        <p class="footer-channels-label">Find us on</p>
+        <a class="footer-channel-link" href="https://www.youtube.com/@DecodingAutismNow" target="_blank" rel="noopener">
+          <span class="ch-icon">
+            <svg width="14" height="10" viewBox="0 0 24 17" fill="white"><path d="M23.5 2.5A3 3 0 0021.4.4C19.5 0 12 0 12 0S4.5 0 2.6.4A3 3 0 00.5 2.5C0 4.4 0 8.5 0 8.5S0 12.6.5 14.5A3 3 0 002.6 16.6C4.5 17 12 17 12 17s7.5 0 9.4-.4a3 3 0 002.1-2.1C24 12.6 24 8.5 24 8.5s0-4.1-.5-6zM9.75 12.02V4.98L15.8 8.5l-6.05 3.52z"/></svg>
+          </span>
+          YouTube — @DecodingAutismNow
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-disclaimer">This content is for informational purposes only and should not be considered medical advice, diagnosis, or treatment. Always consult with a healthcare professional before making any changes to your health routines or treatment regimen.</p>
+      <p class="footer-meta">Biology of Autism Suite | Decoding Autism Now | DecodingAutismNow.com</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
