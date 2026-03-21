@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biology of Autism — Cascade Summary Map | Decoding Autism Now</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#f7f5f0; --paper:#fdfcf9; --ink:#1a1a1a; --muted:#7a756e; --rule:#ddd8d0;
+  --c1:#7a3b1e; --c2:#1a3a5c; --c3:#1a5c2e; --c4:#5c1a4a; --c5:#3a3a1a; --csst:#6b1a3a;
+  --b1:#fdf0e8; --b2:#e8eef5; --b3:#e8f5ee; --b4:#f5e8f2; --b5:#f5f5e8; --bsst:#f9edf3;
+  --e1:#c4724a; --e2:#4a7aac; --e3:#4aac6a; --e4:#ac4a8e; --e5:#8e8e4a; --esst:#b04a7a;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);font-family:'Source Serif 4',Georgia,serif;color:var(--ink);min-height:100vh;display:block;padding:0;}
+.wrap{width:100%;max-width:660px;margin:0 auto;padding:48px 24px 72px;}
+
+.hdr{text-align:center;margin-bottom:40px;padding-bottom:24px;border-bottom:1.5px solid var(--rule);}
+.fig-tag{font-size:9px;letter-spacing:0.28em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+.hdr h1{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,4vw,2.1rem);font-weight:600;color:var(--ink);line-height:1.2;margin-bottom:8px;}
+.hdr h1 em{font-style:italic;color:var(--c2);}
+.hdr p{font-size:9px;color:var(--muted);letter-spacing:0.06em;line-height:1.6;}
+
+.legend{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:32px;}
+.legend-item{display:flex;align-items:center;gap:8px;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+
+.cascade{display:flex;flex-direction:column;align-items:center;}
+
+.step{width:100%;border-radius:6px;border:1.5px solid;padding:16px 22px 14px;animation:rise 0.4s ease both;}
+.step-inner{display:flex;align-items:flex-start;gap:16px;}
+.step-num{font-family:'DM Mono',monospace;font-size:9px;font-weight:500;letter-spacing:0.1em;padding:3px 8px;border-radius:2px;flex-shrink:0;margin-top:3px;}
+.step-text{flex:1;}
+.step-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;line-height:1.2;margin-bottom:5px;}
+.step-desc{font-size:9.5px;line-height:1.65;color:var(--muted);}
+.step-formula{font-family:'DM Mono',monospace;font-size:8px;margin-top:8px;padding:4px 9px;border-radius:2px;display:inline-block;letter-spacing:0.02em;}
+
+.s1{background:var(--b1);border-color:var(--e1);}
+.s1 .step-num{background:rgba(122,59,30,0.1);color:var(--c1);}
+.s1 .step-title{color:var(--c1);}
+.s1 .step-formula{background:rgba(122,59,30,0.07);color:var(--c1);}
+
+.s2{background:var(--b2);border-color:var(--e2);}
+.s2 .step-num{background:rgba(26,58,92,0.1);color:var(--c2);}
+.s2 .step-title{color:var(--c2);}
+.s2 .step-formula{background:rgba(26,58,92,0.07);color:var(--c2);}
+
+.s-sst{background:var(--bsst);border-color:var(--esst);}
+.s-sst .step-num{background:rgba(107,26,58,0.1);color:var(--csst);}
+.s-sst .step-title{color:var(--csst);}
+.s-sst .step-formula{background:rgba(107,26,58,0.07);color:var(--csst);}
+
+.s-sst-hub{background:var(--csst);border-color:var(--csst);}
+.s-sst-hub .step-num{background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.9);}
+.s-sst-hub .step-title{color:white;font-size:1.2rem;}
+.s-sst-hub .step-desc{color:rgba(255,255,255,0.75);}
+.s-sst-hub .step-formula{background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.88);}
+
+.s2hub{background:var(--c2);border-color:var(--c2);}
+.s2hub .step-num{background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.9);}
+.s2hub .step-title{color:white;font-size:1.2rem;}
+.s2hub .step-desc{color:rgba(255,255,255,0.72);}
+.s2hub .step-formula{background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.88);}
+
+.s3{background:var(--b3);border-color:var(--e3);}
+.s3 .step-num{background:rgba(26,92,46,0.1);color:var(--c3);}
+.s3 .step-title{color:var(--c3);}
+.s3 .step-formula{background:rgba(26,92,46,0.07);color:var(--c3);}
+
+.s4{background:var(--b4);border-color:var(--e4);}
+.s4 .step-num{background:rgba(92,26,74,0.1);color:var(--c4);}
+.s4 .step-title{color:var(--c4);}
+.s4 .step-formula{background:rgba(92,26,74,0.07);color:var(--c4);}
+
+.s5{background:var(--b5);border-color:var(--e5);}
+.s5 .step-num{background:rgba(58,58,26,0.1);color:var(--c5);}
+.s5 .step-title{color:var(--c5);}
+.s5 .step-formula{background:rgba(58,58,26,0.07);color:var(--c5);}
+
+.conn{display:flex;flex-direction:column;align-items:center;padding:4px 0;width:100%;}
+.conn-line{width:2px;height:28px;background:linear-gradient(180deg,var(--rule) 0%,#aaa 100%);position:relative;}
+.conn-line::after{content:'▼';position:absolute;bottom:-11px;left:-5px;font-size:11px;color:#aaa4a0;}
+.conn-label{font-size:8px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-top:16px;text-align:center;}
+
+.loop-box{width:100%;margin-top:28px;border:1.5px dashed #c44a4a;border-radius:6px;background:#fef5f5;padding:16px 20px;display:flex;gap:14px;align-items:flex-start;}
+.loop-icon{font-size:1.3rem;flex-shrink:0;padding-top:2px;}
+.loop-body strong{display:block;font-size:8.5px;letter-spacing:0.15em;text-transform:uppercase;color:#8b2020;margin-bottom:5px;}
+.loop-body p{font-size:9px;line-height:1.6;color:#6b3030;}
+.loop-body .lf{font-family:'DM Mono',monospace;font-size:8px;background:rgba(196,74,74,0.08);color:#8b2020;padding:3px 8px;border-radius:2px;display:inline-block;margin-top:7px;}
+
+.caption{margin-top:28px;padding:14px 18px;background:var(--c2);border-radius:6px;}
+.caption .cap-label{font-size:8px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:7px;}
+.caption p{font-family:'Playfair Display',serif;font-size:0.95rem;font-style:italic;color:rgba(255,255,255,0.88);line-height:1.6;}
+
+.fig-note{margin-top:18px;text-align:center;font-size:8.5px;color:var(--muted);letter-spacing:0.06em;line-height:1.6;}
+
+.foot{margin-top:20px;padding-top:14px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;font-size:8.5px;color:var(--muted);letter-spacing:0.06em;}
+
+.disclaimer-block{margin-top:20px;padding:14px 18px;background:#f5f4f0;border-top:2px solid var(--rule);border-radius:4px;font-size:8.5px;line-height:1.65;color:var(--muted);}
+.disclaimer-block strong{display:inline;font-size:8.5px;letter-spacing:0.08em;text-transform:uppercase;color:#555;}
+
+@media print{body{background:white;padding:16px;}*{-webkit-print-color-adjust:exact;print-color-adjust:exact;}.step,.loop-box,.caption{break-inside:avoid;}}
+
+@keyframes rise{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+.step:nth-child(1){animation-delay:0.04s;}
+.step:nth-child(3){animation-delay:0.09s;}
+.step:nth-child(5){animation-delay:0.14s;}
+.step:nth-child(7){animation-delay:0.19s;}
+.step:nth-child(9){animation-delay:0.24s;}
+.step:nth-child(11){animation-delay:0.29s;}
+.step:nth-child(13){animation-delay:0.34s;}
+.step:nth-child(15){animation-delay:0.39s;}
+.step:nth-child(17){animation-delay:0.44s;}
+
+  .site-footer { background: #0f2342; }
+  .footer-stripe { height: 3px; background: linear-gradient(90deg, #1e6b72 0%, #2a9da6 50%, #c8923a 100%); }
+  .footer-inner { max-width: 960px; margin: 0 auto; padding: 44px 44px 36px; }
+  .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap; }
+  .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: rgba(255,255,255,0.92); margin-bottom: 6px; }
+  .footer-tagline { font-style: italic; font-weight: 300; font-size: 0.88rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
+  .footer-channels { display: flex; flex-direction: column; gap: 10px; }
+  .footer-channels-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 2px; }
+  .footer-channel-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: rgba(255,255,255,0.65); font-size: 0.88rem; transition: color 0.15s; }
+  .footer-channel-link:hover { color: #2a9da6; }
+  .ch-icon { width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: rgba(255,0,0,0.18); }
+  .footer-bottom { padding-top: 24px; display: flex; flex-direction: column; gap: 8px; }
+  .footer-disclaimer { font-style: italic; font-size: 0.8rem; color: rgba(255,255,255,0.35); max-width: 700px; line-height: 1.6; }
+  .footer-meta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.2); margin-top: 4px; }
+
+  .masthead { position: sticky; top: 0; z-index: 100; background: #0f2342; padding: 10px 28px; border-bottom: 3px solid #c8923a; }
+  .masthead-inner { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .masthead-brand { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #2a9da6; }
+  .masthead-title { font-family: 'Source Serif 4', serif; font-size: 14px; font-weight: 600; color: white; margin-top: 2px; }
+  .masthead-meta { font-family: 'DM Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.4); }
+
+  .site-header-sm { background: #0f2342; color: #fff; position: relative; overflow: hidden; }
+  .header-stripe-sm { height: 4px; background: linear-gradient(90deg, #1e6b72 0%, #2a9da6 50%, #c8923a 100%); }
+  .header-inner-sm { max-width: 960px; margin: 0 auto; padding: 36px 44px 32px; position: relative; z-index: 1; }
+  .header-brand-sm { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #2a9da6; margin-bottom: 12px; }
+  .header-title-sm { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 10px; }
+  .header-title-sm em { color: #e8b86d; font-style: italic; }
+  .header-sub-sm { font-style: italic; font-weight: 300; font-size: 0.95rem; color: rgba(255,255,255,0.55); max-width: 560px; line-height: 1.55; }
+</style>
+</head>
+<body>
+<nav class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <div class="masthead-brand">Decoding Autism Now</div>
+      <div class="masthead-title">Biology of Autism — Cascade Summary Map</div>
+    </div>
+    <div class="masthead-meta"></div>
+  </div>
+</nav>
+<header style="background:#0f2342; color:#fff; position:relative; overflow:hidden; width:100%;">
+  <div style="height:4px; background:linear-gradient(90deg,#1e6b72 0%,#2a9da6 50%,#c8923a 100%);"></div>
+  <div style="max-width:700px; margin:0 auto; padding:32px 44px 28px; position:relative; z-index:1;">
+    <div style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:#2a9da6; margin-bottom:12px;">Decoding Autism Now</div>
+    <div style="font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3.5vw,2.4rem); font-weight:700; color:#fff; line-height:1.2; margin-bottom:10px;">Biology of Autism —<br><em style="color:#e8b86d; font-style:italic;">Cascade Summary Map</em></div>
+    <div style="font-style:italic; font-weight:300; font-size:0.9rem; color:rgba(255,255,255,0.55); line-height:1.55;">A simplified overview of the mechanistic chain connecting upstream biological triggers to autism's core neural and behavioral features. See Biology of Autism — Cascade Detailed Map for full molecular detail.</div>
+  </div>
+</header>
+<div style="background:#fffbf2; border-top:1px solid rgba(200,146,58,0.25); border-bottom:1px solid rgba(200,146,58,0.25); width:100%; box-sizing:border-box;">
+  <div style="max-width:960px; margin:0 auto; padding:20px 44px; display:flex; gap:16px; align-items:flex-start;">
+    <div style="flex-shrink:0; margin-top:2px; width:20px; height:20px; border-radius:50%; background:rgba(200,146,58,0.15); border:1px solid rgba(200,146,58,0.4); display:flex; align-items:center; justify-content:center; font-family:'DM Mono',monospace; font-size:11px; font-weight:500; color:#c8923a; line-height:1;">i</div>
+    <p style="font-family:'Source Serif 4',Georgia,serif; font-size:0.875rem; color:#6b5a3a; line-height:1.65; margin:0;">
+      <strong style="color:#4a3a1e; font-weight:600;">Theoretical framework — not clinical guidance.</strong> The Autism Spectrum Disorder (ASD) Cascade is a systems-biology model integrating peer-reviewed findings across immunology, metabolism, gut biology, and neuroscience into a proposed mechanistic map. Individual components are supported by published research; the full integrated cascade has not been validated as a unified model in large clinical trials. It is intended as a research-informed framework — not a diagnostic tool or treatment protocol. All intervention decisions require qualified clinical oversight. For the evidence base, see the <em>ASD Cascade Citations</em> document in this suite.
+    </p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:#c4724a"></div>Upstream Triggers</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#b04a7a"></div>Somatostatin (SST)</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#1a3a5c"></div>SIRT1 Hub</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#4aac6a"></div>Reactive Glia</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#ac4a8e"></div>Synapse / Connectivity</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#8e8e4a"></div>ASD Features</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#c44a4a;border-radius:0"></div>Self-Sustaining Loop</div>
+  </div>
+
+  <div class="cascade">
+
+    <div class="step s1">
+      <div class="step-inner">
+        <div class="step-num">STEP 01</div>
+        <div class="step-text">
+          <div class="step-title">Upstream Triggers</div>
+          <div class="step-desc">Maternal immune activation, gut dysbiosis with LPS translocation, mitochondrial dysfunction, and environmental exposures associated with increased ASD risk all generate sustained pro-inflammatory and metabolic stress signals reaching the developing brain. Importantly, MIA can epigenetically silence SIRT1/PGC-1α in fetal microglia and impair SST interneuron development <em>in utero</em> — meaning the cascade can be primed before birth, independent of any postnatal trigger.</div>
+          <div class="step-formula">MIA + Gut LPS + Mitochondrial ROS + Toxin exposure &rarr; chronic immune + metabolic stress</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line"></div>
+      <div class="conn-label">stress + inflammation &rarr; IDO1 induction + SST release simultaneously</div>
+    </div>
+
+    <div class="step s-sst-hub">
+      <div class="step-inner">
+        <div class="step-num">STEP 01B</div>
+        <div class="step-text">
+          <div class="step-title">Somatostatin (SST) Elevated &mdash; Parallel Brake Engaged</div>
+          <div class="step-desc">The same upstream stressors simultaneously trigger somatostatin release. SST acts via SSTR2/SSTR5 receptors as a system-wide inhibitory brake: suppressing the cAMP/PKA/CREB learning pathway, dampening astrocyte synaptogenic support, shifting microglia toward reactive states, and inhibiting gut motility and nutrient absorption. SST and SIRT1 are co-equal central nodes &mdash; antagonistic regulators that converge on CREB suppression from two independent directions. When SST rises and SIRT1 falls simultaneously, learning circuits are shut down from both ends.</div>
+          <div class="step-formula">Stress + Inflammation &rarr; SST &uarr; &rarr; SSTR2/5 &rarr; AC &darr; &rarr; cAMP &darr; &rarr; PKA &darr; &rarr; CREB &darr; &rarr; BDNF &darr;</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line"></div>
+      <div class="conn-label">IDO1 hijacks tryptophan &rarr; functional NAD&sup1; insufficiency &rarr; SIRT1 fuel inadequate</div>
+    </div>
+
+    <div class="step s2">
+      <div class="step-inner">
+        <div class="step-num">STEP 02</div>
+        <div class="step-text">
+          <div class="step-title">Tryptophan Hijack</div>
+          <div class="step-desc">Inflammation activates IDO1, diverting tryptophan away from serotonin synthesis into the kynurenine pathway. Under chronic inflammation, quinolinic acid (a neurotoxic NMDA agonist) accumulates faster than the terminal enzyme QPRT can convert it to NAD&sup1;. The result is functional NAD&sup1; insufficiency: regeneration rate lags inflammatory demand. Serotonin falls; quinolinate-driven oxidative pressure rises; and NAD&sup1; &mdash; the essential cofactor for SIRT1 &mdash; is insufficient to sustain catalytic activity.</div>
+          <div class="step-formula">Tryptophan &rarr; (IDO1) &rarr; Kynurenine &rarr; Quinolinic Acid &uarr; &middot; Serotonin &darr; &middot; NAD&sup1; &darr;</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line"></div>
+      <div class="conn-label">metabolic stress + NAD⁺ insufficiency → AMPK/mTOR dysregulation → cleanup failure</div>
+    </div>
+
+    <div class="step" style="background:#E8F5F0; border-color:#2E8B6A;">
+      <div class="step-inner">
+        <div class="step-num" style="background:rgba(46,139,106,0.1); color:#1A5C40;">STEP 02B</div>
+        <div class="step-text">
+          <div class="step-title" style="color:#1A5C40;">Cellular Cleanup and Reset Failure</div>
+          <div class="step-desc">SIRT1 and AMPK co-regulate the cellular energy-sensing and cleanup axis. Under metabolic stress and NAD⁺ insufficiency, AMPK is under-supported while mTOR — the growth signal that suppresses autophagy — becomes relatively overactive. The cell's recycling system fails: damaged mitochondria are not cleared (impaired mitophagy), excess dendritic spines are not pruned, and inflammatory debris is not removed. This is the mechanism by which acute metabolic stress becomes chronic structural disorder — and why recovery requires more than reducing upstream triggers.</div>
+          <div class="step-formula" style="background:rgba(46,139,106,0.07); color:#1A5C40;">AMPK ↓ / mTOR ↑ → autophagy ↓ · mitophagy ↓ → damaged mito persist · spine excess · debris → NLRP3 + NF-κB re-activated</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line"></div>
+      <div class="conn-label">NAD⁺ insufficiency silences SIRT1 catalytic activity</div>
+    </div>
+
+    <div class="step s2hub">
+      <div class="step-inner">
+        <div class="step-num">STEP 03</div>
+        <div class="step-text">
+          <div class="step-title">SIRT1 Deficiency &mdash; Co-Equal Hub Fails Alongside SST Elevation</div>
+          <div class="step-desc">SIRT1 is an NAD&sup1;-dependent enzyme coordinating four critical systems simultaneously. Without adequate NAD&sup1;, SIRT1 collapses &mdash; inflammation escalates, mitochondria deteriorate, antioxidant defenses fall, and learning signals weaken. Combined with the SST-driven AC/cAMP/CREB brake already engaged in Step 1B, the learning pathway is now suppressed from both molecular directions at once.</div>
+          <div class="step-formula">NAD&sup1; &darr; &rarr; SIRT1 &darr; &rarr; NF-&kappa;B &uarr; &middot; PGC-1&alpha; &darr; &middot; FOXO &darr; &middot; CREB &darr; [SST already suppressing CREB independently]</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line"></div>
+      <div class="conn-label">NF-&kappa;B activation &rarr; IL-1&beta; + TNF-&alpha; + C1q &rarr; glial state conversion</div>
+    </div>
+
+    <div class="step s3">
+      <div class="step-inner">
+        <div class="step-num">STEP 04</div>
+        <div class="step-text">
+          <div class="step-title">Reactive Glia</div>
+          <div class="step-desc">Unchecked NF-&kappa;B drives microglia to M1 pro-inflammatory states, releasing the IL-1&beta; + TNF-&alpha; + C1q triad that converts astrocytes to A1 reactive phenotype. SST at glial SSTR2/5 receptors amplifies this shift &mdash; further suppressing astrocyte hevin and glypican output while elevating SPARC. Neuroinflammation is sustained from both the SIRT1/NF-&kappa;B axis and the SST glial axis simultaneously.</div>
+          <div class="step-formula">NF-&kappa;B &rarr; M1 Microglia &rarr; IL-1&beta; + TNF-&alpha; + C1q &rarr; A1 Astrocytes [amplified by SST on glia]</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line"></div>
+      <div class="conn-label">A1 astrocytes + SST invert synaptogenic protein balance</div>
+    </div>
+
+    <div class="step s4">
+      <div class="step-inner">
+        <div class="step-num">STEP 05</div>
+        <div class="step-text">
+          <div class="step-title">Synapse Protein Imbalance</div>
+          <div class="step-desc">A1 astrocytes suppress hevin (synapse builder) and elevate SPARC (synapse pruner) while reducing glypican production (synapse maturer). SST at SSTR2/5 on astrocytes independently suppresses hevin and glypican secretion via a second route. Pruning dominates over building and maturation &mdash; the molecular architecture of synaptogenesis is inverted.</div>
+          <div class="step-formula">Hevin &darr; (A1 + SST) &middot; SPARC &uarr; (A1) &middot; Glypicans &darr; (A1 + SST) &rarr; synapse formation impaired</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line"></div>
+      <div class="conn-label">aberrant synapse formation during critical developmental windows</div>
+    </div>
+
+    <div class="step s4">
+      <div class="step-inner">
+        <div class="step-num">STEP 06</div>
+        <div class="step-text">
+          <div class="step-title">Connectivity Shift</div>
+          <div class="step-desc">Reduced hevin preferentially impairs thalamocortical synaptogenesis &mdash; the circuit underlying sensory integration and social processing. Result: hyper-local connectivity within regions, reduced long-range integration across networks. Silent synapses from glypican deficit add functional impairment on top of structural deficit.</div>
+          <div class="step-formula">Thalamocortical synapses &darr; &middot; Local connectivity &uarr; &middot; Long-range integration &darr; &middot; Silent synapses persist</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line"></div>
+      <div class="conn-label">CREB suppressed (SST + SIRT1) + aberrant architecture &rarr; functional expression</div>
+    </div>
+
+    <div class="step s5">
+      <div class="step-inner">
+        <div class="step-num">STEP 07</div>
+        <div class="step-text">
+          <div class="step-title">Autism Features</div>
+          <div class="step-desc">The downstream behavioral, sensory, cognitive, and physiological profile of autism emerges from the neural architecture and signaling state shaped by the cascade above. SST's gut effects additionally drive GI symptoms through a direct neuroendocrine route independent of neuroinflammation.</div>
+          <div class="step-formula">Sensory reactivity &middot; Social cognition &middot; Rigidity + CREB-impaired learning &middot; GI disruption (SST + dysbiosis) &middot; Sleep/mood</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line"></div>
+      <div class="conn-label">cascade becomes self-sustaining &mdash; loop closes</div>
+    </div>
+
+    <div class="step s1">
+      <div class="step-inner">
+        <div class="step-num">STEP 08</div>
+        <div class="step-text">
+          <div class="step-title">Self-Perpetuating Loop</div>
+          <div class="step-desc">Once established, the cascade no longer requires external triggers. Neuroinflammation sustains IDO1 &rarr; functional NAD&sup1; insufficiency &rarr; AMPK under-supported / mTOR overactive &rarr; autophagy and mitophagy impaired &rarr; damaged organelles re-activate NLRP3 and NF-&kappa;B &rarr; SIRT1 further suppressed. Simultaneously, chronic stress keeps SST elevated &rarr; cAMP/CREB chronically suppressed &rarr; learning circuits unable to recover. At their convergence point sits the <strong>Lethal Loop</strong>: low SIRT1 → low cAMP → low CREB → reduced BDNF → stress response sustained → SST remains elevated → AC further suppressed → SIRT1 further depleted. All three arms — SIRT1/NF-κB, SST/CREB, and AMPK/mTOR/autophagy — lock each other in a self-reinforcing arrested state that single-target interventions cannot break.</div>
+          <div class="step-formula">Inflammation &rarr; IDO1 &rarr; NAD&sup1; insufficient &rarr; SIRT1 &darr; &rarr; NF-&kappa;B &uarr; &rarr; inflammation &middot; Stress &rarr; SST &uarr; &rarr; CREB &darr; &rarr; stress &uarr;</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="loop-box">
+    <div class="loop-icon">&#x1F504;</div>
+    <div class="loop-body">
+      <strong>Self-Sustaining Feedback Loop</strong>
+      <p>Once established, the cascade no longer requires external triggers. Neuroinflammation sustains IDO1 &rarr; functional NAD&sup1; insufficiency &rarr; AMPK under-supported / mTOR overactive &rarr; autophagy and mitophagy fail &rarr; damaged organelles re-activate NLRP3 and NF-&kappa;B &rarr; SIRT1 further suppressed. Simultaneously, chronic stress keeps SST elevated &rarr; cAMP/CREB chronically suppressed &rarr; learning circuits unable to recover. Impaired autophagy allows excess spines to persist &rarr; local over-connectivity locked in. All three arms — SIRT1/NF-&kappa;B, SST/CREB, and AMPK/mTOR/autophagy — reinforce each other and are self-perpetuating.</p>
+    </div>
+  </div>
+
+  <div class="loop-box" style="margin-top:12px;background:#e8f5ee;border-color:#4aac6a;">
+    <div class="loop-icon">&#x1F9EC;</div>
+    <div class="loop-body">
+      <strong style="color:#1a5c2e;">Intervention Logic &mdash; Working Upstream on Both Nodes</strong>
+      <p style="color:#1a4a2a;">Because both SST elevation and SIRT1 deficiency independently suppress CREB, effective support must address multiple points simultaneously: restore NAD&sup1; &rarr; reactivate SIRT1 &rarr; suppress NF-&kappa;B &rarr; quiet microglia &rarr; reduce SST release triggers &rarr; normalize astrocyte phenotype &rarr; reduce SPARC &rarr; support hevin/glypican-driven synaptogenesis &rarr; reopen CREB-mediated learning pathway. Single-target interventions are insufficient once the loop is established.</p>
+      <div class="lf" style="background:rgba(26,92,46,0.08);color:#1a5c2e;">NAD&sup1; precursors &rarr; SIRT1 activators &rarr; NF-&kappa;B suppressors &rarr; stress/SST reduction &rarr; gut repair &rarr; antioxidants &rarr; mitochondrial support</div>
+    </div>
+  </div>
+
+  <div class="caption">
+    <div class="cap-label">Biology of Autism &mdash; Cascade Summary Map Caption</div>
+    <p>Simplified overview of the ASD biological cascade integrating two co-equal central nodes &mdash; somatostatin (SST) and SIRT1 &mdash; with upstream inflammatory triggers, reactive glia, synapse protein imbalance, connectivity shift, and the expression of autism's core features. SST and SIRT1 converge on CREB suppression from independent directions, forming the mechanistic fulcrum of the Autism Spiral framework. For full molecular detail see Biology of Autism — Cascade Detailed Map.</p>
+  </div>
+
+</div>
+<footer class="site-footer">
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">Decoding Autism Now</p>
+        <p class="footer-tagline">Systems biology of autism —<br>for families, clinicians, and researchers.</p>
+      </div>
+      <div class="footer-channels">
+        <p class="footer-channels-label">Find us on</p>
+        <a class="footer-channel-link" href="https://www.youtube.com/@DecodingAutismNow" target="_blank" rel="noopener">
+          <span class="ch-icon">
+            <svg width="14" height="10" viewBox="0 0 24 17" fill="white"><path d="M23.5 2.5A3 3 0 0021.4.4C19.5 0 12 0 12 0S4.5 0 2.6.4A3 3 0 00.5 2.5C0 4.4 0 8.5 0 8.5S0 12.6.5 14.5A3 3 0 002.6 16.6C4.5 17 12 17 12 17s7.5 0 9.4-.4a3 3 0 002.1-2.1C24 12.6 24 8.5 24 8.5s0-4.1-.5-6zM9.75 12.02V4.98L15.8 8.5l-6.05 3.52z"/></svg>
+          </span>
+          YouTube — @DecodingAutismNow
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-disclaimer">This content is for informational purposes only and should not be considered medical advice, diagnosis, or treatment. Always consult with a healthcare professional before making any changes to your health routines or treatment regimen.</p>
+      <p class="footer-meta">Biology of Autism — Cascade Summary Map | Decoding Autism Now</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biology of Autism — Diagnosis to Intervention | Decoding Autism Now</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0f2342;
+  --ink: #1a1a2e;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --bg: #F8F9FC;
+  --card: #FFFFFF;
+  --gut: #1B5E20;
+  --mito: #E65100;
+  --mia: #7B1FA2;
+  --env: #4E342E;
+  --sst: #1565C0;
+  --multi: #37474F;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Source Serif 4', Georgia, serif; background: var(--bg); color: var(--ink); font-size: 14px; line-height: 1.65; }
+
+/* MASTHEAD */
+.masthead { background: var(--navy); color: white; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,0.2); }
+.masthead-inner { max-width: 1100px; margin: 0 auto; padding: 14px 32px; display: flex; align-items: center; justify-content: space-between; }
+.mast-brand { font-family: 'Source Serif 4', serif; font-size: 12px; font-weight: 300; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.65); }
+.mast-title { font-family: 'Source Serif 4', serif; font-size: 17px; font-weight: 600; }
+.mast-meta { font-size: 11px; color: rgba(255,255,255,0.5); font-family: 'DM Mono', monospace; }
+
+/* HERO */
+.hero { background: linear-gradient(135deg, #0f2644 0%, #1A3A5C 50%, #1a4a6e 100%); color: white; padding: 56px 32px 44px; text-align: center; }
+.hero h1 { font-family: 'Source Serif 4', serif; font-size: clamp(22px, 4vw, 36px); font-weight: 700; margin-bottom: 10px; line-height: 1.2; }
+.hero-sub { font-size: 15px; color: rgba(255,255,255,0.72); max-width: 620px; margin: 0 auto 22px; }
+.hero-pills { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.pill { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 4px 13px; font-size: 11.5px; font-family: 'DM Mono', monospace; color: rgba(255,255,255,0.82); }
+
+/* CHANNEL LEGEND BAR */
+.channel-bar { background: white; border-bottom: 1px solid var(--border); }
+.channel-bar-inner { max-width: 1100px; margin: 0 auto; padding: 12px 32px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.ch-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); font-weight: 600; margin-right: 4px; }
+.ch-pill { padding: 4px 12px; border-radius: 4px; font-size: 11px; font-weight: 600; color: white; white-space: nowrap; }
+
+/* NOTICES */
+.notices { max-width: 1100px; margin: 28px auto 0; padding: 0 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.notice { border-radius: 6px; padding: 12px 16px; font-size: 12.5px; line-height: 1.55; }
+.notice.theory { background: #FFF8E1; border-left: 4px solid #F59E0B; color: #78350F; }
+.notice.medical { background: #FEF2F2; border-left: 4px solid #EF4444; color: #7F1D1D; }
+.notice strong { display: block; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 3px; }
+
+/* MAIN LAYOUT */
+.wrap { max-width: 1100px; margin: 32px auto 60px; padding: 0 32px; }
+
+/* SECTION */
+.doc-section { margin-bottom: 40px; }
+.section-title { font-family: 'Source Serif 4', serif; font-size: 20px; font-weight: 700; color: var(--navy); border-bottom: 2px solid var(--navy); padding-bottom: 8px; margin-bottom: 18px; display: flex; align-items: baseline; gap: 12px; }
+.section-num { font-family: 'DM Mono', monospace; font-size: 13px; background: var(--navy); color: white; padding: 2px 8px; border-radius: 4px; }
+
+/* INTRO TEXT */
+.intro-text { font-family: 'Source Serif 4', serif; font-size: 15px; color: #374151; line-height: 1.75; margin-bottom: 22px; }
+
+/* PRIORITY BADGE */
+.pri { display: inline-block; padding: 2px 9px; border-radius: 4px; font-size: 10.5px; font-family: 'DM Mono', monospace; font-weight: 600; }
+.pri-first { background: #DCFCE7; color: #14532D; }
+.pri-second { background: #DBEAFE; color: #1E3A8A; }
+.pri-third { background: #FEF9C3; color: #713F12; }
+
+/* CHANNEL BADGE inline */
+.ch { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 10px; font-weight: 600; color: white; font-family: 'DM Mono', monospace; white-space: nowrap; }
+.ch-gut { background: var(--gut); }
+.ch-mito { background: var(--mito); }
+.ch-mia { background: var(--mia); }
+.ch-env { background: var(--env); }
+.ch-sst { background: var(--sst); }
+.ch-multi { background: var(--multi); }
+
+/* TEST TABLE */
+.test-table-wrap { overflow-x: auto; margin-bottom: 24px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); border: 1px solid var(--border); }
+.test-table { width: 100%; border-collapse: collapse; font-size: 12.5px; background: white; }
+.test-table thead { background: var(--navy); color: white; }
+.test-table th { padding: 10px 14px; text-align: left; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; white-space: nowrap; }
+.test-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.55; }
+.test-table tr:last-child td { border-bottom: none; }
+.test-table tr:nth-child(even) td { background: #F8FAFC; }
+.test-table tr:hover td { background: #EFF6FF; }
+.test-name { font-weight: 600; color: var(--navy); }
+
+/* SEQUENCE TABLE */
+.seq-table-wrap { overflow-x: auto; margin-bottom: 24px; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+.seq-table { width: 100%; border-collapse: collapse; font-size: 12.5px; background: white; }
+.seq-table th { background: var(--navy); color: white; padding: 10px 14px; text-align: left; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; }
+.seq-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.55; }
+.seq-table tr:last-child td { border-bottom: none; }
+.order-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 600; flex-shrink: 0; }
+
+/* MVLS TABLE */
+.mvls-table-wrap { overflow-x: auto; margin-bottom: 24px; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+.mvls-table { width: 100%; border-collapse: collapse; font-size: 12.5px; background: white; }
+.mvls-table th { background: #374151; color: white; padding: 10px 14px; text-align: left; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; }
+.mvls-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.55; }
+.mvls-table tr:last-child td { border-bottom: none; }
+.mvls-table tr:nth-child(even) td { background: #F9FAFB; }
+
+/* CALLOUT BOXES */
+.callout { border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+.callout.blue { background: #EFF6FF; border-left: 4px solid #3B82F6; }
+.callout.amber { background: #FFFBEB; border-left: 4px solid #F59E0B; }
+.callout.green { background: #F0FDF4; border-left: 4px solid #22C55E; }
+.callout.purple { background: #FAF5FF; border-left: 4px solid #8B5CF6; }
+.callout h4 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 6px; }
+.callout.blue h4 { color: #1D4ED8; }
+.callout.amber h4 { color: #92400E; }
+.callout.green h4 { color: #15803D; }
+.callout.purple h4 { color: #6D28D9; }
+.callout p, .callout ul { font-size: 15px; color: #374151; line-height: 1.75; }
+.callout ul { padding-left: 20px; }
+.callout li { margin-bottom: 4px; }
+
+/* DECISION TREE */
+.branch { background: white; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 14px; }
+.branch-header { padding: 11px 16px; font-weight: 600; font-size: 13px; display: flex; align-items: center; gap: 10px; }
+.branch-letter { width: 26px; height: 26px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 700; color: white; background: var(--navy); flex-shrink: 0; }
+.branch-body { padding: 12px 16px 14px 52px; border-top: 1px solid var(--border); background: #FAFBFC; }
+.branch-body ul { padding-left: 16px; }
+.branch-body li { font-size: 12.5px; color: #374151; margin-bottom: 5px; line-height: 1.55; }
+
+/* CHANNEL CONFIRMATION CARDS */
+.channel-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
+@media (max-width: 680px) { .channel-cards { grid-template-columns: 1fr; } }
+.ch-card { border-radius: 8px; overflow: hidden; border: 1px solid var(--border); }
+.ch-card-header { padding: 10px 14px; color: white; font-size: 12px; font-weight: 700; }
+.ch-card-body { padding: 12px 14px; background: white; font-size: 12.5px; line-height: 1.6; color: #374151; }
+.ch-card-body p { margin-bottom: 6px; }
+.ch-card-body p:last-child { margin-bottom: 0; }
+.mini-label { font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: var(--muted); }
+
+/* INTERPRETATION TABLE */
+.interp-table-wrap { overflow-x: auto; margin-bottom: 24px; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+.interp-table { width: 100%; border-collapse: collapse; font-size: 12.5px; background: white; }
+.interp-table th { background: #1A3A5C; color: white; padding: 10px 14px; text-align: left; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; }
+.interp-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.55; }
+.interp-table tr:last-child td { border-bottom: none; }
+.interp-table tr:nth-child(even) td { background: #F8FAFC; }
+
+/* PROTOCOL MAP TABLE */
+.proto-table-wrap { overflow-x: auto; margin-bottom: 24px; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+.proto-table { width: 100%; border-collapse: collapse; font-size: 12px; background: white; }
+.proto-table th { background: #1A3A5C; color: white; padding: 10px 14px; text-align: left; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap; }
+.proto-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.55; }
+.proto-table tr:last-child td { border-bottom: none; }
+.proto-table tr:nth-child(even) td { background: #F8FAFC; }
+.layer-tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-family: 'DM Mono', monospace; font-weight: 600; background: #1A3A5C; color: white; }
+
+/* DOCTOR SCRIPT */
+.script-block { background: white; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 16px; }
+.script-header { background: #1A3A5C; color: white; padding: 10px 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; }
+.script-body { padding: 14px 16px; font-family: 'Source Serif 4', serif; font-size: 13.5px; line-height: 1.75; color: #374151; font-style: italic; }
+
+/* MVLS COST BOX */
+.cost-box { background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+.cost-box h4 { font-size: 12px; font-weight: 700; color: #15803D; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+.cost-box p { font-size: 13px; color: #374151; line-height: 1.65; }
+
+/* THREE-DOC SYSTEM */
+.three-doc { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 20px; }
+.doc-card { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+.doc-card-title { font-size: 12px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+.doc-card-desc { font-size: 12px; color: var(--muted); line-height: 1.55; }
+
+footer { background: var(--navy); color: rgba(255,255,255,0.6); text-align: center; padding: 28px 20px; font-size: 12px; line-height: 1.8; }
+footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
+footer strong { color: white; }
+
+@media (max-width: 720px) {
+  .notices { grid-template-columns: 1fr; }
+  .wrap { padding: 0 16px; }
+  .masthead-inner { flex-direction: column; gap: 4px; text-align: center; }
+}
+
+  .site-footer { background: #0f2342; }
+  .footer-stripe { height: 3px; background: linear-gradient(90deg, #1e6b72 0%, #2a9da6 50%, #c8923a 100%); }
+  .footer-inner { max-width: 960px; margin: 0 auto; padding: 44px 44px 36px; }
+  .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap; }
+  .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: rgba(255,255,255,0.92); margin-bottom: 6px; }
+  .footer-tagline { font-style: italic; font-weight: 300; font-size: 0.88rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
+  .footer-channels { display: flex; flex-direction: column; gap: 10px; }
+  .footer-channels-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 2px; }
+  .footer-channel-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: rgba(255,255,255,0.65); font-size: 0.88rem; transition: color 0.15s; }
+  .footer-channel-link:hover { color: #2a9da6; }
+  .ch-icon { width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: rgba(255,0,0,0.18); }
+  .footer-bottom { padding-top: 24px; display: flex; flex-direction: column; gap: 8px; }
+  .footer-disclaimer { font-style: italic; font-size: 0.8rem; color: rgba(255,255,255,0.35); max-width: 700px; line-height: 1.6; }
+  .footer-meta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.2); margin-top: 4px; }
+
+  /* ── SITE HEADER ── */
+  .site-header { background: #0f2342; color: #fff; position: relative; overflow: hidden; }
+  .header-stripe { height: 5px; background: linear-gradient(90deg, #1e6b72 0%, #2a9da6 50%, #c8923a 100%); }
+  .header-inner { max-width: 1100px; margin: 0 auto; padding: 52px 44px 48px; position: relative; z-index: 1; }
+  .brand-line {
+    font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: #2a9da6; margin-bottom: 18px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .brand-line::after { content: ''; display: block; height: 1px; width: 60px; background: #2a9da6; opacity: 0.45; }
+  .site-header h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.9rem, 4vw, 2.85rem); font-weight: 700;
+    line-height: 1.15; color: #fff; margin-bottom: 14px;
+  }
+  .site-header h1 em { color: #e8b86d; font-style: italic; }
+  .site-header .header-subtitle {
+    font-family: 'Source Serif 4', serif; font-style: italic; font-weight: 300; font-size: 1.05rem;
+    color: rgba(255,255,255,0.6); max-width: 700px; line-height: 1.55;
+  }
+  .suite-badge {
+    display: inline-flex; align-items: center; gap: 8px; margin-top: 22px;
+    background: rgba(42,157,166,0.18); border: 1px solid rgba(42,157,166,0.4);
+    border-radius: 4px; padding: 5px 14px;
+    font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: #2a9da6;
+  }
+  .header-deco {
+    position: absolute; right: -60px; top: -60px; width: 340px; height: 340px;
+    border-radius: 50%; border: 1px solid rgba(255,255,255,0.04); pointer-events: none;
+  }
+  .header-deco::after { content: ''; position: absolute; inset: 35px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.03); }
+
+  /* ── FRAMEWORK NOTICE ── */
+  .framework-notice { background: #fffbf2; border-top: 1px solid rgba(200,146,58,0.25); border-bottom: 1px solid rgba(200,146,58,0.25); }
+  .framework-notice-inner { max-width: 1100px; margin: 0 auto; padding: 20px 44px; display: flex; gap: 16px; align-items: flex-start; }
+  .notice-icon {
+    flex-shrink: 0; margin-top: 2px; width: 20px; height: 20px; border-radius: 50%;
+    background: rgba(200,146,58,0.15); border: 1px solid rgba(200,146,58,0.4);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; color: #c8923a; line-height: 1;
+  }
+  .notice-text { font-family: 'Source Serif 4', serif; font-size: 0.875rem; color: #6b5a3a; line-height: 1.65; }
+  .notice-text strong { color: #4a3a1e; font-weight: 600; }
+
+  /* ── CHANNEL LEGEND (inline, under section 1) ── */
+  .channel-legend { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 18px 0 0; }
+  .ch-legend-label { font-family: 'DM Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: #64748b; margin-right: 4px; }
+
+  /* ── FOOTER FONT FIXES ── */
+  .footer-tagline { font-family: 'Source Serif 4', serif; font-style: italic; font-weight: 300; font-size: 0.88rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
+  .footer-disclaimer { font-family: 'Source Serif 4', serif; font-style: italic; font-size: 0.8rem; color: rgba(255,255,255,0.35); max-width: 700px; line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<nav class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <div class="mast-brand">Decoding Autism Now</div>
+      <div class="mast-title">Biology of Autism — Diagnosis to Intervention</div>
+    </div>
+    <div class="mast-meta"></div>
+  </div>
+</nav>
+
+<header class="site-header">
+  <div class="header-stripe"></div>
+  <div class="header-inner">
+    <div class="brand-line">Decoding Autism Now — Biology of Autism</div>
+    <h1>Biology of Autism — <em>Diagnosis to Intervention</em></h1>
+    <p class="header-subtitle">Using Targeted Biological Testing to Personalize the Treatment Intervention</p>
+    <div class="suite-badge">ASD Cascade Suite · Diagnostic Bridge</div>
+    <div class="header-deco"></div>
+  </div>
+</header>
+
+<aside class="framework-notice" role="note">
+  <div class="framework-notice-inner">
+    <div class="notice-icon">i</div>
+    <p class="notice-text">
+      <strong>Theoretical framework — not clinical guidance.</strong>
+      The Autism Spectrum Disorder (ASD) Cascade is a systems-biology model integrating peer-reviewed findings across immunology, metabolism, gut biology, and neuroscience into a proposed mechanistic map. Individual components are supported by published research; the full integrated cascade has not been validated as a unified model in large clinical trials. It is intended as a research-informed framework — not a diagnostic tool or treatment protocol. All intervention decisions require qualified clinical oversight. For the evidence base, see the <em>ASD Cascade Citations</em> document in this suite.
+    </p>
+  </div>
+</aside>
+
+<div class="wrap">
+
+  <!-- SECTION 1: WHY TESTING -->
+  <div class="doc-section">
+    <div class="section-title"><span class="section-num">1</span> Why Testing Helps Target and Prioritize Interventions</div>
+    <p class="intro-text">The Autism Spectrum Disorder (ASD) biological cascade identifies five upstream trigger channels — gut dysbiosis/LPS translocation, mitochondrial dysfunction, MIA/neuroinflammation, environmental toxin/oxidative burden, and HPA axis dysregulation/SST elevation — as the inputs that initiate and sustain the cascade. The cascade graphic presents these as co-equal contributors at the population level. At the individual level, however, one or two channels typically dominate.</p>
+
+    <div class="channel-legend">
+      <span class="ch-legend-label">The five channels:</span>
+      <span class="ch-pill" style="background:var(--gut)">Gut / LPS</span>
+      <span class="ch-pill" style="background:var(--mito)">Mitochondrial</span>
+      <span class="ch-pill" style="background:var(--mia)">MIA / Neuroinflammation</span>
+      <span class="ch-pill" style="background:var(--env)">Environmental / Oxidative</span>
+      <span class="ch-pill" style="background:var(--sst)">SST / HPA Axis</span>
+      <span class="ch-pill" style="background:var(--multi)">Multi-channel</span>
+    </div>
+    <div class="callout blue">
+      <h4>Why this distinction is clinically critical</h4>
+      <p>The ASD Intervention Protocol presents a generic five-layer sequencing. But if the gut is an active ongoing upstream trigger, continuously releasing LPS into systemic circulation while adding SIRT1 activators, downstream interventions are continuously undermined by an unaddressed upstream driver.</p>
+    </div>
+    <p style="font-size:13px; color:#374151; margin-bottom:16px;">The diagnostic bridge resolves this by: <strong>(1)</strong> confirming which channels are active, <strong>(2)</strong> quantifying their relative contribution, <strong>(3)</strong> routing the protocol layer reordering accordingly, and <strong>(4)</strong> establishing biomarker baselines for tracking treatment response over time.</p>
+    <div class="callout amber">
+      <h4>Intervention Logic</h4>
+      <p>Because both SST elevation and SIRT1 deficiency independently suppress CREB — and both are driven by the same upstream stressors — effective support must address multiple points simultaneously: restore functional NAD⁺ sufficiency → reactivate SIRT1 → suppress NF-κB → quiet microglia → reduce SST triggers → normalize astrocyte phenotype → reduce SPARC → support hevin/glypican synaptogenesis → reopen CREB-mediated learning pathway. Single-target approaches are insufficient once the self-sustaining loop is established.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 2: COMPLETE TEST REFERENCE -->
+  <div class="doc-section">
+    <div class="section-title"><span class="section-num">2</span> Complete Test Reference — All Channels</div>
+    <p class="intro-text">All recommended tests organized by upstream channel. Priority definitions: <span class="pri pri-first">First-Line</span> = order routinely for all individuals. <span class="pri pri-second">Second-Line</span> = order when first-line confirms channel is active. <span class="pri pri-third">Third-Line</span> = for specific circumstances or unexplained findings.</p>
+
+    <!-- GUT -->
+    <h3 style="font-size:13px; font-weight:700; color:var(--gut); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10px; margin-top:20px;">■ Gut / LPS Channel</h3>
+    <div class="test-table-wrap">
+      <table class="test-table">
+        <thead><tr><th>Test</th><th>What It Measures</th><th>Cascade Node</th><th>Lab Source</th><th>Priority</th></tr></thead>
+        <tbody>
+          <tr><td class="test-name">Zonulin (serum or stool)</td><td>Intestinal tight junction protein; elevated = active leaky gut / barrier disruption. Directly measures LPS translocation risk.</td><td>Upstream Trigger — LPS entry point. Elevated = gut is active ongoing cascade driver.</td><td>Cyrex Array 2; Doctor's Data stool panel</td><td><span class="pri pri-first">First</span></td></tr>
+          <tr><td class="test-name">LPS-Binding Protein (LBP)</td><td>Acute phase protein binding circulating LPS; elevated = systemic LPS translocation actively occurring, driving TLR4/NF-κB activation.</td><td>Upstream Trigger — confirms active LPS-driven NF-κB signaling; makes gut Layer 1 priority.</td><td>LabCorp, Quest (order as LBP)</td><td><span class="pri pri-first">First</span></td></tr>
+          <tr><td class="test-name">Comprehensive Stool Analysis (GI-MAP)</td><td>Pathogenic/commensal bacteria, H. pylori, parasites, fungi, secretory IgA, calprotectin (gut inflammation), elastase (pancreatic output).</td><td>Upstream Trigger + SST node — low elastase confirms SST gut inhibition.</td><td>Diagnostic Solutions (GI-MAP); Genova GI Effects</td><td><span class="pri pri-first">First</span></td></tr>
+          <tr><td class="test-name">Anti-LPS IgG / IgM</td><td>Antibodies against LPS — marker of chronic cumulative LPS exposure. Elevated = gut has been leaking LPS for extended period.</td><td>Upstream Trigger — confirms chronic vs acute LPS exposure; guides urgency of gut repair.</td><td>Cyrex Array 2; specialty labs</td><td><span class="pri pri-second">Second</span></td></tr>
+          <tr><td class="test-name">Secretory IgA (stool)</td><td>Mucosal immune defense layer. Low sIgA = gut immune surveillance compromised; predicts dysbiosis persistence and LPS vulnerability.</td><td>Upstream Trigger — low sIgA predicts failure of probiotic interventions without sIgA support.</td><td>Included in GI-MAP and Genova GI Effects panels</td><td><span class="pri pri-second">Second</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- MITOCHONDRIAL -->
+    <h3 style="font-size:13px; font-weight:700; color:var(--mito); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10px; margin-top:20px;">■ Mitochondrial Channel</h3>
+    <div class="test-table-wrap">
+      <table class="test-table">
+        <thead><tr><th>Test</th><th>What It Measures</th><th>Cascade Node</th><th>Lab Source</th><th>Priority</th></tr></thead>
+        <tbody>
+          <tr><td class="test-name">OAT — Mitochondrial markers</td><td>Succinic, fumaric, malic, citric acids (TCA cycle). Elevated = TCA cycle blockade / mitochondrial dysfunction. Also: lactate, pyruvate.</td><td>SIRT1/PGC-1α node — confirms mitochondrial biogenesis failure downstream of SIRT1 suppression.</td><td>Great Plains Laboratory OAT; Genova Organix</td><td><span class="pri pri-first">First</span></td></tr>
+          <tr><td class="test-name">Plasma Lactate / Pyruvate Ratio</td><td>Direct mitochondrial respiratory chain function. Elevated ratio (&gt;20) = Complex I/III dysfunction; anaerobic glycolysis active.</td><td>SIRT1/PGC-1α node — most specific marker of active mitochondrial respiratory chain failure.</td><td>LabCorp, Quest standard metabolic panels; specify L:P ratio</td><td><span class="pri pri-first">First</span></td></tr>
+          <tr><td class="test-name">Plasma / RBC Carnitine panel</td><td>Fatty acid transport into mitochondria. Low free carnitine = impaired beta-oxidation. Acylcarnitine profile identifies specific blocks.</td><td>PGC-1α / mitochondrial node — carnitine depletion prevents fatty acid entry into TCA cycle.</td><td>LabCorp, Quest; request full carnitine with acylcarnitine profile</td><td><span class="pri pri-second">Second</span></td></tr>
+          <tr><td class="test-name">CoQ10 (plasma)</td><td>Direct ubiquinol/ubiquinone levels. Deficiency common in mitochondrial dysfunction and statin use.</td><td>Mitochondria / PGC-1α node — low plasma CoQ10 confirms need for ubiquinol supplementation.</td><td>LabCorp, Quest standard; specify CoQ10 plasma</td><td><span class="pri pri-second">Second</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- MIA / NEUROINFLAMMATION -->
+    <h3 style="font-size:13px; font-weight:700; color:var(--mia); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10px; margin-top:20px;">■ MIA / Neuroinflammation Channel</h3>
+    <div class="test-table-wrap">
+      <table class="test-table">
+        <thead><tr><th>Test</th><th>What It Measures</th><th>Cascade Node</th><th>Lab Source</th><th>Priority</th></tr></thead>
+        <tbody>
+          <tr><td class="test-name">Kynurenine / Tryptophan Ratio</td><td>Direct measure of IDO1 enzyme activity. Elevated K:T = IDO1 activated by inflammation, tryptophan diverted from serotonin into kynurenine pathway.</td><td>IDO1 node — most direct confirmatory test for the core cascade mechanism. Elevated K:T = functional NAD⁺ insufficiency confirmed; SIRT1 fuel inadequate.</td><td>Mayo Clinic Labs; functional labs; OAT captures downstream kynurenine metabolites</td><td><span class="pri pri-first">First</span></td></tr>
+          <tr><td class="test-name">OAT — Quinolinic / Kynurenic ratio</td><td>Quinolinic acid (neurotoxic NMDA agonist) vs kynurenic acid (neuroprotective). High ratio = neurotoxic kynurenine dominance.</td><td>IDO1 / Tryptophan hijack node — elevated quinolinic confirms active neurotoxic IDO1 pathway.</td><td>Included in Great Plains OAT; Genova Organix</td><td><span class="pri pri-first">First</span></td></tr>
+          <tr><td class="test-name">Cytokine Panel (IL-6, TNF-α, IL-1β)</td><td>Pro-inflammatory cytokines from activated M1 microglia and NF-κB-driven immune cells.</td><td>NF-κB / M1 Microglia node — confirms active neuroinflammatory signaling. Elevated = luteolin + omega-3 prioritized.</td><td>LabCorp, Quest (IL-6, TNF-α); specialty labs for IL-1β</td><td><span class="pri pri-first">First</span></td></tr>
+          <tr><td class="test-name">hsCRP</td><td>Systemic inflammatory load marker. Elevated = chronic NF-κB activation in absence of acute infection.</td><td>NF-κB node — elevated hsCRP confirms chronic inflammatory state driving cascade.</td><td>LabCorp, Quest standard. Inexpensive, widely covered.</td><td><span class="pri pri-first">First</span></td></tr>
+          <tr><td class="test-name">BDNF (serum)</td><td>Downstream output of cAMP/PKA/CREB pathway. Chronically low in ASD. Reflects combined SST + SIRT1 suppression of learning pathway.</td><td>CREB/BDNF node — low BDNF confirms both arms suppressing learning pathway. Key outcome marker.</td><td>LabCorp, Quest; specify serum BDNF</td><td><span class="pri pri-second">Second</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ENVIRONMENTAL -->
+    <h3 style="font-size:13px; font-weight:700; color:var(--env); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10px; margin-top:20px;">■ Environmental / Oxidative Channel</h3>
+    <div class="test-table-wrap">
+      <table class="test-table">
+        <thead><tr><th>Test</th><th>What It Measures</th><th>Cascade Node</th><th>Lab Source</th><th>Priority</th></tr></thead>
+        <tbody>
+          <tr><td class="test-name">GPL-TOX (Toxic Organic Chemicals)</td><td>Screens 172+ environmental chemicals: glyphosate, organophosphates, phthalates, benzene, styrene in urine.</td><td>Upstream Trigger — environmental channel. Positive findings confirm ongoing toxin-driven oxidative load.</td><td>Great Plains Laboratory (GPL-TOX urine panel)</td><td><span class="pri pri-first">First</span></td></tr>
+          <tr><td class="test-name">Glyphosate (urine)</td><td>Specific glyphosate quantification. Disrupts gut microbiome, depletes tryptophan precursors, associated with increased ASD risk.</td><td>Upstream Trigger — glyphosate depletes gut Lactobacillus/Bifidobacterium, compounds IDO1 pathway effects.</td><td>Great Plains Laboratory; The Detox Project; HRI Labs</td><td><span class="pri pri-first">First</span></td></tr>
+          <tr><td class="test-name">RBC Heavy Metals (Hg, Pb, As, Cd)</td><td>Red blood cell heavy metal levels reflecting chronic tissue exposure. Mercury disrupts mitochondria; lead elevates cytokines; arsenic impairs SIRT1.</td><td>Upstream Trigger + FOXO node — metal burden drives oxidative stress, GSH depletion, SIRT1 inhibition.</td><td>Doctor's Data RBC Elements; LabCorp metals panel; specify RBC not serum</td><td><span class="pri pri-first">First</span></td></tr>
+          <tr><td class="test-name">8-OHdG (urine)</td><td>DNA oxidative damage marker — ROS-induced guanine modification. Elevated in ASD; correlates with severity.</td><td>FOXO / Antioxidant node — elevated 8-OHdG confirms active oxidative DNA damage; NAC + sulforaphane prioritized.</td><td>Great Plains OAT includes this; also standalone via LabCorp</td><td><span class="pri pri-second">Second</span></td></tr>
+          <tr><td class="test-name">Glutathione GSH:GSSG ratio</td><td>Ratio of reduced (active) to oxidized glutathione. Low ratio = antioxidant system overwhelmed; FOXO suppression confirmed.</td><td>FOXO / Antioxidant node — low GSH:GSSG is primary indicator that NAC is urgently needed.</td><td>Doctor's Data; Genova Diagnostics; specialty labs</td><td><span class="pri pri-second">Second</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SST / HPA -->
+    <h3 style="font-size:13px; font-weight:700; color:var(--sst); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10px; margin-top:20px;">■ SST / HPA Axis Channel</h3>
+    <div class="test-table-wrap">
+      <table class="test-table">
+        <thead><tr><th>Test</th><th>What It Measures</th><th>Cascade Node</th><th>Lab Source</th><th>Priority</th></tr></thead>
+        <tbody>
+          <tr><td class="test-name">Salivary Cortisol (4-point)</td><td>Cortisol at waking, midday, afternoon, evening. Identifies HPA axis dysregulation driving tonic SST release and cAMP suppression.</td><td>SST node — HPA dysregulation is primary driver of chronic SST elevation; confirms AC/cAMP/CREB suppressed.</td><td>ZRT Laboratory (saliva); DUTCH Test; Genova Adrenocortex Stress Profile</td><td><span class="pri pri-first">First</span></td></tr>
+          <tr><td class="test-name">Hair Cortisol (3-month integrated)</td><td>Cortisol accumulates in hair shaft at ~1 cm/month. Captures 3-month integrated HPA output. Especially useful in children where repeated saliva collection is difficult.</td><td>SST / HPA node — hair cortisol quantifies chronic HPA burden sustaining SST elevation long-term. Complements salivary cortisol: rhythm (saliva) + load (hair).</td><td>Stratech/Ciatec; ZRT Laboratory (hair); Eurofins; some LabCorp-affiliated specialty labs. Collect 3 cm proximal segment.</td><td><span class="pri pri-second">Second</span></td></tr>
+          <tr><td class="test-name">IGF-1 (serum)</td><td>SST inhibits GH which stimulates IGF-1. Low IGF-1 = functional downstream marker of elevated SST tone. Documented low in ASD subset.</td><td>SST node — low IGF-1 confirms SST chronically suppressing GH axis. Accessible indirect SST load indicator.</td><td>LabCorp, Quest standard. Inexpensive and widely available.</td><td><span class="pri pri-first">First</span></td></tr>
+          <tr><td class="test-name">Fasting Insulin / HOMA-IR</td><td>Insulin resistance index. Metabolic strain and hyperinsulinemia are direct SST release triggers.</td><td>SST / upstream metabolic node — elevated HOMA-IR confirms metabolic component driving SST elevation.</td><td>LabCorp, Quest standard. HOMA-IR = fasting insulin × glucose / 405.</td><td><span class="pri pri-first">First</span></td></tr>
+          <tr><td class="test-name">DHEA-S (serum)</td><td>Adrenal androgen produced in tandem with cortisol. Low DHEA-S with abnormal cortisol pattern confirms chronic HPA activation and adrenal exhaustion phase.</td><td>SST / HPA node — low DHEA-S paired with flat cortisol curve is the HPA exhaustion signature; strongly confirms chronic SST elevation driving cAMP/CREB suppression.</td><td>LabCorp, Quest standard serum test. Inexpensive, widely covered. Interpret in context of cortisol diurnal curve.</td><td><span class="pri pri-first">First</span></td></tr>
+          <tr><td class="test-name">Glutamate / GABA Ratio</td><td>Excitatory/inhibitory balance marker. Elevated glutamate or low GABA = E/I imbalance; correlates with sensory over-reactivity, anxiety, and repetitive behaviors.</td><td>SST node + Connectivity node — E/I imbalance is the synaptic signature of SST interneuron loss and glypican deficiency. Elevated ratio confirms cascade has reached architectural impact level.</td><td>OAT includes glutamate metabolites; plasma amino acid panels (LabCorp, Quest); CSF requires lumbar puncture (specialized centers only). Urine glutamate:GABA via OAT is most accessible.</td><td><span class="pri pri-second">Second</span></td></tr>
+          <tr><td class="test-name">Actigraphy / Sleep Study (PSG)</td><td>Objective sleep architecture measurement. Identifies slow-wave sleep (SWS) deficit — the glymphatic-active sleep phase.</td><td>SST / Glymphatic node — SWS deficit confirms glymphatic clearance failure; inflammatory load accumulates nightly rather than being cleared.</td><td>Polysomnography via sleep specialist; consumer-grade actigraphy (Oura Ring, Garmin); clinical PSG required for formal diagnosis.</td><td><span class="pri pri-first">First</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- MULTI-CHANNEL -->
+    <h3 style="font-size:13px; font-weight:700; color:var(--multi); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10px; margin-top:20px;">■ Multi-Channel Tests</h3>
+    <div class="test-table-wrap">
+      <table class="test-table">
+        <thead><tr><th>Test</th><th>What It Measures</th><th>Cascade Node</th><th>Lab Source</th><th>Priority</th></tr></thead>
+        <tbody>
+          <tr><td class="test-name">OAT — Full Panel</td><td>Single urine covering: mitochondrial TCA markers, kynurenine pathway, gut dysbiosis metabolites, oxidative stress markers, neurotransmitter metabolites, B-vitamins.</td><td>Covers IDO1, Mitochondrial, Gut/LPS, FOXO/antioxidant, and CREB nodes. Highest-yield single test.</td><td>Great Plains Laboratory OAT (most comprehensive); Genova Organix</td><td><span class="pri pri-first">First</span></td></tr>
+          <tr><td class="test-name">ApoE Genotyping</td><td>ApoE4 allele — impairs glymphatic clearance of Aβ, tau, and neuroinflammatory debris during sleep. ApoE4 carriers have 3–4× higher risk for neuroinflammatory burden accumulation.</td><td>Glymphatic / Sleep node — ApoE4 status identifies individuals where sleep disruption has compounding neuroinflammatory consequences; prioritizes melatonin and circadian repair as non-negotiable Layer 1.</td><td>LabCorp, Quest standard genetic test. Single blood draw, once-in-lifetime result.</td><td><span class="pri pri-second">Second</span></td></tr>
+          <tr><td class="test-name">Micronutrient Panel (intracellular)</td><td>Intracellular B vitamins, zinc, magnesium, selenium, CoQ10, vitamin D, antioxidants. Co-factor deficiencies limit all cascade node interventions.</td><td>All nodes — co-factor deficiencies limit every supplement intervention. Must identify before building protocol.</td><td>Spectracell Micronutrient; Genova NutrEval; LabCorp ION panel</td><td><span class="pri pri-first">First</span></td></tr>
+          <tr><td class="test-name">Vitamin D (25-OH-D)</td><td>VDR modulates NF-κB activity. Deficiency near-universal in ASD; correlates with severity; allows unchecked NF-κB activation.</td><td>NF-κB / microglial node — deficiency amplifies NF-κB; inexpensive to test, easy to address.</td><td>LabCorp, Quest standard. Inexpensive, widely covered.</td><td><span class="pri pri-first">First</span></td></tr>
+          <tr><td class="test-name">CBC + CMP</td><td>Complete blood count and metabolic panel. Screens anemia, liver/kidney function, glucose/insulin, inflammatory indicators.</td><td>Multi-node baseline — identifies systemic constraints on detoxification, nutrient delivery, and metabolism.</td><td>LabCorp, Quest standard. Covered by most insurance.</td><td><span class="pri pri-first">First</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 3: SEQUENCING -->
+  <div class="doc-section">
+    <div class="section-title"><span class="section-num">3</span> Prioritized Test Sequencing — What to Order and When</div>
+    <div class="seq-table-wrap">
+      <table class="seq-table">
+        <thead><tr><th>Order</th><th>Tests</th><th>Rationale</th><th>What You Learn</th><th>Action Threshold</th></tr></thead>
+        <tbody>
+          <tr>
+            <td style="text-align:center"><span class="order-num">1</span></td>
+            <td><strong>Start here</strong><br>OAT (full panel), Micronutrient panel, Vitamin D, CBC + CMP, hsCRP</td>
+            <td>Highest single-test yield. OAT maps gut, mitochondria, kynurenine/IDO1, oxidative stress simultaneously. Micronutrient panel identifies co-factor depletions limiting all subsequent interventions.</td>
+            <td>Active channels confirmed. Protocol layer priority established. Co-factor depletions identified. Baseline inflammatory status captured.</td>
+            <td>OAT abnormalities route to channel-specific second-line tests. Vitamin D &lt;40 ng/mL: supplement immediately. CMP abnormalities: address before targeted protocol.</td>
+          </tr>
+          <tr>
+            <td style="text-align:center"><span class="order-num">2</span></td>
+            <td><strong>Confirm channels</strong><br>K:T ratio, Salivary cortisol (4-pt), Hair cortisol (3-month), IGF-1, DHEA-S, Fasting insulin / HOMA-IR, Zonulin + LBP (if OAT gut elevated)</td>
+            <td>Second-line tests confirm which channels are most active based on OAT findings. Salivary cortisol captures diurnal rhythm; hair cortisol captures 3-month chronic load — together give both rhythm and burden.</td>
+            <td>Primary cascade driver identified. Protocol layer reordering determined. SST/HPA load and adrenal status quantified — both acute rhythm and chronic load. Gut as active vs resolved trigger clarified.</td>
+            <td>Elevated K:T: NMN/NR to Layer 1. Abnormal cortisol: sleep/HPA as Layer 1. Elevated hair cortisol: chronic HPA load confirmed. Low IGF-1 + cortisol abnormal: SST doubly confirmed. Low DHEA-S + flat cortisol: HPA exhaustion. Elevated zonulin + LBP: gut repair before everything.</td>
+          </tr>
+          <tr>
+            <td style="text-align:center"><span class="order-num">3</span></td>
+            <td><strong>Quantify load</strong><br>Cytokine panel (IL-6, TNF-α), GSH:GSSG ratio, BDNF (serum), GI-MAP stool (if gut active)</td>
+            <td>Third-line tests quantify severity of confirmed channels and identify most urgent intervention targets. BDNF serves as baseline outcome marker for treatment response tracking.</td>
+            <td>Neuroinflammation severity mapped. Antioxidant depletion depth quantified. Learning circuit impairment baseline established. Gut microbiome composition detailed.</td>
+            <td>Elevated cytokines: luteolin + omega-3 to Layer 1. Low GSH:GSSG: NAC urgent. Low BDNF establishes baseline; retest at 3–6 months.</td>
+          </tr>
+          <tr>
+            <td style="text-align:center"><span class="order-num">4</span></td>
+            <td><strong>Specialized burden</strong><br>GPL-TOX + Glyphosate, RBC heavy metals, 8-OHdG (urine), Carnitine panel</td>
+            <td>Fourth-line tests address specific burden contributors not captured by OAT. Order based on suspected exposure history, geographic factors, dietary patterns, or unexplained oxidative findings.</td>
+            <td>Environmental toxin contribution quantified. Metal burden identified. Mitochondrial fatty acid oxidation capacity assessed.</td>
+            <td>GPL-TOX positives: detox support + exposure reduction. Metals elevated: NAC/GSH + supervised chelation consideration. Low carnitine: L-carnitine supplementation.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- MVLS -->
+    <h3 style="font-size:15px; font-weight:700; color:var(--navy); margin-bottom:12px; margin-top:28px; padding-bottom:6px; border-bottom:1px solid var(--border);">3b. Constrained Access — Minimal Viable Lab Set (MVLS)</h3>
+    <div class="callout green">
+      <h4>When to Use the MVLS</h4>
+      <p>Use the MVLS when: (1) insurance covers only standard labs, (2) your practitioner is uncomfortable ordering functional medicine panels, (3) cost is a significant constraint, or (4) you need a rapid baseline before a functional medicine consultation. The MVLS captures roughly 70–80% of the actionable information at a fraction of the cost. Treat results as directional: positive findings confirm a channel is active and justify prioritizing that layer.</p>
+    </div>
+    <div class="mvls-table-wrap">
+      <table class="mvls-table">
+        <thead><tr><th>Channel</th><th>MVLS Test(s)</th><th>What It Tells You</th><th>Protocol Implication</th><th>Access / Notes</th></tr></thead>
+        <tbody>
+          <tr><td><span class="ch ch-gut">Gut / LPS</span></td><td>hsCRP (serum) + CBC differential</td><td>hsCRP &gt;1.0 mg/L without acute infection = systemic inflammation consistent with LPS translocation. CBC eosinophilia or monocytosis can reflect chronic gut-driven immune activation.</td><td>Gut repair layer elevated in priority. Order GI-MAP if hsCRP elevated and GI symptoms present.</td><td>LabCorp/Quest. Covered by most insurance. Often included in standard annual labs.</td></tr>
+          <tr><td><span class="ch ch-mito">Mitochondrial</span></td><td>CMP (fasting) + Serum lactate</td><td>CMP: elevated lactate, low bicarbonate, or abnormal glucose flags metabolic strain. Serum lactate &gt;2.0 mmol/L at rest flags mitochondrial dysfunction.</td><td>If CMP flagged: OAT TCA markers as next step. CoQ10 + NMN/NR elevated in priority.</td><td>LabCorp/Quest standard. CMP covered universally. Request fasting draw for best picture.</td></tr>
+          <tr><td><span class="ch ch-mia">MIA / Neuroinflammation</span></td><td>hsCRP + ESR</td><td>Together the most accessible systemic inflammatory markers. Elevated hsCRP + elevated ESR without infection = chronic inflammatory state consistent with active neuroinflammation.</td><td>If both elevated: K:T ratio and cytokine panel are highest-yield next steps. Anti-inflammatory layer (luteolin, omega-3) becomes immediate priority.</td><td>LabCorp/Quest. Covered by most insurance. Interpret jointly — neither alone is sufficient.</td></tr>
+          <tr><td><span class="ch ch-sst">SST / HPA Axis</span></td><td>Fasting insulin + IGF-1 + DHEA-S</td><td>The most cost-accessible SST/HPA proxy trio. Elevated fasting insulin = metabolic SST trigger confirmed. Low IGF-1 for age = functional SST excess. Low DHEA-S = HPA exhaustion pattern. Any two of three abnormal = SST channel active.</td><td>Sleep/circadian optimization becomes Layer 1. Low IGF-1 + low DHEA-S: SST doubly confirmed; Layer 5 SST interventions move to Layer 2.</td><td>LabCorp/Quest standard. All three inexpensive and widely covered. Order as fasting draw.</td></tr>
+          <tr><td><span class="ch ch-env">Environmental / Oxidative</span></td><td>RBC heavy metals (Hg, Pb, As, Cd) + Vitamin D (25-OH-D)</td><td>RBC metals are the most accessible chronic exposure screen. Vitamin D deficiency (&lt;40 ng/mL) is near-universal in ASD and allows unchecked NF-κB activation; correction is among the highest-yield low-cost interventions.</td><td>Metals elevated: NAC + glutathione urgent; chelation consultation if significant. Vitamin D &lt;40 ng/mL: D3 + K2 immediately regardless of other findings.</td><td>LabCorp/Quest. Specify RBC (not serum) for metals. Vitamin D is the least expensive test here — order for every individual regardless of access constraints.</td></tr>
+          <tr><td><span class="ch ch-multi">Multi-channel Baseline</span></td><td>CBC + CMP + Vitamin D + hsCRP</td><td>The universal minimum baseline. Together: systemic inflammation, metabolic strain, nutritional deficit, renal/hepatic function, and anemia — all of which amplify or constrain the cascade.</td><td>Any abnormality routes to channel-specific follow-up. Vitamin D &lt;40: supplement immediately. CRP elevated: anti-inflammatory layer becomes priority.</td><td>LabCorp/Quest. Covered universally. Available without specialist referral through primary care.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cost-box">
+      <h4>Estimated MVLS Cost</h4>
+      <p>CBC + CMP + Vitamin D + hsCRP + fasting insulin + IGF-1 + DHEA-S + RBC heavy metals: typically <strong>$150–$350 total</strong> through LabCorp/Quest at retail, often significantly less with insurance. Compare to full staged bridge ($800–$2,500+ for complete OAT, GI-MAP, GPL-TOX, micronutrient, and cytokine panels). The MVLS captures channel direction at roughly <strong>15–20% of full bridge cost</strong>. Direct-to-consumer options: Ulta Lab Tests, Any Lab Test Now, LabCorp patient portal — available in most states without physician referral.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 4: DECISION TREE -->
+  <div class="doc-section">
+    <div class="section-title"><span class="section-num">4</span> Clinical Decision Tree — Which Tests to Order First</div>
+    <div class="callout blue">
+      <h4>Universal First-Line Panel — Order for Every Individual</h4>
+      <p>OAT (full panel) + Micronutrient panel + Vitamin D + CBC/CMP + hsCRP. These tests provide the broadest initial map of active channels. Results then route second-line test selection.</p>
+    </div>
+
+    <div class="branch"><div class="branch-header"><span class="branch-letter">A</span> Prominent GI Symptoms (constipation, diarrhea, food refusal, bloating)</div><div class="branch-body"><ul><li>If OAT arabinose or HPHPA elevated → order GI-MAP comprehensive stool analysis</li><li>If OAT normal but GI symptoms persist → order Zonulin + LBP to confirm active barrier disruption</li><li>If GI-MAP elastase low → SST gut axis confirmed; SST reduction layer becomes Layer 1</li><li>If calprotectin elevated + pathogens present → address active infection/dysbiosis before probiotic protocol</li></ul></div></div>
+
+    <div class="branch"><div class="branch-header"><span class="branch-letter">B</span> Behavioral Regression, Irritability, or Sudden Skill Loss</div><div class="branch-body"><ul><li>Order K:T ratio + cytokine panel (IL-6, TNF-α) immediately</li><li>If K:T elevated + cytokines elevated → IDO1 and M1 microglia both active; NMN/NR + luteolin + omega-3 to Layer 1</li><li>If cytokines elevated but K:T normal → non-IDO1 inflammatory trigger; order GPL-TOX and LBP</li><li>Check OAT quinolinic acid — if elevated, neurotoxic pressure active; NAC becomes urgent</li></ul></div></div>
+
+    <div class="branch"><div class="branch-header"><span class="branch-letter">C</span> Sleep Disruption, Anxiety, Sensory Hypersensitivity</div><div class="branch-body"><ul><li>Order salivary cortisol diurnal curve (4-point) + IGF-1 together</li><li>If cortisol curve abnormal (flat, inverted, or chronically elevated) → HPA dysregulation confirmed; sleep/circadian becomes Layer 1</li><li>If IGF-1 low + cortisol abnormal → SST doubly confirmed; Layer 5 SST interventions move to Layer 2</li><li>Check BDNF as baseline — if low, confirms CREB pathway suppressed from both SST and SIRT1 directions</li></ul></div></div>
+
+    <div class="branch"><div class="branch-header"><span class="branch-letter">D</span> Fatigue, Low Endurance, Mitochondrial Phenotype</div><div class="branch-body"><ul><li>OAT TCA markers (succinic, fumaric, malic acids) are the primary screen</li><li>If TCA markers elevated → order plasma lactate:pyruvate ratio + full carnitine panel + CoQ10</li><li>If lactate:pyruvate &gt;20 → respiratory chain dysfunction confirmed; CoQ10 ubiquinol + NMN/NR to Layer 1</li></ul></div></div>
+
+    <div class="branch"><div class="branch-header"><span class="branch-letter">E</span> Suspected Environmental Exposure</div><div class="branch-body"><ul><li>Order GPL-TOX + glyphosate urine + RBC heavy metals as a bundle</li><li>If glyphosate elevated → gut microbiome disruption compounded; gut repair becomes more urgent</li><li>If metals elevated → NAC + glutathione support before other antioxidant layers; professional chelation consultation</li></ul></div></div>
+
+    <h3 style="font-size:14px; font-weight:700; color:var(--navy); margin:24px 0 14px;">Channel Confirmation Summary</h3>
+    <div class="channel-cards">
+      <div class="ch-card"><div class="ch-card-header" style="background:var(--gut)">Gut / LPS Channel Active</div><div class="ch-card-body"><p class="mini-label">Confirmed by</p><p>Zonulin elevated + LBP elevated + OAT gut dysbiosis markers elevated</p><p class="mini-label" style="margin-top:8px">Protocol reorder</p><p>Gut repair becomes Layer 1. Systemic layers have reduced efficacy while LPS continuously re-triggers NF-κB.</p></div></div>
+      <div class="ch-card"><div class="ch-card-header" style="background:var(--mito)">Mitochondrial Channel Active</div><div class="ch-card-body"><p class="mini-label">Confirmed by</p><p>Two or more TCA intermediates elevated + lactate:pyruvate &gt;15</p><p class="mini-label" style="margin-top:8px">Protocol reorder</p><p>CoQ10 ubiquinol + NMN/NR move to Layer 1 alongside magnesium. Carnitine added if deficient.</p></div></div>
+      <div class="ch-card"><div class="ch-card-header" style="background:var(--mia)">MIA / Neuroinflammation Channel Active</div><div class="ch-card-body"><p class="mini-label">Confirmed by</p><p>Elevated K:T ratio + elevated IL-6 or TNF-α + elevated quinolinic acid on OAT</p><p class="mini-label" style="margin-top:8px">Protocol reorder</p><p>NMN/NR + luteolin + omega-3 all move to Layer 1. NAC added urgently if quinolinic acid elevated.</p></div></div>
+      <div class="ch-card"><div class="ch-card-header" style="background:var(--sst)">SST / HPA Channel Active</div><div class="ch-card-body"><p class="mini-label">Confirmed by</p><p>Abnormal cortisol diurnal pattern + elevated hair cortisol + low IGF-1 for age</p><p class="mini-label" style="margin-top:8px">Protocol reorder</p><p>Sleep and circadian optimization become non-negotiable Layer 1. Hair cortisol elevated = chronic load confirmed. Low-dose forskolin under supervision after HPA stabilization.</p></div></div>
+      <div class="ch-card"><div class="ch-card-header" style="background:var(--env)">Environmental / Oxidative Channel Active</div><div class="ch-card-body"><p class="mini-label">Confirmed by</p><p>Multiple GPL-TOX positives or elevated metal burden + low GSH:GSSG + elevated 8-OHdG</p><p class="mini-label" style="margin-top:8px">Protocol reorder</p><p>Detoxification sub-layer added before Layer 1. NAC becomes co-foundational. Reduce ongoing exposure.</p></div></div>
+    </div>
+  </div>
+
+  <!-- SECTION 5: INTERPRETATION GUIDE -->
+  <div class="doc-section">
+    <div class="section-title"><span class="section-num">5</span> Interpretation Guide — Results to Cascade Routing</div>
+    <p class="intro-text">Maps specific abnormal test findings to their cascade interpretation and immediate protocol implication. Use this table after receiving results to determine which cascade nodes are confirmed active and how the protocol layer sequencing should be adjusted.</p>
+    <div class="interp-table-wrap">
+      <table class="interp-table">
+        <thead><tr><th>Test</th><th>Finding</th><th>Cascade Interpretation</th><th>Immediate Protocol Implication</th><th>Channel</th></tr></thead>
+        <tbody>
+          <tr><td>OAT — TCA markers</td><td>Succinic/fumaric/malic elevated</td><td>TCA cycle blocked; mitochondrial respiration impaired; PGC-1α downstream failure confirmed</td><td>Prioritize CoQ10 ubiquinol + NMN/NR + L-carnitine; CoQ10 to Layer 1</td><td><span class="ch ch-mito">Mitochondrial</span></td></tr>
+          <tr><td>OAT — Kynurenine metabolites</td><td>Quinolinic acid elevated, kynurenic low</td><td>IDO1 maximally activated; tryptophan diverted; SIRT1 fuel depleted; neurotoxic NMDA pressure active</td><td>NMN/NR urgent; NAC to protect against quinolinate-driven oxidative damage</td><td><span class="ch ch-mia">MIA / Neuroinflammation</span></td></tr>
+          <tr><td>OAT — Gut dysbiosis markers</td><td>Arabinose elevated (yeast); HPHPA elevated (Clostridia)</td><td>Active gut dysbiosis driving LPS translocation; propionate excess; ongoing upstream trigger confirmed</td><td>Antifungal/antimicrobial support before probiotics; C. butyricum after clearance; gut is Layer 1</td><td><span class="ch ch-gut">Gut / LPS</span></td></tr>
+          <tr><td>K:T ratio</td><td>Elevated (&gt;0.06; lab-dependent)</td><td>IDO1 actively diverting tryptophan; functional NAD⁺ insufficiency confirmed; neuroinflammation sustaining IDO1 induction</td><td>NMN/NR urgent; anti-inflammatory layer (luteolin, omega-3) to reduce IDO1 induction pressure</td><td><span class="ch ch-mia">MIA / Neuroinflammation</span></td></tr>
+          <tr><td>Cytokines IL-6, TNF-α</td><td>Both elevated</td><td>Active M1 microglial state; NF-κB driving cytokine production; A1 astrocyte conversion likely ongoing</td><td>Luteolin + omega-3 to Layer 1; curcumin as adjunct NF-κB suppressor</td><td><span class="ch ch-mia">MIA / Neuroinflammation</span></td></tr>
+          <tr><td>hsCRP</td><td>Elevated &gt;1.0 mg/L</td><td>Chronic systemic inflammation; NF-κB activation confirmed in absence of acute infection</td><td>Verify no acute infection; treat as neuroinflammation confirmed; full anti-inflammatory layer</td><td><span class="ch ch-mia">MIA / Neuroinflammation</span></td></tr>
+          <tr><td>Zonulin + LBP</td><td>Both elevated</td><td>Active gut barrier disruption with systemic LPS translocation; gut is ongoing real-time upstream trigger</td><td>Gut repair becomes Layer 1; zinc carnosine + glutamine for barrier repair alongside C. butyricum</td><td><span class="ch ch-gut">Gut / LPS</span></td></tr>
+          <tr><td>GI-MAP calprotectin</td><td>Calprotectin &gt;100 mcg/g stool</td><td>Active intestinal inflammation; neutrophil activation; LPS translocation risk high; dysbiosis severe</td><td>Gastroenterology review if very high; do not start probiotic until inflammation addressed</td><td><span class="ch ch-gut">Gut / LPS</span></td></tr>
+          <tr><td>GI-MAP elastase low</td><td>Elastase &lt;200 mcg/g stool</td><td>Pancreatic enzyme output suppressed — SST inhibition of digestive enzyme secretion; malabsorption confirmed</td><td>Digestive enzyme support at meals; SST reduction layer becomes urgent</td><td><span class="ch ch-sst">SST / HPA Axis</span></td></tr>
+          <tr><td>Salivary cortisol</td><td>Flat or inverted diurnal curve</td><td>HPA axis dysregulated; chronic stress state; SST tonically elevated; cAMP/CREB suppressed around clock</td><td>Sleep/circadian optimization is non-negotiable Layer 1; melatonin timing critical</td><td><span class="ch ch-sst">SST / HPA Axis</span></td></tr>
+          <tr><td>Hair cortisol</td><td>Elevated (&gt;20–30 pg/mg depending on lab)</td><td>Sustained chronic HPA load confirmed over preceding 3 months — not a transient spike. SST chronically elevated long-term.</td><td>Chronic load confirmed; stress reduction and sleep optimization must precede all other interventions; reassess hair cortisol at 3 months</td><td><span class="ch ch-sst">SST / HPA Axis</span></td></tr>
+          <tr><td>IGF-1</td><td>Low for age</td><td>Functional SST excess confirmed via GH suppression; SST chronically elevated independently of HPA findings</td><td>SST reduction layer elevated in priority; CREB doubly suppressed confirmed</td><td><span class="ch ch-sst">SST / HPA Axis</span></td></tr>
+          <tr><td>DHEA-S</td><td>Low for age; low DHEA-S + flat cortisol curve</td><td>HPA exhaustion pattern confirmed; adrenal axis in conservation phase; chronic SST elevation sustained</td><td>Stress reduction and sleep are non-negotiable Layer 1; consider phosphatidylserine 100–200mg evening; address SST node before attempting SIRT1 restoration</td><td><span class="ch ch-sst">SST / HPA Axis</span></td></tr>
+          <tr><td>GPL-TOX / Glyphosate</td><td>Multiple compounds positive</td><td>Environmental toxin burden driving oxidative stress, IDO1 activation, gut microbiome disruption simultaneously</td><td>Detox support (NAC, sulforaphane); reduce ongoing exposure; gut repair critical</td><td><span class="ch ch-env">Environmental / Oxidative</span></td></tr>
+          <tr><td>RBC Heavy Metals</td><td>Mercury, lead, or arsenic elevated</td><td>Metal burden suppressing SIRT1 directly; elevating inflammatory cytokines; impairing GSH synthesis</td><td>Increase NAC/sulforaphane/glutathione; consider practitioner-supervised chelation</td><td><span class="ch ch-env">Environmental / Oxidative</span></td></tr>
+          <tr><td>GSH:GSSG ratio</td><td>Reduced GSH &lt;80% total glutathione</td><td>Antioxidant system overwhelmed; FOXO axis depleted; DNA damage accumulating</td><td>NAC most urgent single intervention; sulforaphane to restore GSH enzyme synthesis capacity</td><td><span class="ch ch-env">Environmental / Oxidative</span></td></tr>
+          <tr><td>BDNF (serum)</td><td>Low (&lt;20 ng/mL typically)</td><td>CREB pathway output suppressed; both SST arm and SIRT1 arm confirmed suppressing learning pathway</td><td>Use as outcome marker — retest after 3–6 months; rising BDNF = cascade responding</td><td><span class="ch ch-mia">MIA / Neuroinflammation</span></td></tr>
+          <tr><td>Glutamate / GABA ratio</td><td>Elevated glutamate or depressed GABA relative to lab reference</td><td>E/I imbalance confirmed; SST interneuron loss has reached architectural level; glypican-silent synapses likely active</td><td>Magnesium glycinate (NMDA modulation); L-theanine (glutamate modulation); butyrate (GABA upregulation); reduce SST drivers; Wave 3 architecture support prioritized</td><td><span class="ch ch-sst">SST / HPA Axis</span></td></tr>
+          <tr><td>Sleep study / Actigraphy</td><td>SWS &lt;15% total sleep time; fragmented architecture</td><td>Glymphatic clearance impaired; nightly neuroinflammatory debris accumulation; quinolinic acid and cytokines not cleared during sleep; morning inflammatory burden elevated</td><td>Melatonin timing becomes Layer 1 non-negotiable; magnesium glycinate for GABA-mediated sleep onset; circadian repair before all other interventions; reassess at 3 months</td><td><span class="ch ch-sst">SST / HPA Axis</span></td></tr>
+          <tr><td>Micronutrient panel</td><td>Multiple deficiencies (B6, B12, zinc, Mg, Se)</td><td>Co-factor depletions limiting enzymatic function across all cascade nodes; supplements will underperform</td><td>Address deficiencies before targeted protocol; magnesium and B6 have ASD RCT data</td><td><span class="ch ch-multi">Multi-channel</span></td></tr>
+          <tr><td>Vitamin D</td><td>25-OH-D &lt;40 ng/mL</td><td>VDR-mediated NF-κB suppression impaired; near-universal in ASD</td><td>Vitamin D3 + K2 supplementation; target 50–70 ng/mL under practitioner supervision</td><td><span class="ch ch-multi">Multi-channel</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 6: PROTOCOL MAP -->
+  <div class="doc-section">
+    <div class="section-title"><span class="section-num">6</span> Test Result to Protocol Integration Map</div>
+    <p class="intro-text">The operational bridge between the Diagnostic Bridge and the Treatment Protocol. For each confirmed test finding: which protocol layer is affected, how the layer sequencing should be reordered, and which specific interventions are prioritized as a result.</p>
+    <div class="proto-table-wrap">
+      <table class="proto-table">
+        <thead><tr><th>Test Finding</th><th>Channel</th><th>Layer Affected</th><th>Layer Reordering</th><th>Interventions Prioritized</th></tr></thead>
+        <tbody>
+          <tr><td>OAT: TCA markers elevated</td><td><span class="ch ch-mito">Mitochondrial</span></td><td><span class="layer-tag">Layer 3 → Layer 1</span></td><td>CoQ10 + NMN/NR become foundational alongside magnesium</td><td>Ubiquinol 200–400mg; NMN/NR 250–500mg; L-carnitine 500–1000mg; magnesium maintained</td></tr>
+          <tr><td>OAT: Quinolinic acid elevated</td><td><span class="ch ch-mia">MIA / IDO1</span></td><td><span class="layer-tag">Layer 3 → Layer 1–2</span></td><td>NAD⁺ repletion urgent; anti-inflammatory must precede SIRT1 activation</td><td>NMN/NR immediately; luteolin + omega-3 to reduce IDO1 induction; NAC for quinolinate-driven oxidative damage</td></tr>
+          <tr><td>OAT: Arabinose + HPHPA elevated</td><td><span class="ch ch-gut">Gut / Dysbiosis</span></td><td><span class="layer-tag">Layer 4 → Layer 1</span></td><td>Gut clearance before any probiotic; yeast/Clostridia treatment first</td><td>Antifungal support; Clostridia-targeted intervention; C. butyricum after clearance; butyrate support</td></tr>
+          <tr><td>Zonulin + LBP elevated</td><td><span class="ch ch-gut">Gut / LPS Active</span></td><td><span class="layer-tag">Layer 4 → Layer 1</span></td><td>All systemic interventions have reduced efficacy while LPS continuously re-triggers NF-κB</td><td>Zinc carnosine 75mg; L-glutamine 5g; DGL; C. butyricum; remove LPS-promoting dietary factors</td></tr>
+          <tr><td>K:T ratio elevated</td><td><span class="ch ch-mia">MIA / IDO1</span></td><td><span class="layer-tag">Layer 3 → Layer 1</span></td><td>NMN/NR elevated to Layer 1 to restore functional NAD⁺ sufficiency; anti-inflammatory layer must run concurrently</td><td>NMN/NR 250–500mg; niacinamide as adjunct NAD⁺ support; luteolin + omega-3 to suppress IDO1 induction</td></tr>
+          <tr><td>Cortisol: flat/inverted curve</td><td><span class="ch ch-sst">SST / HPA</span></td><td><span class="layer-tag">Layer 5 → Layer 1</span></td><td>Sleep + circadian reset is non-negotiable before other interventions have traction</td><td>Melatonin 0.5–1mg; phosphatidylserine 100–200mg evening; eliminate blue light post-sunset; consistent wake time</td></tr>
+          <tr><td>IGF-1 low + cortisol abnormal</td><td><span class="ch ch-sst">SST — doubly confirmed</span></td><td><span class="layer-tag">Layer 5 → Layer 2</span></td><td>SST node doubly confirmed; cAMP pathway chronically suppressed from two independent measurements</td><td>All cortisol-normalization steps; low-dose forskolin 5mg under supervision; address fasting insulin</td></tr>
+          <tr><td>DHEA-S low + cortisol flat</td><td><span class="ch ch-sst">SST / HPA — exhaustion</span></td><td><span class="layer-tag">Layer 5 → Layer 1</span></td><td>HPA exhaustion confirmed; chronic stress state driving SST; adrenal recovery must precede SIRT1 restoration</td><td>Phosphatidylserine 100–200mg evening; sleep optimization urgent; melatonin; reduce all HPA stressors before advancing protocol</td></tr>
+          <tr><td>Cytokines elevated</td><td><span class="ch ch-mia">MIA / Microglia</span></td><td><span class="layer-tag">Layer 2 urgency elevated</span></td><td>Luteolin + omega-3 move to highest priority within Layer 2; curcumin added</td><td>Luteolin 200–400mg + quercetin; omega-3 EPA:DHA 2:1 at 2–3g/day; curcumin phospholipid complex 1g/day</td></tr>
+          <tr><td>GSH:GSSG low</td><td><span class="ch ch-env">Environmental / FOXO</span></td><td><span class="layer-tag">Layer 2 — NAC → Layer 1</span></td><td>Antioxidant depletion overrides standard sequencing; NAC becomes co-foundational</td><td>NAC 600–900mg twice daily; sulforaphane standardized 50–100mcg/day; reduce oxidative drivers</td></tr>
+          <tr><td>GPL-TOX / Glyphosate positive</td><td><span class="ch ch-env">Environmental</span></td><td><span class="layer-tag">New Layer 1 sub-layer: detox</span></td><td>Detox support must run before and alongside all other layers to prevent re-toxification</td><td>NAC; sulforaphane; glycine 2–4g/day; activated charcoal (away from supplements); reduce dietary glyphosate</td></tr>
+          <tr><td>RBC metals elevated</td><td><span class="ch ch-env">Environmental</span></td><td><span class="layer-tag">New Layer 1 sub-layer added</span></td><td>Heavy metal burden suppresses SIRT1 directly; cannot restore SIRT1 while metals remain elevated</td><td>NAC + glutathione support immediately; DMSA/DMPS chelation only under physician supervision</td></tr>
+          <tr><td>BDNF low (baseline)</td><td><span class="ch ch-multi">Multi — CREB output</span></td><td><span class="layer-tag">Outcome marker — no layer change</span></td><td>Sets baseline; guides treatment response assessment; use as primary outcome measure</td><td>Retest at 3 and 6 months. Rising BDNF = cascade responding. Omega-3 + structured exercise most evidence-supported.</td></tr>
+          <tr><td>Micronutrients: multiple low</td><td><span class="ch ch-multi">Multi — co-factors</span></td><td><span class="layer-tag">Pre-Layer 0 — address first</span></td><td>Co-factor depletions limit efficacy of every other intervention; must be corrected first</td><td>B6 25–50mg; B12 methylcobalamin 1000mcg; methylfolate; zinc 10–15mg; selenium 50–100mcg</td></tr>
+          <tr><td>Vitamin D &lt;40 ng/mL</td><td><span class="ch ch-multi">Multi — NF-κB</span></td><td><span class="layer-tag">Layer 2 — add immediately</span></td><td>Vitamin D deficiency allows unchecked NF-κB activation; inexpensive to correct</td><td>Vitamin D3 2000–5000 IU + K2 (MK-7) 90–180mcg; retest at 3 months; target 50–70 ng/mL</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 7: DOCTOR SCRIPTS -->
+  <div class="doc-section">
+    <div class="section-title"><span class="section-num">7</span> Working With Your Doctor — A Collaborative Approach</div>
+
+    <p class="intro-text">The most productive medical conversations happen when the parent brings observations and the doctor brings expertise. Your role as a parent or caregiver is to describe what you have seen in your child — clearly, specifically, without a pre-built conclusion. Your medical professional's role is to interpret those observations and determine what investigation is warranted. When that dynamic is working well, testing feels like the doctor's idea — because in the best version of this conversation, it genuinely is.</p>
+
+    <div class="callout green">
+      <h4>What Moves a Physician to Investigate</h4>
+      <p>Doctors order tests when they see a clinical picture that warrants it — not because a parent has arrived with a framework. What makes a physician lean forward is a specific, consistent, observable pattern of symptoms that doesn't have a simple explanation. Your job is to give your doctor exactly that: a clear clinical picture they can act on professionally. The biology stays in the background. Your child stays in the foreground. The physician stays in the driver's seat.</p>
+    </div>
+
+    <div class="callout amber">
+      <h4>What to Prepare Before the Appointment</h4>
+      <p>Write down your child's three to five most consistent and concerning symptoms. Note how long each has been present, how frequently it occurs, and what makes it better or worse. If you have tried any interventions, note what changed. This is the clinical history your doctor needs — and arriving with it organized signals that you are a reliable observer worth taking seriously. It also gives your doctor something concrete to respond to before any discussion of specific tests.</p>
+    </div>
+
+    <div class="script-block"><div class="script-header">Opening the Conversation — Let the Symptoms Lead</div><div class="script-body">"I want to share some patterns I have been tracking with [child's name] that I cannot fully explain and would love your perspective on. [Describe 2–3 specific, consistent symptoms — e.g., 'Stools have been loose and irregular for months despite dietary changes,' or 'Energy crashes consistently mid-afternoon regardless of how much sleep he gets,' or 'Sensory sensitivities seem to be getting more intense rather than improving.'] I am not sure what is driving these and I am hoping we can look into it together."</div></div>
+
+    <div class="script-block"><div class="script-header">When Your Doctor Asks What Testing You Have in Mind</div><div class="script-body">"I have been reading about functional medicine approaches to neurodevelopmental conditions and came across some tests that look at areas like mitochondrial function, gut barrier integrity, and inflammatory markers — all of which seem relevant to the symptoms I am describing. I know you are in the best position to decide what makes clinical sense. I have a short list I would love to get your reaction to, and I want to be guided by your judgment on where to start."</div></div>
+
+    <div class="script-block"><div class="script-header">Requesting the OAT — Frame It Around What the Doctor Will Learn</div><div class="script-body">"One panel I came across is the Organic Acids Test from Great Plains Laboratory — a urine-based screen that looks at mitochondrial TCA cycle function, gut dysbiosis metabolites, kynurenine pathway activity, and oxidative stress markers in a single collection. What I find compelling about it is how much clinical information it generates in one step. Given the symptoms we are seeing, do you think this would give us useful diagnostic signal? I would trust your read on whether the findings are worth acting on."</div></div>
+
+    <div class="script-block"><div class="script-header">Requesting the Gut Panel — Lead With the GI Picture</div><div class="script-body">"The GI piece is something I keep coming back to — [child's name] has [describe specifically: chronic irregularity / bloating / food selectivity / apparent discomfort after eating] that does not have a clear explanation yet. I have read that Zonulin and LPS-binding protein can flag whether the intestinal barrier is compromised, and that the GI-MAP from Diagnostic Solutions gives a detailed look at inflammation, microbiome composition, and digestive enzyme output. Would this be worth investigating given what you are hearing? I am open to whatever approach you think gives us the most useful picture."</div></div>
+
+    <div class="script-block"><div class="script-header">Requesting the HPA / Cortisol Panel — Frame It Around the Stress Response</div><div class="script-body">"The sleep and anxiety pattern is one I find hard to make sense of on its own. [Child's name] [describe: cannot settle at night / wakes repeatedly / has disproportionate anxiety responses / has flat energy all day]. I have read that HPA axis dysregulation can produce these kinds of patterns in children with chronic immune and sensory challenges — and that a 4-point salivary cortisol diurnal curve, alongside serum IGF-1 and DHEA-S, can give a useful picture of how the stress axis is functioning. Do you think this kind of hormonal profiling is worth pursuing? ZRT and DUTCH both offer the salivary panel."</div></div>
+
+    <div class="script-block"><div class="script-header">Requesting the Environmental Panel — Give the Physician a Rationale</div><div class="script-body">"I want to make sure we are not missing an environmental driver. We [describe relevant context: live near agricultural land / have older housing / notice symptom changes with certain environments]. A GPL-TOX organic chemical screen covers over 170 toxic compounds including glyphosate, and RBC heavy metals — mercury, lead, arsenic, cadmium — reflect chronic tissue-level exposure better than serum. I am not assuming these are factors, but they seem important to rule out systematically. Would you be comfortable ordering these, or is there a referral path you would recommend?"</div></div>
+
+    <div class="script-block"><div class="script-header">Requesting BDNF as an Outcome Marker — Give the Doctor a Measurement Tool</div><div class="script-body">"One thing that would help both of us is having an objective biological marker to track over time. Serum BDNF reflects the output of neural plasticity pathways and is sensitive to inflammatory burden and HPA dysregulation — both of which we are already investigating. If we establish a baseline now, we can retest at 3 and 6 months and have something concrete to assess whether our interventions are having a measurable biological effect. It gives you a clearer window into whether the trajectory is improving."</div></div>
+
+    <div class="callout purple">
+      <h4>If Your Doctor Is Unfamiliar With These Tests</h4>
+      <p>Many of these panels are not standard in conventional pediatric care — but they are clinically legitimate and widely used in functional and integrative medicine. If your current provider is not familiar with them, this is not a barrier. Consider a functional medicine physician (IFMCP certified), a MAPS (Medical Academy of Pediatric Special Needs) trained physician, or a naturopathic physician (ND) licensed in your state. Great Plains Laboratory, Diagnostic Solutions, and ZRT also accept direct orders in some states — allowing you to obtain results and bring them to any clinician for interpretation.</p>
+    </div>
+  </div>
+
+  
+  </div>
+
+</div><!-- /wrap -->
+
+<footer class="site-footer">
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">Decoding Autism Now</p>
+        <p class="footer-tagline">Systems biology of autism —<br>for families, clinicians, and researchers.</p>
+      </div>
+      <div class="footer-channels">
+        <p class="footer-channels-label">Find us on</p>
+        <a class="footer-channel-link" href="https://www.youtube.com/@DecodingAutismNow" target="_blank" rel="noopener">
+          <span class="ch-icon">
+            <svg width="14" height="10" viewBox="0 0 24 17" fill="white"><path d="M23.5 2.5A3 3 0 0021.4.4C19.5 0 12 0 12 0S4.5 0 2.6.4A3 3 0 00.5 2.5C0 4.4 0 8.5 0 8.5S0 12.6.5 14.5A3 3 0 002.6 16.6C4.5 17 12 17 12 17s7.5 0 9.4-.4a3 3 0 002.1-2.1C24 12.6 24 8.5 24 8.5s0-4.1-.5-6zM9.75 12.02V4.98L15.8 8.5l-6.05 3.52z"/></svg>
+          </span>
+          YouTube — @DecodingAutismNow
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-disclaimer">This content is for informational purposes only and should not be considered medical advice, diagnosis, or treatment. Always consult with a healthcare professional before making any changes to your health routines or treatment regimen.</p>
+      <p class="footer-meta">Biology of Autism — Diagnosis to Intervention | Decoding Autism Now</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

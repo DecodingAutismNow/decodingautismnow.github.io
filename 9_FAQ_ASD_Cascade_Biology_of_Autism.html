@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biology of Autism — Questions &amp; Answers | Decoding Autism Now</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:       #0f2342;
+    --teal:       #1e6b72;
+    --teal-light: #2a9da6;
+    --gold:       #c8923a;
+    --gold-light: #e8b86d;
+    --cream:      #faf7f2;
+    --warm-white: #ffffff;
+    --text-dark:  #1a1a2e;
+    --text-mid:   #3d4560;
+    --text-light: #6b7494;
+    --rule:       #d8cfc4;
+    --accent-bg:  #eef8f9;
+    --tag-bg:     #1e6b7215;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  /* ── HEADER ─────────────────────────────────────── */
+  .site-header {
+    background: var(--navy);
+    color: #fff;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header-stripe {
+    height: 5px;
+    background: linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%);
+  }
+
+  .header-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 52px 40px 48px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .brand-line {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .brand-line::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 60px;
+    background: var(--teal-light);
+    opacity: 0.5;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .header-subtitle {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.65);
+    max-width: 560px;
+    line-height: 1.55;
+  }
+
+  .header-ornament {
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.05);
+    pointer-events: none;
+  }
+  .header-ornament::before {
+    content: '';
+    position: absolute;
+    inset: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.04);
+  }
+
+  /* ── NAV INDEX ──────────────────────────────────── */
+  .toc-bar {
+    background: var(--warm-white);
+    border-bottom: 2px solid var(--rule);
+    padding: 0;
+  }
+
+  .toc-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 22px 40px;
+  }
+
+  .toc-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 12px;
+  }
+
+  .toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 4px 20px;
+  }
+
+  .toc-link {
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.82rem;
+    color: var(--teal);
+    text-decoration: none;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    padding: 3px 0;
+    transition: color 0.15s;
+  }
+  .toc-link:hover { color: var(--navy); }
+
+  .toc-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+
+  /* ── MAIN CONTENT ───────────────────────────────── */
+  .main-content {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 56px 40px 80px;
+  }
+
+  /* ── FAQ ITEM ───────────────────────────────────── */
+  .faq-item {
+    margin-bottom: 52px;
+    padding-bottom: 52px;
+    border-bottom: 1px solid var(--rule);
+    scroll-margin-top: 20px;
+  }
+  .faq-item:last-child {
+    border-bottom: none;
+  }
+
+  .faq-header {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .faq-number {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--warm-white);
+    background: var(--teal);
+    border-radius: 4px;
+    padding: 3px 9px;
+    flex-shrink: 0;
+    margin-top: 6px;
+    letter-spacing: 0.05em;
+  }
+
+  .faq-question {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--navy);
+  }
+
+  .faq-body {
+    padding-left: 52px;
+  }
+
+  .faq-body p {
+    color: var(--text-mid);
+    margin-bottom: 14px;
+  }
+
+  .faq-body p:last-child { margin-bottom: 0; }
+
+  /* highlight inline bold terms */
+  .faq-body strong {
+    color: var(--navy);
+    font-weight: 600;
+  }
+
+  /* bullet lists */
+  .faq-body ul {
+    list-style: none;
+    margin: 14px 0 14px 0;
+  }
+
+  .faq-body ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: var(--text-mid);
+  }
+
+  .faq-body ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--teal-light);
+  }
+
+  /* ── CALLOUT BOXES ──────────────────────────────── */
+  .callout {
+    background: var(--accent-bg);
+    border-left: 3px solid var(--teal);
+    border-radius: 0 6px 6px 0;
+    padding: 16px 20px;
+    margin: 18px 0;
+  }
+
+  .callout p { margin-bottom: 0 !important; }
+
+  .callout-gold {
+    background: #fdf6ec;
+    border-left-color: var(--gold);
+  }
+
+  /* ── TAG CHIPS (pathway labels) ─────────────────── */
+  .pathway-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 16px 0;
+  }
+
+  .tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    background: var(--tag-bg);
+    color: var(--teal);
+    border: 1px solid rgba(30,107,114,0.25);
+    border-radius: 3px;
+    padding: 3px 8px;
+  }
+
+  /* ── SECTION DIVIDER ────────────────────────────── */
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 60px 0 48px;
+  }
+
+  .section-divider span {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    white-space: nowrap;
+  }
+
+  .section-divider::before,
+  .section-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  /* ── FOOTER ─────────────────────────────────────── */
+  .site-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.55);
+    padding: 0;
+  }
+
+  .footer-stripe {
+    height: 3px;
+    background: linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%);
+  }
+
+  .footer-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 44px 44px 36px;
+  }
+
+  .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap; }
+  .footer-bottom { padding-top: 24px; display: flex; flex-direction: column; gap: 8px; }
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 0.02em;
+  }
+
+  .footer-disclaimer {
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.82rem;
+    font-style: italic;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.42);
+    max-width: 620px;
+  }
+
+  .footer-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.28);
+    margin-top: 6px;
+  }
+
+  /* ── RESPONSIVE ─────────────────────────────────── */
+  @media (max-width: 640px) {
+    .header-inner, .toc-inner, .main-content, .footer-inner {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    .faq-body { padding-left: 36px; }
+    .toc-grid { grid-template-columns: 1fr; }
+    h1 { font-size: 1.8rem; }
+  }
+
+  .masthead { position: sticky; top: 0; z-index: 100; background: #0f2342; padding: 10px 28px; border-bottom: 3px solid #c8923a; }
+  .masthead-inner { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .masthead-brand { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #2a9da6; }
+  .masthead-title { font-family: 'Source Serif 4', serif; font-size: 14px; font-weight: 600; color: white; margin-top: 2px; }
+  .masthead-meta { font-family: 'DM Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.4); }
+</style>
+</head>
+<body>
+<nav class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <div class="masthead-brand">Decoding Autism Now</div>
+      <div class="masthead-title">Biology of Autism — Questions &amp; Answers</div>
+    </div>
+    <div class="masthead-meta"></div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════ HEADER -->
+<header class="site-header">
+  <div class="header-stripe"></div>
+  <div class="header-inner">
+    <div class="header-ornament"></div>
+    <p class="brand-line">Decoding Autism Now</p>
+    <h1>Biology of Autism —<br>Questions &amp; Answers</h1>
+    <p class="header-subtitle">Plain-language answers to the most common questions about the biological cascade model of autism.</p>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════ TABLE OF CONTENTS -->
+<nav class="toc-bar" aria-label="Question index">
+  <div class="toc-inner">
+    <p class="toc-label">Questions at a glance</p>
+    <div class="toc-grid">
+      <a class="toc-link" href="#q1"><span class="toc-num">01</span>What is the ASD cascade?</a>
+      <a class="toc-link" href="#q2"><span class="toc-num">02</span>One cause or many?</a>
+      <a class="toc-link" href="#q3"><span class="toc-num">03</span>What are SIRT1 and SST?</a>
+      <a class="toc-link" href="#q4"><span class="toc-num">04</span>Gut–brain connection</a>
+      <a class="toc-link" href="#q5"><span class="toc-num">05</span>Mitochondria &amp; antioxidants</a>
+      <a class="toc-link" href="#q6"><span class="toc-num">06</span>Microglia &amp; astrocytes</a>
+      <a class="toc-link" href="#q7"><span class="toc-num">07</span>Over- &amp; under-connectivity</a>
+      <a class="toc-link" href="#q8"><span class="toc-num">08</span>Sensory over-reactivity</a>
+      <a class="toc-link" href="#q9"><span class="toc-num">09</span>Social &amp; cognitive rigidity</a>
+      <a class="toc-link" href="#q10"><span class="toc-num">10</span>GI, sleep &amp; mood</a>
+      <a class="toc-link" href="#q11"><span class="toc-num">11</span>The self-sustaining loop</a>
+      <a class="toc-link" href="#q12"><span class="toc-num">12</span>Intervention strategy</a>
+      <a class="toc-link" href="#q13"><span class="toc-num">13</span>Proven or theoretical?</a>
+      <a class="toc-link" href="#q14"><span class="toc-num">14</span>Why more boys than girls?</a>
+      <a class="toc-link" href="#q15"><span class="toc-num">15</span>Does the cascade heal?</a>
+      <a class="toc-link" href="#q16"><span class="toc-num">16</span>Why is sound so overwhelming?</a>
+      <a class="toc-link" href="#q17"><span class="toc-num">17</span>Appetite — too much or none?</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════ MAIN -->
+<main class="main-content">
+
+  <!-- Q1 -->
+  <article class="faq-item" id="q1">
+    <div class="faq-header">
+      <span class="faq-number">01</span>
+      <h2 class="faq-question">What is this "ASD biological cascade" in plain language?</h2>
+    </div>
+    <div class="faq-body">
+      <p>It is a way of saying that autism can come from a <strong>chain reaction in the body</strong>, rather than one single cause.</p>
+      <p>Several things can add pressure to the system — immune stress in pregnancy, gut problems, toxins, chronic stress — and they all push on the same control points that handle inflammation, energy, and learning signals. Once those control points are overwhelmed, the brain and body settle into a <strong>stuck pattern</strong>: inflammation stays on, the gut and energy systems struggle, and the brain becomes less able to adapt and learn from experience.</p>
+    </div>
+  </article>
+
+  <!-- Q2 -->
+  <article class="faq-item" id="q2">
+    <div class="faq-header">
+      <span class="faq-number">02</span>
+      <h2 class="faq-question">Does this model say there is "one cause" of autism?</h2>
+    </div>
+    <div class="faq-body">
+      <p>No. It says <strong>multiple pressures</strong> can lead to a similar stuck state.</p>
+      <p>Examples of pressures the model highlights:</p>
+      <ul>
+        <li>Immune stress during pregnancy</li>
+        <li>Gut barrier problems and "leaky gut"</li>
+        <li>Mitochondrial (energy) stress</li>
+        <li>Toxin and oxidative load</li>
+        <li>Chronic stress and sleep issues</li>
+      </ul>
+      <p>Different children can arrive at similar brain and gut patterns through <strong>different mixes</strong> of these factors.</p>
+    </div>
+  </article>
+
+  <!-- Q3 -->
+  <article class="faq-item" id="q3">
+    <div class="faq-header">
+      <span class="faq-number">03</span>
+      <h2 class="faq-question">What are SIRT1 and SST, and why do they matter?</h2>
+    </div>
+    <div class="faq-body">
+      <p>Think of them as two master regulators pulling in opposite directions:</p>
+      <ul>
+        <li><strong>SIRT1</strong> acts as a <em>repair and resilience coordinator</em>. It helps turn down inflammation, support mitochondria, boost antioxidants, and help learning-related pathways.</li>
+        <li><strong>Somatostatin (SST)</strong> acts as a <em>stress brake</em>. When stress and inflammation are high, SST rises and slows learning signals, gut function, and some brain support systems.</li>
+      </ul>
+      <div class="callout">
+        <p>Both eventually hit the same learning pathway (CREB/BDNF) from different sides. When SIRT1 is under-fueled and SST is high, the brain has trouble forming and updating connections — especially during critical development windows.</p>
+      </div>
+      <div class="pathway-tags">
+        <span class="tag">SIRT1</span>
+        <span class="tag">SST / Somatostatin</span>
+        <span class="tag">CREB/BDNF</span>
+        <span class="tag">NAD⁺</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- Q4 -->
+  <article class="faq-item" id="q4">
+    <div class="faq-header">
+      <span class="faq-number">04</span>
+      <h2 class="faq-question">How does the gut connect to the brain in this model?</h2>
+    </div>
+    <div class="faq-body">
+      <p>The model moves beyond "gut–brain axis" as a slogan and focuses on <strong>barrier failure and LPS leak</strong>.</p>
+      <ul>
+        <li>If the gut lining is leaky, bacterial fragments (LPS) can slip into the blood and continually poke the immune system.</li>
+        <li>This triggers inflammatory switches (like NF-κB), which in turn drive the tryptophan pathway away from serotonin and toward stress metabolites.</li>
+        <li>Over time that contributes to low serotonin, low NAD⁺ fuel for SIRT1, and ongoing neuroinflammation.</li>
+      </ul>
+      <div class="callout">
+        <p>So gut problems and brain symptoms are different branches of <strong>the same underlying process</strong>, not separate issues.</p>
+      </div>
+      <div class="pathway-tags">
+        <span class="tag">Leaky Gut / LPS</span>
+        <span class="tag">NF-κB</span>
+        <span class="tag">Tryptophan pathway</span>
+        <span class="tag">Kynurenine</span>
+        <span class="tag">Serotonin</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- Q5 -->
+  <article class="faq-item" id="q5">
+    <div class="faq-header">
+      <span class="faq-number">05</span>
+      <h2 class="faq-question">Why are mitochondria and antioxidants such a big deal here?</h2>
+    </div>
+    <div class="faq-body">
+      <p>Mitochondria are the cell's <strong>energy engines</strong>, and antioxidants (like glutathione) are the <strong>cleanup crew</strong> for the chemical "exhaust."</p>
+      <p>In this model:</p>
+      <ul>
+        <li>Mitochondria under stress make less energy but more "exhaust" (ROS), which signals danger and keeps inflammation going.</li>
+        <li>SIRT1/PGC-1α problems reduce the creation of new healthy mitochondria.</li>
+        <li>FOXO/glutathione problems weaken the cleanup crew.</li>
+      </ul>
+      <div class="callout callout-gold">
+        <p>The result is a body that is <strong>tired and inflamed at the same time</strong> — which is especially hard on a developing brain.</p>
+      </div>
+      <div class="pathway-tags">
+        <span class="tag">Mitochondria</span>
+        <span class="tag">ROS / Oxidative stress</span>
+        <span class="tag">PGC-1α</span>
+        <span class="tag">Glutathione</span>
+        <span class="tag">FOXO</span>
+      </div>
+    </div>
+  </article>
+
+  <div class="section-divider"><span>Brain &amp; Immune Biology</span></div>
+
+  <!-- Q6 -->
+  <article class="faq-item" id="q6">
+    <div class="faq-header">
+      <span class="faq-number">06</span>
+      <h2 class="faq-question">What do microglia and astrocytes have to do with my child's behavior?</h2>
+    </div>
+    <div class="faq-body">
+      <p>Microglia and astrocytes are <strong>support cells</strong> in the brain.</p>
+      <ul>
+        <li><strong>Microglia</strong> are like immune scouts and gardeners.</li>
+        <li><strong>Astrocytes</strong> help feed neurons and tell synapses when to form, strengthen, or disappear.</li>
+      </ul>
+      <p>When inflammation stays high:</p>
+      <ul>
+        <li>Microglia shift into a more aggressive, "clean-up-by-destruction" mode.</li>
+        <li>They send signals that flip astrocytes into an A1 state that is less nurturing and more synapse-removing.</li>
+      </ul>
+      <div class="callout">
+        <p>This changes <strong>which synapses are built, which are kept, and which are removed</strong> — especially in sensory and social circuits.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Q7 -->
+  <article class="faq-item" id="q7">
+    <div class="faq-header">
+      <span class="faq-number">07</span>
+      <h2 class="faq-question">How does this explain both over‑ and under‑connectivity in autism?</h2>
+    </div>
+    <div class="faq-body">
+      <p>The model proposes a dual pattern:</p>
+      <ul>
+        <li>Some circuits (especially long-range ones like thalamus→cortex and social networks) are <strong>under-connected</strong>, because hevin is low and SPARC is high — so fewer healthy synapses form and more are removed.</li>
+        <li>At the same time, local pruning is impaired by autophagy failure, so <strong>too many local synapses</strong> remain in some regions.</li>
+      </ul>
+      <p>This yields:</p>
+      <ul>
+        <li><strong>Too many short-range connections</strong> (local over-connectivity)</li>
+        <li><strong>Too few long-range connections</strong> (reduced integration between distant areas)</li>
+      </ul>
+      <div class="callout">
+        <p>That matches brain imaging work in autism, where local and long-range connectivity look very different depending on the circuit.</p>
+      </div>
+      <div class="pathway-tags">
+        <span class="tag">Hevin / SPARC</span>
+        <span class="tag">Autophagy</span>
+        <span class="tag">Synaptogenesis</span>
+        <span class="tag">Thalamo-cortical</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- Q8 -->
+  <article class="faq-item" id="q8">
+    <div class="faq-header">
+      <span class="faq-number">08</span>
+      <h2 class="faq-question">Why is sensory over‑reactivity so common in this framework?</h2>
+    </div>
+    <div class="faq-body">
+      <p>Because thalamus→cortex relay synapses depend heavily on hevin, and hevin is suppressed, those pathways are <strong>weaker and fewer</strong>.</p>
+      <ul>
+        <li>The thalamus doesn't gate and shape sensory input as well.</li>
+        <li>The cortex receives more "raw," less filtered information, which local circuits then amplify in an unbalanced way.</li>
+      </ul>
+      <div class="callout callout-gold">
+        <p>That leads to sensory experiences that feel <strong>too intense, too sudden, or hard to ignore</strong> — which matches what many autistic people report.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Q9 -->
+  <article class="faq-item" id="q9">
+    <div class="faq-header">
+      <span class="faq-number">09</span>
+      <h2 class="faq-question">How does the model explain social and cognitive rigidity?</h2>
+    </div>
+    <div class="faq-body">
+      <p>For <strong>social cognition</strong>, the issue is integration across distant areas:</p>
+      <ul>
+        <li>Regions that read social cues, emotions, and context don't communicate as smoothly because long-range connectivity is reduced.</li>
+        <li>That makes tracking other people's thoughts, intentions, and subtle signals harder.</li>
+      </ul>
+      <p>For <strong>cognitive rigidity and perseveration</strong>:</p>
+      <ul>
+        <li>CREB/BDNF problems mean the brain has trouble locking in new, more flexible patterns.</li>
+        <li>Many synapses remain "silent" because glypicans are irregular, so there are fewer reliable pathways available for new strategies.</li>
+      </ul>
+      <div class="callout">
+        <p>The result is a system that <strong>reuses the same pathways</strong> instead of updating them easily when circumstances change.</p>
+      </div>
+      <div class="pathway-tags">
+        <span class="tag">CREB/BDNF</span>
+        <span class="tag">Glypicans</span>
+        <span class="tag">Silent synapses</span>
+        <span class="tag">Long-range connectivity</span>
+      </div>
+    </div>
+  </article>
+
+  <div class="section-divider"><span>Downstream Symptoms</span></div>
+
+  <!-- Q10 -->
+  <article class="faq-item" id="q10">
+    <div class="faq-header">
+      <span class="faq-number">10</span>
+      <h2 class="faq-question">Why are GI, sleep, and mood problems so common in autistic children?</h2>
+    </div>
+    <div class="faq-body">
+      <p>In this model, they come from the same <strong>core biology</strong>:</p>
+      <ul>
+        <li><strong>GI:</strong> Leaky gut, dysbiosis, low serotonin, and vagal signaling produce dysmotility, pain, and barrier problems.</li>
+        <li><strong>Sleep:</strong> Tryptophan is diverted away from serotonin and melatonin, while SST and stress hormones disturb circadian rhythms.</li>
+        <li><strong>Mood:</strong> Inflammation, HPA axis changes, and low serotonin/BDNF make emotional regulation harder and anxiety more likely.</li>
+      </ul>
+      <div class="callout callout-gold">
+        <p>They are not separate diseases — they are <strong>different faces of the same underlying state</strong>.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Q11 -->
+  <article class="faq-item" id="q11">
+    <div class="faq-header">
+      <span class="faq-number">11</span>
+      <h2 class="faq-question">What does "self‑sustaining loop" actually mean for a family?</h2>
+    </div>
+    <div class="faq-body">
+      <p>It means that after a certain point, the system can <strong>keep itself stuck</strong>:</p>
+      <ul>
+        <li>Inflammation keeps the tryptophan pathway and NAD⁺ strain going.</li>
+        <li>NAD⁺ strain keeps SIRT1 low, which lets inflammation run.</li>
+        <li>Cleanup failure leaves damaged mitochondria and debris in place, which keep re-activating inflammation.</li>
+        <li>SST stays high and keeps learning pathways suppressed.</li>
+      </ul>
+      <div class="callout">
+        <p>So even if one early trigger (like a specific infection) is gone, the biology can <strong>continue in that pattern by itself</strong>. That is why the model argues that single "one-shot" fixes rarely shift things deeply.</p>
+      </div>
+    </div>
+  </article>
+
+  <div class="section-divider"><span>Implications for Support</span></div>
+
+  <!-- Q12 -->
+  <article class="faq-item" id="q12">
+    <div class="faq-header">
+      <span class="faq-number">12</span>
+      <h2 class="faq-question">What kind of intervention strategy does this model point toward?</h2>
+    </div>
+    <div class="faq-body">
+      <p>The model does <strong>not</strong> claim a proven cure, but it does argue for <strong>multi-target support</strong>, supervised by qualified clinicians.</p>
+      <p>The logic is to:</p>
+      <ul>
+        <li>Support <strong>NAD⁺ and SIRT1</strong> so the master repair hub can work.</li>
+        <li>Calm <strong>NF-κB and microglial inflammation</strong>.</li>
+        <li>Repair the <strong>gut barrier</strong> and microbiome.</li>
+        <li>Reduce chronic <strong>stress and SST load</strong> and stabilize sleep.</li>
+        <li>Strengthen <strong>antioxidant and mitochondrial</strong> systems.</li>
+        <li>Allow <strong>synapses and networks</strong> to gradually remodel with better support.</li>
+      </ul>
+      <div class="callout callout-gold">
+        <p>The key idea: <strong>several levers at once</strong>, gently and in the right order, are more likely to help than hammering one pathway in isolation.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Q13 -->
+  <article class="faq-item" id="q13">
+    <div class="faq-header">
+      <span class="faq-number">13</span>
+      <h2 class="faq-question">Is this "proven" or is it still a theory?</h2>
+    </div>
+    <div class="faq-body">
+      <p>The model is presented <strong>openly as a theoretical framework</strong>, not as a finished, clinically proven map.</p>
+      <ul>
+        <li>Many individual pieces (e.g., maternal immune activation, gut permeability, mitochondrial issues, some supplements) have human or animal studies behind them.</li>
+        <li>The full integrated "cascade" as drawn has not yet been tested as a single, unified treatment model in large trials.</li>
+      </ul>
+      <div class="callout">
+        <p>It is meant as a <strong>research-informed guide</strong> to think about <em>why</em> so many different findings in autism might fit together biologically, and how that could guide more personalized testing and support.</p>
+      </div>
+    </div>
+  </article>
+
+  <div class="section-divider"><span>The Bigger Picture</span></div>
+
+  <!-- Q14 -->
+  <article class="faq-item" id="q14">
+    <div class="faq-header">
+      <span class="faq-number">14</span>
+      <h2 class="faq-question">Why does autism affect so many more boys than girls?</h2>
+    </div>
+    <div class="faq-body">
+      <p>The roughly 4-to-1 male-to-female ratio is one of the most consistent findings in autism research. The cascade model offers a biological explanation rooted in <strong>estrogen's protective role</strong> on the plasticity pathway the cascade shuts down.</p>
+      <p>Here is the key mechanism: estrogen activates a receptor in the brain called <strong>estrogen receptor beta (ERβ)</strong>. When ERβ is activated, it directly switches on the adenylyl cyclase → cAMP → CREB signaling chain — the same learning and plasticity pathway that somatostatin suppresses from the other direction. In females, endogenous estrogen keeps a baseline level of activity on this pathway, providing a biological buffer against the cascade's suppressive effect.</p>
+      <p>Males have no equivalent estrogen-based buffer. So when the same upstream pressures — inflammation, gut disruption, oxidative stress — push the cascade into a suppressed state, males have less built-in protection against the plasticity shutdown.</p>
+      <div class="callout">
+        <p>This is also why <strong>genistein</strong> — a plant compound that selectively binds ERβ — is a mechanistically interesting intervention. It effectively mimics the protective estrogen signal that males are missing, working to reopen the same pathway from the receptor side.</p>
+      </div>
+      <p>The cascade also interacts with the <strong>female protective effect</strong> more broadly: females may have different inflammatory thresholds, different microbiome compositions under hormonal influence, and different stress hormone profiles — all of which may reduce the severity of the cascade under equivalent upstream pressure.</p>
+      <div class="pathway-tags">
+        <span class="tag">Estrogen receptor β (ERβ)</span>
+        <span class="tag">AC/cAMP/CREB</span>
+        <span class="tag">SST suppression</span>
+        <span class="tag">Genistein</span>
+        <span class="tag">Sex ratio</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- Q15 -->
+  <article class="faq-item" id="q15">
+    <div class="faq-header">
+      <span class="faq-number">15</span>
+      <h2 class="faq-question">Does the cascade provide a map for healing — or just a map for understanding?</h2>
+    </div>
+    <div class="faq-body">
+      <p>Both — but in that order, and with an important caveat. The cascade is not a cure map. It is a <strong>sequencing map</strong>: a framework for understanding what needs to happen, and critically, in what order, before the biology can begin to shift.</p>
+      <p>The logic is built around three waves:</p>
+      <ul>
+        <li><strong>Wave 1 — Stop the drain.</strong> Before anything else can work, the sources actively depleting the system must be addressed: the gut leak feeding LPS into circulation, the inflammatory enzymes consuming NAD⁺ faster than it can be restored, and the oxidative burden overwhelming the antioxidant systems. Adding repair interventions into an unaddressed drain is like filling a bucket with holes.</li>
+        <li><strong>Wave 2 — Restore the fuel and release the brake.</strong> Once the drain is slowing, NAD⁺ can be restored, SIRT1 can be reactivated, and the somatostatin brake on learning can begin to release. Circadian rhythm and sleep stabilization belong here — without them, the HPA axis keeps SST elevated regardless of other interventions.</li>
+        <li><strong>Wave 3 — Support the architecture.</strong> Only when inflammatory load is reduced and the plasticity pathway is reopened can synaptic remodeling meaningfully occur. The compounds that support synaptogenesis, hevin/SPARC rebalancing, and CREB/BDNF restoration belong in this wave — not before it.</li>
+      </ul>
+      <div class="callout callout-gold">
+        <p>The critical lesson from the cascade is about <strong>sequence</strong>. Pushing plasticity before the inflammatory environment is addressed is like renovating a building while the roof is still leaking. It does not mean healing is impossible — it means the order matters as much as the intervention itself.</p>
+      </div>
+      <p>The model does not promise outcomes. But it does offer something most ASD frameworks do not: a <strong>mechanistic reason why</strong> certain things need to happen before others, and a coherent way to understand why a single intervention rarely shifts things deeply on its own.</p>
+      <div class="pathway-tags">
+        <span class="tag">Wave 1 — Plug the leak</span>
+        <span class="tag">Wave 2 — Restore NAD⁺ / SIRT1</span>
+        <span class="tag">Wave 3 — Rebuild architecture</span>
+        <span class="tag">Intervention sequencing</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- Q16 -->
+  <article class="faq-item" id="q16">
+    <div class="faq-header">
+      <span class="faq-number">16</span>
+      <h2 class="faq-question">Why is sound so overwhelming for so many autistic people?</h2>
+    </div>
+    <div class="faq-body">
+      <p>Sound sensitivity is among the most consistently reported experiences across the autism spectrum, and the cascade explains it through a specific breakdown in the brain's <strong>sensory gating system</strong>.</p>
+      <p>Normally, the <strong>thalamus</strong> acts as a gatekeeper between the outside world and the cortex. Its job is to filter, prioritize, and shape incoming sensory signals before passing them on — so that background noise stays background, and the brain is not overwhelmed by every sound in the environment at equal volume.</p>
+      <p>In the cascade, the disruption of thalamocortical connectivity means that this gating function is weakened:</p>
+      <ul>
+        <li>Sound signals arrive at the cortex <strong>less filtered and more raw</strong> than in a typical nervous system.</li>
+        <li>Local over-connectivity in the cortex then <strong>amplifies</strong> these already-unfiltered signals further.</li>
+        <li>The brain also loses its normal ability to <strong>habituate</strong> — to learn over time that a repeated, harmless sound can be safely ignored. Every occurrence can feel as intense as the first.</li>
+      </ul>
+      <div class="callout">
+        <p>The result is not a matter of preference or sensitivity — it is a structural difference in how the nervous system processes acoustic information. A sound that registers as mild background noise for one person genuinely arrives at the autistic brain's cortex as something <strong>louder, sharper, and more urgent</strong>.</p>
+      </div>
+      <p>Sound is the most commonly reported sensory challenge partly because the auditory cortex is particularly affected by the local over-connectivity pattern that the cascade produces — dense local connections with weakened long-range integration. This creates a system that amplifies detail while struggling to place it in context.</p>
+      <div class="pathway-tags">
+        <span class="tag">Thalamocortical connectivity</span>
+        <span class="tag">Sensory gating</span>
+        <span class="tag">Local over-connectivity</span>
+        <span class="tag">Habituation failure</span>
+        <span class="tag">Auditory cortex</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- Q17 -->
+  <article class="faq-item" id="q17">
+    <div class="faq-header">
+      <span class="faq-number">17</span>
+      <h2 class="faq-question">How can some autistic children never feel full while others have almost no appetite and eat only a few foods — in the same cascade?</h2>
+    </div>
+    <div class="faq-body">
+      <p>This is one of the most striking apparent contradictions in autism, and the cascade resolves it through a single concept: <strong>interoceptive filtering dysfunction</strong> — the same mechanism that causes sensory over- and under-reactivity in the external senses, applied to the body's internal signals.</p>
+      <p><strong>The never-full group</strong> — those who eat continuously and seem to have no off-switch — have <strong>under-reactive</strong> internal satiety signals. The gut sends a "I am full" message, but it does not register at threshold in the cortex. The signal is there; it simply does not arrive clearly enough to produce the sensation of fullness. Dysbiotic gut bacteria compounds this further by sending distorted signals along the vagus nerve before they even reach cortical processing.</p>
+      <p><strong>The no-appetite / restricted diet group</strong> is actually two overlapping issues happening together:</p>
+      <ul>
+        <li><strong>Sensory over-reactivity applied to food.</strong> Texture, smell, temperature, and even the color or visual appearance of food are all processed through the same amplified, unfiltered sensory system. For a child with acute olfactory sensitivity — one of the most consistently reported sensory differences in autism — a food's smell alone can be overwhelming enough to prevent eating. The restricted diet is often the child's rational, self-protective response to a genuinely difficult sensory experience, not a behavioral choice.</li>
+        <li><strong>Chronic gut discomfort suppressing appetite.</strong> Gut dysbiosis, low digestive enzyme output (suppressed by elevated SST), and intestinal inflammation make eating physically uncomfortable or painful. A child whose gut consistently hurts after eating will learn to avoid eating — and their appetite signals will reflect that learned association over time.</li>
+      </ul>
+      <div class="callout callout-gold">
+        <p>Both groups — opposite presentations — are expressions of the <strong>same underlying cascade</strong>. The gut-brain axis is disrupted, and the thalamic filtering that normally shapes internal body signals is not working cleanly. Which direction the signal distortion goes depends on the individual's biology, gut state, and sensory profile. The cascade does not predict which way — it explains why <strong>both are possible from the same root.</strong></p>
+      </div>
+      <div class="pathway-tags">
+        <span class="tag">Interoception</span>
+        <span class="tag">Satiety signaling</span>
+        <span class="tag">Vagus nerve</span>
+        <span class="tag">Sensory over-reactivity</span>
+        <span class="tag">Gut dysbiosis</span>
+        <span class="tag">SST / Digestive enzymes</span>
+        <span class="tag">Gut-brain axis</span>
+      </div>
+    </div>
+  </article>
+
+</main>
+
+<!-- ═══════════════════════════════════════════════════ FOOTER -->
+<footer class="site-footer">
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">Decoding Autism Now</p>
+        <p class="footer-tagline">Systems biology of autism —<br>for families, clinicians, and researchers.</p>
+      </div>
+      <div class="footer-channels">
+        <p class="footer-channels-label">Find us on</p>
+        <a class="footer-channel-link" href="https://www.youtube.com/@DecodingAutismNow" target="_blank" rel="noopener">
+          <span class="ch-icon">
+            <svg width="14" height="10" viewBox="0 0 24 17" fill="white"><path d="M23.5 2.5A3 3 0 0021.4.4C19.5 0 12 0 12 0S4.5 0 2.6.4A3 3 0 00.5 2.5C0 4.4 0 8.5 0 8.5S0 12.6.5 14.5A3 3 0 002.6 16.6C4.5 17 12 17 12 17s7.5 0 9.4-.4a3 3 0 002.1-2.1C24 12.6 24 8.5 24 8.5s0-4.1-.5-6zM9.75 12.02V4.98L15.8 8.5l-6.05 3.52z"/></svg>
+          </span>
+          YouTube — @DecodingAutismNow
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-disclaimer">This content is for informational purposes only and should not be considered medical advice, diagnosis, or treatment. Always consult with a healthcare professional before making any changes to your health routines or treatment regimen.</p>
+      <p class="footer-meta">Biology of Autism — Questions &amp; Answers | Decoding Autism Now</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

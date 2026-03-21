@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biology of Autism — Molecular Origins | Decoding Autism Now</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:        #0f2342;
+    --teal:        #1e6b72;
+    --teal-light:  #2a9da6;
+    --gold:        #c8923a;
+    --gold-light:  #e8b86d;
+    --cream:       #faf7f2;
+    --warm-white:  #ffffff;
+    --text-dark:   #1a1a2e;
+    --text-mid:    #3d4560;
+    --text-light:  #6b7494;
+    --rule:        #d8cfc4;
+    --accent-bg:   #eef8f9;
+    --gold-bg:     #fdf6ec;
+    --navy-bg:     #f0f2f6;
+    --tag-bg:      rgba(30,107,114,0.08);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  /* ── HEADER ── */
+  .site-header { background: var(--navy); color: #fff; position: relative; overflow: hidden; }
+  .header-stripe { height: 5px; background: linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%); }
+  .header-inner { max-width: 960px; margin: 0 auto; padding: 52px 44px 48px; position: relative; z-index: 1; }
+  .brand-line {
+    font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--teal-light); margin-bottom: 18px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .brand-line::after { content: ''; display: block; height: 1px; width: 60px; background: var(--teal-light); opacity: 0.45; }
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.9rem, 4vw, 2.85rem); font-weight: 700;
+    line-height: 1.15; color: #fff; margin-bottom: 14px;
+  }
+  h1 em { color: var(--gold-light); font-style: italic; }
+  .header-subtitle {
+    font-style: italic; font-weight: 300; font-size: 1.05rem;
+    color: rgba(255,255,255,0.6); max-width: 600px; line-height: 1.55;
+  }
+  .suite-badge {
+    display: inline-flex; align-items: center; gap: 8px; margin-top: 22px;
+    background: rgba(42,157,166,0.18); border: 1px solid rgba(42,157,166,0.4);
+    border-radius: 4px; padding: 5px 14px;
+    font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--teal-light);
+  }
+  .header-deco {
+    position: absolute; right: -60px; top: -60px;
+    width: 340px; height: 340px; border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.04); pointer-events: none;
+  }
+  .header-deco::after {
+    content: ''; position: absolute; inset: 35px; border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.03);
+  }
+
+  /* ── FRAMEWORK NOTICE ── */
+  .framework-notice { background: #fffbf2; border-top: 1px solid rgba(200,146,58,0.25); border-bottom: 1px solid rgba(200,146,58,0.25); }
+  .framework-notice-inner { max-width: 960px; margin: 0 auto; padding: 20px 44px; display: flex; gap: 16px; align-items: flex-start; }
+  .notice-icon {
+    flex-shrink: 0; margin-top: 2px; width: 20px; height: 20px; border-radius: 50%;
+    background: rgba(200,146,58,0.15); border: 1px solid rgba(200,146,58,0.4);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; color: var(--gold); line-height: 1;
+  }
+  .notice-text { font-family: 'Source Serif 4', serif; font-size: 0.875rem; color: #6b5a3a; line-height: 1.65; }
+  .notice-text strong { color: #4a3a1e; font-weight: 600; }
+
+  /* ── MAIN CONTENT ── */
+  .main-wrap { max-width: 960px; margin: 0 auto; padding: 60px 44px 100px; }
+
+  /* ── SECTION DIVIDER ── */
+  .section-divider {
+    display: flex; align-items: center; gap: 14px; margin: 64px 0 44px;
+    opacity: 0; animation: fadeUp 0.5s ease forwards;
+  }
+  .section-divider span {
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--text-light); white-space: nowrap;
+  }
+  .section-divider::before, .section-divider::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+
+  /* ── SECTION NUMBERS ── */
+  .section-num {
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--teal); margin-bottom: 10px; display: block;
+  }
+
+  /* ── HEADINGS ── */
+  h2 {
+    font-family: 'Playfair Display', Georgia, serif; font-size: 1.6rem;
+    font-weight: 700; color: var(--navy); line-height: 1.22; margin-bottom: 20px;
+  }
+  h2 em { color: var(--gold); font-style: italic; }
+
+  /* ── BODY TEXT ── */
+  .prose p { color: var(--text-mid); font-size: 0.975rem; margin-bottom: 14px; line-height: 1.82; }
+  .prose p:last-child { margin-bottom: 0; }
+  .prose strong { color: var(--navy); font-weight: 600; }
+  .prose em { color: var(--text-mid); }
+
+  /* ── FRAMING CALLOUT ── */
+  .framing-callout {
+    background: var(--navy); border-radius: 8px; padding: 28px 32px; margin: 28px 0;
+    position: relative; overflow: hidden;
+  }
+  .framing-callout::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+    background: linear-gradient(180deg, var(--teal-light), var(--gold));
+  }
+  .framing-callout .callout-label {
+    font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--teal-light); margin-bottom: 12px;
+  }
+  .framing-callout p {
+    color: rgba(255,255,255,0.88); font-size: 1.0rem; line-height: 1.75; margin: 0;
+  }
+  .framing-callout strong { color: var(--gold-light); font-weight: 600; }
+  .framing-callout em { color: rgba(255,255,255,0.65); }
+
+  /* ── ORIGIN CARDS ── */
+  .card-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 16px; margin-top: 24px;
+  }
+  .origin-card {
+    background: var(--warm-white); border: 1px solid var(--rule); border-radius: 8px;
+    padding: 24px 22px 20px; position: relative; overflow: hidden;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .origin-card:hover { border-color: rgba(42,157,166,0.4); transform: translateY(-2px); }
+  .card-icon { font-size: 1.4rem; margin-bottom: 10px; }
+  .origin-card h3 {
+    font-family: 'Playfair Display', serif; font-size: 1.0rem; font-weight: 600;
+    color: var(--navy); margin-bottom: 8px; line-height: 1.28;
+  }
+  .origin-card p { font-size: 0.86rem; color: var(--text-light); margin: 0; line-height: 1.65; }
+  .card-foot {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+  }
+  .card-foot.teal  { background: linear-gradient(90deg, var(--teal), transparent); }
+  .card-foot.gold  { background: linear-gradient(90deg, var(--gold), transparent); }
+  .card-foot.navy  { background: linear-gradient(90deg, var(--navy), transparent); }
+
+  /* ── PATHWAY BOX ── */
+  .pathway-box {
+    background: var(--warm-white); border: 1px solid var(--rule); border-radius: 8px;
+    overflow: hidden; margin-top: 24px;
+  }
+  .pathway-header {
+    background: var(--navy); padding: 14px 24px;
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--teal-light);
+  }
+  .pathway-step {
+    display: flex; gap: 20px; align-items: flex-start;
+    padding: 18px 24px; border-bottom: 1px solid var(--rule);
+  }
+  .pathway-step:last-child { border-bottom: none; }
+  .step-badge {
+    font-family: 'DM Mono', monospace; font-size: 10.5px; font-weight: 500;
+    background: var(--navy); color: #fff; border-radius: 3px; padding: 4px 10px;
+    flex-shrink: 0; margin-top: 2px; white-space: nowrap; letter-spacing: 0.06em;
+  }
+  .step-body strong {
+    display: block; color: var(--navy); font-weight: 600; font-size: 0.96rem; margin-bottom: 4px;
+  }
+  .step-body span { font-size: 0.875rem; color: var(--text-light); line-height: 1.7; }
+
+  /* ── CYTOKINE TABLE ── */
+  .table-wrap {
+    overflow-x: auto; margin-top: 24px; border-radius: 8px;
+    border: 1px solid var(--rule); box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+  thead { background: var(--navy); }
+  th {
+    font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: rgba(255,255,255,0.55);
+    padding: 13px 18px; text-align: left; border-bottom: 2px solid rgba(255,255,255,0.08);
+  }
+  td {
+    padding: 12px 18px; border-bottom: 1px solid var(--rule);
+    color: var(--text-mid); vertical-align: top; line-height: 1.6;
+  }
+  tr:last-child td { border-bottom: none; }
+  tbody tr:hover td { background: rgba(30,107,114,0.03); }
+  td strong { color: var(--navy); font-weight: 600; }
+  .dir-up   { font-family: 'DM Mono', monospace; font-size: 10px; padding: 2px 8px; border-radius: 3px; background: rgba(180,60,60,0.1);  color: #b03030; border: 1px solid rgba(180,60,60,0.2); white-space: nowrap; }
+  .dir-down { font-family: 'DM Mono', monospace; font-size: 10px; padding: 2px 8px; border-radius: 3px; background: rgba(30,107,72,0.1);  color: #1e6b48; border: 1px solid rgba(30,107,72,0.2);  white-space: nowrap; }
+  .dir-var  { font-family: 'DM Mono', monospace; font-size: 10px; padding: 2px 8px; border-radius: 3px; background: rgba(42,100,166,0.1); color: #2a64a6; border: 1px solid rgba(42,100,166,0.2); white-space: nowrap; }
+
+  /* ── HIGHLIGHT CALLOUT ── */
+  .highlight {
+    background: var(--accent-bg); border-left: 3px solid var(--teal);
+    border-radius: 0 6px 6px 0; padding: 16px 20px; margin: 20px 0;
+  }
+  .highlight p { color: var(--text-mid) !important; font-size: 0.96rem; margin: 0; }
+  .highlight strong { color: var(--navy); font-weight: 600; }
+  .highlight.gold { background: var(--gold-bg); border-left-color: var(--gold); }
+
+  /* ── TIMING CARDS ── */
+  .timing-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 14px; margin-top: 24px;
+  }
+  .timing-card {
+    background: var(--warm-white); border: 1px solid var(--rule); border-radius: 8px;
+    padding: 22px 20px; position: relative;
+  }
+  .timing-card .card-icon { font-size: 1.3rem; margin-bottom: 10px; }
+  .timing-card h3 {
+    font-family: 'Playfair Display', serif; font-size: 0.97rem; font-weight: 600;
+    color: var(--navy); margin-bottom: 8px;
+  }
+  .timing-card p { font-size: 0.85rem; color: var(--text-light); margin: 0; line-height: 1.65; }
+  .timing-card .card-foot { position: absolute; bottom: 0; left: 0; right: 0; height: 3px; }
+
+  /* ── INTERVENTION AXES ── */
+  .intervention-intro {
+    background: var(--navy-bg); border: 1px solid rgba(15,35,66,0.12);
+    border-radius: 8px; padding: 22px 26px; margin-bottom: 24px;
+  }
+  .intervention-intro p { color: var(--text-mid); font-size: 0.96rem; margin-bottom: 10px; }
+  .intervention-intro p:last-child { margin-bottom: 0; }
+  .intervention-intro strong { color: var(--navy); font-weight: 600; }
+
+  .axis-block {
+    background: var(--warm-white); border: 1px solid var(--rule); border-radius: 8px;
+    overflow: hidden; margin-bottom: 12px;
+  }
+  .axis-header {
+    display: flex; align-items: center; gap: 14px;
+    padding: 16px 22px; border-bottom: 1px solid var(--rule);
+    background: linear-gradient(to right, rgba(15,35,66,0.03), transparent);
+  }
+  .axis-badge {
+    font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--teal); background: var(--tag-bg);
+    border: 1px solid rgba(30,107,114,0.22); border-radius: 3px; padding: 3px 10px;
+    flex-shrink: 0;
+  }
+  .axis-header h3 {
+    font-family: 'Playfair Display', serif; font-size: 1.0rem; font-weight: 600; color: var(--navy);
+  }
+  .axis-body { padding: 16px 22px; }
+  .axis-body p { color: var(--text-mid); font-size: 0.93rem; margin-bottom: 8px; line-height: 1.72; }
+  .axis-body p:last-child { margin-bottom: 0; }
+  .axis-body strong { color: var(--navy); font-weight: 600; }
+
+  /* ── CASCADE BRIDGE ── */
+  .cascade-bridge {
+    background: var(--navy); border-radius: 8px; padding: 32px 36px; margin-top: 32px;
+    position: relative; overflow: hidden;
+  }
+  .cascade-bridge::before {
+    content: ''; position: absolute; right: -80px; top: -80px;
+    width: 280px; height: 280px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,146,58,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .cascade-bridge .bridge-label {
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--teal-light); margin-bottom: 14px;
+  }
+  .cascade-bridge h3 {
+    font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700;
+    color: #fff; margin-bottom: 14px; line-height: 1.3;
+  }
+  .cascade-bridge p { color: rgba(255,255,255,0.75); font-size: 0.96rem; line-height: 1.78; margin-bottom: 12px; }
+  .cascade-bridge p:last-child { margin-bottom: 0; }
+  .cascade-bridge strong { color: var(--gold-light); font-weight: 600; }
+  .cascade-bridge em { color: rgba(255,255,255,0.55); font-style: italic; }
+
+  /* ── SYNTHESIS BOX ── */
+  .synthesis-box {
+    background: var(--warm-white); border: 1px solid var(--rule); border-radius: 8px;
+    padding: 32px 34px; margin-top: 24px;
+    border-top: 3px solid var(--teal);
+  }
+  .synthesis-box p { color: var(--text-mid); font-size: 0.975rem; margin-bottom: 14px; line-height: 1.82; }
+  .synthesis-box p:last-child { margin-bottom: 0; }
+  .synthesis-box strong { color: var(--navy); font-weight: 600; }
+  .synthesis-box em { color: var(--teal); font-style: italic; }
+
+  /* ── ANIMATION ── */
+  .fade-section {
+    opacity: 0; transform: translateY(16px);
+    animation: fadeUp 0.5s ease forwards;
+  }
+  .fade-section:nth-child(1)  { animation-delay: 0.08s; }
+  .fade-section:nth-child(2)  { animation-delay: 0.16s; }
+  .fade-section:nth-child(3)  { animation-delay: 0.24s; }
+  .fade-section:nth-child(4)  { animation-delay: 0.32s; }
+  .fade-section:nth-child(5)  { animation-delay: 0.40s; }
+  .fade-section:nth-child(6)  { animation-delay: 0.48s; }
+  .fade-section:nth-child(7)  { animation-delay: 0.55s; }
+  .fade-section:nth-child(8)  { animation-delay: 0.62s; }
+  @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+  /* ── FOOTER ── */
+  .site-footer { background: var(--navy); }
+  .footer-stripe { height: 3px; background: linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%); }
+  .footer-inner { max-width: 960px; margin: 0 auto; padding: 44px 44px 36px; }
+  .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap; }
+  .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: rgba(255,255,255,0.92); margin-bottom: 6px; }
+  .footer-tagline { font-style: italic; font-weight: 300; font-size: 0.88rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
+  .footer-channels { display: flex; flex-direction: column; gap: 10px; }
+  .footer-channels-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 2px; }
+  .footer-channel-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: rgba(255,255,255,0.65); font-size: 0.88rem; transition: color 0.15s; }
+  .footer-channel-link:hover { color: var(--teal-light); }
+  .ch-icon { width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: rgba(255,0,0,0.18); }
+  .footer-bottom { padding-top: 24px; display: flex; flex-direction: column; gap: 8px; }
+  .footer-disclaimer { font-style: italic; font-size: 0.8rem; color: rgba(255,255,255,0.35); max-width: 700px; line-height: 1.6; }
+  .footer-meta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.2); margin-top: 4px; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 680px) {
+    .header-inner, .framework-notice-inner, .main-wrap, .footer-inner { padding-left: 20px; padding-right: 20px; }
+    h1 { font-size: 1.7rem; }
+    .card-grid, .timing-grid { grid-template-columns: 1fr; }
+  }
+
+  .masthead { position: sticky; top: 0; z-index: 100; background: #0f2342; padding: 10px 28px; border-bottom: 3px solid #c8923a; }
+  .masthead-inner { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .masthead-brand { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #2a9da6; }
+  .masthead-title { font-family: 'Source Serif 4', serif; font-size: 14px; font-weight: 600; color: white; margin-top: 2px; }
+  .masthead-meta { font-family: 'DM Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.4); }
+</style>
+</head>
+<body>
+<nav class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <div class="masthead-brand">Decoding Autism Now</div>
+      <div class="masthead-title">Biology of Autism — Molecular Origins</div>
+    </div>
+    <div class="masthead-meta"></div>
+  </div>
+</nav>
+
+<!-- ═══ HEADER ═══ -->
+<header class="site-header">
+  <div class="header-stripe"></div>
+  <div class="header-inner">
+    <div class="header-deco"></div>
+    <p class="brand-line">Decoding Autism Now</p>
+    <h1>Biology of Autism —<br><em>Molecular Origins</em></h1>
+    <p class="header-subtitle">A systems-biology overview of how persistent immune activation reshapes neurodevelopment — and why it matters for understanding the Biology of Autism.</p>
+    <div class="suite-badge">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      Biology of Autism — Molecular Origins
+    </div>
+  </div>
+</header>
+
+<!-- ═══ FRAMEWORK NOTICE ═══ -->
+<aside class="framework-notice" role="note">
+  <div class="framework-notice-inner">
+    <div class="notice-icon">i</div>
+    <p class="notice-text">
+      <strong>Theoretical framework — not clinical guidance.</strong>
+      The Autism Spectrum Disorder (ASD) Cascade is a systems-biology model integrating peer-reviewed findings across immunology, metabolism, gut biology, and neuroscience into a proposed mechanistic map. Individual components are supported by published research; the full integrated cascade has not been validated as a unified model in large clinical trials. It is intended as a research-informed framework — not a diagnostic tool or treatment protocol. All intervention decisions require qualified clinical oversight. For the evidence base, see the <em>ASD Cascade Citations</em> document in this suite.
+    </p>
+  </div>
+</aside>
+
+<!-- ═══ MAIN ═══ -->
+<main class="main-wrap">
+
+  <!-- ══ SECTION 01 — CORE HYPOTHESIS ══ -->
+  <div class="fade-section">
+    <span class="section-num">01 — The Core Hypothesis</span>
+    <h2>Autism as a Downstream Product of a <em>Chronically Inflamed</em> System</h2>
+    <div class="prose">
+      <p>The traditional framing treats autism as a neurodevelopmental condition defined by behavior. A more mechanistic framing asks a different question: <strong>what upstream biological state produces the observed downstream profile?</strong> An increasingly supported answer is persistent low-grade — or episodically high-grade — systemic inflammation originating well before birth and continuing throughout development.</p>
+      <p>Inflammation in this context is not simply a feature or a comorbidity. The hypothesis is that it is a <strong>generative cause</strong>: chronic immune activation reshapes neurodevelopment at every level — synaptic pruning, myelination, microglial density and behavior, glial signaling, metabolic state, and ultimately behavior and cognition. The brain did not develop atypically in isolation; it developed under conditions of ongoing immune pressure and adapted accordingly.</p>
+    </div>
+
+    <div class="framing-callout">
+      <p class="callout-label">Key framing</p>
+      <p>Autism spectrum traits may represent the <strong>neurological signature of a system that was — and in many cases still is — operating under chronic immune pressure</strong>. The inflammation came first; the neurodevelopmental divergence followed. This reframes autism not as a fixed genetic endpoint but as a <em>biological state</em> that was shaped by, and remains responsive to, the inflammatory environment.</p>
+    </div>
+  </div>
+
+  <!-- ══ SECTION 02 — ORIGINS ══ -->
+  <div class="section-divider"><span>02 — Origins of Inflammation</span></div>
+  <div class="fade-section">
+    <h2>Where Does the Chronic Inflammation Come From?</h2>
+    <div class="prose">
+      <p>Multiple converging upstream inputs can produce the chronic inflammatory state. These are not mutually exclusive — they typically compound, and their combined pressure is what pushes the system into the self-reinforcing state described by the ASD Cascade.</p>
+    </div>
+
+    <div class="card-grid">
+      <div class="origin-card">
+        <div class="card-icon">🧬</div>
+        <h3>Maternal Immune Activation (MIA)</h3>
+        <p>Infections, autoimmune conditions, or immune dysregulation during pregnancy expose the fetal brain to elevated pro-inflammatory cytokines — particularly IL-6 and IL-17a — altering neural circuit formation, glial programming, and gut barrier development in utero.</p>
+        <div class="card-foot teal"></div>
+      </div>
+      <div class="origin-card">
+        <div class="card-icon">🦠</div>
+        <h3>Gut Dysbiosis + Barrier Failure</h3>
+        <p>Disrupted gut microbiome architecture combined with impaired intestinal barrier integrity allows LPS and microbial fragments to translocate into systemic circulation, driving perpetual TLR4/NF-κB immune activation — a state of metabolic endotoxemia without active infection.</p>
+        <div class="card-foot gold"></div>
+      </div>
+      <div class="origin-card">
+        <div class="card-icon">☣️</div>
+        <h3>Environmental Toxin Load</h3>
+        <p>Heavy metals, glyphosate, air pollutants, and endocrine disruptors activate innate immune pathways, deplete glutathione, impair mitochondrial function, and lower the activation threshold of the neuroimmune system — amplifying the impact of every other inflammatory input.</p>
+        <div class="card-foot navy"></div>
+      </div>
+      <div class="origin-card">
+        <div class="card-icon">⚡</div>
+        <h3>Mitochondrial Dysfunction</h3>
+        <p>Impaired mitochondria release danger-associated molecular patterns — mitochondrial DNA fragments and excess ROS — that activate the NLRP3 inflammasome, producing IL-1β and IL-18 and sustaining a chronic sterile inflammatory state independent of external triggers.</p>
+        <div class="card-foot teal"></div>
+      </div>
+      <div class="origin-card">
+        <div class="card-icon">🌾</div>
+        <h3>Dietary and Metabolic Inflammation</h3>
+        <p>High-glycemic, ultra-processed dietary patterns drive insulin resistance and mast cell activation. Combined with common food sensitivities that disrupt mucosal immunity, the gut epithelium is maintained in a state of chronic low-grade reactivity that feeds back into systemic inflammatory load.</p>
+        <div class="card-foot gold"></div>
+      </div>
+      <div class="origin-card">
+        <div class="card-icon">🧫</div>
+        <h3>Epigenetic Priming</h3>
+        <p>DNA methylation and histone acetylation patterns can lock pro-inflammatory gene expression programs — including suppression of SIRT1 and PGC-1α — in place across development, meaning a transient gestational insult produces a persistent biological vulnerability rather than a reversible response.</p>
+        <div class="card-foot navy"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SECTION 03 — MECHANISTIC PATHWAY ══ -->
+  <div class="section-divider"><span>03 — Mechanistic Pathway</span></div>
+  <div class="fade-section">
+    <h2>How Peripheral Inflammation Reaches and Reshapes the Developing Brain</h2>
+    <div class="prose">
+      <p>How does inflammation originating in the gut, immune system, or placenta reach the developing brain and alter its architecture? The pathway is multi-step — each transition amplifying the signal and making resolution progressively harder.</p>
+    </div>
+
+    <div class="pathway-box">
+      <div class="pathway-header">Inflammatory cascade into neurodevelopment — step by step</div>
+
+      <div class="pathway-step">
+        <div class="step-badge">Step 01</div>
+        <div class="step-body">
+          <strong>Inflammatory trigger activates peripheral immune system</strong>
+          <span>NF-κB signaling upregulates TNF-α, IL-1β, IL-6, and IL-17a. Mast cells and macrophages release additional histamine, prostaglandins, and reactive oxygen species. A systemic immune mobilization begins.</span>
+        </div>
+      </div>
+
+      <div class="pathway-step">
+        <div class="step-badge">Step 02</div>
+        <div class="step-body">
+          <strong>Blood-brain barrier permeability increases</strong>
+          <span>Pro-inflammatory cytokines — especially TNF-α and IL-1β — directly disrupt tight junction proteins (occludin, claudin-5), increasing BBB permeability. Central nervous system access for inflammatory mediators is opened.</span>
+        </div>
+      </div>
+
+      <div class="pathway-step">
+        <div class="step-badge">Step 03</div>
+        <div class="step-body">
+          <strong>Microglia activate toward a pro-inflammatory M1-like state</strong>
+          <span>Resident brain immune cells shift into reactive M1-like states, releasing more IL-6, TNF-α, and nitric oxide. In the developing brain, this directly disrupts synaptic pruning — the normal, precisely-timed sculpting of neural circuits that shapes connectivity.</span>
+        </div>
+      </div>
+
+      <div class="pathway-step">
+        <div class="step-badge">Step 04</div>
+        <div class="step-body">
+          <strong>Excessive or mistimed synaptic pruning alters connectivity</strong>
+          <span>Over-activated microglia prune synapses too aggressively, at the wrong developmental windows, or in the wrong circuits. This produces the connectivity signature consistently observed in ASD: hyper-local connectivity within cortical regions alongside reduced long-range integration between distributed networks.</span>
+        </div>
+      </div>
+
+      <div class="pathway-step">
+        <div class="step-badge">Step 05</div>
+        <div class="step-body">
+          <strong>Kynurenine pathway hijack depletes serotonin and NAD⁺</strong>
+          <span>Inflammation, via IDO1 enzyme induction, shunts tryptophan away from serotonin synthesis and into the kynurenine pathway. This raises quinolinic acid (a neurotoxic NMDA receptor agonist), depletes NAD⁺ availability, and lowers serotonin — simultaneously reshaping mood, sensory processing, gut motility, and the metabolic capacity for cellular repair.</span>
+        </div>
+      </div>
+
+      <div class="pathway-step">
+        <div class="step-badge">Step 06</div>
+        <div class="step-body">
+          <strong>HPA axis dysregulation and cortisol rhythm disruption</strong>
+          <span>Chronic inflammation dysregulates the hypothalamic-pituitary-adrenal axis. Abnormal cortisol rhythms impair social cognition circuits, sensory gating, and stress recovery — and sustain elevated somatostatin (SST) tone, which applies a system-wide brake on neural plasticity and gastrointestinal function simultaneously.</span>
+        </div>
+      </div>
+
+      <div class="pathway-step">
+        <div class="step-badge">Step 07</div>
+        <div class="step-body">
+          <strong>Neuroinflammation becomes self-perpetuating</strong>
+          <span>Activated microglia, compromised mitochondria, depleted antioxidant capacity, failed cellular cleanup (autophagy impairment), and structurally altered synaptic proteins create interlocking feedback loops. The inflammatory state no longer requires an external trigger — it maintains and amplifies itself from within.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SECTION 04 — BIOMARKER TABLE ══ -->
+  <div class="section-divider"><span>04 — Biomarker Evidence</span></div>
+  <div class="fade-section">
+    <h2>Cytokine and Immune Marker Profile in ASD</h2>
+    <div class="prose">
+      <p>Post-mortem brain studies, cerebrospinal fluid analysis, and blood profiling consistently identify a distinct inflammatory signature in autism spectrum disorder. The pattern below reflects findings from multiple independent research groups and represents one of the more reproducible biological features of ASD.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Marker</th>
+            <th>Direction in ASD</th>
+            <th>Source / Location</th>
+            <th>Functional Significance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>IL-6</strong></td>
+            <td><span class="dir-up">↑ Elevated</span></td>
+            <td>Brain, blood, CSF</td>
+            <td>Disrupts cortical neuron migration and social behavior circuits; primary MIA cytokine mediator</td>
+          </tr>
+          <tr>
+            <td><strong>TNF-α</strong></td>
+            <td><span class="dir-up">↑ Elevated</span></td>
+            <td>Brain tissue, plasma</td>
+            <td>Increases BBB permeability; drives microglial M1 activation; impairs glutamate reuptake by astrocytes</td>
+          </tr>
+          <tr>
+            <td><strong>IL-1β</strong></td>
+            <td><span class="dir-up">↑ Elevated</span></td>
+            <td>Brain, gut, blood</td>
+            <td>NLRP3 inflammasome product; disrupts hippocampal LTP (memory and learning consolidation)</td>
+          </tr>
+          <tr>
+            <td><strong>IL-17a</strong></td>
+            <td><span class="dir-up">↑ Elevated</span></td>
+            <td>Maternal serum (MIA studies)</td>
+            <td>Directly implicated in cortical dysplasia and social behavior deficits in animal MIA models</td>
+          </tr>
+          <tr>
+            <td><strong>IFN-γ</strong></td>
+            <td><span class="dir-var">↑/↓ Variable</span></td>
+            <td>Blood, brain</td>
+            <td>Activates IDO1, initiating the kynurenine/tryptophan hijack; indicates Th1 immune skewing in a subset</td>
+          </tr>
+          <tr>
+            <td><strong>TGF-β1</strong></td>
+            <td><span class="dir-up">↑ Elevated</span></td>
+            <td>Blood, CSF</td>
+            <td>Regulatory cytokine elevated as a compensatory signal; associated with restricted and repetitive behavior patterns</td>
+          </tr>
+          <tr>
+            <td><strong>IL-10</strong></td>
+            <td><span class="dir-down">↓ Reduced</span></td>
+            <td>Blood</td>
+            <td>Anti-inflammatory brake is weakened — the system loses its normal capacity to self-resolve inflammation</td>
+          </tr>
+          <tr>
+            <td><strong>Quinolinic Acid</strong></td>
+            <td><span class="dir-up">↑ Elevated</span></td>
+            <td>Brain, urine</td>
+            <td>Neurotoxic kynurenine metabolite; drives NMDA receptor over-activation, excitotoxic stress, and NAD⁺ depletion</td>
+          </tr>
+          <tr>
+            <td><strong>Glutathione (GSH)</strong></td>
+            <td><span class="dir-down">↓ Depleted</span></td>
+            <td>Red blood cells, brain</td>
+            <td>Master antioxidant depleted; oxidative stress goes unopposed, amplifying neuroinflammation and mitochondrial damage</td>
+          </tr>
+          <tr>
+            <td><strong>Microglial density</strong></td>
+            <td><span class="dir-up">↑ Increased</span></td>
+            <td>Post-mortem cortex, cerebellum</td>
+            <td>Pathological over-activation documented in post-mortem studies; evidence of ongoing neuroinflammation independent of acute insult</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ══ SECTION 05 — GUT-BRAIN AXIS ══ -->
+  <div class="section-divider"><span>05 — Gut–Brain Axis</span></div>
+  <div class="fade-section">
+    <h2>The Gut as the Primary Inflammatory Amplifier</h2>
+    <div class="prose">
+      <p>The gut is not a bystander in this framework — it is the <strong>primary organ through which systemic inflammation is generated and sustained</strong>. Roughly 70–80% of immune cells reside in or around the gut lining. A disrupted gut microbiome creates multiple simultaneous inflammatory feeds into the brain through several distinct mechanisms operating in parallel.</p>
+
+      <p><strong>Leaky gut and LPS translocation:</strong> Lipopolysaccharide from gram-negative bacteria enters systemic circulation and binds TLR4 receptors on macrophages and microglia — producing a continuous pro-inflammatory signal even in the complete absence of active infection. This state of metabolic endotoxemia is now measurable through circulating LPS-binding protein in a significant proportion of individuals on the autism spectrum.</p>
+
+      <p><strong>Disrupted short-chain fatty acid production:</strong> Healthy gut bacteria produce butyrate, propionate, and acetate — which cross the blood-brain barrier, regulate microglial tone, and support intestinal tight junction integrity. Dysbiosis depletes SCFA production, simultaneously removing a key anti-inflammatory signal and a neuroprotective one.</p>
+
+      <p><strong>Mast cell activation in the gut wall:</strong> Mast cells are dense in the gut mucosa and activated by both allergens and microbial signals. They release histamine, tryptase, and cytokines that stimulate enteric nerves, escalate intestinal permeability, and signal the vagus nerve — sending an inflammatory status report directly to the brainstem and modulating autonomic tone, microglial activation, and HPA axis activity.</p>
+    </div>
+
+    <div class="highlight">
+      <p><strong>Clinical correlation:</strong> The high prevalence of GI complaints in ASD — estimated at 46–84% across studies — is not coincidental. It is the symptomatic surface expression of the same deeper inflammatory state that is shaping neurodevelopment. Gut symptoms and autistic traits share a common upstream biological origin, which is why addressing GI health is not a peripheral concern but a central one in this framework.</p>
+    </div>
+  </div>
+
+  <!-- ══ SECTION 06 — DEVELOPMENTAL TIMING ══ -->
+  <div class="section-divider"><span>06 — Developmental Timing</span></div>
+  <div class="fade-section">
+    <h2>Why the Timing of Inflammation Determines the Outcome</h2>
+    <div class="prose">
+      <p>The same inflammatory state can produce very different neurodevelopmental outcomes depending on <em>when</em> it occurs. This explains much of the heterogeneity within autism spectrum presentations — why some individuals show deep structural divergence, others show later-onset regression, and others present with a profile that remains highly responsive to biological intervention.</p>
+    </div>
+
+    <div class="timing-grid">
+      <div class="timing-card">
+        <div class="card-icon">🤰</div>
+        <h3>Trimester 1–2 (In Utero)</h3>
+        <p>MIA during cortical neurogenesis alters layering, minicolumn formation, and interneuron development. IL-6 and IL-17a are most disruptive during this window. Associated with deeper structural divergence and epigenetic silencing of key regulatory hubs.</p>
+        <div class="card-foot teal"></div>
+      </div>
+      <div class="timing-card">
+        <div class="card-icon">👶</div>
+        <h3>Perinatal and Neonatal</h3>
+        <p>Inflammatory disruption during myelination and early synaptogenesis. Microbiome seeding failures — C-section delivery, antibiotic exposure, early formula use — can initiate the gut–brain inflammatory loop from the first days of life.</p>
+        <div class="card-foot gold"></div>
+      </div>
+      <div class="timing-card">
+        <div class="card-icon">🧒</div>
+        <h3>Toddler (12–36 months)</h3>
+        <p>The critical synaptic pruning window. Inflammatory insults during this period — infections, fever responses, dietary transitions, gut microbiome disruptions — can trigger observable developmental regression in already-susceptible children.</p>
+        <div class="card-foot navy"></div>
+      </div>
+      <div class="timing-card">
+        <div class="card-icon">🧠</div>
+        <h3>Ongoing and Chronic</h3>
+        <p>Persistent neuroinflammation throughout childhood sustains behavioral and sensory profiles and deepens the self-reinforcing loop. This ongoing state is also the most accessible target for intervention — it can be modified through systematic, biology-first approaches.</p>
+        <div class="card-foot teal"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SECTION 07 — INTERVENTION IMPLICATIONS ══ -->
+  <div class="section-divider"><span>07 — Intervention Implications</span></div>
+  <div class="fade-section">
+    <h2>What This Framework Implies for Intervention</h2>
+
+    <div class="intervention-intro">
+      <p>If chronic inflammation is a root cause rather than a secondary finding, interventions aimed purely at behavioral symptoms address the wrong level. The biology must be approached upstream — across multiple systems simultaneously, under qualified clinical supervision.</p>
+      <p>The following mechanistic categories represent the key axes where the inflammatory and metabolic state driving the cascade can be addressed. <strong>These are not prescriptions or proven therapeutic protocols.</strong> They are the biological domains the evidence points toward — each of which is explored in mechanistic detail in the ASD Cascade documents in this suite.</p>
+    </div>
+
+    <div class="axis-block">
+      <div class="axis-header">
+        <span class="axis-badge">Gut</span>
+        <h3>Restore Intestinal Barrier Integrity and Reduce LPS Translocation</h3>
+      </div>
+      <div class="axis-body">
+        <p>The gut is the primary upstream driver of systemic and neuroinflammation in this model. Restoring barrier integrity and reducing dysbiosis directly lowers the LPS flux driving TLR4–NF-κB activation — addressing the most persistent and self-reinforcing input into the cascade. Without closing this gate, downstream inflammatory targets are difficult to hold.</p>
+      </div>
+    </div>
+
+    <div class="axis-block">
+      <div class="axis-header">
+        <span class="axis-badge">Immune</span>
+        <h3>Downregulate NF-κB Activity and Quiet Microglial Activation</h3>
+      </div>
+      <div class="axis-body">
+        <p>Reducing chronic NF-κB-driven cytokine production directly lowers IDO1 induction (the tryptophan hijack), decreases microglial M1 polarization, and relieves the upstream pressure on the SIRT1 regulatory hub. Quieting microglial over-activation is also necessary to halt the complement-mediated synaptic pruning that restructures circuit architecture.</p>
+      </div>
+    </div>
+
+    <div class="axis-block">
+      <div class="axis-header">
+        <span class="axis-badge">Redox</span>
+        <h3>Restore Antioxidant Capacity and Address Oxidative Burden</h3>
+      </div>
+      <div class="axis-body">
+        <p>Glutathione depletion and FOXO-axis suppression leave the system with insufficient capacity to neutralize the ROS generated by dysfunctional mitochondria and sustained inflammation. Restoring antioxidant reserves is both directly protective and enables the SIRT1/PGC-1α hub to begin functioning — the two are interdependent.</p>
+      </div>
+    </div>
+
+    <div class="axis-block">
+      <div class="axis-header">
+        <span class="axis-badge">Kynurenine</span>
+        <h3>Redirect Tryptophan Toward Serotonin and Restore NAD⁺ Availability</h3>
+      </div>
+      <div class="axis-body">
+        <p>IDO1 over-activation is the mechanism by which inflammation simultaneously depletes serotonin, accumulates neurotoxic quinolinic acid, and creates functional NAD⁺ insufficiency. Addressing IDO1 activity — primarily by reducing its inflammatory drivers — can begin to normalize the tryptophan:kynurenine ratio and restore the metabolic substrate that powers the SIRT1 resilience hub.</p>
+      </div>
+    </div>
+
+    <div class="axis-block">
+      <div class="axis-header">
+        <span class="axis-badge">Mitochondria</span>
+        <h3>Support Mitochondrial Biogenesis and Reduce NLRP3-Driven Inflammation</h3>
+      </div>
+      <div class="axis-body">
+        <p>Dysfunctional mitochondria are both a consequence of the cascade and one of its primary self-sustaining drivers — releasing ROS and mtDNA that repeatedly reactivate the NLRP3 inflammasome. Supporting mitochondrial renewal through the PGC-1α axis (itself downstream of SIRT1) reduces this endogenous inflammatory signal while improving ATP availability for synaptogenesis and circuit maintenance.</p>
+      </div>
+    </div>
+
+    <div class="axis-block">
+      <div class="axis-header">
+        <span class="axis-badge">Stress / SST</span>
+        <h3>Normalize HPA Axis Tone and Reduce Chronic Somatostatin Elevation</h3>
+      </div>
+      <div class="axis-body">
+        <p>Chronic stress and inflammatory load drive persistent somatostatin (SST) elevation — a system-wide plasticity brake that simultaneously suppresses neural circuit plasticity, gut function, and glial synaptogenic support. Normalizing stress tone, circadian rhythm, and HPA axis regulation is necessary to allow AC/cAMP/PKA/CREB signaling — and with it, the capacity for experience-dependent learning — to recover.</p>
+      </div>
+    </div>
+
+    <!-- BRIDGE TO ASD CASCADE -->
+    <div class="cascade-bridge">
+      <p class="bridge-label">Biology of Autism Suite — Next step</p>
+      <h3>This overview is where the ASD Cascade begins.</h3>
+      <p>The mechanistic categories above identify <em>where</em> to intervene. The ASD Cascade documents in this suite map out <em>how</em> these systems interact — the precise molecular pathways, feedback loops, and intervention sequencing that transform a set of biological targets into a coherent multi-node strategy.</p>
+      <p>The cascade is a <strong>hypothetical framework grounded in peer-reviewed literature</strong>. Individual components — IDO1/kynurenine, SIRT1/NAD⁺, NLRP3, SPARC/hevin, thalamocortical synaptogenesis — each carry their own evidence base. What the cascade proposes is the <strong>integrated architecture</strong>: how these components interlock, reinforce one another, and can be addressed in sequence. The ASD Cascade Citations document in this suite provides the underlying references.</p>
+      <p><em>Start with this overview. Then move through the other Biology of Autism documents in this suite for a more complete and detailed explanation at the molecular level. Together they represent one of the first plausible explanations of autism as a cascade of interconnected biological events — beginning with upstream immune and metabolic pressures, building through a series of reinforcing failures, and culminating in a self-sustaining cycle that explains not just how autism emerges, but why it persists.</em></p>
+    </div>
+  </div>
+
+  <!-- ══ SECTION 08 — SYNTHESIS ══ -->
+  <div class="section-divider"><span>08 — Synthesis</span></div>
+  <div class="fade-section">
+    <h2>A Unified View</h2>
+    <div class="synthesis-box">
+      <p>Autism, in this framework, is the neurological expression of a system that learned to develop — and in many cases continues to operate — under conditions of chronic immune activation. The brain adapted to an inflamed internal environment, producing the sensory sensitivities, social processing differences, GI disruption, metabolic irregularities, and sleep dysregulation that define the spectrum. These are not random comorbidities; they are parallel downstream expressions of the same upstream biological state.</p>
+      <p>This is not a counsel of despair. It is a map. If the nervous system diverged partly in response to an inflammatory state, then modifying that state — systematically, patiently, and across gut, immune, metabolic, and redox biology — creates the biological conditions for neurological reorganization. The brain retains plasticity. The question is whether the underlying environment is changed enough, and for long enough, to allow that plasticity to express differently.</p>
+      <p>The evidence from maternal immune activation research, post-mortem neuroinflammation studies, cytokine profiling, microbiome analysis, kynurenine pathway literature, and synaptic protein biology all converge on the same conclusion: <em>inflammation is not peripheral to understanding autism — it may be central to it.</em></p>
+    </div>
+  </div>
+
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="site-footer">
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">Decoding Autism Now</p>
+        <p class="footer-tagline">Systems biology of autism —<br>for families, clinicians, and researchers.</p>
+      </div>
+      <div class="footer-channels">
+        <p class="footer-channels-label">Find us on</p>
+        <a class="footer-channel-link" href="https://www.youtube.com/@DecodingAutismNow" target="_blank" rel="noopener">
+          <span class="ch-icon">
+            <svg width="14" height="10" viewBox="0 0 24 17" fill="white"><path d="M23.5 2.5A3 3 0 0021.4.4C19.5 0 12 0 12 0S4.5 0 2.6.4A3 3 0 00.5 2.5C0 4.4 0 8.5 0 8.5S0 12.6.5 14.5A3 3 0 002.6 16.6C4.5 17 12 17 12 17s7.5 0 9.4-.4a3 3 0 002.1-2.1C24 12.6 24 24 8.5 24 8.5s0-4.1-.5-6zM9.75 12.02V4.98L15.8 8.5l-6.05 3.52z"/></svg>
+          </span>
+          YouTube — @DecodingAutismNow
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-disclaimer">This content is for informational purposes only and should not be considered medical advice, diagnosis, or treatment. Always consult with a healthcare professional before making any changes to your health routines or treatment regimen.</p>
+      <p class="footer-meta">Biology of Autism — Molecular Origins | Decoding Autism Now</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
