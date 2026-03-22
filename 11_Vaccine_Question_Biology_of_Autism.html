@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biology of Autism — The Vaccine Question | Decoding Autism Now</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:        #0f2342;
+    --teal:        #1e6b72;
+    --teal-light:  #2a9da6;
+    --gold:        #c8923a;
+    --gold-light:  #e8b86d;
+    --cream:       #faf7f2;
+    --warm-white:  #ffffff;
+    --text-dark:   #1a1a2e;
+    --text-mid:    #3d4560;
+    --text-light:  #6b7494;
+    --rule:        #d8cfc4;
+    --accent-bg:   #eef8f9;
+    --gold-bg:     #fdf6ec;
+    --navy-bg:     #f0f2f6;
+    --tag-bg:      rgba(30,107,114,0.08);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  /* ── MASTHEAD ── */
+  .masthead { position: sticky; top: 0; z-index: 100; background: #0f2342; padding: 10px 28px; border-bottom: 3px solid #c8923a; }
+  .masthead-inner { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .masthead-brand { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #2a9da6; }
+  .masthead-title { font-family: 'Source Serif 4', serif; font-size: 14px; font-weight: 600; color: white; margin-top: 2px; }
+  .masthead-meta { font-family: 'DM Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.4); }
+
+  /* ── HEADER ── */
+  .site-header { background: var(--navy); color: #fff; position: relative; overflow: hidden; }
+  .header-stripe { height: 5px; background: linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%); }
+  .header-inner { max-width: 960px; margin: 0 auto; padding: 52px 44px 48px; position: relative; z-index: 1; }
+  .brand-line {
+    font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--teal-light); margin-bottom: 18px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .brand-line::after { content: ''; display: block; height: 1px; width: 60px; background: var(--teal-light); opacity: 0.45; }
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.9rem, 4vw, 2.85rem); font-weight: 700;
+    line-height: 1.15; color: #fff; margin-bottom: 14px;
+  }
+  h1 em { color: var(--gold-light); font-style: italic; }
+  .header-subtitle {
+    font-style: italic; font-weight: 300; font-size: 1.05rem;
+    color: rgba(255,255,255,0.6); max-width: 620px; line-height: 1.55;
+  }
+  .suite-badge {
+    display: inline-flex; align-items: center; gap: 8px; margin-top: 22px;
+    background: rgba(42,157,166,0.18); border: 1px solid rgba(42,157,166,0.4);
+    border-radius: 4px; padding: 5px 14px;
+    font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--teal-light);
+  }
+  .header-deco {
+    position: absolute; right: -60px; top: -60px;
+    width: 340px; height: 340px; border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.04); pointer-events: none;
+  }
+  .header-deco::after {
+    content: ''; position: absolute; inset: 35px; border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.03);
+  }
+
+  /* ── FRAMEWORK NOTICE ── */
+  .framework-notice { background: #fffbf2; border-top: 1px solid rgba(200,146,58,0.25); border-bottom: 1px solid rgba(200,146,58,0.25); }
+  .framework-notice-inner { max-width: 960px; margin: 0 auto; padding: 20px 44px; display: flex; gap: 16px; align-items: flex-start; }
+  .notice-icon {
+    flex-shrink: 0; margin-top: 2px; width: 20px; height: 20px; border-radius: 50%;
+    background: rgba(200,146,58,0.15); border: 1px solid rgba(200,146,58,0.4);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; color: var(--gold); line-height: 1;
+  }
+  .notice-text { font-family: 'Source Serif 4', serif; font-size: 0.875rem; color: #6b5a3a; line-height: 1.65; }
+  .notice-text strong { color: #4a3a1e; font-weight: 600; }
+
+  /* ── MAIN CONTENT ── */
+  .main-wrap { max-width: 960px; margin: 0 auto; padding: 60px 44px 100px; }
+
+  /* ── SECTION DIVIDER ── */
+  .section-divider {
+    display: flex; align-items: center; gap: 14px; margin: 64px 0 44px;
+  }
+  .section-divider span {
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--text-light); white-space: nowrap;
+  }
+  .section-divider::before, .section-divider::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+
+  /* ── SECTION NUMBERS ── */
+  .section-num {
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--teal); margin-bottom: 10px; display: block;
+  }
+
+  /* ── HEADINGS ── */
+  h2 {
+    font-family: 'Playfair Display', Georgia, serif; font-size: 1.6rem;
+    font-weight: 700; color: var(--navy); line-height: 1.22; margin-bottom: 20px;
+  }
+  h2 em { color: var(--gold); font-style: italic; }
+  h3 {
+    font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 600;
+    color: var(--navy); margin-bottom: 12px; line-height: 1.3;
+  }
+
+  /* ── BODY TEXT ── */
+  .prose p { color: var(--text-mid); font-size: 0.975rem; margin-bottom: 14px; line-height: 1.82; }
+  .prose p:last-child { margin-bottom: 0; }
+  .prose strong { color: var(--navy); font-weight: 600; }
+  .prose em { color: var(--text-mid); }
+
+  /* ── OPENING TESTIMONIAL BLOCK ── */
+  .parent-voice {
+    background: var(--warm-white); border-radius: 8px; border: 1px solid var(--rule);
+    border-left: 4px solid var(--gold); padding: 28px 32px; margin-bottom: 40px;
+    position: relative;
+  }
+  .parent-voice::before {
+    content: '\201C';
+    font-family: 'Playfair Display', serif; font-size: 5rem; line-height: 1;
+    color: rgba(200,146,58,0.15); position: absolute; top: 10px; left: 20px;
+    pointer-events: none;
+  }
+  .parent-voice p {
+    font-family: 'Source Serif 4', serif; font-style: italic; font-size: 1.05rem;
+    color: var(--text-mid); line-height: 1.78; margin-bottom: 10px; position: relative; z-index: 1;
+  }
+  .parent-voice p:last-child { margin-bottom: 0; }
+  .parent-voice .voice-source {
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--text-light); font-style: normal;
+    margin-top: 14px; display: block;
+  }
+
+  /* ── FRAMING CALLOUT (navy) ── */
+  .framing-callout {
+    background: var(--navy); border-radius: 8px; padding: 28px 32px; margin: 28px 0;
+    position: relative; overflow: hidden;
+  }
+  .framing-callout::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+    background: linear-gradient(180deg, var(--teal-light), var(--gold));
+  }
+  .framing-callout .callout-label {
+    font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--teal-light); margin-bottom: 12px;
+  }
+  .framing-callout p {
+    color: rgba(255,255,255,0.88); font-size: 1.0rem; line-height: 1.75; margin-bottom: 10px;
+  }
+  .framing-callout p:last-child { margin-bottom: 0; }
+  .framing-callout strong { color: var(--gold-light); font-weight: 600; }
+  .framing-callout em { color: rgba(255,255,255,0.6); font-style: italic; }
+
+  /* ── HIGHLIGHT CALLOUT ── */
+  .highlight {
+    background: var(--accent-bg); border-left: 3px solid var(--teal);
+    border-radius: 0 6px 6px 0; padding: 16px 20px; margin: 20px 0;
+  }
+  .highlight p { color: var(--text-mid); font-size: 0.96rem; margin-bottom: 8px; line-height: 1.75; }
+  .highlight p:last-child { margin-bottom: 0; }
+  .highlight strong { color: var(--navy); font-weight: 600; }
+  .highlight.gold { background: var(--gold-bg); border-left-color: var(--gold); }
+
+  /* ── STEP CHAIN ── */
+  .step-chain {
+    background: var(--warm-white); border: 1px solid var(--rule); border-radius: 8px;
+    overflow: hidden; margin: 24px 0;
+  }
+  .step-chain-header {
+    background: var(--navy); padding: 14px 24px;
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--teal-light);
+  }
+  .step-chain-row {
+    display: flex; gap: 20px; align-items: flex-start;
+    padding: 18px 24px; border-bottom: 1px solid var(--rule);
+  }
+  .step-chain-row:last-child { border-bottom: none; }
+  .step-badge {
+    font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500;
+    background: var(--navy); color: #fff; border-radius: 3px; padding: 4px 10px;
+    flex-shrink: 0; margin-top: 3px; white-space: nowrap; letter-spacing: 0.06em;
+  }
+  .step-badge.gold-badge { background: var(--gold); }
+  .step-badge.teal-badge { background: var(--teal); }
+  .step-body strong { display: block; color: var(--navy); font-weight: 600; font-size: 0.96rem; margin-bottom: 4px; }
+  .step-body span { font-size: 0.875rem; color: var(--text-light); line-height: 1.7; }
+
+  /* ── EVIDENCE CARDS ── */
+  .evidence-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 16px; margin: 24px 0;
+  }
+  .evidence-card {
+    background: var(--warm-white); border: 1px solid var(--rule); border-radius: 8px;
+    padding: 24px 22px 20px; position: relative; overflow: hidden;
+  }
+  .ev-badge {
+    font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--teal); background: var(--tag-bg);
+    border: 1px solid rgba(30,107,114,0.22); border-radius: 3px; padding: 3px 9px;
+    display: inline-block; margin-bottom: 12px;
+  }
+  .evidence-card h3 {
+    font-family: 'Playfair Display', serif; font-size: 0.97rem; font-weight: 600;
+    color: var(--navy); margin-bottom: 8px; line-height: 1.28;
+  }
+  .evidence-card p { font-size: 0.865rem; color: var(--text-light); margin: 0; line-height: 1.65; }
+  .evidence-card .card-foot { position: absolute; bottom: 0; left: 0; right: 0; height: 3px; }
+  .card-foot.teal { background: linear-gradient(90deg, var(--teal), transparent); }
+  .card-foot.gold { background: linear-gradient(90deg, var(--gold), transparent); }
+  .card-foot.navy { background: linear-gradient(90deg, var(--navy), transparent); }
+
+  /* ── COMPARISON BOX ── */
+  .comparison-wrap {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;
+  }
+  @media (max-width: 640px) { .comparison-wrap { grid-template-columns: 1fr; } }
+  .comparison-box {
+    border-radius: 8px; padding: 22px 24px; border: 1px solid var(--rule);
+  }
+  .comparison-box.wrong { background: #fff8f8; border-color: rgba(180,60,60,0.2); }
+  .comparison-box.right { background: var(--accent-bg); border-color: rgba(30,107,114,0.25); }
+  .comparison-label {
+    font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.18em;
+    text-transform: uppercase; margin-bottom: 10px; display: block;
+  }
+  .comparison-box.wrong .comparison-label { color: #b03030; }
+  .comparison-box.right .comparison-label { color: var(--teal); }
+  .comparison-box p { font-size: 0.93rem; color: var(--text-mid); line-height: 1.7; margin: 0; }
+  .comparison-box strong { color: var(--navy); }
+
+  /* ── SYNTHESIS / CLOSING BOX ── */
+  .synthesis-box {
+    background: var(--warm-white); border: 1px solid var(--rule); border-radius: 8px;
+    padding: 32px 34px; margin-top: 24px;
+    border-top: 3px solid var(--teal);
+  }
+  .synthesis-box p { color: var(--text-mid); font-size: 0.975rem; margin-bottom: 14px; line-height: 1.82; }
+  .synthesis-box p:last-child { margin-bottom: 0; }
+  .synthesis-box strong { color: var(--navy); font-weight: 600; }
+  .synthesis-box em { color: var(--teal); font-style: italic; }
+
+  /* ── CITATION NOTE ── */
+  .citation-note {
+    background: var(--navy-bg); border: 1px solid rgba(15,35,66,0.12);
+    border-radius: 8px; padding: 20px 26px; margin-top: 48px;
+  }
+  .citation-note p { font-size: 0.84rem; color: var(--text-light); line-height: 1.7; margin-bottom: 6px; }
+  .citation-note p:last-child { margin-bottom: 0; }
+  .citation-note strong { color: var(--navy); }
+  .citation-note a { color: var(--teal); text-decoration: none; }
+  .citation-note a:hover { text-decoration: underline; }
+
+  /* ── ANIMATION ── */
+  .fade-section {
+    opacity: 0; transform: translateY(16px);
+    animation: fadeUp 0.5s ease forwards;
+  }
+  .fade-section:nth-child(1)  { animation-delay: 0.08s; }
+  .fade-section:nth-child(2)  { animation-delay: 0.16s; }
+  .fade-section:nth-child(3)  { animation-delay: 0.24s; }
+  .fade-section:nth-child(4)  { animation-delay: 0.32s; }
+  .fade-section:nth-child(5)  { animation-delay: 0.40s; }
+  .fade-section:nth-child(6)  { animation-delay: 0.48s; }
+  .fade-section:nth-child(7)  { animation-delay: 0.55s; }
+  @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+  /* ── FOOTER ── */
+  .site-footer { background: var(--navy); }
+  .footer-stripe { height: 3px; background: linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%); }
+  .footer-inner { max-width: 960px; margin: 0 auto; padding: 44px 44px 36px; }
+  .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap; }
+  .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: rgba(255,255,255,0.92); margin-bottom: 6px; }
+  .footer-tagline { font-family: 'Source Serif 4', serif; font-style: italic; font-weight: 300; font-size: 0.88rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
+  .footer-channels { display: flex; flex-direction: column; gap: 10px; }
+  .footer-channels-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 2px; }
+  .footer-channel-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: rgba(255,255,255,0.65); font-size: 0.88rem; transition: color 0.15s; }
+  .footer-channel-link:hover { color: var(--teal-light); }
+  .ch-icon { width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: rgba(255,0,0,0.18); }
+  .footer-bottom { padding-top: 24px; display: flex; flex-direction: column; gap: 8px; }
+  .footer-disclaimer { font-family: 'Source Serif 4', serif; font-style: italic; font-size: 0.8rem; color: rgba(255,255,255,0.35); max-width: 700px; line-height: 1.6; }
+  .footer-meta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.2); margin-top: 4px; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 680px) {
+    .header-inner, .framework-notice-inner, .main-wrap, .footer-inner { padding-left: 20px; padding-right: 20px; }
+    h1 { font-size: 1.7rem; }
+    .evidence-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <div class="masthead-brand">Decoding Autism Now</div>
+      <div class="masthead-title">Biology of Autism — The Vaccine Question</div>
+    </div>
+    <div class="masthead-meta"></div>
+  </div>
+</nav>
+
+<!-- ═══ HEADER ═══ -->
+<header class="site-header">
+  <div class="header-stripe"></div>
+  <div class="header-inner">
+    <div class="header-deco"></div>
+    <p class="brand-line">Decoding Autism Now</p>
+    <h1>Biology of Autism —<br><em>The Vaccine Question</em></h1>
+    <p class="header-subtitle">A science-grounded, but compassionate answer to the question every autism family has asked — and what the biology actually tells us about timing, vulnerability, and what to do next.</p>
+    <div class="suite-badge">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      Biology of Autism — The Vaccine Question
+    </div>
+  </div>
+</header>
+
+<!-- ═══ FRAMEWORK NOTICE ═══ -->
+<aside class="framework-notice" role="note">
+  <div class="framework-notice-inner">
+    <div class="notice-icon">i</div>
+    <p class="notice-text">
+      <strong>Theoretical framework — not clinical guidance.</strong>
+      The Autism Spectrum Disorder (ASD) Cascade is a systems-biology model integrating peer-reviewed findings across immunology, metabolism, gut biology, and neuroscience into a proposed mechanistic map. Individual components are supported by published research; the full integrated cascade has not been validated as a unified model in large clinical trials. It is intended as a research-informed framework — not a diagnostic tool or treatment protocol. All intervention decisions require qualified clinical oversight. For the evidence base, see the <em>ASD Cascade Citations</em> document in this suite.
+    </p>
+  </div>
+</aside>
+
+<!-- ═══ MAIN ═══ -->
+<main class="main-wrap">
+
+  <!-- ── SECTION 1: THE PARENT EXPERIENCE ── -->
+  <section class="fade-section">
+    <span class="section-num">Section 01</span>
+    <h2>What Parents Saw — <em>and Why It Matters</em></h2>
+
+    <div class="parent-voice">
+      <p>He was talking. He had ten words, maybe twelve. He was pointing at things, making eye contact, responding to his name. Then he had his eighteen-month vaccines, he ran a fever for two days, and after that — the words stopped coming. He stopped pointing. He stopped turning when we called him. We kept waiting for him to come back.</p>
+      <span class="voice-source">A description heard by pediatric neurologists and developmental pediatricians across the world</span>
+    </div>
+
+    <div class="prose">
+      <p>This story — or a version of it — is one of the most reported experiences in autism. Parents describe it with extraordinary consistency: a child developing along a typical arc, a vaccination, a fever, and then a change they could not explain and could not reverse.</p>
+      <p>The medical community's standard response — that vaccines do not cause autism, that the timing is coincidental, that the original study was fraudulent — is correct at every point. And yet for the parent standing in that memory, "the timing was coincidental" has never felt like a complete answer.</p>
+      <p>It isn't. Not because vaccines caused the autism — the science on that is clear and settled. But because the biological cascade framework offers something the standard dismissal does not: <strong>an explanation for why the timing was real, even if the causal interpretation was wrong.</strong></p>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>The Epidemiological Answer</span></div>
+
+  <!-- ── SECTION 2: WHAT THE SCIENCE ESTABLISHED ── -->
+  <section class="fade-section">
+    <span class="section-num">Section 02</span>
+    <h2>What the Science Established — <em>Clearly and Conclusively</em></h2>
+
+    <div class="prose">
+      <p>The epidemiological evidence on vaccines and autism is among the most thoroughly examined questions in modern medicine. The findings are consistent across countries, study designs, and populations.</p>
+    </div>
+
+    <div class="evidence-grid">
+      <div class="evidence-card">
+        <span class="ev-badge">Denmark · 2002</span>
+        <h3>537,000 children — no association</h3>
+        <p>A Danish national registry study of over half a million children found no difference in autism rates between vaccinated and unvaccinated children, with or without MMR.</p>
+        <div class="card-foot teal"></div>
+      </div>
+      <div class="evidence-card">
+        <span class="ev-badge">Japan · 2007</span>
+        <h3>Natural experiment — MMR withdrawn</h3>
+        <p>Japan used MMR only 1989–1993, creating a natural experiment. Autism rates continued rising after withdrawal. Regression rates were identical in vaccinated and unvaccinated children.</p>
+        <div class="card-foot teal"></div>
+      </div>
+      <div class="evidence-card">
+        <span class="ev-badge">IOM Review · 2004</span>
+        <h3>Full scientific consensus</h3>
+        <p>The U.S. Institute of Medicine reviewed all published and unpublished evidence and concluded the body of epidemiological evidence favors rejection of a causal link — for both MMR and thimerosal-containing vaccines.</p>
+        <div class="card-foot navy"></div>
+      </div>
+      <div class="evidence-card">
+        <span class="ev-badge">Cochrane Review · 2020</span>
+        <h3>The largest systematic review of vaccine safety evidence</h3>
+        <p>The Cochrane Collaboration — the gold standard of evidence synthesis — reviewed data from studies covering over 1.2 million children and found no credible evidence of a link between MMR vaccination and autism, Crohn's disease, or any serious adverse event.</p>
+        <div class="card-foot navy"></div>
+      </div>
+    </div>
+
+    <div class="framing-callout">
+      <p class="callout-label">The bottom line</p>
+      <p><strong>Vaccines do not cause autism.</strong> This is not a contested scientific question. The population-level evidence — involving millions of children across multiple decades and countries — is consistent, replicated, and conclusive. Accepting this does not mean dismissing what parents observed. It means asking a better question about what their observations actually tell us.</p>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>The Better Question</span></div>
+
+  <!-- ── SECTION 3: THE REFRAME ── -->
+  <section class="fade-section">
+    <span class="section-num">Section 03</span>
+    <h2>The Wrong Question — <em>and the Right One</em></h2>
+
+    <div class="prose">
+      <p>The question "Did vaccines cause my child's autism?" has a clear answer: No. But it may also be the wrong question — one that forecloses understanding rather than opening it.</p>
+      <p>The biological cascade framework suggests a different question entirely:</p>
+    </div>
+
+    <div class="comparison-wrap">
+      <div class="comparison-box wrong">
+        <span class="comparison-label">❌ The question that leads nowhere</span>
+        <p>Did the vaccine cause the autism?</p>
+      </div>
+      <div class="comparison-box right">
+        <span class="comparison-label">✓ The question the cascade can answer</span>
+        <p><strong>What happens when an immune challenge from a vaccination meets a biological system that was already under significant stress?</strong></p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>This reframe is not a way of avoiding the vaccine question. It is a way of taking it seriously — and finding an answer that actually matches what parents reported seeing.</p>
+      <p>The cascade framework proposes that autism in many children is not a single event but a <strong>process</strong> — a cascade of interconnected biological failures building over months or years before behavioral symptoms become visible. Upstream immune activation, gut barrier failure, mitochondrial stress, oxidative load, and metabolic dysfunction create a biological system operating under progressive strain.</p>
+      <p>In that context, a significant immune event — whether a vaccination, a respiratory infection, a gut flare, or any other stressor — does not create the cascade. It encounters one already underway. And in a system already close to threshold, that encounter can be the moment everything becomes visible.</p>
+    </div>
+
+    <div class="highlight gold">
+      <p><strong>Trigger event ≠ root cause.</strong> A spark does not cause a fire in an empty room. In a room full of fuel, a spark becomes the moment everything changes — but the fuel was already there. Parents who watched their child change after a fever are not misremembering. They may be identifying the trigger event while searching for the root cause.</p>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>The Biology of Vulnerability</span></div>
+
+  <!-- ── SECTION 4: PRE-LOADED SUBSTRATE ── -->
+  <section class="fade-section">
+    <span class="section-num">Section 04</span>
+    <h2>What Was Already Happening — <em>Before the Regression</em></h2>
+
+    <div class="prose">
+      <p>One of the most important findings in autism research — and one of the least discussed in public conversations — is that many children who later develop autism carry measurable biological differences long before any behavioral symptoms appear.</p>
+      <p>These are not subtle or speculative differences. They are detectable in blood, in gut samples, in brain imaging, and in early movement patterns — often in the first year of life, well before the 12–18 month window when autism typically becomes visible to parents and clinicians.</p>
+    </div>
+
+    <div class="step-chain">
+      <div class="step-chain-header">Pre-symptomatic biological signals — present before behavioral regression</div>
+      <div class="step-chain-row">
+        <span class="step-badge teal-badge">Oxidative stress</span>
+        <div class="step-body">
+          <strong>Glutathione depletion and elevated oxidative markers</strong>
+          <span>Children who later develop autism show reduced glutathione, reduced methionine, and increased oxidized glutathione in early infancy — the same metabolic pattern that makes neurons and mitochondria vulnerable to inflammatory challenge.</span>
+        </div>
+      </div>
+      <div class="step-chain-row">
+        <span class="step-badge teal-badge">Immune priming</span>
+        <div class="step-body">
+          <strong>Elevated inflammatory cytokines in newborn blood</strong>
+          <span>Studies of stored neonatal blood samples show elevated inflammatory markers in children later diagnosed with autism — evidence that immune dysregulation precedes any environmental trigger after birth.</span>
+        </div>
+      </div>
+      <div class="step-chain-row">
+        <span class="step-badge teal-badge">Gut signals</span>
+        <div class="step-body">
+          <strong>Gut barrier and microbiome disruption</strong>
+          <span>GI dysfunction, altered microbiome composition, and early signs of gut permeability are documented in infants later diagnosed with autism — providing a persistent source of low-grade immune activation before any behavioral change is noticed.</span>
+        </div>
+      </div>
+      <div class="step-chain-row">
+        <span class="step-badge teal-badge">Brain architecture</span>
+        <div class="step-body">
+          <strong>Early structural brain differences</strong>
+          <span>MRI studies show measurable differences in brain surface area and extra-axial cerebrospinal fluid volume in infants as young as 6 months who later develop autism — well before the regression window.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>The significance of these findings is profound: <strong>the biological cascade was already active.</strong> The child who appeared to be developing typically was, in many cases, doing so against an already-stressed biological background — one that was approaching a threshold without yet having crossed it into visible behavioral change.</p>
+      <p>This is why the same vaccination that passes through millions of children without consequence can, in a biologically vulnerable child, coincide with a visible developmental shift. The difference is not in the vaccine. The difference is in the substrate it encountered.</p>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>The Molecular Bridge</span></div>
+
+  <!-- ── SECTION 5: IDO1 MECHANISM ── -->
+  <section class="fade-section">
+    <span class="section-num">Section 05</span>
+    <h2>The Molecular Bridge — <em>How Immune Activation Amplifies the Cascade</em></h2>
+
+    <div class="prose">
+      <p>Understanding why an immune challenge can tip a vulnerable system requires following the molecular chain from immune activation to the cascade mechanisms already described in this suite.</p>
+      <p>When the immune system encounters a challenge — any challenge, including a vaccination — it releases pro-inflammatory cytokines including IL-6, TNF-α, and interferon-gamma. This is a normal, protective response. In a typical child, it resolves cleanly within days.</p>
+      <p>But these cytokines activate a critical enzyme: <strong>IDO1</strong> — indoleamine 2,3-dioxygenase 1.</p>
+    </div>
+
+    <div class="step-chain">
+      <div class="step-chain-header">Immune challenge → IDO1 → cascade amplification</div>
+      <div class="step-chain-row">
+        <span class="step-badge">Step 1</span>
+        <div class="step-body">
+          <strong>Immune challenge triggers cytokine release</strong>
+          <span>Vaccination, infection, or gut dysbiosis → IL-6, TNF-α, IFN-γ released. Normal immune response begins.</span>
+        </div>
+      </div>
+      <div class="step-chain-row">
+        <span class="step-badge">Step 2</span>
+        <div class="step-body">
+          <strong>Cytokines activate IDO1</strong>
+          <span>IDO1 is the rate-limiting enzyme that diverts tryptophan away from serotonin and NAD⁺ production into the kynurenine pathway. Under inflammatory conditions, this diversion increases dramatically.</span>
+        </div>
+      </div>
+      <div class="step-chain-row">
+        <span class="step-badge">Step 3</span>
+        <div class="step-body">
+          <strong>Tryptophan diverted → NAD⁺ falls → SIRT1 fails</strong>
+          <span>In a typical child, this is temporary. In a child with pre-existing oxidative stress and gut dysbiosis, NAD⁺ is already depleted. IDO1 activation pushes the system further into depletion, collapsing the SIRT1 repair hub.</span>
+        </div>
+      </div>
+      <div class="step-chain-row">
+        <span class="step-badge">Step 4</span>
+        <div class="step-body">
+          <strong>SIRT1 failure cascades downstream</strong>
+          <span>Microglial M1 polarization deepens. NLRP3 inflammasome activates. SST rises further. AC/cAMP/CREB signaling — the plasticity and learning pathway — is suppressed. The cascade that was already active accelerates.</span>
+        </div>
+      </div>
+      <div class="step-chain-row">
+        <span class="step-badge gold-badge">Result</span>
+        <div class="step-body">
+          <strong>A threshold is crossed — and becomes visible</strong>
+          <span>The biological changes that were building silently now produce observable behavioral change. Language stops progressing. Social engagement withdraws. The cascade that was loading for months becomes visible in days.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>This mechanism does not implicate vaccines specifically. The same cascade amplification can be triggered by a respiratory infection, a significant gut dysbiosis episode, a stressful environmental event, or any other immune challenge. Vaccination is one of many possible triggers — and the one that happens to be on a predictable schedule, making the timing association visible to parents.</p>
+      <p>The child who regresses after a fever from a cold is experiencing the same mechanism. The child who regresses after a period of gut illness is experiencing the same mechanism. The cascade does not care what activated the immune system. It responds to the activation.</p>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>The Fever Paradox</span></div>
+
+  <!-- ── SECTION 6: FEVER PARADOX ── -->
+  <section class="fade-section">
+    <span class="section-num">Section 06</span>
+    <h2>The Fever Paradox — <em>A Clue the Standard Answer Misses</em></h2>
+
+    <div class="prose">
+      <p>There is a finding in autism research that the standard "vaccines don't cause autism" narrative cannot explain — but the cascade framework can.</p>
+      <p>Across multiple studies, roughly <strong>one in six children with autism shows measurable behavioral improvement during febrile episodes.</strong> Parents report clearer speech, better eye contact, increased social engagement, reduced rigidity — all during a fever, all resolving when the fever breaks.</p>
+    </div>
+
+    <div class="highlight">
+      <p>This phenomenon has been documented formally in the Simons Simplex Collection, analyzed using machine learning across thousands of families, and studied at the cellular level in animal models. It is not anecdote. It is a reproducible biological signal.</p>
+    </div>
+
+    <div class="prose">
+      <p>If inflammation were simply toxic to the autistic brain — if immune activation were the cause of autism's features — then fever should make autism symptoms <em>worse</em>, not better. The fact that it sometimes produces dramatic improvement tells us something important:</p>
+      <p>The relationship between immune activation and autism neurology is <strong>specific and directional</strong>, not simply toxic. The immune system is dysregulated in a particular way — and a febrile episode temporarily disrupts that dysregulation in a way that allows more typical neural function to emerge.</p>
+    </div>
+
+    <div class="framing-callout">
+      <p class="callout-label">What the fever effect tells us</p>
+      <p>Research has identified that children who improve during fever tend to be those with <strong>maternal immune activation during pregnancy</strong> and <strong>gastrointestinal dysfunction</strong> — two features that sit at the top of the ASD biological cascade. The fever effect is not universal across all autism. It appears specifically in children whose autism has an immune dysregulation signature — exactly the population the cascade model describes.</p>
+      <p>This is not an argument for inducing fever as a treatment. It is a biological signal pointing toward a specific, addressable mechanism — and toward the interventions that might create more durable change than fever can.</p>
+    </div>
+
+    <div class="prose">
+      <p>Research has proposed that the behavioral improvement during fever involves temporary normalization of the locus coeruleus-noradrenergic system — a brainstem network involved in attention, emotional regulation, and social engagement that appears to be developmentally dysregulated in autism. Fever may transiently restore function in neural networks that remain structurally intact but are functionally suppressed by the chronic inflammatory state the cascade creates.</p>
+      <p>In other words: the networks are there. The capacity is preserved. The chronic biological environment is suppressing it. When the fever briefly changes that environment, the child the parent always sensed was present becomes briefly visible.</p>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>What This Means Going Forward</span></div>
+
+  <!-- ── SECTION 7: FORWARD MOTION ── -->
+  <section class="fade-section">
+    <span class="section-num">Section 07</span>
+    <h2>What the Cascade Framework <em>Actually Offers Families</em></h2>
+
+    <div class="prose">
+      <p>The standard vaccine-autism conversation ends with a verdict: vaccines did not cause this. Full stop. For a parent, that verdict closes the vaccine door as a possible answer — but it fails to explain why their child is on the autistic spectrum now with regressive autism. So exactly what is the answer?</p>
+      <p>The cascade framework does something the verdict cannot: it takes the parent's observation seriously — the timing, the fever, the regression — and explains it mechanistically, without requiring vaccines to be the villain. And then it points forward.</p>
+    </div>
+
+    <div class="synthesis-box">
+      <p><strong>If the regression was the moment the cascade became visible, rather than the moment it began</strong> — then the question becomes: what was happening in the biology before that moment, and can we address it?</p>
+      <p>This reframe transforms the conversation from <em>blame</em> to <em>biology</em>. From "what caused this?" to "what is driving this now — and what can we do about it?"</p>
+      <p>The cascade is not a fixed fate. It is a series of biological processes — many of which are measurable through targeted testing, and many of which have evidence-informed interventions. The IDO1 activation that amplifies the cascade can be modulated. The SIRT1 depletion can be addressed. The gut dysbiosis driving persistent immune activation can be treated. The oxidative stress that makes the system vulnerable can be reduced.</p>
+      <p><strong>The child who appeared to change after a vaccine is not unreachable.</strong> The biology that was loading before that moment — and that continues after it — is the target. And it is addressable.</p>
+      <p>For a full exploration of targeted testing and intervention logic, see <em>Biology of Autism — Diagnosis to Intervention</em> (Document 07) and <em>Biology of Autism — Intervention Logic</em> (Document 08) in this suite.</p>
+    </div>
+
+    <div class="citation-note">
+      <p><strong>Key references supporting this document:</strong></p>
+      <p>Epidemiology — Madsen et al. 2002 (Denmark, N Engl J Med); Uchiyama et al. 2007 (Japan, J Autism Dev Disord); IOM Immunization Safety Review Committee 2004.</p>
+      <p>Pre-symptomatic biology — Frye &amp; Rossignol 2020 (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6989979/" target="_blank" rel="noopener">PMC6989979</a>); James SJ et al. 2004 (<a href="https://pubmed.ncbi.nlm.nih.gov/15585776/" target="_blank" rel="noopener">PubMed 15585776</a>).</p>
+      <p>Fever paradox — Muller et al. 2023 (<a href="https://pubmed.ncbi.nlm.nih.gov/37119025/" target="_blank" rel="noopener">PubMed 37119025</a>); Mehler &amp; Purpura 2009 (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2668953/" target="_blank" rel="noopener">PMC2668953</a>); Curran et al. 2007 (Pediatrics).</p>
+      <p>IDO1 / molecular bridge — Lawson et al. 2013 (<a href="https://pubmed.ncbi.nlm.nih.gov/23866724/" target="_blank" rel="noopener">PubMed 23866724</a>); Parrott et al. 2016 (<a href="https://pubmed.ncbi.nlm.nih.gov/27233247/" target="_blank" rel="noopener">PubMed 27233247</a>).</p>
+      <p>For the complete citation database, see <a href="10_ASD_Cascade_Citations_Biology_of_Autism_Cascade.html">Biology of Autism — The Evidence (Document 10)</a>.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="site-footer">
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">Decoding Autism Now</p>
+        <p class="footer-tagline">Systems biology of autism —<br>for families, clinicians, and researchers.</p>
+      </div>
+      <div class="footer-channels">
+        <p class="footer-channels-label">Find us on</p>
+        <a class="footer-channel-link" href="https://www.youtube.com/@DecodingAutismNow" target="_blank" rel="noopener">
+          <span class="ch-icon">
+            <svg width="14" height="10" viewBox="0 0 24 17" fill="white"><path d="M23.5 2.5A3 3 0 0021.4.4C19.5 0 12 0 12 0S4.5 0 2.6.4A3 3 0 00.5 2.5C0 4.4 0 8.5 0 8.5S0 12.6.5 14.5A3 3 0 002.6 16.6C4.5 17 12 17 12 17s7.5 0 9.4-.4a3 3 0 002.1-2.1C24 12.6 24 8.5 24 8.5s0-4.1-.5-6zM9.75 12.02V4.98L15.8 8.5l-6.05 3.52z"/></svg>
+          </span>
+          YouTube — @DecodingAutismNow
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-disclaimer">This content is for informational purposes only and should not be considered medical advice, diagnosis, or treatment. Always consult with a healthcare professional before making any changes to your health routines or treatment regimen.</p>
+      <p class="footer-meta">Biology of Autism — The Vaccine Question | Decoding Autism Now | DecodingAutismNow.com</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -329,6 +329,11 @@
 
   .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap; }
   .footer-bottom { padding-top: 24px; display: flex; flex-direction: column; gap: 8px; }
+  .footer-channels { display: flex; flex-direction: column; gap: 10px; }
+  .footer-channels-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 2px; }
+  .footer-channel-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: rgba(255,255,255,0.65); font-size: 0.88rem; transition: color 0.15s; }
+  .footer-channel-link:hover { color: var(--teal-light); }
+  .ch-icon { width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: rgba(255,0,0,0.18); }
   .footer-brand {
     font-family: 'Playfair Display', serif;
     font-size: 1rem;
@@ -336,7 +341,11 @@
     letter-spacing: 0.02em;
   }
 
-  .footer-disclaimer {
+  .framework-notice { background: #fffbf2; border-top: 1px solid rgba(200,146,58,0.25); border-bottom: 1px solid rgba(200,146,58,0.25); }
+  .framework-notice-inner { max-width: 960px; margin: 0 auto; padding: 20px 44px; display: flex; gap: 16px; align-items: flex-start; }
+  .notice-icon { flex-shrink: 0; margin-top: 2px; width: 20px; height: 20px; border-radius: 50%; background: rgba(200,146,58,0.15); border: 1px solid rgba(200,146,58,0.4); display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; color: #c8923a; line-height: 1; }
+  .notice-text { font-family: 'Source Serif 4', serif; font-size: 0.875rem; color: #6b5a3a; line-height: 1.65; }
+  .notice-text strong { color: #4a3a1e; font-weight: 600; }
     font-family: 'Source Serif 4', serif;
     font-size: 0.82rem;
     font-style: italic;
@@ -420,6 +429,16 @@
     </div>
   </div>
 </nav>
+
+<aside class="framework-notice" role="note">
+  <div class="framework-notice-inner">
+    <div class="notice-icon">i</div>
+    <p class="notice-text">
+      <strong>Theoretical framework — not clinical guidance.</strong>
+      The Autism Spectrum Disorder (ASD) Cascade is a systems-biology model integrating peer-reviewed findings across immunology, metabolism, gut biology, and neuroscience into a proposed mechanistic map. Individual components are supported by published research; the full integrated cascade has not been validated as a unified model in large clinical trials. It is intended as a research-informed framework — not a diagnostic tool or treatment protocol. All intervention decisions require qualified clinical oversight. For the evidence base, see the <em>ASD Cascade Citations</em> document in this suite.
+    </p>
+  </div>
+</aside>
 
 <!-- ═══════════════════════════════════════════════════ MAIN -->
 <main class="main-content">

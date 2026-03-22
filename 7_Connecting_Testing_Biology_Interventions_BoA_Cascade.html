@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Biology of Autism — Diagnosis to Intervention | Decoding Autism Now</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
   --navy: #0f2342;
@@ -21,21 +22,21 @@
   --multi: #37474F;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Source Serif 4', Georgia, serif; background: var(--bg); color: var(--ink); font-size: 14px; line-height: 1.65; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink); font-size: 14px; line-height: 1.65; }
 
 /* MASTHEAD */
-.masthead { background: var(--navy); color: white; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,0.2); }
+.masthead { background: var(--navy); color: white; position: sticky; top: 0; z-index: 100; border-bottom: 3px solid #c8923a; }
 .masthead-inner { max-width: 1100px; margin: 0 auto; padding: 14px 32px; display: flex; align-items: center; justify-content: space-between; }
 .mast-brand { font-family: 'Source Serif 4', serif; font-size: 12px; font-weight: 300; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.65); }
 .mast-title { font-family: 'Source Serif 4', serif; font-size: 17px; font-weight: 600; }
-.mast-meta { font-size: 11px; color: rgba(255,255,255,0.5); font-family: 'DM Mono', monospace; }
+.mast-meta { font-size: 11px; color: rgba(255,255,255,0.5); font-family: 'JetBrains Mono', monospace; }
 
 /* HERO */
-.hero { background: linear-gradient(135deg, #0f2644 0%, #1A3A5C 50%, #1a4a6e 100%); color: white; padding: 56px 32px 44px; text-align: center; }
+.hero { background: linear-gradient(135deg, #0f2342 0%, #0f2342 60%, #162035 100%); color: white; padding: 56px 32px 44px; text-align: center; }
 .hero h1 { font-family: 'Source Serif 4', serif; font-size: clamp(22px, 4vw, 36px); font-weight: 700; margin-bottom: 10px; line-height: 1.2; }
 .hero-sub { font-size: 15px; color: rgba(255,255,255,0.72); max-width: 620px; margin: 0 auto 22px; }
 .hero-pills { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
-.pill { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 4px 13px; font-size: 11.5px; font-family: 'DM Mono', monospace; color: rgba(255,255,255,0.82); }
+.pill { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 4px 13px; font-size: 11.5px; font-family: 'JetBrains Mono', monospace; color: rgba(255,255,255,0.82); }
 
 /* CHANNEL LEGEND BAR */
 .channel-bar { background: white; border-bottom: 1px solid var(--border); }
@@ -50,25 +51,32 @@ body { font-family: 'Source Serif 4', Georgia, serif; background: var(--bg); col
 .notice.medical { background: #FEF2F2; border-left: 4px solid #EF4444; color: #7F1D1D; }
 .notice strong { display: block; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 3px; }
 
+/* CANONICAL FRAMEWORK NOTICE */
+.framework-notice { background: #fffbf2; border-top: 1px solid rgba(200,146,58,0.25); border-bottom: 1px solid rgba(200,146,58,0.25); }
+.framework-notice-inner { max-width: 1100px; margin: 0 auto; padding: 20px 44px; display: flex; gap: 16px; align-items: flex-start; }
+.notice-icon { flex-shrink: 0; margin-top: 2px; width: 20px; height: 20px; border-radius: 50%; background: rgba(200,146,58,0.15); border: 1px solid rgba(200,146,58,0.4); display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; color: #c8923a; line-height: 1; }
+.notice-text { font-family: 'Source Serif 4', serif; font-size: 0.875rem; color: #6b5a3a; line-height: 1.65; }
+.notice-text strong { color: #4a3a1e; font-weight: 600; }
+
 /* MAIN LAYOUT */
-.wrap { max-width: 1100px; margin: 32px auto 60px; padding: 0 32px; }
+.wrap { max-width: 1100px; margin: 32px auto 60px; padding: 0 44px; }
 
 /* SECTION */
 .doc-section { margin-bottom: 40px; }
 .section-title { font-family: 'Source Serif 4', serif; font-size: 20px; font-weight: 700; color: var(--navy); border-bottom: 2px solid var(--navy); padding-bottom: 8px; margin-bottom: 18px; display: flex; align-items: baseline; gap: 12px; }
-.section-num { font-family: 'DM Mono', monospace; font-size: 13px; background: var(--navy); color: white; padding: 2px 8px; border-radius: 4px; }
+.section-num { font-family: 'JetBrains Mono', monospace; font-size: 13px; background: var(--navy); color: white; padding: 2px 8px; border-radius: 4px; }
 
 /* INTRO TEXT */
 .intro-text { font-family: 'Source Serif 4', serif; font-size: 15px; color: #374151; line-height: 1.75; margin-bottom: 22px; }
 
 /* PRIORITY BADGE */
-.pri { display: inline-block; padding: 2px 9px; border-radius: 4px; font-size: 10.5px; font-family: 'DM Mono', monospace; font-weight: 600; }
+.pri { display: inline-block; padding: 2px 9px; border-radius: 4px; font-size: 10.5px; font-family: 'JetBrains Mono', monospace; font-weight: 600; }
 .pri-first { background: #DCFCE7; color: #14532D; }
 .pri-second { background: #DBEAFE; color: #1E3A8A; }
 .pri-third { background: #FEF9C3; color: #713F12; }
 
 /* CHANNEL BADGE inline */
-.ch { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 10px; font-weight: 600; color: white; font-family: 'DM Mono', monospace; white-space: nowrap; }
+.ch { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 10px; font-weight: 600; color: white; font-family: 'JetBrains Mono', monospace; white-space: nowrap; }
 .ch-gut { background: var(--gut); }
 .ch-mito { background: var(--mito); }
 .ch-mia { background: var(--mia); }
@@ -93,7 +101,7 @@ body { font-family: 'Source Serif 4', Georgia, serif; background: var(--bg); col
 .seq-table th { background: var(--navy); color: white; padding: 10px 14px; text-align: left; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; }
 .seq-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.55; }
 .seq-table tr:last-child td { border-bottom: none; }
-.order-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 600; flex-shrink: 0; }
+.order-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; flex-shrink: 0; }
 
 /* MVLS TABLE */
 .mvls-table-wrap { overflow-x: auto; margin-bottom: 24px; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
@@ -114,14 +122,14 @@ body { font-family: 'Source Serif 4', Georgia, serif; background: var(--bg); col
 .callout.amber h4 { color: #92400E; }
 .callout.green h4 { color: #15803D; }
 .callout.purple h4 { color: #6D28D9; }
-.callout p, .callout ul { font-size: 15px; color: #374151; line-height: 1.75; }
+.callout p, .callout ul { font-size: 13px; color: #374151; line-height: 1.65; }
 .callout ul { padding-left: 20px; }
 .callout li { margin-bottom: 4px; }
 
 /* DECISION TREE */
 .branch { background: white; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 14px; }
 .branch-header { padding: 11px 16px; font-weight: 600; font-size: 13px; display: flex; align-items: center; gap: 10px; }
-.branch-letter { width: 26px; height: 26px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 700; color: white; background: var(--navy); flex-shrink: 0; }
+.branch-letter { width: 26px; height: 26px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; color: white; background: var(--navy); flex-shrink: 0; }
 .branch-body { padding: 12px 16px 14px 52px; border-top: 1px solid var(--border); background: #FAFBFC; }
 .branch-body ul { padding-left: 16px; }
 .branch-body li { font-size: 12.5px; color: #374151; margin-bottom: 5px; line-height: 1.55; }
@@ -139,7 +147,7 @@ body { font-family: 'Source Serif 4', Georgia, serif; background: var(--bg); col
 /* INTERPRETATION TABLE */
 .interp-table-wrap { overflow-x: auto; margin-bottom: 24px; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
 .interp-table { width: 100%; border-collapse: collapse; font-size: 12.5px; background: white; }
-.interp-table th { background: #1A3A5C; color: white; padding: 10px 14px; text-align: left; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; }
+.interp-table th { background: #0f2342; color: white; padding: 10px 14px; text-align: left; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; }
 .interp-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.55; }
 .interp-table tr:last-child td { border-bottom: none; }
 .interp-table tr:nth-child(even) td { background: #F8FAFC; }
@@ -147,15 +155,15 @@ body { font-family: 'Source Serif 4', Georgia, serif; background: var(--bg); col
 /* PROTOCOL MAP TABLE */
 .proto-table-wrap { overflow-x: auto; margin-bottom: 24px; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
 .proto-table { width: 100%; border-collapse: collapse; font-size: 12px; background: white; }
-.proto-table th { background: #1A3A5C; color: white; padding: 10px 14px; text-align: left; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap; }
+.proto-table th { background: #0f2342; color: white; padding: 10px 14px; text-align: left; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap; }
 .proto-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.55; }
 .proto-table tr:last-child td { border-bottom: none; }
 .proto-table tr:nth-child(even) td { background: #F8FAFC; }
-.layer-tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-family: 'DM Mono', monospace; font-weight: 600; background: #1A3A5C; color: white; }
+.layer-tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-family: 'JetBrains Mono', monospace; font-weight: 600; background: #0f2342; color: white; }
 
 /* DOCTOR SCRIPT */
 .script-block { background: white; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 16px; }
-.script-header { background: #1A3A5C; color: white; padding: 10px 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; }
+.script-header { background: #0f2342; color: white; padding: 10px 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; }
 .script-body { padding: 14px 16px; font-family: 'Source Serif 4', serif; font-size: 13.5px; line-height: 1.75; color: #374151; font-style: italic; }
 
 /* MVLS COST BOX */
@@ -169,83 +177,27 @@ body { font-family: 'Source Serif 4', Georgia, serif; background: var(--bg); col
 .doc-card-title { font-size: 12px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
 .doc-card-desc { font-size: 12px; color: var(--muted); line-height: 1.55; }
 
-footer { background: var(--navy); color: rgba(255,255,255,0.6); text-align: center; padding: 28px 20px; font-size: 12px; line-height: 1.8; }
-footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
-footer strong { color: white; }
+.site-footer { background: #0f2342; }
+.footer-stripe { height: 3px; background: linear-gradient(90deg, #1e6b72 0%, #2a9da6 50%, #c8923a 100%); }
+.header-stripe { height: 5px; background: linear-gradient(90deg, #1e6b72 0%, #2a9da6 50%, #c8923a 100%); }
+.footer-inner { max-width: 960px; margin: 0 auto; padding: 44px 44px 36px; }
+.footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap; }
+.footer-brand { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: rgba(255,255,255,0.92); margin-bottom: 6px; }
+.footer-tagline { font-style: italic; font-weight: 300; font-size: 0.88rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
+.footer-channels { display: flex; flex-direction: column; gap: 10px; }
+.footer-channels-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 2px; }
+.footer-channel-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: rgba(255,255,255,0.65); font-size: 0.88rem; transition: color 0.15s; }
+.footer-channel-link:hover { color: #2a9da6; }
+.ch-icon { width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: rgba(255,0,0,0.18); }
+.footer-bottom { padding-top: 24px; display: flex; flex-direction: column; gap: 8px; }
+.footer-disclaimer { font-style: italic; font-size: 0.8rem; color: rgba(255,255,255,0.35); max-width: 700px; line-height: 1.6; }
+.footer-meta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.2); margin-top: 4px; }
 
 @media (max-width: 720px) {
   .notices { grid-template-columns: 1fr; }
   .wrap { padding: 0 16px; }
   .masthead-inner { flex-direction: column; gap: 4px; text-align: center; }
 }
-
-  .site-footer { background: #0f2342; }
-  .footer-stripe { height: 3px; background: linear-gradient(90deg, #1e6b72 0%, #2a9da6 50%, #c8923a 100%); }
-  .footer-inner { max-width: 960px; margin: 0 auto; padding: 44px 44px 36px; }
-  .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap; }
-  .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: rgba(255,255,255,0.92); margin-bottom: 6px; }
-  .footer-tagline { font-style: italic; font-weight: 300; font-size: 0.88rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
-  .footer-channels { display: flex; flex-direction: column; gap: 10px; }
-  .footer-channels-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 2px; }
-  .footer-channel-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: rgba(255,255,255,0.65); font-size: 0.88rem; transition: color 0.15s; }
-  .footer-channel-link:hover { color: #2a9da6; }
-  .ch-icon { width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: rgba(255,0,0,0.18); }
-  .footer-bottom { padding-top: 24px; display: flex; flex-direction: column; gap: 8px; }
-  .footer-disclaimer { font-style: italic; font-size: 0.8rem; color: rgba(255,255,255,0.35); max-width: 700px; line-height: 1.6; }
-  .footer-meta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.2); margin-top: 4px; }
-
-  /* ── SITE HEADER ── */
-  .site-header { background: #0f2342; color: #fff; position: relative; overflow: hidden; }
-  .header-stripe { height: 5px; background: linear-gradient(90deg, #1e6b72 0%, #2a9da6 50%, #c8923a 100%); }
-  .header-inner { max-width: 1100px; margin: 0 auto; padding: 52px 44px 48px; position: relative; z-index: 1; }
-  .brand-line {
-    font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.22em;
-    text-transform: uppercase; color: #2a9da6; margin-bottom: 18px;
-    display: flex; align-items: center; gap: 10px;
-  }
-  .brand-line::after { content: ''; display: block; height: 1px; width: 60px; background: #2a9da6; opacity: 0.45; }
-  .site-header h1 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(1.9rem, 4vw, 2.85rem); font-weight: 700;
-    line-height: 1.15; color: #fff; margin-bottom: 14px;
-  }
-  .site-header h1 em { color: #e8b86d; font-style: italic; }
-  .site-header .header-subtitle {
-    font-family: 'Source Serif 4', serif; font-style: italic; font-weight: 300; font-size: 1.05rem;
-    color: rgba(255,255,255,0.6); max-width: 700px; line-height: 1.55;
-  }
-  .suite-badge {
-    display: inline-flex; align-items: center; gap: 8px; margin-top: 22px;
-    background: rgba(42,157,166,0.18); border: 1px solid rgba(42,157,166,0.4);
-    border-radius: 4px; padding: 5px 14px;
-    font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em;
-    text-transform: uppercase; color: #2a9da6;
-  }
-  .header-deco {
-    position: absolute; right: -60px; top: -60px; width: 340px; height: 340px;
-    border-radius: 50%; border: 1px solid rgba(255,255,255,0.04); pointer-events: none;
-  }
-  .header-deco::after { content: ''; position: absolute; inset: 35px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.03); }
-
-  /* ── FRAMEWORK NOTICE ── */
-  .framework-notice { background: #fffbf2; border-top: 1px solid rgba(200,146,58,0.25); border-bottom: 1px solid rgba(200,146,58,0.25); }
-  .framework-notice-inner { max-width: 1100px; margin: 0 auto; padding: 20px 44px; display: flex; gap: 16px; align-items: flex-start; }
-  .notice-icon {
-    flex-shrink: 0; margin-top: 2px; width: 20px; height: 20px; border-radius: 50%;
-    background: rgba(200,146,58,0.15); border: 1px solid rgba(200,146,58,0.4);
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; color: #c8923a; line-height: 1;
-  }
-  .notice-text { font-family: 'Source Serif 4', serif; font-size: 0.875rem; color: #6b5a3a; line-height: 1.65; }
-  .notice-text strong { color: #4a3a1e; font-weight: 600; }
-
-  /* ── CHANNEL LEGEND (inline, under section 1) ── */
-  .channel-legend { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 18px 0 0; }
-  .ch-legend-label { font-family: 'DM Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: #64748b; margin-right: 4px; }
-
-  /* ── FOOTER FONT FIXES ── */
-  .footer-tagline { font-family: 'Source Serif 4', serif; font-style: italic; font-weight: 300; font-size: 0.88rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
-  .footer-disclaimer { font-family: 'Source Serif 4', serif; font-style: italic; font-size: 0.8rem; color: rgba(255,255,255,0.35); max-width: 700px; line-height: 1.6; }
 </style>
 </head>
 <body>
@@ -260,16 +212,28 @@ footer strong { color: white; }
   </div>
 </nav>
 
-<header class="site-header">
-  <div class="header-stripe"></div>
-  <div class="header-inner">
-    <div class="brand-line">Decoding Autism Now — Biology of Autism</div>
-    <h1>Biology of Autism — <em>Diagnosis to Intervention</em></h1>
-    <p class="header-subtitle">Using Targeted Biological Testing to Personalize the Treatment Intervention</p>
-    <div class="suite-badge">ASD Cascade Suite · Diagnostic Bridge</div>
-    <div class="header-deco"></div>
+<div class="header-stripe"></div>
+<div class="hero">
+  <h1>Biology of Autism — Diagnosis to Intervention</h1>
+  <p class="hero-sub">Identifying Active Upstream Channels to Personalize the Treatment Protocol</p>
+  <div class="hero-pills">
+    <span class="pill">5 upstream channels</span>
+    <span class="pill">4-stage test sequence</span>
+    
   </div>
-</header>
+</div>
+
+<div class="channel-bar">
+  <div class="channel-bar-inner">
+    <span class="ch-label">Channels:</span>
+    <span class="ch-pill" style="background:var(--gut)">Gut / LPS</span>
+    <span class="ch-pill" style="background:var(--mito)">Mitochondrial</span>
+    <span class="ch-pill" style="background:var(--mia)">MIA / Neuroinflammation</span>
+    <span class="ch-pill" style="background:var(--env)">Environmental / Oxidative</span>
+    <span class="ch-pill" style="background:var(--sst)">SST / HPA Axis</span>
+    <span class="ch-pill" style="background:var(--multi)">Multi-channel</span>
+  </div>
+</div>
 
 <aside class="framework-notice" role="note">
   <div class="framework-notice-inner">
@@ -285,18 +249,8 @@ footer strong { color: white; }
 
   <!-- SECTION 1: WHY TESTING -->
   <div class="doc-section">
-    <div class="section-title"><span class="section-num">1</span> Why Testing Helps Target and Prioritize Interventions</div>
+    <div class="section-title"><span class="section-num">1</span> The Diagnostic Bridge — Why Testing Changes the Protocol</div>
     <p class="intro-text">The Autism Spectrum Disorder (ASD) biological cascade identifies five upstream trigger channels — gut dysbiosis/LPS translocation, mitochondrial dysfunction, MIA/neuroinflammation, environmental toxin/oxidative burden, and HPA axis dysregulation/SST elevation — as the inputs that initiate and sustain the cascade. The cascade graphic presents these as co-equal contributors at the population level. At the individual level, however, one or two channels typically dominate.</p>
-
-    <div class="channel-legend">
-      <span class="ch-legend-label">The five channels:</span>
-      <span class="ch-pill" style="background:var(--gut)">Gut / LPS</span>
-      <span class="ch-pill" style="background:var(--mito)">Mitochondrial</span>
-      <span class="ch-pill" style="background:var(--mia)">MIA / Neuroinflammation</span>
-      <span class="ch-pill" style="background:var(--env)">Environmental / Oxidative</span>
-      <span class="ch-pill" style="background:var(--sst)">SST / HPA Axis</span>
-      <span class="ch-pill" style="background:var(--multi)">Multi-channel</span>
-    </div>
     <div class="callout blue">
       <h4>Why this distinction is clinically critical</h4>
       <p>The ASD Intervention Protocol presents a generic five-layer sequencing. But if the gut is an active ongoing upstream trigger, continuously releasing LPS into systemic circulation while adding SIRT1 activators, downstream interventions are continuously undermined by an unaddressed upstream driver.</p>
@@ -305,6 +259,10 @@ footer strong { color: white; }
     <div class="callout amber">
       <h4>Intervention Logic</h4>
       <p>Because both SST elevation and SIRT1 deficiency independently suppress CREB — and both are driven by the same upstream stressors — effective support must address multiple points simultaneously: restore functional NAD⁺ sufficiency → reactivate SIRT1 → suppress NF-κB → quiet microglia → reduce SST triggers → normalize astrocyte phenotype → reduce SPARC → support hevin/glypican synaptogenesis → reopen CREB-mediated learning pathway. Single-target approaches are insufficient once the self-sustaining loop is established.</p>
+    </div>
+    <div class="callout blue">
+      <h4>If regression appeared to follow a vaccination or fever episode</h4>
+      <p>For families where developmental regression appeared to follow a vaccination or febrile illness, the five upstream channels above provide the biological context. Research shows that many children who later develop autism carry measurable pre-symptomatic vulnerabilities — oxidative stress, immune dysregulation, gut barrier disruption — before any behavioral change becomes visible. An immune challenge during the toddler window can be the trigger event that tips a cascade already underway, rather than the root cause. The same targeted testing described in this document identifies which channels were active before that event — and what to address now. For a full explanation of the biology, see <em><a href="11_Vaccine_Question_Biology_of_Autism.html" style="color:inherit;">Biology of Autism — The Vaccine Question</a></em>.</p>
     </div>
   </div>
 
@@ -561,37 +519,25 @@ footer strong { color: white; }
 
   <!-- SECTION 7: DOCTOR SCRIPTS -->
   <div class="doc-section">
-    <div class="section-title"><span class="section-num">7</span> Working With Your Doctor — A Collaborative Approach</div>
+    <div style="margin:24px 0 16px; background:#fff8e8; border:1.5px solid #c8a84b; border-radius:4px; padding:12px 16px; font-size:12px; color:#5a4a1a; line-height:1.7;"><strong style="color:#7a5c10; text-transform:uppercase; letter-spacing:0.08em;">⚠ Important — All Testing is Theoretical Guidance Only:</strong> The test panels and communication scripts below are derived from the ASD Cascade theoretical framework. The cascade itself has not been validated as a unified model in clinical trials. These suggestions reflect the underlying biology of the framework — not proven diagnostic standards. Each suggestion is supported by independent peer-reviewed research cited in the Biology of Autism — The Evidence document, but the full integrated testing and intervention sequence has not been clinically proven. Always work collaboratively with your healthcare professional and lead with your child's observed symptoms, not the molecular rationale.</div>
+              <div class="section-title"><span class="section-num">7</span> Sample Communication Language — What to Tell Your Doctor</div>
+    <p class="intro-text">The following language is designed to help parents and caregivers request appropriate testing from primary care physicians, pediatric neurologists, integrative medicine practitioners, and functional medicine doctors. These are starting points for a clinical conversation, not diagnostic scripts.</p>
 
-    <p class="intro-text">The most productive medical conversations happen when the parent brings observations and the doctor brings expertise. Your role as a parent or caregiver is to describe what you have seen in your child — clearly, specifically, without a pre-built conclusion. Your medical professional's role is to interpret those observations and determine what investigation is warranted. When that dynamic is working well, testing feels like the doctor's idea — because in the best version of this conversation, it genuinely is.</p>
+    <div class="script-block"><div class="script-header">Opening Framework Statement</div><div class="script-body">"I have been researching a proposed systems biology model of autism called the ASD biological cascade, which suggests that several upstream biological triggers may be driving my child's symptoms through specific molecular pathways. I would like to start with targeted testing to identify which channels are most active, so we can prioritize our intervention approach. I have a specific test list I would like to discuss with you."</div></div>
 
-    <div class="callout green">
-      <h4>What Moves a Physician to Investigate</h4>
-      <p>Doctors order tests when they see a clinical picture that warrants it — not because a parent has arrived with a framework. What makes a physician lean forward is a specific, consistent, observable pattern of symptoms that doesn't have a simple explanation. Your job is to give your doctor exactly that: a clear clinical picture they can act on professionally. The biology stays in the background. Your child stays in the foreground. The physician stays in the driver's seat.</p>
-    </div>
+    <div class="script-block"><div class="script-header">Requesting the OAT</div><div class="script-body">"I would like to start with an Organic Acids Test through Great Plains Laboratory. This is a urine-based test screening for mitochondrial TCA cycle dysfunction, kynurenine pathway activation, gut dysbiosis metabolites, and oxidative stress markers in a single collection. It is widely used in integrative medicine for neurodevelopmental conditions."</div></div>
 
-    <div class="callout amber">
-      <h4>What to Prepare Before the Appointment</h4>
-      <p>Write down your child's three to five most consistent and concerning symptoms. Note how long each has been present, how frequently it occurs, and what makes it better or worse. If you have tried any interventions, note what changed. This is the clinical history your doctor needs — and arriving with it organized signals that you are a reliable observer worth taking seriously. It also gives your doctor something concrete to respond to before any discussion of specific tests.</p>
-    </div>
+    <div class="script-block"><div class="script-header">Requesting the Gut Channel Panel</div><div class="script-body">"Given my child's GI symptoms, I would like to request a Zonulin level and an LPS-binding protein to assess intestinal barrier integrity and LPS translocation. I would also like a GI-MAP from Diagnostic Solutions, which includes calprotectin for gut inflammation, secretory IgA for mucosal immune defense, and pancreatic elastase for digestive enzyme output."</div></div>
 
-    <div class="script-block"><div class="script-header">Opening the Conversation — Let the Symptoms Lead</div><div class="script-body">"I want to share some patterns I have been tracking with [child's name] that I cannot fully explain and would love your perspective on. [Describe 2–3 specific, consistent symptoms — e.g., 'Stools have been loose and irregular for months despite dietary changes,' or 'Energy crashes consistently mid-afternoon regardless of how much sleep he gets,' or 'Sensory sensitivities seem to be getting more intense rather than improving.'] I am not sure what is driving these and I am hoping we can look into it together."</div></div>
+    <div class="script-block"><div class="script-header">Requesting the SST / HPA Panel</div><div class="script-body">"I would like to assess my child's HPA axis and somatostatin load with a 4-point salivary cortisol diurnal curve (available through ZRT or DUTCH), alongside a serum IGF-1, fasting insulin, and DHEA-S. Together these give us an indirect picture of whether chronic somatostatin elevation may be suppressing learning and plasticity pathways."</div></div>
 
-    <div class="script-block"><div class="script-header">When Your Doctor Asks What Testing You Have in Mind</div><div class="script-body">"I have been reading about functional medicine approaches to neurodevelopmental conditions and came across some tests that look at areas like mitochondrial function, gut barrier integrity, and inflammatory markers — all of which seem relevant to the symptoms I am describing. I know you are in the best position to decide what makes clinical sense. I have a short list I would love to get your reaction to, and I want to be guided by your judgment on where to start."</div></div>
+    <div class="script-block"><div class="script-header">Requesting the Environmental Panel</div><div class="script-body">"Given potential environmental exposures, I would like to run a GPL-TOX panel from Great Plains Laboratory, screening for 170+ toxic organic chemicals including glyphosate. I would also like RBC heavy metals — specifically mercury, lead, arsenic, and cadmium — as RBC levels better reflect chronic tissue exposure than serum."</div></div>
 
-    <div class="script-block"><div class="script-header">Requesting the OAT — Frame It Around What the Doctor Will Learn</div><div class="script-body">"One panel I came across is the Organic Acids Test from Great Plains Laboratory — a urine-based screen that looks at mitochondrial TCA cycle function, gut dysbiosis metabolites, kynurenine pathway activity, and oxidative stress markers in a single collection. What I find compelling about it is how much clinical information it generates in one step. Given the symptoms we are seeing, do you think this would give us useful diagnostic signal? I would trust your read on whether the findings are worth acting on."</div></div>
-
-    <div class="script-block"><div class="script-header">Requesting the Gut Panel — Lead With the GI Picture</div><div class="script-body">"The GI piece is something I keep coming back to — [child's name] has [describe specifically: chronic irregularity / bloating / food selectivity / apparent discomfort after eating] that does not have a clear explanation yet. I have read that Zonulin and LPS-binding protein can flag whether the intestinal barrier is compromised, and that the GI-MAP from Diagnostic Solutions gives a detailed look at inflammation, microbiome composition, and digestive enzyme output. Would this be worth investigating given what you are hearing? I am open to whatever approach you think gives us the most useful picture."</div></div>
-
-    <div class="script-block"><div class="script-header">Requesting the HPA / Cortisol Panel — Frame It Around the Stress Response</div><div class="script-body">"The sleep and anxiety pattern is one I find hard to make sense of on its own. [Child's name] [describe: cannot settle at night / wakes repeatedly / has disproportionate anxiety responses / has flat energy all day]. I have read that HPA axis dysregulation can produce these kinds of patterns in children with chronic immune and sensory challenges — and that a 4-point salivary cortisol diurnal curve, alongside serum IGF-1 and DHEA-S, can give a useful picture of how the stress axis is functioning. Do you think this kind of hormonal profiling is worth pursuing? ZRT and DUTCH both offer the salivary panel."</div></div>
-
-    <div class="script-block"><div class="script-header">Requesting the Environmental Panel — Give the Physician a Rationale</div><div class="script-body">"I want to make sure we are not missing an environmental driver. We [describe relevant context: live near agricultural land / have older housing / notice symptom changes with certain environments]. A GPL-TOX organic chemical screen covers over 170 toxic compounds including glyphosate, and RBC heavy metals — mercury, lead, arsenic, cadmium — reflect chronic tissue-level exposure better than serum. I am not assuming these are factors, but they seem important to rule out systematically. Would you be comfortable ordering these, or is there a referral path you would recommend?"</div></div>
-
-    <div class="script-block"><div class="script-header">Requesting BDNF as an Outcome Marker — Give the Doctor a Measurement Tool</div><div class="script-body">"One thing that would help both of us is having an objective biological marker to track over time. Serum BDNF reflects the output of neural plasticity pathways and is sensitive to inflammatory burden and HPA dysregulation — both of which we are already investigating. If we establish a baseline now, we can retest at 3 and 6 months and have something concrete to assess whether our interventions are having a measurable biological effect. It gives you a clearer window into whether the trajectory is improving."</div></div>
+    <div class="script-block"><div class="script-header">Requesting BDNF as an Outcome Marker</div><div class="script-body">"I would like to run a baseline serum BDNF level. BDNF is the downstream output of the cAMP/PKA/CREB pathway, which research suggests is suppressed in autism by both elevated somatostatin and SIRT1 deficiency. I would like to use BDNF as a longitudinal outcome marker, retesting every 3–6 months, to track whether our interventions are having a measurable effect on this pathway."</div></div>
 
     <div class="callout purple">
       <h4>If Your Doctor Is Unfamiliar With These Tests</h4>
-      <p>Many of these panels are not standard in conventional pediatric care — but they are clinically legitimate and widely used in functional and integrative medicine. If your current provider is not familiar with them, this is not a barrier. Consider a functional medicine physician (IFMCP certified), a MAPS (Medical Academy of Pediatric Special Needs) trained physician, or a naturopathic physician (ND) licensed in your state. Great Plains Laboratory, Diagnostic Solutions, and ZRT also accept direct orders in some states — allowing you to obtain results and bring them to any clinician for interpretation.</p>
+      <p>Many of these tests are not standard in conventional pediatric care but are widely available through functional and integrative medicine practitioners. Consider: a functional medicine physician (IFMCP certified), a MAPS (Medical Academy of Pediatric Special Needs) trained physician, a naturopathic physician (ND) licensed in your state, or direct-to-consumer lab options: Great Plains Laboratory, Diagnostic Solutions, and ZRT accept direct orders in some states.</p>
     </div>
   </div>
 
