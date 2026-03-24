@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EH3TWPN49H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-EH3TWPN49H');
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Biology of Autism — Decoding Autism Now</title>
@@ -123,6 +115,35 @@
 
   /* ── DOCUMENT CARDS ── */
   .doc-grid { display: flex; flex-direction: column; gap: 16px; margin-bottom: 64px; }
+
+  /* ── QUICK NAV ── */
+  .quick-nav { background: var(--warm-white); border: 1px solid var(--rule); border-radius: 8px; padding: 24px 28px; margin-bottom: 48px; }
+  .quick-nav-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-light); margin-bottom: 16px; }
+  .quick-nav-group { margin-bottom: 16px; border-radius: 6px; padding: 14px 16px; }
+  .quick-nav-group:last-child { margin-bottom: 0; }
+  .quick-nav-group-label { font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 10px; font-weight: 500; }
+  .quick-nav-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  /* Teal group — Overview & Maps */
+  .quick-nav-group.grp-teal { background: rgba(30,107,114,0.06); border: 1px solid rgba(30,107,114,0.18); }
+  .quick-nav-group.grp-teal .quick-nav-group-label { color: var(--teal); }
+  .quick-nav-group.grp-teal .qn-pill { color: var(--teal); background: rgba(30,107,114,0.08); border: 1px solid rgba(30,107,114,0.25); }
+  .quick-nav-group.grp-teal .qn-pill:hover { background: rgba(30,107,114,0.18); color: var(--navy); border-color: var(--teal); }
+
+  /* Gold group — Clinical & Intervention */
+  .quick-nav-group.grp-gold { background: rgba(200,146,58,0.06); border: 1px solid rgba(200,146,58,0.2); }
+  .quick-nav-group.grp-gold .quick-nav-group-label { color: var(--gold); }
+  .quick-nav-group.grp-gold .qn-pill { color: #8a5c1a; background: rgba(200,146,58,0.08); border: 1px solid rgba(200,146,58,0.28); }
+  .quick-nav-group.grp-gold .qn-pill:hover { background: rgba(200,146,58,0.18); color: var(--navy); border-color: var(--gold); }
+
+  /* Navy group — Reference & Evidence */
+  .quick-nav-group.grp-navy { background: rgba(15,35,66,0.05); border: 1px solid rgba(15,35,66,0.14); }
+  .quick-nav-group.grp-navy .quick-nav-group-label { color: var(--navy); }
+  .quick-nav-group.grp-navy .qn-pill { color: var(--navy); background: rgba(15,35,66,0.07); border: 1px solid rgba(15,35,66,0.2); }
+  .quick-nav-group.grp-navy .qn-pill:hover { background: rgba(15,35,66,0.14); color: var(--teal); border-color: var(--navy); }
+
+  .qn-pill { font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.06em; text-decoration: none; border-radius: 4px; padding: 5px 12px; transition: background 0.15s, color 0.15s, border-color 0.15s; white-space: nowrap; }
+  .qn-pill .qn-num { opacity: 0.55; margin-right: 5px; }
 
   .doc-card {
     background: var(--warm-white); border: 1px solid var(--rule); border-radius: 8px;
@@ -279,12 +300,43 @@
     <p>The eleven documents below move from overview to molecular detail, from visual maps to clinical intervention logic. They are designed for three audiences — <strong>families and caregivers</strong>, <strong>clinicians and researchers</strong>, and <strong>motivated general readers</strong> — and can be read in any order, though the sequence below builds understanding progressively.</p>
   </div>
 
+  <!-- QUICK NAV -->
+  <div class="quick-nav">
+    <p class="quick-nav-label">Quick navigation — jump to any document</p>
+    <div class="quick-nav-group grp-teal">
+      <p class="quick-nav-group-label">Overview &amp; Maps</p>
+      <div class="quick-nav-pills">
+        <a class="qn-pill" href="1_Molecular_Origins_Biology_of_Autism.html"><span class="qn-num">01</span>Molecular Origins</a>
+        <a class="qn-pill" href="2_Summary_Map_Cascade_Biology_of_Autism.html"><span class="qn-num">02</span>Cascade Map</a>
+        <a class="qn-pill" href="3_Summary_Map_Explanation_Biology_of_Autism.html"><span class="qn-num">03</span>Map Explained</a>
+        <a class="qn-pill" href="4_Detailed_Map_Interactive_Biology_of_Autism_Cascade.html"><span class="qn-num">04</span>Detailed Map (Interactive)</a>
+        <a class="qn-pill" href="5_Detailed_Map_Print_Biology_of_Autism_Cascade.html"><span class="qn-num">05</span>Detailed Map (Print)</a>
+      </div>
+    </div>
+    <div class="quick-nav-group grp-gold">
+      <p class="quick-nav-group-label">Clinical &amp; Intervention</p>
+      <div class="quick-nav-pills">
+        <a class="qn-pill" href="6_Molecular_Pathways_Explained_Clinically_Biology_of_Autism.html"><span class="qn-num">06</span>Molecular Pathways</a>
+        <a class="qn-pill" href="7_Connecting_Testing_Biology_Interventions_BoA_Cascade.html"><span class="qn-num">07</span>Diagnosis to Intervention</a>
+        <a class="qn-pill" href="8_Intervention_Logic_BoA_Cascade.html"><span class="qn-num">08</span>Intervention Logic</a>
+      </div>
+    </div>
+    <div class="quick-nav-group grp-navy">
+      <p class="quick-nav-group-label">Reference &amp; Evidence</p>
+      <div class="quick-nav-pills">
+        <a class="qn-pill" href="9_FAQ_ASD_Cascade_Biology_of_Autism.html"><span class="qn-num">09</span>Questions &amp; Answers</a>
+        <a class="qn-pill" href="10_ASD_Cascade_Citations_Biology_of_Autism_Cascade.html"><span class="qn-num">10</span>The Evidence</a>
+        <a class="qn-pill" href="11_Vaccine_Question_Biology_of_Autism.html"><span class="qn-num">11</span>The Vaccine Question</a>
+      </div>
+    </div>
+  </div>
+
   <!-- DOCUMENT LIST -->
   <div class="section-divider"><span>The Eleven Documents</span></div>
 
   <div class="doc-grid">
 
-    <a class="doc-card" href="1_Molecular_Origins_Biology_of_Autism.html" target="_blank" rel="noopener">
+    <a class="doc-card" href="1_Molecular_Origins_Biology_of_Autism.html">
       <div class="doc-card-accent teal-gold"></div>
       <div class="doc-card-body">
         <p class="doc-card-num">Document 01 — Start Here</p>
@@ -299,7 +351,7 @@
       <div class="doc-card-arrow">→</div>
     </a>
 
-    <a class="doc-card" href="2_Summary_Map_Cascade_Biology_of_Autism.html" target="_blank" rel="noopener">
+    <a class="doc-card" href="2_Summary_Map_Cascade_Biology_of_Autism.html">
       <div class="doc-card-accent"></div>
       <div class="doc-card-body">
         <p class="doc-card-num">Document 02 — Visual</p>
@@ -313,7 +365,7 @@
       <div class="doc-card-arrow">→</div>
     </a>
 
-    <a class="doc-card" href="3_Summary_Map_Explanation_Biology_of_Autism.html" target="_blank" rel="noopener">
+    <a class="doc-card" href="3_Summary_Map_Explanation_Biology_of_Autism.html">
       <div class="doc-card-accent"></div>
       <div class="doc-card-body">
         <p class="doc-card-num">Document 03 — Explained</p>
@@ -328,7 +380,7 @@
       <div class="doc-card-arrow">→</div>
     </a>
 
-    <a class="doc-card" href="4_Detailed_Map_Interactive_Biology_of_Autism_Cascade.html" target="_blank" rel="noopener">
+    <a class="doc-card" href="4_Detailed_Map_Interactive_Biology_of_Autism_Cascade.html">
       <div class="doc-card-accent navy"></div>
       <div class="doc-card-body">
         <p class="doc-card-num">Document 04 — Interactive</p>
@@ -343,7 +395,7 @@
       <div class="doc-card-arrow">→</div>
     </a>
 
-    <a class="doc-card" href="5_Detailed_Map_Print_Biology_of_Autism_Cascade.html" target="_blank" rel="noopener">
+    <a class="doc-card" href="5_Detailed_Map_Print_Biology_of_Autism_Cascade.html">
       <div class="doc-card-accent navy"></div>
       <div class="doc-card-body">
         <p class="doc-card-num">Document 05 — Print</p>
@@ -358,7 +410,7 @@
       <div class="doc-card-arrow">→</div>
     </a>
 
-    <a class="doc-card" href="6_Molecular_Pathways_Explained_Clinically_Biology_of_Autism.html" target="_blank" rel="noopener">
+    <a class="doc-card" href="6_Molecular_Pathways_Explained_Clinically_Biology_of_Autism.html">
       <div class="doc-card-accent gold"></div>
       <div class="doc-card-body">
         <p class="doc-card-num">Document 06 — Clinical Reference</p>
@@ -373,7 +425,7 @@
       <div class="doc-card-arrow">→</div>
     </a>
 
-    <a class="doc-card" href="7_Connecting_Testing_Biology_Interventions_BoA_Cascade.html" target="_blank" rel="noopener">
+    <a class="doc-card" href="7_Connecting_Testing_Biology_Interventions_BoA_Cascade.html">
       <div class="doc-card-accent gold"></div>
       <div class="doc-card-body">
         <p class="doc-card-num">Document 07 — Diagnostic Bridge</p>
@@ -388,7 +440,7 @@
       <div class="doc-card-arrow">→</div>
     </a>
 
-    <a class="doc-card" href="8_Intervention_Logic_BoA_Cascade.html" target="_blank" rel="noopener">
+    <a class="doc-card" href="8_Intervention_Logic_BoA_Cascade.html">
       <div class="doc-card-accent teal-gold"></div>
       <div class="doc-card-body">
         <p class="doc-card-num">Document 08 — Interventions</p>
@@ -403,7 +455,7 @@
       <div class="doc-card-arrow">→</div>
     </a>
 
-    <a class="doc-card" href="9_FAQ_ASD_Cascade_Biology_of_Autism.html" target="_blank" rel="noopener">
+    <a class="doc-card" href="9_FAQ_ASD_Cascade_Biology_of_Autism.html">
       <div class="doc-card-accent"></div>
       <div class="doc-card-body">
         <p class="doc-card-num">Document 09 — Questions &amp; Answers</p>
@@ -418,7 +470,7 @@
       <div class="doc-card-arrow">→</div>
     </a>
 
-    <a class="doc-card" href="10_ASD_Cascade_Citations_Biology_of_Autism_Cascade.html" target="_blank" rel="noopener">
+    <a class="doc-card" href="10_ASD_Cascade_Citations_Biology_of_Autism_Cascade.html">
       <div class="doc-card-accent gold"></div>
       <div class="doc-card-body">
         <p class="doc-card-num">Document 10 — Evidence Base</p>
@@ -433,7 +485,7 @@
       <div class="doc-card-arrow">→</div>
     </a>
 
-    <a class="doc-card" href="11_Vaccine_Question_Biology_of_Autism.html" target="_blank" rel="noopener">
+    <a class="doc-card" href="11_Vaccine_Question_Biology_of_Autism.html">
       <div class="doc-card-accent teal-gold"></div>
       <div class="doc-card-body">
         <p class="doc-card-num">Document 11 — The Vaccine Question</p>
@@ -485,7 +537,7 @@
       </div>
       <div class="footer-channels">
         <p class="footer-channels-label">Find us on</p>
-        <a class="footer-channel-link" href="https://www.youtube.com/@DecodingAutismNow" target="_blank" rel="noopener">
+        <a class="footer-channel-link" href="https://www.youtube.com/@DecodingAutismNow">
           <span class="ch-icon">
             <svg width="14" height="10" viewBox="0 0 24 17" fill="white"><path d="M23.5 2.5A3 3 0 0021.4.4C19.5 0 12 0 12 0S4.5 0 2.6.4A3 3 0 00.5 2.5C0 4.4 0 8.5 0 8.5S0 12.6.5 14.5A3 3 0 002.6 16.6C4.5 17 12 17 12 17s7.5 0 9.4-.4a3 3 0 002.1-2.1C24 12.6 24 8.5 24 8.5s0-4.1-.5-6zM9.75 12.02V4.98L15.8 8.5l-6.05 3.52z"/></svg>
           </span>
