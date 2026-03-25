@@ -242,6 +242,80 @@
     .sn-pill { font-size: 9.5px; padding: 3px 8px; }
   }
 
+  /* ── HERO CTAS ── */
+  .hero-ctas {
+    display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px;
+    animation: fadeUp 0.6s 0.4s ease both;
+  }
+  .hero-cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em;
+    text-transform: uppercase; text-decoration: none;
+    padding: 12px 22px; border-radius: 5px;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  }
+  .hero-cta:hover { transform: translateY(-1px); }
+  .hero-cta.primary {
+    background: var(--teal); color: #fff; border: 1px solid var(--teal);
+  }
+  .hero-cta.primary:hover { background: var(--teal-light); border-color: var(--teal-light); }
+  .hero-cta.secondary {
+    background: rgba(200,146,58,0.15); color: var(--gold-light);
+    border: 1px solid rgba(200,146,58,0.4);
+  }
+  .hero-cta.secondary:hover { background: rgba(200,146,58,0.25); }
+  .hero-cta.tertiary {
+    background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.7);
+    border: 1px solid rgba(255,255,255,0.18);
+  }
+  .hero-cta.tertiary:hover { background: rgba(255,255,255,0.12); }
+  .cta-arrow { font-size: 14px; }
+
+  /* ── PATH CHOOSER (above doc list) ── */
+  .path-chooser {
+    background: var(--navy); border-radius: 8px; padding: 36px 40px; margin-bottom: 48px;
+    position: relative; overflow: hidden;
+  }
+  .path-chooser::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+    background: linear-gradient(180deg, var(--teal-light), var(--gold));
+  }
+  .path-chooser-label {
+    font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--teal-light); margin-bottom: 10px;
+  }
+  .path-chooser h2 {
+    font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700;
+    color: #fff; margin-bottom: 24px; line-height: 1.25;
+  }
+  .path-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  @media (max-width: 680px) { .path-grid { grid-template-columns: 1fr; } }
+  .path-card {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px; padding: 20px 22px; text-decoration: none;
+    display: block; transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  }
+  .path-card:hover { background: rgba(255,255,255,0.09); border-color: rgba(42,157,166,0.4); transform: translateY(-2px); }
+  .path-card-who {
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em;
+    color: var(--gold-light); margin-bottom: 8px; text-transform: uppercase;
+  }
+  .path-card-action {
+    font-family: 'Source Serif 4', serif; font-size: 0.95rem; font-weight: 600;
+    color: #fff; margin-bottom: 10px; line-height: 1.3;
+  }
+  .path-card-steps {
+    font-size: 0.82rem; color: rgba(255,255,255,0.55); line-height: 1.6;
+  }
+  .path-card-steps strong { color: rgba(255,255,255,0.8); font-weight: 600; }
+  .path-card-go {
+    display: inline-block; margin-top: 14px; font-family: 'DM Mono', monospace;
+    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--teal-light); border: 1px solid rgba(42,157,166,0.35);
+    border-radius: 3px; padding: 5px 12px; transition: background 0.15s;
+  }
+  .path-card:hover .path-card-go { background: rgba(42,157,166,0.15); }
+
   /* ── ANIMATIONS ── */
   @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
   .hero-title { animation: fadeUp 0.6s 0.1s ease both; }
@@ -292,6 +366,17 @@
       <span class="stat-pill">3 audiences</span>
       <span class="stat-pill">Free to share</span>
     </div>
+    <div class="hero-ctas">
+      <a class="hero-cta primary" href="1_Molecular_Origins_Biology_of_Autism.html">
+        <span>I'm a parent or caregiver</span><span class="cta-arrow">→</span>
+      </a>
+      <a class="hero-cta secondary" href="6_Molecular_Pathways_Explained_Clinically_Biology_of_Autism.html">
+        <span>I'm a clinician or researcher</span><span class="cta-arrow">→</span>
+      </a>
+      <a class="hero-cta tertiary" href="1_Molecular_Origins_Biology_of_Autism.html">
+        <span>I'm a general reader</span><span class="cta-arrow">→</span>
+      </a>
+    </div>
   </div>
 </header>
 
@@ -313,6 +398,32 @@
   <div class="intro-block">
     <p>The Biology of Autism suite presents one of the first plausible explanations of autism as a <strong>cascade of interconnected biological events</strong> — beginning with upstream immune and metabolic pressures, building through a series of reinforcing failures, and culminating in a self-sustaining cycle that explains not just how autism emerges, but why it persists.</p>
     <p>The eleven documents below move from overview to molecular detail, from visual maps to clinical intervention logic. They are designed for three audiences — <strong>families and caregivers</strong>, <strong>clinicians and researchers</strong>, and <strong>motivated general readers</strong> — and can be read in any order, though the sequence below builds understanding progressively.</p>
+  </div>
+
+  <!-- PATH CHOOSER -->
+  <div class="path-chooser">
+    <p class="path-chooser-label">Where should I start?</p>
+    <h2>Choose your path — then follow the cards below</h2>
+    <div class="path-grid">
+      <a class="path-card" href="1_Molecular_Origins_Biology_of_Autism.html">
+        <p class="path-card-who">For Families &amp; Caregivers</p>
+        <p class="path-card-action">Start with the big picture, then follow the story</p>
+        <p class="path-card-steps"><strong>Doc 01</strong> overview → <strong>Doc 03</strong> plain-language walkthrough → <strong>Doc 09</strong> FAQ → <strong>Doc 11</strong> vaccine question → <strong>Doc 07</strong> talking to your doctor</p>
+        <span class="path-card-go">Start here →</span>
+      </a>
+      <a class="path-card" href="6_Molecular_Pathways_Explained_Clinically_Biology_of_Autism.html">
+        <p class="path-card-who">For Clinicians &amp; Researchers</p>
+        <p class="path-card-action">Jump straight to molecular detail</p>
+        <p class="path-card-steps"><strong>Doc 06</strong> full molecular reference → <strong>Doc 04</strong> interactive cascade map → <strong>Doc 08</strong> intervention logic with evidence tiers → <strong>Doc 10</strong> all citations</p>
+        <span class="path-card-go">Start here →</span>
+      </a>
+      <a class="path-card" href="1_Molecular_Origins_Biology_of_Autism.html">
+        <p class="path-card-who">For General Readers</p>
+        <p class="path-card-action">Follow your curiosity — each document stands alone</p>
+        <p class="path-card-steps"><strong>Doc 01</strong> overview → <strong>Doc 02</strong> visual map → <strong>Doc 09</strong> common questions answered first</p>
+        <span class="path-card-go">Start here →</span>
+      </a>
+    </div>
   </div>
 
   <!-- DOCUMENT LIST -->
@@ -484,28 +595,6 @@
       <div class="doc-card-arrow">→</div>
     </a>
 
-  </div>
-
-  <!-- HOW TO USE -->
-  <div class="section-divider"><span>How to Use This Suite</span></div>
-
-  <div class="how-box">
-    <p class="how-box-label">Reading Guide</p>
-    <h2>Three paths through the material</h2>
-    <div class="how-grid">
-      <div class="how-item">
-        <p class="how-num">For Families &amp; Caregivers</p>
-        <p>Start with <strong>Document 01</strong> for the big picture, then <strong>Document 03</strong> for a plain-language walkthrough of the cascade. <strong>Document 09</strong> (FAQ) answers the most common questions. <strong>Document 11</strong> addresses the vaccine question in full depth. <strong>Document 07</strong> guides the conversation with your doctor.</p>
-      </div>
-      <div class="how-item">
-        <p class="how-num">For Clinicians &amp; Researchers</p>
-        <p>Begin with <strong>Document 06</strong> for full molecular detail, then <strong>Document 04</strong> for the interactive cascade map. <strong>Document 08</strong> covers intervention logic with evidence tiers. <strong>Document 10</strong> provides all citations.</p>
-      </div>
-      <div class="how-item">
-        <p class="how-num">For General Readers</p>
-        <p>Start with <strong>Document 01</strong>, then explore <strong>Document 02</strong> for the visual overview. <strong>Document 09</strong> addresses the questions most people ask first. Follow your curiosity — each document stands alone.</p>
-      </div>
-    </div>
   </div>
 
 </main>
