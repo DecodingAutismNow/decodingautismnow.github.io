@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EH3TWPN49H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EH3TWPN49H');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Biology of Autism — Molecular Pathways Explained | Decoding Autism Now</title>
+<meta property="og:title" content="Biology of Autism — Molecular Pathways Explained | Decoding Autism Now">
+<meta property="og:description" content="A detailed mechanistic explanation of the biological cascade — linking immune activation, metabolism, signaling, and synaptic changes.">
+<meta property="og:image" content="https://decodingautismnow.com/images/OG-06.png">
+<meta property="og:url" content="https://decodingautismnow.com/06_Metabolic_Pathways_Explained_Biology_of_Autism.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Biology of Autism — Molecular Pathways Explained | Decoding Autism Now">
+<meta name="twitter:description" content="A detailed mechanistic explanation of the biological cascade — linking immune activation, metabolism, signaling, and synaptic changes.">
+<meta name="twitter:image" content="https://decodingautismnow.com/images/OG-06.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+<style>
+  :root {
+    --navy:#0f2342;
+    --teal:#1e6b72;
+    --teal-light:#2a9da6;
+    --gold:#c8923a;
+    --gold-light:#e8b86d;
+    --cream:#faf7f2;
+    --warm-white:#ffffff;
+    --text-dark:#1a1a2e;
+    --text-mid:#3d4560;
+    --text-light:#6b7494;
+    --rule:#d8cfc4;
+    --accent-bg:#eef8f9;
+    --gold-bg:#fdf6ec;
+    --navy-bg:#f0f2f6;
+    --tag-bg:rgba(30,107,114,0.08);
+  }
+
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body {
+    font-family:'Source Serif 4', Georgia, serif;
+    background:var(--cream);
+    color:var(--text-dark);
+    font-size:16px;
+    line-height:1.8;
+  }
+
+  /* LOCKED 07 TOPBAR / NAV */
+  .topbar {
+    position:fixed; top:0; left:0; right:0; z-index:1000;
+    background:var(--navy); border-bottom:2px solid var(--gold);
+  }
+  .topbar-inner {
+    max-width:960px; margin:0 auto; padding:10px 20px;
+    display:flex; justify-content:space-between; align-items:center; gap:18px;
+  }
+  .topbar-brand {
+    font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em;
+    text-transform:uppercase; color:var(--teal-light); margin-bottom:2px;
+  }
+  .topbar-title {
+    font-family:'Source Serif 4', serif; font-size:14px; font-weight:600;
+    color:#fff; line-height:1.2;
+  }
+  .topbar-home {
+    font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.12em;
+    text-transform:uppercase; color:rgba(255,255,255,.82); text-decoration:none;
+    border:1px solid rgba(255,255,255,.20); border-radius:3px; padding:5px 10px;
+    white-space:nowrap;
+  }
+  .topbar-home:hover { color:#fff; border-color:rgba(255,255,255,.45); }
+
+  .sticky-docnav {
+    position:fixed; top:57px; left:0; right:0; z-index:999;
+    background:rgba(255,255,255,.97); backdrop-filter:blur(8px);
+    border-bottom:1px solid #d8cfc4; box-shadow:0 2px 12px rgba(15,35,66,.08);
+  }
+  .sticky-docnav-inner {
+    max-width:960px; margin:0 auto; padding:8px 20px;
+    display:flex; gap:7px; flex-wrap:wrap; align-items:center;
+  }
+  .sdn-pill {
+    font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.05em;
+    text-decoration:none; border-radius:999px; padding:6px 12px; white-space:nowrap;
+    opacity:.92; transition:background .15s, opacity .15s, transform .15s;
+  }
+  .sdn-pill:hover { opacity:1; transform:translateY(-1px); }
+  .sdn-pill.teal { color:#1e6b72; background:rgba(30,107,114,.08); border:1px solid rgba(30,107,114,.22); }
+  .sdn-pill.gold { color:#8a5c1a; background:rgba(200,146,58,.08); border:1px solid rgba(200,146,58,.25); }
+  .sdn-pill.navy { color:#0f2342; background:rgba(15,35,66,.06); border:1px solid rgba(15,35,66,.18); }
+  .sdn-pill.active { color:#5a3a08; background:rgba(200,146,58,.20); border-color:rgba(200,146,58,.55); font-weight:500; opacity:1; }
+  .sdn-divider { width:1px; height:14px; background:#d8cfc4; margin:0 3px; flex-shrink:0; align-self:center; }
+
+  /* EXACT 07 HERO */
+  .site-header {
+    margin-top:110px; background:var(--navy); color:#fff; position:relative; overflow:hidden;
+  }
+  .header-stripe {
+    height:5px; background:linear-gradient(90deg,var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%);
+  }
+  .header-inner {
+    max-width:960px; margin:0 auto; padding:70px 20px 40px; position:relative; z-index:1;
+  }
+  .header-eyebrow {
+    font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.22em;
+    text-transform:uppercase; color:var(--teal-light); margin-bottom:12px;
+  }
+  .header-title {
+    font-family:'Playfair Display', serif; font-size:clamp(2rem,4.4vw,3rem);
+    line-height:1.12; margin-bottom:10px; color:#fff; font-weight:600;
+  }
+  .header-title .accent-line {
+    display:block; color:var(--gold-light); font-style:italic; font-weight:500;
+  }
+  .header-sub {
+    max-width:640px; color:rgba(255,255,255,.68); font-style:italic; font-weight:300;
+    line-height:1.6; margin-bottom:18px; font-size:1rem;
+  }
+  .header-note {
+    display:inline-block;
+    margin-top:22px;
+    margin-bottom:0;
+    font-family:'DM Mono', monospace;
+    font-size:9px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:rgba(232,184,109,.82);
+    text-decoration:none;
+    border-bottom:1px solid rgba(232,184,109,.3);
+  }
+  .header-note:hover { border-bottom-color:rgba(232,184,109,.75); }
+  #framework-disclaimer { scroll-margin-top:160px; }
+
+  /* ORIGINAL 06 CONTENT STYLES */
+  .clinical-badge {
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:rgba(200,146,58,0.18);
+    border:1px solid rgba(200,146,58,0.45);
+    border-radius:4px;
+    padding:5px 12px;
+    margin-top:30px;
+    margin-left:0;
+    font-family:'DM Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--gold-light);
+  }
+
+  .framework-notice { background:#fffbf2; border-top:1px solid rgba(200,146,58,0.25); border-bottom:1px solid rgba(200,146,58,0.25); }
+  .framework-notice-inner { max-width:960px; margin:0 auto; padding:20px 44px; display:flex; gap:16px; align-items:flex-start; }
+  .notice-icon {
+    flex-shrink:0; margin-top:2px; width:20px; height:20px; border-radius:50%;
+    background:rgba(200,146,58,0.15); border:1px solid rgba(200,146,58,0.4);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'DM Mono', monospace; font-size:11px; font-weight:500; color:var(--gold); line-height:1;
+  }
+  .notice-text { font-family:'Source Serif 4', serif; font-size:.875rem; color:#6b5a3a; line-height:1.65; }
+  .notice-text strong { color:#4a3a1e; font-weight:600; }
+  .notice-text a { color:var(--teal); text-decoration:none; border-bottom:1px solid rgba(30,107,114,0.3); }
+
+  .clinical-notice { background:#f0f4f8; border-top:1px solid rgba(15,35,66,0.15); border-bottom:1px solid rgba(15,35,66,0.15); }
+  .clinical-notice-inner { max-width:960px; margin:0 auto; padding:18px 44px; display:flex; gap:16px; align-items:flex-start; }
+  .clinical-notice-icon {
+    flex-shrink:0; margin-top:2px; width:20px; height:20px; border-radius:50%;
+    background:rgba(15,35,66,0.1); border:1px solid rgba(15,35,66,0.25);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'DM Mono', monospace; font-size:11px; font-weight:500; color:var(--navy); line-height:1;
+  }
+  .clinical-notice-text { font-family:'Source Serif 4', serif; font-size:.875rem; color:#3a4258; line-height:1.65; }
+  .clinical-notice-text strong { color:var(--navy); font-weight:600; }
+
+  .toc-bar { background:var(--warm-white); border-bottom:2px solid var(--rule); }
+  .toc-inner { max-width:960px; margin:0 auto; padding:26px 44px; }
+  .toc-label { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--text-light); margin-bottom:16px; }
+  .toc-columns { display:grid; grid-template-columns:1fr 1fr 1fr; gap:2px 28px; }
+  .toc-link { font-family:'Source Serif 4', serif; font-size:.81rem; color:var(--teal); text-decoration:none; display:flex; align-items:baseline; gap:8px; padding:3px 0; transition:color .15s; }
+  .toc-link:hover { color:var(--navy); }
+  .toc-badge { font-family:'DM Mono', monospace; font-size:10px; color:var(--gold); flex-shrink:0; min-width:40px; }
+  .toc-section-head { font-family:'DM Mono', monospace; font-size:9.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--text-light); margin:12px 0 4px; }
+
+  .main-wrap { max-width:960px; margin:0 auto; padding:60px 44px 100px; }
+  .chapter-divider { display:flex; align-items:center; gap:14px; margin:72px 0 52px; }
+  .chapter-divider span { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--text-light); white-space:nowrap; }
+  .chapter-divider::before, .chapter-divider::after { content:''; flex:1; height:1px; background:var(--rule); }
+
+  .level-section { margin-bottom:72px; scroll-margin-top:16px; }
+  .level-header { display:flex; align-items:flex-start; gap:20px; margin-bottom:28px; padding-bottom:20px; border-bottom:2px solid var(--rule); }
+  .level-badge {
+    font-family:'DM Mono', monospace; font-size:10.5px; font-weight:500;
+    background:var(--navy); color:#fff; border-radius:4px; padding:5px 11px;
+    flex-shrink:0; margin-top:5px; letter-spacing:.08em; white-space:nowrap;
+  }
+  .level-badge.teal { background:var(--teal); }
+  .level-badge.gold { background:var(--gold); }
+  .level-badge.dark { background:#1a2a4a; }
+
+  h2.level-title {
+    font-family:'Playfair Display', Georgia, serif; font-size:1.5rem; font-weight:700; color:var(--navy); line-height:1.22; margin-bottom:4px;
+  }
+  .level-subtitle { font-style:italic; font-weight:300; font-size:.95rem; color:var(--text-light); }
+
+  .pathway-box {
+    background:var(--navy); border-radius:8px; padding:22px 28px; margin-bottom:24px; position:relative; overflow:hidden;
+  }
+  .pathway-box::before {
+    content:''; position:absolute; left:0; top:0; bottom:0; width:4px; background:linear-gradient(180deg, var(--teal-light), var(--gold));
+  }
+  .pathway-label {
+    font-family:'DM Mono', monospace; font-size:9.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--teal-light); margin-bottom:12px;
+  }
+  .pathway-chain {
+    font-family:'Source Serif 4', Georgia, serif; font-size:.975rem; color:rgba(255,255,255,.88); line-height:2; letter-spacing:.01em;
+  }
+  .pathway-chain .arrow { color:var(--gold-light); margin:0 4px; }
+  .pathway-chain .node-highlight { color:#fff; font-weight:500; }
+  .pathway-chain .parallel { color:rgba(255,255,255,.45); font-style:italic; font-size:11px; }
+
+  .subsection { margin-bottom:24px; }
+  .subsection-card {
+    background:var(--warm-white); border:1px solid var(--rule); border-radius:8px; padding:26px 30px; position:relative;
+  }
+  .subsection-card::before {
+    content:''; position:absolute; left:0; top:0; bottom:0; width:3px; border-radius:8px 0 0 8px; background:var(--teal);
+  }
+  .subsection-card.gold-accent::before { background:var(--gold); }
+  .subsection-card.navy-accent::before { background:var(--navy); }
+  .subsection-card.red-accent::before { background:#b5433a; }
+
+  .subsection-num {
+    font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:8px;
+  }
+  h3.subsection-title {
+    font-family:'Playfair Display', Georgia, serif; font-size:1.08rem; font-weight:600; color:var(--navy); margin-bottom:14px; line-height:1.28;
+  }
+  .subsection-card p { color:var(--text-mid); margin-bottom:12px; font-size:.975rem; }
+  .subsection-card p:last-child { margin-bottom:0; }
+  .subsection-card strong { color:var(--navy); font-weight:600; }
+  .subsection-card em { color:var(--text-mid); }
+
+  .subsection-card ul, .subsection-card ol { margin:10px 0 14px 0; list-style:none; }
+  .subsection-card ul li, .subsection-card ol li {
+    position:relative; padding-left:22px; margin-bottom:8px; color:var(--text-mid); font-size:.965rem; line-height:1.72;
+  }
+  .subsection-card ul li::before {
+    content:''; position:absolute; left:0; top:10px; width:7px; height:7px; border-radius:50%; background:var(--teal-light);
+  }
+  .subsection-card ol { counter-reset:sub-counter; }
+  .subsection-card ol li { counter-increment:sub-counter; }
+  .subsection-card ol li::before {
+    content:counter(sub-counter); position:absolute; left:0; top:1px; font-family:'DM Mono', monospace; font-size:11px; color:var(--gold); font-weight:500;
+  }
+  .subsection-card ul li ul { margin-top:6px; }
+  .subsection-card ul li ul li::before { background:rgba(42,157,166,0.45); width:5px; height:5px; top:11px; }
+
+  .shorthand-inline {
+    background:var(--navy-bg); border:1px solid rgba(15,35,66,0.12); border-radius:6px; padding:14px 18px; margin:14px 0;
+    font-family:'Source Serif 4', Georgia, serif; font-size:.96rem; color:var(--navy); line-height:1.9;
+  }
+  .shorthand-inline .arr { color:var(--teal); margin:0 4px; }
+  .shorthand-inline .hl { color:var(--gold); font-weight:500; }
+
+  .callout {
+    background:var(--accent-bg); border-left:3px solid var(--teal); border-radius:0 6px 6px 0; padding:13px 18px; margin:14px 0; font-size:.96rem;
+  }
+  .callout p { color:var(--text-mid)!important; margin-bottom:0!important; }
+  .callout.gold { background:var(--gold-bg); border-left-color:var(--gold); }
+  .callout.navy { background:var(--navy-bg); border-left-color:var(--navy); }
+
+  .pathway-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:14px; }
+  .tag {
+    font-family:'DM Mono', monospace; font-size:10.5px; letter-spacing:.03em; background:var(--tag-bg); color:var(--teal);
+    border:1px solid rgba(30,107,114,0.22); border-radius:3px; padding:3px 8px;
+  }
+  .tag.gold-tag { background:rgba(200,146,58,0.08); color:#8a5c1a; border-color:rgba(200,146,58,0.25); }
+
+  .loop-chain { margin:14px 0; display:flex; flex-direction:column; }
+  .loop-step {
+    display:flex; align-items:flex-start; gap:12px; padding:9px 0 9px 18px; border-left:2px solid var(--rule); position:relative;
+  }
+  .loop-step::before {
+    content:''; position:absolute; left:-5px; top:15px; width:8px; height:8px; border-radius:50%; background:var(--teal-light); border:2px solid var(--cream);
+  }
+  .loop-step-num { font-family:'DM Mono', monospace; font-size:11px; color:var(--gold); flex-shrink:0; margin-top:2px; }
+  .loop-step p { margin:0!important; font-size:.94rem; }
+
+  .evidence-box {
+    background:#f5f3ee; border:1px solid rgba(200,146,58,0.22); border-radius:6px; padding:14px 18px; margin:14px 0;
+  }
+  .evidence-label {
+    font-family:'DM Mono', monospace; font-size:9.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); margin-bottom:6px;
+  }
+  .evidence-box p { color:var(--text-mid); font-size:.93rem; margin:0; }
+
+  .loop-arm {
+    background:var(--warm-white); border:1px solid var(--rule); border-radius:8px; padding:24px 28px; margin-bottom:18px; position:relative;
+  }
+  .loop-arm::before {
+    content:''; position:absolute; left:0; top:0; bottom:0; width:4px; border-radius:8px 0 0 8px;
+  }
+  .loop-arm.arm1::before { background:var(--teal); }
+  .loop-arm.arm2::before { background:var(--gold); }
+  .loop-arm.arm3::before { background:var(--navy); }
+  .loop-arm h4 {
+    font-family:'Playfair Display', serif; font-size:1rem; font-weight:600; color:var(--navy); margin-bottom:12px;
+  }
+  .loop-arm p { color:var(--text-mid); font-size:.965rem; margin-bottom:10px; }
+  .loop-arm p:last-child { margin-bottom:0; }
+  .loop-arm strong { color:var(--navy); font-weight:600; }
+  .loop-arm ul { list-style:none; margin:8px 0 12px 0; }
+  .loop-arm ul li { position:relative; padding-left:20px; margin-bottom:7px; color:var(--text-mid); font-size:.955rem; }
+  .loop-arm ul li::before { content:''; position:absolute; left:0; top:10px; width:6px; height:6px; border-radius:50%; background:var(--teal-light); }
+
+  .intervention-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:16px; }
+  .axis-card { background:var(--warm-white); border:1px solid var(--rule); border-radius:7px; padding:18px 20px; }
+  .axis-label {
+    font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--teal); margin-bottom:8px;
+  }
+  .axis-card p { color:var(--text-mid); font-size:.91rem; margin:0; }
+
+  .top-stack {
+    max-width:960px; margin:26px auto 26px; padding:0 44px;
+  }
+  .top-stack .callout {
+    margin:0; background:var(--gold-bg); border-left-color:var(--gold); font-size:1.02rem; line-height:1.8;
+  }
+  .top-stack .callout p {
+    color:var(--navy)!important; font-size:1.02rem!important; line-height:1.8!important;
+  }
+
+  .site-footer { background:#0f2342; }
+  .footer-stripe { height:5px; background:linear-gradient(90deg, #1e6b72 0%, #2a9da6 50%, #c8923a 100%); }
+  .footer-inner { max-width:1080px; margin:0 auto; padding:56px 44px 44px; }
+  .footer-top { display:grid; grid-template-columns:1.15fr 0.95fr; gap:34px; align-items:start; padding-bottom:30px; border-bottom:1px solid rgba(255,255,255,0.10); }
+  .footer-brand {
+    font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:#2a9da6; margin-bottom:14px;
+  }
+  .footer-title {
+    font-family:'Playfair Display', Georgia, serif; font-size:clamp(1.8rem, 3vw, 2.35rem); line-height:1.14; color:rgba(255,255,255,0.96); margin-bottom:14px;
+  }
+  .footer-tagline {
+    color:rgba(255,255,255,0.74); line-height:1.72; max-width:620px; font-size:.98rem; font-style:normal; font-weight:400;
+  }
+  .footer-actions { display:flex; flex-direction:column; align-items:flex-end; gap:16px; }
+  .footer-links { display:flex; flex-wrap:wrap; gap:12px; justify-content:flex-end; align-content:flex-start; }
+  .footer-link {
+    text-decoration:none; color:rgba(255,255,255,0.88); border:1px solid rgba(255,255,255,0.16); border-radius:999px; padding:10px 16px; font-size:.96rem; font-weight:600; transition:all .15s ease;
+  }
+  .footer-link:hover { color:#2a9da6; border-color:#2a9da6; background:rgba(42,157,166,0.10); }
+  .footer-bottom { padding-top:24px; display:flex; flex-direction:column; gap:10px; }
+  .footer-disclaimer {
+    color:rgba(255,255,255,0.60); line-height:1.68; font-size:.9rem; max-width:620px; margin-left:auto; text-align:right; font-style:normal;
+  }
+  .footer-meta {
+    font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,0.24);
+  }
+
+  @media (max-width:980px) {
+    .footer-top { grid-template-columns:1fr; }
+    .footer-actions { align-items:flex-start; }
+    .footer-links { justify-content:flex-start; }
+    .footer-disclaimer { margin-left:0; text-align:left; }
+  }
+  @media (max-width:680px) {
+    .header-inner, .framework-notice-inner, .clinical-notice-inner, .toc-inner, .main-wrap, .footer-inner, .top-stack { padding-left:20px; padding-right:20px; }
+    .toc-columns { grid-template-columns:1fr; }
+    .intervention-grid { grid-template-columns:1fr; }
+    .subsection-card { padding:18px 16px; }
+    .footer-link { font-size:.88rem; padding:8px 13px; }
+  }
+  @media (max-width:760px) {
+    .topbar-inner { align-items:flex-start; flex-direction:column; }
+    .sticky-docnav-inner { padding:7px 16px; gap:4px; }
+    .sdn-pill { font-size:9px; padding:4px 8px; }
+  }
+
+.header-note-wrap{
+  display:block;
+  margin-top:14px;
+}
+.header-note{
+  display:inline-block;
+  margin-top:0;
+}
+
+
+/* Cascade index readability upgrade */
+.toc-link{
+  font-size:1.05rem !important;
+  font-weight:500;
+}
+.toc-badge{
+  font-size:11px !important;
+}
+.toc-section-head{
+  font-size:11px !important;
+  letter-spacing:.22em;
+}
+
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <div class="topbar-brand">Decoding Autism Now</div>
+      <div class="topbar-title">Biology of Autism — Molecular Pathways Explained</div>
+    </div>
+    <a class="topbar-home" href="index.html">Home</a>
+  </div>
+</div>
+
+<div class="sticky-docnav" id="stickyDocNav">
+  <div class="sticky-docnav-inner">
+    <a class="sdn-pill teal" href="index.html">Home Hub</a>
+    <a class="sdn-pill teal" href="01_Molecular_Origins_Biology_of_Autism.html">Start Here</a>
+    <a class="sdn-pill teal" href="02_Cascade_Map_Biology_of_Autism.html">Cascade Map</a>
+    <a class="sdn-pill teal" href="03_Cascade_Explained_Biology_of_Autism.html">Cascade Explained</a>
+    <a class="sdn-pill gold" href="05_Metabolic_Pathways_Map_Biology_of_Autism.html">Pathways Map</a>
+    <a class="sdn-pill gold active" href="06_Metabolic_Pathways_Explained_Biology_of_Autism.html">Pathways Explained</a>
+    <a class="sdn-pill gold" href="07_Testing_Strategy_Biology_of_Autism.html">Testing</a>
+    <a class="sdn-pill gold" href="07B_Test_Reference_Biology_of_Autism.html">Test Ref</a>
+    <a class="sdn-pill gold" href="07C_Interpreting_Results_Biology_of_Autism.html">Interpret</a>
+    <a class="sdn-pill gold" href="07D_Talking_to_Your_Doctor_Biology_of_Autism.html">Talk to Dr</a>
+    <a class="sdn-pill gold" href="07R_Regressive_Autism_Testing_Biology_of_Autism.html">Regression</a>
+    <a class="sdn-pill gold" href="08_Intervention_Logic_Biology_of_Autism.html">Interventions</a>
+    <a class="sdn-pill navy" href="09_FAQ_Biology_of_Autism.html">FAQ</a>
+    <a class="sdn-pill navy" href="10_Evidence_and_Citations_Biology_of_Autism.html">Evidence</a>
+    <a class="sdn-pill navy" href="11_Vaccine_Question_Biology_of_Autism.html">Vaccine Question</a>
+    <a class="sdn-pill navy" href="12_Parents_Guide_Biology_of_Autism.html">Parents</a>
+    <a class="sdn-pill navy" href="13_Clinician_Guide_Biology_of_Autism.html">Clinician</a>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="header-stripe"></div>
+  <div class="header-inner">
+    <div class="header-eyebrow">Decoding Autism Now</div>
+    <h1 class="header-title">
+      Biology of Autism —
+      <span class="accent-line">Molecular Pathways Explained</span>
+    </h1>
+    <p class="header-sub">A mechanistic systems-biology reference covering all cascade levels — from gestational priming through intervention logic.</p>
+    <div class="header-note-wrap"><a class="header-note" href="#framework-disclaimer">See framework disclaimer below</a></div>
+    <div class="clinical-badge">
+      <svg fill="none" height="12" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="12"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
+      Detailed Mechanistic Reference — Research-Informed Framework
+    </div>
+  </div>
+</header>
+
+
+<div class="top-stack">
+  <div class="callout gold">
+    <p>The central argument: <strong>single-target interventions are insufficient once the loop is established.</strong> A coordinated upstream approach — NAD⁺ precursors → SIRT1 support → NF‑κB suppression → stress/SST reduction → gut repair → antioxidants → mitochondrial support — aims to simultaneously weaken all three arms (SIRT1/NF‑κB, SST/CREB, AMPK/mTOR/autophagy) and restore the conditions under which autophagy, synaptogenesis, and CREB/BDNF-mediated plasticity can resume — allowing the system to move from a fixed, self-reinforcing state back toward one capable of adaptive change.</p>
+  </div>
+</div>
+
+<nav aria-label="Document index" class="toc-bar">
+<div class="toc-inner">
+<p class="toc-label">Cascade levels — full index</p>
+<div class="toc-columns">
+<div>
+<p class="toc-section-head">Level 1 — Upstream Pressures</p>
+<a class="toc-link" href="#L1A"><span class="toc-badge">L1A</span>Maternal Immune Activation</a>
+<a class="toc-link" href="#L1B"><span class="toc-badge">L1B</span>Gut Dysbiosis + LPS</a>
+<a class="toc-link" href="#L1C"><span class="toc-badge">L1C</span>Mitochondrial Dysfunction</a>
+<a class="toc-link" href="#L1D"><span class="toc-badge">L1D</span>Environmental Toxin Load</a>
+<p class="toc-section-head">Level 2 — System Mode Shift</p>
+<a class="toc-link" href="#L2A"><span class="toc-badge">L2A</span>Developmental Priming</a>
+<a class="toc-link" href="#L2B"><span class="toc-badge">L2B</span>SST Co-Equal Node</a>
+<a class="toc-link" href="#L2C"><span class="toc-badge">L2C</span>SST Effects on Glia</a>
+<a class="toc-link" href="#L2D"><span class="toc-badge">L2D</span>SST Effects on Gut</a>
+</div>
+<div>
+<p class="toc-section-head">Levels 3–5 — Core Hub</p>
+<a class="toc-link" href="#L3A"><span class="toc-badge">L3A</span>Tryptophan Hijack / IDO1</a>
+<a class="toc-link" href="#L3B"><span class="toc-badge">L3B</span>NAD⁺ Insufficiency</a>
+<a class="toc-link" href="#L4A"><span class="toc-badge">L4A</span>AMPK / mTOR / Autophagy</a>
+<a class="toc-link" href="#L4B"><span class="toc-badge">L4B</span>Cleanup Failure Consequences</a>
+<a class="toc-link" href="#L5A"><span class="toc-badge">L5A</span>SIRT1 Master Regulator</a>
+<a class="toc-link" href="#L5B"><span class="toc-badge">L5B</span>Output 1: Inflammation</a>
+<a class="toc-link" href="#L5C"><span class="toc-badge">L5C</span>Output 2: Mitochondria</a>
+<a class="toc-link" href="#L5D"><span class="toc-badge">L5D</span>Output 3: Antioxidants</a>
+<a class="toc-link" href="#L5E"><span class="toc-badge">L5E</span>Output 4: Learning / SST+SIRT1</a>
+</div>
+<div>
+<p class="toc-section-head">Levels 6–7 — Glia &amp; Synapses</p>
+<a class="toc-link" href="#L6A"><span class="toc-badge">L6A</span>M1 Microglia</a>
+<a class="toc-link" href="#L6B"><span class="toc-badge">L6B</span>A1 Reactive Astrocytes</a>
+<a class="toc-link" href="#L7A"><span class="toc-badge">L7A</span>Hevin (SPARCL1) Suppressed</a>
+<a class="toc-link" href="#L7B"><span class="toc-badge">L7B</span>SPARC Over-Expressed</a>
+<a class="toc-link" href="#L7C"><span class="toc-badge">L7C</span>Glypicans 4/6 Irregular</a>
+<a class="toc-link" href="#L7D"><span class="toc-badge">L7D</span>Thalamocortical Circuit</a>
+<a class="toc-link" href="#L7E"><span class="toc-badge">L7E</span>Connectivity Signature</a>
+<p class="toc-section-head">Level 8 — Observable Outputs</p>
+<a class="toc-link" href="#L8A"><span class="toc-badge">L8A</span>Sensory Over-Reactivity</a>
+<a class="toc-link" href="#L8B"><span class="toc-badge">L8B</span>Social Cognition Difficulty</a>
+<a class="toc-link" href="#L8C"><span class="toc-badge">L8C</span>Cognitive Rigidity</a>
+<a class="toc-link" href="#L8D"><span class="toc-badge">L8D</span>GI Disruption</a>
+<a class="toc-link" href="#L8E"><span class="toc-badge">L8E</span>Sleep &amp; Mood Instability</a>
+<a class="toc-link" href="#loop"><span class="toc-badge">↻</span>Self-Sustaining Loop</a>
+<a class="toc-link" href="#intervention"><span class="toc-badge">→</span>Intervention Logic</a>
+</div>
+</div>
+</div>
+</nav>
+
+<main class="main-wrap">
+<!-- ════════════════════════════════
+     LEVEL 1 — UPSTREAM PRESSURES
+════════════════════════════════ -->
+<div class="chapter-divider"><span>Level 1 — Upstream Pressures on the System</span></div>
+<!-- L1A -->
+<section class="level-section" id="L1A">
+<div class="level-header">
+<span class="level-badge">L1A</span>
+<div>
+<h2 class="level-title">Maternal Immune Activation (MIA)</h2>
+<p class="level-subtitle">From transient gestational immune stress to a persistent neurodevelopmental bias</p>
+</div>
+</div>
+<div class="pathway-box">
+<p class="pathway-label">Directional pathway</p>
+<div class="pathway-chain">
+<span class="node-highlight">Infection / autoimmunity / chronic gestational stress</span><br/>
+<span class="arrow">→</span> IL‑6 ↑ and IL‑17A ↑ in fetal environment<br/>
+<span class="arrow">→</span> altered cortical migration and lamination (cortical dysplasia)<br/>
+<span class="arrow">→</span> long-term glial reactivity bias<br/>
+<span class="arrow">→</span> epigenetic silencing of SIRT1 and PGC‑1α in microglia<br/>
+<span class="arrow">→</span> PV/SST interneuron development impaired<br/>
+<span class="arrow">→</span> fetal gut barrier development altered → increased postnatal GI vulnerability
+    </div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 1</p>
+<h3 class="subsection-title">Cytokine Surge and Cortical Patterning</h3>
+<p>Maternal Immune Activation designates a state in which infections, autoimmune activity, or sustained physiological stress during pregnancy drive a significant rise in inflammatory cytokines — particularly <strong>interleukin‑6 (IL‑6)</strong> and <strong>interleukin‑17A (IL‑17A)</strong> — within the maternal–fetal milieu. These cytokines act not merely as markers of illness but as <strong>developmental morphogens</strong> capable of reshaping cortical organization, glial programming, and inhibitory circuit assembly.</p>
+<p>Elevated IL‑6 and IL‑17A during critical gestational windows can influence:</p>
+<ul>
+<li><strong>Radial migration and cortical lamination</strong>, leading to subtle forms of cortical dysplasia</li>
+<li><strong>Regional patterning</strong>, particularly in frontal and temporal regions implicated in social communication and executive function</li>
+</ul>
+<p>Rather than invoking gross malformations, this model emphasizes <strong>micro-architectural deviations</strong>: altered positioning and density of projection neurons and interneurons that may be invisible on routine imaging but have large effects on circuit dynamics. Animal MIA models in which IL‑6/IL‑17A are experimentally manipulated reproduce autism-relevant behavioral profiles — including social deficits, repetitive behaviors, and sensory abnormalities — supporting the plausibility of this pathway.</p>
+<div class="pathway-tags"><span class="tag">IL-6</span><span class="tag">IL-17A</span><span class="tag">Cortical lamination</span><span class="tag">Radial migration</span><span class="tag">Cortical dysplasia</span></div>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 2</p>
+<h3 class="subsection-title">Long-Term Glial Programming: Microglia as "Primed Responders"</h3>
+<p>MIA functions as a <strong>glial programming event</strong>. Microglia exposed to elevated IL‑6/IL‑17A during development do not mount an acute response and return to baseline; they undergo transcriptional and epigenetic changes that shift their default state toward <strong>heightened reactivity</strong>. Key features of this programming include:</p>
+<ul>
+<li>Lower activation thresholds in response to subsequent signals such as LPS, toxins, or neuronal stress</li>
+<li>A bias toward <strong>pro-inflammatory (M1-like) phenotypes</strong> when activated, with robust production of IL‑6, TNF‑α, and IL‑1β</li>
+</ul>
+<p>In the context of the cascade, this means that subsequent insults — gut-derived LPS, environmental toxins, metabolic stress — are more likely to produce <strong>sustained microglial activation</strong> rather than transient, self-limited responses. MIA thus supplies an upstream explanation for why some individuals show chronic neuroinflammation after relatively modest later exposures.</p>
+<div class="pathway-tags"><span class="tag">Microglial priming</span><span class="tag">M1-like phenotype</span><span class="tag">TNF-α</span><span class="tag">IL-1β</span></div>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card navy-accent">
+<p class="subsection-num">Section 3</p>
+<h3 class="subsection-title">Epigenetic Silencing of SIRT1 and PGC‑1α in Offspring Microglia</h3>
+<p>A central mechanistic move is to link MIA directly to the <strong>SIRT1–PGC‑1α axis</strong>, which later functions as the core resilience hub. Gestational cytokine exposure can lead to <strong>epigenetic repression</strong> of SIRT1 and PGC‑1α in offspring microglia — through mechanisms such as promoter methylation, histone modifications, or altered non-coding RNA profiles.</p>
+<p>The functional consequences are:</p>
+<ul>
+<li><strong>Reduced SIRT1 capacity</strong> to deacetylate NF‑κB p65, weakening a key intrinsic brake on inflammatory transcription</li>
+<li><strong>Impaired PGC‑1α-driven mitochondrial biogenesis</strong>, resulting in mitochondrial populations less capable of handling oxidative and metabolic stress</li>
+</ul>
+<div class="callout gold">
+<p>This converts MIA from a purely external risk factor into an internal <strong>baseline vulnerability</strong>: the neuroimmune system of the offspring begins life with a diminished ability to control inflammation and regenerate healthy mitochondria. When IDO1 activity and NAD⁺ strain later further compromise SIRT1 function, these prenatally imprinted deficits amplify the collapse of the SIRT1 hub.</p>
+</div>
+<div class="pathway-tags"><span class="tag">SIRT1 epigenetic silencing</span><span class="tag">PGC-1α</span><span class="tag">NF-κB p65</span><span class="tag">Promoter methylation</span></div>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 4</p>
+<h3 class="subsection-title">Selective Vulnerability of PV and SST Interneuron Development</h3>
+<p>MIA specifically impairs the development of two critical inhibitory interneuron classes:</p>
+<ul>
+<li><strong>Parvalbumin-positive (PV) interneurons</strong>, which orchestrate high-frequency oscillations and temporal precision in cortical networks</li>
+<li><strong>Somatostatin-positive (SST) interneurons</strong>, which regulate dendritic integration, local gain control, and plasticity within cortical columns</li>
+</ul>
+<p>The proposed mechanisms include disruptions of progenitor proliferation, migration, and differentiation in interneuron lineages exposed to elevated IL‑6/IL‑17A and related inflammatory mediators. The net result is a cortex with <strong>reduced or dysregulated inhibitory control</strong>, predisposing to excitation–inhibition imbalance, impaired synchrony, and aberrant sensory gating.</p>
+<p>This early interneuron fragility is later compounded by SST elevation in response to chronic postnatal stress and inflammation, and by microglia-mediated synapse pruning and A1 astrocyte conversion. MIA thus establishes a <strong>foundational inhibitory circuit weakness</strong> that later cascade elements amplify.</p>
+<div class="pathway-tags"><span class="tag">PV interneurons</span><span class="tag">SST interneurons</span><span class="tag">E/I imbalance</span><span class="tag">Cortical oscillations</span></div>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card gold-accent">
+<p class="subsection-num">Section 5</p>
+<h3 class="subsection-title">Fetal Gut Barrier Alterations: Linking MIA to Postnatal LPS Vulnerability</h3>
+<p>An important extension of this level beyond the CNS is the finding that MIA alters the fetal gut environment, resulting in offspring who may be born with an <strong>already-compromised gastrointestinal barrier</strong>. Gestational inflammatory signals can affect:</p>
+<ul>
+<li>Development of intestinal epithelial tight junctions</li>
+<li>Maturation of mucosal immune cells and secretory IgA responses</li>
+<li>Early microbial colonization patterns influenced by maternal immune status and microbiota</li>
+</ul>
+<p>The consequence is a gut barrier that is <strong>more permeable and less immunologically robust</strong> from early life — establishing a direct bridge from L1A (MIA) to L1B (Gut Dysbiosis + LPS Translocation). Postnatal diet, antibiotics, infections, or stress can more easily convert this latent vulnerability into metabolic endotoxemia with LPS leakage, TLR4 activation, and NF‑κB-driven systemic inflammation.</p>
+<div class="pathway-tags"><span class="tag">Tight junctions</span><span class="tag">Secretory IgA</span><span class="tag">Gut permeability</span><span class="tag">LPS vulnerability</span></div>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 6</p>
+<h3 class="subsection-title">Position within the Overall ASD Cascade</h3>
+<p>Positioning MIA at Level 1A makes several broad claims:</p>
+<ul>
+<li>A subset of autism risk is rooted in <strong>prenatal programming of cortical, glial, and gut systems</strong>, not solely in postnatal exposures or single genes</li>
+<li>The later central nodes — SIRT1 deficiency, SST vulnerability, microglial over-reactivity, and gut-mediated inflammation — are <strong>not independent events</strong> but partially reflect a shared early developmental history</li>
+<li>Animal MIA models recapitulating autism-relevant behaviors support the view that <strong>early cytokine exposure can set long-term trajectories</strong> for both neural architecture and immune set-points</li>
+</ul>
+<div class="callout">
+<p>In summary, Level 1A frames maternal immune stress as a <strong>developmental priming event</strong> that initiates SIRT1/PGC‑1α vulnerability, interneuron fragility, glial hyper-responsiveness, and gut barrier weakness before birth — thereby lowering the threshold at which later stressors drive the system into the self-sustaining ASD cascade.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- L1B -->
+<section class="level-section" id="L1B">
+<div class="level-header">
+<span class="level-badge">L1B</span>
+<div>
+<h2 class="level-title">Gut Dysbiosis + LPS Translocation</h2>
+<p class="level-subtitle">From local microbiome disruption to systemic innate immune activation</p>
+</div>
+</div>
+<div class="pathway-box">
+<p class="pathway-label">Directional pathway</p>
+<div class="pathway-chain">
+<span class="node-highlight">Gut dysbiosis</span><br/>
+<span class="arrow">→</span> impaired intestinal barrier (tight junction failure)<br/>
+<span class="arrow">→</span> LPS enters systemic circulation<br/>
+<span class="arrow">→</span> TLR4–MD‑2–CD14 complex activation on macrophages, endothelial cells, and microglia<br/>
+<span class="arrow">→</span> NF‑κB activation (MyD88- and TRIF-dependent)<br/>
+<span class="arrow">→</span> sustained pro-inflammatory cytokine production (IL‑6, TNF‑α, IL‑1β)
+    </div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 1</p>
+<h3 class="subsection-title">Dysbiosis and Barrier Breakdown: Creating the "Open Gate"</h3>
+<p>The Level 1B sequence is not framed as "bad bacteria" in a generic sense, but as a structural problem: <strong>dysbiosis plus impaired barrier integrity</strong> allows LPS from Gram-negative commensals to enter the bloodstream in the absence of overt infection. This state is conceptualized as <strong>metabolic endotoxemia without active infection</strong> — circulating innate immune ligands with no classical infectious focus.</p>
+<ul>
+<li>Short-chain fatty acids such as butyrate, normally produced by commensals, support epithelial integrity and regulatory immune tone; their reduction predisposes to <strong>tight junction loosening</strong></li>
+<li>Local inflammation, dietary factors, and stress hormones further weaken epithelial cohesion and mucosal defenses</li>
+</ul>
+<div class="pathway-tags"><span class="tag">Butyrate</span><span class="tag">Tight junctions</span><span class="tag">Metabolic endotoxemia</span><span class="tag">Dysbiosis</span></div>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card navy-accent">
+<p class="subsection-num">Section 2</p>
+<h3 class="subsection-title">LPS Translocation and the TLR4–NF‑κB Axis</h3>
+<p>Once LPS enters the bloodstream, it binds to <strong>TLR4–MD‑2–CD14 complexes</strong> on monocytes, macrophages, brain endothelial cells, and microglia. Engagement of TLR4 initiates canonical MyD88- and TRIF-dependent signaling pathways that converge on <strong>NF‑κB</strong> activation.</p>
+<div class="shorthand-inline">
+<span class="hl">LPS</span><span class="arr">→</span><span class="hl">TLR4</span><span class="arr">→</span><span class="hl">NF‑κB</span><span class="arr">→</span>sustained cytokines (IL‑6, TNF‑α, IL‑1β)
+      </div>
+<p>Repeated or continuous LPS exposure prevents resolution of this response, producing a state of <strong>chronic low-grade inflammation</strong> rather than an acute, self-limited reaction. This explains how individuals can show persistent inflammatory biomarkers and microglial activation <strong>without clinical signs of sepsis or localized infection</strong>.</p>
+<div class="pathway-tags"><span class="tag">TLR4</span><span class="tag">MyD88</span><span class="tag">TRIF</span><span class="tag">NF-κB p65/p50</span><span class="tag">IL-6 / TNF-α / IL-1β</span></div>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 3</p>
+<h3 class="subsection-title">Conversion to Neuroinflammation: Peripheral–Central Coupling</h3>
+<p>Peripheral LPS-driven inflammation is efficiently coupled to the central nervous system:</p>
+<ul>
+<li>Circulating cytokines and LPS alter <strong>blood–brain barrier permeability</strong> and activate brain endothelial cells, encouraging microglial activation</li>
+<li>LPS and inflammatory mediators can signal via <strong>humoral routes</strong> and via neural pathways (e.g., vagal afferents) to brainstem and limbic structures, further modulating stress and immune tone</li>
+</ul>
+<p>An intestinal barrier problem is thereby rapidly translated into <strong>microglial priming and activation</strong>, embedding gut-origin signals into the central branch of the cascade. The gut node functionally sits upstream of the Level 6A reactive glia layer.</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card gold-accent">
+<p class="subsection-num">Section 4</p>
+<h3 class="subsection-title">Interaction with the SIRT1 Hub and IDO1/Tryptophan Metabolism</h3>
+<p>Level 1B connects directly to the central metabolic and regulatory hubs:</p>
+<ul>
+<li><strong>SIRT1 antagonism:</strong> SIRT1 normally restrains NF‑κB through deacetylation of the p65 subunit. Persistent NF‑κB activation in the LPS/TLR4 context opposes SIRT1 function, and inflammatory metabolic strain reduces NAD⁺ availability, further compromising SIRT1 activity. As long as the gut/LPS channel remains open, <strong>SIRT1-mediated resolution becomes biologically difficult to sustain</strong></li>
+<li><strong>IDO1 induction and tryptophan hijack:</strong> Chronic TLR4–NF‑κB activity promotes expression of <strong>indoleamine 2,3-dioxygenase 1 (IDO1)</strong> in intestinal and hepatic tissues. IDO1 redirects tryptophan away from serotonin synthesis into the kynurenine pathway, increasing production of <strong>quinolinic acid</strong> and contributing to <strong>functional NAD⁺ insufficiency</strong></li>
+</ul>
+<div class="callout gold">
+<p>Level 1B is a <strong>primary upstream controller</strong> of both the inflammatory loop and the metabolic NAD⁺/SIRT1 loop — not a peripheral adjunct to the cascade.</p>
+</div>
+<div class="pathway-tags"><span class="tag">IDO1</span><span class="tag">Kynurenine</span><span class="tag">Quinolinic acid</span><span class="tag">NAD⁺</span><span class="tag">SIRT1</span></div>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 5</p>
+<h3 class="subsection-title">Chronicity: Why "Metabolic Endotoxemia" Is Self-Sustaining</h3>
+<p>Once dysbiosis and barrier failure are established, baseline LPS flux remains elevated, continually re-stimulating TLR4. The immune system receives a constant low-grade "danger" signal, maintaining NF‑κB activity and cytokine production. Microglia, previously primed by factors such as MIA, respond more vigorously and remain activated longer, reinforcing the neuroinflammatory arm. <strong>No new external infection is required to sustain the loop.</strong></p>
+</div>
+</div>
+</section>
+<!-- L1C -->
+<section class="level-section" id="L1C">
+<div class="level-header">
+<span class="level-badge">L1C</span>
+<div>
+<h2 class="level-title">Mitochondrial Dysfunction</h2>
+<p class="level-subtitle">Mitochondria as dual drivers of inflammation and synaptic energy failure</p>
+</div>
+</div>
+<div class="pathway-box">
+<p class="pathway-label">Directional pathway (parallel arms)</p>
+<div class="pathway-chain">
+<span class="node-highlight">Mitochondrial impairment</span><br/>
+<span class="arrow">→</span> ROS ↑ + mtDNA release<span class="arrow">→</span>NLRP3 inflammasome activation<span class="arrow">→</span>IL‑1β ↑ and IL‑18 ↑<br/>
+<span class="parallel">in parallel</span><br/>
+<span class="arrow">→</span> ATP ↓<span class="arrow">→</span>reduced hevin/glypican secretion and compromised synaptic transmission
+    </div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 1</p>
+<h3 class="subsection-title">ROS and mtDNA as Triggers of the NLRP3 Inflammasome</h3>
+<p>When the electron transport chain is dysfunctional, electron leakage at complexes I and III increases ROS formation. Oxidative damage to mitochondrial membranes and genomes promotes release of <strong>mtDNA</strong> into the cytosol and extracellular space. Both ROS and mtDNA serve as signals activating the <strong>NLRP3 inflammasome</strong> in microglia and other myeloid cells:</p>
+<ul>
+<li>ROS act as upstream stress signals that favor NLRP3 assembly</li>
+<li>Oxidized mtDNA acts as a DAMP, binding to and stabilizing inflammasome complexes</li>
+</ul>
+<p>Once NLRP3 is activated, <strong>caspase‑1</strong> processes pro-IL‑1β and pro-IL‑18 into their mature, secreted forms — translating mitochondrial injury into a specific cytokine signature that reinforces microglial activation.</p>
+<div class="shorthand-inline">
+<span class="hl">ROS + mtDNA</span><span class="arr">→</span><span class="hl">NLRP3</span><span class="arr">→</span>caspase-1<span class="arr">→</span>IL‑1β ↑ · IL‑18 ↑
+      </div>
+<div class="pathway-tags"><span class="tag">ROS</span><span class="tag">mtDNA (DAMP)</span><span class="tag">NLRP3 inflammasome</span><span class="tag">Caspase-1</span><span class="tag">IL-1β / IL-18</span></div>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card gold-accent">
+<p class="subsection-num">Section 2</p>
+<h3 class="subsection-title">ATP Scarcity as a Constraint on Synaptogenesis and Transmission</h3>
+<p>Synapse formation, maturation, and function are all energy-dependent. When mitochondrial output is compromised:</p>
+<ul>
+<li>Astrocytes require ATP to synthesize and secrete <strong>hevin (SPARCL1)</strong> and <strong>glypicans</strong> — key synaptogenic proteins highlighted in later cascade levels. Their secretion declines under ATP scarcity</li>
+<li>Neurons require ATP to support <strong>vesicle loading and recycling, ion pump activity, receptor trafficking, and structural spine remodeling</strong></li>
+<li>Synaptic transmission becomes less reliable, particularly under high-frequency conditions that demand robust ATP supply</li>
+</ul>
+<div class="callout gold">
+<p>This places mitochondrial dysfunction directly upstream of the synapse protein imbalance layer. Impaired bioenergetics manifest not only as global fatigue but as <strong>specific synaptic and network-level abnormalities</strong> characteristic of ASD.</p>
+</div>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 3</p>
+<h3 class="subsection-title">Integration with the Broader Cascade</h3>
+<ul>
+<li><strong>Upstream:</strong> SIRT1 and PGC‑1α deficits (established by MIA, IDO1-driven NAD⁺ strain, and chronic inflammation) impair mitochondrial biogenesis and repair, increasing the likelihood of persistent mitochondrial injury</li>
+<li><strong>Lateral:</strong> Environmental/oxidative stressors further damage mitochondrial membranes and respiratory chain components, amplifying ROS and mtDNA release</li>
+<li><strong>Downstream:</strong> Elevated IL‑1β and IL‑18 reinforce microglial M1 activation, promote A1 astrocyte conversion, and feed back into NF‑κB and NLRP3 activity</li>
+</ul>
+<p>Positioning mitochondria at Level 1 emphasizes that <strong>bioenergetic failure and inflammatory amplification begin early and co-evolve</strong>, rather than appearing as late secondary complications.</p>
+</div>
+</div>
+</section>
+<!-- L1D -->
+<section class="level-section" id="L1D">
+<div class="level-header">
+<span class="level-badge">L1D</span>
+<div>
+<h2 class="level-title">Environmental Toxin Load</h2>
+<p class="level-subtitle">Association-level toxin burden as a load amplifier on redox and innate immunity</p>
+</div>
+</div>
+<div class="pathway-box">
+<p class="pathway-label">Directional shorthand</p>
+<div class="pathway-chain">
+<span class="node-highlight">Glutathione (GSH) ↓</span><br/>
+<span class="arrow">→</span> oxidative burden ↑<br/>
+<span class="arrow">→</span> innate immune activation / microglial priming ↑<br/>
+<span class="parallel">(association-level evidence in humans; mechanistic support in preclinical models)</span>
+</div>
+</div>
+<div class="evidence-box">
+<p class="evidence-label">Evidence Grading</p>
+<p>Human evidence linking heavy metals, glyphosate, and organochlorine pesticides to ASD risk is predominantly <strong>association-level</strong>, derived from observational studies. Mechanistic support is drawn from animal and cell models. This grading is maintained throughout this level to prevent over-interpretation.</p>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 1</p>
+<h3 class="subsection-title">Redox Disruption: Glutathione Depletion and Oxidative Burden</h3>
+<p>Many environmental toxicants relevant to ASD risk place stress on the <strong>GSH system</strong> — either by direct conjugation during phase II detoxification, by increasing ROS generation, or by impairing enzymes involved in glutathione synthesis and recycling. As reduced GSH declines and oxidized forms accumulate:</p>
+<ul>
+<li>The capacity to neutralize ROS diminishes</li>
+<li>Oxidative damage to lipids, proteins, and nucleic acids increases, reflected in markers such as 8-hydroxy-2′-deoxyguanosine (8-OHdG)</li>
+</ul>
+<p>In the wider cascade, this redox imbalance interacts with the <strong>FOXO/Nrf2 axis</strong> and further constrains SIRT1/PGC‑1α-mediated resilience, as mitochondrial and nuclear damage accumulate under insufficient antioxidant defense.</p>
+<div class="pathway-tags"><span class="tag">GSH depletion</span><span class="tag">8-OHdG</span><span class="tag">FOXO/Nrf2</span><span class="tag">Oxidative damage</span></div>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 2</p>
+<h3 class="subsection-title">Innate Immune Activation and Microglial Priming</h3>
+<p>Environmental toxicants can act as <strong>direct or indirect activators of innate immune pathways</strong>:</p>
+<ul>
+<li>Some metals and organic pollutants stimulate pattern-recognition receptors, inflammasomes, or complement pathways, leading to increased pro-inflammatory cytokine production</li>
+<li>Chronic low-level exposure appears to <strong>prime microglia</strong>, shifting them toward a state in which subsequent insults elicit stronger and more prolonged M1-like responses</li>
+</ul>
+<p>Toxin load thus lowers the <strong>activation threshold</strong> of the neuroimmune system. In combination with MIA-induced glial programming and gut/LPS-mediated TLR4 stimulation, environmental toxicants contribute to a milieu where NF‑κB, NLRP3, and related inflammatory pathways are more easily and persistently engaged.</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card gold-accent">
+<p class="subsection-num">Section 3</p>
+<h3 class="subsection-title">Detoxification Bottlenecks and Cumulative Burden</h3>
+<p>Glutathione depletion and enzyme inhibition create <strong>detoxification bottlenecks</strong>:</p>
+<ul>
+<li>Phase I and phase II biotransformation pathways are stressed, reducing the clearance of both exogenous toxicants and endogenous reactive metabolites</li>
+<li>Impaired efflux and conjugation permit <strong>toxin accumulation in tissues</strong>, including brain and mitochondria, where they further damage membranes, respiratory chain complexes, and DNA</li>
+</ul>
+<p>Once detoxification capacity is compromised, each additional exposure has a disproportionate impact, and existing damage becomes harder to clear. Toxin load thereby interlocks with mitochondrial dysfunction (L1C) and antioxidant failure to perpetuate ROS production and inflammatory signaling.</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 4</p>
+<h3 class="subsection-title">Evidence Grading and Role in the Cascade</h3>
+<p>Environmental toxins function within the cascade as <strong>load-modulating channel inputs</strong> — not as universal or singular causes of autism. They reduce redox and detoxification reserves, enhance immune reactivity, and magnify the impact of other channels (MIA, gut/LPS, mitochondrial dysfunction, HPA/SST dysregulation), reinforcing the multi-factorial nature of the ASD biological state.</p>
+</div>
+</div>
+</section>
+<!-- ════════════════════════════════
+     LEVEL 2 — SYSTEM MODE SHIFT
+════════════════════════════════ -->
+<div class="chapter-divider"><span>Level 2 — How Stress Shifts the System's Mode</span></div>
+<!-- L2A -->
+<section class="level-section" id="L2A">
+<div class="level-header">
+<span class="level-badge">L2A</span>
+<div>
+<h2 class="level-title">Developmental Priming</h2>
+<p class="level-subtitle">Epigenetic pre-configuration of the SIRT1/PGC‑1α–SST axis before birth</p>
+</div>
+</div>
+<div class="pathway-box">
+<p class="pathway-label">Core statement</p>
+<div class="pathway-chain">
+<span class="node-highlight">MIA</span><span class="arrow">→</span>epigenetic repression of SIRT1/PGC‑1α in fetal microglia<br/>
+<span class="arrow">+</span> impaired SST interneuron development<br/>
+<span class="arrow">→</span> <em style="color:rgba(255,255,255,0.65);">ASD spiral can begin before birth, independent of postnatal insults</em>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card navy-accent">
+<p class="subsection-num">Section 1</p>
+<h3 class="subsection-title">Epigenetic Silencing of SIRT1/PGC‑1α in Fetal Microglia</h3>
+<p>Cytokine exposure during gestation (IL‑6, IL‑17A) can leave <strong>stable epigenetic marks</strong> on genes encoding SIRT1 and PGC‑1α in microglia — through DNA methylation and/or repressive histone modifications at regulatory regions. A durable reduction in baseline transcription persists into postnatal life.</p>
+<p>Functionally, fetal and neonatal microglia consequently:</p>
+<ul>
+<li>Possess <strong>less capacity for SIRT1-mediated NF‑κB restraint</strong>, favoring pro-inflammatory responses once activated</li>
+<li>Show <strong>impaired PGC‑1α-driven mitochondrial biogenesis</strong>, limiting renewal of healthy mitochondria and predisposing to early ROS and mtDNA release</li>
+</ul>
+<div class="callout navy">
+<p>This epigenetic priming installs a <strong>latent weakness</strong> in the very hub that the cascade identifies as central to resilience — even modest postnatal inflammatory or metabolic challenges will stress a SIRT1/PGC‑1α system that never operated at full capacity.</p>
+</div>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 2</p>
+<h3 class="subsection-title">SST Interneuron Development as a Pre-Set Vulnerability</h3>
+<p>MIA disrupts the development of <strong>somatostatin-expressing (SST) interneurons</strong>, which are crucial for dendritic inhibition, gain control within cortical columns, and regulation of local plasticity. Perturbations in progenitor proliferation, migration, or differentiation can yield:</p>
+<ul>
+<li><strong>Quantitative loss</strong> of SST interneurons in key regions</li>
+<li><strong>Qualitative alterations</strong> in their intrinsic properties or connectivity</li>
+</ul>
+<p>SST is later treated as a co-equal central node — a system-wide plasticity brake suppressing AC/cAMP/PKA/CREB signaling and altering gut and glial function. Developmental priming of SST circuitry implies that the system enters postnatal life with both a <strong>structural deficit</strong> in SST interneuron networks and a heightened susceptibility to <strong>SST-mediated suppression</strong> when chronic stress and inflammation emerge. The SST arm of the spiral is therefore not purely reactive; it is partially pre-wired.</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 3</p>
+<h3 class="subsection-title">Independence from Postnatal Triggers</h3>
+<p>The core regulatory architecture (SIRT1/PGC‑1α and SST circuits) may already be shifted toward a low-resilience, low-plasticity regime at birth. Postnatal triggers then act on a system that is <strong>pre-biased toward chronic inflammation and impaired repair</strong>, so smaller insults produce larger, more persistent effects.</p>
+<p>For such individuals, apparent "first hits" — early GI issues or environmental exposures — are actually <strong>second-order events</strong> superimposed on a prenatally established vulnerability. This explains heterogeneity in response to postnatal exposures: individuals with strong L2A priming require less additional stress to enter the self-sustaining state.</p>
+</div>
+</div>
+</section>
+<!-- L2B -->
+<section class="level-section" id="L2B">
+<div class="level-header">
+<span class="level-badge teal">L2B</span>
+<div>
+<h2 class="level-title">Somatostatin (SST) — Co-Equal Central Node</h2>
+<p class="level-subtitle">Somatostatin as a system-wide plasticity brake co-activated by stress and inflammation</p>
+</div>
+</div>
+<div class="pathway-box">
+<p class="pathway-label">Directional pathway</p>
+<div class="pathway-chain">
+<span class="node-highlight">Stress + inflammation + metabolic strain + elevated neuronal activity</span><br/>
+<span class="arrow">→</span> SST ↑ <span class="arrow">→</span> SSTR2/5 activation<br/>
+<span class="arrow">→</span> adenylyl cyclase (AC) ↓ <span class="arrow">→</span> cAMP ↓ <span class="arrow">→</span> PKA ↓<br/>
+<span class="arrow">→</span> CREB phosphorylation ↓ <span class="arrow">→</span> BDNF ↓
+    </div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 1</p>
+<h3 class="subsection-title">Upstream Activation: Coupling of SST to Stress and Inflammatory Load</h3>
+<p>SST is positioned downstream of <strong>chronic stress signaling and inflammatory tone</strong>:</p>
+<ul>
+<li>HPA axis dysregulation, sustained cortisol abnormalities, and metabolic stress (e.g., hyperinsulinemia) increase SST release from hypothalamic and extrahypothalamic sources</li>
+<li>Pro-inflammatory cytokines and ongoing microglial activation further modulate SST expression and release across brain regions and in the gut</li>
+</ul>
+<p>This coupling means that the same conditions driving <strong>IDO1 activation and functional NAD⁺ insufficiency</strong> also drive chronic SST elevation — shifting the system into a state where both the metabolic arm (SIRT1 fuel) and the neuropeptide arm (SST signaling) act together to suppress plasticity-enabling pathways.</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 2</p>
+<h3 class="subsection-title">Receptor Distribution and Multi-Compartment Effects</h3>
+<p>Somatostatin acts primarily via <strong>SSTR2 and SSTR5</strong>, Gi-coupled receptors expressed on multiple cell types:</p>
+<ul>
+<li><strong>Hippocampal and cortical neurons:</strong> SSTR2/5 activation reduces excitability and dampens activity-dependent plasticity</li>
+<li><strong>Astrocytes:</strong> SST signaling modulates synaptogenic support functions, including hevin and glypican expression, favoring a more restrictive synaptic environment</li>
+<li><strong>Microglia:</strong> SST influences surveillance and activation states, biasing toward lower plasticity and higher threat sensitivity</li>
+<li><strong>Thalamic relay cells:</strong> SST may alter thalamocortical transmission, impacting sensory gating and relay fidelity</li>
+</ul>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card navy-accent">
+<p class="subsection-num">Section 3</p>
+<h3 class="subsection-title">Canonical Signaling: AC/cAMP/PKA/CREB/BDNF Suppression</h3>
+<p>The mechanistic core is <strong>Gi-coupled inhibition of adenylyl cyclase</strong>:</p>
+<div class="shorthand-inline">
+<span class="hl">SST ↑</span><span class="arr">→</span>SSTR2/5<span class="arr">→</span>AC ↓<span class="arr">→</span>cAMP ↓<span class="arr">→</span>PKA ↓<span class="arr">→</span>CREB phosphorylation ↓<span class="arr">→</span><span class="hl">BDNF ↓</span>
+</div>
+<p>Hypo-phosphorylated CREB shows diminished transcriptional activity at CRE-containing promoters, including those for <strong>brain-derived neurotrophic factor (BDNF)</strong>. BDNF decline impairs synaptic consolidation, dendritic spine maturation, and experience-dependent circuit refinement. In the cascade, low BDNF serves as a downstream readout of <strong>combined SST- and SIRT1-mediated CREB suppression</strong> — reflecting an entrenched low-plasticity state.</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card gold-accent">
+<p class="subsection-num">Section 4</p>
+<h3 class="subsection-title">Antagonistic Co-Regulation with SIRT1</h3>
+<p>SST and SIRT1 function as <strong>antagonistic co-regulators</strong> of the system:</p>
+<ul>
+<li><strong>SIRT1</strong>, when adequately fueled by NAD⁺, supports plasticity and resilience: it deacetylates NF‑κB p65 (restraining inflammation), activates PGC‑1α (promoting mitochondrial biogenesis), and cooperates with CREB-related factors to support BDNF and synaptic plasticity</li>
+<li><strong>SST</strong>, when chronically elevated, suppresses AC/cAMP/PKA signaling (directly lowering CREB phosphorylation), dampens neuronal excitability and plasticity, and alters astrocyte and microglial phenotypes in ways that constrain synaptogenesis</li>
+</ul>
+<p>Both converge on CREB and BDNF from opposite sides: SIRT1 loss withdraws positive co-regulatory support, while SST actively inhibits the upstream cAMP/PKA pathway. The "lethal loop" arises when <strong>NAD⁺/SIRT1 function is compromised at the same time SST tone is chronically elevated</strong> — CREB-BDNF plasticity becomes suppressed from both directions simultaneously.</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 5</p>
+<h3 class="subsection-title">System-Wide Consequences: Multi-Organ Impact</h3>
+<p>Because SST acts in both central and peripheral systems, its chronic elevation has <strong>multi-organ implications</strong> aligned with ASD-relevant phenotypes:</p>
+<ul>
+<li>In the <strong>brain</strong>: reduced CREB/BDNF and diminished synaptogenesis contribute to rigid connectivity patterns, impaired learning, and limited capacity to integrate new experiences</li>
+<li>In the <strong>gut</strong>: SST suppresses gastric acid secretion, pancreatic enzymes, bile release, and motility — worsening nutrient absorption and promoting dysbiosis, feeding back into gut/LPS and IDO1 arms</li>
+<li>In <strong>glial compartments</strong>: SST signaling inhibits astrocytic and microglial support roles for circuit remodeling</li>
+</ul>
+<p>Level 2B positions SST not as a local inhibitory neurotransmitter but as a <strong>global homeostatic shift</strong> — under chronic stress and inflammatory load, SST drives the system into a low-plasticity, high-conservation mode that simultaneously touches neuronal plasticity, glial function, and gut physiology.</p>
+</div>
+</div>
+</section>
+<!-- L2C -->
+<section class="level-section" id="L2C">
+<div class="level-header">
+<span class="level-badge teal">L2C</span>
+<div>
+<h2 class="level-title">SST Effects on Glia</h2>
+<p class="level-subtitle">Somatostatin-mediated suppression of astrocytic support and microglial plasticity</p>
+</div>
+</div>
+<div class="pathway-box">
+<p class="pathway-label">Directional shorthand</p>
+<div class="pathway-chain">
+<span class="node-highlight">SST ↑</span> <span class="arrow">→</span><br/>
+      Astrocytes: hevin (SPARCL1) ↓ · glypicans ↓ · SPARC ↑ · glutamate clearance ↓<br/>
+      Microglia: reactive priming ↑ · low-plasticity / high-surveillance phenotype ↑
+    </div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 1</p>
+<h3 class="subsection-title">Astrocytic SSTR2/5: Suppression of Synaptogenic Proteins</h3>
+<p>SSTR2/5 activation on astrocytes reduces transcription and/or secretion of <strong>hevin</strong> and <strong>glypicans</strong>, while increasing <strong>SPARC</strong>. The functional implications:</p>
+<ul>
+<li><strong>Hevin ↓:</strong> fewer excitatory synapses are correctly bridged and assembled, particularly thalamocortical synapses relying on hevin as a Neurexin–Neuroligin bridging molecule</li>
+<li><strong>Glypicans ↓:</strong> fewer silent synapses are converted into functionally mature AMPA-receptor-containing synapses — leading to a higher proportion of structurally present but functionally weak connections</li>
+<li><strong>SPARC ↑:</strong> active antagonism of hevin-mediated synapse formation; SPARC interferes with hevin's bridging function and promotes synapse destabilization</li>
+</ul>
+<p>SST signaling thereby converts astrocytes from <strong>synaptogenic supporters</strong> into <strong>synapse-restricting regulators</strong>, directly worsening the synapse protein imbalance that manifests at Level 7.</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 2</p>
+<h3 class="subsection-title">Astrocytic Glutamate Clearance: Metabolic Stress on Synapses</h3>
+<p>SSTR2/5 activation is associated with <strong>reduced glutamate uptake</strong> by astrocytes via excitatory amino acid transporters. Elevated extracellular glutamate increases the risk of <strong>excitotoxic stress</strong> and contributes to excitation–inhibition imbalance, adding a metabolic and excitotoxic component to synaptic stress — particularly in regions already energy-compromised by mitochondrial dysfunction.</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card navy-accent">
+<p class="subsection-num">Section 3</p>
+<h3 class="subsection-title">Microglial SSTR2/5: Reactive Priming and Low-Plasticity Bias</h3>
+<p>On microglia, SSTR2/5 activation favors a <strong>low-plasticity, high-surveillance state</strong>:</p>
+<ul>
+<li>Baseline microglial morphology and gene expression shift toward heightened vigilance, with lower thresholds for activation by danger signals (LPS, mtDNA, SPARC, complement)</li>
+<li>Once activated, microglia are more likely to adopt or maintain an <strong>M1-like pro-inflammatory profile</strong>, with increased production of IL‑1β, IL‑6, TNF‑α, and complement factors that drive A1 astrocyte conversion</li>
+</ul>
+<p>The same level of LPS, toxin exposure, or synaptic debris will produce <strong>more robust and persistent microglial activation</strong> in an SST-elevated context. Consequently, the glial arm of the cascade becomes easier to engage and harder to resolve.</p>
+</div>
+</div>
+</section>
+<!-- L2D -->
+<section class="level-section" id="L2D">
+<div class="level-header">
+<span class="level-badge teal">L2D</span>
+<div>
+<h2 class="level-title">SST Effects on the Gut</h2>
+<p class="level-subtitle">Somatostatin-mediated gastrointestinal brake linking stress to malabsorption and dysbiosis</p>
+</div>
+</div>
+<div class="pathway-box">
+<p class="pathway-label">Directional shorthand</p>
+<div class="pathway-chain">
+<span class="node-highlight">SST ↑</span><span class="arrow">→</span>gastric acid ↓ · pancreatic enzymes ↓ · bile flow ↓ · intestinal motility ↓<br/>
+<span class="arrow">→</span> amino acid absorption ↓ (tryptophan, tyrosine, phenylalanine)<br/>
+<span class="arrow">→</span> microbiome shift and dysbiosis<br/>
+<span class="arrow">→</span> disrupted gut–brain signaling and metabolic support
+    </div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 1</p>
+<h3 class="subsection-title">Suppression of Gastric Acid, Pancreatic Enzymes, and Bile</h3>
+<p>SST exerts potent inhibitory effects along the upper GI tract: inhibition of parietal cells reduces luminal acidity, impairing protein denaturation and peptide breakdown; reduced exocrine pancreatic secretion compromises digestion of proteins, fats, and carbohydrates; inhibition of cholecystokinin-mediated gallbladder contraction reduces lipid absorption and fat-soluble nutrient uptake. Together, these effects create a <strong>functional hypodigestive state</strong>, in which macronutrients and cofactors are incompletely processed before reaching the small intestine.</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card gold-accent">
+<p class="subsection-num">Section 2</p>
+<h3 class="subsection-title">Reduced Intestinal Motility and Malabsorption of Amino Acids</h3>
+<p>SST also slows <strong>intestinal motility</strong>, altering peristaltic patterns and transit time. Hypomotility leads to prolonged stasis of luminal contents, increasing opportunities for bacterial overgrowth. Segmental dysmotility contributes to alternating constipation and loose stools consistent with many ASD-associated GI presentations.</p>
+<p>Under these conditions, absorption of critical amino acids is impaired:</p>
+<ul>
+<li><strong>Tryptophan</strong> — precursor for serotonin and kynurenine pathway metabolites, central to the IDO1 and NAD⁺ logic of the cascade</li>
+<li><strong>Tyrosine and phenylalanine</strong> — precursors for catecholamines and other neuromodulators</li>
+</ul>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 3–4</p>
+<h3 class="subsection-title">Microbiome Shifts, Dysbiosis, and the Bidirectional Stress–Gut–Brain Loop</h3>
+<p>Lower gastric acidity permits increased survival of ingested organisms; reduced pancreatic enzymes and bile change nutrient profiles available to colonic bacteria; slowed transit promotes SIBO-like states. These changes promote <strong>dysbiosis</strong>, which increases harmful metabolite production and raises the likelihood of barrier disruption and LPS translocation — feeding back into the gut/LPS → TLR4 → NF‑κB inflammatory channel.</p>
+<p>The bidirectional loop runs:</p>
+<div class="shorthand-inline">
+        Stress / inflammation<span class="arr">→</span>SST ↑<span class="arr">→</span>GI suppression + dysbiosis<span class="arr">→</span>LPS translocation · nutrient deficits · metabolic strain<span class="arr">→</span>further stress and neuroinflammation
+      </div>
+<p>Level 2D positions SST on the gut as a <strong>key coupling point</strong>: it translates chronic stress and inflammation into persistent gut–brain disruption that reinforces the IDO1/kynurenine pathway, mitochondrial stress, and microglial activation.</p>
+</div>
+</div>
+</section>
+<!-- ════════════════════════════════
+     LEVELS 3–5 — CORE BIOCHEMICAL HUB
+════════════════════════════════ -->
+<div class="chapter-divider"><span>Levels 3–5 — Core Biochemical and Control Hub</span></div>
+<!-- L3A -->
+<section class="level-section" id="L3A">
+<div class="level-header">
+<span class="level-badge dark">L3A</span>
+<div>
+<h2 class="level-title">Kynurenine Pathway: Tryptophan Hijack and Functional NAD⁺ Insufficiency</h2>
+<p class="level-subtitle">Inflammation-driven diversion of tryptophan and creation of a functional NAD⁺ bottleneck</p>
+</div>
+</div>
+<div class="pathway-box">
+<p class="pathway-label">Directional shorthand</p>
+<div class="pathway-chain">
+<span class="node-highlight">Tryptophan</span><br/>
+<span class="arrow">→</span> (IDO1 induction) <span class="arrow">→</span> kynurenine <span class="arrow">→</span> quinolinic acid ↑<br/>
+<span class="parallel">simultaneously</span><br/>
+<span class="arrow">→</span> serotonin ↓<br/>
+<span class="arrow">→</span> NAD⁺ regeneration rate ↓ (relative to demand)<br/>
+<span class="arrow">→</span> SIRT1 catalytic support insufficient
+    </div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 1</p>
+<h3 class="subsection-title">IDO1 Induction: Inflammatory Control of Tryptophan Fate</h3>
+<p>Pro-inflammatory cytokines (IFN‑γ, TNF‑α, IL‑6) and innate immune signals (e.g., TLR ligands such as LPS) induce <strong>IDO1</strong> transcription and activity in dendritic cells, macrophages, and intestinal and hepatic cells. IDO1 converts tryptophan to N-formylkynurenine, initiating the kynurenine pathway. Two immediate consequences follow: <strong>reduced tryptophan availability</strong> for serotonin synthesis, and <strong>increased flux</strong> into downstream kynurenine metabolites.</p>
+<div class="pathway-tags"><span class="tag">IDO1</span><span class="tag">IFN-γ</span><span class="tag">Kynurenine pathway</span><span class="tag">N-formylkynurenine</span></div>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card red-accent">
+<p class="subsection-num">Section 2</p>
+<h3 class="subsection-title">Quinolinic Acid Accumulation: Neurotoxic Load within the Pathway</h3>
+<p>Under physiological conditions, quinolinic acid is transiently converted by <strong>QPRT</strong> into nicotinic acid mononucleotide (a NAD⁺ precursor). Under chronic inflammatory conditions, IDO1 remains persistently active, driving sustained flux beyond QPRT's finite enzymatic capacity. Quinolinic acid therefore accumulates in microglia and macrophages.</p>
+<p>Quinolinic acid is a <strong>potent NMDA receptor agonist</strong> and pro-oxidant: it promotes calcium influx, excitotoxic stress, and ROS generation — contributing a direct neurotoxic and neuroinflammatory burden precisely when regulatory and repair systems are already stressed.</p>
+<div class="pathway-tags"><span class="tag">Quinolinic acid</span><span class="tag">QPRT</span><span class="tag">NMDA receptor agonist</span><span class="tag">Excitotoxicity</span></div>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card navy-accent">
+<p class="subsection-num">Section 3</p>
+<h3 class="subsection-title">Functional NAD⁺ Insufficiency: A Rate Mismatch, Not Absolute Absence</h3>
+<p>The problem is not necessarily absolute NAD⁺ depletion but a <strong>mismatch between NAD⁺ regeneration rate and demand</strong>:</p>
+<ul>
+<li>Chronic inflammation and oxidative stress increase NAD⁺ consumption through PARPs (DNA repair), CD38 (immune cells), and sirtuins (stress adaptation)</li>
+<li>QPRT's capacity to convert quinolinic acid to NAD⁺ is rate-limited and cannot keep pace with the sustained IDO1-driven substrate flood</li>
+</ul>
+<p>Total measurable NAD⁺ may not be zero, but the <strong>dynamic availability of NAD⁺ for SIRT1's catalytic cycles is insufficient</strong> — constituting functional NAD⁺ insufficiency.</p>
+<div class="pathway-tags"><span class="tag">NAD⁺ insufficiency</span><span class="tag">PARP</span><span class="tag">CD38</span><span class="tag">SIRT1 substrate</span></div>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card gold-accent">
+<p class="subsection-num">Section 4</p>
+<h3 class="subsection-title">Triple Consequence: Serotonin, Quinolinic Acid, and SIRT1 Fuel</h3>
+<ol>
+<li><strong>Serotonin depleted</strong> — tryptophan diversion diminishes serotonergic tone in the CNS and gut, affecting mood, sleep, GI motility, and sensory processing</li>
+<li><strong>Quinolinic acid elevated</strong> — chronic NMDA-mediated excitotoxic and oxidative burden amplifies neuronal vulnerability and microglial activation</li>
+<li><strong>NAD⁺ regeneration insufficient to sustain SIRT1 activity</strong> — QPRT-mediated conversion cannot match NAD⁺ consumption rate during chronic inflammatory stress, leaving SIRT1 under-fueled</li>
+</ol>
+<p>Level 3A serves as a <strong>core metabolic hinge</strong>: it transduces chronic inflammatory input into a combined neurochemical, metabolic, and plasticity crisis, explaining why inflammatory states in ASD are consistently associated with serotonin, excitotoxic, and mitochondrial/oxidative stress abnormalities — rather than treating those domains as independent comorbidities.</p>
+</div>
+</div>
+</section>
+<!-- L3B -->
+<section class="level-section" id="L3B">
+<div class="level-header">
+<span class="level-badge dark">L3B</span>
+<div>
+<h2 class="level-title">NAD⁺ Insufficiency: SIRT1 Fuel Depleted</h2>
+<p class="level-subtitle">Loss of SIRT1 function as a substrate-driven failure, not merely a transcriptional defect</p>
+</div>
+</div>
+<div class="pathway-box">
+<p class="pathway-label">Directional shorthand</p>
+<div class="pathway-chain">
+<span class="node-highlight">NAD⁺ availability ↓</span><span class="arrow">→</span>SIRT1 activity ↓<span class="arrow">→</span>coordinated failure of:<br/>
+      1. NF‑κB restraint (inflammation control)<br/>
+      2. PGC‑1α-mediated mitochondrial biogenesis<br/>
+      3. FOXO-linked antioxidant systems<br/>
+      4. CREB/BDNF-related plasticity support
+    </div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Core principle</p>
+<h3 class="subsection-title">Substrate Dependence: Why NAD⁺, Not Just SIRT1 Expression, Is Central</h3>
+<p>SIRT1 requires <strong>NAD⁺ as an obligate cofactor</strong>. During each catalytic cycle, SIRT1 consumes NAD⁺ and generates nicotinamide and O-acetyl-ADP-ribose. When NAD⁺ concentrations fall below a functional threshold, SIRT1's deacetylation capacity decreases irrespective of how much SIRT1 protein is present. In the cascade, this frames SIRT1 failure as primarily <strong>fuel-limited</strong>: the enzyme is present but under-fed, leading to de facto loss of its regulatory influence.</p>
+<p>NAD⁺ is further depleted by increased PARP activity during DNA repair and elevated CD38 activity during immune activation — both consequences of the chronic inflammatory state driven by upstream cascade levels. The defining insight of Level 3B is that <strong>four major regulatory domains fail together</strong> once SIRT1 is under-fueled:</p>
+<ul>
+<li><strong>Inflammation:</strong> NF‑κB restraint lost → p65 remains hyper-acetylated → chronic cytokine elevation</li>
+<li><strong>Mitochondria:</strong> PGC‑1α under-activated → reduced biogenesis and higher ROS</li>
+<li><strong>Antioxidants:</strong> FOXO-linked defenses blunted → glutathione and related systems less adaptive</li>
+<li><strong>Plasticity:</strong> CREB/BDNF support weakened → impaired synaptic consolidation and circuit updating</li>
+</ul>
+<div class="callout gold">
+<p>This synchronous failure transforms a collection of stressors into a <strong>coherent, self-reinforcing network state</strong>. NAD⁺ insufficiency at the SIRT1 node is a central bottleneck through which inflammation, mitochondrial stress, oxidative burden, and plasticity deficits are coordinated and sustained.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- L4A -->
+<section class="level-section" id="L4A">
+<div class="level-header">
+<span class="level-badge dark">L4A</span>
+<div>
+<h2 class="level-title">AMPK / mTOR / Autophagy Dysregulated</h2>
+<p class="level-subtitle">Failure of cellular cleanup and reset under metabolic and NAD⁺ stress</p>
+</div>
+</div>
+<div class="pathway-box">
+<p class="pathway-label">Directional shorthand</p>
+<div class="pathway-chain">
+<span class="node-highlight">SIRT1 ↓ + chronic metabolic stress</span><br/>
+<span class="arrow">→</span> AMPK signaling ↓ / mTOR signaling ↑<br/>
+<span class="arrow">→</span> autophagy ↓ and mitophagy ↓<br/>
+<span class="arrow">→</span> damaged organelles and protein aggregates accumulate<br/>
+<span class="arrow">→</span> inflammatory signaling persists; synaptic remodeling becomes disordered
+    </div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 1–2</p>
+<h3 class="subsection-title">SIRT1–AMPK Coordination and mTOR Overactivity</h3>
+<p>Under physiological conditions, <strong>SIRT1 and AMPK form a coordinated energy-sensing module</strong>: AMPK is activated by increased AMP/ATP and ADP/ATP ratios; SIRT1, fueled by NAD⁺, deacetylates substrates promoting catabolic pathways and stress resistance. Together, they suppress anabolic signaling when energy is scarce and promote autophagy and mitophagy.</p>
+<p>Under NAD⁺ insufficiency and chronic metabolic strain, SIRT1 activity declines, weakening AMPK-supporting pathways. <strong>mTOR</strong>, a key growth and autophagy-suppressing kinase, remains relatively overactive — suppressing macroautophagy (formation and maturation of autophagosomes) and <strong>mitophagy</strong> (targeted autophagic removal of dysfunctional mitochondria). The cell is locked into a <strong>non-resetting growth mode</strong> while damage accumulates.</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card navy-accent">
+<p class="subsection-num">Section 3</p>
+<h3 class="subsection-title">Consequences: Impaired Mitophagy, Debris Accumulation, and Persistent Inflammation</h3>
+<ul>
+<li>Damaged mitochondria persist, continuing to generate ROS and release mtDNA, sustaining NLRP3 inflammasome activation and IL‑1β/IL‑18 production</li>
+<li>Misfolded proteins and aggregated complexes accumulate, including those that can engage pattern-recognition receptors or disrupt synaptic machinery</li>
+<li>Lysosomal load increases and degradative capacity can become saturated</li>
+</ul>
+<p>Accumulated debris functions as a <strong>continuous source of endogenous danger signals</strong>: NLRP3 and NF‑κB are repeatedly re-stimulated by intracellular material rather than new external insults, making the cell self-inflammatory.</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card gold-accent">
+<p class="subsection-num">Section 4</p>
+<h3 class="subsection-title">Synaptic Pruning and Remodeling Dysregulation</h3>
+<p>Neurons and glia use autophagic mechanisms to eliminate synaptic components, adjust spine numbers, and refine networks. When autophagic flux is reduced:</p>
+<ul>
+<li>Excess dendritic spines and synaptic structures are not appropriately removed</li>
+<li>Misfolded or mislocalized synaptic proteins accumulate</li>
+<li>Networks become <strong>over-built locally, under-integrated globally, and resistant to reconfiguration</strong></li>
+</ul>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 5</p>
+<h3 class="subsection-title">Genetic Evidence: PTEN/TSC/Fragile X mTOR Axis as Proof-of-Concept</h3>
+<p>This AMPK/mTOR/autophagy axis is well-documented in genetically defined ASD subtypes:</p>
+<ul>
+<li><strong>PTEN</strong> mutations: alter PI3K/Akt/mTOR signaling; associated with macrocephaly and ASD</li>
+<li><strong>TSC1/TSC2</strong> mutations (Tuberous Sclerosis Complex): mTOR is dysinhibited due to loss of TSC-mediated suppression</li>
+<li><strong>Fragile X syndrome</strong>: FMRP loss affects synaptic translation and mTOR-linked pathways</li>
+</ul>
+<p>The cascade generalizes this mechanistic principle to <strong>idiopathic ASD</strong>, positing that inflammatory and metabolic stress can engage the same axis even in the absence of canonical mTOR-pathway mutations.</p>
+<div class="evidence-box">
+<p class="evidence-label">Evidence note</p>
+<p>The mTOR/autophagy connection in ASD is among the more strongly supported mechanistic claims in this framework, with direct genetic, pharmacological, and animal model evidence from monogenic ASD subtypes.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- L4B -->
+<section class="level-section" id="L4B">
+<div class="level-header">
+<span class="level-badge dark">L4B</span>
+<div>
+<h2 class="level-title">Cleanup Failure Consequences</h2>
+<p class="level-subtitle">How impaired autophagy makes damage persistent rather than transient</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Core argument</p>
+<h3 class="subsection-title">Why Damage Becomes Effectively Permanent</h3>
+<p>Autophagy failure explains three critical observations: (1) damaged mitochondria continue to accumulate even after upstream triggers are partially reduced; (2) excess dendritic spines and local hyper-connectivity persist instead of normalizing; and (3) inflammatory signaling remains self-sustaining because its endogenous substrates — dysfunctional organelles and debris — are never adequately cleared.</p>
+<ul>
+<li><strong>Damaged mitochondria retained</strong> → ROS and mtDNA continuously released → NLRP3 repeatedly re-activated, sustaining caspase‑1, IL‑1β, and IL‑18 independently of new external triggers</li>
+<li><strong>Dendritic spine over-retention</strong> → excess spine density in certain cortical regions; synapses that are mislocalized, weak, or maladaptive are not efficiently removed → local over-connectivity with reduced long-range integration</li>
+<li><strong>Protein aggregate and debris accumulation</strong> → extracellular material activates pattern-recognition receptors on microglia and astrocytes → continuous NF‑κB activation independent of new external insults</li>
+</ul>
+<div class="callout gold">
+<p><strong>Restoring autophagic flux is a prerequisite for structural recovery</strong>, not merely symptomatic improvement. Without functional autophagy/mitophagy, interventions reducing upstream triggers may attenuate new damage creation but cannot efficiently remove the pre-existing pool of dysfunctional mitochondria, excess spines, and accumulated debris.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- L5A -->
+<section class="level-section" id="L5A">
+<div class="level-header">
+<span class="level-badge dark">L5A</span>
+<div>
+<h2 class="level-title">SIRT1 — Master Regulator</h2>
+<p class="level-subtitle">SIRT1 as a NAD⁺-dependent hub coordinating four major regulatory systems</p>
+</div>
+</div>
+<div class="pathway-box">
+<p class="pathway-label">Directional shorthand</p>
+<div class="pathway-chain">
+<span class="node-highlight">SIRT1 activity ↓</span><br/>
+<span class="arrow">→</span> NF‑κB restraint lost <span class="arrow">→</span> NF‑κB ↑<br/>
+<span class="arrow">→</span> PGC‑1α activation ↓<br/>
+<span class="arrow">→</span> FOXO-mediated antioxidant programs ↓<br/>
+<span class="arrow">→</span> CREB/BDNF-related plasticity support ↓
+    </div>
+</div>
+<div class="subsection">
+<div class="subsection-card navy-accent">
+<p class="subsection-num">Overview</p>
+<h3 class="subsection-title">Developmental Timing, Cellular Distribution, and Four-System Hub</h3>
+<p>SIRT1 is widely distributed across key CNS cell types — neurons, astrocytes, microglia, and endothelial cells — and its expression <strong>peaks during synaptogenesis and synaptic pruning</strong>, aligning temporally with critical periods when circuits are established and refined. SIRT1 failure therefore has disproportionate impact in neurodevelopmental conditions, disrupting regulatory control precisely when the system is most actively wiring.</p>
+<p>The four regulatory domains that fail in parallel when NAD⁺ is insufficient:</p>
+<ul>
+<li><strong>NF‑κB restraint (inflammation):</strong> SIRT1 deacetylates p65, reducing NF‑κB's transcriptional activity. When SIRT1 falls, p65 remains hyper-acetylated and NF‑κB drives chronic IL‑6, TNF‑α, IL‑1β production</li>
+<li><strong>PGC‑1α (mitochondrial biogenesis):</strong> SIRT1-mediated deacetylation activates PGC‑1α, promoting mitochondrial replication and respiratory chain function. Loss leads to aging mitochondrial populations with increased ROS</li>
+<li><strong>FOXO (antioxidant defense):</strong> Deacetylated FOXO upregulates catalase, SODs, and glutathione system components. FOXO blunting leaves cells with a statically weakened and dynamically sluggish antioxidant defense</li>
+<li><strong>CREB/BDNF (synaptic plasticity):</strong> SIRT1 supports CREB-dependent gene expression via chromatin remodeling and co-regulatory networks. Loss withdraws co-activation support, contributing to lower BDNF and impaired LTP</li>
+</ul>
+<div class="shorthand-inline">
+<span class="hl">SIRT1 ↓</span><span class="arr">→</span>NF‑κB ↑ <span class="arr">+</span> PGC‑1α ↓ <span class="arr">+</span> FOXO ↓ <span class="arr">+</span> CREB ↓
+      </div>
+<p>When SIRT1 is functionally deficient, all four domains deteriorate together. This synchronous failure is a core reason the ASD cascade behaves as a <strong>self-reinforcing network state</strong>: the master regulator that should coordinate recovery is itself under-fueled and unable to perform its integrative role.</p>
+</div>
+</div>
+</section>
+<!-- L5B-L5D: Outputs 1-3 -->
+<section class="level-section" id="L5B">
+<div class="level-header">
+<span class="level-badge dark">L5B</span>
+<div>
+<h2 class="level-title">SIRT1 Output 1: Inflammation — NF‑κB De-Repression</h2>
+<p class="level-subtitle">Sustained cytokine production, microglial M1 polarization, and astrocyte A1 conversion</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card navy-accent">
+<p class="subsection-num">Mechanism</p>
+<h3 class="subsection-title">SIRT1–NF‑κB: Loss of a Transcriptional Brake</h3>
+<p>SIRT1 deacetylates p65 (RelA), reducing NF‑κB's DNA-binding affinity. When SIRT1 is under-fueled, p65 remains <strong>acetylated</strong> and NF‑κB is effectively "unleashed," with increased promoter occupancy and prolonged transcription of cytokine genes — <strong>IL‑6, TNF‑α, IL‑1β</strong>. This shift is independent of upstream receptor activity; even modest stimuli now drive disproportionate transcriptional responses.</p>
+<div class="shorthand-inline">
+<span class="hl">SIRT1 ↓</span><span class="arr">→</span>NF‑κB p65 hyperacetylated<span class="arr">→</span>cytokines ↑<span class="arr">→</span>M1 microglia + A1 astrocytes
+      </div>
+<p>Sustained cytokine production drives <strong>microglial M1 polarization</strong> (high IL‑6, TNF‑α, IL‑1β, ROS; complement-mediated pruning; chronically primed) and, via the IL‑1β + TNF‑α + C1q triad, drives <strong>astrocyte A1 conversion</strong> — shifting astrocytes from synaptogenic to synapse-antagonistic. This directly feeds into the hevin/SPARC/glypican imbalance at Level 7.</p>
+</div>
+</div>
+</section>
+<section class="level-section" id="L5C">
+<div class="level-header">
+<span class="level-badge dark">L5C</span>
+<div>
+<h2 class="level-title">SIRT1 Output 2: Mitochondria — PGC‑1α Decline</h2>
+<p class="level-subtitle">Loss of mitochondrial biogenesis and NLRP3 feed-forward inflammation</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card gold-accent">
+<p class="subsection-num">Mechanism</p>
+<h3 class="subsection-title">SIRT1–PGC‑1α and the Bioenergetic–Inflammatory Feed-Forward Loop</h3>
+<p>Deacetylated PGC‑1α co-activates transcription factors (NRF1, NRF2, ERRs) at promoters for mitochondrial replication, respiratory chain components, and fatty acid oxidation. When SIRT1 activity falls, <strong>PGC‑1α remains more acetylated and functionally diminished</strong>, reducing mitochondrial renewal.</p>
+<div class="shorthand-inline">
+<span class="hl">SIRT1 ↓</span><span class="arr">→</span>PGC‑1α ↓<span class="arr">→</span>ATP ↓ · ROS ↑<span class="arr">→</span>mtDNA release<span class="arr">→</span><span class="hl">NLRP3 feed-forward inflammation</span>
+</div>
+<p>Elevated ROS and mtDNA activate the NLRP3 inflammasome, driving caspase‑1 and mature IL‑1β/IL‑18. Persistent dysfunctional mitochondria provide an ongoing source of NLRP3 ligands — sustaining innate immune activation <strong>independent of external triggers</strong>. Reduced ATP simultaneously constrains synaptogenesis and synapse maintenance, amplifying vulnerability to the synaptic protein imbalance downstream.</p>
+</div>
+</div>
+</section>
+<section class="level-section" id="L5D">
+<div class="level-header">
+<span class="level-badge dark">L5D</span>
+<div>
+<h2 class="level-title">SIRT1 Output 3: Antioxidants — FOXO Axis Collapse</h2>
+<p class="level-subtitle">Glutathione depletion, unopposed oxidative stress, and hevin misfolding in astrocytes</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Mechanism</p>
+<h3 class="subsection-title">SIRT1–FOXO and the High-Output, Low-Clearance Oxidative State</h3>
+<p>Deacetylated FOXO (e.g., FOXO3a) drives transcription of <strong>catalase, superoxide dismutases, peroxiredoxins, and glutathione system components</strong>. When SIRT1 activity falls, FOXO remains acetylated and <strong>less transcriptionally effective</strong>. GSH levels fall; the balance shifts toward GSSG; the cell's capacity to detoxify ROS and reactive metabolites is reduced.</p>
+<div class="shorthand-inline">
+<span class="hl">SIRT1 ↓</span><span class="arr">→</span>FOXO ↓<span class="arr">→</span>GSH ↓<span class="arr">→</span>ROS damage ↑ (including astrocyte injury and hevin misfolding)
+      </div>
+<p>Astrocytes are particularly sensitive to redox imbalance. Under GSH depletion and ROS excess, astrocytes experience oxidative damage to membranes, organelles, and secretory machinery. For <strong>hevin (SPARCL1)</strong> specifically, oxidative and ER stress can promote misfolding and impaired secretion — reducing functional hevin available to support thalamocortical synapse formation and directly contributing to the synaptogenic protein deficit at Level 7A.</p>
+<p>The overall picture is a <strong>high-output, low-clearance state</strong> for oxidative species: PGC‑1α under-activation increases ROS sources, FOXO under-activation reduces ROS sinks, and the resulting imbalance amplifies mitochondrial injury, glial reactivity, and synaptic instability.</p>
+</div>
+</div>
+</section>
+<!-- L5E -->
+<section class="level-section" id="L5E">
+<div class="level-header">
+<span class="level-badge dark">L5E</span>
+<div>
+<h2 class="level-title">SIRT1 Output 4: Learning — SST + SIRT1 Convergence</h2>
+<p class="level-subtitle">CREB/BDNF suppression from two independent, converging routes — the "lethal loop"</p>
+</div>
+</div>
+<div class="pathway-box">
+<p class="pathway-label">Two converging routes</p>
+<div class="pathway-chain">
+<span class="node-highlight">Route 1 (SIRT1):</span> SIRT1 ↓<span class="arrow">→</span>CREB co-activation ↓<span class="arrow">→</span>BDNF ↓<span class="arrow">→</span>LTP impaired<br/>
+<span class="node-highlight">Route 2 (SST):</span> SST ↑<span class="arrow">→</span>SSTR2/5<span class="arrow">→</span>AC ↓<span class="arrow">→</span>cAMP ↓<span class="arrow">→</span>PKA ↓<span class="arrow">→</span>CREB phosphorylation ↓<span class="arrow">→</span>BDNF ↓<span class="arrow">→</span>LTP impaired
+    </div>
+</div>
+<div class="subsection">
+<div class="subsection-card navy-accent">
+<p class="subsection-num">Convergence</p>
+<h3 class="subsection-title">Two-Sided CREB Suppression and the Hypoplastic Neural State</h3>
+<p>Route 1 (SIRT1 deficiency) acts via co-regulatory and chromatin mechanisms — CREB-target genes are less effectively expressed, BDNF declines, and LTP is impaired. Route 2 (SST elevation) acts via signal-transduction inhibition — SSTR2/5 → Gi → AC inhibition → cAMP ↓ → PKA ↓ → CREB phosphorylation ↓ → BDNF transcription ↓.</p>
+<p>Both routes converge: CREB activity is depressed from upstream signaling (SST/AC/cAMP/PKA) and from downstream co-regulatory (SIRT1) directions simultaneously. During critical developmental windows when CREB-dependent transcription is necessary for building appropriate connectivity and encoding experience, this dual suppression yields a <strong>hypoplastic neural state</strong>: circuits structurally present but functionally rigid, under-refined, and difficult to update.</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card gold-accent">
+<p class="subsection-num">The self-reinforcing loop</p>
+<h3 class="subsection-title">The "Lethal Loop": SIRT1–SST Mutual Reinforcement</h3>
+<div class="loop-chain">
+<div class="loop-step"><span class="loop-step-num">1</span><p>Low SIRT1 → reduced CREB support and poor stress resilience → persistent inflammation</p></div>
+<div class="loop-step"><span class="loop-step-num">2</span><p>Poor resilience and chronic stress → SST remains elevated → AC/cAMP/PKA further suppressed → CREB phosphorylation ↓</p></div>
+<div class="loop-step"><span class="loop-step-num">3</span><p>CREB/BDNF suppression → plasticity impaired → adaptive coping reduced → stress response maintained</p></div>
+<div class="loop-step"><span class="loop-step-num">4</span><p>Ongoing stress and metabolic strain → NAD⁺ pools depleted further → SIRT1 activity ↓ (completing the loop)</p></div>
+</div>
+<div class="callout gold" style="margin-top:12px;">
+<p>Once SIRT1 and SST have both shifted into unfavorable states, <strong>each node reinforces the other's dysfunction</strong> — SIRT1 cannot restore plasticity because SST keeps the system in a low-cAMP, low-CREB state; SST remains elevated because chronic stress and poor adaptation persist in the absence of effective SIRT1-mediated recovery.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ════════════════════════════════
+     LEVELS 6–7 — GLIA & SYNAPSES
+════════════════════════════════ -->
+<div class="chapter-divider"><span>Levels 6–7 — Reactive Glia and Synapse Architecture</span></div>
+<!-- L6A -->
+<section class="level-section" id="L6A">
+<div class="level-header">
+<span class="level-badge teal">L6A</span>
+<div>
+<h2 class="level-title">M1 Microglia</h2>
+<p class="level-subtitle">Pro-inflammatory microglial shift under NF‑κB drive</p>
+</div>
+</div>
+<div class="pathway-box">
+<p class="pathway-label">Directional shorthand</p>
+<div class="pathway-chain">
+<span class="node-highlight">NF‑κB activation ↑</span><br/>
+<span class="arrow">→</span> microglial M1 polarization<br/>
+<span class="arrow">→</span> IL‑1β ↑ + TNF‑α ↑ + C1q ↑<br/>
+<span class="arrow">→</span> astrocyte A1 conversion + complement-mediated synapse pruning
+    </div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 1</p>
+<h3 class="subsection-title">NF‑κB-Driven Transition from Homeostatic to M1-Like State</h3>
+<p>Under physiological conditions, microglia maintain a homeostatic surveillance profile — continuously monitoring the microenvironment and supporting synaptic maturation and pruning in a tightly regulated manner. Chronic NF‑κB activation — driven by SIRT1 failure, LPS/TLR4 signaling, mitochondrial distress, and toxin load — alters microglial gene expression, upregulating surface receptors, cytokines, and enzymes associated with <strong>M1-like activation</strong> while reducing the threshold for activation by additional stimuli (debris, DAMPs).</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card navy-accent">
+<p class="subsection-num">Section 2</p>
+<h3 class="subsection-title">IL‑1β + TNF‑α + C1q Triad: Signal for Astrocyte A1 Conversion</h3>
+<p>Activated M1 microglia release a <strong>signature triad — IL‑1β, TNF‑α, and complement C1q</strong> — which has been identified as the precise signal required to convert astrocytes into the A1 reactive phenotype. A1 astrocytes lose many neuroprotective and synaptogenic functions and gain a profile that is synapse-destabilizing and neurotoxic-permissive.</p>
+<div class="shorthand-inline">
+<span class="hl">NF‑κB ↑</span><span class="arr">→</span>M1 microglia<span class="arr">→</span>IL‑1β + TNF‑α + C1q ↑<span class="arr">→</span>astrocyte A1 conversion
+      </div>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card gold-accent">
+<p class="subsection-num">Section 3</p>
+<h3 class="subsection-title">Complement-Mediated Synaptic Pruning and Loss</h3>
+<p>M1-polarized microglia play a direct structural role through <strong>complement-mediated synapse pruning</strong>: complement proteins (including C1q and downstream C3) tag synapses for removal, and microglia expressing complement receptors recognize and engulf tagged synapses. Under chronic or dysregulated M1 activation, synapse removal becomes <strong>excessive, mistimed, or mislocalized</strong> — leading to loss of connections that are developmentally needed and contributing to aberrant synaptic architecture.</p>
+<p>M1 microglia are therefore not only inflammatory secretors but also <strong>active sculptors of network structure</strong>, with their behavior tightly controlled — or uncontrolled — by upstream NF‑κB activity.</p>
+<div class="pathway-tags"><span class="tag">C1q</span><span class="tag">C3</span><span class="tag">Complement tagging</span><span class="tag">Synapse elimination</span></div>
+</div>
+</div>
+</section>
+<!-- L6B -->
+<section class="level-section" id="L6B">
+<div class="level-header">
+<span class="level-badge teal">L6B</span>
+<div>
+<h2 class="level-title">A1 Reactive Astrocytes</h2>
+<p class="level-subtitle">Astrocyte phenotype shift under microglial inflammatory signaling</p>
+</div>
+</div>
+<div class="pathway-box">
+<p class="pathway-label">Directional shorthand</p>
+<div class="pathway-chain">
+<span class="node-highlight">IL‑1β + TNF‑α + C1q ↑</span> (from M1 microglia)<br/>
+<span class="arrow">→</span> astrocyte conversion to A1 phenotype<br/>
+<span class="arrow">→</span> GFAP ↑ · S100β ↑ · C3 ↑<br/>
+<span class="arrow">→</span> synaptogenic support proteins ↓ · synapse-antagonistic factors ↑
+    </div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 1–2</p>
+<h3 class="subsection-title">A1 Markers and the Reversal of the Synaptogenic Secretome</h3>
+<p>A1 astrocytes exhibit a characteristic molecular signature: <strong>GFAP ↑</strong> (reactive gliosis morphology), <strong>S100β ↑</strong> (heightened astrocytic activation), and <strong>complement C3 ↑</strong> (marking engagement of complement pathways that contribute to synapse tagging and elimination). These markers signal a state less focused on metabolic and synaptogenic support, and more involved in inflammatory and complement-mediated processes.</p>
+<p>Beyond reactivity markers, A1 astrocytes undergo a <strong>functional inversion</strong> of their synaptogenic secretome:</p>
+<ul>
+<li>Under supportive (A2-like) conditions: astrocytes secrete <strong>hevin (SPARCL1)</strong> and <strong>glypicans</strong>, promoting synapse formation and maturation</li>
+<li>In the A1 state: hevin and glypican expression and secretion <strong>decline</strong>, while <strong>synapse-antagonistic factors</strong> such as SPARC increase</li>
+</ul>
+<p>The extracellular environment becomes <strong>actively unfavorable</strong> for stable excitatory synapse formation and maturation. Existing synapses receive less trophic support and more destabilizing signals, predisposing to synaptic weakening and loss — particularly where complement tagging by microglia is also active.</p>
+<div class="pathway-tags"><span class="tag">GFAP</span><span class="tag">S100β</span><span class="tag">Complement C3</span><span class="tag">Hevin ↓</span><span class="tag">SPARC ↑</span></div>
+</div>
+</div>
+</section>
+<!-- ════════════════════════════════
+     LEVEL 7 — SYNAPSE PROTEIN LAYER
+════════════════════════════════ -->
+<div class="chapter-divider"><span>Level 7 — Synapse Protein Imbalance and Connectivity</span></div>
+<!-- L7A -->
+<section class="level-section" id="L7A">
+<div class="level-header">
+<span class="level-badge gold">L7A</span>
+<div>
+<h2 class="level-title">Hevin (SPARCL1) Suppressed</h2>
+<p class="level-subtitle">The synapse builder silenced in A1 astrocytes</p>
+</div>
+</div>
+<div class="pathway-box">
+<p class="pathway-label">Directional shorthand</p>
+<div class="pathway-chain">
+<span class="node-highlight">Hevin (SPARCL1) ↓</span> in A1 astrocytes<br/>
+<span class="arrow">→</span> Neurexin‑1α ↔ Neuroligin‑1 bridging fails<br/>
+<span class="arrow">→</span> thalamocortical and association synapse assembly ↓<br/>
+<span class="arrow">→</span> fewer functional synapses in sensory and social circuits<br/>
+<span style="color:rgba(255,255,255,0.6);font-family:'DM Mono',monospace;font-size:12px;">Neurexin‑1α ←[Hevin]→ Neuroligin‑1 ✗ blocked</span>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 1–2</p>
+<h3 class="subsection-title">Hevin as Neurexin–Neuroligin Bridge and Its Suppression in A1 Astrocytes</h3>
+<p>Hevin is an astrocyte-derived matricellular protein that acts as a <strong>critical organizer of excitatory synapse formation</strong>. It physically bridges <strong>Neurexin‑1α</strong> on the presynaptic terminal and <strong>Neuroligin‑1</strong> on the postsynaptic site, facilitating the initial assembly and stabilization of thalamocortical synapses — which are central to sensory relay and integration.</p>
+<p>In the A1 reactive astrocyte state, hevin production is markedly reduced: A1 astrocytes downregulate <strong>SPARCL1 transcription and/or secretion</strong>, reducing the amount of functional hevin available in the extracellular space. The initiation of new thalamocortical synapses is less efficient and less frequent, particularly in regions already stressed by inflammation and mitochondrial dysfunction.</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card gold-accent">
+<p class="subsection-num">Section 3</p>
+<h3 class="subsection-title">SPARCL1 Mutations and ER Stress: Genetic Convergence</h3>
+<p><strong>SPARCL1 mutations associated with ASD risk</strong> can reduce hevin secretion — either by impairing translation, folding, or trafficking — and can trigger <strong>endoplasmic reticulum (ER) stress</strong>, further disrupting astrocytic function. This places hevin at a convergence point between genetic susceptibility and inflammatory/glial state:</p>
+<ul>
+<li>Genetic SPARCL1 variants can reduce baseline hevin availability, even without A1 conversion</li>
+<li>A1 conversion suppresses hevin production, even without SPARCL1 mutation</li>
+<li>When both are present, hevin depletion and ER stress are <strong>amplified</strong></li>
+</ul>
+<p>Taken together, Level 7A defines hevin as a <strong>synapse builder that is silenced</strong> by A1 astrocyte conversion and genetic vulnerability — leading to under-construction of thalamocortical and social processing circuits central to the ASD connectivity phenotype.</p>
+<div class="pathway-tags"><span class="tag">SPARCL1</span><span class="tag">Neurexin-1α</span><span class="tag">Neuroligin-1</span><span class="tag">Thalamocortical synapses</span><span class="tag">ER stress</span></div>
+</div>
+</div>
+</section>
+<!-- L7B -->
+<section class="level-section" id="L7B">
+<div class="level-header">
+<span class="level-badge gold">L7B</span>
+<div>
+<h2 class="level-title">SPARC Over-Expressed</h2>
+<p class="level-subtitle">Pathological pruning signal and synapse-to-inflammation feedforward loop</p>
+</div>
+</div>
+<div class="pathway-box">
+<p class="pathway-label">Directional shorthand</p>
+<div class="pathway-chain">
+<span class="node-highlight">SPARC ↑</span> (in A1 astrocytes)<br/>
+<span class="arrow">→</span> hevin–Neurexin–Neuroligin bridge blocked<br/>
+<span class="arrow">→</span> synapse elimination ↑, including developmentally required synapses<br/>
+<span class="parallel">feedforward:</span> SPARC as DAMP<span class="arrow">→</span>TLR4 on microglia<span class="arrow">→</span>NF‑κB ↑
+    </div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Section 1–2</p>
+<h3 class="subsection-title">SPARC as Hevin Antagonist and Pathological Pruning Agent</h3>
+<p>SPARC directly interferes with hevin-mediated synaptogenesis: it <strong>binds hevin</strong>, preventing hevin from effectively connecting Neurexin‑1α to Neuroligin‑1. In the presence of elevated SPARC, even when hevin is present, its synaptogenic capacity is <strong>functionally neutralized</strong> — the system shifts from synapse-building to synapse-blocking mode.</p>
+<p>In A1 reactive astrocytes, SPARC is massively over-expressed in response to TNF‑α, IL‑1β, and microglial activation — entering a <strong>pathological range</strong> where it not only modulates but actively removes synapses that developmental circuits required. Synapses in critical circuits (thalamocortical sensory relays, social processing networks) are inappropriately eliminated or destabilized, contributing to under-connectivity in key long-range and relay pathways.</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card navy-accent">
+<p class="subsection-num">Section 3</p>
+<h3 class="subsection-title">SPARC as a DAMP: The Synapse-to-Inflammation Feedforward Loop</h3>
+<p>Secreted SPARC can bind and activate <strong>TLR4 on microglia</strong> — the same innate immune receptor engaged by LPS. TLR4 activation triggers NF‑κB signaling, driving increased production of IL‑1β, TNF‑α, and other inflammatory mediators. This establishes a closed <strong>synapse-to-inflammation feedforward loop</strong>:</p>
+<div class="loop-chain">
+<div class="loop-step"><span class="loop-step-num">1</span><p>SPARC over-expression destabilizes and removes synapses</p></div>
+<div class="loop-step"><span class="loop-step-num">2</span><p>Secreted SPARC signals to microglia as a DAMP → TLR4 → NF‑κB activation</p></div>
+<div class="loop-step"><span class="loop-step-num">3</span><p>NF‑κB sustains M1 microglial polarization and the IL‑1β + TNF‑α + C1q triad</p></div>
+<div class="loop-step"><span class="loop-step-num">4</span><p>Triad maintains A1 astrocyte conversion and SPARC over-expression (completing the loop)</p></div>
+</div>
+<div class="callout">
+<p><strong>Synaptic pathology itself helps maintain neuroinflammation.</strong> The structural deterioration of circuits and the inflammatory state are not merely co-occurring — they are mutually sustaining.</p>
+</div>
+<div class="pathway-tags"><span class="tag">SPARC (DAMP)</span><span class="tag">TLR4</span><span class="tag">NF-κB feedforward</span><span class="tag">Synapse elimination</span></div>
+</div>
+</div>
+</section>
+<!-- L7C -->
+<section class="level-section" id="L7C">
+<div class="level-header">
+<span class="level-badge gold">L7C</span>
+<div>
+<h2 class="level-title">Glypicans 4/6 Irregular</h2>
+<p class="level-subtitle">Synapse maturers impaired: structurally present but functionally silent circuits</p>
+</div>
+</div>
+<div class="pathway-box">
+<p class="pathway-label">Directional shorthand</p>
+<div class="pathway-chain">
+<span class="node-highlight">Glypican 4/6 secretion ↓ or irregular</span> (A1 astrocytes)<br/>
+<span class="arrow">→</span> AMPA receptor recruitment to postsynaptic sites ↓<br/>
+<span class="arrow">→</span> silent synapses persist<br/>
+<span class="arrow">→</span> circuits structurally present but transmission-inefficient
+    </div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Mechanism</p>
+<h3 class="subsection-title">Glypicans as Synapse Maturers and the Silent Synapse Problem</h3>
+<p>Glypicans 4 and 6 stimulate insertion and stabilization of <strong>AMPA receptors (GluA1-containing)</strong> at postsynaptic densities, converting "silent" synapses — those with NMDA receptors but minimal AMPA-mediated current — into <strong>fully functional synapses</strong> participating in normal excitatory transmission.</p>
+<p>A1 reactive astrocytes exhibit irregular glypican 4/6 secretion: expression levels, timing, or release patterns become dysregulated, and local extracellular concentrations no longer reliably support the conversion of silent synapses into fully AMPA-competent synapses. Many structurally formed synapses consequently remain <strong>weak or functionally silent</strong>, contributing little to effective circuit throughput despite their morphological presence.</p>
+<p>The net effect is a <strong>decoupling between anatomical and functional connectivity</strong>: imaging or histological measures may show preserved or even excessive spine density, while electrophysiologically many synapses are inefficient or silent. Networks appear over-connected structurally but under-effective functionally — a configuration supporting <strong>rigid, low-flexibility dynamics</strong>.</p>
+<div class="pathway-tags"><span class="tag">Glypican 4/6</span><span class="tag">AMPA receptor (GluA1)</span><span class="tag">Silent synapses</span><span class="tag">NMDA-only synapses</span></div>
+</div>
+</div>
+</section>
+<!-- L7D -->
+<section class="level-section" id="L7D">
+<div class="level-header">
+<span class="level-badge gold">L7D</span>
+<div>
+<h2 class="level-title">Thalamocortical Circuit</h2>
+<p class="level-subtitle">Under-connected sensory relay from hevin-dependent synapse loss</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Mechanism</p>
+<h3 class="subsection-title">Hevin Dependence, Relay Failure, and Unfiltered Cortical Input</h3>
+<p>Thalamocortical synapses are particularly hevin-dependent: hevin's bridging of <strong>Neurexin‑1α (thalamic presynaptic)</strong> and <strong>Neuroligin‑1 (cortical postsynaptic)</strong> is a key molecular step in assembling these long-range excitatory synapses. When hevin is suppressed, the number of successfully formed thalamocortical synapses declines, and those that do form may be weaker, less stable, and more vulnerable to SPARC-mediated elimination.</p>
+<div class="shorthand-inline">
+        Thalamus <span class="hl">⟷</span> Cortex: hevin-dependent synapses ↓
+      </div>
+<p>The result is an <strong>under-connected sensory relay</strong>: fewer effective synaptic contacts, reduced capacity for precise gating and state-dependent modulation of sensory input. Thalamus normally provides a gated, pre-processed stream of sensory data to cortex; with fewer and weaker synapses, cortical regions receive input that is less modulated by normal thalamic gating mechanisms, less synchronized, and less reliably timed.</p>
+<p>This mismatch between <strong>weak relay structure</strong> and <strong>locally over-connected, low-plasticity cortical circuits</strong> can produce heightened sensitivity to some stimuli (due to local amplification of poorly gated input) and fragmented or incoherent cross-modal integration — cortex is asked to interpret sensory signals that arrive without the usual thalamic scaffolding.</p>
+<div class="pathway-tags"><span class="tag">Thalamocortical relay</span><span class="tag">Sensory gating</span><span class="tag">Hevin-dependent synapses</span><span class="tag">Cortical integration</span></div>
+</div>
+</div>
+</section>
+<!-- L7E -->
+<section class="level-section" id="L7E">
+<div class="level-header">
+<span class="level-badge gold">L7E</span>
+<div>
+<h2 class="level-title">Connectivity Signature</h2>
+<p class="level-subtitle">Hyper-local connectivity with reduced long-range integration</p>
+</div>
+</div>
+<div class="pathway-box">
+<p class="pathway-label">Directional shorthand</p>
+<div class="pathway-chain">
+<span class="node-highlight">Hevin ↓ + SPARC ↑ + glypican irregularity</span><br/>
+<span class="arrow">→</span> excessive retention and formation of short-range/local synapses in some regions<br/>
+<span class="arrow">→</span> failure to form and maintain hevin-dependent long-range and relay synapses<br/>
+<span class="arrow">→</span> <span class="node-highlight">local connectivity ↑ · long-range integration ↓</span>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Mechanism</p>
+<h3 class="subsection-title">Coexistence of Over- and Under-Connectivity</h3>
+<p>Several upstream factors promote <strong>excess local connectivity</strong>: autophagy/mitophagy impairment reduces synaptic pruning, allowing excess dendritic spines and local synapses to persist; A1 astrocyte conversion and glypican irregularity interfere with normal activity-dependent refinement; SPARC and complement activity may selectively remove some synapses while leaving clusters of others intact.</p>
+<p>In contrast, several mechanisms selectively weaken <strong>long-range and relay connectivity</strong>: hevin suppression reduces formation of thalamocortical and hevin-dependent excitatory synapses critical for inter-regional communication; SPARC over-expression destabilizes association connections; glypican irregularity leaves many formed synapses functionally immature or silent.</p>
+<p>The key conceptual point is that <strong>both over- and under-connectivity are present simultaneously, but at different scales and locations</strong>:</p>
+<ul>
+<li><strong>Local connectivity ↑</strong> — excess insufficiently-pruned synapses within cortical regions; high clustering of short-range connections contributing to intense, narrowly focused processing</li>
+<li><strong>Long-range integration ↓</strong> — reduced effective connectivity between distant hubs and between thalamus and cortex; weak coordination across networks necessary for global integration of sensory, social, and cognitive information</li>
+</ul>
+<p>This pattern aligns with neuroimaging findings in ASD — increased local functional and structural connectivity in certain cortical regions alongside decreased long-range connectivity between major networks (default mode, salience, fronto-temporal, sensory). It provides a network-level substrate for coexisting strengths (hyper-specialized local functions) and weaknesses (impaired cross-network coordination and flexible adaptation) in the ASD profile.</p>
+<div class="pathway-tags"><span class="tag">Local over-connectivity</span><span class="tag">Long-range under-connectivity</span><span class="tag">Dendritic spine excess</span><span class="tag">Default mode network</span></div>
+</div>
+</div>
+</section>
+<!-- ════════════════════════════════
+     LEVEL 8 — OBSERVABLE OUTPUTS
+════════════════════════════════ -->
+<div class="chapter-divider"><span>Level 8 — Observable Expressions of the Cascade</span></div>
+<!-- L8A -->
+<section class="level-section" id="L8A">
+<div class="level-header">
+<span class="level-badge">L8A</span>
+<div>
+<h2 class="level-title">Sensory Over-Reactivity</h2>
+<p class="level-subtitle">Sensory over-responsivity from under-gated thalamocortical input</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Mechanism → Expression</p>
+<h3 class="subsection-title">Under-Gated Relay, Cortical Amplification, and Clinical Presentation</h3>
+<p>Reduced hevin-dependent thalamocortical synapse formation and weakened long-range relay connectivity mean that sensory signals reach cortex with <strong>insufficient thalamic gating and preprocessing</strong>. Rather than being filtered, prioritized, and integrated before entering conscious awareness, sensory input arrives in a relatively raw and unmodulated form.</p>
+<p>Cortical regions receiving this input operate within a network characterized by local hyper-connectivity, immature synapses, and reduced long-range integration. Sensory signals are less synchronized and less context-modulated, but may be <strong>locally amplified by dense, rigid microcircuits</strong> — experienced as intense, poorly organized, and difficult to predict, rather than smoothly graded and contextually framed.</p>
+<p>At the behavioral level, this network configuration manifests as <strong>sensory over-reactivity</strong>: heightened or atypical responses to sound, touch, light, and texture; over-responsivity reported in a large majority of autistic individuals. These are not isolated sensory quirks but expected downstream expressions of the thalamocortical and connectivity alterations described in earlier cascade levels.</p>
+<div class="pathway-tags"><span class="tag">Thalamic gating failure</span><span class="tag">Local amplification</span><span class="tag">Sensory over-responsivity</span><span class="tag">Sound / touch / light / texture</span></div>
+</div>
+</div>
+</section>
+<!-- L8B -->
+<section class="level-section" id="L8B">
+<div class="level-header">
+<span class="level-badge">L8B</span>
+<div>
+<h2 class="level-title">Social Cognition Difficulty</h2>
+<p class="level-subtitle">Long-range integration deficits in social cognition networks</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Mechanism → Expression</p>
+<h3 class="subsection-title">Social Circuit Under-Development as a Network Integration Problem</h3>
+<p>Complex social understanding depends on long-range integration among <strong>medial prefrontal cortex (mPFC)</strong> (mental state inference, value and intention attribution), <strong>superior temporal sulcus (STS)</strong> (perception of biological motion, gaze, prosody), and <strong>amygdala</strong> (emotional salience and reward in social signals) — along with temporoparietal junction, posterior cingulate, and associated hubs. Effective social cognition requires synchronized, bidirectional communication across these regions.</p>
+<p>Hevin suppression, SPARC over-expression, glypican irregularity, and autophagy/pruning dysregulation reduce formation and maintenance of long-range excitatory synapses. Structural and functional connectivity among mPFC, STS, and amygdala falls below the level needed for efficient joint processing of social information.</p>
+<p>The behavioral manifestations follow directly from this network-integration failure:</p>
+<ul>
+<li><strong>Theory of mind</strong> — impaired because information from perceptual (STS), emotional (amygdala), and evaluative (mPFC) nodes is not reliably combined into cohesive representations</li>
+<li><strong>Pragmatic language</strong> — compromised, as it depends on integrating linguistic content with social and emotional context across distributed regions</li>
+<li><strong>Social reciprocity</strong> — reduced because the system lacks fast, coordinated updates across the network in response to dynamic social input</li>
+</ul>
+<div class="pathway-tags"><span class="tag">mPFC</span><span class="tag">Superior temporal sulcus</span><span class="tag">Amygdala</span><span class="tag">Theory of mind</span><span class="tag">Pragmatic language</span></div>
+</div>
+</div>
+</section>
+<!-- L8C -->
+<section class="level-section" id="L8C">
+<div class="level-header">
+<span class="level-badge">L8C</span>
+<div>
+<h2 class="level-title">Cognitive Rigidity and Perseveration</h2>
+<p class="level-subtitle">Failure of experience-dependent updating from CREB/BDNF loss and persistent silent synapses</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Mechanism → Expression</p>
+<h3 class="subsection-title">Why Circuits Fail to Update and Remain Structurally "Stuck"</h3>
+<p>Two upstream mechanisms converge: (1) <strong>CREB/BDNF impairment</strong> — SIRT1 deficiency reduces CREB co-activation and BDNF expression, while SST-mediated AC/cAMP/PKA suppression further reduces CREB phosphorylation; (2) <strong>persistence of silent synapses</strong> — glypican 4/6 irregularity leaves many synapses in NMDA-only (silent) states with poor AMPA-receptor recruitment. Together, these factors prevent circuits from updating their synaptic weights effectively in response to experience.</p>
+<p>Activity-induced synaptic changes are less likely to be consolidated; circuits have reduced capacity to encode new contingencies, rules, or environmental regularities. Many synapses are incapable of supporting robust potentiation due to poor AMPA incorporation. Networks carry a significant load of <strong>ineffective connections</strong> that cannot reliably support propagation of new activity patterns — traffic repeatedly traverses the same limited subset of strong connections, while many potential alternative pathways remain under-engaged.</p>
+<p>At the behavioral level:</p>
+<ul>
+<li><strong>Cognitive rigidity</strong> — difficulty shifting mental sets, strategies, or interpretations in response to new information</li>
+<li><strong>Difficulty with transitions</strong> — trouble disengaging from one activity or routine; an inability to reconfigure circuit dynamics smoothly</li>
+<li><strong>Restricted interests</strong> — intense, narrow focus consistent with strong, well-established local circuits and weak flexibility to broaden engagement</li>
+<li><strong>Perseverative patterns</strong> — repetitive thoughts or behaviors reflecting the dominance of well-worn neural routes that are not easily modified</li>
+</ul>
+<div class="pathway-tags"><span class="tag">CREB/BDNF suppression</span><span class="tag">Silent synapses</span><span class="tag">LTP impairment</span><span class="tag">Circuit rigidity</span></div>
+</div>
+</div>
+</section>
+<!-- L8D -->
+<section class="level-section" id="L8D">
+<div class="level-header">
+<span class="level-badge">L8D</span>
+<div>
+<h2 class="level-title">Gastrointestinal Disruption</h2>
+<p class="level-subtitle">Shared inflammatory origin of GI symptoms and autistic traits</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Mechanism → Expression</p>
+<h3 class="subsection-title">Three Converging Mechanisms; One Shared Inflammatory Origin</h3>
+<p>Three mechanisms converge: <strong>gut dysbiosis and barrier failure</strong>, <strong>serotonin depletion via the kynurenine pathway</strong>, and <strong>vagal nerve-mediated inflammatory signaling</strong>.</p>
+<ul>
+<li><strong>Gut dysbiosis and barrier failure (L1B):</strong> maintains LPS flux and chronic TLR4–NF‑κB activation; locally reinforces epithelial tight junction damage and increased permeability ("leaky gut")</li>
+<li><strong>Serotonin depletion (L3A):</strong> IDO1-driven tryptophan diversion depletes enteric serotonin (5-HT), impairing normal regulation of motility, secretion, and sensory signaling. Dysmotility manifests as constipation, irregular transit, or alternating patterns; altered serotonin signaling also influences visceral sensitivity and pain perception</li>
+<li><strong>Vagal inflammatory signaling:</strong> inflamed and dysbiotic gut tissue activates vagal sensory fibers projecting to brainstem nuclei, modulating autonomic balance, stress pathways, and microglial activation — providing a rapid, bidirectional gut–brain communication channel</li>
+</ul>
+<p>The clinical GI phenotype — <strong>dysmotility, constipation, visceral pain, and leaky gut</strong> — is not an incidental comorbidity but a direct consequence of the same processes (LPS/IDO1, NAD⁺ insufficiency, SST elevation, glial activation) that shape brain development and connectivity. GI symptoms provide a peripheral window into the activity of the central inflammatory and metabolic cascade.</p>
+<div class="pathway-tags"><span class="tag">Enteric serotonin</span><span class="tag">Dysmotility</span><span class="tag">Vagal signaling</span><span class="tag">Leaky gut</span><span class="tag">Visceral pain</span></div>
+</div>
+</div>
+</section>
+<!-- L8E -->
+<section class="level-section" id="L8E">
+<div class="level-header">
+<span class="level-badge">L8E</span>
+<div>
+<h2 class="level-title">Sleep Dysregulation and Mood Instability</h2>
+<p class="level-subtitle">Serotonin loss, circadian disruption, and HPA axis dysregulation</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Mechanism → Expression</p>
+<h3 class="subsection-title">Two Converging Pathways to Sleep and Mood Disruption</h3>
+<p><strong>Pathway 1 — Serotonin/melatonin:</strong> IDO1-driven tryptophan diversion reduces substrate availability for serotonin synthesis. Reduced serotonin in the pineal and related tissues impairs synthesis of <strong>melatonin</strong> (derived from serotonin via N-acetylation and O-methylation). Melatonin insufficiency disrupts circadian signaling, causing impaired sleep onset, fragmented sleep, and altered timing of sleep-wake cycles. Circadian dysregulation then feeds back into stress and metabolic systems, further destabilizing the SIRT1/SST balance and autophagy/cleanup processes.</p>
+<p><strong>Pathway 2 — HPA axis:</strong> Chronic stress and inflammatory load contribute to HPA axis dysregulation — initially elevated or flattened cortisol curves with loss of normal diurnal variation, and over time cortisol blunting or exhaustion patterns. Abnormal cortisol dynamics are linked to emotional dysregulation, including rapid mood shifts, irritability, and difficulty recovering from stress. <strong>Anxiety and low frustration tolerance</strong> arise as circuits involved in threat detection, reward, and executive control (amygdala, prefrontal cortex, hippocampus) are repeatedly activated under dysregulated hormonal conditions. HPA dysregulation also maintains elevated SST tone, creating an additional feedback that further suppresses plasticity and gut function.</p>
+<p>Sleep dysregulation and mood instability are not isolated psychiatric comorbidities but <strong>predictable downstream outputs</strong> of inflammation-driven tryptophan diversion, chronic stress, and HPA/SST activation — integral expressions of the same inflammatory, metabolic, and stress-regulatory framework driving the core neural and behavioral features of autism.</p>
+<div class="pathway-tags"><span class="tag">Melatonin synthesis ↓</span><span class="tag">Circadian disruption</span><span class="tag">HPA axis</span><span class="tag">Cortisol dysregulation</span><span class="tag">Anxiety</span></div>
+</div>
+</div>
+</section>
+<!-- ════════════════════════════════
+     SELF-SUSTAINING FEEDBACK LOOP
+════════════════════════════════ -->
+<div class="chapter-divider" id="loop"><span>Self-Sustaining Feedback Loop — Why the Cascade Persists</span></div>
+<section class="level-section">
+<div class="level-header">
+<span class="level-badge" style="background:#b5433a;">↻</span>
+<div>
+<h2 class="level-title">Transition from Trigger-Dependent Pathology to a Self-Maintaining Network State</h2>
+<p class="level-subtitle">Three interlocking arms that sustain the cascade without ongoing external insults</p>
+</div>
+</div>
+<p style="color:var(--text-mid);font-size:0.97rem;margin-bottom:28px;">Once the ASD cascade is fully engaged, it no longer requires ongoing external triggers to persist. Instead, interlocking feedback loops among inflammation, metabolism, autophagy, glial state, and synaptogenesis sustain a stable, maladaptive network configuration. Three major arms — <strong>SIRT1/NF‑κB</strong>, <strong>AMPK/mTOR/autophagy</strong>, and <strong>SST/CREB</strong> — mutually reinforce one another.</p>
+<div class="loop-arm arm1">
+<h4>Arm 1 — Inflammatory–Metabolic Loop: IDO1 → NAD⁺ Insufficiency → SIRT1 Failure</h4>
+<p>Chronic inflammation keeps IDO1 induced, continuing the tryptophan hijack. Quinolinic acid accumulates faster than QPRT can convert it to NAD⁺, yielding functional NAD⁺ insufficiency. With SIRT1 suppressed:</p>
+<ul>
+<li>NF‑κB is no longer restrained → inflammation increases further</li>
+<li>PGC‑1α activation falls → mitochondrial biogenesis and repair decline</li>
+<li>FOXO-mediated antioxidant defenses weaken → oxidative damage increases</li>
+</ul>
+<div class="shorthand-inline" style="margin-top:12px;">
+      Inflammation<span class="arr">→</span>IDO1 ↑<span class="arr">→</span>functional NAD⁺ insufficiency<span class="arr">→</span>SIRT1 failure<span class="arr">→</span>NF‑κB de-repression<span class="arr">→</span>more inflammation<span class="arr">→</span>deeper NAD⁺ insufficiency
+    </div>
+</div>
+<div class="loop-arm arm2">
+<h4>Arm 2 — AMPK/mTOR/Autophagy Loop: Cleanup Failure and Persistent Debris</h4>
+<p>NAD⁺ insufficiency and metabolic strain impair the AMPK–mTOR–autophagy axis: SIRT1 and AMPK are under-supported, mTOR remains relatively overactive, and autophagy and mitophagy are impaired. Damaged mitochondria and cellular debris are not cleared:</p>
+<ul>
+<li>Damaged mitochondria persist → excess ROS and mtDNA → NLRP3 inflammasomes repeatedly activated → NF‑κB re-activated</li>
+<li>Protein aggregates and membrane debris accumulate → ongoing ligands for inflammatory pathways</li>
+<li>Excess dendritic spines persist → local over-connectivity structurally locked in</li>
+</ul>
+<div class="shorthand-inline" style="margin-top:12px;">
+      Autophagy/mitophagy ↓<span class="arr">→</span>damaged mitochondria + debris ↑<span class="arr">→</span>NLRP3 and NF‑κB re-activated<span class="arr">→</span>more metabolic stress<span class="arr">→</span>AMPK further under-supported / mTOR further overactive<span class="arr">→</span>autophagy further impaired
+    </div>
+</div>
+<div class="loop-arm arm3">
+<h4>Arm 3 — SST/CREB Loop: Chronic Plasticity Suppression and Glial/Synaptic Pathology</h4>
+<p>Chronic stress, inflammatory load, and metabolic strain maintain elevated SST. SST → SSTR2/5 → AC ↓ → cAMP ↓ → PKA ↓ → CREB phosphorylation chronically suppressed. BDNF falls, learning circuits cannot remodel. In parallel:</p>
+<ul>
+<li>SST signaling on astrocytes: hevin and glypican secretion suppressed, SPARC ↑, worsening synapse-protein imbalance</li>
+<li>M1 microglia → A1 astrocytes → SPARC over-expression → blocks hevin-mediated synaptogenesis → promotes synapse elimination → SPARC as DAMP at TLR4 → NF‑κB re-activated</li>
+</ul>
+<div class="shorthand-inline" style="margin-top:12px;">
+      Stress/inflammation<span class="arr">→</span>SST ↑<span class="arr">→</span>CREB suppressed<span class="arr">→</span>BDNF ↓ · plasticity impaired<span class="arr">→</span>stress coping fails<span class="arr">→</span>stress and metabolic strain persist<span class="arr">→</span>SST remains elevated
+    </div>
+</div>
+<div class="callout gold" style="margin-top:24px;">
+<p><strong>Convergence of the three arms:</strong> Together, they ensure that inflammation persists (internal sources continuously reactivate immune pathways), plasticity remains suppressed (circuits cannot reorganize sufficiently to exit the maladaptive state), and structural abnormalities (excess local spines, under-connected long-range relays) are maintained. The ASD biological state becomes a self-sustaining network condition that is <strong>intrinsically self-perpetuating, independent of any single external trigger</strong>.</p>
+</div>
+</section>
+<!-- ════════════════════════════════
+     INTERVENTION LOGIC
+════════════════════════════════ -->
+<div class="chapter-divider" id="intervention"><span>Intervention Logic — Working Upstream on Both Nodes</span></div>
+<section class="level-section">
+<div class="level-header">
+<span class="level-badge teal">→</span>
+<div>
+<h2 class="level-title">Simultaneous Upstream Support for SIRT1 and SST Arms</h2>
+<p class="level-subtitle">Why single-target strategies are insufficient and a coordinated upstream approach is required</p>
+</div>
+</div>
+<div class="callout navy" style="margin-bottom:28px;">
+<p>Both SIRT1 deficiency and SST elevation independently suppress CREB/BDNF-mediated plasticity, and both are driven by overlapping upstream inflammatory and metabolic stressors. Once the self-sustaining loop is established, interventions aimed at a single node are unlikely to produce durable change. Effective biological support must act on multiple points in the chain simultaneously.</p>
+</div>
+<div class="subsection">
+<div class="subsection-card navy-accent">
+<p class="subsection-num">Sequential logic</p>
+<h3 class="subsection-title">Stepwise Upstream-to-Downstream Support Strategy</h3>
+<ol>
+<li><strong>Restore NAD⁺ pools</strong> — use NAD⁺ precursors and reduction of NAD⁺ drains (excessive PARP/CD38 activity) to address functional NAD⁺ insufficiency; provide adequate substrate for SIRT1 and other NAD⁺-dependent processes</li>
+<li><strong>Reactivate SIRT1</strong> — with improved NAD⁺ availability, support SIRT1 activity; re-engage SIRT1 control over NF‑κB, PGC‑1α, FOXO, and CREB-related programs</li>
+<li><strong>Suppress NF‑κB and quiet microglia</strong> — combine SIRT1 restoration with direct NF‑κB suppression and anti-inflammatory support to reduce IL‑6, TNF‑α, IL‑1β, microglial M1 polarization, IDO1 drive, and A1 astrocyte/SPARC over-expression</li>
+<li><strong>Reduce SST release triggers and normalize HPA/stress tone</strong> — address chronic stress, sleep disruption, metabolic strain, and inflammatory signals that elevate SST; lower SST tone so that AC/cAMP/PKA/CREB signaling can recover</li>
+<li><strong>Normalize astrocyte phenotype and reduce SPARC</strong> — as inflammation and SST decline, support reversion away from A1 astrocytes; aim for hevin and glypican restoration and SPARC reduction to re-establish a synaptogenic astrocyte profile</li>
+<li><strong>Support hevin/glypican-driven synaptogenesis</strong> — facilitate formation and maturation of excitatory synapses, particularly in thalamocortical and associative circuits, by optimizing astrocyte support, mitochondrial function, and redox balance</li>
+<li><strong>Reopen the CREB-mediated learning pathway</strong> — with SIRT1 active, SST reduced, AC/cAMP/PKA restored, and synaptogenic support in place, CREB and BDNF pathways can resume normal roles in LTP and circuit refinement; restoring the capacity for experience-dependent plasticity</li>
+</ol>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-card">
+<p class="subsection-num">Intervention axes</p>
+<h3 class="subsection-title">Coordinated Upstream Levers — Not a Single Target</h3>
+<div class="intervention-grid">
+<div class="axis-card">
+<p class="axis-label">NAD⁺ precursors</p>
+<p>Restore functional NAD⁺ sufficiency and fuel SIRT1 (e.g., NMN/NR with support of NAD⁺ salvage pathway)</p>
+</div>
+<div class="axis-card">
+<p class="axis-label">SIRT1 activators + NAD⁺ drain reduction</p>
+<p>Enhance SIRT1 activity and limit competing NAD⁺ consumption (careful PARP/CD38 modulation)</p>
+</div>
+<div class="axis-card">
+<p class="axis-label">NF‑κB suppressors / anti-inflammatory support</p>
+<p>Reduce cytokine production, IDO1 drive, and microglial M1 activation (targeted polyphenols, omega-3, anti-inflammatory strategies)</p>
+</div>
+<div class="axis-card">
+<p class="axis-label">Stress / SST reduction + HPA stabilization</p>
+<p>Lower chronic SST tone via sleep/circadian repair, stress management, and metabolic optimization to enable AC/cAMP/PKA/CREB recovery</p>
+</div>
+<div class="axis-card">
+<p class="axis-label">Gut repair</p>
+<p>Close the LPS gate (barrier integrity), reduce dysbiosis, lower systemic inflammatory and IDO1 pressure — breaking a primary upstream driver</p>
+</div>
+<div class="axis-card">
+<p class="axis-label">Antioxidants + redox support</p>
+<p>Restore glutathione and FOXO-axis antioxidant systems, mitigating ROS-driven mitochondrial and synaptic damage</p>
+</div>
+<div class="axis-card">
+<p class="axis-label">Mitochondrial support</p>
+<p>Improve ATP production and reduce ROS by supporting mitochondrial biogenesis (PGC‑1α axis), decreasing NLRP3/inflammasome re-activation</p>
+</div>
+<div class="axis-card">
+<p class="axis-label">All interventions require clinical supervision</p>
+<p>This framework is not a treatment protocol. All intervention decisions must involve a qualified clinician familiar with the individual's full clinical picture.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+
+
+<div id="framework-disclaimer" class="framework-notice">
+  <div class="framework-notice-inner">
+    <div class="notice-icon">i</div>
+    <p class="notice-text"><strong>Theoretical framework — not clinical guidance.</strong> The Autism Spectrum Disorder (ASD) Cascade is a systems-biology model integrating peer-reviewed findings across immunology, metabolism, gut biology, and neuroscience into a proposed mechanistic map. Individual components are supported by published research; the full integrated cascade has not been validated as a unified model in large clinical trials. It is intended as a research-informed framework — not a diagnostic tool or treatment protocol. All intervention decisions require qualified clinical oversight. For the evidence base, see the <em>ASD Cascade Citations</em> document in this suite.</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+<div class="footer-stripe"></div>
+<div class="footer-inner">
+<div class="footer-top">
+<div>
+<p class="footer-brand">Decoding Autism Now</p>
+<h2 class="footer-title">Biology of Autism — Molecular Pathways Explained</h2>
+<p class="footer-tagline">A detailed mechanistic guide to the cascade levels linking upstream stress, control-node failure, glial reactivity, synapse remodeling, and autism’s core features.</p>
+</div>
+<div class="footer-actions">
+<div class="footer-links">
+<a class="footer-link" href="index.html">Home</a>
+<a class="footer-link" href="01_Molecular_Origins_Biology_of_Autism.html">Start Here</a>
+<a class="footer-link" href="02_Cascade_Map_Biology_of_Autism.html">Cascade Map</a>
+<a class="footer-link" href="03_Cascade_Explained_Biology_of_Autism.html">Cascade Explained</a>
+<a class="footer-link" href="05_Metabolic_Pathways_Map_Biology_of_Autism.html">Pathways Map</a>
+<a class="footer-link" href="08_Intervention_Logic_Biology_of_Autism.html">Intervention</a>
+<a class="footer-link" href="10_Evidence_and_Citations_Biology_of_Autism.html">Evidence</a>
+<a class="footer-link" href="https://www.youtube.com/@DecodingAutismNow" rel="noopener noreferrer" target="_blank">YouTube</a>
+</div>
+<p class="footer-disclaimer">This content is for informational purposes only and should not be considered medical advice, diagnosis, or treatment. Always consult with a healthcare professional before making any changes to your health routines or treatment regimen.</p>
+</div>
+</div>
+<div class="footer-bottom">
+<p class="footer-meta">Biology of Autism — Molecular Pathways Explained | Decoding Autism Now</p>
+</div>
+</div>
+</footer>
+
+</body>
+</html>

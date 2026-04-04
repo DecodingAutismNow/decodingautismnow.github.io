@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EH3TWPN49H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EH3TWPN49H');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biology of Autism — Cascade Explained | Decoding Autism Now</title>
+<meta property="og:title" content="Biology of Autism — Cascade Explained | Decoding Autism Now">
+<meta property="og:description" content="A plain-language walk-through of the biological cascade model — from upstream pressures to observable expressions.">
+<meta property="og:image" content="https://decodingautismnow.com/images/OG-03.png">
+<meta property="og:url" content="https://decodingautismnow.com/03_Cascade_Explained_Biology_of_Autism.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Biology of Autism — Cascade Explained | Decoding Autism Now">
+<meta name="twitter:description" content="A plain-language walk-through of the biological cascade model — from upstream pressures to observable expressions.">
+<meta name="twitter:image" content="https://decodingautismnow.com/images/OG-03.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy:#0f2342;
+    --teal:#1e6b72;
+    --teal-light:#2a9da6;
+    --gold:#c8923a;
+    --gold-light:#e8b86d;
+    --cream:#faf7f2;
+    --warm-white:#ffffff;
+    --text-dark:#1a1a2e;
+    --text-mid:#3d4560;
+    --text-light:#6b7494;
+    --rule:#d8cfc4;
+    --accent-bg:#eef8f9;
+    --gold-bg:#fdf6ec;
+    --tag-bg:rgba(30,107,114,0.08);
+  }
+
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body {
+    font-family:'Source Serif 4', Georgia, serif;
+    background:var(--cream);
+    color:var(--text-dark);
+    font-size:17px;
+    line-height:1.78;
+  }
+
+  /* LOCKED 07 TOPBAR / NAV */
+  .topbar {
+    position:fixed; top:0; left:0; right:0; z-index:1000;
+    background:var(--navy); border-bottom:2px solid var(--gold);
+  }
+  .topbar-inner {
+    max-width:960px; margin:0 auto; padding:10px 20px;
+    display:flex; justify-content:space-between; align-items:center; gap:18px;
+  }
+  .topbar-brand {
+    font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em;
+    text-transform:uppercase; color:var(--teal-light); margin-bottom:2px;
+  }
+  .topbar-title {
+    font-family:'Source Serif 4', serif; font-size:14px; font-weight:600;
+    color:#fff; line-height:1.2;
+  }
+  .topbar-home {
+    font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.12em;
+    text-transform:uppercase; color:rgba(255,255,255,.82); text-decoration:none;
+    border:1px solid rgba(255,255,255,.20); border-radius:3px; padding:5px 10px;
+    white-space:nowrap;
+  }
+  .topbar-home:hover { color:#fff; border-color:rgba(255,255,255,.45); }
+
+  .sticky-docnav {
+    position:fixed; top:57px; left:0; right:0; z-index:999;
+    background:rgba(255,255,255,.97); backdrop-filter:blur(8px);
+    border-bottom:1px solid #d8cfc4; box-shadow:0 2px 12px rgba(15,35,66,.08);
+  }
+  .sticky-docnav-inner {
+    max-width:960px; margin:0 auto; padding:8px 20px;
+    display:flex; gap:7px; flex-wrap:wrap; align-items:center;
+  }
+  .sdn-pill {
+    font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.05em;
+    text-decoration:none; border-radius:999px; padding:6px 12px; white-space:nowrap;
+    opacity:.92; transition:background .15s, opacity .15s, transform .15s;
+  }
+  .sdn-pill:hover { opacity:1; transform:translateY(-1px); }
+  .sdn-pill.teal { color:#1e6b72; background:rgba(30,107,114,.08); border:1px solid rgba(30,107,114,.22); }
+  .sdn-pill.gold { color:#8a5c1a; background:rgba(200,146,58,.08); border:1px solid rgba(200,146,58,.25); }
+  .sdn-pill.navy { color:#0f2342; background:rgba(15,35,66,.06); border:1px solid rgba(15,35,66,.18); }
+  .sdn-pill.active { color:#5a3a08; background:rgba(200,146,58,.20); border-color:rgba(200,146,58,.55); font-weight:500; opacity:1; }
+  .sdn-divider { width:1px; height:14px; background:#d8cfc4; margin:0 3px; flex-shrink:0; align-self:center; }
+
+  /* EXACT 07 HERO */
+  .site-header {
+    margin-top:110px; background:var(--navy); color:#fff; position:relative; overflow:hidden;
+  }
+  .header-stripe {
+    height:5px; background:linear-gradient(90deg,var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%);
+  }
+  .header-inner {
+    max-width:960px; margin:0 auto; padding:70px 20px 40px; position:relative; z-index:1;
+  }
+  .header-eyebrow {
+    font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.22em;
+    text-transform:uppercase; color:var(--teal-light); margin-bottom:12px;
+  }
+  .header-title {
+    font-family:'Playfair Display', serif; font-size:clamp(2rem,4.4vw,3rem);
+    line-height:1.12; margin-bottom:10px; color:#fff; font-weight:600;
+  }
+  .header-title .accent-line {
+    display:block; color:var(--gold-light); font-style:italic; font-weight:500;
+  }
+  .header-sub {
+    max-width:640px; color:rgba(255,255,255,.68); font-style:italic; font-weight:300;
+    line-height:1.6; margin-bottom:18px; font-size:1rem;
+  }
+  .header-note {
+    display:inline-block; margin-top:14px; font-family:'DM Mono', monospace; font-size:9px;
+    letter-spacing:.14em; text-transform:uppercase; color:rgba(232,184,109,.82);
+    text-decoration:none; border-bottom:1px solid rgba(232,184,109,.3);
+  }
+  .header-note:hover { border-bottom-color:rgba(232,184,109,.75); }
+  #framework-disclaimer { scroll-margin-top:160px; }
+
+  /* ORIGINAL PAGE 03 CONTENT STYLES */
+  .framework-notice { background:#fffbf2; border-top:1px solid rgba(200,146,58,0.25); border-bottom:1px solid rgba(200,146,58,0.25); }
+  .framework-notice-inner { max-width:900px; margin:0 auto; padding:20px 40px; display:flex; gap:16px; align-items:flex-start; }
+  .framework-notice-icon {
+    flex-shrink:0; margin-top:2px; width:20px; height:20px; border-radius:50%;
+    background:rgba(200,146,58,0.15); border:1px solid rgba(200,146,58,0.4);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'DM Mono', monospace; font-size:11px; font-weight:500; color:var(--gold); line-height:1;
+  }
+  .framework-notice-text { font-family:'Source Serif 4', serif; font-size:.88rem; color:#6b5a3a; line-height:1.65; }
+  .framework-notice-text strong { color:#4a3a1e; font-weight:600; }
+  .framework-notice-text a { color:var(--teal); text-decoration:none; border-bottom:1px solid rgba(30,107,114,0.3); }
+  .framework-notice-text a:hover { color:var(--navy); border-bottom-color:var(--navy); }
+
+  .toc-bar { background:var(--warm-white); border-bottom:2px solid var(--rule); }
+  .toc-inner { max-width:900px; margin:0 auto; padding:24px 40px; }
+  .toc-label { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--text-light); margin-bottom:14px; }
+  .toc-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:4px 24px; }
+  .toc-link { font-family:'Source Serif 4', serif; font-size:.83rem; color:var(--teal); text-decoration:none; display:flex; align-items:baseline; gap:8px; padding:3px 0; transition:color .15s; }
+  .toc-link:hover { color:var(--navy); }
+  .toc-badge { font-family:'DM Mono', monospace; font-size:10px; color:var(--gold); flex-shrink:0; min-width:28px; }
+
+  .main-wrap { max-width:900px; margin:0 auto; padding:60px 40px 80px; }
+  .cascade-section { margin-bottom:64px; scroll-margin-top:20px; }
+  .section-header { display:flex; align-items:flex-start; gap:18px; margin-bottom:28px; padding-bottom:20px; border-bottom:2px solid var(--rule); }
+  .level-badge {
+    font-family:'DM Mono', monospace; font-size:11px; font-weight:500;
+    background:var(--navy); color:#fff; border-radius:4px; padding:5px 10px;
+    flex-shrink:0; margin-top:4px; letter-spacing:.08em; white-space:nowrap;
+  }
+  .level-badge.teal { background:var(--teal); }
+  .level-badge.gold { background:var(--gold); }
+  h2.section-title { font-family:'Playfair Display', Georgia, serif; font-size:1.55rem; font-weight:700; color:var(--navy); line-height:1.25; margin-bottom:6px; }
+  .section-subtitle { font-style:italic; font-weight:300; font-size:.95rem; color:var(--text-light); }
+
+  .node { background:var(--warm-white); border:1px solid var(--rule); border-radius:8px; padding:28px 32px; margin-bottom:20px; position:relative; }
+  .node::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; border-radius:8px 0 0 8px; background:var(--teal); }
+  .node.gold-accent::before { background:var(--gold); }
+  .node.navy-accent::before { background:var(--navy); }
+  h3.node-title { font-family:'Playfair Display', Georgia, serif; font-size:1.1rem; font-weight:600; color:var(--navy); margin-bottom:14px; }
+  .node p { color:var(--text-mid); margin-bottom:12px; }
+  .node p:last-child { margin-bottom:0; }
+  .node strong { color:var(--navy); font-weight:600; }
+  .node em { color:var(--text-mid); }
+
+  .node ul, .node ol { margin:10px 0 14px 0; list-style:none; }
+  .node ul li, .node ol li { position:relative; padding-left:22px; margin-bottom:7px; color:var(--text-mid); font-size:.97rem; }
+  .node ul li::before { content:''; position:absolute; left:0; top:10px; width:7px; height:7px; border-radius:50%; background:var(--teal-light); }
+  .node ol { counter-reset:node-counter; }
+  .node ol li { counter-increment:node-counter; }
+  .node ol li::before { content:counter(node-counter); position:absolute; left:0; top:1px; font-family:'DM Mono', monospace; font-size:11px; color:var(--gold); font-weight:500; }
+
+  .callout { background:var(--accent-bg); border-left:3px solid var(--teal); border-radius:0 6px 6px 0; padding:14px 18px; margin:16px 0; font-size:.97rem; }
+  .callout p { color:var(--text-mid)!important; margin-bottom:0!important; }
+  .callout.gold { background:var(--gold-bg); border-left-color:var(--gold); }
+
+  .loop-steps { margin:16px 0; display:flex; flex-direction:column; }
+  .loop-step { display:flex; align-items:flex-start; gap:14px; padding:10px 0 10px 18px; border-left:2px solid var(--rule); position:relative; }
+  .loop-step::before { content:''; position:absolute; left:-5px; top:16px; width:8px; height:8px; border-radius:50%; background:var(--teal-light); border:2px solid var(--cream); }
+  .loop-step-num { font-family:'DM Mono', monospace; font-size:11px; color:var(--gold); flex-shrink:0; margin-top:2px; }
+  .loop-step p { margin:0!important; font-size:.95rem; }
+
+  .pathway-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:14px; }
+  .tag { font-family:'DM Mono', monospace; font-size:11px; letter-spacing:.04em; background:var(--tag-bg); color:var(--teal); border:1px solid rgba(30,107,114,0.22); border-radius:3px; padding:3px 9px; }
+
+  .two-col { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px; }
+  .mini-card { background:var(--cream); border:1px solid var(--rule); border-radius:6px; padding:16px 18px; }
+  .mini-card-label { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.15em; text-transform:uppercase; color:var(--text-light); margin-bottom:6px; }
+  .mini-card p { font-size:.93rem; color:var(--text-mid); margin:0; }
+
+  .section-divider { display:flex; align-items:center; gap:14px; margin:60px 0 52px; }
+  .section-divider span { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--text-light); white-space:nowrap; }
+  .section-divider::before, .section-divider::after { content:''; flex:1; height:1px; background:var(--rule); }
+
+  .site-footer { background:var(--navy); }
+  .footer-stripe { height:5px; background:linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%); }
+  .footer-inner { max-width:1080px; margin:0 auto; padding:56px 44px 44px; }
+  .footer-top { display:grid; grid-template-columns:1.15fr 0.95fr; gap:34px; align-items:start; padding-bottom:30px; border-bottom:1px solid rgba(255,255,255,0.10); }
+  .footer-brand { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--teal-light); margin-bottom:14px; }
+  .footer-title { font-family:'Playfair Display', Georgia, serif; font-size:clamp(1.8rem, 3vw, 2.35rem); line-height:1.14; color:rgba(255,255,255,0.96); margin-bottom:14px; }
+  .footer-tagline { color:rgba(255,255,255,0.74); line-height:1.72; max-width:620px; font-size:.98rem; font-style:normal; font-weight:400; }
+  .footer-actions { display:flex; flex-direction:column; align-items:flex-end; gap:16px; }
+  .footer-links { display:flex; flex-wrap:wrap; gap:12px; justify-content:flex-end; align-content:flex-start; }
+  .footer-link { text-decoration:none; color:rgba(255,255,255,0.88); border:1px solid rgba(255,255,255,0.16); border-radius:999px; padding:10px 16px; font-size:.96rem; font-weight:600; transition:all .15s ease; }
+  .footer-link:hover { color:var(--teal-light); border-color:var(--teal-light); background:rgba(42,157,166,0.10); }
+  .footer-bottom { padding-top:24px; display:flex; flex-direction:column; gap:10px; }
+  .footer-disclaimer { color:rgba(255,255,255,0.60); line-height:1.68; font-size:.9rem; max-width:620px; margin-left:auto; text-align:right; font-style:normal; }
+  .footer-meta { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,0.24); }
+
+  @media (max-width:980px) {
+    .footer-top { grid-template-columns:1fr; }
+    .footer-actions { align-items:flex-start; }
+    .footer-links { justify-content:flex-start; }
+    .footer-disclaimer { margin-left:0; text-align:left; }
+  }
+  @media (max-width:760px) {
+    .topbar-inner { align-items:flex-start; flex-direction:column; }
+    .sticky-docnav-inner { padding:7px 16px; gap:4px; }
+    .sdn-pill { font-size:9px; padding:4px 8px; }
+    .header-inner, .framework-notice-inner, .main-wrap, .footer-inner, .toc-inner { padding-left:20px; padding-right:20px; }
+  }
+  @media (max-width:680px) {
+    .two-col { grid-template-columns:1fr; }
+    .footer-link { font-size:.88rem; padding:8px 13px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <div class="topbar-brand">Decoding Autism Now</div>
+      <div class="topbar-title">Biology of Autism — Cascade Explained</div>
+    </div>
+    <a class="topbar-home" href="index.html">Home</a>
+  </div>
+</div>
+
+<div class="sticky-docnav" id="stickyDocNav">
+  <div class="sticky-docnav-inner">
+    <a class="sdn-pill teal" href="index.html">Home Hub</a>
+    <a class="sdn-pill teal" href="01_Molecular_Origins_Biology_of_Autism.html">Start Here</a>
+    <a class="sdn-pill teal" href="02_Cascade_Map_Biology_of_Autism.html">Cascade Map</a>
+    <a class="sdn-pill teal active" href="03_Cascade_Explained_Biology_of_Autism.html">Cascade Explained</a>
+    <a class="sdn-pill gold" href="05_Metabolic_Pathways_Map_Biology_of_Autism.html">Pathways Map</a>
+    <a class="sdn-pill gold" href="06_Metabolic_Pathways_Explained_Biology_of_Autism.html">Pathways Explained</a>
+    <a class="sdn-pill gold" href="07_Testing_Strategy_Biology_of_Autism.html">Testing</a>
+    <a class="sdn-pill gold" href="07B_Test_Reference_Biology_of_Autism.html">Test Ref</a>
+    <a class="sdn-pill gold" href="07C_Interpreting_Results_Biology_of_Autism.html">Interpret</a>
+    <a class="sdn-pill gold" href="07D_Talking_to_Your_Doctor_Biology_of_Autism.html">Talk to Dr</a>
+    <a class="sdn-pill gold" href="07R_Regressive_Autism_Testing_Biology_of_Autism.html">Regression</a>
+    <a class="sdn-pill gold" href="08_Intervention_Logic_Biology_of_Autism.html">Interventions</a>
+    <a class="sdn-pill navy" href="09_FAQ_Biology_of_Autism.html">FAQ</a>
+    <a class="sdn-pill navy" href="10_Evidence_and_Citations_Biology_of_Autism.html">Evidence</a>
+    <a class="sdn-pill navy" href="11_Vaccine_Question_Biology_of_Autism.html">Vaccine Question</a>
+    <a class="sdn-pill navy" href="12_Parents_Guide_Biology_of_Autism.html">Parents</a>
+    <a class="sdn-pill navy" href="13_Clinician_Guide_Biology_of_Autism.html">Clinician</a>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="header-stripe"></div>
+  <div class="header-inner">
+    <div class="header-eyebrow">Decoding Autism Now</div>
+    <h1 class="header-title">
+      Biology of Autism —
+      <span class="accent-line">Cascade Explained</span>
+    </h1>
+    <p class="header-sub">A plain-language walk-through of the biological cascade model — from upstream pressures to observable expressions.</p>
+    <a href="#framework-disclaimer" class="header-note">See framework disclaimer below</a>
+  </div>
+</header>
+
+<nav class="toc-bar" aria-label="Section index">
+  <div class="toc-inner">
+    <p class="toc-label">Sections at a glance</p>
+    <div class="toc-grid">
+      <a class="toc-link" href="#big-picture"><span class="toc-badge">—</span>Big Picture</a>
+      <a class="toc-link" href="#L1"><span class="toc-badge">L1</span>Upstream Pressures</a>
+      <a class="toc-link" href="#L2"><span class="toc-badge">L2</span>System Mode Shift</a>
+      <a class="toc-link" href="#L3-5"><span class="toc-badge">L3–5</span>Core Biochemical Hub</a>
+      <a class="toc-link" href="#L6-7"><span class="toc-badge">L6–7</span>Glial State &amp; Synapses</a>
+      <a class="toc-link" href="#L8"><span class="toc-badge">L8</span>Observable Expressions</a>
+      <a class="toc-link" href="#strategy"><span class="toc-badge">→</span>Multi-Target Strategy</a>
+    </div>
+  </div>
+</nav>
+
+<main class="main-wrap">
+
+  <!-- BIG PICTURE -->
+  <section class="cascade-section" id="big-picture">
+    <div class="section-header">
+      <span class="level-badge teal">Overview</span>
+      <div>
+        <h2 class="section-title">Big Picture: What This Model Is Saying</h2>
+        <p class="section-subtitle">The chain reaction in plain language</p>
+      </div>
+    </div>
+    <div class="node">
+      <p>The Autism Cascade model describes autism as a <strong>whole-body chain reaction</strong>, not as one gene or one isolated brain lesion. Multiple stresses — before and after birth — can push the system into a state where:</p>
+      <ul>
+        <li>Inflammation stays "on"</li>
+        <li>Energy systems and antioxidants are overworked</li>
+        <li>Support cells in the brain change how they behave</li>
+        <li>Synapses and wiring grow in a different pattern</li>
+        <li>The brain becomes much harder to update and "flex"</li>
+        <li>The body engages an <strong>emergency brake</strong> that stays on across multiple systems</li>
+      </ul>
+    </div>
+    <div class="node gold-accent">
+      <h3 class="node-title">Two Control Systems at the Center</h3>
+      <div class="two-col">
+        <div class="mini-card">
+          <p class="mini-card-label">SIRT1 — Repair Coordinator</p>
+          <p>Helps control inflammation, energy, antioxidants, and learning-related signals. Depends on <strong>NAD⁺</strong> as fuel.</p>
+        </div>
+        <div class="mini-card">
+          <p class="mini-card-label">SST — Somatostatin — Stress Brake</p>
+          <p>Slows learning, gut function, and brain support when stress becomes chronic. Rises with inflammation and metabolic strain, and can become stuck in the <strong>on position</strong>.</p>
+        </div>
+      </div>
+      <div class="callout gold" style="margin-top:18px;">
+        <p>When <strong>SIRT1 fails</strong> and <strong>SST engages and stays on</strong>, both strike the same learning pathway from different directions — and autism begins to look less like a temporary response and more like the system’s active state.</p>
+      </div>
+      <div class="pathway-tags">
+        <span class="tag">SIRT1</span><span class="tag">SST / Somatostatin</span><span class="tag">NAD⁺</span><span class="tag">CREB / BDNF</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>The Cascade — Level by Level</span></div>
+
+  <!-- LEVEL 1 -->
+  <section class="cascade-section" id="L1">
+    <div class="section-header">
+      <span class="level-badge">Level 1</span>
+      <div>
+        <h2 class="section-title">Upstream Pressures on the System</h2>
+        <p class="section-subtitle">The stressors that push the body toward its tipping point</p>
+      </div>
+    </div>
+
+    <div class="node" id="L1A">
+      <h3 class="node-title">1A — During Pregnancy: Immune Stress as a "Preset"</h3>
+      <p>If the pregnant body faces strong immune stress — from infection, autoimmunity, or ongoing high stress — immune signals like <strong>IL‑6</strong> and <strong>IL‑17A</strong> rise around the developing baby. These do not just mark illness; they act as <strong>instructions</strong> that can:</p>
+      <ul>
+        <li>Slightly change how brain cells move and settle into layers</li>
+        <li>Make brain immune cells (microglia) more reactive by default</li>
+        <li>Make certain calming brain cells (PV/SST interneurons) more fragile</li>
+        <li>Leave the baby's gut barrier a bit weaker from the start</li>
+      </ul>
+      <div class="callout">
+        <p>For some children, <strong>vulnerability is partly set before birth</strong>: the immune system in the brain and gut starts life closer to its tipping point.</p>
+      </div>
+      <div class="pathway-tags">
+        <span class="tag">IL-6</span><span class="tag">IL-17A</span><span class="tag">Maternal Immune Activation</span><span class="tag">Microglial priming</span>
+      </div>
+    </div>
+
+    <div class="node" id="L1B">
+      <h3 class="node-title">1B — Gut Dysbiosis and "Leaky Gut"</h3>
+      <p>This section focuses on <strong>barrier failure</strong>, not just bad bacteria. When the gut lining is leaky, pieces of bacteria (<strong>LPS</strong>) slip into the bloodstream even without a classic infection. The immune system reads this as a constant low-grade threat, turning on an inflammation program through receptors like <strong>TLR4</strong> and the <strong>NF‑κB pathway</strong>.</p>
+      <div class="callout">
+        <p>This is called <strong>metabolic endotoxemia without active infection</strong>: the child may not look sick, but the immune system is being poked constantly by bacterial fragments leaking through the gut.</p>
+      </div>
+      <p>This gut leak also pushes the body into the tryptophan pathway that affects serotonin and NAD⁺ downstream.</p>
+      <div class="pathway-tags">
+        <span class="tag">LPS</span><span class="tag">TLR4</span><span class="tag">NF-κB</span><span class="tag">Metabolic endotoxemia</span>
+      </div>
+    </div>
+
+    <div class="node" id="L1C">
+      <h3 class="node-title">1C — Mitochondria Under Strain</h3>
+      <p>Mitochondria are the cell's engines. In this model, they are <em>both</em> under-producing energy (ATP) <em>and</em> sending distress signals when damaged. Under stress — from toxins, infections, or chronic inflammation:</p>
+      <ul>
+        <li>Mitochondria make more <strong>reactive oxygen species (ROS)</strong> and leak bits of their own DNA</li>
+        <li>The cell reads this as damage and turns on more inflammation</li>
+        <li>There is <strong>less ATP</strong> available for building and maintaining synapses — especially critical while a child is growing and learning</li>
+      </ul>
+      <div class="callout gold">
+        <p>Mitochondria are not just tired — they are <strong>feeding inflammation and limiting growth at the same time</strong>.</p>
+      </div>
+      <div class="pathway-tags">
+        <span class="tag">ROS</span><span class="tag">mtDNA leak</span><span class="tag">ATP deficit</span><span class="tag">Mitochondrial signaling</span>
+      </div>
+    </div>
+
+    <div class="node" id="L1D">
+      <h3 class="node-title">1D — Environmental Toxin Load</h3>
+      <p>Heavy metals, pesticides, and other chemicals are treated here as <strong>load amplifiers</strong>, not single sufficient causes. They:</p>
+      <ul>
+        <li>Wear down glutathione and other antioxidants</li>
+        <li>Make mitochondria and membranes more fragile</li>
+        <li>Prime immune cells to over-react</li>
+      </ul>
+      <p>This lowers the system's buffer. A child already under immune or metabolic stress can be pushed over the tipping point more easily when detox and antioxidant systems are overworked.</p>
+      <div class="pathway-tags">
+        <span class="tag">Glutathione depletion</span><span class="tag">Heavy metals</span><span class="tag">Oxidative load</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEVEL 2 -->
+  <section class="cascade-section" id="L2">
+    <div class="section-header">
+      <span class="level-badge">Level 2</span>
+      <div>
+        <h2 class="section-title">How Stress Shifts the System's Mode</h2>
+        <p class="section-subtitle">From acute pressure to locked-in reduced resilience</p>
+      </div>
+    </div>
+
+    <div class="node" id="L2A">
+      <h3 class="node-title">2A — Developmental Priming</h3>
+      <p>The model proposes that in some children, immune stress during pregnancy can <strong>lock in a baseline vulnerability</strong> at the level of gene regulation (epigenetics):</p>
+      <ul>
+        <li>The microglial repair hub (SIRT1/PGC‑1α) is partially turned down epigenetically</li>
+        <li>SST-related inhibitory circuits are less robust from the start</li>
+      </ul>
+      <p>That means later stressors act on a system that <strong>never had full resilience capacity</strong> to begin with.</p>
+      <div class="pathway-tags">
+        <span class="tag">Epigenetic SIRT1 suppression</span><span class="tag">PGC-1α</span><span class="tag">Developmental priming</span>
+      </div>
+    </div>
+
+    <div class="node" id="L2B">
+      <h3 class="node-title">2B — SST as a Whole-Body Brake</h3>
+      <p>SST rises with chronic stress, inflammation, and metabolic strain. When SST is high, it:</p>
+      <ul>
+        <li>Disrupts <strong>cellular signaling at adenylyl cyclase (AC)</strong> — blunting the G-protein → AC step, reducing cAMP formation, and weakening the ATP → cAMP → PKA → CREB learning pathway</li>
+        <li>Lowers <strong>BDNF</strong> — a growth and support signal for synapses</li>
+        <li>Slows gut acid, enzymes, bile, and movement</li>
+        <li>Pushes brain support cells (astrocytes, microglia) toward a more rigid, high-alert state</li>
+      </ul>
+      <div class="callout gold">
+        <p>SST acts as a <strong>body-wide brake</strong> — trying to conserve resources under stress, but also making learning and recovery harder.</p>
+      </div>
+      <div class="pathway-tags">
+        <span class="tag">SST</span><span class="tag">cAMP (reduced)</span><span class="tag">CREB (suppressed)</span><span class="tag">BDNF (reduced)</span>
+      </div>
+    </div>
+
+    <div class="node" id="L2CD">
+      <h3 class="node-title">2C–2D — SST on Glia and Gut</h3>
+      <p>On <strong>astrocytes and microglia</strong>, SST:</p>
+      <ul>
+        <li>Reduces helpful synapse-building proteins (hevin, glypicans)</li>
+        <li>Increases SPARC, which blocks synapse formation and promotes synapse removal</li>
+        <li>Makes microglia more easily triggered and less flexible</li>
+      </ul>
+      <p>On the <strong>gut</strong>, SST:</p>
+      <ul>
+        <li>Reduces stomach acid, enzymes, bile, and motility</li>
+        <li>Makes it harder to absorb important amino acids like tryptophan and tyrosine</li>
+        <li>Favors dysbiosis and leaky gut</li>
+      </ul>
+      <div class="callout">
+        <p>This ties <strong>stress directly to gut problems and to a less supportive brain environment</strong>.</p>
+      </div>
+      <div class="pathway-tags">
+        <span class="tag">Hevin (reduced)</span><span class="tag">SPARC (increased)</span><span class="tag">Glypican 4/6</span><span class="tag">Gut motility</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEVELS 3–5 -->
+  <section class="cascade-section" id="L3-5">
+    <div class="section-header">
+      <span class="level-badge">Levels 3–5</span>
+      <div>
+        <h2 class="section-title">The Core Biochemical and Control Hub</h2>
+        <p class="section-subtitle">Tryptophan diversion, SIRT1 fuel loss, and the lethal loop on learning</p>
+      </div>
+    </div>
+
+    <div class="node" id="L3A">
+      <h3 class="node-title">3A — The "Tryptophan Hijack"</h3>
+      <p>Under chronic inflammation, tryptophan is pulled into the <strong>kynurenine pathway</strong> instead of toward serotonin. This leads to three key problems:</p>
+      <ul>
+        <li><strong>Less serotonin</strong> — affecting mood, gut motility, and sleep</li>
+        <li><strong>More quinolinic acid</strong> — which can be toxic to neurons at high levels</li>
+        <li><strong>NAD⁺ is not produced fast enough</strong> to keep up with demand, even if some is still present</li>
+      </ul>
+      <div class="callout gold">
+        <p>NAD⁺ is the fuel for SIRT1. When production cannot keep up, <strong>SIRT1 is effectively under-powered</strong>.</p>
+      </div>
+      <div class="pathway-tags">
+        <span class="tag">IDO1</span><span class="tag">Kynurenine pathway</span><span class="tag">Quinolinic acid</span><span class="tag">Serotonin (depleted)</span><span class="tag">NAD⁺ (low)</span>
+      </div>
+    </div>
+
+    <div class="node navy-accent" id="L3B-5D">
+      <h3 class="node-title">3B / 5A–5D — SIRT1 "Fuel Loss" and Four Linked Failures</h3>
+      <p>SIRT1 is a <strong>master coordinator</strong> that depends on NAD⁺ as fuel. When NAD⁺ is functionally low, SIRT1 cannot maintain any of its four core programs — and all fail together:</p>
+      <ol>
+        <li><strong>Hold inflammation in check</strong> — NF‑κB runs unchecked, driving sustained cytokine production</li>
+        <li><strong>Maintain healthy mitochondria</strong> — PGC‑1α is under-activated; damaged mitochondria persist</li>
+        <li><strong>Support antioxidant defenses</strong> — FOXO programs weaken; glutathione drops; ROS accumulates</li>
+        <li><strong>Help learning pathways</strong> — CREB/BDNF support is reduced; synapses fail to strengthen with experience</li>
+      </ol>
+      <div class="callout">
+        <p>All four systems — immune control, energy, antioxidant defenses, and plasticity — <strong>start failing together</strong>.</p>
+      </div>
+      <div class="pathway-tags">
+        <span class="tag">NF-κB</span><span class="tag">PGC-1α</span><span class="tag">FOXO</span><span class="tag">Glutathione</span><span class="tag">CREB / BDNF</span>
+      </div>
+    </div>
+
+    <div class="node gold-accent" id="L4AB">
+      <h3 class="node-title">4A–4B — Cleanup System Failure (Autophagy / Mitophagy)</h3>
+      <p>The cell's cleanup system (autophagy) is what turns a bad day into a recoverable event instead of a permanent scar. When SIRT1 and AMPK are weak and mTOR is over-active:</p>
+      <ul>
+        <li>Damaged mitochondria are not removed</li>
+        <li>Debris and misfolded proteins build up inside cells</li>
+        <li>Synapses that should be pruned hang around</li>
+        <li>Internal "trash" keeps re-triggering inflammation</li>
+      </ul>
+      <div class="callout gold">
+        <p>This explains why damage <strong>keeps going</strong> even if some external stressors are reduced — the internal cleanup that would normally reset the system is itself impaired.</p>
+      </div>
+      <div class="pathway-tags">
+        <span class="tag">Autophagy (impaired)</span><span class="tag">Mitophagy (impaired)</span><span class="tag">AMPK (weak)</span><span class="tag">mTOR (over-active)</span>
+      </div>
+    </div>
+
+    <div class="node" id="L5E">
+      <h3 class="node-title">5E — The "Lethal Loop" on Learning: SIRT1 + SST Convergence</h3>
+      <p>Both SIRT1 and SST converge on <strong>CREB and BDNF</strong> from opposite sides — SIRT1 loss removes internal support while SST blocks the AC/cAMP/PKA path from outside. The loop in plain language:</p>
+      <div class="loop-steps">
+        <div class="loop-step"><span class="loop-step-num">1</span><p>Low SIRT1 removes internal CREB/BDNF support</p></div>
+        <div class="loop-step"><span class="loop-step-num">2</span><p>High SST blocks the AC/cAMP/PKA pathway — cutting off CREB activation from outside</p></div>
+        <div class="loop-step"><span class="loop-step-num">3</span><p>Weak CREB/BDNF → synapses do not strengthen with experience</p></div>
+        <div class="loop-step"><span class="loop-step-num">4</span><p>Circuits cannot learn to handle stress better</p></div>
+        <div class="loop-step"><span class="loop-step-num">5</span><p>Stress stays high → SST stays high → NAD⁺ demand stays high → SIRT1 stays weak</p></div>
+      </div>
+      <div class="callout gold" style="margin-top:16px;">
+        <p>The system becomes <strong>locked in a low-learning, high-stress mode</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEVELS 6–7 -->
+  <section class="cascade-section" id="L6-7">
+    <div class="section-header">
+      <span class="level-badge teal">Levels 6–7</span>
+      <div>
+        <h2 class="section-title">Glial State and Synapse Protein Imbalance</h2>
+        <p class="section-subtitle">How brain support cells shift roles — and what that does to connectivity</p>
+      </div>
+    </div>
+
+    <div class="node" id="L6AB">
+      <h3 class="node-title">6A–6B — Microglia and Astrocytes Shift Roles</h3>
+      <p>With inflammation chronic, both major brain support cell types shift into defensive, less nurturing states:</p>
+      <ul>
+        <li><strong>Microglia</strong> move into a pro-inflammatory "M1" mode, releasing IL‑1β, TNF‑α, and complement signals that drive excess synapse pruning</li>
+        <li>Those signals <strong>flip astrocytes into an A1 reactive state</strong> — less protective, less synapse-friendly</li>
+      </ul>
+      <div class="callout">
+        <p>Both main support cells in the brain are now acting in a way that <strong>undermines synapses</strong> instead of supporting them.</p>
+      </div>
+    </div>
+
+    <div class="node" id="L7ABC">
+      <h3 class="node-title">7A–7C — Hevin, SPARC, and Glypicans</h3>
+      <p>Three astrocyte proteins do most of the structural work at this layer:</p>
+      <ul>
+        <li><strong>Hevin (SPARCL1)</strong> — a synapse builder that helps the thalamus connect to the cortex. It is <em>reduced</em>.</li>
+        <li><strong>SPARC</strong> — a synapse blocker and pruner that interferes with hevin and signals microglia to remove synapses. It is <em>increased</em>.</li>
+        <li><strong>Glypican 4/6</strong> — synapse maturers that help insert AMPA receptors so synapses can pass signals efficiently. Their signaling is <em>dysregulated</em>.</li>
+      </ul>
+      <p>The result: fewer new healthy synapses are built where most needed; some existing synapses are removed; many remain structurally present but <strong>functionally weak or silent</strong>.</p>
+      <div class="pathway-tags">
+        <span class="tag">Hevin / SPARCL1 ↓</span><span class="tag">SPARC ↑</span><span class="tag">Glypican 4/6</span><span class="tag">AMPA receptors</span><span class="tag">Silent synapses</span>
+      </div>
+    </div>
+
+    <div class="node gold-accent" id="L7DE">
+      <h3 class="node-title">7D–7E — Connectivity Pattern: Too Much Local, Not Enough Long-Range</h3>
+      <p>Putting it together:</p>
+      <ul>
+        <li>Important relay paths (thalamus → cortex) are <strong>under-connected</strong> because they depend heavily on hevin</li>
+        <li>Autophagy failure and impaired pruning allow <strong>too many local synapses</strong> to remain in some cortical areas</li>
+      </ul>
+      <div class="two-col" style="margin-top:16px;">
+        <div class="mini-card">
+          <p class="mini-card-label">Local — Over-connected</p>
+          <p>Dense short-range wiring within cortical regions; excess synapses not pruned</p>
+        </div>
+        <div class="mini-card">
+          <p class="mini-card-label">Long-Range — Under-connected</p>
+          <p>Thin wiring between key hubs; relay pathways weakened by hevin deficit</p>
+        </div>
+      </div>
+      <div class="callout" style="margin-top:16px;">
+        <p>This matches many imaging findings in autism — both over- and under-connectivity, but in <strong>different places and at different scales</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEVEL 8 -->
+  <section class="cascade-section" id="L8">
+    <div class="section-header">
+      <span class="level-badge gold">Level 8</span>
+      <div>
+        <h2 class="section-title">How This Looks "On the Outside"</h2>
+        <p class="section-subtitle">Observable expressions of the internal cascade state</p>
+      </div>
+    </div>
+
+    <div class="node" id="L8A">
+      <h3 class="node-title">8A — Sensory Reactivity: Over- and Under-</h3>
+      <p>Under-connected thalamus→cortex relay pathways plus local over-connectivity means sensory input reaches the cortex <strong>less filtered and more raw</strong>, then gets locally amplified. Critically, the same circuitry disruption can produce <strong>either over-reactivity or under-reactivity</strong> — sometimes in the same individual across different senses or different moments.</p>
+      <p><strong>Over-reactivity</strong> — sensory signals amplified beyond threshold:</p>
+      <ul>
+        <li>Sound, light, touch, or texture feeling "too much," "too sharp," or overwhelming</li>
+        <li>Difficulty habituating to or filtering background sensory input</li>
+        <li>Smells that are barely noticeable to others registering as intense or intolerable — olfactory sensitivity is one of the most commonly reported and most acute sensory differences in autism</li>
+        <li>Environmental temperature perceived as extreme — feeling overheated or painfully cold at levels others find comfortable</li>
+      </ul>
+      <p><strong>Under-reactivity</strong> — sensory signals failing to reach threshold:</p>
+      <ul>
+        <li>Reduced awareness of pain, injury, or physical discomfort</li>
+        <li>Difficulty reading internal temperature cues — not recognizing the need to remove a coat when hot, or add clothing when cold</li>
+        <li>Appearing not to notice stimuli — sounds, touch, or smells — that would register clearly for most people</li>
+        <li>Sensory-seeking behaviors that compensate for under-registration (rocking, pressing, mouthing)</li>
+      </ul>
+      <p>Temperature regulation is a particularly clear example: the same child may be unable to dress appropriately for the weather not from indifference but because the internal signal that says <em>"I am too hot"</em> or <em>"I am too cold"</em> is not registering accurately at the cortical level.</p>
+    </div>
+
+    <div class="node" id="L8B">
+      <h3 class="node-title">8B — Social Understanding</h3>
+      <p>Social cognition depends on <strong>multiple brain areas coordinating together</strong> — mPFC, STS, amygdala, and more. With long-range connections weakened:</p>
+      <ul>
+        <li>These regions do not communicate as smoothly</li>
+        <li>It becomes harder to track others' thoughts, intentions, tone, and context</li>
+        <li>This shows up as difficulty with theory of mind, social nuance, and back-and-forth interaction</li>
+      </ul>
+    </div>
+
+    <div class="node" id="L8C">
+      <h3 class="node-title">8C — Cognitive Rigidity and Perseveration</h3>
+      <p>CREB/BDNF problems plus many silent synapses mean circuits <strong>do not update easily</strong> when new information comes in. The system tends to:</p>
+      <ul>
+        <li>Reuse the same established pathways</li>
+        <li>Have trouble shifting to new strategies or routines</li>
+        <li>Get "stuck" on certain topics, behaviors, or patterns</li>
+      </ul>
+      <p>This maps to rigidity, strong reactions to transitions, and intense restricted interests.</p>
+    </div>
+
+    <div class="node" id="L8D">
+      <h3 class="node-title">8D — GI Symptoms</h3>
+      <p>The same cascade that affects the brain also affects the gut:</p>
+      <ul>
+        <li>Dysbiosis and leaky gut</li>
+        <li>Serotonin depletion → motility and pain regulation problems</li>
+        <li>Vagal nerve signaling from the inflamed gut back to the brain</li>
+      </ul>
+      <div class="callout">
+        <p>Constipation, pain, and GI upset are <strong>another branch of the same biology</strong>, not an unrelated issue.</p>
+      </div>
+    </div>
+
+    <div class="node" id="L8E">
+      <h3 class="node-title">8E — Sleep and Mood</h3>
+      <p>With tryptophan pulled away from serotonin and melatonin, and the stress system (HPA/SST) dysregulated:</p>
+      <ul>
+        <li>Falling asleep and staying asleep become harder</li>
+        <li>Body clocks drift</li>
+        <li>Mood tends to be less stable — more anxiety, irritability, and low frustration tolerance</li>
+      </ul>
+      <div class="callout gold">
+        <p>GI problems, sleep disruption, and mood dysregulation are treated as <strong>expressions of the same underlying state</strong>, not separate diagnoses.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>Implications for Support</span></div>
+
+  <!-- STRATEGY -->
+  <section class="cascade-section" id="strategy">
+    <div class="section-header">
+      <span class="level-badge teal">Strategy</span>
+      <div>
+        <h2 class="section-title">Why the Model Argues for Multi-Target Support</h2>
+        <p class="section-subtitle">Several levers at once, gently and in the right order</p>
+      </div>
+    </div>
+
+    <div class="node navy-accent">
+      <h3 class="node-title">The Self-Sustaining Loop</h3>
+      <p>Because inflammation keeps IDO1 active, IDO1 and stress keep NAD⁺ low and SIRT1 weak, cleanup remains blocked so damage and debris accumulate, and SST stays elevated blocking learning pathways — <strong>one lever at a time is not enough once the loop is stable.</strong></p>
+      <p>Each arm of the loop reinforces the others. Addressing only one entry point typically leaves the remaining drivers intact.</p>
+    </div>
+
+    <div class="node gold-accent">
+      <h3 class="node-title">The Multi-Target Approach <span style="font-family:'Source Serif 4',serif;font-weight:300;font-size:0.92rem;color:var(--text-light);">(clinician-supervised)</span></h3>
+      <p>The model's logic points toward working from several angles simultaneously:</p>
+      <ol>
+        <li>Support <strong>NAD⁺ and SIRT1</strong> — so the master repair hub can function</li>
+        <li>Calm <strong>NF‑κB and microglial inflammation</strong></li>
+        <li>Repair the <strong>gut barrier</strong> and microbiome</li>
+        <li>Reduce chronic <strong>stress and SST load</strong>; stabilize sleep</li>
+        <li>Support <strong>antioxidants and mitochondria</strong></li>
+        <li>Allow <strong>synapses and networks</strong> to gradually remodel with better upstream support</li>
+      </ol>
+      <div class="callout gold" style="margin-top:6px;">
+        <p>The model does not claim a proven cure. It offers a plausible, research-informed map for why certain combinations of supports may be more effective than single-target interventions — and why sequencing and breadth both matter.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<aside id="framework-disclaimer" class="framework-notice" role="note">
+  <div class="framework-notice-inner">
+    <div class="framework-notice-icon">i</div>
+    <p class="framework-notice-text"><strong>Theoretical framework — not clinical guidance.</strong> The Autism Spectrum Disorder (ASD) Cascade is a systems-biology model that integrates peer-reviewed findings across immunology, metabolism, gut biology, and neuroscience into a proposed mechanistic map. Individual components are supported by published research; the full integrated cascade has not yet been validated as a unified model in large clinical trials. It is intended as a research-informed framework for thinking about how multiple biological factors may interact — not as a diagnostic tool or treatment protocol. All intervention decisions should involve a qualified clinician. For the evidence base underlying this model, see the <em>ASD Cascade Citations</em> document in this suite.</p>
+  </div>
+</aside>
+
+<footer class="site-footer">
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">Decoding Autism Now</p>
+        <h2 class="footer-title">Biology of Autism — Cascade Explained</h2>
+        <p class="footer-tagline">A plain-language guide to how upstream stress, signaling failure, glial shift, and synapse imbalance can be understood as one connected biological cascade.</p>
+      </div>
+      <div class="footer-actions">
+        <div class="footer-links">
+          <a class="footer-link" href="index.html">Home</a>
+          <a class="footer-link" href="01_Molecular_Origins_Biology_of_Autism.html">Start Here</a>
+          <a class="footer-link" href="02_Cascade_Map_Biology_of_Autism.html">Cascade Map</a>
+          <a class="footer-link" href="03_Cascade_Explained_Biology_of_Autism.html">Cascade Explained</a>
+          <a class="footer-link" href="05_Metabolic_Pathways_Map_Biology_of_Autism.html">Pathways Map</a>
+          <a class="footer-link" href="08_Intervention_Logic_Biology_of_Autism.html">Intervention</a>
+          <a class="footer-link" href="10_Evidence_and_Citations_Biology_of_Autism.html">Evidence</a>
+          <a class="footer-link" href="https://www.youtube.com/@DecodingAutismNow" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+        <p class="footer-disclaimer">This content is for informational purposes only and should not be considered medical advice, diagnosis, or treatment. Always consult with a healthcare professional before making any changes to your health routines or treatment regimen.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-meta">Biology of Autism — Cascade Explained | Decoding Autism Now</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biology of Autism — The Evidence | Decoding Autism Now</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:#0f2342;
+  --teal:#1e6b72;
+  --teal-light:#2a9da6;
+  --gold:#c8923a;
+  --gold-light:#e8b86d;
+  --ink:#1a1a2e;
+  --muted:#64748b;
+  --border:#e2e8f0;
+  --bg:#F8F9FC;
+  --card-bg:#FFFFFF;
+  --accent:#2563eb;
+  --rule:#d8cfc4;
+}
+
+* { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:'Source Serif 4', Georgia, serif;
+  background:var(--bg);
+  color:var(--ink);
+  font-size:14px;
+  line-height:1.6;
+}
+
+/* LOCKED 07 SHELL */
+.topbar {
+  position:fixed;
+  top:0; left:0; right:0;
+  z-index:1000;
+  background:var(--navy);
+  border-bottom:2px solid var(--gold);
+}
+.topbar-inner {
+  max-width:960px;
+  margin:0 auto;
+  padding:10px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+}
+.topbar-brand {
+  font-family:'DM Mono', monospace;
+  font-size:10px;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:var(--teal-light);
+  margin-bottom:2px;
+}
+.topbar-title {
+  font-family:'Source Serif 4', serif;
+  font-size:14px;
+  font-weight:600;
+  color:white;
+  line-height:1.2;
+}
+.topbar-home {
+  font-family:'DM Mono', monospace;
+  font-size:10px;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.82);
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,0.20);
+  border-radius:3px;
+  padding:5px 10px;
+  white-space:nowrap;
+}
+.topbar-home:hover { color:white; border-color:rgba(255,255,255,0.45); }
+
+.sticky-docnav {
+  position:fixed;
+  top:57px;
+  left:0; right:0;
+  z-index:999;
+  background:rgba(255,255,255,0.97);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid #d8cfc4;
+  box-shadow:0 2px 12px rgba(15,35,66,0.08);
+}
+.sticky-docnav-inner {
+  max-width:960px;
+  margin:0 auto;
+  padding:8px 20px;
+  display:flex;
+  gap:7px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.sdn-pill {
+  font-family:'DM Mono', monospace;
+  font-size:10px;
+  letter-spacing:0.05em;
+  text-decoration:none;
+  border-radius:999px;
+  padding:6px 12px;
+  transition:background 0.15s, opacity 0.15s, transform 0.15s;
+  white-space:nowrap;
+  opacity:0.92;
+}
+.sdn-pill:hover { opacity:1; transform:translateY(-1px); }
+.sdn-pill.teal { color:#1e6b72; background:rgba(30,107,114,0.08); border:1px solid rgba(30,107,114,0.22); }
+.sdn-pill.gold { color:#8a5c1a; background:rgba(200,146,58,0.08); border:1px solid rgba(200,146,58,0.25); }
+.sdn-pill.navy { color:#0f2342; background:rgba(15,35,66,0.06); border:1px solid rgba(15,35,66,0.18); }
+.sdn-pill.active { color:#5a3a08; background:rgba(200,146,58,0.20); border-color:rgba(200,146,58,0.55); font-weight:500; opacity:1; }
+.sdn-divider { width:1px; height:14px; background:#d8cfc4; margin:0 3px; flex-shrink:0; align-self:center; }
+
+.site-header {
+  background:var(--navy);
+  color:white;
+  position:relative;
+  overflow:hidden;
+  margin-top:110px;
+}
+.header-stripe {
+  height:5px;
+  background:linear-gradient(90deg, #1e6b72 0%, #2a9da6 50%, #c8923a 100%);
+}
+.header-inner {
+  max-width:960px;
+  margin:0 auto;
+  padding:70px 20px 40px;
+}
+.header-eyebrow {
+  font-family:'DM Mono', monospace;
+  font-size:10px;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--teal-light);
+  margin-bottom:12px;
+}
+.header-sub {
+  font-family:'Source Serif 4', serif;
+  font-style:italic;
+  font-weight:300;
+  font-size:1rem;
+  color:rgba(255,255,255,0.65);
+  max-width:700px;
+  line-height:1.6;
+  margin-bottom:18px;
+}
+.header-pills {
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:14px;
+}
+.pill {
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius:20px;
+  padding:5px 14px;
+  font-size:12px;
+  font-family:'DM Mono', monospace;
+  color:rgba(255,255,255,0.85);
+  letter-spacing:0.03em;
+}
+.header-note {
+  display:inline-block;
+  margin-top:2px;
+  font-family:'DM Mono', monospace;
+  font-size:9px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:rgba(232,184,109,0.82);
+  text-decoration:none;
+  border-bottom:1px solid rgba(232,184,109,0.30);
+}
+.header-note:hover { border-bottom-color:rgba(232,184,109,0.75); }
+
+.hero-title{
+  font-family:'Playfair Display', serif;
+  font-size:clamp(2rem,4.4vw,3rem);
+  line-height:1.12;
+  margin-bottom:10px;
+  color:#fff;
+}
+.hero-title .accent-line{
+  display:block;
+  color:var(--gold-light);
+  font-style:italic;
+  font-weight:500;
+}
+
+#framework-disclaimer { scroll-margin-top:160px; }
+
+/* PAGE 10 CONTENT */
+.notice-bar { max-width:960px; margin:28px auto 0; padding:0 20px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.notice { border-radius:6px; padding:12px 16px; font-size:12px; line-height:1.55; }
+.notice.theory { background:#FFF8E1; border-left:4px solid #F59E0B; color:#78350F; }
+.notice.medical { background:#FEF2F2; border-left:4px solid #EF4444; color:#7F1D1D; }
+.notice strong { display:block; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:3px; }
+
+.framework-notice { background:#fffbf2; border-top:1px solid rgba(200,146,58,0.25); border-bottom:1px solid rgba(200,146,58,0.25); }
+.framework-notice-inner { max-width:960px; margin:0 auto; padding:20px; display:flex; gap:16px; align-items:flex-start; }
+.notice-icon { flex-shrink:0; margin-top:2px; width:20px; height:20px; border-radius:50%; background:rgba(200,146,58,0.15); border:1px solid rgba(200,146,58,0.4); display:flex; align-items:center; justify-content:center; font-family:'DM Mono', monospace; font-size:11px; font-weight:500; color:#c8923a; line-height:1; }
+.notice-text { font-family:'Source Serif 4', serif; font-size:0.875rem; color:#6b5a3a; line-height:1.65; }
+.notice-text strong { color:#4a3a1e; font-weight:600; }
+
+.ev-key { max-width:960px; margin:20px auto 0; padding:0 20px; }
+.ev-key-inner { background:white; border:1px solid var(--border); border-radius:8px; padding:14px 20px; display:flex; gap:20px; flex-wrap:wrap; align-items:center; }
+.ev-key-label { font-size:10px; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); font-weight:600; white-space:nowrap; }
+.badge { display:inline-block; padding:2px 9px; border-radius:4px; font-size:10.5px; font-family:'DM Mono', monospace; font-weight:500; white-space:nowrap; }
+
+.toc-wrap { max-width:960px; margin:24px auto 0; padding:0 20px; }
+.toc { background:white; border:1px solid var(--border); border-radius:8px; padding:16px 20px; }
+.toc-title { font-family:'DM Mono', monospace; font-size:10px; text-transform:uppercase; letter-spacing:0.12em; color:var(--muted); font-weight:600; margin-bottom:10px; }
+.toc-grid { display:flex; flex-wrap:wrap; gap:8px; }
+.toc-link { padding:5px 12px; border-radius:4px; font-size:12px; text-decoration:none; border:1px solid; transition:opacity 0.15s; white-space:nowrap; font-family:'DM Mono', monospace; }
+.toc-link:hover { opacity:0.75; }
+
+.main { max-width:960px; margin:28px auto 60px; padding:0 20px; display:flex; flex-direction:column; gap:24px; }
+
+.cascade-section { border-radius:10px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.06); border:1px solid var(--border); scroll-margin-top:160px; }
+.section-header { padding:14px 20px; display:flex; align-items:center; gap:12px; }
+.section-header h2 { font-family:'Source Serif 4', serif; font-size:14.5px; font-weight:600; color:white; line-height:1.3; }
+.section-count { background:rgba(255,255,255,0.2); border-radius:20px; padding:2px 9px; font-size:10px; font-family:'DM Mono', monospace; color:rgba(255,255,255,0.9); white-space:nowrap; flex-shrink:0; }
+.section-body { background:var(--card-bg); padding:18px 20px; }
+.section-intro { font-style:italic; font-size:13px; color:#4a5568; margin-bottom:16px; padding:10px 14px; border-left:3px solid var(--section-color); background:rgba(0,0,0,0.02); border-radius:0 4px 4px 0; }
+.cit-grid { display:flex; flex-direction:column; gap:12px; }
+.cit-card { border:1px solid var(--border); border-radius:7px; overflow:hidden; transition:box-shadow 0.15s; }
+.cit-card:hover { box-shadow:0 2px 10px rgba(0,0,0,0.08); }
+.cit-header { background:#F8FAFC; padding:10px 14px; display:flex; gap:12px; align-items:flex-start; border-bottom:1px solid var(--border); }
+.cit-id { font-family:'DM Mono', monospace; font-size:10.5px; font-weight:500; background:var(--section-color); color:white; border-radius:4px; padding:2px 7px; white-space:nowrap; flex-shrink:0; margin-top:1px; }
+.cit-ref { font-size:12.5px; color:var(--ink); line-height:1.5; font-family:'Source Serif 4', serif; }
+.cit-meta { padding:10px 14px; display:flex; flex-direction:column; gap:6px; }
+.cit-row { display:flex; gap:10px; align-items:flex-start; }
+.cit-row .label { font-size:9.5px; text-transform:uppercase; letter-spacing:0.1em; font-weight:600; color:var(--muted); min-width:58px; padding-top:2px; flex-shrink:0; font-family:'DM Mono', monospace; }
+.cit-row .value { font-size:12.5px; color:#374151; line-height:1.5; }
+.pubmed-link { color:var(--accent); text-decoration:none; font-family:'DM Mono', monospace; font-size:11.5px; word-break:break-all; }
+.pubmed-link:hover { text-decoration:underline; }
+
+/* FOOTER */
+.site-footer { background:#0f2342; }
+.footer-stripe { height:5px; background:linear-gradient(90deg, #1e6b72 0%, #2a9da6 50%, #c8923a 100%); }
+.footer-inner { max-width:960px; margin:0 auto; padding:56px 20px 44px; }
+.footer-top { display:grid; grid-template-columns:1.15fr 0.95fr; gap:34px; align-items:start; padding-bottom:30px; border-bottom:1px solid rgba(255,255,255,0.10); }
+.footer-brand { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#2a9da6; margin-bottom:14px; }
+.footer-title { font-family:'Playfair Display', Georgia, serif; font-size:clamp(1.5rem, 2.5vw, 2rem); line-height:1.18; color:rgba(255,255,255,0.96); margin-bottom:12px; }
+.footer-tagline { color:rgba(255,255,255,0.74); line-height:1.72; max-width:520px; font-size:0.95rem; }
+.footer-actions { display:flex; flex-direction:column; align-items:flex-end; gap:16px; }
+.footer-links { display:flex; flex-wrap:wrap; gap:10px; justify-content:flex-end; }
+.footer-link { text-decoration:none; color:rgba(255,255,255,0.88); border:1px solid rgba(255,255,255,0.16); border-radius:999px; padding:9px 15px; font-size:0.9rem; font-weight:600; transition:all 0.15s ease; }
+.footer-link:hover { color:#2a9da6; border-color:#2a9da6; background:rgba(42,157,166,0.10); }
+.footer-disclaimer { color:rgba(255,255,255,0.60); line-height:1.68; font-size:0.88rem; max-width:560px; margin-left:auto; text-align:right; }
+.footer-bottom { padding-top:24px; }
+.footer-meta { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.22); }
+
+@media (max-width: 980px) {
+  .footer-top { grid-template-columns:1fr; }
+  .footer-actions { align-items:flex-start; }
+  .footer-links { justify-content:flex-start; }
+  .footer-disclaimer { margin-left:0; text-align:left; }
+}
+@media (max-width: 720px) {
+  .topbar-inner { align-items:flex-start; flex-direction:column; }
+  .sticky-docnav-inner { padding:7px 16px; gap:4px; }
+  .sdn-pill { font-size:9px; padding:4px 8px; }
+  .site-header { margin-top:126px; }
+  .header-inner { padding:58px 20px 30px; }
+  .notice-bar { grid-template-columns:1fr; }
+}
+</style>
+  <meta property="og:title" content="Biology of Autism — The Evidence | Decoding Autism Now">
+  <meta property="og:description" content="Over 70 peer-reviewed references supporting the ASD cascade framework, organized by cascade level.">
+  <meta property="og:image" content="https://decodingautismnow.com/images/OG-10.png">
+  <meta name="twitter:image" content="https://decodingautismnow.com/images/OG-10.png">
+<!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EH3TWPN49H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EH3TWPN49H');
+  </script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <div class="topbar-brand">Decoding Autism Now</div>
+      <div class="topbar-title">Biology of Autism — The Evidence</div>
+    </div>
+    <a class="topbar-home" href="index.html">Home</a>
+  </div>
+</div>
+
+<div class="sticky-docnav" id="stickyDocNav">
+  <div class="sticky-docnav-inner">
+    <a class="sdn-pill teal" href="index.html">Home Hub</a>
+    <a class="sdn-pill teal" href="01_Molecular_Origins_Biology_of_Autism.html">Start Here</a>
+    <a class="sdn-pill teal" href="02_Cascade_Map_Biology_of_Autism.html">Cascade Map</a>
+    <a class="sdn-pill teal" href="03_Cascade_Explained_Biology_of_Autism.html">Cascade Explained</a>
+    <a class="sdn-pill gold" href="05_Metabolic_Pathways_Map_Biology_of_Autism.html">Pathways Map</a>
+    <a class="sdn-pill gold" href="06_Metabolic_Pathways_Explained_Biology_of_Autism.html">Pathways Explained</a>
+    <a class="sdn-pill gold" href="07_Testing_Strategy_Biology_of_Autism.html">Testing</a>
+    <a class="sdn-pill gold" href="07B_Test_Reference_Biology_of_Autism.html">Test Ref</a>
+    <a class="sdn-pill gold" href="07C_Interpreting_Results_Biology_of_Autism.html">Interpret</a>
+    <a class="sdn-pill gold" href="07D_Talking_to_Your_Doctor_Biology_of_Autism.html">Talk to Dr</a>
+    <a class="sdn-pill gold" href="07R_Regressive_Autism_Testing_Biology_of_Autism.html">Regression</a>
+    <a class="sdn-pill gold" href="08_Intervention_Logic_Biology_of_Autism.html">Interventions</a>
+    <a class="sdn-pill navy" href="09_FAQ_Biology_of_Autism.html">FAQ</a>
+    <a class="sdn-pill navy active" href="10_Evidence_and_Citations_Biology_of_Autism.html">Evidence</a>
+    <a class="sdn-pill navy" href="11_Vaccine_Question_Biology_of_Autism.html">Vaccine Question</a>
+    <a class="sdn-pill navy" href="12_Parents_Guide_Biology_of_Autism.html">Parents</a>
+    <a class="sdn-pill navy" href="13_Clinician_Guide_Biology_of_Autism.html">Clinician</a>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="header-stripe"></div>
+  <div class="header-inner">
+    <div class="header-eyebrow">Decoding Autism Now</div>
+    <h1 class="hero-title">Biology of Autism —<span class="accent-line">The Evidence</span></h1>
+    <p class="header-sub">Over 70 peer-reviewed references supporting the ASD cascade framework, organized by cascade level. All citations verified and hyperlinked to PubMed or PMC.</p>
+    <div class="header-pills">
+      <span class="pill">8 cascade levels</span>
+      <span class="pill">All links verified</span>
+      <span class="pill">Multi-AI reviewed</span>
+    </div>
+    <a class="header-note" href="#framework-disclaimer">See framework disclaimer below</a>
+  </div>
+</header>
+
+<div class="notice-bar">
+  <div class="notice theory">
+    <strong>Theoretical framework</strong>
+    The integrated cascade is a systems-biology model built from peer-reviewed components. It is a research framework, not a validated unified clinical standard.
+  </div>
+  <div class="notice medical">
+    <strong>Medical caution</strong>
+    This page summarizes the evidence base and should not be used as medical advice, diagnosis, or treatment guidance.
+  </div>
+</div>
+
+<div class="ev-key">
+  <div class="ev-key-inner">
+    <span class="ev-key-label">Evidence Tiers:</span>
+    <span class="badge" style="background:#1B5E20;color:white">Human RCT</span>
+    <span class="badge" style="background:#0D47A1;color:white">Review / Meta-analysis</span>
+    <span class="badge" style="background:#4527A0;color:white">Human observational</span>
+    <span class="badge" style="background:#E65100;color:white">Animal / cell model</span>
+    <span class="badge" style="background:#546E7A;color:white">Mechanistic / hypothesis</span>
+  </div>
+</div>
+
+<div class="toc-wrap">
+  <div class="toc">
+    <div class="toc-title">Jump to section</div>
+    <div class="toc-grid"><a class="toc-link" href="#sec0" style="color:#7B1FA2;border-color:#7B1FA2;background:rgba(0,0,0,0.02)">CASCADE LEVEL 1A</a><a class="toc-link" href="#sec1" style="color:#1B5E20;border-color:#1B5E20;background:rgba(0,0,0,0.02)">CASCADE LEVEL 1B</a><a class="toc-link" href="#sec2" style="color:#E65100;border-color:#E65100;background:rgba(0,0,0,0.02)">CASCADE LEVEL 1C</a><a class="toc-link" href="#sec3" style="color:#4E342E;border-color:#4E342E;background:rgba(0,0,0,0.02)">CASCADE LEVEL 1D</a><a class="toc-link" href="#sec4" style="color:#1565C0;border-color:#1565C0;background:rgba(0,0,0,0.02)">CASCADE LEVEL 2</a><a class="toc-link" href="#sec5" style="color:#4A235A;border-color:#4A235A;background:rgba(0,0,0,0.02)">CASCADE LEVEL 2B</a><a class="toc-link" href="#sec6" style="color:#1A5C40;border-color:#1A5C40;background:rgba(0,0,0,0.02)">CASCADE LEVEL 2C</a><a class="toc-link" href="#sec7" style="color:#1A3A5C;border-color:#1A3A5C;background:rgba(0,0,0,0.02)">CASCADE LEVEL 3</a><a class="toc-link" href="#sec8" style="color:#B71C1C;border-color:#B71C1C;background:rgba(0,0,0,0.02)">CASCADE LEVEL 4</a><a class="toc-link" href="#sec9" style="color:#1B5E20;border-color:#1B5E20;background:rgba(0,0,0,0.02)">CASCADE LEVEL 5</a><a class="toc-link" href="#sec10" style="color:#006064;border-color:#006064;background:rgba(0,0,0,0.02)">CASCADE LEVEL 6</a><a class="toc-link" href="#sec11" style="color:#37474F;border-color:#37474F;background:rgba(0,0,0,0.02)">THERAPEUTIC NODE CITATIONS</a><a class="toc-link" href="#sec12" style="color:#8B5A00;border-color:#8B5A00;background:rgba(0,0,0,0.02)">VACCINE QUESTION — REGRESSION BIOLOGY</a></div>
+  </div>
+
+<main class="main">
+  <div id="sec0">
+    <section class="cascade-section" style="--section-color:#7B1FA2">
+      <div class="section-header" style="background:#7B1FA2">
+        <span class="section-count">4 citations</span>
+        <h2>CASCADE LEVEL 1A — Maternal Immune Activation (MIA)</h2>
+      </div>
+      <div class="section-body">
+        <p class="section-intro">MIA is one of the most replicated environmental risk factors for ASD. These citations support the role of gestational immune activation, IL-6, and IL-17a in altering fetal cortical development.</p>
+        <div class="cit-grid">
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">MIA-1</span>
+            <div class="cit-ref">[MIA-1]  Malkova NV, Yu CZ, Hsiao EY, Moore MJ, Patterson PH. Maternal immune activation yields offspring displaying mouse versions of the three core symptoms of autism. Brain Behav Immun. 2012;26(4):607–616.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/22310922/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/22310922/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 1A — MIA upstream trigger / behavioral phenotype</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">MIA alone produces autism-relevant behavioral phenotypes (social, communication, repetitive) in offspring — establishing MIA as a sufficient upstream trigger.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal model</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">MIA-2</span>
+            <div class="cit-ref">[MIA-2]  Vargas DL, Nascimbene C, Krishnan C, Zimmerman AW, Pardo CA. Neuroglial activation and neuroinflammation in the brain of patients with autism. Ann Neurol. 2005;57(1):67–81.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/15546155/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/15546155/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 1A — MIA / Microglial activation in ASD brain [cross-cited at Level 4A]</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Post-mortem ASD brains show neuroglial activation and elevated pro-inflammatory markers in cortex, white matter, and cerebellum — human observational anchor for MIA-to-neuroinflammation chain.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#4527A0;color:#FFFFFF">Human observational (post-mortem)</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">MIA-3</span>
+            <div class="cit-ref">[MIA-3]  Gupta S, Ellis SE, Ashar FN, et al. Transcriptome analysis reveals dysregulation of innate immune response genes and neuronal activity-dependent genes in autism. Nat Commun. 2014;5:5748.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/25494366/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/25494366/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 1A — Upstream triggers / immune gene dysregulation</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">ASD transcriptome shows dysregulation of innate immune response genes — human observational evidence linking immune activation to ASD at the gene expression level.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#4527A0;color:#FFFFFF">Human observational</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">MIA-4</span>
+            <div class="cit-ref">[MIA-4]  Voineagu I, Wang X, Johnston P, et al. Transcriptomic analysis of autistic brain reveals convergent molecular pathology. Nature. 2011;474(7351):380–384.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/21614001/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/21614001/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 1A — Upstream triggers / transcriptomic convergence</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">ASD brains show convergent transcriptomic pathology across individuals — supports the cascade model that diverse triggers converge on shared downstream molecular disruption.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#4527A0;color:#FFFFFF">Human observational (post-mortem)</span></span></div>
+          </div>
+        </div></div>
+      </div>
+    </section></div><div id="sec1">
+    <section class="cascade-section" style="--section-color:#1B5E20">
+      <div class="section-header" style="background:#1B5E20">
+        <span class="section-count">3 citations</span>
+        <h2>CASCADE LEVEL 1B — Gut Dysbiosis + LPS Translocation</h2>
+      </div>
+      <div class="section-body">
+        <p class="section-intro">The gut-brain inflammatory axis in ASD is supported by microbiome, permeability, and SCFA evidence across human cohort and animal model studies.</p>
+        <div class="cit-grid">
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">GUT-1</span>
+            <div class="cit-ref">[GUT-1]  Gorrindo P, Williams KC, Lee EB, Walker LS, McGrew SG, Levitt P. Gastrointestinal dysfunction in autism: a clinical study. Pediatrics. 2012;130 Suppl 2:S160–S165.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/23118248/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/23118248/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 1B — Gut dysbiosis / GI prevalence in ASD</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">GI dysfunction is highly prevalent in ASD and associated with behavioral symptoms — clinical human observational anchor for the gut-brain axis node.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#4527A0;color:#FFFFFF">Human observational</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">GUT-2</span>
+            <div class="cit-ref">[GUT-2]  Hsiao EY, McBride SW, Hsien S, et al. Microbiota modulate behavioral and physiological abnormalities associated with neurodevelopmental disorders. Cell. 2013;155(7):1451–1463.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/24315484/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/24315484/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 1B — Gut dysbiosis / microbiome-to-behavior link</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Microbiome manipulation (B. fragilis) repairs gut barrier and reverses autism-like behaviors in MIA offspring — strongest animal model evidence for the gut-brain-behavior axis.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal model</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">GUT-3</span>
+            <div class="cit-ref">[GUT-3]  MacFabe DF. Short-chain fatty acid fermentation products of the gut microbiome: implications in autism spectrum disorders. Microb Ecol Health Dis. 2012;23:19260.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/23282725/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/23282725/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 1B — Gut dysbiosis / SCFA / propionate</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Short-chain fatty acids (especially propionate) from gut microbiome fermentation affect neuroinflammation, oxidative stress, and mitochondrial function in ways relevant to ASD — supports the butyrate/SCFA-SIRT1 connection.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#0D47A1;color:#FFFFFF">Review / mechanistic</span></span></div>
+          </div>
+        </div></div>
+      </div>
+    </section></div><div id="sec2">
+    <section class="cascade-section" style="--section-color:#E65100">
+      <div class="section-header" style="background:#E65100">
+        <span class="section-count">4 citations</span>
+        <h2>CASCADE LEVEL 1C — Mitochondrial Dysfunction</h2>
+      </div>
+      <div class="section-body">
+        
+        <div class="cit-grid">
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">MITO-1</span>
+            <div class="cit-ref">[MITO-1]  Rossignol DA, Frye RE. Mitochondrial dysfunction in autism spectrum disorders: a systematic review and meta-analysis. Mol Psychiatry. 2012;17(3):290–314.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/21263444/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/21263444/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 1C — Mitochondrial dysfunction in ASD</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">A significant subset of individuals with ASD show biochemical markers of mitochondrial dysfunction without a primary mitochondrial disease diagnosis — anchors the Cell Danger Response upstream trigger node.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#0D47A1;color:#FFFFFF">Review / meta-analysis</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">MITO-2</span>
+            <div class="cit-ref">[MITO-2]  Napoli E, Ross-Inta C, Wong S, et al. Mitochondrial dysfunction in autism. Autism Res. 2014;7(4):434–448.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/24753527/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/24753527/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 1C — Mitochondrial metabolic markers in ASD</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Human ASD subjects show mitochondrial respiratory chain and metabolic abnormalities including altered complex activity and oxidative markers — human observational companion to Rossignol & Frye.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#4527A0;color:#FFFFFF">Human observational</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">MITO-3</span>
+            <div class="cit-ref">[MITO-3]  Chauhan A, Chauhan V. Oxidative stress in autism. Pathophysiology. 2006;13(3):171–181.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/16766163/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/16766163/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 1C — Mitochondrial dysfunction / oxidative stress in ASD</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Oxidative stress markers including lipid peroxidation and reduced antioxidant defenses are elevated in ASD — review-level support for the ROS/mitochondrial upstream trigger node.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#0D47A1;color:#FFFFFF">Review / meta-analysis</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">MITO-4</span>
+            <div class="cit-ref">[MITO-4]  Frustaci A, Neri M, Cesario A, et al. Oxidative stress-related biomarkers in autism: systematic review and meta-analyses. Free Radic Biol Med. 2012;52(10):2128–2141.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/22564528/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/22564528/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 1C — Oxidative stress / GSH depletion in ASD</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Meta-analysis confirms oxidative stress biomarkers including reduced glutathione are statistically elevated in ASD — strongest evidence tier for FOXO antioxidant defense collapse.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#0D47A1;color:#FFFFFF">Review / meta-analysis</span></span></div>
+          </div>
+        </div></div>
+      </div>
+    </section></div><div id="sec3">
+    <section class="cascade-section" style="--section-color:#4E342E">
+      <div class="section-header" style="background:#4E342E">
+        <span class="section-count">3 citations</span>
+        <h2>CASCADE LEVEL 1D — Environmental Toxin Exposure (Association-Level)</h2>
+      </div>
+      <div class="section-body">
+        <p class="section-intro">Environmental toxin associations with ASD are epidemiological. Causation is not established in humans. The following represent the strongest association-level evidence.</p>
+        <div class="cit-grid">
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">TOX-1</span>
+            <div class="cit-ref">[TOX-1]  Shelton JF, Geraghty EM, Tancredi DJ, et al. Neurodevelopmental disorders and prenatal residential proximity to agricultural pesticides: the CHARGE study. Environ Health Perspect. 2014;122(10):1103–1109.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/24954055/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/24954055/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 1D — Environmental toxins / pesticide association</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Prenatal proximity to agricultural pesticides is associated with increased ASD risk in the CHARGE study — association-level human evidence for the environmental toxin upstream trigger.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#4527A0;color:#FFFFFF">Human observational (association)</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">TOX-2</span>
+            <div class="cit-ref">[TOX-2]  Kubota N, Yokoyama H. Chlordane and its metabolites in relation to neurodevelopment. Environ Health. 2016;15:44.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/27098177/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/27098177/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 1D — Environmental toxins / organochlorine</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Organochlorine pesticides are associated with neurodevelopmental disruption — supports the environmental toxin burden node.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#4527A0;color:#FFFFFF">Human observational (association)</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">TOX-3</span>
+            <div class="cit-ref">[TOX-3]  Rueda-Ruzafa L, Cruz F, Roman P, Cardona D. Gut microbiota and neurological effects of glyphosate. Environ Pollut. 2019;244:1031–1048.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/30415156/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/30415156/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 1D — Environmental toxins / glyphosate / microbiome</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Glyphosate can alter gut microbiota composition and manganese homeostasis, with potential links to neurodevelopmental conditions including ASD — peer-reviewed review replacing the previous speculative Samsel & Seneff citation.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#0D47A1;color:#FFFFFF">Review</span></span></div>
+          </div>
+        </div></div>
+      </div>
+    </section></div><div id="sec4">
+    <section class="cascade-section" style="--section-color:#1565C0">
+      <div class="section-header" style="background:#1565C0">
+        <span class="section-count">6 citations</span>
+        <h2>CASCADE LEVEL 2 — Tryptophan Hijack + Functional NAD⁺ Insufficiency</h2>
+      </div>
+      <div class="section-body">
+        <p class="section-intro">The kynurenine pathway is the primary route through which chronic inflammation depletes serotonin and produces quinolinic acid while generating insufficient NAD⁺ to sustain SIRT1 activity.</p>
+        <div class="cit-grid">
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">KYN-1</span>
+            <div class="cit-ref">[KYN-1]  Imai S, Guarente L. NAD⁺ and sirtuins in aging and disease. Trends Cell Biol. 2014;24(8):464–471.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/24786309/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/24786309/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 2 — NAD⁺ depletion / SIRT1 fuel</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">NAD⁺ is the essential cofactor for sirtuin activity; its decline drives age- and disease-related regulatory failure — foundational mechanistic anchor for the NAD⁺-SIRT1 node.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#0D47A1;color:#FFFFFF">Review / meta-analysis</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">KYN-2</span>
+            <div class="cit-ref">[KYN-2]  Santana-Coelho D, de Souza HE, Martins MC, et al. Does the kynurenine pathway play a pathogenic role in autism spectrum disorder? Front Mol Neurosci. 2024;17:1400409.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/39263315/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/39263315/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 2 — Tryptophan hijack / IDO1 / kynurenine pathway in ASD</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Kynurenine pathway metabolites and enzymes are altered in ASD and may contribute to pathophysiology — validates IDO1-driven tryptophan diversion as an ASD-relevant mechanism.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#0D47A1;color:#FFFFFF">Review / human observational</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">KYN-2b</span>
+            <div class="cit-ref">[KYN-2b]  Parikshak NN, Luo R, Zhang A, et al. Integrative functional genomic analyses implicate specific molecular pathways and circuits in autism. Cell. 2013;155(5):1008–1021.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/24267887/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/24267887/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 2 — Convergent molecular pathways and circuits in ASD</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">ASD risk genes converge in specific co-expression modules and cortical circuits — supports the concept that metabolic pathway disruption is genetically encoded in ASD, providing genomic grounding for the cascade framework.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#4527A0;color:#FFFFFF">Human observational</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">KYN-3</span>
+            <div class="cit-ref">[KYN-3]  Michan S, Sinclair D. Sirtuins in mammals: insights into their biological function. Biochem J. 2007;404(1):1–13.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/17447894/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/17447894/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 2 — NAD⁺ → SIRT1 cofactor relationship</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Sirtuins require NAD⁺ as catalytic cofactor; reviews mammalian sirtuin biology and their dependence on NAD⁺ availability — foundational mechanistic reference for SIRT1 fuel dependency.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#0D47A1;color:#FFFFFF">Review / meta-analysis</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">KYN-4</span>
+            <div class="cit-ref">[KYN-4]  Braidy N, Guillemin GJ, Mansour H, Chan-Ling T, Poljak A, Grant R. Age related changes in NAD⁺ metabolism oxidative stress and Sirt1 activity in wistar rats. PLoS One. 2011;6(4):e19194.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/21541336/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/21541336/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 2–3 — NAD⁺ insufficiency / SIRT1 fuel depletion</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Declining NAD⁺ correlates with decreased SIRT1 activity, increased oxidative stress, and impaired mitochondrial function — establishes NAD⁺ as rate-limiting SIRT1 cofactor. No ASD-specific Braidy paper was identified; this remains the primary mechanistic NAD⁺/SIRT1 fuel reference.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal model</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">KYN-5</span>
+            <div class="cit-ref">[KYN-5]  Santana-Coelho D, et al. Does the kynurenine pathway play a pathogenic role in autism spectrum disorder? Front Mol Neurosci. 2024;17:1400409.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/39263315/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/39263315/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 2 — Kynurenine pathway / IDO1 in ASD [primary kynurenine node anchor]</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Multiple studies find kynurenine pathway alterations in ASD; pathway dysregulation may contribute to ASD symptoms — validates IDO1-driven tryptophan diversion as a core cascade mechanism.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#0D47A1;color:#FFFFFF">Review / human observational</span></span></div>
+          </div>
+        </div></div>
+      </div>
+    </section></div><div id="sec5">
+    <section class="cascade-section" style="--section-color:#4A235A">
+      <div class="section-header" style="background:#4A235A">
+        <span class="section-count">7 citations</span>
+        <h2>CASCADE LEVEL 2B — SST Co-Equal Node: Somatostatin as System-Wide Plasticity Brake</h2>
+      </div>
+      <div class="section-body">
+        <p class="section-intro">Somatostatin (SST) acts as a co-equal central node alongside SIRT1. Both nodes converge independently on CREB suppression from different molecular directions.</p>
+        <div class="cit-grid">
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">SST-1</span>
+            <div class="cit-ref">[SST-1]  Lugo JN, Smith GD, Arbuckle EP, et al. Conditional Pten knockout in parvalbumin- or somatostatin-positive neurons leads to autism-related behavioral phenotypes. Mol Brain. 2021;14(1):98.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/33504340/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/33504340/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 2B — SST interneuron loss → ASD-relevant behavioral phenotypes</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Selective deletion of Pten in SST-positive interneurons is sufficient to produce ASD-related social and repetitive behaviors in mice — concrete SST interneuron ASD-behavior anchor.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal model</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">SST-2</span>
+            <div class="cit-ref">[SST-2]  Tentler JJ, Hadcock JR, Gutierrez-Hartmann A. Somatostatin acts by inhibiting the cyclic 3′,5′-adenosine monophosphate/protein kinase A pathway, cyclic adenosine 3′,5′-monophosphate response element-binding protein phosphorylation, and CREB transcription. Mol Endocrinol. 1997;11(12):1961–1971.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/9178746/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/9178746/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 2B — SST → cAMP/PKA/CREB suppression mechanism</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Somatostatin inhibits the cAMP/PKA pathway, reduces CREB phosphorylation, and diminishes CREB transcriptional potency — direct molecular mechanism for the SST→AC↓→cAMP↓→PKA↓→CREB↓ formula.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Mechanistic / cell model</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">SST-3</span>
+            <div class="cit-ref">[SST-3]  Shaywitz AJ, Dove SL, Greenberg ME. Impaired cyclic AMP-dependent phosphorylation renders CREB a transcriptional nonactivator. Proc Natl Acad Sci USA. 1995;92(23):11228–11232.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/7799950/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/7799950/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 2B — cAMP/PKA suppression → CREB transcriptional failure</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">When CREB cannot be phosphorylated by cAMP-dependent mechanisms it fails to activate transcription from CRE-containing promoters — reinforces the downstream impact of SST-mediated cAMP/PKA suppression.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Mechanistic / cell model</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">SST-4</span>
+            <div class="cit-ref">[SST-4]  Liguz-Lecznar M, Urban-Ciecko J, Kossut M. Somatostatin and somatostatin-containing neurons in shaping neuronal activity and plasticity. Front Neural Circuits. 2016;10:48.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/27445702/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/27445702/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 2B — SST interneurons as cortical plasticity brake</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">SST interneurons regulate cortical excitability and synaptic plasticity, functioning as important modulators and brakes on plasticity — directly relevant to the ASD connectivity signature and learning deficit outcomes.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#0D47A1;color:#FFFFFF">Review / mechanistic</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">SST-5</span>
+            <div class="cit-ref">[SST-5]  Hannon JP, Nunn C, Stolz B, et al. Drug-selective activation of somatostatin receptor subtypes: an important target for the development of novel analogs. Mol Cell Endocrinol. 2002;197(1–2):179–187.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/12431814/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/12431814/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 2B — SSTR2/5 receptor pharmacology</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Characterizes pharmacological activation of different somatostatin receptor subtypes including SSTR2 and SSTR5 — supports the receptor-level specificity of SST actions used in the SSTR2/5 language.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#0D47A1;color:#FFFFFF">Review / receptor pharmacology</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">SST-6</span>
+            <div class="cit-ref">[SST-6]  Patel YC. Somatostatin and its receptor family. Front Neuroendocrinol. 1999;20(3):157–198.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/10433861/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/10433861/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 2B — SST receptor family / Gi-coupling / cAMP suppression / gut-brain axis</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Comprehensive review of SST receptor subtypes and their roles in inhibiting endocrine and exocrine secretion — supports the gut-brake and broad inhibitory framing of SST including Gi-coupled AC inhibition.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#0D47A1;color:#FFFFFF">Review / mechanistic</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">SST-7</span>
+            <div class="cit-ref">[SST-7]  Reichlin S. Somatostatin. N Engl J Med. 1983;309(24):1495–1501.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/6359991/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/6359991/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 2B — SST as CNS inhibitory peptide / gut-brain SST axis</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Classic NEJM review describing somatostatin as an inhibitory peptide with prominent roles in the CNS and in suppressing GI secretions and motility — foundational anchor for the gut-brain SST node.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#0D47A1;color:#FFFFFF">Review / foundational</span></span></div>
+          </div>
+        </div></div>
+      </div>
+    </section></div><div id="sec6">
+    <section class="cascade-section" style="--section-color:#1A5C40">
+      <div class="section-header" style="background:#1A5C40">
+        <span class="section-count">2 citations</span>
+        <h2>CASCADE LEVEL 2C — AMPK / mTOR / Autophagy: Cellular Cleanup and Reset Failure</h2>
+      </div>
+      <div class="section-body">
+        
+        <div class="cit-grid">
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">AMPK-1</span>
+            <div class="cit-ref">[AMPK-1]  Tang G, Gudsnuk K, Kuo SH, et al. Loss of mTOR-dependent macroautophagy causes autistic-like synaptic pruning deficits. Neuron. 2014;83(5):1131–1143.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/25155956/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/25155956/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 2C — mTOR/autophagy failure → synaptic pruning deficit → ASD-like behavior</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Impaired mTOR-dependent autophagy leads to reduced dendritic spine pruning, increased spine density, and ASD-like social deficits in mice and human ASD post-mortem cortex; restoring autophagy rescues both pruning and behavior — direct evidence that autophagic flux failure drives the structural connectivity signature.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#4527A0;color:#FFFFFF">Animal / human post-mortem</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">AMPK-2</span>
+            <div class="cit-ref">[AMPK-2]  Saxton RA, Sabatini DM. mTOR signaling in growth, metabolism, and disease. Cell. 2017;168(6):960–976.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/28283069/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/28283069/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 2C — mTOR as master suppressor of autophagy / metabolic gating</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Comprehensive mechanistic review of mTOR complex signaling in growth, metabolism, and autophagy suppression — foundational reference for the AMPK/mTOR/autophagy axis and its role as a cellular stress-state decision switch.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#0D47A1;color:#FFFFFF">Review / meta-analysis</span></span></div>
+          </div>
+        </div></div>
+      </div>
+    </section></div><div id="sec7">
+    <section class="cascade-section" style="--section-color:#1A3A5C">
+      <div class="section-header" style="background:#1A3A5C">
+        <span class="section-count">13 citations</span>
+        <h2>CASCADE LEVEL 3 — SIRT1 Central Hub and Four Outputs</h2>
+      </div>
+      <div class="section-body">
+        
+        <div class="cit-grid">
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">S1-1</span>
+            <div class="cit-ref">[S1-1]  Herskovits AZ, Guarente L. SIRT1 in neurodevelopment and brain senescence. Neuron. 2014;81(3):471–483.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/24507186/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/24507186/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 3 — SIRT1 neurodevelopment / synaptogenesis and pruning window</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">SIRT1 roles in axon growth, dendritic branching, synaptic plasticity, and age-related brain changes — supports SIRT1 peak during synaptogenesis/pruning and its importance for neurodevelopment.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#0D47A1;color:#FFFFFF">Review / meta-analysis</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">S1-2</span>
+            <div class="cit-ref">[S1-2]  Chang HC, Guarente L. SIRT1 and other sirtuins in metabolism. Trends Endocrinol Metab. 2014;25(3):138–145.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/24388149/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/24388149/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 3 — SIRT1 metabolic coordination</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">SIRT1 is an NAD⁺-dependent deacylase coordinating metabolic adaptation across tissues — supports SIRT1 as a master metabolic regulator whose deficiency causes multi-system failure.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#0D47A1;color:#FFFFFF">Review / meta-analysis</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">S1-3</span>
+            <div class="cit-ref">[S1-3]  Li X, Kazmierkiewicz KL, Randolph DA, et al. SIRT1 regulates the neurogenic potential of neural precursors in the adult brain. J Neurosci Res. 2013;91(5):652–661.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/23404532/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/23404532/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 3 — SIRT1 cortical development / neural precursor fate</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">SIRT1 is expressed in neural precursors and SIRT1 knockdown enhances neurogenic potential — demonstrates SIRT1 direct role in regulating neural precursor fate and neurogenesis.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal model</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">S1-4</span>
+            <div class="cit-ref">[S1-4]  Donmez G, Outeiro TF. SIRT1 and SIRT2: emerging targets in neurodegeneration. EMBO Mol Med. 2013;5(3):344–352.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/23417962/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/23417962/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 3 — SIRT1 neurodegeneration / ASD-neurodegeneration overlap</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">SIRT1 activity is broadly neuroprotective across multiple neurodegenerative disease models — supports the ASD-neurodegeneration parallel at the SIRT1 node.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#0D47A1;color:#FFFFFF">Review / meta-analysis</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">NFkB-1</span>
+            <div class="cit-ref">[NFkB-1]  Yeung F, Hoberg JE, Ramsey CS, et al. Modulation of NF-κB-dependent transcription and cell survival by the SIRT1 deacetylase. EMBO J. 2004;23(12):2369–2380.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/15152190/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/15152190/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 3A — SIRT1 → NF-κB p65 deacetylation</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">SIRT1 directly deacetylates RelA/p65 at lysine 310, inhibiting NF-κB transcriptional activity — the precise molecular mechanism for the SIRT1/NF-κB antagonism.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal / cell model</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">NFkB-2</span>
+            <div class="cit-ref">[NFkB-2]  Chen J, Zhou Y, Mueller-Steiner S, et al. SIRT1 protects against microglia-dependent amyloid-β toxicity through inhibiting NF-κB signaling. J Biol Chem. 2005;280(48):40364–40374.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/16183991/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/16183991/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 3A — SIRT1 → NF-κB → microglial suppression</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">SIRT1 activation or overexpression reduces microglial NF-κB signaling — links SIRT1 deficiency to microglial activation in the cascade.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal / cell model</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">NFkB-3</span>
+            <div class="cit-ref">[NFkB-3]  Cho SH, Chen JA, Sayed F, et al. SIRT1 deficiency in microglia contributes to cognitive decline in aging and neurodegeneration via epigenetic regulation of IL-1β. J Neurosci. 2015;35(2):807–818.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/25589773/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/25589773/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 3A — SIRT1 deficiency in microglia → IL-1β upregulation and cognitive decline</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Microglial SIRT1 deficiency causes IL-1β upregulation and memory deficits — direct evidence that SIRT1 loss drives the microglial arm of the cascade.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal model</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">PGC-1</span>
+            <div class="cit-ref">[PGC-1]  Lagouge M, Argmann C, Gerhart-Hines Z, et al. Resveratrol improves mitochondrial function and protects against metabolic disease by activating SIRT1 and PGC-1α. Cell. 2006;127(6):1109–1122.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/17112576/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/17112576/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 3B — SIRT1 → PGC-1α → mitochondrial biogenesis</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">SIRT1 activation leads to deacetylation and activation of PGC-1α and increased mitochondrial biogenesis and function — strongly supports the SIRT1→PGC-1α→mitochondrial biogenesis cascade arm.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal / cell model</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">PGC-2</span>
+            <div class="cit-ref">[PGC-2]  Zhang R, Chen HZ, Liu JJ, et al. SIRT1 suppresses reactive oxygen species by promoting autophagy in neurons. Neuroscience. 2011;193:373–382.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/21803131/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/21803131/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 3B — SIRT1 → autophagy → ROS suppression</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">SIRT1 activation promotes autophagy and reduces oxidative stress — links SIRT1 activity to antioxidant function and mitochondrial quality control.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal / cell model</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">FOXO-1</span>
+            <div class="cit-ref">[FOXO-1]  Brunet A, Sweeney LB, Sturgill JF, et al. Stress-dependent regulation of FOXO transcription factors by the SIRT1 deacetylase. Science. 2004;303(5666):2011–2015.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/14976264/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/14976264/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 3C — SIRT1 → FOXO → antioxidant defense</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">SIRT1 forms a complex with FOXO3 under oxidative stress and deacetylates FOXO, shifting transcription toward stress-resistance and activating antioxidant enzymes (SOD, catalase).</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal / cell model</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">CREB-1</span>
+            <div class="cit-ref">[CREB-1]  Gao J, Wang WY, Mao YW, et al. A novel pathway regulates memory and plasticity via SIRT1 and miR-134. Nature. 2010;466(7310):1105–1109.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2928875/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pmc.ncbi.nlm.nih.gov/articles/PMC2928875/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 3D — SIRT1 → CREB → plasticity</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">SIRT1 represses miR-134, thereby maintaining CREB and BDNF expression and normal synaptic plasticity; loss of SIRT1 leads to reduced CREB/BDNF and impaired memory — foundational SIRT1/CREB/plasticity mechanistic link.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal model</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">CREB-2</span>
+            <div class="cit-ref">[CREB-2]  Lonze BE, Ginty DD. Function and regulation of CREB family transcription factors in the nervous system. Neuron. 2002;35(4):605–623.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/12194863/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/12194863/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 3D — CREB / learning / LTP / neural function</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">CREB is the master activity-dependent transcription factor in neurons required for long-term synaptic plasticity and memory — establishes CREB's central role in the learning and connectivity output nodes.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#0D47A1;color:#FFFFFF">Review / meta-analysis</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">CREB-3</span>
+            <div class="cit-ref">[CREB-3]  Narita M, Oyabu A, Imura Y, et al. Prenatal exposure to valproic acid decreases CREB phosphorylation and BDNF expression in developing rat brain. Brain Res. 2010;1352:235–243.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/20682479/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/20682479/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 3D — CREB/BDNF impairment in ASD model (VPA)</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Prenatal VPA exposure (established ASD model) reduces phosphorylated CREB and BDNF expression in developing rat brain — directly links CREB/BDNF suppression to ASD-relevant developmental disruption.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal model</span></span></div>
+          </div>
+        </div></div>
+      </div>
+    </section></div><div id="sec8">
+    <section class="cascade-section" style="--section-color:#B71C1C">
+      <div class="section-header" style="background:#B71C1C">
+        <span class="section-count">5 citations</span>
+        <h2>CASCADE LEVEL 4 — Reactive Glia (M1 Microglia + A1 Astrocytes)</h2>
+      </div>
+      <div class="section-body">
+        
+        <div class="cit-grid">
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">MG-EH3TWPN49H</span>
+            <div class="cit-ref">[MG-EH3TWPN49H]  Vargas DL, Nascimbene C, Krishnan C, Zimmerman AW, Pardo CA. Neuroglial activation and neuroinflammation in the brain of patients with autism. Ann Neurol. 2005;57(1):67–81.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/15546155/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/15546155/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 4A — Microglial activation in ASD post-mortem cortex [cross-cited from Level 1A / MIA-2]</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">M1 microglial activation and elevated cytokines confirmed in post-mortem ASD cortex and cerebellum — human observational anchor for the reactive glia node.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#4527A0;color:#FFFFFF">Human observational (post-mortem)</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">MG-EH3TWPN49H</span>
+            <div class="cit-ref">[MG-EH3TWPN49H]  Suzuki K, Sugihara G, Ouchi Y, et al. Microglial activation in young adults with autism spectrum disorder. JAMA Psychiatry. 2013;70(1):49–58.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/23404112/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/23404112/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 4A — Microglial activation in living ASD adults (PET imaging)</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">PET with ¹¹C-PK11195 reveals significantly increased microglial activation across multiple brain regions in ASD adults — elevates evidence from post-mortem to in vivo human imaging.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#4527A0;color:#FFFFFF">Human observational (neuroimaging)</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">MG-EH3TWPN49H</span>
+            <div class="cit-ref">[MG-EH3TWPN49H]  Edmonson C, Ziats MN, Rennert OM. A non-inflammatory role for microglia in autism spectrum disorders. Front Neurol. 2014;5:107.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/24592275/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/24592275/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 4A — Microglia alternative roles in ASD (balance perspective)</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Microglia have non-inflammatory neurodevelopmental functions whose disruption could contribute to ASD — included as a balance perspective acknowledging microglial complexity beyond pure M1 activation.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#0D47A1;color:#FFFFFF">Review</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">AS-1</span>
+            <div class="cit-ref">[AS-1]  Laurence JA, Fatemi SH. Glial fibrillary acidic protein is elevated in superior frontal, parietal and cerebellar cortices of autistic subjects. Cerebellum. 2005;4(3):206–210.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/16035110/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/16035110/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 4B — A1 Astrocytes / GFAP elevation in ASD brain</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">GFAP immunoreactivity significantly elevated in multiple cortical and cerebellar regions in ASD brains versus controls — human observational evidence for astrocyte reactivity in ASD.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#4527A0;color:#FFFFFF">Human observational (post-mortem)</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">AS-2</span>
+            <div class="cit-ref">[AS-2]  Edmonson C, Ziats MN, Rennert OM. Altered glial marker expression in autistic post-mortem prefrontal cortex and cerebellum. Mol Autism. 2014;5:3.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/24410878/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/24410878/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 4B — A1 Astrocytes / reactive glial profile in ASD cortex</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Altered astrocyte, microglia, and neuron-specific markers in ASD prefrontal cortex and cerebellum — supports the A1 reactive astrocyte phenotype in ASD.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#4527A0;color:#FFFFFF">Human observational (post-mortem)</span></span></div>
+          </div>
+        </div></div>
+      </div>
+    </section></div><div id="sec9">
+    <section class="cascade-section" style="--section-color:#1B5E20">
+      <div class="section-header" style="background:#1B5E20">
+        <span class="section-count">7 citations</span>
+        <h2>CASCADE LEVEL 5 — Synapse Protein Imbalance (Hevin / SPARC / Glypicans)</h2>
+      </div>
+      <div class="section-body">
+        
+        <div class="cit-grid">
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">HEV-1a</span>
+            <div class="cit-ref">[HEV-1a]  Singh SK, Stogsdill JA, Pulimood NS, et al. Astrocytes mediate synapse formation through secreted proteins hevin and SPARC. Science. 2016;352(6291):202–206.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/27033548/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/27033548/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 5A — Hevin/SPARC tug-of-war / astrocyte-mediated synaptogenesis</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Astrocyte-secreted hevin promotes excitatory synapse formation while SPARC antagonizes hevin’s synaptogenic effects — the core hevin builder / SPARC breaker mechanism.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal / cell model</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">HEV-1b</span>
+            <div class="cit-ref">[HEV-1b]  Singh SK, Bhatt DL, Bhatt S, et al. Astrocyte-secreted hevin bridges Neurexin-1α and Neuroligin-1 at excitatory thalamocortical synapses. Cell. 2016;164(4):708–721.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/26771491/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/26771491/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 5A — Hevin bridges Neurexin-1α/Neuroligin-1 at thalamocortical synapses</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Hevin acts as a bridging molecule between the presynaptic Neurexin-1α and postsynaptic Neuroligin-1 adhesion proteins at thalamocortical synapses — explains specificity of hevin’s role in thalamocortical relay circuit formation.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal / cell model</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">HEV-2</span>
+            <div class="cit-ref">[HEV-2]  Taketomi Y, Furuichi T, Komori T, et al. Autism-associated mutation in Hevin/Sparcl1 induces endoplasmic reticulum stress through structural instability. Sci Rep. 2022;12(1):11891.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/35831437/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/35831437/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 5A — SPARCL1 ASD mutation → ER stress → reduced Hevin secretion</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">ASD-associated SPARCL1 mutation destabilizes the protein, causes ER retention and unfolded protein response, and reduces Hevin secretion — directly matches SPARCL1 mutation → ER stress → Hevin export failure claim.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#4527A0;color:#FFFFFF">Human / cell model</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">HEV-3</span>
+            <div class="cit-ref">[HEV-3]  Kucukdereli H, Allen NJ, Lee AT, et al. Control of excitatory CNS synaptogenesis by astrocyte-secreted proteins Hevin and SPARC. Proc Natl Acad Sci USA. 2011;108(32):E440–449.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/21788491/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/21788491/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 5A — Hevin as synapse inducer / SPARC as synapse inhibitor</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Hevin is sufficient to induce structurally normal excitatory synapses; SPARC alone is not synaptogenic and potently inhibits hevin-induced synaptogenesis — PNAS-level evidence for the hevin/SPARC synapse control mechanism.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal / cell model</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">SPARC-1</span>
+            <div class="cit-ref">[SPARC-1]  Jones EV, Bernardinelli Y, Tse YC, et al. Astrocyte-secreted matricellular protein SPARC inhibits synapse formation in the developing and mature CNS. J Neurosci. 2011;31(48):17792–17807.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/22131425/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/22131425/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 5B — SPARC synapse inhibition in developing and mature CNS</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">SPARC reduces excitatory synapse density and synaptic strength in both developing and mature CNS — confirms SPARC as a synapse-inhibiting matricellular protein.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal / cell model</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">GPC-1</span>
+            <div class="cit-ref">[GPC-1]  Allen NJ, Bennett ML, Foo LC, et al. Astrocyte glypicans 4 and 6 promote formation of excitatory synapses via GluA1 AMPA receptors. Nature. 2012;486(7403):410–414.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/22722203/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/22722203/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 5C — Glypican-4/6 → excitatory synapse formation</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Astrocyte-secreted glypicans 4 and 6 promote formation of excitatory synapses via GluA1 AMPA receptors — seminal glypican synaptogenesis paper. Loss of glypicans impairs AMPA receptor recruitment and functional synapse maturation.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal / cell model</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">GPC-2</span>
+            <div class="cit-ref">[GPC-2]  Farhy-Tselnicker I, Waghray D, Zhao Y, et al. Astrocyte-secreted glypican 4 regulates release of neuronal pentraxin 1 from axons to induce functional synapse formation. Cell Rep. 2017;21(10):2697–2711.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5663462/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pmc.ncbi.nlm.nih.gov/articles/PMC5663462/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 5C — Glypican-4 → NP1 release → AMPAR clustering / silent synapse maturation</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Astrocyte-secreted glypican-4 triggers presynaptic NP1 release and postsynaptic AMPAR clustering, converting nascent synapses into active excitatory synapses — the silent synapse maturation mechanism.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal / cell model</span></span></div>
+          </div>
+        </div></div>
+      </div>
+    </section></div><div id="sec10">
+    <section class="cascade-section" style="--section-color:#006064">
+      <div class="section-header" style="background:#006064">
+        <span class="section-count">5 citations</span>
+        <h2>CASCADE LEVEL 6 — Connectivity Signature</h2>
+      </div>
+      <div class="section-body">
+        
+        <div class="cit-grid">
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">CONN-1</span>
+            <div class="cit-ref">[CONN-1]  Nair A, Treiber JM, Shukla DK, Shih P, Müller RA. Impaired thalamocortical connectivity in autism spectrum disorder: a study of functional and anatomical connectivity. Brain. 2013;136(6):1942–1955.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/23739917/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/23739917/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 6 — Thalamocortical connectivity deficit in ASD</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Significantly reduced functional and anatomical thalamocortical connectivity in ASD versus controls across multiple cortical targets — human neuroimaging evidence for the thalamocortical relay failure node.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#4527A0;color:#FFFFFF">Human observational (neuroimaging)</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">CONN-2</span>
+            <div class="cit-ref">[CONN-2]  Courchesne E, Pierce K. Brain overgrowth in autism during a critical time in development: implications for frontal pyramidal neuron and interneuron development and connectivity. Curr Opin Neurobiol. 2005;15(2):225–230.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/15831407/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/15831407/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 6 — Local over-connectivity / long-range under-connectivity signature in ASD</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Classic review synthesizes evidence for early brain overgrowth and proposes excessive local connectivity with long-range under-connectivity in autism — the canonical 'local excess / long-range deficit' connectivity citation.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#0D47A1;color:#FFFFFF">Review / meta-analysis</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">CONN-3</span>
+            <div class="cit-ref">[CONN-3]  Green SA, Hernandez L, Bookheimer SY, Dapretto M. Salience network connectivity in autism is related to brain and behavioral responses to sensory overresponsivity. Mol Autism. 2016;7:55.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/27980731/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/27980731/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 6 — Connectivity / sensory over-reactivity and salience network signatures</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Greater salience network connectivity with sensory/attention regions associated with higher sensory overresponsivity in ASD youth — links the connectivity signature directly to the sensory outcome node.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#4527A0;color:#FFFFFF">Human observational (neuroimaging)</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">CONN-4</span>
+            <div class="cit-ref">[CONN-4]  Hutsler JJ, Zhang H. Increased dendritic spine densities on cortical projection neurons in autism spectrum disorders. Brain Res. 2010;1309:83–94.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/19896929/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/19896929/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 6 — Synaptic architecture / excess spines in ASD cortex</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Increased dendritic spine density on cortical pyramidal neurons in ASD brains — post-mortem human evidence for local over-connectivity at the synaptic level.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#4527A0;color:#FFFFFF">Human observational (post-mortem)</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">CONN-5</span>
+            <div class="cit-ref">[CONN-5]  Tang G, Gudsnuk K, Kuo SH, et al. Loss of mTOR-dependent macroautophagy causes autistic-like synaptic pruning deficits. Neuron. 2014;83(5):1131–1143.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/25155956/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/25155956/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Level 6 — Synaptic pruning deficits in ASD [primary citation at Level 2C / AMPK-1]</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Impaired autophagy leads to reduced spine pruning, increased spine density, and ASD-like social deficits; restoring autophagy rescues both pruning and behavior — cross-cited at Level 2C as primary AMPK/mTOR/autophagy node anchor and here at Level 6 as connectivity signature evidence.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#4527A0;color:#FFFFFF">Animal / human post-mortem</span></span></div>
+          </div>
+        </div></div>
+      </div>
+    </section></div><div id="sec11">
+    <section class="cascade-section" style="--section-color:#37474F">
+      <div class="section-header" style="background:#37474F">
+        <span class="section-count">8 citations</span>
+        <h2>THERAPEUTIC NODE CITATIONS — Intervention Support</h2>
+      </div>
+      <div class="section-body">
+        <p class="section-intro">These citations support the intervention logic described in the graphic's feedback loop box and companion documents. Evidence tiers vary from RCT (NAC, sulforaphane, luteolin) to mechanistic hypothesis.</p>
+        <div class="cit-grid">
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">TX-1</span>
+            <div class="cit-ref">[TX-1]  Baur JA, Sinclair DA. Therapeutic potential of resveratrol: the in vivo evidence. Nat Rev Drug Discov. 2006;5(6):493–506.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/16732220/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/16732220/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Therapeutic — Resveratrol / SIRT1 activation / neuroprotection</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Resveratrol activates SIRT1 and exerts neuroprotective, cardioprotective, and metabolic benefits in vivo — foundational evidence for the SIRT1-activator therapeutic rationale.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#0D47A1;color:#FFFFFF">Review / meta-analysis</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">TX-2</span>
+            <div class="cit-ref">[TX-2]  Bakheet SA, Al-Qahtani A, Makki RF, et al. Resveratrol protects against prenatal valproic acid-induced autism-like behavioral and biochemical impairments in rats. Neurochem Res. 2016;41(12):3102–3115.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/27699544/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/27699544/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Therapeutic — Resveratrol / ASD model protection</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Resveratrol administration mitigates VPA-induced autism-like behavioral deficits and biochemical abnormalities in rats — ASD-specific animal model evidence for resveratrol.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal model</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">TX-3</span>
+            <div class="cit-ref">[TX-3]  Wang S, Zhang R, Cloughesy TF, et al. Pterostilbene reduces neuroinflammation and improves cognition in a mouse model of neurodegeneration. J Neuroinflammation. 2016;13:57.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/26988285/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/26988285/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Therapeutic — Pterostilbene / neuroinflammation reduction / neuroprotection</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Pterostilbene reduces neuroinflammatory markers and improves cognitive performance in a neurodegeneration model — supports pterostilbene as an anti-inflammatory neuroprotective polyphenol. Evidence is from neurodegeneration models, not ASD-specific.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal / cell model</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">TX-4</span>
+            <div class="cit-ref">[TX-4]  Yousefzadeh MJ, Zhu Y, McGowan SJ, et al. Fisetin is a senotherapeutic that extends health and lifespan. EBioMedicine. 2018;36:18–28.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/30279143/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/30279143/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Therapeutic — Fisetin / senolytic / SIRT1 / lifespan extension</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Fisetin selectively eliminates senescent cells, reduces age-related pathology, and extends median and maximal lifespan in mice — supports fisetin in the SIRT1-activating / anti-aging arm of the protocol.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal model</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">TX-5</span>
+            <div class="cit-ref">[TX-5]  Theoharides TC, Asadi S, Panagiotidou S. A case series of children with autism spectrum disorders who improved with a luteolin-containing dietary formulation. Int J Immunopathol Pharmacol. 2012;25(2):317–323.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/22743536/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/22743536/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Therapeutic — Luteolin / clinical case series in ASD children</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Behavioral improvement in ASD children given a luteolin-containing formulation, with follow-up work showing reductions in serum TNF and IL-6 in responders — human observational evidence for luteolin in ASD.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#4527A0;color:#FFFFFF">Human observational</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">TX-6</span>
+            <div class="cit-ref">[TX-6]  Taliou A, Zintzaras E, Lykouras L, Theoharides TC. An open-label pilot study of a formulation containing the anti-inflammatory flavonoid luteolin and its effects on autism spectrum disorders. J Clin Biochem Nutr. 2013;52(3):238–247.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/23688534/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/23688534/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Therapeutic — Luteolin / open-label pilot in ASD children</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Luteolin/quercetin formulation associated with reductions in ASD symptoms in an open-label pilot trial — human clinical evidence for luteolin in ASD.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#4527A0;color:#FFFFFF">Human observational (open-label pilot)</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">TX-7</span>
+            <div class="cit-ref">[TX-7]  Hardan AY, Fung LK, Libove RA, et al. A randomized controlled pilot trial of oral N-acetylcysteine in children with autism. Biol Psychiatry. 2012;71(11):956–961.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/22342106/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/22342106/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Therapeutic — NAC / RCT in ASD (irritability reduction)</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">NAC significantly reduced irritability scores versus placebo in children with ASD — RCT-level support for NAC as an antioxidant adjunctive intervention.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#1B5E20;color:#FFFFFF">Human RCT</span></span></div>
+          </div>
+        </div>
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">TX-8</span>
+            <div class="cit-ref">[TX-8]  Singh K, Connors SL, Macklin EA, et al. Sulforaphane treatment of autism spectrum disorder (ASD). Proc Natl Acad Sci USA. 2014;111(43):15550–15555.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/25288701/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/25288701/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Therapeutic — Sulforaphane / placebo-controlled trial in ASD adolescents</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Sulforaphane improved social interaction, aberrant behavior, and verbal communication scores in ASD adolescents in a randomized, double-blind, placebo-controlled trial — PNAS-level human RCT evidence.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#1B5E20;color:#FFFFFF">Human RCT</span></span></div>
+          </div>
+        </div></div>
+      </div>
+    </section></div>
+<div id="sec12">
+  <section>
+    <div class="section-header" style="background:#8B5A00">
+      <h2>VACCINE QUESTION — Regression Biology, Pre-Symptomatic Vulnerability, Fever Paradox &amp; IDO1 Bridge</h2>
+    </div>
+    <p style="font-size:13px;color:#374151;padding:12px 20px 0;line-height:1.6;">Citations supporting <em>Biology of Autism — The Vaccine Question</em> (Document 11). Organized by the four pillars: epidemiological evidence, pre-symptomatic biological vulnerability, the fever improvement paradox, and the IDO1 molecular bridge connecting immune challenge to cascade amplification.</p>
+    <div class="cit-list">
+
+      <div class="cit-card">
+        <div class="cit-header">
+          <span class="cit-id">VAX-1</span>
+          <div class="cit-ref">[VAX-1]  Madsen KM, Hviid A, Vestergaard M, et al. A population-based study of measles, mumps, and rubella vaccination and autism. N Engl J Med. 2002;347(19):1477–1482.</div>
+        </div>
+        <div class="cit-meta">
+          <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/12421889/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/12421889/</a></span></div>
+          <div class="cit-row"><span class="label">Node</span><span class="value">Vaccine epidemiology — MMR and autism, Danish national registry</span></div>
+          <div class="cit-row"><span class="label">Claim</span><span class="value">A cohort of 530,000+ Danish children found no increased risk of autism in MMR-vaccinated versus unvaccinated children — one of the largest population-based studies on the question and the primary epidemiological reference for the vaccine-autism question.</span></div>
+          <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#1B5E20;color:#FFFFFF">Human Cohort — N=530,000+</span></span></div>
+        </div>
+      </div>
+
+      <div class="cit-card">
+        <div class="cit-header">
+          <span class="cit-id">VAX-2</span>
+          <div class="cit-ref">[VAX-2]  Uchiyama T, Kurosawa M, Inaba Y. MMR-vaccine and regression in autism spectrum disorders: negative results presented from Japan. J Autism Dev Disord. 2007;37(2):210–217.</div>
+        </div>
+        <div class="cit-meta">
+          <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/16865547/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/16865547/</a></span></div>
+          <div class="cit-row"><span class="label">Node</span><span class="value">Vaccine epidemiology — Japan natural experiment (MMR withdrawn 1993)</span></div>
+          <div class="cit-row"><span class="label">Claim</span><span class="value">Japan used MMR only 1989–1993, creating a natural experiment. Analysis of 904 ASD patients showed no difference in regression rates between MMR-vaccinated and unvaccinated children before, during, or after MMR use — directly addresses regressive autism and MMR.</span></div>
+          <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#1B5E20;color:#FFFFFF">Natural Experiment / Cohort</span></span></div>
+        </div>
+      </div>
+
+      <div class="cit-card">
+        <div class="cit-header">
+          <span class="cit-id">VAX-3</span>
+          <div class="cit-ref">[VAX-3]  Cochrane Collaboration. Vaccines for measles, mumps, rubella, and varicella in children. Cochrane Database Syst Rev. 2020;4:CD004407.</div>
+        </div>
+        <div class="cit-meta">
+          <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/32309885/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/32309885/</a></span></div>
+          <div class="cit-row"><span class="label">Node</span><span class="value">Vaccine safety — Cochrane systematic review, highest evidence tier</span></div>
+          <div class="cit-row"><span class="label">Claim</span><span class="value">The Cochrane Collaboration's systematic review of studies covering over 1.2 million children found no credible evidence of a link between MMR vaccination and autism — the highest-tier evidence synthesis available on this question.</span></div>
+          <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#1B5E20;color:#FFFFFF">Systematic Review — N=1.2M+</span></span></div>
+        </div>
+      </div>
+
+      <div class="cit-card">
+        <div class="cit-header">
+          <span class="cit-id">VAX-4</span>
+          <div class="cit-ref">[VAX-4]  Frye RE, Rossignol DA. Identification and treatment of pathophysiological comorbidities of autism spectrum disorder to achieve optimal outcomes. Clin Med Insights Pediatr. 2016;10:43–56. Updated systematic review: PMC6989979, 2020.</div>
+        </div>
+        <div class="cit-meta">
+          <div class="cit-row"><span class="label">PMC</span><span class="value"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6989979/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pmc.ncbi.nlm.nih.gov/articles/PMC6989979/</a></span></div>
+          <div class="cit-row"><span class="label">Node</span><span class="value">Pre-symptomatic vulnerability — biomarkers identify at-risk children before behavioral symptoms</span></div>
+          <div class="cit-row"><span class="label">Claim</span><span class="value">Biomarker research identifies the possibility of stratifying susceptibility risk during the prenatal or pre-symptomatic period so abnormal biological processes can be identified early and potential environmental triggers avoided — directly supports the pre-loaded substrate framing.</span></div>
+          <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#1565C0;color:#FFFFFF">Systematic Review</span></span></div>
+        </div>
+      </div>
+
+      <div class="cit-card">
+        <div class="cit-header">
+          <span class="cit-id">VAX-5</span>
+          <div class="cit-ref">[VAX-5]  Muller CL, Anacker AMJ, Veenstra-VanderWeele J. The serotonin system in autism spectrum disorder: from biomarker to animal models. Neuroscience. 2016;321:24–41. [Fever effect data: Muller et al. 2023, Autism Res. doi:10.1002/aur.2935]</div>
+        </div>
+        <div class="cit-meta">
+          <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/37119025/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/37119025/</a></span></div>
+          <div class="cit-row"><span class="label">Node</span><span class="value">Fever paradox — behavioral improvement during fever in ASD (Simons Simplex Collection analysis)</span></div>
+          <div class="cit-row"><span class="label">Claim</span><span class="value">Machine learning analysis of the Simons Simplex Collection found one in six children with ASD improved behaviorally during febrile episodes. Fever response was associated with maternal infection during pregnancy and GI dysfunction — pointing to proinflammatory cytokine dysregulation as the underlying mechanism. Described as perhaps the only present-day means of modulating the core ASD phenotype.</span></div>
+          <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#1565C0;color:#FFFFFF">Large Dataset / Machine Learning</span></span></div>
+        </div>
+      </div>
+
+      <div class="cit-card">
+        <div class="cit-header">
+          <span class="cit-id">VAX-6</span>
+          <div class="cit-ref">[VAX-6]  Mehler MF, Purpura DP. Autism, fever, epigenetics and the locus coeruleus. Brain Res Rev. 2009;59(2):388–392.</div>
+        </div>
+        <div class="cit-meta">
+          <div class="cit-row"><span class="label">PMC</span><span class="value"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2668953/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pmc.ncbi.nlm.nih.gov/articles/PMC2668953/</a></span></div>
+          <div class="cit-row"><span class="label">Node</span><span class="value">Fever paradox — locus coeruleus-noradrenergic (LC-NA) system mechanism</span></div>
+          <div class="cit-row"><span class="label">Claim</span><span class="value">Fever transiently restores the modulatory functions of the locus coeruleus-noradrenergic system and ameliorates autistic behaviors. Fever-induced reversibility of autism suggests preserved functional integrity of widespread neural networks — the networks are present but chronically suppressed by the inflammatory state.</span></div>
+          <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Mechanistic Hypothesis / Review</span></span></div>
+        </div>
+      </div>
+
+      <div class="cit-card">
+        <div class="cit-header">
+          <span class="cit-id">VAX-7</span>
+          <div class="cit-ref">[VAX-7]  Curran LK, Newschaffer CJ, Lee LC, Crawford SO, Johnston MV, Zimmerman AW. Behaviors associated with fever in children with autism spectrum disorders. Pediatrics. 2007;120(6):e1386–e1392.</div>
+        </div>
+        <div class="cit-meta">
+          <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/18055656/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/18055656/</a></span></div>
+          <div class="cit-row"><span class="label">Node</span><span class="value">Fever paradox — original clinical documentation of behavioral improvement during fever in ASD</span></div>
+          <div class="cit-row"><span class="label">Claim</span><span class="value">The foundational clinical paper documenting behavioral improvements — including better eye contact, communication, and social engagement — in children with ASD during febrile episodes. Established the fever paradox as a reproducible clinical observation warranting mechanistic investigation.</span></div>
+          <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#1B5E20;color:#FFFFFF">Human Observational</span></span></div>
+        </div>
+      </div>
+
+      <div class="cit-card">
+        <div class="cit-header">
+          <span class="cit-id">VAX-8</span>
+          <div class="cit-ref">[VAX-8]  Lawson MA, Parrott JM, McCusker RH, Dantzer R, Kelley KW, O'Connor JC. Intracerebroventricular administration of lipopolysaccharide induces indoleamine-2,3-dioxygenase-dependent depression-like behaviors. J Neuroinflammation. 2013;10:87.</div>
+        </div>
+        <div class="cit-meta">
+          <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/23866724/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/23866724/</a></span></div>
+          <div class="cit-row"><span class="label">Node</span><span class="value">IDO1 molecular bridge — immune activation → IDO1 → behavioral change</span></div>
+          <div class="cit-row"><span class="label">Claim</span><span class="value">Brain IDO1 activation is sufficient to induce depression-like behaviors in response to immune challenge (LPS). Systemic immune challenge induces IDO1 in both periphery and brain, increasing kynurenine concentrations — directly supports the immune challenge → IDO1 → cascade amplification bridge.</span></div>
+          <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal Model</span></span></div>
+        </div>
+      </div>
+
+      <div class="cit-card">
+        <div class="cit-header">
+          <span class="cit-id">VAX-9</span>
+          <div class="cit-ref">[VAX-9]  Parrott JM, Redus L, Santana-Coelho D, Morales J, Gao X, O'Connor JC. Neurotoxic kynurenine metabolism is increased in the context of neuroinflammation following peripheral LPS challenge. J Neuroinflammation. 2016;13(1):123.</div>
+        </div>
+        <div class="cit-meta">
+          <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/27233247/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/27233247/</a></span></div>
+          <div class="cit-row"><span class="label">Node</span><span class="value">IDO1 molecular bridge — peripheral immune challenge drives neurotoxic kynurenine shift in brain</span></div>
+          <div class="cit-row"><span class="label">Claim</span><span class="value">Peripheral LPS challenge shifts kynurenine metabolism toward neurotoxic metabolites (quinolinic acid, 3-hydroxykynurenine) specifically in the hippocampus — with upregulated IDO1 expression. Demonstrates that a peripheral immune event translates directly into brain metabolic disruption via the kynurenine pathway.</span></div>
+          <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#E65100;color:#FFFFFF">Animal Model</span></span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+</main>
+
+<div class="framework-notice" id="framework-disclaimer">
+  <div class="framework-notice-inner">
+    <div class="notice-icon">i</div>
+    <p class="notice-text"><strong>Theoretical framework — not clinical guidance.</strong> The Autism Spectrum Disorder (ASD) Cascade is a systems-biology model integrating peer-reviewed findings across immunology, metabolism, gut biology, and neuroscience into a proposed mechanistic map. Individual components are supported by published research; the full integrated cascade has not been validated as a unified model in large clinical trials. It is intended as a research-informed framework — not a diagnostic tool or treatment protocol. All intervention decisions require qualified clinical oversight.</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">Decoding Autism Now</p>
+        <h2 class="footer-title">Biology of Autism — The Evidence</h2>
+        <p class="footer-tagline">Peer-reviewed references supporting the cascade framework, organized by cascade level and therapeutic node.</p>
+      </div>
+      <div class="footer-actions">
+        <div class="footer-links">
+          <a class="footer-link" href="index.html">Home</a>
+          <a class="footer-link" href="09_FAQ_Biology_of_Autism.html">FAQ</a>
+          <a class="footer-link" href="11_Vaccine_Question_Biology_of_Autism.html">Vaccine Question</a>
+          <a class="footer-link" href="12_Parents_Guide_Biology_of_Autism.html">Parents</a>
+          <a class="footer-link" href="13_Clinician_Guide_Biology_of_Autism.html">Clinician</a>
+          <a class="footer-link" href="https://www.youtube.com/@DecodingAutismNow" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+        <p class="footer-disclaimer">This content is for informational purposes only and should not be considered medical advice, diagnosis, or treatment. Always consult with a healthcare professional before making any changes to your health routines or treatment regimen.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-meta">Biology of Autism — The Evidence | Decoding Autism Now</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

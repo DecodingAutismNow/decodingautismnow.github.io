@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EH3TWPN49H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EH3TWPN49H');
+</script>
+
+<title>Biology of Autism — Testing Strategy | Decoding Autism Now</title>
+<meta property="og:title" content="Biology of Autism — Testing Strategy | Decoding Autism Now">
+<meta property="og:description" content="A symptom-driven framework to prioritize testing across gut, immune, mitochondrial, stress, and environmental channels in autism.">
+<meta property="og:image" content="https://decodingautismnow.com/images/OG-07.png">
+<meta property="og:url" content="https://decodingautismnow.com/07_Testing_Strategy_Biology_of_Autism.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Biology of Autism — Testing Strategy | Decoding Autism Now">
+<meta name="twitter:description" content="A symptom-driven framework to prioritize testing across gut, immune, mitochondrial, stress, and environmental channels in autism.">
+<meta name="twitter:image" content="https://decodingautismnow.com/images/OG-07.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#0f2342;
+  --teal:#1e6b72;
+  --teal-light:#2a9da6;
+  --gold:#c8923a;
+  --gold-light:#e8b86d;
+  --cream:#faf7f2;
+  --paper:#fdfcf9;
+  --text-dark:#1a1a2e;
+  --text-mid:#374151;
+  --muted:#7a756e;
+  --rule:#ddd8d0;
+  --gut:#1B5E20;
+  --mito:#E65100;
+  --mia:#7B1FA2;
+  --env:#4E342E;
+  --sst:#1565C0;
+  --multi:#37474F;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Source Serif 4', serif;
+  background:var(--cream);
+  color:var(--text-dark);
+  line-height:1.75;
+  font-size:17px;
+}
+
+/* TOPBAR */
+.topbar{
+  position:fixed;
+  top:0; left:0; right:0;
+  z-index:1000;
+  background:var(--navy);
+  border-bottom:2px solid var(--gold);
+}
+.topbar-inner{
+  max-width:960px;
+  margin:0 auto;
+  padding:10px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+}
+.topbar-brand{
+  font-family:'DM Mono', monospace;
+  font-size:10px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--teal-light);
+}
+.topbar-title{
+  font-size:14px;
+  font-weight:600;
+  color:#fff;
+  line-height:1.2;
+}
+.topbar-home{
+  font-family:'DM Mono', monospace;
+  font-size:10px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.82);
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:4px;
+  padding:5px 10px;
+  white-space:nowrap;
+}
+.topbar-home:hover{
+  color:#fff;
+  border-color:rgba(255,255,255,.45);
+}
+
+/* ALWAYS VISIBLE NAV */
+.sticky-nav{
+  position:fixed;
+  top:56px; left:0; right:0;
+  z-index:999;
+  background:rgba(255,255,255,.98);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--rule);
+  box-shadow:0 2px 10px rgba(15,35,66,.06);
+}
+.sticky-nav-inner{
+  max-width:960px;
+  margin:0 auto;
+  padding:8px 20px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  align-items:center;
+}
+.sdn-pill, .pill{
+  font-family:'DM Mono', monospace;
+  font-size:10px;
+  letter-spacing:.05em;
+  text-decoration:none;
+  border-radius:999px;
+  padding:6px 12px;
+  white-space:nowrap;
+  border:1px solid;
+  transition:all .15s ease;
+}
+.pill:hover{transform:translateY(-1px)}
+.sdn-pill.teal, .pill.teal{background:#eef8f9;color:#1e6b72;border-color:rgba(30,107,114,.22)}
+.sdn-pill.gold, .pill.gold{background:#fdf6ec;color:#8a5c1a;border-color:rgba(200,146,58,.25)}
+.sdn-pill.navy, .pill.navy{background:#f0f2f6;color:#0f2342;border-color:rgba(15,35,66,.18)}
+.sdn-pill.active, .pill.active{background:var(--gold);color:#fff;border-color:var(--gold)}
+.pill-divider{
+  width:1px;height:14px;background:var(--rule);margin:0 3px;align-self:center
+}
+
+/* HERO */
+.hero{
+  margin-top:110px;
+  background:var(--navy);
+  color:#fff;
+}
+.hero-stripe{
+  height:5px;
+  background:linear-gradient(90deg,var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%);
+}
+.hero-inner{
+  max-width:960px;
+  margin:0 auto;
+  padding:70px 20px 40px;
+}
+.hero-eyebrow{
+  font-family:'DM Mono', monospace;
+  font-size:10px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--teal-light);
+  margin-bottom:12px;
+}
+.hero-title{
+  font-family:'Playfair Display', serif;
+  font-size:clamp(2rem,4.4vw,3rem);
+  line-height:1.12;
+  margin-bottom:10px;
+  color:#fff;
+}
+.hero-title .accent-line{
+  display:block;
+  color:var(--gold-light);
+  font-style:italic;
+  font-weight:500;
+}
+.hero-sub{
+  max-width:640px;
+  color:rgba(255,255,255,.68);
+  font-style:italic;
+  font-weight:300;
+  line-height:1.6;
+  margin-bottom:18px;
+}
+.hero-pills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.hero-pill{
+  font-family:'DM Mono', monospace;
+  font-size:10px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  padding:4px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.18);
+  color:rgba(255,255,255,.78);
+}
+.hero-link{
+  display:inline-block;
+  margin-top:14px;
+  font-family:'DM Mono', monospace;
+  font-size:9px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:rgba(232,184,109,.82);
+  text-decoration:none;
+  border-bottom:1px solid rgba(232,184,109,.3);
+}
+.hero-link:hover{border-bottom-color:rgba(232,184,109,.75)}
+
+/* MAIN */
+main{
+  max-width:960px;
+  margin:36px auto 60px;
+  padding:0 20px;
+}
+
+.doc-section{margin-bottom:52px}
+.section-title{
+  font-family:'Playfair Display', serif;
+  font-size:1.4rem;
+  font-weight:700;
+  color:var(--navy);
+  border-bottom:2px solid var(--navy);
+  padding-bottom:8px;
+  margin-bottom:20px;
+  display:flex;
+  align-items:baseline;
+  gap:14px;
+}
+.section-num{
+  font-family:'DM Mono', monospace;
+  font-size:11px;
+  background:var(--navy);
+  color:#fff;
+  padding:3px 9px;
+  border-radius:3px;
+  letter-spacing:.06em;
+}
+.body-text{
+  font-size:1.03rem;
+  color:#2a2a2a;
+  line-height:1.82;
+  margin-bottom:18px;
+}
+.body-text a{
+  color:var(--teal);
+  font-weight:600;
+  text-decoration:none;
+  border-bottom:1px solid rgba(30,107,114,.3);
+}
+.body-text a:hover{border-color:var(--teal)}
+
+.callout{
+  border-radius:0 8px 8px 0;
+  padding:15px 20px;
+  margin-bottom:20px;
+}
+.callout.blue{background:#EFF6FF;border-left:4px solid #3B82F6}
+.callout.green{background:#F0FDF4;border-left:4px solid #22C55E}
+.callout.amber{background:#FFFBEB;border-left:4px solid #F59E0B}
+.callout.purple{background:#f5f0ff;border-left:4px solid #8b5cf6}
+.callout h4{
+  font-family:'DM Mono', monospace;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-weight:500;
+  margin-bottom:7px;
+}
+.callout.blue h4{color:#1D4ED8}
+.callout.green h4{color:#15803D}
+.callout.amber h4{color:#92400E}
+.callout.purple h4{color:#6d28d9}
+.callout p{
+  font-size:.95rem;
+  color:#374151;
+  line-height:1.68;
+}
+
+.branch{
+  background:var(--paper);
+  border:1px solid var(--rule);
+  border-radius:8px;
+  overflow:hidden;
+  margin-bottom:12px;
+  transition:box-shadow .15s ease;
+}
+.branch:hover{box-shadow:0 3px 14px rgba(15,35,66,.08)}
+.branch-header{
+  padding:13px 18px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.branch-letter{
+  width:30px;height:30px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-family:'DM Mono', monospace;
+  font-size:13px;font-weight:500;color:#fff;background:var(--navy);
+  flex-shrink:0;
+}
+.branch-symptom{
+  font-size:1.02rem;
+  font-weight:600;
+  color:var(--navy);
+  flex:1;
+  line-height:1.35;
+}
+.branch-tag{
+  font-family:'DM Mono', monospace;
+  font-size:9.5px;
+  font-weight:500;
+  padding:3px 10px;
+  border-radius:999px;
+  color:#fff;
+  white-space:nowrap;
+  letter-spacing:.04em;
+}
+.branch-body{
+  padding:16px 18px 18px 60px;
+  border-top:1px solid var(--rule);
+  background:#fafaf8;
+}
+.branch-body.plain{padding-left:24px}
+.branch-body ul{
+  padding-left:0;
+  list-style:none;
+}
+.branch-body li{
+  font-size:.95rem;
+  color:#2a2a2a;
+  margin-bottom:9px;
+  line-height:1.68;
+  padding-left:18px;
+  position:relative;
+}
+.branch-body li::before{
+  content:"→";
+  position:absolute;
+  left:0;
+  color:var(--muted);
+}
+.branch-body li strong{
+  color:var(--navy);
+  font-weight:600;
+}
+.branch-body li a{
+  color:var(--teal);
+  text-decoration:none;
+  border-bottom:1px solid rgba(30,107,114,.3);
+}
+.next-step{
+  display:inline-block;
+  margin-top:12px;
+  font-family:'DM Mono', monospace;
+  font-size:10px;
+  letter-spacing:.08em;
+  padding:6px 14px;
+  border-radius:999px;
+  background:var(--navy);
+  color:#fff;
+  text-decoration:none;
+  border:none;
+}
+.next-step:hover{background:var(--teal)}
+
+.ch{
+  display:inline-block;
+  padding:2px 8px;
+  border-radius:3px;
+  font-size:10px;
+  font-weight:600;
+  color:#fff;
+  font-family:'DM Mono', monospace;
+  white-space:nowrap;
+}
+.ch-gut{background:var(--gut)}
+.ch-mito{background:var(--mito)}
+.ch-mia{background:var(--mia)}
+.ch-env{background:var(--env)}
+.ch-sst{background:var(--sst)}
+.ch-multi{background:var(--multi)}
+
+.mvls-table-wrap,.table-wrap,.channel-cards{
+  overflow-x:auto;
+}
+.mvls-table-wrap,.channel-card-wrap{
+  margin-bottom:18px;
+  border-radius:8px;
+  border:1px solid var(--rule);
+  box-shadow:0 1px 4px rgba(0,0,0,.05);
+}
+.mvls-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:.92rem;
+  background:var(--paper);
+}
+.mvls-table th{
+  background:#374151;
+  color:#fff;
+  padding:10px 14px;
+  text-align:left;
+  font-family:'DM Mono', monospace;
+  font-size:9.5px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  font-weight:500;
+}
+.mvls-table td{
+  padding:10px 14px;
+  border-bottom:1px solid var(--rule);
+  vertical-align:top;
+  line-height:1.58;
+  color:#2a2a2a;
+}
+.mvls-table tr:last-child td{border-bottom:none}
+.mvls-table tr:nth-child(even) td{background:#f9f8f5}
+.mvls-table tr:hover td{background:#f2f0eb}
+
+.cost-box{
+  background:#F0FDF4;
+  border:1px solid #BBF7D0;
+  border-radius:8px;
+  padding:16px 20px;
+  margin:18px 0 4px;
+}
+.cost-box h4{
+  font-family:'DM Mono', monospace;
+  font-size:10px;
+  font-weight:500;
+  color:#15803D;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  margin-bottom:7px;
+}
+.cost-box p{
+  font-size:.95rem;
+  color:#374151;
+  line-height:1.65;
+}
+
+.channel-cards-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-bottom:8px;
+}
+.ch-card{
+  border-radius:8px;
+  overflow:hidden;
+  border:1px solid var(--rule);
+  background:var(--paper);
+}
+.ch-card-header{
+  padding:10px 14px;
+  color:#fff;
+  font-family:'DM Mono', monospace;
+  font-size:10.5px;
+  font-weight:500;
+  letter-spacing:.04em;
+  line-height:1.4;
+}
+.ch-card-body{
+  padding:12px 14px;
+  font-size:.875rem;
+  line-height:1.62;
+  color:#2a2a2a;
+}
+.ch-card-body p{margin-bottom:7px}
+.ch-card-body p:last-child{margin-bottom:0}
+.mini-label{
+  font-family:'DM Mono', monospace;
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-weight:500;
+  color:var(--muted);
+  display:block;
+  margin-bottom:3px;
+  margin-top:8px;
+}
+.mini-label:first-child{margin-top:0}
+
+.nav-strip{
+  background:var(--navy);
+  border-radius:10px;
+  padding:26px 30px;
+  margin-top:16px;
+}
+.nav-strip-title{
+  font-family:'Playfair Display', serif;
+  font-size:1.1rem;
+  font-weight:600;
+  color:#fff;
+  margin-bottom:18px;
+}
+.nav-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:10px;
+}
+.nav-card{
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:8px;
+  padding:14px 16px;
+  text-decoration:none;
+  transition:all .15s;
+  display:block;
+}
+.nav-card:hover{
+  background:rgba(255,255,255,.12);
+  border-color:rgba(255,255,255,.28);
+}
+.nav-card-doc{
+  font-family:'DM Mono', monospace;
+  font-size:9px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.4);
+  margin-bottom:5px;
+}
+.nav-card-title{
+  font-size:.88rem;
+  font-weight:600;
+  color:#fff;
+  margin-bottom:4px;
+  line-height:1.3;
+}
+.nav-card-desc{
+  font-size:.8rem;
+  color:rgba(255,255,255,.52);
+  line-height:1.5;
+  font-style:italic;
+}
+.nav-card-arrow{
+  font-family:'DM Mono', monospace;
+  font-size:10px;
+  color:var(--teal-light);
+  margin-top:9px;
+}
+
+/* DISCLAIMER */
+.disclaimer{
+  background:#fffbf2;
+  border-top:1px solid rgba(200,146,58,.25);
+  border-bottom:1px solid rgba(200,146,58,.25);
+}
+.disclaimer-inner{
+  max-width:960px;
+  margin:0 auto;
+  padding:20px;
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+}
+.notice-icon{
+  flex-shrink:0;
+  margin-top:2px;
+  width:20px;height:20px;
+  border-radius:50%;
+  background:rgba(200,146,58,.15);
+  border:1px solid rgba(200,146,58,.4);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'DM Mono', monospace;
+  font-size:11px;font-weight:500;
+  color:var(--gold);
+  line-height:1;
+}
+.notice-text{
+  font-size:.875rem;
+  color:#6b5a3a;
+  line-height:1.65;
+}
+.notice-text strong{
+  color:#4a3a1e;
+  font-weight:600;
+}
+
+/* FOOTER */
+.footer{
+  background:var(--navy);
+  color:#fff;
+}
+.footer-stripe{
+  height:5px;
+  background:linear-gradient(90deg,var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%);
+}
+.footer-inner{
+  max-width:960px;
+  margin:0 auto;
+  padding:56px 20px 44px;
+}
+.footer-top{
+  display:grid;
+  grid-template-columns:1.15fr .95fr;
+  gap:34px;
+  align-items:start;
+  padding-bottom:30px;
+  border-bottom:1px solid rgba(255,255,255,.10);
+}
+.footer-brand{
+  font-family:'DM Mono', monospace;
+  font-size:10px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--teal-light);
+  margin-bottom:14px;
+}
+.footer-title{
+  font-family:'Playfair Display', serif;
+  font-size:clamp(1.5rem,2.5vw,2rem);
+  line-height:1.18;
+  color:rgba(255,255,255,.96);
+  margin-bottom:12px;
+}
+.footer-tagline{
+  color:rgba(255,255,255,.74);
+  line-height:1.72;
+  max-width:520px;
+  font-size:.95rem;
+}
+.footer-actions{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:16px;
+}
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:flex-end;
+}
+.footer-link{
+  text-decoration:none;
+  color:rgba(255,255,255,.88);
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:999px;
+  padding:9px 15px;
+  font-size:.9rem;
+  font-weight:600;
+  transition:all .15s ease;
+}
+.footer-link:hover{
+  color:var(--teal-light);
+  border-color:var(--teal-light);
+  background:rgba(42,157,166,.10);
+}
+.footer-disclaimer{
+  color:rgba(255,255,255,.60);
+  line-height:1.68;
+  font-size:.88rem;
+  max-width:560px;
+  margin-left:auto;
+  text-align:right;
+}
+.footer-bottom{padding-top:24px}
+.footer-meta{
+  font-family:'DM Mono', monospace;
+  font-size:10px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.22);
+}
+
+@media (max-width:980px){
+  .footer-top{grid-template-columns:1fr}
+  .footer-actions{align-items:flex-start}
+  .footer-links{justify-content:flex-start}
+  .footer-disclaimer{margin-left:0;text-align:left}
+  .channel-cards-grid{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  body{font-size:16px}
+  .topbar-inner{align-items:flex-start;flex-direction:column}
+  .sticky-nav-inner{padding:7px 16px;gap:4px}
+  .pill{font-size:9px;padding:4px 8px}
+  .hero-inner{padding:58px 20px 30px}
+  .branch-body{padding:14px 16px 16px 16px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <div class="topbar-brand">Decoding Autism Now</div>
+      <div class="topbar-title">Biology of Autism — Testing Strategy</div>
+    </div>
+    <a class="topbar-home" href="index.html">Home</a>
+  </div>
+</div>
+
+<div class="sticky-docnav" id="stickyDocNav">
+  <div class="sticky-docnav-inner">
+    <a class="sdn-pill teal" href="index.html">Home Hub</a>
+    <a class="sdn-pill teal" href="01_Molecular_Origins_Biology_of_Autism.html">Start Here</a>
+    <a class="sdn-pill teal" href="02_Cascade_Map_Biology_of_Autism.html">Cascade Map</a>
+    <a class="sdn-pill teal" href="03_Cascade_Explained_Biology_of_Autism.html">Cascade Explained</a>
+    <a class="sdn-pill gold" href="05_Metabolic_Pathways_Map_Biology_of_Autism.html">Pathways Map</a>
+    <a class="sdn-pill gold" href="06_Metabolic_Pathways_Explained_Biology_of_Autism.html">Pathways Explained</a>
+    <a class="sdn-pill gold active" href="07_Testing_Strategy_Biology_of_Autism.html">Testing</a>
+    <a class="sdn-pill gold" href="07B_Test_Reference_Biology_of_Autism.html">Test Ref</a>
+    <a class="sdn-pill gold" href="07C_Interpreting_Results_Biology_of_Autism.html">Interpret</a>
+    <a class="sdn-pill gold" href="07D_Talking_to_Your_Doctor_Biology_of_Autism.html">Talk to Dr</a>
+    <a class="sdn-pill gold" href="07R_Regressive_Autism_Testing_Biology_of_Autism.html">Regression</a>
+    <a class="sdn-pill gold" href="08_Intervention_Logic_Biology_of_Autism.html">Interventions</a>
+    <a class="sdn-pill navy" href="09_FAQ_Biology_of_Autism.html">FAQ</a>
+    <a class="sdn-pill navy" href="10_Evidence_and_Citations_Biology_of_Autism.html">Evidence</a>
+    <a class="sdn-pill navy" href="11_Vaccine_Question_Biology_of_Autism.html">Vaccine Question</a>
+    <a class="sdn-pill navy" href="12_Parents_Guide_Biology_of_Autism.html">Parents</a>
+    <a class="sdn-pill navy" href="13_Clinician_Guide_Biology_of_Autism.html">Clinician</a>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-stripe"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Decoding Autism Now</div>
+    <h1 class="hero-title">
+      Biology of Autism —
+      <span class="accent-line">Testing Strategy</span>
+    </h1>
+    <p class="hero-sub">Let what you are seeing guide which upstream channels to investigate first — then confirm with an accessible standard panel anyone can order.</p>
+    <div class="hero-pills">
+      <span class="hero-pill">Symptom-driven</span>
+      <span class="hero-pill">First-line labs</span>
+      <span class="hero-pill">Channel confirmation</span>
+    </div>
+    <a class="hero-link" href="#framework-disclaimer">See framework disclaimer below</a>
+  </div>
+</section>
+
+<main>
+
+  <div class="doc-section">
+    <div class="section-title"><span class="section-num">01</span> Why your child's symptoms are the starting point</div>
+
+    <p class="body-text">The ASD biological cascade identifies several upstream biological channels that can drive downstream learning disruption, synapse instability, stress signaling, and behavioral expression. At the individual level, however, one or two channels usually dominate first. Testing exists to identify which channels are most active in the child in front of you, so the next steps are sequenced around the likely driver rather than applied generically.</p>
+
+    <p class="body-text">This page is the entry point for the majority of users. It is designed to answer one practical question: <strong>what should we investigate first, based on what we are actually seeing?</strong></p>
+
+    <div class="callout blue">
+      <h4>How to use this section</h4>
+      <p>Start with the symptom branch that best matches the child’s current presentation. Most children will overlap more than one branch. Use that overlap to prioritize the first round of testing rather than trying to run every possible panel at once.</p>
+    </div>
+
+    <div class="callout purple">
+      <h4>Skill loss / regression is a different pathway</h4>
+      <p>If a child has lost previously acquired speech, motor, social, or adaptive skills, that is a different biological presentation with a modified testing priority. See: <a href="07R_Regressive_Autism_Testing_Biology_of_Autism.html"><strong>Skill Loss / Regressive Autism: Testing Pathway</strong></a>.<br>For biological context around immune-trigger questions, see <a href="11_Vaccine_Question_Biology_of_Autism.html"><strong>The Vaccine Question</strong></a>.</p>
+    </div>
+
+    <div class="section-title" style="margin-top:26px;"><span class="section-num">01A</span> Symptom-driven testing guide</div>
+
+    <div class="branch">
+      <div class="branch-header">
+        <span class="branch-symptom">GI symptoms, bloating, constipation, diarrhea, food refusal</span>
+      </div>
+      <div class="branch-body plain">
+        <p class="body-text" style="margin-bottom:10px;"><strong>Most likely emphasis:</strong> gut dysbiosis, barrier disruption, LPS signaling, SST effects on digestion.</p>
+        <ul>
+          <li>Start with OAT for dysbiosis markers and metabolic overlap.</li>
+          <li>Add stool testing when symptoms are persistent or severe.</li>
+          <li>Add Zonulin and LBP when gut barrier disruption or immune spillover is suspected.</li>
+          <li>Use pancreatic elastase and stool inflammation markers when digestion and mucosal strain seem prominent.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="branch">
+      <div class="branch-header">
+        <span class="branch-symptom">Behavioral escalation, irritability, inflammation-like pattern</span>
+      </div>
+      <div class="branch-body plain">
+        <p class="body-text" style="margin-bottom:10px;"><strong>Most likely emphasis:</strong> immune activation, neuroinflammation, IDO1 pressure, excitatory signaling.</p>
+        <ul>
+          <li>Start with Kynurenine / Tryptophan ratio or downstream OAT proxies.</li>
+          <li>Add hsCRP, cytokines, and related inflammatory markers.</li>
+          <li>Consider BDNF as a downstream tracking marker rather than an initial routing marker.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="branch">
+      <div class="branch-header">
+        <span class="branch-symptom">Sleep disruption, sensory overload, chronic stress presentation</span>
+      </div>
+      <div class="branch-body plain">
+        <p class="body-text" style="margin-bottom:10px;"><strong>Most likely emphasis:</strong> HPA axis dysregulation, SST load, cortisol rhythm disruption.</p>
+        <ul>
+          <li>Start with salivary cortisol rhythm or an equivalent diurnal stress panel.</li>
+          <li>Add IGF-1 and related markers when SST signaling burden is part of the question.</li>
+          <li>Use this branch especially when sleep and sensory patterns are persistent rather than situational.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="branch">
+      <div class="branch-header">
+        <span class="branch-symptom">Fatigue, low endurance, poor recovery, motor slowing</span>
+      </div>
+      <div class="branch-body plain">
+        <p class="body-text" style="margin-bottom:10px;"><strong>Most likely emphasis:</strong> mitochondrial dysfunction, TCA cycle blockade, ATP strain.</p>
+        <ul>
+          <li>Start with OAT TCA cycle markers.</li>
+          <li>Add lactate:pyruvate when respiratory chain dysfunction is suspected.</li>
+          <li>Add carnitine profile and CoQ10 when first-line findings support mitochondrial strain.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="branch">
+      <div class="branch-header">
+        <span class="branch-symptom">Environmental exposure concern, plateau, unexplained instability</span>
+      </div>
+      <div class="branch-body plain">
+        <p class="body-text" style="margin-bottom:10px;"><strong>Most likely emphasis:</strong> toxic burden, oxidative strain, multisystem destabilization.</p>
+        <ul>
+          <li>Use environmental panels selectively rather than as universal first-line testing.</li>
+          <li>Prioritize them when exposure history, geography, housing, or sudden worsening supports the question.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-title" style="margin-top:26px;"><span class="section-num">01B</span> Minimal viable starting panel</div>
+
+    <p class="body-text">When budget or access is limited, a smaller first panel can still provide directional value.</p>
+
+    <div class="mvls-table-wrap">
+      <table class="mvls-table">
+        <thead>
+          <tr><th>Test</th><th>Why it matters</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>OAT</td><td>Broadest overlap across gut, mitochondrial, and kynurenine-related pathways.</td></tr>
+          <tr><td>CBC / CMP</td><td>Basic physiological context and screening baseline.</td></tr>
+          <tr><td>hsCRP</td><td>Accessible inflammatory signal.</td></tr>
+          <tr><td>Vitamin D</td><td>Common low-support marker with relevance to immune tone.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-title"><span class="section-num">02</span> Symptom-driven testing guide</div>
+
+    <p class="body-text">Most children present across several of these branches simultaneously — GI symptoms, behavioral escalation, and sleep disruption often appear together because they share upstream drivers. Work through every branch that applies. The first-line panel in Section 3 will tell you which channels are most active so you can prioritize.</p>
+
+    <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); margin-bottom:12px; padding-bottom:10px; border-bottom:1px solid var(--rule);">A – D · Overlapping symptom clusters — check all that apply</div>
+
+    <div class="branch">
+      <div class="branch-header">
+        <span class="branch-letter">A</span>
+        <span class="branch-symptom">GI symptoms — constipation, diarrhea, bloating, food refusal, picky eating, abdominal pain</span>
+        <span class="branch-tag" style="background:var(--gut)">Gut / LPS</span>
+      </div>
+      <div class="branch-body">
+        <ul>
+          <li><strong>First test to order:</strong> OAT (Organic Acids Test, full panel). Checks dysbiosis metabolites including arabinose (yeast) and HPHPA (Clostridia) in a single urine collection — highest-yield first test for this channel.</li>
+          <li><strong>If OAT dysbiosis markers are elevated:</strong> Add GI-MAP comprehensive stool analysis (Diagnostic Solutions). Confirms pathogen load, calprotectin (gut inflammation), and pancreatic elastase (enzyme output). Do not start probiotics until this picture is clear.</li>
+          <li><strong>If GI symptoms persist with normal OAT:</strong> Add Zonulin + LPS-Binding Protein (LBP). These directly measure active gut barrier disruption and LPS translocation — which can occur even without dramatic OAT dysbiosis findings.</li>
+          <li><strong>If GI-MAP elastase is low:</strong> SST is inhibiting pancreatic enzyme secretion. The SST/HPA channel is co-active — add salivary cortisol (4-point) and IGF-1 from Branch C.</li>
+          <li><strong>Protocol implication:</strong> Active gut channel confirmed → gut repair becomes Layer 1 before all other interventions. Systemic layers underperform while LPS continuously re-triggers NF-κB.</li>
+        </ul>
+        <a class="next-step" href="07B_Test_Reference_Biology_of_Autism.html#gut">Full Gut Channel Specs → 07B</a>
+      </div>
+    </div>
+
+    <div class="branch">
+      <div class="branch-header">
+        <span class="branch-letter">B</span>
+        <span class="branch-symptom">Behavioral escalation — irritability, meltdowns, aggression, self-injury, increased rigidity</span>
+        <span class="branch-tag" style="background:var(--mia)">MIA / Neuroinflammation</span>
+      </div>
+      <div class="branch-body">
+        <ul>
+          <li><strong>First tests to order:</strong> OAT (full panel) focusing on kynurenine metabolites — quinolinic acid elevated with kynurenic acid low signals IDO1 maximally activated, tryptophan diverted, SIRT1 fuel depleted. Also order hsCRP as an accessible systemic inflammatory marker.</li>
+          <li><strong>If OAT quinolinic acid is elevated + hsCRP is elevated:</strong> Add Kynurenine/Tryptophan (K:T) ratio and cytokine panel (IL-6, TNF-α). K:T elevated confirms IDO1 actively diverting tryptophan. Both results together → NMN/NR + luteolin + omega-3 move to Layer 1 immediately.</li>
+          <li><strong>If cytokines are elevated but K:T is normal:</strong> Non-IDO1 inflammatory trigger. Add GPL-TOX (environmental toxins) and Zonulin + LBP — the trigger may be environmental or gut-driven rather than kynurenine-pathway-driven.</li>
+          <li><strong>Protocol implication:</strong> IDO1 and M1 microglia both active → NMN/NR + luteolin + omega-3 all move to Layer 1. NAC added urgently if quinolinic acid is elevated.</li>
+        </ul>
+        <a class="next-step" href="07B_Test_Reference_Biology_of_Autism.html#mia">Full MIA Channel Specs → 07B</a>
+      </div>
+    </div>
+
+    <div class="branch">
+      <div class="branch-header">
+        <span class="branch-letter">C</span>
+        <span class="branch-symptom">Sleep disruption, anxiety, sensory hypersensitivity, difficulty with transitions</span>
+        <span class="branch-tag" style="background:var(--sst)">SST / HPA Axis</span>
+      </div>
+      <div class="branch-body">
+        <ul>
+          <li><strong>First tests to order:</strong> Salivary cortisol (4-point diurnal curve, ZRT or DUTCH) + serum IGF-1 + fasting insulin. Order as a set — they give complementary pictures of HPA dysregulation and functional SST load.</li>
+          <li><strong>If cortisol curve is flat or inverted:</strong> HPA axis dysregulated; SST is tonically elevated. Sleep and circadian optimization become non-negotiable Layer 1 — melatonin timing is the most urgent single intervention.</li>
+          <li><strong>If IGF-1 is low for age + cortisol curve is abnormal:</strong> SST doubly confirmed via two independent pathways (HPA and GH suppression). Layer 5 SST interventions move to Layer 2.</li>
+          <li><strong>If DHEA-S is low + cortisol curve is flat:</strong> HPA exhaustion pattern confirmed. Adrenal recovery must precede SIRT1 restoration. Reduce all HPA stressors before advancing the protocol.</li>
+          <li><strong>Add hair cortisol (3-month integrated)</strong> to distinguish chronic HPA load from a transient spike — especially useful when salivary cortisol shows a borderline pattern.</li>
+          <li><strong>Protocol implication:</strong> SST/HPA channel active → sleep and circadian optimization is Layer 1, no exceptions. BDNF baseline confirms CREB suppression and sets treatment response tracking.</li>
+        </ul>
+        <a class="next-step" href="07B_Test_Reference_Biology_of_Autism.html#sst">Full SST/HPA Channel Specs → 07B</a>
+      </div>
+    </div>
+
+    <div class="branch">
+      <div class="branch-header">
+        <span class="branch-letter">D</span>
+        <span class="branch-symptom">Fatigue, low endurance, poor exercise tolerance, low muscle tone, crashes after exertion</span>
+        <span class="branch-tag" style="background:var(--mito)">Mitochondrial</span>
+      </div>
+      <div class="branch-body">
+        <ul>
+          <li><strong>First test:</strong> OAT (full panel) — TCA cycle markers (succinic, fumaric, malic acids). Elevated TCA intermediates confirm mitochondrial block. The most accessible first screen for this channel.</li>
+          <li><strong>If two or more TCA markers are elevated:</strong> Add plasma lactate:pyruvate ratio + full carnitine panel. Ratio &gt;20 at rest confirms respiratory chain dysfunction. Acylcarnitine profile identifies specific metabolic blocks.</li>
+          <li><strong>Add plasma CoQ10</strong> when TCA markers are elevated — CoQ10 deficiency is common in mitochondrial dysfunction and directly addressable with ubiquinol supplementation.</li>
+          <li><strong>Protocol implication:</strong> Mitochondrial channel confirmed → CoQ10 ubiquinol + NMN/NR move to Layer 1 alongside magnesium. L-carnitine added if deficient on panel.</li>
+        </ul>
+        <a class="next-step" href="07B_Test_Reference_Biology_of_Autism.html#mito">Full Mitochondrial Channel Specs → 07B</a>
+      </div>
+    </div>
+
+    <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); margin:28px 0 12px; padding-bottom:10px; border-bottom:1px solid var(--rule);">E · Investigative channel — exposure history, not observed symptom</div>
+
+    <div class="branch">
+      <div class="branch-header">
+        <span class="branch-letter" style="background:var(--env);">E</span>
+        <span class="branch-symptom">Suspected environmental exposure — pesticides, heavy metals, well water, agricultural area, dietary risk</span>
+        <span class="branch-tag" style="background:var(--env)">Environmental / Oxidative</span>
+      </div>
+      <div class="branch-body">
+        <ul>
+          <li><strong>This branch is different from A–E:</strong> You don't observe environmental burden the way you observe a meltdown or a sleep problem. You suspect it based on where you live, what your child eats, or your water source. Order this channel investigation based on exposure history rather than presenting symptoms.</li>
+          <li><strong>First tests to order:</strong> GPL-TOX (Great Plains Laboratory, urine) screens 172+ environmental chemicals including glyphosate and organophosphates. RBC heavy metals (mercury, lead, arsenic, cadmium) — specify RBC, not serum, for chronic tissue exposure rather than recent exposure.</li>
+          <li><strong>If glyphosate is elevated:</strong> Gut microbiome disruption is compounded — glyphosate depletes the same Lactobacillus and Bifidobacterium species already compromised in ASD. Gut repair becomes more urgent alongside detox support.</li>
+          <li><strong>If metals are elevated:</strong> NAC + glutathione support urgently before other antioxidant layers. Professional chelation consultation if mercury or lead is significantly elevated. SIRT1 cannot be restored while heavy metal burden suppresses it directly.</li>
+          <li><strong>Add GSH:GSSG ratio</strong> when environmental burden is confirmed — this quantifies antioxidant depletion depth and whether NAC alone is sufficient or direct glutathione support is needed.</li>
+          <li><strong>Protocol implication:</strong> Environmental channel active → detox support sub-layer added before Layer 1. NAC becomes co-foundational. Reducing ongoing exposure is prerequisite — supplementation alone cannot overcome continuous toxin input.</li>
+        </ul>
+        <a class="next-step" href="07B_Test_Reference_Biology_of_Autism.html#env">Full Environmental Channel Specs → 07B</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-title"><span class="section-num">03</span> Recommended first-line panel — start here before specialty testing</div>
+
+    <div class="callout blue">
+      <h4>Why standard labs come first</h4>
+      <p>Before ordering specialty panels like the OAT or GI-MAP, a standard first-line draw through your primary care physician or a direct-to-consumer lab gives you directional channel data at a fraction of the time and complexity. These tests are universally available, covered by most insurance, and ordered without specialist referral. Positive findings tell you which specialty panels to prioritize next — and which channels you can deprioritize. Every family should start here regardless of what comes after.</p>
+    </div>
+
+    <div class="mvls-table-wrap">
+      <table class="mvls-table">
+        <thead>
+          <tr>
+            <th>Channel</th>
+            <th>First-line test(s)</th>
+            <th>What it tells you</th>
+            <th>If positive — next step</th>
+            <th>Access</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="ch ch-gut">Gut / LPS</span></td>
+            <td>hsCRP + CBC differential</td>
+            <td>hsCRP &gt;1.0 mg/L without acute infection = systemic inflammation consistent with LPS translocation. CBC monocytosis can reflect chronic gut-driven immune activation.</td>
+            <td>Gut repair layer elevated in priority. Order GI-MAP if hsCRP is elevated and GI symptoms are present.</td>
+            <td>LabCorp / Quest. Covered by most insurance. Often included in standard annual labs.</td>
+          </tr>
+          <tr>
+            <td><span class="ch ch-mito">Mitochondrial</span></td>
+            <td>CMP (fasting) + serum lactate</td>
+            <td>Elevated lactate, low bicarbonate, or abnormal glucose flags metabolic strain. Serum lactate &gt;2.0 mmol/L at rest flags mitochondrial dysfunction.</td>
+            <td>CoQ10 + NMN/NR elevated in priority. Add OAT TCA markers as confirmatory next step.</td>
+            <td>LabCorp / Quest standard. CMP covered universally. Request fasting draw.</td>
+          </tr>
+          <tr>
+            <td><span class="ch ch-mia">MIA / Neuroinflammation</span></td>
+            <td>hsCRP + ESR</td>
+            <td>Both elevated without infection = chronic inflammatory state consistent with active neuroinflammation. Interpret jointly — neither alone is sufficient.</td>
+            <td>K:T ratio and cytokine panel (IL-6, TNF-α) are highest-yield next steps. Anti-inflammatory layer (luteolin, omega-3) becomes immediate priority.</td>
+            <td>LabCorp / Quest. Covered by most insurance.</td>
+          </tr>
+          <tr>
+            <td><span class="ch ch-sst">SST / HPA Axis</span></td>
+            <td>Fasting insulin + IGF-1 + DHEA-S</td>
+            <td>Elevated fasting insulin = metabolic SST trigger. Low IGF-1 for age = functional SST excess. Low DHEA-S = HPA exhaustion. Any two of three abnormal = SST channel active.</td>
+            <td>Sleep and circadian optimization become Layer 1. Add salivary cortisol (4-point) for the full HPA picture. Low IGF-1 + low DHEA-S: SST doubly confirmed.</td>
+            <td>LabCorp / Quest standard. All three inexpensive and widely covered. Order as fasting draw.</td>
+          </tr>
+          <tr>
+            <td><span class="ch ch-env">Environmental / Oxidative</span></td>
+            <td>RBC heavy metals (Hg, Pb, As, Cd) + Vitamin D (25-OH-D)</td>
+            <td>RBC metals = most accessible chronic exposure screen. Vitamin D deficiency (&lt;40 ng/mL) is near-universal in ASD and permits unchecked NF-κB activation.</td>
+            <td>Metals elevated: NAC + glutathione support urgent; add GPL-TOX. Vitamin D &lt;40 ng/mL: D3 + K2 immediately regardless of all other findings.</td>
+            <td>LabCorp / Quest. Specify RBC (not serum) for metals. Order Vitamin D for every individual as a baseline.</td>
+          </tr>
+          <tr>
+            <td><span class="ch ch-multi">Universal baseline</span></td>
+            <td>CBC + CMP + Vitamin D + hsCRP</td>
+            <td>Minimum baseline for every individual: systemic inflammation, metabolic strain, nutritional status, and renal/hepatic function — all of which amplify or constrain the cascade.</td>
+            <td>Any abnormality routes to channel-specific follow-up above. CRP elevated: anti-inflammatory layer becomes priority. Vitamin D &lt;40: supplement immediately.</td>
+            <td>LabCorp / Quest. Covered universally. Available through primary care without specialist referral.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="cost-box">
+      <h4>What this panel covers and costs</h4>
+      <p>CBC + CMP + Vitamin D + hsCRP + fasting insulin + IGF-1 + DHEA-S + RBC heavy metals: typically <strong>$150–$350 total</strong> through LabCorp/Quest at retail, often significantly less with insurance. This panel gives directional signal across all five channels before any specialty testing. Direct-to-consumer without physician referral: Ulta Lab Tests, Any Lab Test Now, LabCorp patient portal — available in most states.</p>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-title"><span class="section-num">04</span> Channel confirmation — what a positive result means</div>
+
+    <p class="body-text">Each channel has a confirmation threshold — a combination of findings that together confirm it is an active upstream driver, not a background signal. Use these cards after receiving results to determine whether a channel is confirmed and how the protocol should be reordered. For the full result-by-result interpretation table, see <a href="07C_Interpreting_Results_Biology_of_Autism.html">Document 07C</a>.</p>
+
+    <div class="channel-cards-grid">
+      <div class="ch-card">
+        <div class="ch-card-header" style="background:var(--gut)">Gut / LPS Channel — confirmed active</div>
+        <div class="ch-card-body">
+          <span class="mini-label">Confirmed by</span>
+          <p>Zonulin elevated + LBP elevated + OAT gut dysbiosis markers elevated. Any two of three in the same direction confirms the channel.</p>
+          <span class="mini-label">Protocol reorder</span>
+          <p>Gut repair becomes Layer 1. All systemic interventions have reduced efficacy while LPS continuously re-triggers NF-κB. Address gut before advancing other layers.</p>
+        </div>
+      </div>
+
+      <div class="ch-card">
+        <div class="ch-card-header" style="background:var(--mito)">Mitochondrial Channel — confirmed active</div>
+        <div class="ch-card-body">
+          <span class="mini-label">Confirmed by</span>
+          <p>Two or more TCA intermediates elevated on OAT + lactate:pyruvate ratio &gt;15 at rest.</p>
+          <span class="mini-label">Protocol reorder</span>
+          <p>CoQ10 ubiquinol + NMN/NR move to Layer 1 alongside magnesium. L-carnitine added if deficient. Mitochondrial support precedes downstream neuroinflammation interventions.</p>
+        </div>
+      </div>
+
+      <div class="ch-card">
+        <div class="ch-card-header" style="background:var(--mia)">MIA / Neuroinflammation — confirmed active</div>
+        <div class="ch-card-body">
+          <span class="mini-label">Confirmed by</span>
+          <p>Elevated K:T ratio + elevated IL-6 or TNF-α + elevated quinolinic acid on OAT. K:T alone is sufficient to begin the anti-inflammatory layer.</p>
+          <span class="mini-label">Protocol reorder</span>
+          <p>NMN/NR + luteolin + omega-3 all move to Layer 1. NAC added urgently if quinolinic acid is elevated. Anti-inflammatory layer cannot wait for downstream steps.</p>
+        </div>
+      </div>
+
+      <div class="ch-card">
+        <div class="ch-card-header" style="background:var(--sst)">SST / HPA Channel — confirmed active</div>
+        <div class="ch-card-body">
+          <span class="mini-label">Confirmed by</span>
+          <p>Abnormal cortisol diurnal pattern + elevated hair cortisol + low IGF-1 for age. Any two of three confirm the channel.</p>
+          <span class="mini-label">Protocol reorder</span>
+          <p>Sleep and circadian optimization are non-negotiable Layer 1. Hair cortisol elevated = chronic HPA load confirmed, not transient. Low-dose forskolin only after HPA stabilization.</p>
+        </div>
+      </div>
+
+      <div class="ch-card">
+        <div class="ch-card-header" style="background:var(--env)">Environmental / Oxidative — confirmed active</div>
+        <div class="ch-card-body">
+          <span class="mini-label">Confirmed by</span>
+          <p>Multiple GPL-TOX positives or elevated RBC metals + low GSH:GSSG ratio + elevated 8-OHdG on OAT.</p>
+          <span class="mini-label">Protocol reorder</span>
+          <p>Detox support sub-layer added before Layer 1. NAC becomes co-foundational. Ongoing exposure reduction is prerequisite — supplementation alone cannot overcome continuous toxin input.</p>
+        </div>
+      </div>
+
+      <div class="ch-card">
+        <div class="ch-card-header" style="background:var(--multi)">BDNF — outcome tracking marker</div>
+        <div class="ch-card-body">
+          <span class="mini-label">What it measures</span>
+          <p>Serum BDNF is the downstream output of the cAMP/PKA/CREB pathway — the convergence point of both the SST arm and the SIRT1 arm of the cascade.</p>
+          <span class="mini-label">How to use it</span>
+          <p>Order at baseline alongside first-line tests. Low BDNF confirms CREB suppression. Retest at 3 and 6 months — rising BDNF is the primary objective marker that the cascade is responding to the protocol.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-title"><span class="section-num">05</span> Where to go next</div>
+
+    <div class="nav-strip">
+      <p class="nav-strip-title">The testing suite — four focused documents</p>
+      <div class="nav-grid">
+        <a class="nav-card" href="07B_Test_Reference_Biology_of_Autism.html">
+          <div class="nav-card-doc">Document 07B</div>
+          <div class="nav-card-title">Complete Test Reference</div>
+          <div class="nav-card-desc">Full specs for every test — all five channels, four-stage sequence, lab sources, priority designations.</div>
+          <div class="nav-card-arrow">Look up a test →</div>
+        </a>
+
+        <a class="nav-card" href="07C_Interpreting_Results_Biology_of_Autism.html">
+          <div class="nav-card-doc">Document 07C</div>
+          <div class="nav-card-title">Interpreting Your Results</div>
+          <div class="nav-card-desc">Results in hand? Maps each abnormal finding to its cascade interpretation and protocol layer reordering.</div>
+          <div class="nav-card-arrow">Read your results →</div>
+        </a>
+
+        <a class="nav-card" href="07D_Talking_to_Your_Doctor_Biology_of_Autism.html">
+          <div class="nav-card-doc">Document 07D</div>
+          <div class="nav-card-title">Talking to Your Doctor</div>
+          <div class="nav-card-desc">Scripts for requesting tests, presenting results, and navigating pushback from practitioners unfamiliar with these panels.</div>
+          <div class="nav-card-arrow">Prepare for your appointment →</div>
+        </a>
+
+        <a class="nav-card" href="08_Intervention_Logic_Biology_of_Autism.html">
+          <div class="nav-card-doc">Document 08</div>
+          <div class="nav-card-title">Intervention Logic</div>
+          <div class="nav-card-desc">Protocol layer sequencing, supplement mechanisms, and how confirmed channels reorder the intervention priority.</div>
+          <div class="nav-card-arrow">Move to interventions →</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<div class="disclaimer" id="framework-disclaimer">
+  <div class="disclaimer-inner">
+    <div class="notice-icon">i</div>
+    <p class="notice-text"><strong>Theoretical framework — not clinical guidance.</strong> The Autism Spectrum Disorder (ASD) Cascade is a systems-biology model integrating peer-reviewed findings across immunology, metabolism, gut biology, and neuroscience into a proposed mechanistic map. Individual components are supported by published research; the full integrated cascade has not been validated as a unified model in large clinical trials. It is intended as a research-informed framework — not a diagnostic tool or treatment protocol. All intervention decisions require qualified clinical oversight. For the evidence base, see the <em>ASD Cascade Citations</em> document in this suite.</p>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">Decoding Autism Now</p>
+        <h2 class="footer-title">Biology of Autism — Testing Strategy</h2>
+        <p class="footer-tagline">A symptom-driven entry point for families and clinicians to identify the highest-yield first tests for each upstream channel in the ASD biological cascade.</p>
+      </div>
+      <div class="footer-actions">
+        <div class="footer-links">
+          <a class="footer-link" href="index.html">Home</a>
+          <a class="footer-link" href="01_Molecular_Origins_Biology_of_Autism.html">Start Here</a>
+          <a class="footer-link" href="07B_Test_Reference_Biology_of_Autism.html">Reference</a>
+          <a class="footer-link" href="07C_Interpreting_Results_Biology_of_Autism.html">Interpret Results</a>
+          <a class="footer-link" href="07D_Talking_to_Your_Doctor_Biology_of_Autism.html">Doctor Scripts</a>
+          <a class="footer-link" href="10_Evidence_and_Citations_Biology_of_Autism.html">Evidence</a>
+          <a class="footer-link" href="https://www.youtube.com/@DecodingAutismNow" rel="noopener noreferrer" target="_blank">YouTube</a>
+        </div>
+        <p class="footer-disclaimer">This content is for informational purposes only and should not be considered medical advice, diagnosis, or treatment. Always consult with a healthcare professional before making any changes to your health routines or treatment regimen.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-meta">Biology of Autism — Testing Strategy | Decoding Autism Now</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

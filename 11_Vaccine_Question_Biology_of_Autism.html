@@ -1,407 +1,516 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EH3TWPN49H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag("js", new Date());
-  gtag("config", "G-EH3TWPN49H");
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Biology of Autism — The Vaccine Question | Decoding Autism Now</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --navy:        #0f2342;
-    --teal:        #1e6b72;
-    --teal-light:  #2a9da6;
-    --gold:        #c8923a;
-    --gold-light:  #e8b86d;
-    --cream:       #faf7f2;
-    --warm-white:  #ffffff;
-    --text-dark:   #1a1a2e;
-    --text-mid:    #3d4560;
-    --text-light:  #6b7494;
-    --rule:        #d8cfc4;
-    --accent-bg:   #eef8f9;
-    --gold-bg:     #fdf6ec;
-    --navy-bg:     #f0f2f6;
-    --tag-bg:      rgba(30,107,114,0.08);
-  }
+:root {
+  --navy:#0f2342;
+  --teal:#1e6b72;
+  --teal-light:#2a9da6;
+  --gold:#c8923a;
+  --gold-light:#e8b86d;
+  --cream:#faf7f2;
+  --warm-white:#ffffff;
+  --text-dark:#1a1a2e;
+  --text-mid:#3d4560;
+  --text-light:#6b7494;
+  --rule:#d8cfc4;
+  --accent-bg:#eef8f9;
+  --gold-bg:#fdf6ec;
+  --navy-bg:#f0f2f6;
+  --tag-bg:rgba(30,107,114,0.08);
+}
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: 'Source Serif 4', Georgia, serif;
-    background: var(--cream);
-    color: var(--text-dark);
-    font-size: 16px;
-    line-height: 1.8;
-  }
+* { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:'Source Serif 4', Georgia, serif;
+  background:var(--cream);
+  color:var(--text-dark);
+  font-size:16px;
+  line-height:1.8;
+}
 
-  /* ── MASTHEAD ── */
-  .masthead { position: sticky; top: 0; z-index: 100; background: #0f2342; padding: 10px 28px; border-bottom: 3px solid #c8923a; }
-  .masthead-inner { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-  .masthead-brand { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #2a9da6; }
-  .masthead-title { font-family: 'Source Serif 4', serif; font-size: 14px; font-weight: 600; color: white; margin-top: 2px; }
-  .masthead-home { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.55); text-decoration: none; border: 1px solid rgba(255,255,255,0.2); border-radius: 3px; padding: 4px 10px; transition: color 0.15s, border-color 0.15s; white-space: nowrap; }
-  .masthead-home:hover { color: #2a9da6; border-color: #2a9da6; }
-  .masthead-meta { font-family: 'DM Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.4); }
+/* LOCKED 07 SHELL */
+.topbar {
+  position:fixed;
+  top:0; left:0; right:0;
+  z-index:1000;
+  background:var(--navy);
+  border-bottom:2px solid var(--gold);
+}
+.topbar-inner {
+  max-width:960px;
+  margin:0 auto;
+  padding:10px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+}
+.topbar-brand {
+  font-family:'DM Mono', monospace;
+  font-size:10px;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:var(--teal-light);
+  margin-bottom:2px;
+}
+.topbar-title {
+  font-family:'Source Serif 4', serif;
+  font-size:14px;
+  font-weight:600;
+  color:white;
+  line-height:1.2;
+}
+.topbar-home {
+  font-family:'DM Mono', monospace;
+  font-size:10px;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.82);
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,0.20);
+  border-radius:3px;
+  padding:5px 10px;
+  white-space:nowrap;
+}
+.topbar-home:hover { color:white; border-color:rgba(255,255,255,0.45); }
 
-  /* ── HEADER ── */
-  .site-header { background: var(--navy); color: #fff; position: relative; overflow: hidden; }
-  .header-stripe { height: 5px; background: linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%); }
-  .header-inner { max-width: 960px; margin: 0 auto; padding: 52px 44px 48px; position: relative; z-index: 1; }
-  .brand-line {
-    font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.22em;
-    text-transform: uppercase; color: var(--teal-light); margin-bottom: 18px;
-    display: flex; align-items: center; gap: 10px;
-  }
-  .brand-line::after { content: ''; display: block; height: 1px; width: 60px; background: var(--teal-light); opacity: 0.45; }
-  h1 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(1.9rem, 4vw, 2.85rem); font-weight: 700;
-    line-height: 1.15; color: #fff; margin-bottom: 14px;
-  }
-  h1 em { color: var(--gold-light); font-style: italic; }
-  .header-subtitle {
-    font-style: italic; font-weight: 300; font-size: 1.05rem;
-    color: rgba(255,255,255,0.6); max-width: 620px; line-height: 1.55;
-  }
-  .suite-badge {
-    display: inline-flex; align-items: center; gap: 8px; margin-top: 22px;
-    background: rgba(42,157,166,0.18); border: 1px solid rgba(42,157,166,0.4);
-    border-radius: 4px; padding: 5px 14px;
-    font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em;
-    text-transform: uppercase; color: var(--teal-light);
-  }
-  .header-deco {
-    position: absolute; right: -60px; top: -60px;
-    width: 340px; height: 340px; border-radius: 50%;
-    border: 1px solid rgba(255,255,255,0.04); pointer-events: none;
-  }
-  .header-deco::after {
-    content: ''; position: absolute; inset: 35px; border-radius: 50%;
-    border: 1px solid rgba(255,255,255,0.03);
-  }
+.sticky-docnav {
+  position:fixed;
+  top:57px;
+  left:0; right:0;
+  z-index:999;
+  background:rgba(255,255,255,0.97);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid #d8cfc4;
+  box-shadow:0 2px 12px rgba(15,35,66,0.08);
+}
+.sticky-docnav-inner {
+  max-width:960px;
+  margin:0 auto;
+  padding:8px 20px;
+  display:flex;
+  gap:7px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.sdn-pill {
+  font-family:'DM Mono', monospace;
+  font-size:10px;
+  letter-spacing:0.05em;
+  text-decoration:none;
+  border-radius:999px;
+  padding:6px 12px;
+  transition:background 0.15s, opacity 0.15s, transform 0.15s;
+  white-space:nowrap;
+  opacity:0.92;
+}
+.sdn-pill:hover { opacity:1; transform:translateY(-1px); }
+.sdn-pill.teal { color:#1e6b72; background:rgba(30,107,114,0.08); border:1px solid rgba(30,107,114,0.22); }
+.sdn-pill.gold { color:#8a5c1a; background:rgba(200,146,58,0.08); border:1px solid rgba(200,146,58,0.25); }
+.sdn-pill.navy { color:#0f2342; background:rgba(15,35,66,0.06); border:1px solid rgba(15,35,66,0.18); }
+.sdn-pill.active { color:#5a3a08; background:rgba(200,146,58,0.20); border-color:rgba(200,146,58,0.55); font-weight:500; opacity:1; }
+.sdn-divider { width:1px; height:14px; background:#d8cfc4; margin:0 3px; flex-shrink:0; align-self:center; }
 
-  /* ── FRAMEWORK NOTICE ── */
-  .framework-notice { background: #fffbf2; border-top: 1px solid rgba(200,146,58,0.25); border-bottom: 1px solid rgba(200,146,58,0.25); }
-  .framework-notice-inner { max-width: 960px; margin: 0 auto; padding: 20px 44px; display: flex; gap: 16px; align-items: flex-start; }
-  .notice-icon {
-    flex-shrink: 0; margin-top: 2px; width: 20px; height: 20px; border-radius: 50%;
-    background: rgba(200,146,58,0.15); border: 1px solid rgba(200,146,58,0.4);
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; color: var(--gold); line-height: 1;
-  }
-  .notice-text { font-family: 'Source Serif 4', serif; font-size: 0.875rem; color: #6b5a3a; line-height: 1.65; }
-  .notice-text strong { color: #4a3a1e; font-weight: 600; }
+.site-header {
+  background:var(--navy);
+  color:white;
+  position:relative;
+  overflow:hidden;
+  margin-top:110px;
+}
+.header-stripe {
+  height:5px;
+  background:linear-gradient(90deg, #1e6b72 0%, #2a9da6 50%, #c8923a 100%);
+}
+.header-inner {
+  max-width:960px;
+  margin:0 auto;
+  padding:70px 20px 40px;
+  position:relative;
+  z-index:1;
+}
+.header-eyebrow {
+  font-family:'DM Mono', monospace;
+  font-size:10px;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--teal-light);
+  margin-bottom:12px;
+}
+.suite-badge {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:6px;
+  margin-bottom:16px;
+  background:rgba(42,157,166,0.18);
+  border:1px solid rgba(42,157,166,0.4);
+  border-radius:4px;
+  padding:5px 14px;
+  font-family:'DM Mono', monospace;
+  font-size:10.5px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--teal-light);
+}
+.header-note {
+  display:inline-block;
+  margin-top:2px;
+  font-family:'DM Mono', monospace;
+  font-size:9px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:rgba(232,184,109,0.82);
+  text-decoration:none;
+  border-bottom:1px solid rgba(232,184,109,0.30);
+}
+.header-note:hover { border-bottom-color:rgba(232,184,109,0.75); }
+.header-deco {
+  position:absolute;
+  right:-60px;
+  top:-60px;
+  width:340px;
+  height:340px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,0.04);
+  pointer-events:none;
+}
+.header-deco::after {
+  content:'';
+  position:absolute;
+  inset:35px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,0.03);
+}
 
-  /* ── MAIN CONTENT ── */
-  .main-wrap { max-width: 960px; margin: 0 auto; padding: 60px 44px 100px; }
+#framework-disclaimer { scroll-margin-top:160px; }
 
-  /* ── SECTION DIVIDER ── */
-  .section-divider {
-    display: flex; align-items: center; gap: 14px; margin: 64px 0 44px;
-  }
-  .section-divider span {
-    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.22em;
-    text-transform: uppercase; color: var(--text-light); white-space: nowrap;
-  }
-  .section-divider::before, .section-divider::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+/* Page 11 content */
+.main-wrap { max-width:960px; margin:0 auto; padding:60px 20px 100px; }
+.section-divider {
+  display:flex; align-items:center; gap:14px; margin:64px 0 44px;
+}
+.section-divider span {
+  font-family:'DM Mono', monospace; font-size:10px; letter-spacing:0.22em;
+  text-transform:uppercase; color:var(--text-light); white-space:nowrap;
+}
+.section-divider::before, .section-divider::after { content:''; flex:1; height:1px; background:var(--rule); }
 
-  /* ── SECTION NUMBERS ── */
-  .section-num {
-    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em;
-    text-transform: uppercase; color: var(--teal); margin-bottom: 10px; display: block;
-  }
+.section-num {
+  font-family:'DM Mono', monospace; font-size:10px; letter-spacing:0.2em;
+  text-transform:uppercase; color:var(--teal); margin-bottom:10px; display:block;
+}
 
-  /* ── HEADINGS ── */
-  h2 {
-    font-family: 'Playfair Display', Georgia, serif; font-size: 1.6rem;
-    font-weight: 700; color: var(--navy); line-height: 1.22; margin-bottom: 20px;
-  }
-  h2 em { color: var(--gold); font-style: italic; }
-  h3 {
-    font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 600;
-    color: var(--navy); margin-bottom: 12px; line-height: 1.3;
-  }
+h2 {
+  font-family:'Playfair Display', Georgia, serif; font-size:1.6rem;
+  font-weight:700; color:var(--navy); line-height:1.22; margin-bottom:20px;
+}
+h2 em { color:var(--gold); font-style:italic; }
+h3 {
+  font-family:'Playfair Display', serif; font-size:1.1rem; font-weight:600;
+  color:var(--navy); margin-bottom:12px; line-height:1.3;
+}
 
-  /* ── BODY TEXT ── */
-  .prose p { color: var(--text-mid); font-size: 0.975rem; margin-bottom: 14px; line-height: 1.82; }
-  .prose p:last-child { margin-bottom: 0; }
-  .prose strong { color: var(--navy); font-weight: 600; }
-  .prose em { color: var(--text-mid); }
+.prose p { color:var(--text-mid); font-size:0.975rem; margin-bottom:14px; line-height:1.82; }
+.prose p:last-child { margin-bottom:0; }
+.prose strong { color:var(--navy); font-weight:600; }
+.prose em { color:var(--text-mid); }
 
-  /* ── OPENING TESTIMONIAL BLOCK ── */
-  .parent-voice {
-    background: var(--warm-white); border-radius: 8px; border: 1px solid var(--rule);
-    border-left: 4px solid var(--gold); padding: 28px 32px; margin-bottom: 40px;
-    position: relative;
-  }
-  .parent-voice::before {
-    content: '\201C';
-    font-family: 'Playfair Display', serif; font-size: 5rem; line-height: 1;
-    color: rgba(200,146,58,0.15); position: absolute; top: 10px; left: 20px;
-    pointer-events: none;
-  }
-  .parent-voice p {
-    font-family: 'Source Serif 4', serif; font-style: italic; font-size: 1.05rem;
-    color: var(--text-mid); line-height: 1.78; margin-bottom: 10px; position: relative; z-index: 1;
-  }
-  .parent-voice p:last-child { margin-bottom: 0; }
-  .parent-voice .voice-source {
-    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em;
-    text-transform: uppercase; color: var(--text-light); font-style: normal;
-    margin-top: 14px; display: block;
-  }
+.parent-voice {
+  background:var(--warm-white); border-radius:8px; border:1px solid var(--rule);
+  border-left:4px solid var(--gold); padding:28px 32px; margin-bottom:40px; position:relative;
+}
+.parent-voice::before {
+  content:'\201C';
+  font-family:'Playfair Display', serif; font-size:5rem; line-height:1;
+  color:rgba(200,146,58,0.15); position:absolute; top:10px; left:20px; pointer-events:none;
+}
+.parent-voice p {
+  font-style:italic; font-size:1.05rem; color:var(--text-mid); line-height:1.78; margin-bottom:10px; position:relative; z-index:1;
+}
+.parent-voice p:last-child { margin-bottom:0; }
+.parent-voice .voice-source {
+  font-family:'DM Mono', monospace; font-size:10px; letter-spacing:0.14em;
+  text-transform:uppercase; color:var(--text-light); font-style:normal; margin-top:14px; display:block;
+}
 
-  /* ── FRAMING CALLOUT (navy) ── */
-  .framing-callout {
-    background: var(--navy); border-radius: 8px; padding: 28px 32px; margin: 28px 0;
-    position: relative; overflow: hidden;
-  }
-  .framing-callout::before {
-    content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
-    background: linear-gradient(180deg, var(--teal-light), var(--gold));
-  }
-  .framing-callout .callout-label {
-    font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.2em;
-    text-transform: uppercase; color: var(--teal-light); margin-bottom: 12px;
-  }
-  .framing-callout p {
-    color: rgba(255,255,255,0.88); font-size: 1.0rem; line-height: 1.75; margin-bottom: 10px;
-  }
-  .framing-callout p:last-child { margin-bottom: 0; }
-  .framing-callout strong { color: var(--gold-light); font-weight: 600; }
-  .framing-callout em { color: rgba(255,255,255,0.6); font-style: italic; }
+.framing-callout {
+  background:var(--navy); border-radius:8px; padding:28px 32px; margin:28px 0; position:relative; overflow:hidden;
+}
+.framing-callout::before {
+  content:''; position:absolute; left:0; top:0; bottom:0; width:4px;
+  background:linear-gradient(180deg, var(--teal-light), var(--gold));
+}
+.framing-callout .callout-label {
+  font-family:'DM Mono', monospace; font-size:9.5px; letter-spacing:0.2em;
+  text-transform:uppercase; color:var(--teal-light); margin-bottom:12px;
+}
+.framing-callout p {
+  color:rgba(255,255,255,0.88); font-size:1rem; line-height:1.75; margin-bottom:10px;
+}
+.framing-callout p:last-child { margin-bottom:0; }
+.framing-callout strong { color:var(--gold-light); font-weight:600; }
+.framing-callout em { color:rgba(255,255,255,0.6); font-style:italic; }
 
-  /* ── HIGHLIGHT CALLOUT ── */
-  .highlight {
-    background: var(--accent-bg); border-left: 3px solid var(--teal);
-    border-radius: 0 6px 6px 0; padding: 16px 20px; margin: 20px 0;
-  }
-  .highlight p { color: var(--text-mid); font-size: 0.96rem; margin-bottom: 8px; line-height: 1.75; }
-  .highlight p:last-child { margin-bottom: 0; }
-  .highlight strong { color: var(--navy); font-weight: 600; }
-  .highlight.gold { background: var(--gold-bg); border-left-color: var(--gold); }
+.highlight {
+  background:var(--accent-bg); border-left:3px solid var(--teal);
+  border-radius:0 6px 6px 0; padding:16px 20px; margin:20px 0;
+}
+.highlight p { color:var(--text-mid); font-size:0.96rem; margin-bottom:8px; line-height:1.75; }
+.highlight p:last-child { margin-bottom:0; }
+.highlight strong { color:var(--navy); font-weight:600; }
+.highlight.gold { background:var(--gold-bg); border-left-color:var(--gold); }
 
-  /* ── STEP CHAIN ── */
-  .step-chain {
-    background: var(--warm-white); border: 1px solid var(--rule); border-radius: 8px;
-    overflow: hidden; margin: 24px 0;
-  }
-  .step-chain-header {
-    background: var(--navy); padding: 14px 24px;
-    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em;
-    text-transform: uppercase; color: var(--teal-light);
-  }
-  .step-chain-row {
-    display: flex; gap: 20px; align-items: flex-start;
-    padding: 18px 24px; border-bottom: 1px solid var(--rule);
-  }
-  .step-chain-row:last-child { border-bottom: none; }
-  .step-badge {
-    font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500;
-    background: var(--navy); color: #fff; border-radius: 3px; padding: 4px 10px;
-    flex-shrink: 0; margin-top: 3px; white-space: nowrap; letter-spacing: 0.06em;
-  }
-  .step-badge.gold-badge { background: var(--gold); }
-  .step-badge.teal-badge { background: var(--teal); }
-  .step-body strong { display: block; color: var(--navy); font-weight: 600; font-size: 0.96rem; margin-bottom: 4px; }
-  .step-body span { font-size: 0.875rem; color: var(--text-light); line-height: 1.7; }
+.step-chain {
+  background:var(--warm-white); border:1px solid var(--rule); border-radius:8px; overflow:hidden; margin:24px 0;
+}
+.step-chain-header {
+  background:var(--navy); padding:14px 24px;
+  font-family:'DM Mono', monospace; font-size:10px; letter-spacing:0.2em;
+  text-transform:uppercase; color:var(--teal-light);
+}
+.step-chain-row {
+  display:flex; gap:20px; align-items:flex-start; padding:18px 24px; border-bottom:1px solid var(--rule);
+}
+.step-chain-row:last-child { border-bottom:none; }
+.step-badge {
+  font-family:'DM Mono', monospace; font-size:10px; font-weight:500;
+  background:var(--navy); color:#fff; border-radius:3px; padding:4px 10px;
+  flex-shrink:0; margin-top:3px; white-space:nowrap; letter-spacing:0.06em;
+}
+.step-badge.gold-badge { background:var(--gold); }
+.step-badge.teal-badge { background:var(--teal); }
+.step-body strong { display:block; color:var(--navy); font-weight:600; font-size:0.96rem; margin-bottom:4px; }
+.step-body span { font-size:0.875rem; color:var(--text-light); line-height:1.7; }
 
-  /* ── EVIDENCE CARDS ── */
-  .evidence-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 16px; margin: 24px 0;
-  }
-  .evidence-card {
-    background: var(--warm-white); border: 1px solid var(--rule); border-radius: 8px;
-    padding: 24px 22px 20px; position: relative; overflow: hidden;
-  }
-  .ev-badge {
-    font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.14em;
-    text-transform: uppercase; color: var(--teal); background: var(--tag-bg);
-    border: 1px solid rgba(30,107,114,0.22); border-radius: 3px; padding: 3px 9px;
-    display: inline-block; margin-bottom: 12px;
-  }
-  .evidence-card h3 {
-    font-family: 'Playfair Display', serif; font-size: 0.97rem; font-weight: 600;
-    color: var(--navy); margin-bottom: 8px; line-height: 1.28;
-  }
-  .evidence-card p { font-size: 0.865rem; color: var(--text-light); margin: 0; line-height: 1.65; }
-  .evidence-card .card-foot { position: absolute; bottom: 0; left: 0; right: 0; height: 3px; }
-  .card-foot.teal { background: linear-gradient(90deg, var(--teal), transparent); }
-  .card-foot.gold { background: linear-gradient(90deg, var(--gold), transparent); }
-  .card-foot.navy { background: linear-gradient(90deg, var(--navy), transparent); }
+.evidence-grid {
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(270px, 1fr)); gap:16px; margin:24px 0;
+}
+.evidence-card {
+  background:var(--warm-white); border:1px solid var(--rule); border-radius:8px;
+  padding:24px 22px 20px; position:relative; overflow:hidden;
+}
+.ev-badge {
+  font-family:'DM Mono', monospace; font-size:9.5px; letter-spacing:0.14em;
+  text-transform:uppercase; color:var(--teal); background:var(--tag-bg);
+  border:1px solid rgba(30,107,114,0.22); border-radius:3px; padding:3px 9px;
+  display:inline-block; margin-bottom:12px;
+}
+.evidence-card h3 {
+  font-family:'Playfair Display', serif; font-size:0.97rem; font-weight:600;
+  color:var(--navy); margin-bottom:8px; line-height:1.28;
+}
+.evidence-card p { font-size:0.865rem; color:var(--text-light); margin:0; line-height:1.65; }
+.evidence-card .card-foot { position:absolute; bottom:0; left:0; right:0; height:3px; }
+.card-foot.teal { background:linear-gradient(90deg, var(--teal), transparent); }
+.card-foot.gold { background:linear-gradient(90deg, var(--gold), transparent); }
+.card-foot.navy { background:linear-gradient(90deg, var(--navy), transparent); }
 
-  /* ── COMPARISON BOX ── */
-  .comparison-wrap {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;
-  }
-  @media (max-width: 640px) { .comparison-wrap { grid-template-columns: 1fr; } }
-  .comparison-box {
-    border-radius: 8px; padding: 22px 24px; border: 1px solid var(--rule);
-  }
-  .comparison-box.wrong { background: #fff8f8; border-color: rgba(180,60,60,0.2); }
-  .comparison-box.right { background: var(--accent-bg); border-color: rgba(30,107,114,0.25); }
-  .comparison-label {
-    font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.18em;
-    text-transform: uppercase; margin-bottom: 10px; display: block;
-  }
-  .comparison-box.wrong .comparison-label { color: #b03030; }
-  .comparison-box.right .comparison-label { color: var(--teal); }
-  .comparison-box p { font-size: 0.93rem; color: var(--text-mid); line-height: 1.7; margin: 0; }
-  .comparison-box strong { color: var(--navy); }
+.comparison-wrap {
+  display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:24px 0;
+}
+.comparison-box { border-radius:8px; padding:22px 24px; border:1px solid var(--rule); }
+.comparison-box.wrong { background:#fff8f8; border-color:rgba(180,60,60,0.2); }
+.comparison-box.right { background:var(--accent-bg); border-color:rgba(30,107,114,0.25); }
+.comparison-label {
+  font-family:'DM Mono', monospace; font-size:9.5px; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:10px; display:block;
+}
+.comparison-box.wrong .comparison-label { color:#b03030; }
+.comparison-box.right .comparison-label { color:var(--teal); }
+.comparison-box p { font-size:0.93rem; color:var(--text-mid); line-height:1.7; margin:0; }
+.comparison-box strong { color:var(--navy); }
 
-  /* ── SYNTHESIS / CLOSING BOX ── */
-  .synthesis-box {
-    background: var(--warm-white); border: 1px solid var(--rule); border-radius: 8px;
-    padding: 32px 34px; margin-top: 24px;
-    border-top: 3px solid var(--teal);
-  }
-  .synthesis-box p { color: var(--text-mid); font-size: 0.975rem; margin-bottom: 14px; line-height: 1.82; }
-  .synthesis-box p:last-child { margin-bottom: 0; }
-  .synthesis-box strong { color: var(--navy); font-weight: 600; }
-  .synthesis-box em { color: var(--teal); font-style: italic; }
+.synthesis-box {
+  background:var(--warm-white); border:1px solid var(--rule); border-radius:8px;
+  padding:32px 34px; margin-top:24px; border-top:3px solid var(--teal);
+}
+.synthesis-box p { color:var(--text-mid); font-size:0.975rem; margin-bottom:14px; line-height:1.82; }
+.synthesis-box p:last-child { margin-bottom:0; }
+.synthesis-box strong { color:var(--navy); font-weight:600; }
+.synthesis-box em { color:var(--teal); font-style:italic; }
 
-  /* ── CITATION NOTE ── */
-  .citation-note {
-    background: var(--navy-bg); border: 1px solid rgba(15,35,66,0.12);
-    border-radius: 8px; padding: 20px 26px; margin-top: 48px;
-  }
-  .citation-note p { font-size: 0.84rem; color: var(--text-light); line-height: 1.7; margin-bottom: 6px; }
-  .citation-note p:last-child { margin-bottom: 0; }
-  .citation-note strong { color: var(--navy); }
-  .citation-note a { color: var(--teal); text-decoration: none; }
-  .citation-note a:hover { text-decoration: underline; }
+.citation-note {
+  background:var(--navy-bg); border:1px solid rgba(15,35,66,0.12);
+  border-radius:8px; padding:20px 26px; margin-top:48px;
+}
+.citation-note p { font-size:0.84rem; color:var(--text-light); line-height:1.7; margin-bottom:6px; }
+.citation-note p:last-child { margin-bottom:0; }
+.citation-note strong { color:var(--navy); }
+.citation-note a { color:var(--teal); text-decoration:none; }
+.citation-note a:hover { text-decoration:underline; }
 
-  /* ── ANIMATION ── */
-  .fade-section {
-    opacity: 0; transform: translateY(16px);
-    animation: fadeUp 0.5s ease forwards;
-  }
-  .fade-section:nth-child(1)  { animation-delay: 0.08s; }
-  .fade-section:nth-child(2)  { animation-delay: 0.16s; }
-  .fade-section:nth-child(3)  { animation-delay: 0.24s; }
-  .fade-section:nth-child(4)  { animation-delay: 0.32s; }
-  .fade-section:nth-child(5)  { animation-delay: 0.40s; }
-  .fade-section:nth-child(6)  { animation-delay: 0.48s; }
-  .fade-section:nth-child(7)  { animation-delay: 0.55s; }
-  @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+.fade-section {
+  opacity:0; transform:translateY(16px); animation:fadeUp 0.5s ease forwards;
+}
+.fade-section:nth-child(1){ animation-delay:0.08s; }
+.fade-section:nth-child(2){ animation-delay:0.16s; }
+.fade-section:nth-child(3){ animation-delay:0.24s; }
+.fade-section:nth-child(4){ animation-delay:0.32s; }
+.fade-section:nth-child(5){ animation-delay:0.40s; }
+.fade-section:nth-child(6){ animation-delay:0.48s; }
+.fade-section:nth-child(7){ animation-delay:0.55s; }
+@keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
 
-  /* ── FOOTER ── */
-  .site-footer { background: var(--navy); }
-  .footer-stripe { height: 3px; background: linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%); }
-  .footer-inner { max-width: 960px; margin: 0 auto; padding: 44px 44px 36px; }
-  .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap; }
-  .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: rgba(255,255,255,0.92); margin-bottom: 6px; }
-  .footer-tagline { font-family: 'Source Serif 4', serif; font-style: italic; font-weight: 300; font-size: 0.88rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
-  .footer-channels { display: flex; flex-direction: column; gap: 10px; }
-  .footer-channels-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 2px; }
-  .footer-channel-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: rgba(255,255,255,0.65); font-size: 0.88rem; transition: color 0.15s; }
-  .footer-channel-link:hover { color: var(--teal-light); }
-  .ch-icon { width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: rgba(255,0,0,0.18); }
-  .footer-bottom { padding-top: 24px; display: flex; flex-direction: column; gap: 8px; }
-  .footer-disclaimer { font-family: 'Source Serif 4', serif; font-style: italic; font-size: 0.8rem; color: rgba(255,255,255,0.35); max-width: 700px; line-height: 1.6; }
-  .footer-meta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.2); margin-top: 4px; }
+.framework-notice {
+  background:#fffbf2; border-top:1px solid rgba(200,146,58,0.25); border-bottom:1px solid rgba(200,146,58,0.25);
+}
+.framework-notice-inner {
+  max-width:960px; margin:0 auto; padding:20px; display:flex; gap:16px; align-items:flex-start;
+}
+.notice-icon {
+  flex-shrink:0; margin-top:2px; width:20px; height:20px; border-radius:50%;
+  background:rgba(200,146,58,0.15); border:1px solid rgba(200,146,58,0.4);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'DM Mono', monospace; font-size:11px; font-weight:500; color:var(--gold); line-height:1;
+}
+.notice-text { font-size:0.875rem; color:#6b5a3a; line-height:1.65; }
+.notice-text strong { color:#4a3a1e; font-weight:600; }
 
-  /* ── RESPONSIVE ── */
-  @media (max-width: 680px) {
-    .header-inner, .framework-notice-inner, .main-wrap, .footer-inner { padding-left: 20px; padding-right: 20px; }
-    h1 { font-size: 1.7rem; }
-    .evidence-grid { grid-template-columns: 1fr; }
-  }
+/* Footer */
+.site-footer { background:var(--navy); }
+.footer-stripe { height:5px; background:linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%); }
+.footer-inner { max-width:960px; margin:0 auto; padding:56px 20px 44px; }
+.footer-top {
+  display:grid; grid-template-columns:1.15fr 0.95fr; gap:34px; align-items:start; padding-bottom:30px; border-bottom:1px solid rgba(255,255,255,0.10);
+}
+.footer-brand {
+  font-family:'DM Mono', monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#2a9da6; margin-bottom:14px;
+}
+.footer-title {
+  font-family:'Playfair Display', Georgia, serif; font-size:clamp(1.5rem, 2.5vw, 2rem); line-height:1.18; color:rgba(255,255,255,0.96); margin-bottom:12px;
+}
+.footer-tagline {
+  color:rgba(255,255,255,0.74); line-height:1.72; max-width:520px; font-size:0.95rem;
+}
+.footer-actions { display:flex; flex-direction:column; align-items:flex-end; gap:16px; }
+.footer-links { display:flex; flex-wrap:wrap; gap:10px; justify-content:flex-end; }
+.footer-link {
+  text-decoration:none; color:rgba(255,255,255,0.88); border:1px solid rgba(255,255,255,0.16);
+  border-radius:999px; padding:9px 15px; font-size:0.9rem; font-weight:600; transition:all 0.15s ease;
+}
+.footer-link:hover { color:#2a9da6; border-color:#2a9da6; background:rgba(42,157,166,0.10); }
+.footer-disclaimer {
+  color:rgba(255,255,255,0.60); line-height:1.68; font-size:0.88rem; max-width:560px; margin-left:auto; text-align:right;
+}
+.footer-bottom { padding-top:24px; }
+.footer-meta {
+  font-family:'DM Mono', monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.22);
+}
 
-  /* ── STICKY DOC NAV ── */
-  .sticky-docnav {
-    position: fixed; top: 57px; left: 0; right: 0; z-index: 90;
-    background: rgba(255,255,255,0.97); backdrop-filter: blur(8px);
-    border-bottom: 1px solid #d8cfc4;
-    box-shadow: 0 2px 12px rgba(15,35,66,0.08);
-    transform: translateY(-100%);
-    transition: transform 0.25s ease;
-    pointer-events: none;
-  }
-  .sticky-docnav.visible { transform: translateY(0); pointer-events: auto; }
-  .sticky-docnav-inner { max-width: 960px; margin: 0 auto; padding: 8px 44px; display: flex; gap: 5px; flex-wrap: wrap; align-items: center; }
-  .sdn-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6b7494; margin-right: 6px; white-space: nowrap; flex-shrink: 0; }
-  .sdn-pill { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.04em; text-decoration: none; border-radius: 3px; padding: 4px 9px; transition: background 0.15s, opacity 0.15s; white-space: nowrap; opacity: 0.85; }
-  .sdn-pill:hover { opacity: 1; }
-  .sdn-pill.teal { color: #1e6b72; background: rgba(30,107,114,0.08); border: 1px solid rgba(30,107,114,0.22); }
-  .sdn-pill.gold { color: #8a5c1a; background: rgba(200,146,58,0.08); border: 1px solid rgba(200,146,58,0.25); }
-  .sdn-pill.navy { color: #0f2342; background: rgba(15,35,66,0.06); border: 1px solid rgba(15,35,66,0.18); }
-  .sdn-divider { width: 1px; height: 14px; background: #d8cfc4; margin: 0 3px; flex-shrink: 0; align-self: center; }
-  @media (max-width: 680px) {
-    .sticky-docnav-inner { padding: 7px 16px; gap: 4px; }
-    .sdn-label { display: none; }
-    .sdn-pill { font-size: 9px; padding: 3px 7px; }
-  }
+@media (max-width:980px) {
+  .footer-top { grid-template-columns:1fr; }
+  .footer-actions { align-items:flex-start; }
+  .footer-links { justify-content:flex-start; }
+  .footer-disclaimer { margin-left:0; text-align:left; }
+}
+@media (max-width:680px) {
+  .header-inner, .framework-notice-inner, .main-wrap, .footer-inner { padding-left:20px; padding-right:20px; }
+  .evidence-grid { grid-template-columns:1fr; }
+  .comparison-wrap { grid-template-columns:1fr; }
+}
+@media (max-width:720px) {
+  .topbar-inner { align-items:flex-start; flex-direction:column; }
+  .sticky-docnav-inner { padding:7px 16px; gap:4px; }
+  .sdn-pill { font-size:9px; padding:4px 8px; }
+  .site-header { margin-top:126px; }
+  .header-inner { padding:58px 20px 30px; }
+}
+
+
+.hero-title{
+  font-family:'Playfair Display', serif;
+  font-size:clamp(2rem,4.4vw,3rem);
+  line-height:1.12;
+  margin-bottom:10px;
+  color:#fff;
+}
+.hero-title .accent-line{
+  display:block;
+  color:var(--gold-light);
+  font-style:italic;
+  font-weight:500;
+}
+.header-subtitle{
+  font-family:'Source Serif 4', serif;
+  font-style:italic;
+  font-weight:300;
+  font-size:1rem;
+  color:rgba(255,255,255,0.65);
+  max-width:560px;
+  line-height:1.6;
+  margin-bottom:18px;
+}
+
 </style>
+<!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EH3TWPN49H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag('js', new Date());
+    gtag('config', 'G-EH3TWPN49H');
+  </script>
+  <meta property="og:title" content="Biology of Autism — The Vaccine Question | Decoding Autism Now">
+  <meta property="og:description" content="A biological explanation for why immune challenges during a loaded cascade can accelerate regression.">
+  <meta property="og:image" content="https://decodingautismnow.com/images/OG-11.png">
+  <meta name="twitter:image" content="https://decodingautismnow.com/images/OG-11.png">
 </head>
 <body>
 
-<nav class="masthead">
-  <div class="masthead-inner">
+<div class="topbar">
+  <div class="topbar-inner">
     <div>
-      <div class="masthead-brand">Decoding Autism Now</div>
-      <div class="masthead-title">Biology of Autism — The Vaccine Question</div>
+      <div class="topbar-brand">Decoding Autism Now</div>
+      <div class="topbar-title">Biology of Autism — The Vaccine Question</div>
     </div>
-    <a class="masthead-home" href="index.html">&#8592; Suite Home</a>
-  </div>
-</nav>
-
-<!-- ═══ STICKY DOC NAV ═══ -->
-<div class="sticky-docnav" id="stickyDocNav">
-  <div class="sticky-docnav-inner">
-    <span class="sdn-label">Jump to —</span>
-    <a class="sdn-pill teal" href="1_Molecular_Origins_Biology_of_Autism.html">01 Origins</a>
-    <a class="sdn-pill teal" href="2_Summary_Map_Cascade_Biology_of_Autism.html">02 Cascade Map</a>
-    <a class="sdn-pill teal" href="3_Summary_Map_Explanation_Biology_of_Autism.html">03 Map Explained</a>
-    <a class="sdn-pill teal" href="4_Detailed_Map_Interactive_Biology_of_Autism_Cascade.html">04 Interactive</a>
-    <a class="sdn-pill teal" href="5_Detailed_Map_Print_Biology_of_Autism_Cascade.html">05 Print</a>
-    <div class="sdn-divider"></div>
-    <a class="sdn-pill gold" href="6_Molecular_Pathways_Explained_Clinically_Biology_of_Autism.html">06 Pathways</a>
-    <a class="sdn-pill gold" href="7_Connecting_Testing_Biology_Interventions_BoA_Cascade.html">07 Diagnosis</a>
-    <a class="sdn-pill gold" href="8_Intervention_Logic_BoA_Cascade.html">08 Interventions</a>
-    <div class="sdn-divider"></div>
-    <a class="sdn-pill navy" href="9_FAQ_ASD_Cascade_Biology_of_Autism.html">09 FAQ</a>
-    <a class="sdn-pill navy" href="10_ASD_Cascade_Citations_Biology_of_Autism_Cascade.html">10 Evidence</a>
-    <a class="sdn-pill navy" href="11_Vaccine_Question_Biology_of_Autism.html">11 Vaccines</a>
+    <a class="topbar-home" href="index.html">Home</a>
   </div>
 </div>
 
-<!-- ═══ HEADER ═══ -->
+<div class="sticky-docnav" id="stickyDocNav">
+  <div class="sticky-docnav-inner">
+    <a class="sdn-pill teal" href="index.html">Home Hub</a>
+    <a class="sdn-pill teal" href="01_Molecular_Origins_Biology_of_Autism.html">Start Here</a>
+    <a class="sdn-pill teal" href="02_Cascade_Map_Biology_of_Autism.html">Cascade Map</a>
+    <a class="sdn-pill teal" href="03_Cascade_Explained_Biology_of_Autism.html">Cascade Explained</a>
+    <a class="sdn-pill gold" href="05_Metabolic_Pathways_Map_Biology_of_Autism.html">Pathways Map</a>
+    <a class="sdn-pill gold" href="06_Metabolic_Pathways_Explained_Biology_of_Autism.html">Pathways Explained</a>
+    <a class="sdn-pill gold" href="07_Testing_Strategy_Biology_of_Autism.html">Testing</a>
+    <a class="sdn-pill gold" href="07B_Test_Reference_Biology_of_Autism.html">Test Ref</a>
+    <a class="sdn-pill gold" href="07C_Interpreting_Results_Biology_of_Autism.html">Interpret</a>
+    <a class="sdn-pill gold" href="07D_Talking_to_Your_Doctor_Biology_of_Autism.html">Talk to Dr</a>
+    <a class="sdn-pill gold" href="07R_Regressive_Autism_Testing_Biology_of_Autism.html">Regression</a>
+    <a class="sdn-pill gold" href="08_Intervention_Logic_Biology_of_Autism.html">Interventions</a>
+    <a class="sdn-pill navy" href="09_FAQ_Biology_of_Autism.html">FAQ</a>
+    <a class="sdn-pill navy" href="10_Evidence_and_Citations_Biology_of_Autism.html">Evidence</a>
+    <a class="sdn-pill navy active" href="11_Vaccine_Question_Biology_of_Autism.html">Vaccine Question</a>
+    <a class="sdn-pill navy" href="12_Parents_Guide_Biology_of_Autism.html">Parents</a>
+    <a class="sdn-pill navy" href="13_Clinician_Guide_Biology_of_Autism.html">Clinician</a>
+  </div>
+</div>
+
 <header class="site-header">
   <div class="header-stripe"></div>
   <div class="header-inner">
     <div class="header-deco"></div>
-    <p class="brand-line">Decoding Autism Now</p>
-    <h1>Biology of Autism —<br><em>The Vaccine Question</em></h1>
+    <div class="header-eyebrow">Decoding Autism Now</div>
+    <h1 class="hero-title">Biology of Autism —<span class="accent-line">The Vaccine Question</span></h1>
     <p class="header-subtitle">A science-grounded, but compassionate answer to the question every autism family has asked — and what the biology actually tells us about timing, vulnerability, and what to do next.</p>
     <div class="suite-badge">
       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
       Biology of Autism — The Vaccine Question
     </div>
+    <br>
+    <a class="header-note" href="#framework-disclaimer">See framework disclaimer below</a>
   </div>
 </header>
 
-<!-- ═══ FRAMEWORK NOTICE ═══ -->
-<aside class="framework-notice" role="note">
-  <div class="framework-notice-inner">
-    <div class="notice-icon">i</div>
-    <p class="notice-text">
-      <strong>Theoretical framework — not clinical guidance.</strong>
-      The Autism Spectrum Disorder (ASD) Cascade is a systems-biology model integrating peer-reviewed findings across immunology, metabolism, gut biology, and neuroscience into a proposed mechanistic map. Individual components are supported by published research; the full integrated cascade has not been validated as a unified model in large clinical trials. It is intended as a research-informed framework — not a diagnostic tool or treatment protocol. All intervention decisions require qualified clinical oversight. For the evidence base, see the <em>ASD Cascade Citations</em> document in this suite.
-    </p>
-  </div>
-</aside>
-
-<!-- ═══ MAIN ═══ -->
 <main class="main-wrap">
 
   <!-- ── SECTION 1: THE PARENT EXPERIENCE ── -->
@@ -666,48 +775,48 @@
       <p>Pre-symptomatic biology — Frye &amp; Rossignol 2020 (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6989979/" target="_blank" rel="noopener">PMC6989979</a>); James SJ et al. 2004 (<a href="https://pubmed.ncbi.nlm.nih.gov/15585776/" target="_blank" rel="noopener">PubMed 15585776</a>).</p>
       <p>Fever paradox — Muller et al. 2023 (<a href="https://pubmed.ncbi.nlm.nih.gov/37119025/" target="_blank" rel="noopener">PubMed 37119025</a>); Mehler &amp; Purpura 2009 (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2668953/" target="_blank" rel="noopener">PMC2668953</a>); Curran et al. 2007 (Pediatrics).</p>
       <p>IDO1 / molecular bridge — Lawson et al. 2013 (<a href="https://pubmed.ncbi.nlm.nih.gov/23866724/" target="_blank" rel="noopener">PubMed 23866724</a>); Parrott et al. 2016 (<a href="https://pubmed.ncbi.nlm.nih.gov/27233247/" target="_blank" rel="noopener">PubMed 27233247</a>).</p>
-      <p>For the complete citation database, see <a href="10_ASD_Cascade_Citations_Biology_of_Autism_Cascade.html">Biology of Autism — The Evidence (Document 10)</a>.</p>
+      <p>For the complete citation database, see <a href="10_Evidence_and_Citations_Biology_of_Autism.html">Biology of Autism — The Evidence (Document 10)</a>.</p>
     </div>
   </section>
 
 </main>
 
-<!-- ═══ FOOTER ═══ -->
+<aside class="framework-notice" id="framework-disclaimer" role="note">
+  <div class="framework-notice-inner">
+    <div class="notice-icon">i</div>
+    <p class="notice-text">
+      <strong>Theoretical framework — not clinical guidance.</strong>
+      The Autism Spectrum Disorder (ASD) Cascade is a systems-biology model integrating peer-reviewed findings across immunology, metabolism, gut biology, and neuroscience into a proposed mechanistic map. Individual components are supported by published research; the full integrated cascade has not been validated as a unified model in large clinical trials. It is intended as a research-informed framework — not a diagnostic tool or treatment protocol. All intervention decisions require qualified clinical oversight. For the evidence base, see the <em>ASD Cascade Citations</em> document in this suite.
+    </p>
+  </div>
+</aside>
+
 <footer class="site-footer">
   <div class="footer-stripe"></div>
   <div class="footer-inner">
     <div class="footer-top">
       <div>
         <p class="footer-brand">Decoding Autism Now</p>
-        <p class="footer-tagline">Systems biology of autism —<br>for families, clinicians, and researchers.</p>
+        <h2 class="footer-title">Biology of Autism — The Vaccine Question</h2>
+        <p class="footer-tagline">A science-grounded, compassionate explanation of timing, vulnerability, regression, and what the biology points to next.</p>
       </div>
-      <div class="footer-channels">
-        <p class="footer-channels-label">Find us on</p>
-        <a class="footer-channel-link" href="https://www.youtube.com/@DecodingAutismNow" target="_blank" rel="noopener">
-          <span class="ch-icon">
-            <svg width="14" height="10" viewBox="0 0 24 17" fill="white"><path d="M23.5 2.5A3 3 0 0021.4.4C19.5 0 12 0 12 0S4.5 0 2.6.4A3 3 0 00.5 2.5C0 4.4 0 8.5 0 8.5S0 12.6.5 14.5A3 3 0 002.6 16.6C4.5 17 12 17 12 17s7.5 0 9.4-.4a3 3 0 002.1-2.1C24 12.6 24 8.5 24 8.5s0-4.1-.5-6zM9.75 12.02V4.98L15.8 8.5l-6.05 3.52z"/></svg>
-          </span>
-          YouTube — @DecodingAutismNow
-        </a>
+      <div class="footer-actions">
+        <div class="footer-links">
+          <a class="footer-link" href="index.html">Home</a>
+          <a class="footer-link" href="09_FAQ_Biology_of_Autism.html">FAQ</a>
+          <a class="footer-link" href="10_Evidence_and_Citations_Biology_of_Autism.html">Evidence</a>
+          <a class="footer-link" href="07_Testing_Strategy_Biology_of_Autism.html">Testing</a>
+          <a class="footer-link" href="08_Intervention_Logic_Biology_of_Autism.html">Interventions</a>
+          <a class="footer-link" href="https://www.youtube.com/@DecodingAutismNow" target="_blank" rel="noopener">YouTube</a>
+        </div>
+        <p class="footer-disclaimer">This content is for informational purposes only and should not be considered medical advice, diagnosis, or treatment. Always consult with a healthcare professional before making any changes to your health routines or treatment regimen.</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-disclaimer">This content is for informational purposes only and should not be considered medical advice, diagnosis, or treatment. Always consult with a healthcare professional before making any changes to your health routines or treatment regimen.</p>
-      <p class="footer-meta">Biology of Autism — The Vaccine Question | Decoding Autism Now | DecodingAutismNow.com</p>
+      <p class="footer-meta">Biology of Autism — The Vaccine Question | Decoding Autism Now</p>
     </div>
   </div>
 </footer>
 
-
-<script>
-  (function() {
-    var nav = document.getElementById('stickyDocNav');
-    function onScroll() {
-      if (window.scrollY > 10) { nav.classList.add('visible'); }
-      else { nav.classList.remove('visible'); }
-    }
-    window.addEventListener('scroll', onScroll, { passive: true });
-  })();
-</script>
 </body>
 </html>

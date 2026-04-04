@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EH3TWPN49H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EH3TWPN49H');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biology of Autism — Talking to Your Doctor | Decoding Autism Now</title>
+<meta property="og:title" content="Biology of Autism — Talking to Your Doctor | Decoding Autism Now">
+<meta property="og:description" content="Communication scripts for requesting tests, presenting results, navigating pushback, and building productive clinical partnerships.">
+<meta property="og:image" content="https://decodingautismnow.com/images/OG-07D.png">
+<meta property="og:url" content="https://decodingautismnow.com/07D_Talking_to_Your_Doctor_Biology_of_Autism.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Biology of Autism — Talking to Your Doctor | Decoding Autism Now">
+<meta name="twitter:description" content="Communication scripts for requesting tests, presenting results, navigating pushback, and building productive clinical partnerships.">
+<meta name="twitter:image" content="https://decodingautismnow.com/images/OG-07D.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0f2342; --teal: #1e6b72; --teal-light: #2a9da6; --gold: #c8923a; --gold-light: #e8b86d;
+  --ink: #1a1a1a; --muted: #7a756e; --rule: #ddd8d0; --bg: #f7f5f0; --paper: #fdfcf9;
+  --gut: #1B5E20; --mito: #E65100; --mia: #7B1FA2; --env: #4E342E; --sst: #1565C0; --multi: #37474F;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Source Serif 4', Georgia, serif; background: var(--bg); color: var(--ink); line-height: 1.65; }
+
+.masthead { position: sticky; top: 0; z-index: 100; background: var(--navy); padding: 10px 28px; border-bottom: 3px solid var(--gold); }
+.masthead-inner { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.masthead-brand { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal-light); }
+.masthead-title { font-family: 'Source Serif 4', serif; font-size: 14px; font-weight: 600; color: white; margin-top: 2px; }
+.masthead-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.mast-btn { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.82); text-decoration: none; border: 1px solid rgba(255,255,255,0.20); border-radius: 3px; padding: 5px 10px; transition: all 0.15s ease; white-space: nowrap; }
+.mast-btn:hover { color: var(--teal-light); border-color: var(--teal-light); background: rgba(42,157,166,0.10); }
+.mast-btn.suite { color: var(--gold-light); border-color: rgba(232,184,109,0.38); }
+
+.sticky-docnav { position: fixed; top: 57px; left: 0; right: 0; z-index: 90; background: rgba(255,255,255,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid #d8cfc4; box-shadow: 0 2px 12px rgba(15,35,66,0.08); transform: translateY(-100%); transition: transform 0.25s ease; pointer-events: none; }
+.sticky-docnav.visible { transform: translateY(0); pointer-events: auto; }
+.sticky-docnav-inner { max-width: 1080px; margin: 0 auto; padding: 10px 44px; display: flex; gap: 7px; flex-wrap: wrap; align-items: center; }
+.sdn-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6b7494; margin-right: 8px; white-space: nowrap; flex-shrink: 0; }
+.sdn-pill { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.05em; text-decoration: none; border-radius: 999px; padding: 6px 12px; transition: background 0.15s, opacity 0.15s, transform 0.15s; white-space: nowrap; opacity: 0.92; }
+.sdn-pill:hover { opacity: 1; transform: translateY(-1px); }
+.sdn-pill.teal { color: #1e6b72; background: rgba(30,107,114,0.08); border: 1px solid rgba(30,107,114,0.22); }
+.sdn-pill.gold { color: #8a5c1a; background: rgba(200,146,58,0.08); border: 1px solid rgba(200,146,58,0.25); }
+.sdn-pill.gold.active { color: #5a3a08; background: rgba(200,146,58,0.2); border-color: rgba(200,146,58,0.55); font-weight: 500; opacity: 1; }
+.sdn-pill.navy { color: #0f2342; background: rgba(15,35,66,0.06); border: 1px solid rgba(15,35,66,0.18); }
+.sdn-divider { width: 1px; height: 14px; background: #d8cfc4; margin: 0 3px; flex-shrink: 0; align-self: center; }
+
+.site-header { background: var(--navy); color: white; position: relative; overflow: hidden; }
+.header-stripe { height: 4px; background: linear-gradient(90deg, #1e6b72 0%, #2a9da6 50%, #c8923a 100%); }
+.header-inner { max-width: 960px; margin: 0 auto; padding: 70px 20px 40px; }
+.header-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 12px; }
+.header-title .header-sub { font-size: 1rem; font-style: italic; font-weight: 300; color: rgba(255,255,255,0.62); max-width: 580px; line-height: 1.6; margin-bottom: 20px; }
+.header-note { display: inline-block; margin-top: 14px; font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(232,184,109,0.82); text-decoration: none; cursor: pointer; transition: opacity 0.15s ease, text-decoration-color 0.15s ease; }
+.header-note:hover { opacity: 1; text-decoration: underline; text-decoration-color: rgba(232,184,109,0.82); }
+.hero-title{
+  font-family:'Playfair Display', serif;
+  font-size:clamp(2rem,4.4vw,3rem);
+  line-height:1.12;
+  margin-bottom:10px;
+  color:#fff;
+}
+.hero-title .accent-line{
+  display:block;
+  color:var(--gold-light);
+  font-style:italic;
+  font-weight:500;
+}
+
+#framework-disclaimer { scroll-margin-top: 120px; }
+
+.framework-notice { background: #fffbf2; border-top: 1px solid rgba(200,146,58,0.25); border-bottom: 1px solid rgba(200,146,58,0.25); }
+.framework-notice-inner { max-width: 960px; margin: 0 auto; padding: 20px; display: flex; gap: 16px; align-items: flex-start; }
+.notice-icon { flex-shrink: 0; margin-top: 2px; width: 20px; height: 20px; border-radius: 50%; background: rgba(200,146,58,0.15); border: 1px solid rgba(200,146,58,0.4); display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; color: var(--gold); line-height: 1; }
+.notice-text { font-family: 'Source Serif 4', serif; font-size: 0.875rem; color: #6b5a3a; line-height: 1.65; margin: 0; }
+.notice-text strong { color: #4a3a1e; font-weight: 600; }
+
+.wrap { max-width: 960px; margin: 36px auto 60px; padding: 0 20px; }
+.doc-section { margin-bottom: 52px; }
+.section-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); border-bottom: 2px solid var(--navy); padding-bottom: 8px; margin-bottom: 20px; display: flex; align-items: baseline; gap: 14px; }
+.section-num { font-family: 'DM Mono', monospace; font-size: 11px; background: var(--navy); color: white; padding: 3px 9px; border-radius: 3px; letter-spacing: 0.06em; }
+
+.body-text { font-size: 1rem; color: #2a2a2a; line-height: 1.78; margin-bottom: 18px; }
+.body-text a { color: var(--teal); font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(30,107,114,0.3); }
+
+.callout { border-radius: 0 8px 8px 0; padding: 15px 20px; margin-bottom: 20px; }
+.callout.blue  { background: #EFF6FF; border-left: 4px solid #3B82F6; }
+.callout.amber { background: #FFFBEB; border-left: 4px solid #F59E0B; }
+.callout.green { background: #F0FDF4; border-left: 4px solid #22C55E; }
+.callout h4 { font-family: 'DM Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 500; margin-bottom: 7px; }
+.callout.blue h4  { color: #1D4ED8; }
+.callout.amber h4 { color: #92400E; }
+.callout.green h4 { color: #15803D; }
+.callout p  { font-size: 0.9rem; color: #374151; line-height: 1.68; }
+.callout ul { font-size: 0.9rem; color: #374151; line-height: 1.68; padding-left: 18px; }
+.callout li { margin-bottom: 4px; }
+
+/* ── SCRIPT BLOCKS ── */
+.script-group { margin-bottom: 36px; }
+.script-group-label { font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); display: flex; align-items: center; gap: 8px; }
+.script-group-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+.script-block { background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; margin-bottom: 16px; }
+.script-header { background: var(--navy); color: white; padding: 10px 16px; font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.06em; display: flex; align-items: center; gap: 10px; }
+.script-header-label { flex: 1; }
+.script-use { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em; opacity: 0.55; white-space: nowrap; }
+.script-body { padding: 18px 20px; font-family: 'Source Serif 4', serif; font-size: 0.97rem; line-height: 1.85; color: #2a2a2a; font-style: italic; }
+.script-body strong { font-style: normal; color: var(--navy); font-weight: 600; }
+.script-note { padding: 10px 18px 14px; font-size: 0.82rem; color: var(--muted); line-height: 1.6; border-top: 1px solid var(--rule); background: #f8f7f4; font-style: normal; }
+
+/* ── PUSHBACK CARDS ── */
+.pushback-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 20px; margin-top: 16px; }
+.pushback-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; margin-bottom: 12px; }
+.pushback-scenario { background: #f2f0eb; padding: 10px 14px; font-family: 'DM Mono', monospace; font-size: 9.5px; font-weight: 500; letter-spacing: 0.06em; color: var(--navy); border-bottom: 1px solid var(--rule); }
+.pushback-body { padding: 13px 14px; }
+.pushback-label { font-family: 'DM Mono', monospace; font-size: 9px; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 500; color: var(--muted); display: block; margin-bottom: 4px; margin-top: 10px; }
+.pushback-label:first-child { margin-top: 0; }
+.pushback-response { font-family: 'Source Serif 4', serif; font-size: 0.9rem; line-height: 1.7; color: #2a2a2a; font-style: italic; margin-bottom: 0; }
+.pushback-plain { font-size: 0.875rem; line-height: 1.65; color: #2a2a2a; }
+
+.regression-highlight { border: 2px solid rgba(106,45,138,0.18); background: #f6f0fb; padding: 18px; border-radius: 10px; margin: 22px 0 30px; }
+
+/* ── PRACTITIONER TYPES ── */
+.provider-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 4px; }
+.provider-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; padding: 14px 16px; }
+.provider-title { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); margin-bottom: 7px; }
+.provider-card p { font-size: 0.875rem; color: #2a2a2a; line-height: 1.62; }
+.provider-card a { color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(30,107,114,0.3); font-size: 0.875rem; }
+
+/* ── NAV STRIP ── */
+.nav-strip { background: var(--navy); border-radius: 10px; padding: 30px 34px; margin-top: 28px; }
+.nav-strip-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 600; color: white; margin-bottom: 18px; }
+.nav-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; }
+.nav-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14); border-radius: 8px; padding: 14px 16px; text-decoration: none; transition: all 0.15s; display: block; }
+.nav-card:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.28); }
+.nav-card-doc { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 5px; }
+.nav-card-title { font-size: 0.88rem; font-weight: 600; color: white; margin-bottom: 4px; line-height: 1.3; }
+.nav-card-desc { font-size: 0.8rem; color: rgba(255,255,255,0.52); line-height: 1.5; font-style: italic; }
+.nav-card-arrow { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--teal-light); margin-top: 9px; }
+
+/* ── FOOTER ── */
+.site-footer { background: var(--navy); margin-top: 60px; }
+.footer-stripe { height: 5px; background: linear-gradient(90deg, #1e6b72 0%, #2a9da6 50%, #c8923a 100%); }
+.footer-inner { max-width: 1080px; margin: 0 auto; padding: 56px 44px 44px; }
+.footer-top { display: grid; grid-template-columns: 1.15fr 0.95fr; gap: 34px; align-items: start; padding-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.10); }
+.footer-brand { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 14px; }
+.footer-title { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.8rem, 3vw, 2.35rem); line-height: 1.14; color: rgba(255,255,255,0.96); margin-bottom: 14px; }
+.footer-tagline { color: rgba(255,255,255,0.74); line-height: 1.72; max-width: 620px; font-size: 0.98rem; font-style: normal; font-weight: 400; }
+.footer-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 16px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-start; }
+.footer-link { text-decoration: none; color: rgba(255,255,255,0.88); border: 1px solid rgba(255,255,255,0.16); border-radius: 999px; padding: 10px 16px; font-size: 0.96rem; font-weight: 600; transition: all 0.15s ease; }
+.footer-link:hover { color: var(--teal-light); border-color: var(--teal-light); background: rgba(42,157,166,0.10); }
+.footer-disclaimer { color: rgba(255,255,255,0.60); line-height: 1.68; font-size: 0.9rem; max-width: 620px; margin-left: auto; text-align: right; font-style: normal; }
+.footer-bottom { padding-top: 24px; }
+.footer-meta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.22); }
+
+@media (max-width: 980px) {
+  .footer-top { grid-template-columns: 1fr; } .footer-actions { align-items: flex-start; }
+  .footer-links { justify-content: flex-start; } .footer-disclaimer { margin-left: 0; text-align: left; }
+  .pushback-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .wrap { padding: 0 20px; } .header-inner { padding: 28px 20px 24px; }
+  .framework-notice-inner { padding: 14px 20px; }
+  .sticky-docnav-inner { padding: 7px 16px; gap: 4px; }
+  .sdn-label { display: none; } .sdn-pill { font-size: 9px; padding: 4px 8px; }
+  .footer-inner { padding: 36px 20px 30px; }
+  .footer-link { font-size: 0.88rem; padding: 8px 13px; }
+}
+
+/* ───────── LOCKED SHELL OVERRIDES ───────── */
+.topbar {
+  position: fixed !important;
+  top: 0 !important; left: 0 !important; right: 0 !important;
+  z-index: 1000 !important;
+  background: #0f2342 !important;
+  border-bottom: 2px solid #c8923a !important;
+}
+.topbar-inner {
+  max-width: 960px !important;
+  margin: 0 auto !important;
+  padding: 10px 20px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 18px !important;
+}
+.topbar-brand {
+  font-family: 'DM Mono', monospace !important;
+  font-size: 10px !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  color: #2a9da6 !important;
+  margin-bottom: 2px !important;
+}
+.topbar-title {
+  font-family: 'Source Serif 4', serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: white !important;
+  line-height: 1.2 !important;
+}
+.topbar-home {
+  font-family: 'DM Mono', monospace !important;
+  font-size: 10px !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: rgba(255,255,255,0.82) !important;
+  text-decoration: none !important;
+  border: 1px solid rgba(255,255,255,0.20) !important;
+  border-radius: 3px !important;
+  padding: 5px 10px !important;
+  white-space: nowrap !important;
+}
+.topbar-home:hover { color: white !important; border-color: rgba(255,255,255,0.45) !important; }
+
+html body .sticky-docnav {
+  position: fixed !important;
+  top: 57px !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 999 !important;
+  background: rgba(255,255,255,0.97) !important;
+  backdrop-filter: blur(8px) !important;
+  border-bottom: 1px solid #d8cfc4 !important;
+  box-shadow: 0 2px 12px rgba(15,35,66,0.08) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
+  transition: none !important;
+}
+html body .sticky-docnav.is-visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
+}
+.shell-header { margin-top: 110px !important; }
+
+.header-note { border-bottom: 1px solid rgba(232,184,109,0.3) !important; }
+.header-note:hover { text-decoration: none !important; border-bottom-color: rgba(232,184,109,0.75) !important; }
+
+@media (max-width: 720px) {
+  .topbar-inner { align-items: flex-start !important; flex-direction: column !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <div class="topbar-brand">Decoding Autism Now</div>
+      <div class="topbar-title">Biology of Autism — Talking to Your Doctor</div>
+    </div>
+    <a class="topbar-home" href="index.html">Home</a>
+  </div>
+</div>
+
+<div class="sticky-docnav" id="stickyDocNav">
+  <div class="sticky-docnav-inner">
+    <a class="sdn-pill teal" href="index.html">Home Hub</a>
+    <a class="sdn-pill teal" href="01_Molecular_Origins_Biology_of_Autism.html">Start Here</a>
+    <a class="sdn-pill teal" href="02_Cascade_Map_Biology_of_Autism.html">Cascade Map</a>
+    <a class="sdn-pill teal" href="03_Cascade_Explained_Biology_of_Autism.html">Cascade Explained</a>
+    <a class="sdn-pill gold" href="05_Metabolic_Pathways_Map_Biology_of_Autism.html">Pathways Map</a>
+    <a class="sdn-pill gold" href="06_Metabolic_Pathways_Explained_Biology_of_Autism.html">Pathways Explained</a>
+    <a class="sdn-pill gold" href="07_Testing_Strategy_Biology_of_Autism.html">Testing</a>
+    <a class="sdn-pill gold" href="07B_Test_Reference_Biology_of_Autism.html">Test Ref</a>
+    <a class="sdn-pill gold" href="07C_Interpreting_Results_Biology_of_Autism.html">Interpret</a>
+    <a class="sdn-pill gold active" href="07D_Talking_to_Your_Doctor_Biology_of_Autism.html">Talk to Dr</a>
+    <a class="sdn-pill gold" href="07R_Regressive_Autism_Testing_Biology_of_Autism.html">Regression</a>
+    <a class="sdn-pill gold" href="08_Intervention_Logic_Biology_of_Autism.html">Interventions</a>
+    <a class="sdn-pill navy" href="09_FAQ_Biology_of_Autism.html">FAQ</a>
+    <a class="sdn-pill navy" href="10_Evidence_and_Citations_Biology_of_Autism.html">Evidence</a>
+    <a class="sdn-pill navy" href="11_Vaccine_Question_Biology_of_Autism.html">Vaccine Question</a>
+    <a class="sdn-pill navy" href="12_Parents_Guide_Biology_of_Autism.html">Parents</a>
+    <a class="sdn-pill navy" href="13_Clinician_Guide_Biology_of_Autism.html">Clinician</a>
+  </div>
+</div>
+
+<div class="site-header shell-header">
+  <div class="header-stripe"></div>
+  <div class="header-inner">
+    <div class="header-eyebrow">Decoding Autism Now</div>
+    <h1 class="hero-title">Biology of Autism —<span class="accent-line">Talking to Your Doctor</span></h1>
+    <p class="header-sub">Communication scripts for requesting tests, presenting results, navigating pushback, and building a productive clinical partnership around your child's biology</p>
+    <a class="header-note" href="#framework-disclaimer">See framework disclaimer below</a>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- SECTION 1: HOW TO USE -->
+  <div class="doc-section">
+    <div class="section-title"><span class="section-num">01</span> How to use these scripts</div>
+
+    <p class="body-text">These scripts are designed for three distinct appointment moments: requesting tests at a first conversation, presenting abnormal results at a follow-up, and responding when a practitioner declines or pushes back. They are starting points for a clinical conversation — not demands. The most productive approach leads with your child's observed symptoms, introduces the cascade framework as context, and explicitly invites your practitioner's clinical judgment rather than bypassing it.</p>
+
+    <div class="callout blue">
+      <h4>The single most important principle</h4>
+      <p>Practitioners respond better to parents who are curious than to parents who appear to have already diagnosed their child. Frame every request as "I've been reading about this and I'd like your perspective on whether it applies to my child" rather than "I need you to test for this because I believe my child has X." The cascade framework is a hypothesis, not a verdict — present it that way and most practitioners will engage with it.</p>
+    </div>
+
+    <div class="callout amber">
+      <h4>These scripts reference a theoretical framework</h4>
+      <p>The ASD biological cascade is a systems-biology model, not an established clinical diagnostic standard. When using these scripts, it is appropriate to acknowledge that directly — "I've been reading about a proposed biological model" is more accurate and more credible than presenting it as settled science. Practitioners who sense you are overstating the evidence base will disengage. Those who sense you are thinking carefully and asking good questions will lean in.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 2: REQUESTING TESTS -->
+  <div class="doc-section">
+    <div class="section-title"><span class="section-num">02</span> Requesting tests — first appointment scripts</div>
+
+    <p class="body-text">Use these at the beginning of a conversation about testing. Start with the opening framework statement to set context, then move to whichever channel-specific scripts are most relevant to your child's presentation. You do not need to use all of them — select based on the symptom branches in <a href="07_Testing_Strategy_Biology_of_Autism.html">Document 07</a>.</p>
+
+    <div class="script-group">
+      <div class="script-group-label">
+        <div class="script-group-dot" style="background:var(--navy)"></div>
+        Open every conversation with this
+      </div>
+
+      <div class="script-block">
+        <div class="script-header">
+          <span class="script-header-label">Opening framework statement</span>
+          <span class="script-use">Use at the start of any testing conversation</span>
+        </div>
+        <div class="script-body">
+          "I've been researching a proposed systems biology model of autism that suggests several upstream biological factors — gut health, immune signaling, mitochondrial function, and stress hormone patterns — may be contributing to my child's symptoms through specific measurable pathways. I'm not trying to diagnose anything myself, but I'd like to discuss some targeted testing to understand which of these might be active in my child, so we can make more informed decisions about where to focus our efforts. I have a specific test list I'd like to walk through with you — I'm very open to your perspective on which of these make sense to order."
+        </div>
+        <div class="script-note">This framing positions you as informed and collaborative rather than demanding. It explicitly invites clinical judgment, which most practitioners respond to positively. Avoid mentioning specific supplement protocols in this opening — focus on understanding, not on what you plan to do with the results.</div>
+      </div>
+    </div>
+
+    <div class="script-group">
+      <div class="script-group-label">
+        <div class="script-group-dot" style="background:var(--gut)"></div>
+        GI symptoms present — Branch A
+      </div>
+
+      <div class="script-block">
+        <div class="script-header">
+          <span class="script-header-label">Requesting the gut channel panel</span>
+          <span class="script-use">When constipation, diarrhea, bloating, food refusal, or abdominal pain are present</span>
+        </div>
+        <div class="script-body">
+          "Given my child's GI symptoms, I'd like to start with an Organic Acids Test through Great Plains Laboratory — it's a first-morning urine collection that screens for gut dysbiosis markers, mitochondrial function, and kynurenine pathway activity all in one panel. If that shows active dysbiosis, I'd like to follow up with a GI-MAP stool analysis from Diagnostic Solutions, which includes calprotectin for gut inflammation and pancreatic elastase for enzyme output. I'd also like to discuss Zonulin and LPS-Binding Protein — these directly measure whether the gut barrier is actively leaking, which would help us understand whether gut repair needs to come first."
+        </div>
+        <div class="script-note">The OAT is the highest-yield starting point for this channel. If your practitioner is unfamiliar with functional stool testing, you can note that GI-MAP is widely used in integrative and functional medicine and is available through Diagnostic Solutions Laboratory.</div>
+      </div>
+    </div>
+
+    <div class="regression-highlight">
+    <div class="script-group" id="regression">
+      <div class="script-group-label">
+        <div class="script-group-dot" style="background:#6a2d8a"></div>
+        Regression — loss of previously acquired skills — Branch E
+      </div>
+
+      <div class="script-block" style="border-color:#9b6cc8; border-width:1.5px;">
+        <div class="script-header" style="background:#6a2d8a;">
+          <span class="script-header-label">Requesting the regression evaluation battery</span>
+          <span class="script-use">When speech, language, motor skills, or social connection have been lost</span>
+        </div>
+        <div class="script-body">
+          "I want to talk about something that has been very difficult for our family. My child previously had [describe the specific skills — words, phrases, eye contact, motor milestones] and has lost those abilities [over the past several weeks / months / following a specific event]. I've been reading about a proposed biological framework that suggests this kind of regression may reflect a failure of the molecular pathway responsible for maintaining learned skills — specifically a pathway called CREB that requires both adequate NAD⁺ and a neurotransmitter called somatostatin being within normal range. When that pathway is suppressed from two directions at once, it appears that previously encoded skills can become inaccessible even without structural brain damage. I'm not asking you to accept that framework as established — I'm asking whether you'd be willing to run a specific panel that would help us understand whether the biological conditions for that failure are present in my child. The tests I'm interested in are: serum BDNF as an outcome baseline, an Organic Acids Test for kynurenine metabolites, a Kynurenine to Tryptophan ratio, and a four-point salivary cortisol with IGF-1. If the regression followed a specific illness or gut event, I'd also like to add Zonulin and LPS-Binding Protein."
+        </div>
+        <div class="script-note">This script does something the other scripts don't — it names the emotional reality first, before the biology. That framing matters in a way it doesn't for the other branches. A practitioner who hears "my child lost their words" responds very differently than one who hears "I want to test for BDNF suppression." Lead with the experience; follow with the biology. The BDNF baseline is the most important single test to secure — it transforms the follow-up conversation from subjective ("she seems to be doing a little better") to objective ("BDNF has moved from 14 to 22 ng/mL over three months"). If the practitioner is reluctant to order the full battery, prioritize BDNF + OAT as the minimum starting point.</div>
+      </div>
+
+      <div class="script-block" style="border-color:#9b6cc8; border-width:1.5px;">
+        <div class="script-header" style="background:#6a2d8a;">
+          <span class="script-header-label">If regression followed a vaccination or febrile illness</span>
+          <span class="script-use">When parents identify a specific triggering event</span>
+        </div>
+        <div class="script-body">
+          "My child's regression appeared to follow [a vaccination / a high fever / a GI illness] in [month and year]. I want to be clear that I'm not making a causal claim — I'm asking a biological question. The framework I've been reading about suggests that many children who later experience regression carry pre-existing biological vulnerabilities — oxidative stress, gut barrier disruption, immune dysregulation — that are measurable before any behavioral change becomes visible. An immune challenge during a critical developmental window can be the event that tips a cascade already underway, rather than the root cause. What I'd like to do is test for which of those upstream channels are currently active in my child, so we can address what's driving the cascade now — regardless of what started it. That investigation looks the same whether or not there was a precipitating event."
+        </div>
+        <div class="script-note">This framing is important for families who feel strongly that a specific event caused the regression. It validates their observation — yes, something happened at that time — while redirecting from causation to current biology. It also explicitly sidesteps the politically charged territory of vaccine-causation claims while still taking the family's experience seriously. For the full biological context of immune-triggered regression, see <a href="11_Vaccine_Question_Biology_of_Autism.html" style="color:var(--teal);">Biology of Autism — The Vaccine Question</a>.</div>
+      </div>
+
+      <div class="script-block" style="border-color:#9b6cc8; border-width:1.5px;">
+        <div class="script-header" style="background:#6a2d8a;">
+          <span class="script-header-label">Presenting regression results at follow-up</span>
+          <span class="script-use">When BDNF and channel markers have come back from the regression battery</span>
+        </div>
+        <div class="script-body">
+          "The results from the regression panel are back and I'd like to walk through them with you. The serum BDNF is [X] ng/mL, which I understand is significantly below the typical range and confirms that the learning consolidation pathway is suppressed. The [OAT kynurenine / K:T ratio / cortisol pattern / IGF-1] findings suggest that [the neuroinflammation arm / the SST arm / both arms] are contributing to that suppression. I'd like to use BDNF as our primary objective outcome marker going forward — retest at three months — so we have a biological signal to guide our decisions rather than relying entirely on behavioral observation. What interventions would you be comfortable supporting to address these findings? And is there anything in these results you'd want to investigate further before we start?"
+        </div>
+        <div class="script-note">The BDNF number anchors the conversation in a way behavioral reports cannot. It also sets up a productive three-month follow-up that gives both you and the practitioner a concrete signal to evaluate. If the practitioner asks about the significance of the BDNF number, you can note that published research consistently shows significantly lower BDNF levels in individuals with ASD compared to neurotypical controls, and that BDNF is the downstream output of the cAMP/PKA/CREB pathway — the pathway most directly implicated in learning and synaptic plasticity. It's not a diagnostic marker — it's a functional readout.</div>
+      </div>
+    </div>
+    </div>
+
+    <div class="script-group">
+      <div class="script-group-label">
+        <div class="script-group-dot" style="background:var(--mia)"></div>
+        Behavioral escalation or regression present — Branches B and E
+      </div>
+
+      <div class="script-block">
+        <div class="script-header">
+          <span class="script-header-label">Requesting the neuroinflammation panel</span>
+          <span class="script-use">When irritability, meltdowns, regression, or skill loss are prominent</span>
+        </div>
+        <div class="script-body">
+          "I'd like to assess whether neuroinflammation may be playing a role in my child's behavioral presentation. The specific tests I'm interested in are a Kynurenine to Tryptophan ratio — this directly measures whether an enzyme called IDO1 is diverting tryptophan into an inflammatory pathway rather than serotonin — alongside a cytokine panel with IL-6 and TNF-alpha. I'd also like a high-sensitivity CRP as a more accessible systemic inflammatory marker. Together these would help us understand whether active neuroinflammatory signaling is driving the behavioral changes, and if so, what the most urgent intervention priorities are."
+        </div>
+        <div class="script-note">K:T ratio is available through Mayo Clinic Labs and Boston Heart Diagnostics. If your practitioner is unfamiliar with it, you can note it is a validated research biomarker widely published in neuroinflammation literature. For regression specifically, add: "I'd also like a baseline serum BDNF — this is the downstream output of the learning circuit, and I'd like to use it as a longitudinal outcome marker to track whether we're making measurable progress."</div>
+      </div>
+    </div>
+
+    <div class="script-group">
+      <div class="script-group-label">
+        <div class="script-group-dot" style="background:var(--sst)"></div>
+        Sleep disruption, anxiety, or sensory hypersensitivity — Branch C
+      </div>
+
+      <div class="script-block">
+        <div class="script-header">
+          <span class="script-header-label">Requesting the HPA axis panel</span>
+          <span class="script-use">When sleep disruption, anxiety, or sensory hypersensitivity are prominent</span>
+        </div>
+        <div class="script-body">
+          "I'd like to assess my child's HPA axis and stress hormone patterns, because I believe chronic stress hormone dysregulation may be suppressing the learning and plasticity pathways. I'd like a four-point salivary cortisol diurnal curve — available through ZRT Laboratory or DUTCH — which maps the full rhythm pattern through the day. I'd also like serum IGF-1, which gives us an indirect measure of somatostatin load through its effect on growth hormone, and DHEA-S, which together with the cortisol pattern helps us understand whether we're looking at an active stress response or an exhaustion pattern. These together give us two independent angles on the same underlying issue."
+        </div>
+        <div class="script-note">Salivary cortisol is not available through standard LabCorp/Quest — it requires ZRT, DUTCH, or Genova. If your practitioner is unfamiliar with specialty labs, frame it as: "These are widely used in functional medicine for HPA assessment and don't require a clinic draw — they're collected at home and mailed to the lab." IGF-1 and DHEA-S are standard LabCorp/Quest draws and are typically covered by insurance.</div>
+      </div>
+    </div>
+
+    <div class="script-group">
+      <div class="script-group-label">
+        <div class="script-group-dot" style="background:var(--mito)"></div>
+        Fatigue or low endurance present — Branch D
+      </div>
+
+      <div class="script-block">
+        <div class="script-header">
+          <span class="script-header-label">Requesting the mitochondrial panel</span>
+          <span class="script-use">When fatigue, low muscle tone, or poor physical endurance are present</span>
+        </div>
+        <div class="script-body">
+          "I'd like to assess mitochondrial function because my child shows signs that could be consistent with impaired cellular energy production — the fatigue and low endurance patterns specifically. The OAT panel I mentioned captures TCA cycle markers — succinic, fumaric, and malic acid — which flag mitochondrial blockade when elevated. If those come back abnormal, I'd like to follow up with a plasma lactate to pyruvate ratio, which is the most specific marker of active respiratory chain dysfunction, and a full carnitine panel with acylcarnitine profile to assess fatty acid oxidation. I'd also appreciate a plasma CoQ10 level — deficiency is common in mitochondrial dysfunction and directly supplementable."
+        </div>
+        <div class="script-note">Plasma lactate:pyruvate ratio and carnitine panels are available through standard LabCorp/Quest. Specify "plasma" for both and request a "fasting, resting sample" — exercise or food before the draw can confound the results significantly.</div>
+      </div>
+    </div>
+
+    <div class="script-group">
+      <div class="script-group-label">
+        <div class="script-group-dot" style="background:var(--env)"></div>
+        Suspected environmental exposure — Branch F
+      </div>
+
+      <div class="script-block">
+        <div class="script-header">
+          <span class="script-header-label">Requesting the environmental burden panel</span>
+          <span class="script-use">When exposure history, geographic factors, or dietary patterns suggest environmental risk</span>
+        </div>
+        <div class="script-body">
+          "Given our geographic area and my child's dietary patterns, I'd like to assess for environmental toxin burden. I'm interested in a GPL-TOX panel through Great Plains Laboratory — it screens for over 170 environmental chemicals including glyphosate, organophosphates, and phthalates in a single urine collection. I'd also like RBC heavy metals — specifically mercury, lead, arsenic, and cadmium — and I want to emphasize RBC rather than serum, because red blood cell levels reflect chronic tissue exposure rather than just a recent exposure event. If either of these comes back elevated, I'd like to discuss what that means for our intervention priorities."
+        </div>
+        <div class="script-note">GPL-TOX requires Great Plains Laboratory and is typically not covered by insurance. RBC heavy metals can be ordered through LabCorp or Doctor's Data — always specify RBC explicitly. If your practitioner asks why RBC rather than serum, you can note: "Serum metals clear quickly after exposure — RBC metals reflect what the body has actually retained in tissue over a longer period."</div>
+      </div>
+    </div>
+
+    <div class="script-group">
+      <div class="script-group-label">
+        <div class="script-group-dot" style="background:var(--multi)"></div>
+        Universal — add to any conversation
+      </div>
+
+      <div class="script-block">
+        <div class="script-header">
+          <span class="script-header-label">Requesting BDNF as an outcome marker</span>
+          <span class="script-use">Add this to any testing conversation — especially when regression is present</span>
+        </div>
+        <div class="script-body">
+          "Regardless of which other tests we run, I'd like to establish a baseline serum BDNF level. BDNF is the downstream output of the learning and plasticity pathway — the research literature suggests it's chronically suppressed in autism, and I'd like to use it as a longitudinal tracking marker. If we establish a baseline now and retest at three and six months, we'll have an objective biological measure of whether our interventions are moving things in the right direction. It's a standard LabCorp draw and adds very little to the cost of whatever panel we're already running."
+        </div>
+        <div class="script-note">Sample handling matters for BDNF — the sample should be collected in an EDTA tube and centrifuged promptly. When ordering, it may be worth confirming the lab's protocol. Some practitioners may not be familiar with BDNF as a clinical marker — you can note that it is widely used in neuroscience research and is increasingly used in functional medicine as a treatment response biomarker.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: FOLLOW-UP WITH RESULTS -->
+  <div class="doc-section">
+    <div class="section-title"><span class="section-num">03</span> Presenting results — follow-up appointment scripts</div>
+
+    <p class="body-text">These scripts are for the appointment after testing, when you have results in hand and need to present them clearly, connect them to the biological framework, and discuss what changes as a result. The goal is to help your practitioner understand the findings in context — not to tell them what the protocol should be.</p>
+
+    <div class="script-block">
+      <div class="script-header">
+        <span class="script-header-label">Opening a results conversation</span>
+        <span class="script-use">How to begin when you have multiple abnormal findings</span>
+      </div>
+      <div class="script-body">
+        "Thank you for ordering these tests. I've had a chance to review the results and I'd like to walk through the findings that seem most significant to me and get your perspective on what they mean clinically. I've organized them by the biological channel I think they're pointing to — I want to understand which of these you think are most actionable, and what you'd recommend we address first."
+      </div>
+      <div class="script-note">This framing keeps the practitioner in the role of clinical expert making recommendations, rather than you presenting a protocol for them to approve. That distinction matters for maintaining the collaborative dynamic throughout the conversation.</div>
+    </div>
+
+    <div class="script-block">
+      <div class="script-header">
+        <span class="script-header-label">Presenting elevated inflammatory markers</span>
+        <span class="script-use">When hsCRP, cytokines, or K:T ratio are abnormal</span>
+      </div>
+      <div class="script-body">
+        "The inflammatory markers came back elevated — the hsCRP is above 1.0 in the absence of any acute illness, and the IL-6 is elevated as well. Based on what I've been reading, this is consistent with chronic neuroinflammatory signaling rather than an acute immune event. I'd like to understand your perspective on what's driving this, and whether there's anything in the conventional workup we should add to rule out other causes. If this is chronic low-grade neuroinflammation, I'd also like to discuss what interventions you'd be comfortable supporting — I've read that omega-3 fatty acids and certain flavonoids have reasonable evidence for neuroinflammatory modulation in the autism context."
+      </div>
+    </div>
+
+    <div class="script-block">
+      <div class="script-header">
+        <span class="script-header-label">Presenting abnormal cortisol pattern</span>
+        <span class="script-use">When salivary cortisol curve is flat, inverted, or chronically elevated</span>
+      </div>
+      <div class="script-body">
+        "The four-point salivary cortisol came back with a flat diurnal pattern — cortisol is not showing the normal morning peak and evening decline. From what I understand, this suggests the HPA axis is dysregulated, which may be contributing to the sleep difficulties and sensory issues we've been seeing. I'd like to understand whether you think this pattern is significant clinically, and whether there are any interventions from your perspective that would help normalize the circadian cortisol rhythm. I've been reading about the role of phosphatidylserine in evening cortisol reduction and consistent sleep timing — would you be open to discussing those?"
+      </div>
+    </div>
+
+    <div class="script-block">
+      <div class="script-header">
+        <span class="script-header-label">Presenting gut findings</span>
+        <span class="script-use">When OAT dysbiosis markers, calprotectin, or Zonulin/LBP are abnormal</span>
+      </div>
+      <div class="script-body">
+        "The gut panel showed active dysbiosis on the OAT — arabinose is elevated suggesting yeast overgrowth, and the Zonulin and LBP are both elevated, which I understand indicates that the gut barrier is actively disrupted and LPS is entering systemic circulation. Given the research on LPS and neuroinflammation, I'm concerned that this may be driving some of the inflammatory markers we also saw elevated. I'd like to discuss a sequenced gut repair approach — starting with addressing the dysbiosis before introducing probiotics, and supporting barrier repair alongside that. I'd welcome your guidance on the appropriate clinical workup and any referrals you think are warranted."
+      </div>
+    </div>
+
+    <div class="script-block">
+      <div class="script-header">
+        <span class="script-header-label">Using BDNF as a progress conversation</span>
+        <span class="script-use">At a 3- or 6-month follow-up when retesting BDNF</span>
+      </div>
+      <div class="script-body">
+        "We established a baseline BDNF of [X] ng/mL at our last visit. The retest shows it has moved to [Y] ng/mL over the past three months. I'd like to use this as a way to have an honest conversation about whether our current interventions are having a meaningful biological effect, and what adjustments you'd recommend based on that trend. If it's moving in the right direction, it suggests the approach is working. If it's flat or declining, I'd like to understand whether there are upstream factors we haven't yet addressed."
+      </div>
+      <div class="script-note">This framing makes BDNF trajectory the anchor for a data-driven conversation about the protocol — rather than a subjective report of behavioral improvement or decline, which is harder to act on clinically.</div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: PUSHBACK RESPONSES -->
+  <div class="doc-section">
+    <div class="section-title"><span class="section-num">04</span> When your doctor pushes back</div>
+
+    <p class="body-text">Conventional pediatricians and neurologists may be unfamiliar with functional medicine panels, skeptical of systems biology frameworks, or restricted by what their practice can order and supervise. The following responses are for the most common forms of resistance. The goal is never to argue — it is to find the path that moves your child's care forward even within the constraints of the encounter.</p>
+
+    <div class="pushback-grid">
+
+      <div class="pushback-card">
+        <div class="pushback-scenario">"These tests aren't evidence-based / aren't standard of care"</div>
+        <div class="pushback-body">
+          <span class="pushback-label">Acknowledge, then redirect</span>
+          <p class="pushback-response">"I understand these aren't standard diagnostic tests for autism. What I'm hoping to do is get a clearer biological picture of what might be contributing to my child's specific symptoms — not to diagnose autism differently, but to understand what's going on underneath. If you're not comfortable ordering the specialty panels, would you be willing to run the standard lab equivalent — CBC, CMP, hsCRP, IGF-1, DHEA-S, and RBC heavy metals? Those are standard tests that I think could give us useful directional information even if they're less specific."</p>
+        </div>
+      </div>
+
+      <div class="pushback-card">
+        <div class="pushback-scenario">"I can't order that test / our lab doesn't run that"</div>
+        <div class="pushback-body">
+          <span class="pushback-label">Offer an alternative path</span>
+          <p class="pushback-response">"I completely understand — would you be able to provide a referral letter or a prescription that I can take to the lab directly? Great Plains Laboratory, ZRT, and Diagnostic Solutions all accept physician orders by fax or through their online ordering portal. Alternatively, in our state I may be able to order some of these direct-to-consumer through Ulta Lab Tests — would you be open to reviewing the results with me once I have them?"</p>
+        </div>
+      </div>
+
+      <div class="pushback-card">
+        <div class="pushback-scenario">"These results are all within normal range"</div>
+        <div class="pushback-body">
+          <span class="pushback-label">Distinguish statistical normal from functional optimal</span>
+          <p class="pushback-response">"I appreciate you reviewing those with me. I want to make sure I understand — when you say normal range, are these right in the middle of the reference range, or are some of them toward the low or high end? I've been reading that in functional medicine, the difference between low-normal and mid-range on markers like IGF-1 or vitamin D can be clinically meaningful even when the lab doesn't flag it. I'm not questioning the lab result — I just want to understand where in the range my child falls so we can make the best decision together."</p>
+        </div>
+      </div>
+
+      <div class="pushback-card">
+        <div class="pushback-scenario">"I'm not familiar with this framework / this model"</div>
+        <div class="pushback-body">
+          <span class="pushback-label">Keep it grounded in conventional science</span>
+          <p class="pushback-response">"I completely understand — it's a systems biology framework that integrates a lot of individual research findings rather than being a single established protocol. Each individual piece does have peer-reviewed research behind it — the IDO1 kynurenine pathway, gut-brain axis research, the role of BDNF in learning. I'm not asking you to endorse the full framework. I'm asking whether you'd be comfortable ordering a few of these individual tests based on my child's specific symptoms, so we have more data to work from. You can evaluate each result on its own clinical merits."</p>
+        </div>
+      </div>
+
+      <div class="pushback-card">
+        <div class="pushback-scenario">"We should just focus on behavioral therapy"</div>
+        <div class="pushback-body">
+          <span class="pushback-label">Frame as complementary, not competing</span>
+          <p class="pushback-response">"I'm fully committed to the behavioral therapy program and I'm not suggesting we step back from that at all. What I'm wondering is whether there are biological factors that might be limiting how much benefit my child gets from therapy — things like sleep quality, gut discomfort, or inflammatory load that might make it harder to learn and consolidate new skills. If we can address those alongside the behavioral work, I think we might see better outcomes from both. That's the question I'm hoping the testing can help answer."</p>
+        </div>
+      </div>
+
+      <div class="pushback-card">
+        <div class="pushback-scenario">"I'm worried you'll act on these results without guidance"</div>
+        <div class="pushback-body">
+          <span class="pushback-label">Reassure and invite partnership</span>
+          <p class="pushback-response">"That concern is completely fair and I want to be direct with you: I'm not planning to start any significant interventions without running them by you or another qualified practitioner first. What I'm looking for is a clinical partner who is willing to look at this data with me and help me think through what it means. I would rather do this with your involvement than without it. I'm asking for your help, not your rubber stamp."</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SECTION 5: FINDING A PRACTITIONER -->
+  <div class="doc-section">
+    <div class="section-title"><span class="section-num">05</span> Finding a practitioner who will engage</div>
+
+    <p class="body-text">If your current primary care or neurology team is not open to functional testing after a good-faith conversation, the most practical path forward is to add a functional or integrative medicine practitioner to your child's care team rather than replacing the existing one. The following practitioner types are specifically trained in biomedical ASD evaluation and functional panels.</p>
+
+    <div class="provider-grid">
+
+      <div class="provider-card">
+        <div class="provider-title">MAPS Physician</div>
+        <p>Medical Academy of Pediatric Special Needs — physicians specifically trained in biomedical evaluation and treatment of autism. This is the most directly relevant credential for the testing described in this suite.</p>
+        <p style="margin-top:8px;"><a href="https://medmaps.org" target="_blank" rel="noopener noreferrer">medmaps.org — searchable directory</a></p>
+      </div>
+
+      <div class="provider-card">
+        <div class="provider-title">Integrative / Functional Medicine MD</div>
+        <p>IFMCP-certified practitioners are trained in functional lab interpretation and root-cause approaches. Comfortable ordering OAT, GI-MAP, cytokines, and specialty cortisol panels routinely.</p>
+        <p style="margin-top:8px;"><a href="https://www.ifm.org/find-a-practitioner/" target="_blank" rel="noopener noreferrer">ifm.org — find a practitioner</a></p>
+      </div>
+
+      <div class="provider-card">
+        <div class="provider-title">Naturopathic Physician (ND)</div>
+        <p>Licensed NDs in most US states can order the full range of specialty functional labs and interpret them in a systems biology context. Verify licensing in your state — scope of practice varies.</p>
+        <p style="margin-top:8px;"><a href="https://www.naturopathic.org" target="_blank" rel="noopener noreferrer">naturopathic.org — state licensing info</a></p>
+      </div>
+
+      <div class="provider-card">
+        <div class="provider-title">Direct-to-Consumer Labs</div>
+        <p>In most states, standard labs (CBC, CMP, hsCRP, IGF-1, DHEA-S, Vitamin D, RBC metals, BDNF) can be ordered without a physician through Ulta Lab Tests or Any Lab Test Now. Results reviewed with a practitioner afterward.</p>
+        <p style="margin-top:8px;"><a href="https://www.ultalabtests.com" target="_blank" rel="noopener noreferrer">ultalabtests.com</a></p>
+      </div>
+
+    </div>
+
+    <div class="callout green" style="margin-top:18px;">
+      <h4>A note on cost and sequencing</h4>
+      <p>A one-time consultation with a MAPS or functional medicine physician to order and interpret the testing suite is often more cost-effective than attempting to navigate specialty lab ordering through a reluctant primary care provider. Many functional practitioners offer telehealth consultations, which significantly expands geographic access. The standard labs in Section 3 of Document 07 can be ordered through a DTC service and reviewed at a functional consult for context, before committing to the full specialty panel expense.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 6: NEXT STEPS -->
+  <div class="doc-section">
+    <div class="section-title"><span class="section-num">06</span> Where to go next</div>
+    <div class="nav-strip">
+      <p class="nav-strip-title">Complete the testing suite</p>
+      <div class="nav-grid">
+        <a class="nav-card" href="07_Testing_Strategy_Biology_of_Autism.html">
+          <div class="nav-card-doc">Document 07</div>
+          <div class="nav-card-title">Where to Start: Testing</div>
+          <div class="nav-card-desc">Symptom-driven triage — which channels apply to your child and which tests to prioritize.</div>
+          <div class="nav-card-arrow">← Back to entry point</div>
+        </a>
+        <a class="nav-card" href="07B_Test_Reference_Biology_of_Autism.html">
+          <div class="nav-card-doc">Document 07B</div>
+          <div class="nav-card-title">Complete Test Reference</div>
+          <div class="nav-card-desc">Full specifications for every test — what it measures, where to order it, and how it's prioritized.</div>
+          <div class="nav-card-arrow">← Look up a test</div>
+        </a>
+        <a class="nav-card" href="07C_Interpreting_Results_Biology_of_Autism.html">
+          <div class="nav-card-doc">Document 07C</div>
+          <div class="nav-card-title">Interpreting Your Results</div>
+          <div class="nav-card-desc">What each abnormal finding means and how it changes the intervention sequence.</div>
+          <div class="nav-card-arrow">← Read your results</div>
+        </a>
+        <a class="nav-card" href="08_Intervention_Logic_Biology_of_Autism.html">
+          <div class="nav-card-doc">Document 08</div>
+          <div class="nav-card-title">Intervention Logic</div>
+          <div class="nav-card-desc">Protocol layer sequencing and supplement mechanisms — the next step after results and conversation.</div>
+          <div class="nav-card-arrow">Move to interventions →</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<aside class="framework-notice" id="framework-disclaimer" role="note">
+  <div class="framework-notice-inner">
+    <div class="notice-icon">i</div>
+    <p class="notice-text"><strong>Theoretical framework — not clinical guidance.</strong> The Biology of Autism model presented here is a systems-biology framework that integrates peer-reviewed findings across immunology, metabolism, gut biology, stress signaling, and neuroscience into a proposed mechanistic map. Individual components are supported by published research; the full integrated model has not been validated as a unified clinical standard. It is intended as a research-informed framework for discussion with qualified healthcare professionals — not a diagnostic tool or treatment protocol. All testing and intervention decisions require clinical oversight.</p>
+  </div>
+</aside>
+
+<footer class="site-footer">
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">Decoding Autism Now</p>
+        <h2 class="footer-title">Biology of Autism — Talking to Your Doctor</h2>
+        <p class="footer-tagline">Scripts for requesting tests, presenting results, navigating pushback, and building a productive clinical partnership around your child's biology.</p>
+      </div>
+      <div class="footer-actions">
+        <div class="footer-links">
+          <a class="footer-link" href="index.html">Home</a>
+          <a class="footer-link" href="07_Testing_Strategy_Biology_of_Autism.html">Testing</a>
+          <a class="footer-link" href="07B_Test_Reference_Biology_of_Autism.html">Test Reference</a>
+          <a class="footer-link" href="07C_Interpreting_Results_Biology_of_Autism.html">Interpret Results</a>
+          <a class="footer-link" href="08_Intervention_Logic_Biology_of_Autism.html">Interventions</a>
+          <a class="footer-link" href="10_Evidence_and_Citations_Biology_of_Autism.html">Evidence</a>
+          <a class="footer-link" href="https://www.youtube.com/@DecodingAutismNow" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+        <p class="footer-disclaimer">This content is for informational purposes only and should not be considered medical advice, diagnosis, or treatment. Always consult with a healthcare professional before making any changes to your health routines or treatment regimen.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-meta">Biology of Autism — Talking to Your Doctor | Decoding Autism Now</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* Sticky nav locked visible to match Page 07 shell */
+</script>
+</body>
+</html>
