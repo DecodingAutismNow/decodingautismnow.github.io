@@ -378,7 +378,7 @@
     .footer-link { font-size:.88rem; padding:8px 13px; }
   }
   @media (max-width:760px) {
-    .topbar-inner { align-items:flex-start; flex-direction:column; }
+    .topbar-inner {   }
     .sticky-docnav-inner { padding:7px 16px; gap:4px; }
     .sdn-pill { font-size:9px; padding:4px 8px; }
   }
@@ -406,6 +406,38 @@
   letter-spacing:.22em;
 }
 
+
+/* ── MOBILE NAV FIX ── */
+@media (max-width: 720px) {
+  /* Keep topbar as single row — hide HOME button instead of stacking */
+  .topbar-inner {
+    flex-direction: row !important;
+    align-items: center !important;
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+  .topbar-title {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+    min-width: 0;
+  }
+  /* HOME button is redundant — Home Hub pill covers it */
+  .topbar-home { display: none !important; }
+  /* Nav pills scroll horizontally — no wrapping rows */
+  .sticky-docnav-inner {
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 8px 16px;
+    gap: 6px;
+  }
+  .sticky-docnav-inner::-webkit-scrollbar { display: none; }
+  .sdn-pill, .pill { font-size: 9px !important; padding: 5px 10px !important; }
+}
 </style>
 </head>
 <body>
