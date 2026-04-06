@@ -690,9 +690,15 @@ main{
   .branch-body{padding:14px 16px 16px 16px}
 }
 
+/* sticky-docnav alias — HTML uses this class name */
+.sticky-docnav { position:fixed; top:56px; left:0; right:0; z-index:999;
+  background:rgba(255,255,255,.98); backdrop-filter:blur(8px);
+  border-bottom:1px solid #d8cfc4; box-shadow:0 2px 10px rgba(15,35,66,.06); }
+.sticky-docnav-inner { max-width:960px; margin:0 auto; padding:8px 20px;
+  display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+
 /* ── MOBILE NAV FIX ── */
 @media (max-width: 720px) {
-  /* Keep topbar as single row — hide HOME button instead of stacking */
   .topbar-inner {
     flex-direction: row !important;
     align-items: center !important;
@@ -707,10 +713,8 @@ main{
     flex: 1;
     min-width: 0;
   }
-  /* HOME button is redundant — Home Hub pill covers it */
   .topbar-home { display: none !important; }
-  /* Nav pills scroll horizontally — no wrapping rows */
-  .sticky-docnav-inner {
+  .sticky-docnav-inner, .sticky-nav-inner {
     flex-wrap: nowrap !important;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -718,7 +722,8 @@ main{
     padding: 8px 16px;
     gap: 6px;
   }
-  .sticky-docnav-inner::-webkit-scrollbar { display: none; }
+  .sticky-docnav-inner::-webkit-scrollbar,
+  .sticky-nav-inner::-webkit-scrollbar { display: none; }
   .sdn-pill, .pill { font-size: 9px !important; padding: 5px 10px !important; }
 }
 </style>
