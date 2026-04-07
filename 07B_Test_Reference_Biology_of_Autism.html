@@ -128,7 +128,7 @@
       box-shadow: 0 2px 12px rgba(15,35,66,0.08);
     }
     .sticky-nav-inner {
-      max-width: 960px;
+      max-width: 1080px;
       margin: 0 auto;
       padding: 8px 20px;
       display: flex;
@@ -699,13 +699,6 @@
       .footer-inner { padding: 36px 20px 30px; }
     }
   
-/* sticky-docnav alias — HTML uses this class name */
-.sticky-docnav { position:fixed; top:56px; left:0; right:0; z-index:999;
-  background:rgba(255,255,255,.98); backdrop-filter:blur(8px);
-  border-bottom:1px solid #d8cfc4; box-shadow:0 2px 10px rgba(15,35,66,.06); }
-.sticky-docnav-inner { max-width:960px; margin:0 auto; padding:8px 20px;
-  display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
-
 /* ── MOBILE NAV FIX ── */
 @media (max-width: 720px) {
   .topbar-inner {
@@ -735,6 +728,11 @@
   .sticky-nav-inner::-webkit-scrollbar { display: none; }
   .sdn-pill, .pill { font-size: 9px !important; padding: 5px 10px !important; }
 }
+
+/* sticky-docnav outer wrapper */
+.sticky-docnav { position:fixed; top:57px; left:0; right:0; z-index:999;
+  background:rgba(255,255,255,0.98); backdrop-filter:blur(8px);
+  border-bottom:1px solid #d8cfc4; box-shadow:0 2px 10px rgba(15,35,66,0.06); }
 </style>
 </head>
 <body>
@@ -768,8 +766,11 @@
     <a class="sdn-pill navy" href="11_Vaccine_Question_Biology_of_Autism.html">Vaccine Question</a>
     <a class="sdn-pill navy" href="12_Parents_Guide_Biology_of_Autism.html">Parents</a>
     <a class="sdn-pill navy" href="13_Clinician_Guide_Biology_of_Autism.html">Clinician</a>
+    <a class="sdn-pill navy" href="14_Immunoglobulin_Therapy_Biology_of_Autism.html">Immunoglobulin</a>
   </div>
 </div>
+
+
 
   <div class="site-header">
     <div class="header-stripe"></div>

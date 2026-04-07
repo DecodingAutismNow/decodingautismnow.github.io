@@ -515,8 +515,8 @@ body {
 
 @media (max-width: 760px) {
   .topbar-inner {
-    
-    
+    align-items: flex-start;
+    flex-direction: column;
   }
   .sticky-docnav-inner {
     padding: 7px 16px;
@@ -542,38 +542,6 @@ body {
 @keyframes fadeUp { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
 .ev-legend, .section-hdr, .protocol-table, .parent-grid { animation: fadeUp 0.4s ease both; }
 
-
-/* ── MOBILE NAV FIX ── */
-@media (max-width: 720px) {
-  /* Keep topbar as single row — hide HOME button instead of stacking */
-  .topbar-inner {
-    flex-direction: row !important;
-    align-items: center !important;
-    flex-wrap: nowrap;
-    gap: 8px;
-  }
-  .topbar-title {
-    font-size: 12px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    flex: 1;
-    min-width: 0;
-  }
-  /* HOME button is redundant — Home Hub pill covers it */
-  .topbar-home { display: none !important; }
-  /* Nav pills scroll horizontally — no wrapping rows */
-  .sticky-docnav-inner {
-    flex-wrap: nowrap !important;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding: 8px 16px;
-    gap: 6px;
-  }
-  .sticky-docnav-inner::-webkit-scrollbar { display: none; }
-  .sdn-pill, .pill { font-size: 9px !important; padding: 5px 10px !important; }
-}
 </style>
 <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EH3TWPN49H"></script>
@@ -702,6 +670,41 @@ body {
       </tr>
     </thead>
     <tbody>
+
+      <!-- UPSTREAM IMMUNE MODULATION — IVIG / IMIG -->
+      <tr>
+        <td><span class="node-tag nt-trigger">Upstream Immune /<br>Neuroinflammation</span></td>
+        <td>
+          <div class="compound">IVIG / IMIG</div>
+          <div class="compound-sub">Intravenous / Intramuscular Immunoglobulin</div>
+        </td>
+        <td class="mech">
+          <strong>The furthest upstream intervention in this framework.</strong> Pooled human IgG
+          suppresses IFN-&#947;, TNF-&#945;, and IL-6 — the cytokines that drive IDO1 upregulation —
+          before the kynurenine pathway is activated. Addresses the inflammatory driver rather than
+          its downstream consequences. Meta-analysis of 27 IVIG studies in ASD (Rossignol &amp; Frye,
+          2021) demonstrated large effect sizes for irritability (d&#700;=0.87) and total aberrant
+          behaviour (d&#700;=0.80). First published IMIG case report in ASD (Fourie &amp; Armstrong,
+          2024) showed positive parental-rated outcomes in 6 of 7 children with level 2 ASD.<br><br>
+          <em>See <a href="14_Immunoglobulin_Therapy_Biology_of_Autism.html"
+          style="color:var(--teal);font-weight:600;">Biology of Autism — Immunoglobulin Therapy</a>
+          for the full mechanistic argument, IVIG vs IMIG pharmacokinetics, and trial context.</em>
+        </td>
+        <td class="dose">
+          <strong>IVIG:</strong> 0.4&ndash;2 g/kg IV; requires infusion centre, medical supervision.
+          High cost limits access.<br><br>
+          <strong>IMIG:</strong> 0.2 mL/kg IM monthly (Fourie protocol, 16% IgG); outpatient
+          administration. Materials cost approximately $50 per treatment (NBI Intragam, South Africa — repricing from prior below-cost supply; comparable global product Beriglobin at $80 per dose). A fraction of IVIG cost at $10,000–$25,000 per infusion.<br><br>
+          <div class="dose-advisory"><strong>&#9888; Specialist Oversight Required:</strong>
+          Immunoglobulin therapy requires immune workup (IgG subclasses, cytokine panel,
+          autoantibody screen) before initiation. Not appropriate without documented immune
+          dysregulation and specialist involvement. IMIG use in ASD is investigational —
+          not approved for this indication.</div>
+        </td>
+        <td><span class="ev-badge ev-human">Human Case Series</span><br><br>
+            <span class="ev-badge ev-rct">Meta-Analysis (IVIG)</span></td>
+      </tr>
+
 
       <!-- FUNCTIONAL NAD+ INSUFFICIENCY / SIRT1 RESTORATION -->
       <tr>

@@ -263,48 +263,16 @@ body {
   .footer-disclaimer { margin-left:0; text-align:left; }
 }
 @media (max-width: 720px) {
-  .topbar-inner {   }
+  .topbar-inner { align-items:flex-start; flex-direction:column; }
   .sticky-docnav-inner { padding:7px 16px; gap:4px; }
   .sdn-pill { font-size:9px; padding:4px 8px; }
   .site-header { margin-top:126px; }
   .header-inner { padding:58px 20px 30px; }
   .notice-bar { grid-template-columns:1fr; }
 }
-
-/* ── MOBILE NAV FIX ── */
-@media (max-width: 720px) {
-  /* Keep topbar as single row — hide HOME button instead of stacking */
-  .topbar-inner {
-    flex-direction: row !important;
-    align-items: center !important;
-    flex-wrap: nowrap;
-    gap: 8px;
-  }
-  .topbar-title {
-    font-size: 12px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    flex: 1;
-    min-width: 0;
-  }
-  /* HOME button is redundant — Home Hub pill covers it */
-  .topbar-home { display: none !important; }
-  /* Nav pills scroll horizontally — no wrapping rows */
-  .sticky-docnav-inner {
-    flex-wrap: nowrap !important;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding: 8px 16px;
-    gap: 6px;
-  }
-  .sticky-docnav-inner::-webkit-scrollbar { display: none; }
-  .sdn-pill, .pill { font-size: 9px !important; padding: 5px 10px !important; }
-}
 </style>
   <meta property="og:title" content="Biology of Autism — The Evidence | Decoding Autism Now">
-  <meta property="og:description" content="Over 70 peer-reviewed references supporting the ASD cascade framework, organized by cascade level.">
+  <meta property="og:description" content="Over 76 peer-reviewed references supporting the ASD cascade framework, organized by cascade level.">
   <meta property="og:image" content="https://decodingautismnow.com/images/OG-10.png">
   <meta name="twitter:image" content="https://decodingautismnow.com/images/OG-10.png">
 <!-- Google tag (gtag.js) -->
@@ -342,6 +310,7 @@ body {
     <a class="sdn-pill gold" href="07D_Talking_to_Your_Doctor_Biology_of_Autism.html">Talk to Dr</a>
     <a class="sdn-pill gold" href="07R_Regressive_Autism_Testing_Biology_of_Autism.html">Regression</a>
     <a class="sdn-pill gold" href="08_Intervention_Logic_Biology_of_Autism.html">Interventions</a>
+    <a class="sdn-pill navy" href="14_Immunoglobulin_Therapy_Biology_of_Autism.html">Immunoglobulin</a>
     <a class="sdn-pill navy" href="09_FAQ_Biology_of_Autism.html">FAQ</a>
     <a class="sdn-pill navy active" href="10_Evidence_and_Citations_Biology_of_Autism.html">Evidence</a>
     <a class="sdn-pill navy" href="11_Vaccine_Question_Biology_of_Autism.html">Vaccine Question</a>
@@ -355,7 +324,7 @@ body {
   <div class="header-inner">
     <div class="header-eyebrow">Decoding Autism Now</div>
     <h1 class="hero-title">Biology of Autism —<span class="accent-line">The Evidence</span></h1>
-    <p class="header-sub">Over 70 peer-reviewed references supporting the ASD cascade framework, organized by cascade level. All citations verified and hyperlinked to PubMed or PMC.</p>
+    <p class="header-sub">Over 76 peer-reviewed references supporting the ASD cascade framework, organized by cascade level. All citations verified and hyperlinked to PubMed or PMC.</p>
     <div class="header-pills">
       <span class="pill">8 cascade levels</span>
       <span class="pill">All links verified</span>
@@ -390,7 +359,7 @@ body {
 <div class="toc-wrap">
   <div class="toc">
     <div class="toc-title">Jump to section</div>
-    <div class="toc-grid"><a class="toc-link" href="#sec0" style="color:#7B1FA2;border-color:#7B1FA2;background:rgba(0,0,0,0.02)">CASCADE LEVEL 1A</a><a class="toc-link" href="#sec1" style="color:#1B5E20;border-color:#1B5E20;background:rgba(0,0,0,0.02)">CASCADE LEVEL 1B</a><a class="toc-link" href="#sec2" style="color:#E65100;border-color:#E65100;background:rgba(0,0,0,0.02)">CASCADE LEVEL 1C</a><a class="toc-link" href="#sec3" style="color:#4E342E;border-color:#4E342E;background:rgba(0,0,0,0.02)">CASCADE LEVEL 1D</a><a class="toc-link" href="#sec4" style="color:#1565C0;border-color:#1565C0;background:rgba(0,0,0,0.02)">CASCADE LEVEL 2</a><a class="toc-link" href="#sec5" style="color:#4A235A;border-color:#4A235A;background:rgba(0,0,0,0.02)">CASCADE LEVEL 2B</a><a class="toc-link" href="#sec6" style="color:#1A5C40;border-color:#1A5C40;background:rgba(0,0,0,0.02)">CASCADE LEVEL 2C</a><a class="toc-link" href="#sec7" style="color:#1A3A5C;border-color:#1A3A5C;background:rgba(0,0,0,0.02)">CASCADE LEVEL 3</a><a class="toc-link" href="#sec8" style="color:#B71C1C;border-color:#B71C1C;background:rgba(0,0,0,0.02)">CASCADE LEVEL 4</a><a class="toc-link" href="#sec9" style="color:#1B5E20;border-color:#1B5E20;background:rgba(0,0,0,0.02)">CASCADE LEVEL 5</a><a class="toc-link" href="#sec10" style="color:#006064;border-color:#006064;background:rgba(0,0,0,0.02)">CASCADE LEVEL 6</a><a class="toc-link" href="#sec11" style="color:#37474F;border-color:#37474F;background:rgba(0,0,0,0.02)">THERAPEUTIC NODE CITATIONS</a><a class="toc-link" href="#sec12" style="color:#8B5A00;border-color:#8B5A00;background:rgba(0,0,0,0.02)">VACCINE QUESTION — REGRESSION BIOLOGY</a></div>
+    <div class="toc-grid"><a class="toc-link" href="#sec0" style="color:#7B1FA2;border-color:#7B1FA2;background:rgba(0,0,0,0.02)">CASCADE LEVEL 1A</a><a class="toc-link" href="#sec1" style="color:#1B5E20;border-color:#1B5E20;background:rgba(0,0,0,0.02)">CASCADE LEVEL 1B</a><a class="toc-link" href="#sec2" style="color:#E65100;border-color:#E65100;background:rgba(0,0,0,0.02)">CASCADE LEVEL 1C</a><a class="toc-link" href="#sec3" style="color:#4E342E;border-color:#4E342E;background:rgba(0,0,0,0.02)">CASCADE LEVEL 1D</a><a class="toc-link" href="#sec4" style="color:#1565C0;border-color:#1565C0;background:rgba(0,0,0,0.02)">CASCADE LEVEL 2</a><a class="toc-link" href="#sec5" style="color:#4A235A;border-color:#4A235A;background:rgba(0,0,0,0.02)">CASCADE LEVEL 2B</a><a class="toc-link" href="#sec6" style="color:#1A5C40;border-color:#1A5C40;background:rgba(0,0,0,0.02)">CASCADE LEVEL 2C</a><a class="toc-link" href="#sec7" style="color:#1A3A5C;border-color:#1A3A5C;background:rgba(0,0,0,0.02)">CASCADE LEVEL 3</a><a class="toc-link" href="#sec8" style="color:#B71C1C;border-color:#B71C1C;background:rgba(0,0,0,0.02)">CASCADE LEVEL 4</a><a class="toc-link" href="#sec9" style="color:#1B5E20;border-color:#1B5E20;background:rgba(0,0,0,0.02)">CASCADE LEVEL 5</a><a class="toc-link" href="#sec10" style="color:#006064;border-color:#006064;background:rgba(0,0,0,0.02)">CASCADE LEVEL 6</a><a class="toc-link" href="#sec11" style="color:#37474F;border-color:#37474F;background:rgba(0,0,0,0.02)">THERAPEUTIC NODE CITATIONS</a><a class="toc-link" href="#sec12" style="color:#8B5A00;border-color:#8B5A00;background:rgba(0,0,0,0.02)">VACCINE QUESTION — REGRESSION BIOLOGY</a><a class="toc-link" href="#sec13" style="color:#0D47A1;border-color:#0D47A1;background:rgba(0,0,0,0.02)">IMMUNOGLOBULIN THERAPY</a></div>
   </div>
 
 <main class="main">
@@ -1446,6 +1415,95 @@ body {
 
     </div>
   </section>
+        <section class="cascade-section" id="sec13" style="--section-color:#0D47A1">
+      <div class="section-header" style="background:#0D47A1">
+        <span class="section-count">6 citations</span>
+        <h2>IMMUNOGLOBULIN THERAPY — IVIG &amp; IMIG IN ASD</h2>
+      </div>
+      <div class="section-body">
+        <p class="section-intro">These citations support Document 14: Biology of Autism — Immunoglobulin Therapy. They cover the systematic evidence base for IVIG in ASD, IgG abnormalities in ASD subgroups, the first published IMIG case report, and the key discontinuation studies establishing that sustained immunomodulation is required for durable benefit.</p>
+        <div class="cit-grid">
+
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">IG-1</span>
+            <div class="cit-ref">[IG-1]  Rossignol DA, Frye RE. A Systematic Review and Meta-Analysis of Immunoglobulin G Abnormalities and the Therapeutic Use of Intravenous Immunoglobulins (IVIG) in Autism Spectrum Disorder. J Pers Med. 2021;11(6):488.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">DOI</span><span class="value"><a href="https://doi.org/10.3390/jpm11060488" target="_blank" rel="noopener" class="pubmed-link">🔗 https://doi.org/10.3390/jpm11060488</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Upstream immune modulation — IVIG therapeutic evidence base</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">Systematic review of 27 IVIG publications in ASD. Meta-analysis demonstrated large effect sizes for total aberrant behaviour (d′=0.80) and irritability (d′=0.87), and medium effect sizes for hyperactivity and social withdrawal. IgG abnormalities identified in subsets: depressed total IgG correlated with behavioural severity; elevated IgG4 correlated with social impairment.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#0D47A1;color:#FFFFFF">Systematic review &amp; meta-analysis</span></span></div>
+          </div>
+        </div>
+
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">IG-2</span>
+            <div class="cit-ref">[IG-2]  Fourie PR, Armstrong JC. Intramuscular Immunoglobulins as a Therapeutic Modality for Neural Inflammation in patients with ASD and PANS: A Combined Case Report. Medical Research Archives. 2024;12(9).</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">DOI</span><span class="value"><a href="https://doi.org/10.18103/mra.v12i9.5984" target="_blank" rel="noopener" class="pubmed-link">🔗 https://doi.org/10.18103/mra.v12i9.5984</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Upstream immune modulation — first published IMIG case report in ASD and PANS</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">First published case report of intramuscular immunoglobulin (IMIG) in ASD and PANS. Seven level 2 ASD children treated monthly with NBI Intragam (16% IgG, 0.2 mL/kg): 6/7 scored above zero, mean improvement +2.9/5. Five PANS children: all scored above zero, mean +4.4/5. IMIG proposed as cost-effective alternative to IVIG for neuroinflammation management.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#1565C0;color:#FFFFFF">Published case report</span></span></div>
+          </div>
+        </div>
+
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">IG-3</span>
+            <div class="cit-ref">[IG-3]  Boris M, Goldblatt A, Edelson SM. Improvement in children with autism treated with intravenous gamma globulin. J Nutr Environ Med. 2005;15(4):169–176.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">Node</span><span class="value">Upstream immune modulation — IVIG discontinuation / sustained treatment requirement</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">26 children with ASD and neurodevelopmental regression treated with IVIG 0.4 g/kg monthly for 6 months. Significant improvements in all ABC subscales. 22/26 (85%) lost some improvements when IVIG was stopped — establishing that sustained immunomodulation, not a completed course, is required for durable benefit.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#37474F;color:#FFFFFF">Retrospective case series</span></span></div>
+          </div>
+        </div>
+
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">IG-4</span>
+            <div class="cit-ref">[IG-4]  Maltsev DV, Yevtushenko SK. High-Dose Intravenous Immunoglobulin Therapy Efficiency in Children with Autism Spectrum Disorders Associated with Genetic Deficiency of Folate Cycle Enzymes. Int Neurol J. 2016;2:35–48.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">Node</span><span class="value">Upstream immune modulation — IVIG outcomes and discontinuation</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">78 ASD children treated with IVIG 2 g/kg monthly for 6 months. Complete elimination of ASD phenotype in 27%, marked improvement in 42%, mild-to-moderate improvement in 29%. Of those with mild-to-moderate improvement, 50% lost gains 2–4 months after completing therapy. Corroborates the discontinuation pattern across multiple studies.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#37474F;color:#FFFFFF">Retrospective controlled</span></span></div>
+          </div>
+        </div>
+
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">IG-5</span>
+            <div class="cit-ref">[IG-5]  Melamed IR, Heffron M, Testori A, Lipe K. A pilot study of high-dose intravenous immunoglobulin 5% for autism: Impact on autism spectrum and markers of neuroinflammation. Autism Res. 2018;11(3):421–433.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/29316328/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/29316328/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Upstream immune modulation — IVIG + cytokine reduction</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">14 ASD children with immune abnormalities treated with IVIG 1 g/kg for 10 doses. Significant improvements on CGI, SRS, and ABC hyperactivity subscale. Significant decreases in TNF-α induced by TLR ligands — directly confirming that IVIG suppresses the upstream cytokines driving IDO1 activation in the cascade model.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#1565C0;color:#FFFFFF">Prospective uncontrolled</span></span></div>
+          </div>
+        </div>
+
+        <div class="cit-card">
+          <div class="cit-header">
+            <span class="cit-id">IG-6</span>
+            <div class="cit-ref">[IG-6]  Connery K, Tippett M, Delhey LM, et al. Intravenous immunoglobulin for the treatment of autoimmune encephalopathy in children with autism. Transl Psychiatry. 2018;8(1):148.</div>
+          </div>
+          <div class="cit-meta">
+            <div class="cit-row"><span class="label">PubMed</span><span class="value"><a href="https://pubmed.ncbi.nlm.nih.gov/30108200/" target="_blank" rel="noopener" class="pubmed-link">🔗 https://pubmed.ncbi.nlm.nih.gov/30108200/</a></span></div>
+            <div class="cit-row"><span class="label">Node</span><span class="value">Upstream immune modulation — IVIG in autoimmune encephalopathy / ASD</span></div>
+            <div class="cit-row"><span class="label">Claim</span><span class="value">31 ASD children with autoimmune encephalopathy (confirmed by brain autoantibodies) treated with IVIG 0.75–2 g/kg every 2–6 weeks, 77% for more than one year. Significant improvements on SRS and ABC total scores. Anti-Dopamine D2L and anti-tubulin antibodies (Cunningham panel) predicted response — establishing a biomarker pathway for patient selection.</span></div>
+            <div class="cit-row"><span class="label">Evidence</span><span class="value"><span class="badge" style="background:#37474F;color:#FFFFFF">Retrospective case series</span></span></div>
+          </div>
+        </div>
+
+        </div><!-- cit-grid -->
+      </div><!-- section-body -->
+    </section>
+
 </div>
 </main>
 

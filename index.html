@@ -131,7 +131,7 @@
     transform: translateY(0);
   }
   .sticky-docnav-inner {
-    max-width: 960px;
+    max-width: 1080px;
     margin: 0 auto;
     padding: 10px 20px;
     display: flex;
@@ -509,7 +509,6 @@
 
 /* ── MOBILE NAV FIX ── */
 @media (max-width: 720px) {
-  /* Keep topbar as single row — hide HOME button instead of stacking */
   .topbar-inner {
     flex-direction: row !important;
     align-items: center !important;
@@ -524,10 +523,8 @@
     flex: 1;
     min-width: 0;
   }
-  /* HOME button is redundant — Home Hub pill covers it */
   .topbar-home { display: none !important; }
-  /* Nav pills scroll horizontally — no wrapping rows */
-  .sticky-docnav-inner {
+  .sticky-docnav-inner, .sticky-nav-inner {
     flex-wrap: nowrap !important;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -535,7 +532,8 @@
     padding: 8px 16px;
     gap: 6px;
   }
-  .sticky-docnav-inner::-webkit-scrollbar { display: none; }
+  .sticky-docnav-inner::-webkit-scrollbar,
+  .sticky-nav-inner::-webkit-scrollbar { display: none; }
   .sdn-pill, .pill { font-size: 9px !important; padding: 5px 10px !important; }
 }
 </style>
@@ -554,18 +552,28 @@
 
 <div class="sticky-docnav" id="stickyDocNav">
   <div class="sticky-docnav-inner">
-    <a class="teal" href="#start-here">Start Here</a>
-    <a class="teal" href="01_Molecular_Origins_Biology_of_Autism.html">Molecular Origins</a>
-    <a class="teal" href="#core-model">Core Model</a>
-    <a class="navy" href="#next-layers">Next Layers</a>
-    <a class="teal" href="02_Cascade_Map_Biology_of_Autism.html">Cascade Map</a>
-    <a class="gold" href="06_Metabolic_Pathways_Explained_Biology_of_Autism.html">Pathways</a>
-    <a class="gold" href="08_Intervention_Logic_Biology_of_Autism.html">Intervention Logic</a>
-    <a class="navy" href="10_Evidence_and_Citations_Biology_of_Autism.html">Evidence</a>
-    <a class="ghost" href="12_Parents_Guide_Biology_of_Autism.html">Parents</a>
-    <a class="ghost" href="13_Clinician_Guide_Biology_of_Autism.html">Clinicians</a>
+    <a class="sdn-pill teal active" href="index.html">Home Hub</a>
+    <a class="sdn-pill teal" href="01_Molecular_Origins_Biology_of_Autism.html">Start Here</a>
+    <a class="sdn-pill teal" href="02_Cascade_Map_Biology_of_Autism.html">Cascade Map</a>
+    <a class="sdn-pill teal" href="03_Cascade_Explained_Biology_of_Autism.html">Cascade Explained</a>
+    <a class="sdn-pill gold" href="05_Metabolic_Pathways_Map_Biology_of_Autism.html">Pathways Map</a>
+    <a class="sdn-pill gold" href="06_Metabolic_Pathways_Explained_Biology_of_Autism.html">Pathways Explained</a>
+    <a class="sdn-pill gold" href="07_Testing_Strategy_Biology_of_Autism.html">Testing</a>
+    <a class="sdn-pill gold" href="07B_Test_Reference_Biology_of_Autism.html">Test Ref</a>
+    <a class="sdn-pill gold" href="07C_Interpreting_Results_Biology_of_Autism.html">Interpret</a>
+    <a class="sdn-pill gold" href="07D_Talking_to_Your_Doctor_Biology_of_Autism.html">Talk to Dr</a>
+    <a class="sdn-pill gold" href="07R_Regressive_Autism_Testing_Biology_of_Autism.html">Regression</a>
+    <a class="sdn-pill gold" href="08_Intervention_Logic_Biology_of_Autism.html">Interventions</a>
+    <a class="sdn-pill navy" href="09_FAQ_Biology_of_Autism.html">FAQ</a>
+    <a class="sdn-pill navy" href="10_Evidence_and_Citations_Biology_of_Autism.html">Evidence</a>
+    <a class="sdn-pill navy" href="11_Vaccine_Question_Biology_of_Autism.html">Vaccine Question</a>
+    <a class="sdn-pill navy" href="12_Parents_Guide_Biology_of_Autism.html">Parents</a>
+    <a class="sdn-pill navy" href="13_Clinician_Guide_Biology_of_Autism.html">Clinician</a>
+    <a class="sdn-pill navy" href="14_Immunoglobulin_Therapy_Biology_of_Autism.html">Immunoglobulin</a>
   </div>
 </div>
+
+
 
 <header class="site-header">
   <div class="header-stripe"></div>

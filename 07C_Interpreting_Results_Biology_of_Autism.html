@@ -252,7 +252,6 @@ html body .sticky-docnav.is-visible {
 
 /* ── MOBILE NAV FIX ── */
 @media (max-width: 720px) {
-  /* Keep topbar as single row — hide HOME button instead of stacking */
   .topbar-inner {
     flex-direction: row !important;
     align-items: center !important;
@@ -267,10 +266,8 @@ html body .sticky-docnav.is-visible {
     flex: 1;
     min-width: 0;
   }
-  /* HOME button is redundant — Home Hub pill covers it */
   .topbar-home { display: none !important; }
-  /* Nav pills scroll horizontally — no wrapping rows */
-  .sticky-docnav-inner {
+  .sticky-docnav-inner, .sticky-nav-inner {
     flex-wrap: nowrap !important;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -278,7 +275,8 @@ html body .sticky-docnav.is-visible {
     padding: 8px 16px;
     gap: 6px;
   }
-  .sticky-docnav-inner::-webkit-scrollbar { display: none; }
+  .sticky-docnav-inner::-webkit-scrollbar,
+  .sticky-nav-inner::-webkit-scrollbar { display: none; }
   .sdn-pill, .pill { font-size: 9px !important; padding: 5px 10px !important; }
 }
 </style>
@@ -313,8 +311,11 @@ html body .sticky-docnav.is-visible {
     <a class="sdn-pill navy" href="11_Vaccine_Question_Biology_of_Autism.html">Vaccine Question</a>
     <a class="sdn-pill navy" href="12_Parents_Guide_Biology_of_Autism.html">Parents</a>
     <a class="sdn-pill navy" href="13_Clinician_Guide_Biology_of_Autism.html">Clinician</a>
+    <a class="sdn-pill navy" href="14_Immunoglobulin_Therapy_Biology_of_Autism.html">Immunoglobulin</a>
   </div>
 </div>
+
+
 <section class="hero">
   <div class="hero-stripe"></div>
   <div class="hero-inner">
