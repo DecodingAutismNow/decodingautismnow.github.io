@@ -113,57 +113,20 @@ body {
 }
 
 /* ───────── STICKY NAV ───────── */
-.sticky-docnav {
-  position: fixed;
-  top: 57px;
-  left: 0;
-  right: 0;
-  background: rgba(255,255,255,0.98);
-  border-bottom: 1px solid #d8cfc4;
-  box-shadow: 0 2px 10px rgba(15,35,66,0.06);
-  z-index: 999;
-}
-.sticky-docnav-inner {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 8px 20px;
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.sticky-docnav a {
-  display: inline-block;
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  border-radius: 999px;
-  padding: 6px 12px;
-  white-space: nowrap;
-  transition: background 0.15s, opacity 0.15s, transform 0.15s;
-  opacity: 0.92;
-}
-.sticky-docnav a:hover {
-  opacity: 1;
-  transform: translateY(-1px);
-}
-.sticky-docnav a.active {
-  background: #c8923a;
-  color: white;
-  border-color: #c8923a;
-  font-weight: 500;
-  opacity: 1;
-}
 
-.sticky-docnav a.teal { background:#eef8f9; color:#1e6b72; border:1px solid rgba(30,107,114,.22); }
-.sticky-docnav a.gold { background:#fdf6ec; color:#8a5c1a; border:1px solid rgba(200,146,58,.25); }
-.sticky-docnav a.navy { background:#f0f2f6; color:#0f2342; border:1px solid rgba(15,35,66,.18); }
+
+
+
+
+
+
+
+
 .sdn-divider { width:1px; height:14px; background:#d8cfc4; margin:0 3px; align-self:center; flex-shrink:0; }
 
 /* ───────── HERO HEADER ───────── */
 .site-header {
-  margin-top: 155px;
+  margin-top: 140px;
   background: #0f2342;
   color: #fff;
   position: relative;
@@ -513,34 +476,158 @@ body {
   .footer-disclaimer, .footer-meta { margin-left: 0; text-align: left; }
 }
 
-@media (max-width: 760px) {
-  .topbar-inner {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  .sticky-docnav-inner {
-    padding: 7px 16px;
-    gap: 4px;
-  }
-  .sticky-docnav a { font-size: 9px; padding: 4px 8px; }
-  .header-inner,
-  .footer-inner,
-  .framework-notice-inner { padding-left: 20px; padding-right: 20px; }
-  .header-inner { padding-top: 58px; padding-bottom: 30px; }
-}
-  .sticky-docnav-inner {
-    padding: 8px 16px;
-    gap: 8px;
-  }
-  .sticky-docnav a { font-size: 9px; padding: 5px 9px; }
-  .header-inner,
-  .footer-inner,
-  .framework-notice-inner { padding-left: 20px; padding-right: 20px; }
-  .header-inner { padding-top: 82px; padding-bottom: 50px; }
-}
+
 
 @keyframes fadeUp { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
 .ev-legend, .section-hdr, .protocol-table, .parent-grid { animation: fadeUp 0.4s ease both; }
+
+
+/* ── CANONICAL NAV CSS (suite-wide) ── */
+.sticky-docnav {
+  position: fixed;
+  top: 57px; left: 0; right: 0;
+  z-index: 999;
+  background: rgba(255,255,255,0.98);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #d8cfc4;
+  box-shadow: 0 2px 10px rgba(15,35,66,0.06);
+  overflow: hidden;
+}
+.sticky-docnav-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 8px 20px;
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.sdn-pill {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 6px 12px;
+  white-space: nowrap;
+  opacity: 0.92;
+  border: 1px solid transparent;
+  transition: background 0.15s, opacity 0.15s, transform 0.15s;
+}
+.sdn-pill:hover { opacity: 1; transform: translateY(-1px); }
+.sdn-pill.teal  { color:#1e6b72; background:rgba(30,107,114,0.08); border-color:rgba(30,107,114,0.22); }
+.sdn-pill.gold  { color:#8a5c1a; background:rgba(200,146,58,0.08);  border-color:rgba(200,146,58,0.25); }
+.sdn-pill.navy  { color:#0f2342; background:rgba(15,35,66,0.06);    border-color:rgba(15,35,66,0.18); }
+.sdn-pill.teal.active  { background:#1e6b72; color:#fff; border-color:#1e6b72; font-weight:500; opacity:1; }
+.sdn-pill.gold.active  { background:#c8923a; color:#fff; border-color:#c8923a; font-weight:500; opacity:1; }
+.sdn-pill.navy.active  { background:#0f2342; color:#fff; border-color:#0f2342; font-weight:500; opacity:1; }
+@media (max-width: 720px) {
+  .topbar-inner {
+    flex-direction: row !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    gap: 8px;
+  }
+  .topbar-title {
+    font-size: 12px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+  .topbar-home { display: none !important; }
+  .sticky-docnav-inner {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 7px 14px !important;
+    gap: 5px !important;
+  }
+  .sticky-docnav-inner::-webkit-scrollbar { display: none; }
+  .sdn-pill { font-size: 9px !important; padding: 5px 9px !important; }
+}
+
+
+/* ═══════════════════════════════════════════
+   SUITE NAV OVERRIDE — canonical, final rules
+   ═══════════════════════════════════════════ */
+.sticky-docnav,
+.sticky-nav {
+  position: fixed !important;
+  top: 57px !important;
+  left: 0 !important; right: 0 !important;
+  z-index: 999 !important;
+  background: rgba(255,255,255,0.98) !important;
+  backdrop-filter: blur(8px) !important;
+  border-bottom: 1px solid #d8cfc4 !important;
+  box-shadow: 0 2px 10px rgba(15,35,66,0.06) !important;
+  overflow: hidden !important;
+}
+.sticky-docnav-inner,
+.sticky-nav-inner {
+  max-width: 1080px !important;
+  margin: 0 auto !important;
+  padding: 8px 20px !important;
+  display: flex !important;
+  gap: 7px !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  overflow-x: visible !important;
+}
+.sdn-pill, .pill {
+  display: inline-block !important;
+  font-family: 'DM Mono', monospace !important;
+  font-size: 10px !important;
+  letter-spacing: 0.05em !important;
+  text-decoration: none !important;
+  border-radius: 999px !important;
+  padding: 6px 12px !important;
+  white-space: nowrap !important;
+  opacity: 0.92 !important;
+  border: 1px solid transparent !important;
+  transition: background 0.15s, opacity 0.15s, transform 0.15s !important;
+}
+.sdn-pill:hover, .pill:hover { opacity: 1 !important; transform: translateY(-1px) !important; }
+.sdn-pill.teal, .pill.teal  { color:#1e6b72 !important; background:rgba(30,107,114,0.08) !important; border-color:rgba(30,107,114,0.22) !important; }
+.sdn-pill.gold, .pill.gold  { color:#8a5c1a !important; background:rgba(200,146,58,0.08) !important;  border-color:rgba(200,146,58,0.25) !important; }
+.sdn-pill.navy, .pill.navy  { color:#0f2342 !important; background:rgba(15,35,66,0.06) !important;    border-color:rgba(15,35,66,0.18) !important; }
+.sdn-pill.teal.active, .pill.teal.active { background:#1e6b72 !important; color:#fff !important; border-color:#1e6b72 !important; opacity:1 !important; }
+.sdn-pill.gold.active, .pill.gold.active { background:#c8923a !important; color:#fff !important; border-color:#c8923a !important; opacity:1 !important; }
+.sdn-pill.navy.active, .pill.navy.active { background:#0f2342 !important; color:#fff !important; border-color:#0f2342 !important; opacity:1 !important; }
+/* ── Content offset ── */
+.site-header, .hero, .shell-header { margin-top: 140px !important; }
+/* ── Topbar HOME button ── */
+@media (max-width: 720px) {
+  .topbar-inner {
+    flex-direction: row !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+  }
+  .topbar-title {
+    font-size: 12px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+  .topbar-home { display: none !important; }
+  .sticky-docnav-inner, .sticky-nav-inner {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    padding: 7px 14px !important;
+    gap: 5px !important;
+  }
+  .sticky-docnav-inner::-webkit-scrollbar,
+  .sticky-nav-inner::-webkit-scrollbar { display: none; }
+  .sdn-pill, .pill { font-size: 9px !important; padding: 5px 9px !important; }
+}
 
 </style>
 <!-- Google tag (gtag.js) -->
@@ -584,8 +671,13 @@ body {
     <a class="sdn-pill navy" href="11_Vaccine_Question_Biology_of_Autism.html">Vaccine Question</a>
     <a class="sdn-pill navy" href="12_Parents_Guide_Biology_of_Autism.html">Parents</a>
     <a class="sdn-pill navy" href="13_Clinician_Guide_Biology_of_Autism.html">Clinician</a>
+    <a class="sdn-pill navy" href="14_Immunoglobulin_Therapy_Biology_of_Autism.html">Immunoglobulin</a>
   </div>
 </div>
+
+
+
+
 
 <!-- ───────── HERO HEADER ───────── -->
 <header class="site-header">

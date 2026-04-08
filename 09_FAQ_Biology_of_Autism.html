@@ -103,7 +103,7 @@
     box-shadow: 0 2px 12px rgba(15,35,66,0.08);
   }
   .sticky-docnav-inner {
-    max-width: 1080px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 8px 20px;
     display: flex;
@@ -136,7 +136,7 @@
     padding: 0;
     position: relative;
     overflow: hidden;
-    margin-top: 155px;
+    margin-top: 110px;
   }
 
   .header-stripe {
@@ -597,6 +597,7 @@
   }
 
   @media (max-width: 680px) {
+    .sticky-docnav-inner { padding: 7px 16px; gap: 4px; }
     .sdn-pill { font-size: 9px; padding: 4px 8px; }
   }
 
@@ -612,40 +613,89 @@
     .faq-body { padding-left: 36px; }
     .toc-grid { grid-template-columns: 1fr; }
     .topbar-inner {
-      
-      
+      align-items: flex-start;
+      flex-direction: column;
     }
   }
 
-/* ── MOBILE NAV FIX ── */
+/* ═══════════════════════════════════════════
+   SUITE NAV OVERRIDE — canonical, final rules
+   ═══════════════════════════════════════════ */
+.sticky-docnav,
+.sticky-nav {
+  position: fixed !important;
+  top: 57px !important;
+  left: 0 !important; right: 0 !important;
+  z-index: 999 !important;
+  background: rgba(255,255,255,0.98) !important;
+  backdrop-filter: blur(8px) !important;
+  border-bottom: 1px solid #d8cfc4 !important;
+  box-shadow: 0 2px 10px rgba(15,35,66,0.06) !important;
+  overflow: hidden !important;
+}
+.sticky-docnav-inner,
+.sticky-nav-inner {
+  max-width: 1080px !important;
+  margin: 0 auto !important;
+  padding: 8px 20px !important;
+  display: flex !important;
+  gap: 7px !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  overflow-x: visible !important;
+}
+.sdn-pill, .pill {
+  display: inline-block !important;
+  font-family: 'DM Mono', monospace !important;
+  font-size: 10px !important;
+  letter-spacing: 0.05em !important;
+  text-decoration: none !important;
+  border-radius: 999px !important;
+  padding: 6px 12px !important;
+  white-space: nowrap !important;
+  opacity: 0.92 !important;
+  border: 1px solid transparent !important;
+  transition: background 0.15s, opacity 0.15s, transform 0.15s !important;
+}
+.sdn-pill:hover, .pill:hover { opacity: 1 !important; transform: translateY(-1px) !important; }
+.sdn-pill.teal, .pill.teal  { color:#1e6b72 !important; background:rgba(30,107,114,0.08) !important; border-color:rgba(30,107,114,0.22) !important; }
+.sdn-pill.gold, .pill.gold  { color:#8a5c1a !important; background:rgba(200,146,58,0.08) !important;  border-color:rgba(200,146,58,0.25) !important; }
+.sdn-pill.navy, .pill.navy  { color:#0f2342 !important; background:rgba(15,35,66,0.06) !important;    border-color:rgba(15,35,66,0.18) !important; }
+.sdn-pill.teal.active, .pill.teal.active { background:#1e6b72 !important; color:#fff !important; border-color:#1e6b72 !important; opacity:1 !important; }
+.sdn-pill.gold.active, .pill.gold.active { background:#c8923a !important; color:#fff !important; border-color:#c8923a !important; opacity:1 !important; }
+.sdn-pill.navy.active, .pill.navy.active { background:#0f2342 !important; color:#fff !important; border-color:#0f2342 !important; opacity:1 !important; }
+/* ── Content offset ── */
+.site-header, .hero, .shell-header { margin-top: 140px !important; }
+/* ── Topbar HOME button ── */
 @media (max-width: 720px) {
   .topbar-inner {
     flex-direction: row !important;
     align-items: center !important;
-    flex-wrap: nowrap;
-    gap: 8px;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
   }
   .topbar-title {
-    font-size: 12px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    flex: 1;
-    min-width: 0;
+    font-size: 12px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    flex: 1 !important;
+    min-width: 0 !important;
   }
   .topbar-home { display: none !important; }
   .sticky-docnav-inner, .sticky-nav-inner {
     flex-wrap: nowrap !important;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding: 8px 16px;
-    gap: 6px;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    padding: 7px 14px !important;
+    gap: 5px !important;
   }
   .sticky-docnav-inner::-webkit-scrollbar,
   .sticky-nav-inner::-webkit-scrollbar { display: none; }
-  .sdn-pill, .pill { font-size: 9px !important; padding: 5px 10px !important; }
+  .sdn-pill, .pill { font-size: 9px !important; padding: 5px 9px !important; }
 }
+
 </style>
 <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EH3TWPN49H"></script>
