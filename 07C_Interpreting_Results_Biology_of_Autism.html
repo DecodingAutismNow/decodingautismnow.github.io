@@ -243,116 +243,195 @@ html body .sticky-docnav.is-visible {
 
 
 /* ═══════════════════════════════════════════
-   SUITE NAV OVERRIDE — canonical, final rules
+   HAMBURGER NAV — all screen sizes
    ═══════════════════════════════════════════ */
-.sticky-docnav,
-.sticky-nav {
-  position: fixed !important;
-  top: 57px !important;
-  left: 0 !important; right: 0 !important;
-  z-index: 999 !important;
-  background: rgba(255,255,255,0.98) !important;
-  backdrop-filter: blur(8px) !important;
-  border-bottom: 1px solid #d8cfc4 !important;
-  box-shadow: 0 2px 10px rgba(15,35,66,0.06) !important;
-  overflow: visible !important;
+
+/* hide old pill row entirely */
+.sticky-docnav, .sticky-nav { display: none !important; }
+
+/* content sits just below topbar */
+.site-header, .hero, .shell-header { margin-top: 57px !important; }
+
+/* hamburger button */
+.ham-btn {
+  background: none;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+  line-height: 0;
 }
-.sticky-docnav-inner,
-.sticky-nav-inner {
-  max-width: 1080px !important;
-  margin: 0 auto !important;
-  padding: 8px 20px !important;
-  display: flex !important;
-  gap: 7px !important;
-  flex-wrap: wrap !important;
+.ham-btn:hover { border-color: rgba(255,255,255,.55); }
+.ham-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.85);
+  margin-right: 7px;
+  vertical-align: middle;
+}
+.ham-bars { display: inline-flex; flex-direction: column; vertical-align: middle; gap: 4px; }
+.ham-bars span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* dim layer */
+.nav-dim {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 997;
+  background: rgba(15,35,66,.40);
+}
+.nav-dim.open { display: block; }
+
+/* overlay panel */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  top: 57px;
+  left: 0;
+  z-index: 998;
+  background: #fff;
+  border-right: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  box-shadow: 4px 4px 24px rgba(15,35,66,.16);
+  overflow-y: auto;
+  max-height: calc(100vh - 57px);
+  width: 560px;
+  padding: 24px 32px 36px;
+}
+.nav-overlay.open { display: block; }
+
+/* two-column grid on desktop */
+.nav-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 40px;
+}
+
+.nav-group { margin-bottom: 20px; }
+.nav-group-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 8px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--rule);
+}
+.nav-group a {
+  display: block;
+  font-family: 'Source Serif 4', serif;
+  font-size: 13px;
+  color: var(--text-dark);
+  text-decoration: none;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(216,207,196,.35);
+  transition: color .12s;
+}
+.nav-group a:last-child { border-bottom: none; }
+.nav-group a:hover { color: var(--teal); }
+.nav-group a.current {
+  color: var(--teal);
+  font-weight: 600;
+}
+
+/* topbar: keep brand left, hamburger right */
+.topbar-inner {
+  justify-content: space-between !important;
   align-items: center !important;
-  overflow-x: visible !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
 }
-.sdn-pill, .pill {
-  display: inline-block !important;
-  font-family: 'DM Mono', monospace !important;
-  font-size: 10px !important;
-  letter-spacing: 0.05em !important;
-  text-decoration: none !important;
-  border-radius: 999px !important;
-  padding: 6px 12px !important;
-  white-space: nowrap !important;
-  opacity: 0.92 !important;
-  border: 1px solid transparent !important;
-  transition: background 0.15s, opacity 0.15s, transform 0.15s !important;
+.topbar-home { display: none !important; }
+.topbar-title {
+  font-size: 13px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70vw;
 }
-.sdn-pill:hover, .pill:hover { opacity: 1 !important; transform: translateY(-1px) !important; }
-.sdn-pill.teal, .pill.teal  { color:#1e6b72 !important; background:rgba(30,107,114,0.08) !important; border-color:rgba(30,107,114,0.22) !important; }
-.sdn-pill.gold, .pill.gold  { color:#8a5c1a !important; background:rgba(200,146,58,0.08) !important;  border-color:rgba(200,146,58,0.25) !important; }
-.sdn-pill.navy, .pill.navy  { color:#0f2342 !important; background:rgba(15,35,66,0.06) !important;    border-color:rgba(15,35,66,0.18) !important; }
-.sdn-pill.teal.active, .pill.teal.active { background:#1e6b72 !important; color:#fff !important; border-color:#1e6b72 !important; opacity:1 !important; }
-.sdn-pill.gold.active, .pill.gold.active { background:#c8923a !important; color:#fff !important; border-color:#c8923a !important; opacity:1 !important; }
-.sdn-pill.navy.active, .pill.navy.active { background:#0f2342 !important; color:#fff !important; border-color:#0f2342 !important; opacity:1 !important; }
-/* ── Content offset ── */
-.site-header, .hero, .shell-header { margin-top: 140px !important; }
-/* ── Topbar HOME button ── */
+
+/* mobile: full-width panel, single column */
 @media (max-width: 720px) {
-  .topbar-inner {
-    flex-direction: row !important;
-    align-items: center !important;
-    flex-wrap: nowrap !important;
-    gap: 8px !important;
+  .nav-overlay {
+    width: 100%;
+    border-left: none;
+    border-radius: 0;
+    padding: 16px 20px 28px;
   }
-  .topbar-title {
-    font-size: 12px !important;
-    white-space: nowrap !important;
-    overflow: visible !important;
-    text-overflow: ellipsis !important;
-    flex: 1 !important;
-    min-width: 0 !important;
-  }
-  .topbar-home { display: none !important; }
-  .sticky-docnav-inner, .sticky-nav-inner {
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: none !important;
-    padding: 7px 14px !important;
-    gap: 5px !important;
-  }
-  .sticky-docnav-inner::-webkit-scrollbar,
-  .sticky-nav-inner::-webkit-scrollbar { display: none; }
-  .sdn-pill, .pill { font-size: 9px !important; padding: 5px 9px !important; }
+  .nav-cols { grid-template-columns: 1fr; gap: 0; }
 }
 
 </style>
 
 </head>
 <body>
+<div class="nav-dim" id="navDim"></div>
+
+<nav class="nav-overlay" id="navOverlay" aria-label="Site navigation">
+  <div class="nav-cols">
+    <div>
+      <div class="nav-group">
+        <div class="nav-group-label">Foundation</div>
+        <a href="index.html">Home Hub</a>
+        <a href="01_Molecular_Origins_Biology_of_Autism.html">01 — Molecular Origins</a>
+        <a href="02_Cascade_Map_Biology_of_Autism.html">02 — Cascade Map</a>
+        <a href="03_Cascade_Explained_Biology_of_Autism.html">03 — Cascade Explained</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Pathways</div>
+        <a href="05_Metabolic_Pathways_Map_Biology_of_Autism.html">05 — Pathways Map</a>
+        <a href="06_Metabolic_Pathways_Explained_Biology_of_Autism.html">06 — Pathways Explained</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Testing</div>
+        <a href="07_Testing_Strategy_Biology_of_Autism.html">07 — Testing Strategy</a>
+        <a href="07B_Test_Reference_Biology_of_Autism.html">07B — Test Reference</a>
+        <a href="07C_Interpreting_Results_Biology_of_Autism.html" class="current">07C — Interpreting Results</a>
+        <a href="07D_Talking_to_Your_Doctor_Biology_of_Autism.html">07D — Talking to Your Doctor</a>
+        <a href="07R_Regressive_Autism_Testing_Biology_of_Autism.html">07R — Regression Testing</a>
+      </div>
+    </div>
+    <div>
+      <div class="nav-group">
+        <div class="nav-group-label">Interventions</div>
+        <a href="08_Intervention_Logic_Biology_of_Autism.html">08 — Intervention Logic</a>
+        <a href="14_Immunoglobulin_Therapy_Biology_of_Autism.html">14 — Immunoglobulin Therapy</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Context</div>
+        <a href="09_FAQ_Biology_of_Autism.html">09 — FAQ</a>
+        <a href="11_Vaccine_Question_Biology_of_Autism.html">11 — Vaccine Question</a>
+        <a href="12_Parents_Guide_Biology_of_Autism.html">12 — Parents Guide</a>
+        <a href="13_Clinician_Guide_Biology_of_Autism.html">13 — Clinician Guide</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Evidence</div>
+        <a href="10_Evidence_and_Citations_Biology_of_Autism.html">10 — Evidence &amp; Citations</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
 <div class="topbar">
   <div class="topbar-inner">
     <div>
       <div class="topbar-brand">Decoding Autism Now</div>
       <div class="topbar-title">Biology of Autism — Interpreting Your Results</div>
     </div>
-    <a class="topbar-home" href="index.html">Home</a>
-  </div>
-</div>
-<div class="sticky-docnav" id="stickyDocNav">
-  <div class="sticky-docnav-inner">
-    <a class="sdn-pill teal" href="index.html">Home Hub</a>
-    <a class="sdn-pill teal" href="01_Molecular_Origins_Biology_of_Autism.html">Start Here</a>
-    <a class="sdn-pill teal" href="02_Cascade_Map_Biology_of_Autism.html">Cascade Map</a>
-    <a class="sdn-pill teal" href="03_Cascade_Explained_Biology_of_Autism.html">Cascade Explained</a>
-    <a class="sdn-pill gold" href="05_Metabolic_Pathways_Map_Biology_of_Autism.html">Pathways Map</a>
-    <a class="sdn-pill gold" href="06_Metabolic_Pathways_Explained_Biology_of_Autism.html">Pathways Explained</a>
-    <a class="sdn-pill gold" href="07_Testing_Strategy_Biology_of_Autism.html">Testing</a>
-    <a class="sdn-pill gold" href="07B_Test_Reference_Biology_of_Autism.html">Test Ref</a>
-    <a class="sdn-pill gold active" href="07C_Interpreting_Results_Biology_of_Autism.html">Interpret</a>
-    <a class="sdn-pill gold" href="07D_Talking_to_Your_Doctor_Biology_of_Autism.html">Talk to Dr</a>
-    <a class="sdn-pill gold" href="07R_Regressive_Autism_Testing_Biology_of_Autism.html">Regression</a>
-    <a class="sdn-pill gold" href="08_Intervention_Logic_Biology_of_Autism.html">Interventions</a>
-    <a class="sdn-pill navy" href="09_FAQ_Biology_of_Autism.html">FAQ</a>
-    <a class="sdn-pill navy" href="10_Evidence_and_Citations_Biology_of_Autism.html">Evidence</a>
-    <a class="sdn-pill navy" href="11_Vaccine_Question_Biology_of_Autism.html">Vaccine Question</a>
-    <a class="sdn-pill navy" href="12_Parents_Guide_Biology_of_Autism.html">Parents</a>
-    <a class="sdn-pill navy" href="13_Clinician_Guide_Biology_of_Autism.html">Clinician</a>
-    <a class="sdn-pill navy" href="14_Immunoglobulin_Therapy_Biology_of_Autism.html">Immunoglobulin</a>
+    <button class="ham-btn" id="hamBtn" aria-label="Open navigation" aria-expanded="false">
+      <span class="ham-label">Menu</span>
+      <span class="ham-bars"><span></span><span></span><span></span></span>
+    </button>
   </div>
 </div>
 
@@ -563,5 +642,35 @@ html body .sticky-docnav.is-visible {
     window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
     plausible.init()
   </script>
+<script>
+(function(){
+  var btn = document.getElementById('hamBtn');
+  var overlay = document.getElementById('navOverlay');
+  var dim = document.getElementById('navDim');
+  if (!btn) return;
+  function openNav() {
+    overlay.classList.add('open');
+    dim.classList.add('open');
+    btn.setAttribute('aria-expanded','true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeNav() {
+    overlay.classList.remove('open');
+    dim.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+    document.body.style.overflow = '';
+  }
+  btn.addEventListener('click', function(){
+    overlay.classList.contains('open') ? closeNav() : openNav();
+  });
+  dim.addEventListener('click', closeNav);
+  overlay.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', closeNav);
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closeNav();
+  });
+})();
+</script>
 </body>
 </html>
