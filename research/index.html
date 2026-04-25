@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research Articles — Coming Soon | Decoding Autism Now</title>
+<meta name="description" content="Deep-dive research articles on adjacent topics in autism biology — coming soon from Decoding Autism Now.">
+<meta property="og:title" content="Research Articles | Decoding Autism Now">
+<meta property="og:description" content="Deep-dive articles on glyphosate, maternal immune activation, the cholinergic-somatostatin axis, sulphation and Tylenol, and more.">
+<meta property="og:url" content="https://decodingautismnow.com/research/index.html">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:      #0f2342;
+    --teal:      #1e6b72;
+    --teal-light:#2a9da6;
+    --gold:      #c8923a;
+    --gold-light:#e8b86d;
+    --cream:     #faf7f2;
+    --bg:        #f7f5f0;
+    --ink:       #1a1a2e;
+    --text-mid:  #3d4560;
+    --text-light:#6b7494;
+    --rule:      #d8cfc4;
+  }
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; background:#0f2342; }
+  body { background:var(--bg); font-family:'Source Serif 4',Georgia,serif; color:var(--ink); font-size:16px; line-height:1.8; }
+
+  /* Topbar */
+  .topbar { position:fixed; top:0; left:0; right:0; background:var(--navy); border-bottom:2px solid var(--gold); z-index:1000; }
+  .topbar-inner { max-width:960px; margin:0 auto; padding:10px 20px; display:flex; justify-content:space-between; align-items:center; gap:18px; }
+  .topbar-brand { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:var(--teal-light); margin-bottom:2px; }
+  .topbar-title { font-family:'Source Serif 4',Georgia,serif; font-size:13px; font-weight:600; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:70vw; }
+  .ham-btn { background:none; border:1px solid rgba(255,255,255,.28); border-radius:4px; padding:6px 10px; cursor:pointer; flex-shrink:0; line-height:0; }
+  .ham-btn:hover { border-color:rgba(255,255,255,.55); }
+  .ham-label { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.85); margin-right:7px; vertical-align:middle; }
+  .ham-bars { display:inline-flex; flex-direction:column; vertical-align:middle; gap:4px; }
+  .ham-bars span { display:block; width:18px; height:2px; background:#fff; border-radius:2px; }
+
+  /* Nav overlay */
+  .nav-dim { display:none; position:fixed; inset:0; z-index:997; background:rgba(15,35,66,.40); }
+  .nav-dim.open { display:block; }
+  .nav-overlay { display:none; position:fixed; top:57px; left:0; z-index:998; background:#fff; border-right:2px solid var(--gold); border-bottom:2px solid var(--gold); box-shadow:4px 4px 24px rgba(15,35,66,.16); overflow-y:auto; max-height:calc(100vh - 57px); width:560px; padding:24px 32px 36px; }
+  .nav-overlay.open { display:block; }
+  .nav-cols { display:grid; grid-template-columns:1fr 1fr; gap:0 40px; }
+  .nav-group { margin-bottom:20px; }
+  .nav-group-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:var(--teal); margin-bottom:8px; padding-bottom:5px; border-bottom:1px solid var(--rule); }
+  .nav-group a { display:block; font-family:'Source Serif 4',serif; font-size:13px; color:var(--ink); text-decoration:none; padding:5px 0; border-bottom:1px solid rgba(216,207,196,.35); transition:color .12s; }
+  .nav-group a:last-child { border-bottom:none; }
+  .nav-group a:hover { color:var(--teal); }
+  .nav-group a.current { color:var(--teal); font-weight:600; }
+  @media (max-width:720px) { .nav-overlay { width:100%; border-left:none; padding:16px 20px 28px; } .nav-cols { grid-template-columns:1fr; gap:0; } }
+
+  /* Hero */
+  .site-header { margin-top:57px; background:var(--navy); color:#fff; position:relative; overflow:hidden; }
+  .header-stripe { height:5px; background:linear-gradient(90deg,#1e6b72 0%,#2a9da6 50%,#c8923a 100%); }
+  .header-inner { max-width:960px; margin:0 auto; padding:70px 20px 50px; }
+  .header-eyebrow { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:var(--teal-light); margin-bottom:14px; }
+  .header-title { font-family:'Playfair Display',Georgia,serif; font-size:clamp(32px,4vw,52px); font-weight:700; line-height:1.15; color:#fff; margin:0 0 10px; }
+  .header-accent { display:block; color:var(--gold-light); font-style:italic; font-weight:400; }
+  .header-sub { font-size:1.05rem; color:rgba(255,255,255,0.72); line-height:1.7; max-width:640px; margin-top:14px; }
+  .header-status { display:inline-flex; align-items:center; gap:8px; margin-top:28px; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold-light); border:1px solid rgba(232,184,109,0.35); border-radius:999px; padding:7px 16px; }
+  .status-dot { width:7px; height:7px; border-radius:50%; background:var(--gold-light); }
+
+  /* Main */
+  .main-wrap { max-width:960px; margin:0 auto; padding:56px 20px 80px; }
+  .section-divider { display:flex; align-items:center; gap:16px; margin:0 0 36px; }
+  .section-divider-line { flex:1; height:1px; background:var(--rule); }
+  .section-divider-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.18em; text-transform:uppercase; color:var(--text-light); white-space:nowrap; }
+
+  /* Article cards */
+  .articles-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin-bottom:48px; }
+  .article-card { border:1px solid var(--rule); border-radius:10px; background:#fff; padding:28px 24px; position:relative; overflow:hidden; }
+  .article-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--teal); }
+  .card-eyebrow { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-light); margin-bottom:10px; }
+  .card-title { font-family:'Playfair Display',Georgia,serif; font-size:1.12rem; font-weight:700; color:var(--navy); line-height:1.3; margin-bottom:10px; }
+  .card-desc { font-size:0.9rem; color:var(--text-mid); line-height:1.6; margin-bottom:16px; }
+  .card-tag { display:inline-block; font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.10em; text-transform:uppercase; padding:3px 8px; border-radius:999px; background:rgba(200,146,58,0.10); color:var(--gold); border:1px solid rgba(200,146,58,0.25); }
+
+  /* Notify box */
+  .notify-box { border:1px solid var(--rule); border-radius:10px; background:#fff; padding:32px 28px; margin-top:48px; display:flex; gap:24px; align-items:flex-start; }
+  .notify-icon { font-family:'DM Mono',monospace; font-size:22px; color:var(--teal); flex-shrink:0; margin-top:2px; }
+  .notify-title { font-family:'Playfair Display',serif; font-size:1.15rem; font-weight:700; color:var(--navy); margin-bottom:8px; }
+  .notify-text { font-size:0.95rem; color:var(--text-mid); line-height:1.65; }
+  .notify-link { color:var(--teal); text-decoration:none; font-weight:600; }
+  .notify-link:hover { text-decoration:underline; }
+
+  /* Footer */
+  .site-footer { background:var(--navy); }
+  .footer-stripe { height:5px; background:linear-gradient(90deg,#1e6b72 0%,#2a9da6 50%,#c8923a 100%); }
+  .footer-inner { max-width:960px; margin:0 auto; padding:48px 20px 36px; }
+  .footer-top { display:grid; grid-template-columns:1.15fr 0.95fr; gap:34px; align-items:start; padding-bottom:24px; border-bottom:1px solid rgba(255,255,255,0.10); }
+  .footer-brand { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#2a9da6; margin-bottom:10px; }
+  .footer-title { font-family:'Playfair Display',serif; font-size:1.3rem; color:rgba(255,255,255,0.96); margin-bottom:8px; }
+  .footer-tagline { color:rgba(255,255,255,0.55); font-size:0.88rem; line-height:1.6; }
+  .footer-links { display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-end; margin-bottom:12px; }
+  .footer-link { text-decoration:none; color:rgba(255,255,255,0.88); border:1px solid rgba(255,255,255,0.16); border-radius:999px; padding:7px 13px; font-size:0.85rem; font-weight:600; transition:all 0.15s; }
+  .footer-link:hover { color:#2a9da6; border-color:#2a9da6; }
+  .footer-disclaimer { color:rgba(255,255,255,0.45); font-size:0.82rem; line-height:1.6; text-align:right; }
+  .footer-bottom { padding-top:18px; }
+  .footer-meta { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.22); }
+  @media (max-width:720px) { .articles-grid { grid-template-columns:1fr; } .footer-top { grid-template-columns:1fr; } .footer-links { justify-content:flex-start; } .footer-disclaimer { text-align:left; } .notify-box { flex-direction:column; gap:12px; } }
+</style>
+</head>
+<body>
+
+<div class="nav-dim" id="navDim"></div>
+<nav class="nav-overlay" id="navOverlay" aria-label="Site navigation">
+  <div class="nav-cols">
+    <div>
+      <div class="nav-group">
+        <div class="nav-group-label">Foundation</div>
+        <a href="../index.html">Home Hub</a>
+        <a href="../01_Molecular_Origins_Biology_of_Autism.html">01 — Molecular Origins</a>
+        <a href="../02_Cascade_Map_Biology_of_Autism.html">02 — Cascade Map</a>
+        <a href="../03_Cascade_Explained_Biology_of_Autism.html">03 — Cascade Explained</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Pathways</div>
+        <a href="../05_Metabolic_Pathways_Map_Biology_of_Autism.html">05 — Pathways Map</a>
+        <a href="../06_Metabolic_Pathways_Explained_Biology_of_Autism.html">06 — Pathways Explained</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Testing</div>
+        <a href="../07_Testing_Strategy_Biology_of_Autism.html">07 — Testing Strategy</a>
+        <a href="../07B_Test_Reference_Biology_of_Autism.html">07B — Test Reference</a>
+        <a href="../07C_Interpreting_Results_Biology_of_Autism.html">07C — Interpreting Results</a>
+        <a href="../07D_Talking_to_Your_Doctor_Biology_of_Autism.html">07D — Talking to Your Doctor</a>
+        <a href="../07R_Regressive_Autism_Testing_Biology_of_Autism.html">07R — Regression Testing</a>
+      </div>
+    </div>
+    <div>
+      <div class="nav-group">
+        <div class="nav-group-label">Interventions</div>
+        <a href="../08_Intervention_Logic_Biology_of_Autism.html">08 — Intervention Logic</a>
+        <a href="../14_Immunoglobulin_Therapy_Biology_of_Autism.html">14 — Immunoglobulin Therapy</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Context</div>
+        <a href="../09_FAQ_Biology_of_Autism.html">09 — FAQ</a>
+        <a href="../11_Vaccine_Question_Biology_of_Autism.html">11 — Vaccine Question</a>
+        <a href="../12_Parents_Guide_Biology_of_Autism.html">12 — Parents Guide</a>
+        <a href="../13_Clinician_Guide_Biology_of_Autism.html">13 — Clinician Guide</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Other Sections</div>
+        <a href="../imig/index.html">IMIG Clinical Trial</a>
+        <a href="index.html" class="current">Research Articles</a>
+        <a href="../10_Evidence_and_Citations_Biology_of_Autism.html">Evidence &amp; Citations</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <div class="topbar-brand">Decoding Autism Now</div>
+      <div class="topbar-title">Research Articles</div>
+    </div>
+    <button class="ham-btn" id="hamBtn" aria-label="Open navigation" aria-expanded="false">
+      <span class="ham-label">Menu</span>
+      <span class="ham-bars"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="header-stripe"></div>
+  <div class="header-inner">
+    <div class="header-eyebrow">Decoding Autism Now</div>
+    <h1 class="header-title">Research Articles<span class="header-accent">Adjacent topics in autism biology</span></h1>
+    <p class="header-sub">Deep-dive articles on topics that intersect with the Biology of Autism framework — from environmental triggers and metabolic pathways to emerging clinical questions. Each article is written to the same standard as the core suite.</p>
+    <div class="header-status"><span class="status-dot"></span>In development — articles publishing progressively</div>
+  </div>
+</header>
+
+<main class="main-wrap">
+
+  <div class="section-divider">
+    <div class="section-divider-line"></div>
+    <div class="section-divider-label">Articles in development</div>
+    <div class="section-divider-line"></div>
+  </div>
+
+  <div class="articles-grid">
+
+    <div class="article-card">
+      <div class="card-eyebrow">Environment &amp; microbiome</div>
+      <div class="card-title">Glyphosate, the Shikimate Pathway, and Tryptophan Depletion</div>
+      <div class="card-desc">How Roundup disrupts gut microbiome function, depletes tryptophan availability, and feeds directly into the IDO1 cascade — a mechanistic connection with direct implications for the Biology of Autism framework.</div>
+      <span class="card-tag">Coming soon</span>
+    </div>
+
+    <div class="article-card">
+      <div class="card-eyebrow">Prenatal immune programming</div>
+      <div class="card-title">Maternal Immune Activation — the Prenatal Origin of Lifelong Immune Sensitivity</div>
+      <div class="card-desc">IL-6, IL-17A, and fetal microglial priming. How prenatal immune events establish the inflammatory baseline that persists throughout neurodevelopment and shapes the ASD phenotype.</div>
+      <span class="card-tag">Coming soon</span>
+    </div>
+
+    <div class="article-card">
+      <div class="card-eyebrow">Neuroendocrine signaling</div>
+      <div class="card-title">The Cholinergic-Somatostatin Axis in ASD</div>
+      <div class="card-desc">The CCK/opioid peptide → somatostatin no-off-switch mechanism, the upstream cholinergic suppression arm, and downstream consequences across seven gut peptides. Companion to Chapter 11 of the core framework.</div>
+      <span class="card-tag">Coming soon</span>
+    </div>
+
+    <div class="article-card">
+      <div class="card-eyebrow">Detoxification &amp; vaccination</div>
+      <div class="card-title">Sulphation, Tylenol, and Vaccination — GAG Pathway Disruption in Susceptible Children</div>
+      <div class="card-desc">How acetaminophen use around vaccination depletes sulfate availability, disrupts glycosaminoglycan synthesis, and may impair the detoxification capacity needed to clear adjuvant load in susceptible children.</div>
+      <span class="card-tag">Coming soon</span>
+    </div>
+
+    <div class="article-card">
+      <div class="card-eyebrow">Epidemiology</div>
+      <div class="card-title">Amish Autism Rates — What the Population Comparison Actually Tells Us</div>
+      <div class="card-desc">Microbiome differences, lifestyle, vaccine exposure differential, and what lower observed ASD rates in Amish communities do and don't mean for the biological cascade model.</div>
+      <span class="card-tag">Coming soon</span>
+    </div>
+
+    <div class="article-card">
+      <div class="card-eyebrow">Hormonal pathways</div>
+      <div class="card-title">Birth Control Pills, Estrogen, and the IDO1 Pathway</div>
+      <div class="card-desc">The metabolic mechanism linking estrogen signaling to IDO1 activity, adenylyl cyclase, and the male-to-female ASD population ratio — why the sex difference in ASD prevalence may be hormonally mediated.</div>
+      <span class="card-tag">Coming soon</span>
+    </div>
+
+    <div class="article-card">
+      <div class="card-eyebrow">Neurochemistry</div>
+      <div class="card-title">Glutamate, GABA, NMDA and AMPA Receptors in ASD</div>
+      <div class="card-desc">What each receptor system does, how E/I imbalance develops, and how the kynurenine pathway and calcium dysregulation drive excitatory overload in the autism cascade.</div>
+      <span class="card-tag">Coming soon</span>
+    </div>
+
+    <div class="article-card">
+      <div class="card-eyebrow">Neurodegenerative overlap</div>
+      <div class="card-title">Autism and Alzheimer's — Two Sides of a Plasticity Problem</div>
+      <div class="card-desc">One condition fails to open plasticity or keep it open. The other has plasticity closing prematurely later in life. The shared biology of synaptic remodeling failure and what connects them mechanistically.</div>
+      <span class="card-tag">Coming soon</span>
+    </div>
+
+
+    <div class="article-card">
+      <div class="card-eyebrow">Diet &amp; peptide chemistry</div>
+      <div class="card-title">Proline Peptides — What Stays Trapped When the Bond Isn't Cleaved</div>
+      <div class="card-desc">When pepsin cannot break proline bonds at low pH, casomorphin and gliadorphin peptides remain intact. Which amino acids stay trapped, what opioid-like signaling results, and what this means for tryptophan availability, CCK, and the ASD cascade.</div>
+      <span class="card-tag">Coming soon</span>
+    </div>
+
+    <div class="article-card">
+      <div class="card-eyebrow">Immune signaling &amp; PANS</div>
+      <div class="card-title">Elevated Strep Antibodies, Negative Throat Swabs — What Is the Immune System Reacting To?</div>
+      <div class="card-desc">Persistent anti-streptococcal serology without active infection points to molecular mimicry — the immune system attacking self-tissue that resembles strep antigens. How this connects to basal ganglia autoantibodies, PANS, and immune-triggered regression in ASD.</div>
+      <span class="card-tag">Coming soon</span>
+    </div>
+
+  </div>
+
+  <div class="notify-box">
+    <div class="notify-icon">✉</div>
+    <div>
+      <div class="notify-title">Articles publish progressively</div>
+      <p class="notify-text">Each article is written to the same mechanistic standard as the Biology of Autism core suite — peer-reviewed literature, precise pathway framing, and accessible language for families, clinicians, and researchers. To follow progress or reach out about a specific topic, contact <a class="notify-link" href="mailto:quay@decodingautismnow.com">quay@decodingautismnow.com</a>. The core Biology of Autism suite is available now at <a class="notify-link" href="../index.html">decodingautismnow.com</a>.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">Decoding Autism Now</p>
+        <h2 class="footer-title">Research Articles</h2>
+        <p class="footer-tagline">Adjacent topics in autism biology — publishing progressively.</p>
+      </div>
+      <div>
+        <div class="footer-links">
+          <a class="footer-link" href="../index.html">Home Hub</a>
+          <a class="footer-link" href="../01_Molecular_Origins_Biology_of_Autism.html">Biology of Autism</a>
+          <a class="footer-link" href="../imig/index.html">IMIG Trial</a>
+        </div>
+        <p class="footer-disclaimer">For educational and research purposes. Not clinical guidance.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-meta">Decoding Autism Now · decodingautismnow.com</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var overlay=document.getElementById('navOverlay');
+  var dim=document.getElementById('navDim');
+  if(!btn)return;
+  function openNav(){overlay.classList.add('open');dim.classList.add('open');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+  function closeNav(){overlay.classList.remove('open');dim.classList.remove('open');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+  btn.addEventListener('click',function(){overlay.classList.contains('open')?closeNav():openNav();});
+  dim.addEventListener('click',closeNav);
+  overlay.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeNav);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeNav();});
+})();
+</script>
+</body>
+</html>
