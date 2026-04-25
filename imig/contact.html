@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — IMIG Initiative | Decoding Autism Now</title>
+<meta name="description" content="Contact the principal investigator for the IMIG clinical trial initiative — Dr. Pieter Rousseau Fourie.">
+<meta property="og:title" content="Contact — IMIG Initiative | Decoding Autism Now">
+<meta property="og:description" content="Direct contact path to Dr. Pieter Fourie, principal investigator for the IMIG autism clinical trial initiative.">
+<meta property="og:url" content="https://decodingautismnow.com/imig/contact.html">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:       #0f2342;
+    --teal:       #1e6b72;
+    --teal-light: #2a9da6;
+    --gold:       #c8923a;
+    --gold-light: #e8b86d;
+    --cream:      #faf7f2;
+    --bg:         #f7f5f0;
+    --ink:        #1a1a2e;
+    --rule:       #d8cfc4;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; background: #0f2342; }
+  body { background: var(--bg); font-family: 'Source Serif 4', Georgia, serif; color: var(--ink); font-size: 16px; line-height: 1.8; }
+  a { color: inherit; }
+
+  /* ── Topbar ── */
+  .topbar { position:fixed; top:0; left:0; right:0; background:var(--navy); border-bottom:2px solid var(--gold); z-index:1000; }
+  .topbar-inner { max-width:960px; margin:0 auto; padding:10px 20px; display:flex; justify-content:space-between; align-items:center; gap:18px; }
+  .topbar-brand { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:var(--teal-light); margin-bottom:2px; }
+  .topbar-title { font-family:'Source Serif 4',Georgia,serif; font-size:13px; font-weight:600; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:70vw; }
+
+  /* ── Subnav ── */
+  .subnav { position:fixed; top:57px; left:0; right:0; z-index:999; background:rgba(255,255,255,0.98); backdrop-filter:blur(8px); border-bottom:1px solid #d8cfc4; box-shadow:0 2px 10px rgba(15,35,66,0.06); }
+  .subnav-inner { max-width:960px; margin:0 auto; padding:8px 20px; display:flex; gap:7px; align-items:center; flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+  .subnav-inner::-webkit-scrollbar { display:none; }
+  .subnav-back { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.05em; text-decoration:none; border-radius:999px; padding:6px 12px; white-space:nowrap; color:#1e6b72; background:rgba(30,107,114,0.08); border:1px solid rgba(30,107,114,0.22); opacity:0.92; transition:background 0.15s,opacity 0.15s,transform 0.15s; }
+  .subnav-back:hover { opacity:1; transform:translateY(-1px); }
+  .subnav-divider { width:1px; height:14px; background:#d8cfc4; margin:0 4px; flex-shrink:0; align-self:center; }
+  .subnav-pill { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.05em; text-decoration:none; border-radius:999px; padding:6px 12px; white-space:nowrap; color:#8a5c1a; background:rgba(200,146,58,0.08); border:1px solid rgba(200,146,58,0.25); opacity:0.92; transition:background 0.15s,opacity 0.15s,transform 0.15s; }
+  .subnav-pill:hover { opacity:1; transform:translateY(-1px); }
+  .subnav-pill.active { background:#c8923a; color:#fff; border-color:#c8923a; opacity:1; font-weight:500; }
+
+  /* ── Site header ── */
+  .site-header { margin-top:100px; background:var(--navy); color:#fff; position:relative; overflow:hidden; }
+  .header-stripe { height:5px; background:linear-gradient(90deg,#1e6b72 0%,#2a9da6 50%,#c8923a 100%); }
+  .header-inner { max-width:960px; margin:0 auto; padding:70px 20px 50px; }
+  .header-eyebrow { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:var(--teal-light); margin-bottom:14px; }
+  .header-title { font-family:'Playfair Display',Georgia,serif; font-size:clamp(34px,4.2vw,52px); font-weight:600; line-height:1.15; color:#fff; margin:0 0 10px; }
+  .header-accent { display:block; color:var(--gold-light); font-style:italic; font-weight:500; }
+  .header-sub { font-family:'Source Serif 4',Georgia,serif; font-size:1.05rem; color:rgba(255,255,255,0.72); line-height:1.7; max-width:680px; margin-top:14px; }
+
+  /* ── Main layout ── */
+  .main-wrap { max-width:960px; margin:0 auto; padding:56px 20px 80px; }
+  .section-divider { display:flex; align-items:center; gap:16px; margin:48px 0 36px; }
+  .section-divider-line { flex:1; height:1px; background:var(--rule); }
+  .section-divider-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.18em; text-transform:uppercase; color:#6b7494; white-space:nowrap; }
+
+  /* ── Path finder table ── */
+  .path-card { border:1px solid var(--rule); border-radius:10px; background:#fff; padding:32px 28px; margin-bottom:32px; }
+  .path-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.16em; text-transform:uppercase; color:#6b7494; margin-bottom:20px; }
+  .path-row { display:grid; grid-template-columns:160px 1fr; gap:16px 24px; padding:16px 0; border-bottom:1px solid var(--rule); align-items:start; }
+  .path-row:last-child { border-bottom:none; }
+  .path-role { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.10em; text-transform:uppercase; color:var(--gold); padding-top:3px; }
+  .path-desc { font-size:0.95rem; color:var(--ink); line-height:1.65; }
+  .path-desc strong { color:var(--navy); }
+
+  /* ── Contact card ── */
+  .contact-card { border:1px solid var(--rule); border-radius:10px; background:#fff; padding:36px 32px; margin-bottom:24px; }
+  .card-role-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.16em; text-transform:uppercase; color:var(--teal); margin-bottom:16px; }
+  .card-name { font-family:'Playfair Display',Georgia,serif; font-size:1.8rem; font-weight:700; color:var(--navy); margin-bottom:6px; }
+  .card-credentials { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.06em; color:#6b7494; margin-bottom:18px; line-height:1.7; }
+  .card-bio { font-size:0.98rem; color:var(--ink); line-height:1.75; margin-bottom:24px; }
+  .card-details { border-top:1px solid var(--rule); padding-top:20px; }
+  .detail-row { display:grid; grid-template-columns:90px 1fr; gap:8px; padding:10px 0; border-bottom:1px solid rgba(216,207,196,0.4); font-size:0.88rem; }
+  .detail-row:last-child { border-bottom:none; }
+  .detail-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.14em; text-transform:uppercase; color:#6b7494; padding-top:2px; }
+  .detail-value { color:var(--ink); }
+  .detail-value a { color:var(--teal); text-decoration:none; }
+  .detail-value a:hover { text-decoration:underline; }
+
+  /* ── CRO placeholder card ── */
+  .cro-card { border:1px dashed var(--rule); border-radius:10px; background:rgba(247,245,240,0.6); padding:28px; margin-bottom:24px; }
+  .cro-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.16em; text-transform:uppercase; color:#6b7494; margin-bottom:12px; }
+  .cro-title { font-family:'Playfair Display',Georgia,serif; font-size:1.2rem; font-weight:700; color:var(--navy); margin-bottom:8px; }
+  .cro-body { font-size:0.95rem; color:#3d4560; line-height:1.65; }
+
+  /* ── Notice ── */
+  .notice-block { display:flex; gap:14px; align-items:flex-start; background:#fff; border:1px solid var(--rule); border-left:3px solid var(--gold); border-radius:8px; padding:20px 20px 20px 18px; margin-top:48px; }
+  .notice-icon { font-family:'DM Mono',monospace; font-size:13px; color:var(--gold); flex-shrink:0; margin-top:2px; }
+  .notice-text { font-size:0.9rem; color:#3d4560; line-height:1.65; }
+
+  /* ── Footer ── */
+  .site-footer { background:#0f2342; }
+  .footer-stripe { height:5px; background:linear-gradient(90deg,#1e6b72 0%,#2a9da6 50%,#c8923a 100%); }
+  .footer-inner { max-width:960px; margin:0 auto; padding:48px 20px 36px; }
+  .footer-top { display:grid; grid-template-columns:1.15fr 0.95fr; gap:34px; align-items:start; padding-bottom:24px; border-bottom:1px solid rgba(255,255,255,0.10); }
+  .footer-brand { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#2a9da6; margin-bottom:10px; }
+  .footer-title { font-family:'Playfair Display',Georgia,serif; font-size:1.3rem; color:rgba(255,255,255,0.96); margin-bottom:8px; }
+  .footer-tagline { color:rgba(255,255,255,0.60); font-size:0.88rem; line-height:1.6; }
+  .footer-links { display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-end; margin-bottom:12px; }
+  .footer-link { text-decoration:none; color:rgba(255,255,255,0.88); border:1px solid rgba(255,255,255,0.16); border-radius:999px; padding:7px 13px; font-size:0.85rem; font-weight:600; transition:all 0.15s; }
+  .footer-link:hover { color:#2a9da6; border-color:#2a9da6; }
+  .footer-disclaimer { color:rgba(255,255,255,0.45); font-size:0.82rem; line-height:1.6; text-align:right; }
+  .footer-bottom { padding-top:18px; }
+  .footer-meta { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.22); }
+
+  /* ── Hamburger nav ── */
+  .ham-btn { background:none; border:1px solid rgba(255,255,255,.28); border-radius:4px; padding:6px 10px; cursor:pointer; flex-shrink:0; line-height:0; }
+  .ham-btn:hover { border-color:rgba(255,255,255,.55); }
+  .ham-label { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.85); margin-right:7px; vertical-align:middle; }
+  .ham-bars { display:inline-flex; flex-direction:column; vertical-align:middle; gap:4px; }
+  .ham-bars span { display:block; width:18px; height:2px; background:#fff; border-radius:2px; }
+  .nav-dim { display:none; position:fixed; inset:0; z-index:997; background:rgba(15,35,66,.40); }
+  .nav-dim.open { display:block; }
+  .nav-overlay { display:none; position:fixed; top:57px; left:0; z-index:998; background:#fff; border-right:2px solid var(--gold); border-bottom:2px solid var(--gold); box-shadow:4px 4px 24px rgba(15,35,66,.16); overflow-y:auto; max-height:calc(100vh - 57px); width:400px; padding:24px 28px 36px; }
+  .nav-overlay.open { display:block; }
+  .nav-group { margin-bottom:18px; }
+  .nav-group-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:var(--teal); margin-bottom:8px; padding-bottom:5px; border-bottom:1px solid #d8cfc4; }
+  .nav-group a { display:block; font-family:'Source Serif 4',serif; font-size:13px; color:#1a1a2e; text-decoration:none; padding:5px 0; border-bottom:1px solid rgba(216,207,196,.35); transition:color .12s; }
+  .nav-group a:last-child { border-bottom:none; }
+  .nav-group a:hover { color:var(--teal); }
+  .nav-group a.current { color:var(--teal); font-weight:600; }
+  .topbar-home { display:none !important; }
+
+  @media (max-width:720px) {
+    .nav-overlay { width:100%; border-left:none; padding:16px 20px 28px; }
+    .path-row { grid-template-columns:1fr; gap:6px; }
+    .footer-top { grid-template-columns:1fr; }
+    .footer-links { justify-content:flex-start; }
+    .footer-disclaimer { text-align:left; }
+  }
+</style>
+<meta property="og:image" content="https://decodingautismnow.com/imig/images/OG-imig-contact.jpg">
+<meta name="twitter:image" content="https://decodingautismnow.com/imig/images/OG-imig-contact.jpg">
+</head>
+<body>
+
+<div class="nav-dim" id="navDim"></div>
+<nav class="nav-overlay" id="navOverlay" aria-label="Site navigation">
+  <div class="nav-group">
+    <div class="nav-group-label">IMIG Clinical Trial</div>
+    <a href="index.html">Overview</a>
+    <a href="mechanism.html">The Mechanism</a>
+    <a href="evidence.html">The Evidence</a>
+    <a href="trial.html">The Trial</a>
+    <a href="candidates.html">Who Is a Candidate</a>
+    <a href="contact.html" class="current">Contact</a>
+  </div>
+  <div class="nav-group">
+    <div class="nav-group-label">Main Site</div>
+    <a href="../index.html">← Decoding Autism Now</a>
+    <a href="../01_Molecular_Origins_Biology_of_Autism.html">Biology of Autism Suite</a>
+  </div>
+</nav>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <div class="topbar-brand">Decoding Autism Now · IMIG Initiative</div>
+      <div class="topbar-title">Contact</div>
+    </div>
+    <button class="ham-btn" id="hamBtn" aria-label="Open navigation" aria-expanded="false">
+      <span class="ham-label">Menu</span>
+      <span class="ham-bars"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</div>
+
+<nav class="subnav">
+  <div class="subnav-inner">
+    <a class="subnav-back" href="../14_Immunoglobulin_Therapy_Biology_of_Autism.html">← Biology of Autism</a>
+    <div class="subnav-divider"></div>
+    <a class="subnav-pill" href="index.html">Overview</a>
+    <a class="subnav-pill" href="mechanism.html">Mechanism</a>
+    <a class="subnav-pill" href="evidence.html">Evidence</a>
+    <a class="subnav-pill" href="trial.html">Trial</a>
+    <a class="subnav-pill" href="candidates.html">Candidates</a>
+    <a class="subnav-pill active" href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<header class="site-header">
+  <div class="header-stripe"></div>
+  <div class="header-inner">
+    <div class="header-eyebrow">Decoding Autism Now · IMIG Initiative</div>
+    <h1 class="header-title">Contact<span class="header-accent">The right person for your inquiry</span></h1>
+    <p class="header-sub">One person is leading this initiative clinically and scientifically. Depending on your role — funder, researcher, clinician, or press — there is a direct path. No forms. No gatekeeping.</p>
+  </div>
+</header>
+
+<main class="main-wrap">
+
+  <div class="section-divider">
+    <div class="section-divider-line"></div>
+    <div class="section-divider-label">Find your path</div>
+    <div class="section-divider-line"></div>
+  </div>
+
+  <div class="path-card">
+    <div class="path-label">Who to contact and why</div>
+    <div class="path-row">
+      <div class="path-role">Funders</div>
+      <div class="path-desc">Foundation program officers, philanthropic investors, or pharma medical affairs contacts interested in the trial opportunity — <strong>contact Dr. Fourie directly</strong>. For trial infrastructure and coordination questions, the clinical research organisation contact will be added here when confirmed.</div>
+    </div>
+    <div class="path-row">
+      <div class="path-role">Researchers</div>
+      <div class="path-desc">Academic collaborators, immunologists, or neuroscientists interested in the mechanism or co-investigation — <strong>contact Dr. Fourie</strong> for scientific discussion.</div>
+    </div>
+    <div class="path-row">
+      <div class="path-role">Clinicians</div>
+      <div class="path-desc">Paediatricians or child psychiatrists with patients who may be candidates, or seeking clinical protocol details — <strong>contact Dr. Fourie</strong>. Clinical enquiries about existing patients go directly to Dr. Fourie.</div>
+    </div>
+    <div class="path-row">
+      <div class="path-role">Media / Press</div>
+      <div class="path-desc">Science journalists or content producers — <strong>contact Dr. Fourie</strong> for background and context, or use the science communication contact at <a href="mailto:quay@decodingautismnow.com" style="color:var(--teal);">quay@decodingautismnow.com</a>.</div>
+    </div>
+  </div>
+
+  <div class="section-divider">
+    <div class="section-divider-line"></div>
+    <div class="section-divider-label">The team</div>
+    <div class="section-divider-line"></div>
+  </div>
+
+  <div class="contact-card">
+    <div class="card-role-label">Principal Investigator</div>
+    <div class="card-name">Dr. Pieter Rousseau Fourie</div>
+    <div class="card-credentials">BSc. Eng. (Electrical) · M.B.Ch.B. · PhD (Medical Physiology) · M.Med. (Paediatrics)<br>Pr. Eng. · Senior Member IEEE · Fellow SAIEE</div>
+    <p class="card-bio">Consultant Paediatrician, South Africa. Author of the first published IMIG case report in ASD and PANS (Fourie &amp; Armstrong, <em>Medical Research Archives</em>, 2024). Currently treating more than forty patients with IMIG, including children with profound Level 2 and 3 ASD. The scientific and clinical vision for this trial is Dr. Fourie's.</p>
+    <div class="card-details">
+      <div class="detail-row">
+        <div class="detail-label">Email</div>
+        <div class="detail-value"><a href="mailto:pieter@innovation4life.com">pieter@innovation4life.com</a></div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label">Location</div>
+        <div class="detail-value">Durbanville, South Africa</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label">Tel</div>
+        <div class="detail-value">+27 21-9754645</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label">Practice</div>
+        <div class="detail-value"><a href="https://stix.co.za" target="_blank">stix.co.za</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cro-card">
+    <div class="cro-label">Clinical Research Organisation</div>
+    <div class="cro-title">TASK Clinical, South Africa</div>
+    <p class="cro-body">TASK Clinical is an established clinical research organisation with a track record in paediatric and infectious disease trials. TASK is developing the formal trial protocol and budget in collaboration with Dr. Fourie. Trial infrastructure contact details will be published here when confirmed.</p>
+  </div>
+
+  <div class="notice-block">
+    <div class="notice-icon">i</div>
+    <p class="notice-text"><strong>Research context — not clinical guidance.</strong> This initiative is focused on developing a clinical trial, not providing medical treatment. IMIG for ASD is investigational and not approved in any jurisdiction. Families seeking clinical guidance should consult a qualified paediatrician or child neurologist. Response times from South Africa (SAST, UTC+2) may vary depending on clinical schedules.</p>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">Decoding Autism Now · IMIG Initiative</p>
+        <h2 class="footer-title">Contact</h2>
+        <p class="footer-tagline">The principal investigator — direct path, no gatekeeping.</p>
+      </div>
+      <div>
+        <div class="footer-links">
+          <a class="footer-link" href="index.html">Overview</a>
+          <a class="footer-link" href="mechanism.html">Mechanism</a>
+          <a class="footer-link" href="evidence.html">Evidence</a>
+          <a class="footer-link" href="trial.html">Trial</a>
+          <a class="footer-link" href="candidates.html">Candidates</a>
+          <a class="footer-link" href="../14_Immunoglobulin_Therapy_Biology_of_Autism.html">Biology of Autism</a>
+        </div>
+        <p class="footer-disclaimer">IMIG for ASD is investigational and not approved in any jurisdiction. This page is a scientific reference, not clinical guidance.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-meta">IMIG Initiative · Decoding Autism Now · Key references: Rossignol &amp; Frye, J Pers Med 2021 · Fourie &amp; Armstrong, Med Res Arch 2024</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var overlay=document.getElementById('navOverlay');
+  var dim=document.getElementById('navDim');
+  if(!btn)return;
+  function openNav(){overlay.classList.add('open');dim.classList.add('open');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+  function closeNav(){overlay.classList.remove('open');dim.classList.remove('open');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+  btn.addEventListener('click',function(){overlay.classList.contains('open')?closeNav():openNav();});
+  dim.addEventListener('click',closeNav);
+  overlay.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeNav);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeNav();});
+})();
+</script>
+</body>
+</html>
