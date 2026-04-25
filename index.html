@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Biology of Autism — Start Here | Decoding Autism Now</title>
-<meta name="description" content="A systems biology framework explaining autism through signaling, immune, gut, and brain interactions.">
+<title>Decoding Autism Now — Public Science Resource</title>
+<meta name="description" content="A public science resource translating autism biology into accessible frameworks for families, clinicians, and researchers. Biology of Autism suite, IMIG clinical trial, and research articles.">
 <link rel="canonical" href="https://decodingautismnow.com/">
-<meta property="og:title" content="Biology of Autism — Start Here | Decoding Autism Now">
-<meta property="og:description" content="A systems biology framework explaining autism through signaling, immune, gut, and brain interactions.">
+<meta property="og:title" content="Decoding Autism Now — Public Science Resource">
+<meta property="og:description" content="Translating autism biology into accessible frameworks for families, clinicians, and researchers.">
 <meta property="og:image" content="https://decodingautismnow.com/images/OG-index.png">
 <meta property="og:url" content="https://decodingautismnow.com/">
 <meta property="og:type" content="website">
@@ -620,15 +620,110 @@ html { background: #0f2342; }
   max-width: 70vw;
 }
 
-/* mobile: full-width panel, single column */
+/* ── Hub spoke cards ── */
+.hub-section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 56px 20px 20px;
+}
+.hub-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 18px;
+}
+.hub-spokes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 56px;
+}
+.spoke-card {
+  border: 1.5px solid var(--rule);
+  border-radius: 10px;
+  padding: 28px 24px 24px;
+  background: var(--warm-white);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: border-color .15s, box-shadow .15s;
+  position: relative;
+  overflow: hidden;
+}
+.spoke-card:hover {
+  border-color: var(--teal);
+  box-shadow: 0 6px 24px rgba(15,35,66,.10);
+}
+.spoke-card.coming-soon {
+  border-style: dashed;
+  opacity: .82;
+  cursor: default;
+}
+.spoke-card.coming-soon:hover {
+  border-color: var(--gold);
+  box-shadow: none;
+}
+.spoke-stripe {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+}
+.spoke-stripe.teal { background: var(--teal); }
+.spoke-stripe.gold { background: var(--gold); }
+.spoke-stripe.navy { background: var(--navy); }
+.spoke-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 10px;
+  margin-top: 8px;
+}
+.spoke-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+.spoke-card:hover .spoke-title { color: var(--teal); }
+.spoke-card.coming-soon:hover .spoke-title { color: var(--navy); }
+.spoke-desc {
+  font-size: .9rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 16px;
+}
+.spoke-cta {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--teal);
+  font-weight: 500;
+}
+.spoke-card.coming-soon .spoke-cta { color: var(--gold); }
+.spoke-badge {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(200,146,58,.12);
+  color: var(--gold);
+  border: 1px solid rgba(200,146,58,.3);
+  margin-bottom: 10px;
+}
 @media (max-width: 720px) {
-  .nav-overlay {
-    width: 100%;
-    border-left: none;
-    border-radius: 0;
-    padding: 16px 20px 28px;
-  }
-  .nav-cols { grid-template-columns: 1fr; gap: 0; }
+  .hub-spokes { grid-template-columns: 1fr; gap: 14px; }
+  .hub-section { padding: 36px 16px 16px; }
 }
 
 </style>
@@ -702,26 +797,54 @@ html { background: #0f2342; }
   <div class="header-inner">
     <div class="header-deco"></div>
     <p class="brand-line">Decoding Autism Now</p>
-    <h1 class="hero-title">Biology of Autism —<br><em>A Systems Framework for<br>Understanding Autism</em></h1>
-    <div class="hero-tagline">From Molecular Origins to System-Level Interventions</div>
-    <p class="hero-sub">Explore autism through a structured model of signaling, regulation, and system-wide interaction across gut, immune, and brain networks. Begin with the path that matches how you want to use the framework.</p>
+    <h1 class="hero-title">Public Science Resource —<br><em>Translating Autism Biology<br>for Families, Clinicians &amp; Researchers</em></h1>
+    <div class="hero-tagline">Systems biology · Clinical translation · Open access</div>
+    <p class="hero-sub">A structured, evidence-based resource built around the biology of autism — from molecular origins and immune dysregulation to clinical intervention pathways and active research. Select a section below to begin.</p>
     <div class="hero-stats">
-      <span class="stat-pill">1 core model</span>
-      <span class="stat-pill">3 audience paths</span>
-      <span class="stat-pill">11 core pages</span>
-      <span class="stat-pill">shared canonical framework</span>
+      <span class="stat-pill">18 documents</span>
+      <span class="stat-pill">Systems biology framework</span>
+      <span class="stat-pill">Clinical trial in development</span>
+      <span class="stat-pill">Open access</span>
     </div>
-    <div class="hero-actions">
-      <a class="hero-btn secondary" href="01_Molecular_Origins_Biology_of_Autism.html">Start Here — Molecular Origins</a>
-      <a class="hero-btn secondary" href="02_Cascade_Map_Biology_of_Autism.html">Cascade Map</a>
-      <a class="hero-btn secondary" href="05_Metabolic_Pathways_Map_Biology_of_Autism.html">Molecular Pathways Map</a>
-      <a class="hero-btn secondary" href="#start-here">Choose Your Path Below</a>
-    </div>
-</div>
+  </div>
 </header>
 
 <main class="main-wrap">
-  
+
+<div class="hub-section">
+  <div class="hub-label">Resource sections</div>
+  <div class="hub-spokes">
+
+    <a class="spoke-card" href="01_Molecular_Origins_Biology_of_Autism.html">
+      <div class="spoke-stripe teal"></div>
+      <div class="spoke-eyebrow">18 documents · All audiences</div>
+      <h2 class="spoke-title">Biology of Autism</h2>
+      <p class="spoke-desc">A systems-biology framework explaining how immune activation, metabolic disruption, and neuroinflammation interact to produce the features of autism. Covers molecular origins through clinical intervention logic.</p>
+      <div class="spoke-cta">Enter the suite →</div>
+    </a>
+
+    <a class="spoke-card coming-soon" href="imig/index.html">
+      <div class="spoke-stripe gold"></div>
+      <div class="spoke-badge">In development</div>
+      <div class="spoke-eyebrow">Clinical trial · IMIG therapy</div>
+      <h2 class="spoke-title">IMIG Clinical Trial</h2>
+      <p class="spoke-desc">Intramuscular immunoglobulin therapy for immune-mediated autism subgroups. The scientific rationale, trial design, and pathway to a funded clinical study — built on Fourie &amp; Armstrong 2024.</p>
+      <div class="spoke-cta">Coming soon →</div>
+    </a>
+
+    <a class="spoke-card coming-soon" href="research/index.html">
+      <div class="spoke-stripe navy"></div>
+      <div class="spoke-badge">In development</div>
+      <div class="spoke-eyebrow">Research articles</div>
+      <h2 class="spoke-title">Research Articles</h2>
+      <p class="spoke-desc">Deep-dive articles on adjacent topics: glyphosate and the microbiome, maternal immune activation, the cholinergic-somatostatin axis, sulphation and Tylenol, and more.</p>
+      <div class="spoke-cta">Coming soon →</div>
+    </a>
+
+  </div>
+</div>
+
+
 <section class="intro-block" style="margin-bottom: 28px;">
   <p>
     The Biology of Autism suite presents a systems-based model of autism as a cascade of interconnected biological events — beginning with upstream immune and metabolic pressures, progressing through a series of reinforcing disruptions, and ultimately forming a self-sustaining cycle that helps explain not only how autism emerges, but why it persists.
@@ -909,8 +1032,8 @@ html { background: #0f2342; }
     <div class="footer-top">
       <div>
         <p class="footer-brand">Decoding Autism Now</p>
-        <h2 class="footer-title">Biology of Autism — A Systems Framework for Understanding Autism</h2>
-        <p class="footer-tagline">From Molecular Origins to System-Level Interventions</p>
+        <h2 class="footer-title">Decoding Autism Now — Public Science Resource</h2>
+        <p class="footer-tagline">Translating autism biology for families, clinicians, and researchers. Open access, systems-biology framework, clinical translation.</p>
       </div>
       <div class="footer-actions">
         <div class="footer-links">
