@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biology of Autism — Unlocking the Somatostatin Brake | Decoding Autism Now</title>
+<meta property="og:title" content="Biology of Autism — Unlocking the Somatostatin Brake | Decoding Autism Now">
+<meta property="og:description" content="The somatostatin brake cannot be pushed through — it must be released. A six-layer infrastructure repair strategy, grounded in published biochemistry and neuroimmunology, for restoring the G-protein cascade before any peptide or immunological intervention can work.">
+<meta property="og:image" content="https://decodingautismnow.com/images/OG-04B.png">
+<meta property="og:url" content="https://decodingautismnow.com/04B_Unlocking_the_Brake_Biology_of_Autism.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Biology of Autism — Unlocking the Somatostatin Brake | Decoding Autism Now">
+<meta name="twitter:description" content="The somatostatin brake cannot be pushed through — it must be released. A six-layer infrastructure repair strategy for restoring the G-protein cascade.">
+<meta name="twitter:image" content="https://decodingautismnow.com/images/OG-04B.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy:#0f2342;
+    --teal:#1e6b72;
+    --teal-light:#2a9da6;
+    --gold:#c8923a;
+    --gold-light:#e8b86d;
+    --cream:#faf7f2;
+    --warm-white:#ffffff;
+    --text-dark:#1a1a2e;
+    --text-mid:#3d4560;
+    --text-light:#6b7494;
+    --rule:#d8cfc4;
+    --accent-bg:#eef8f9;
+    --gold-bg:#fdf6ec;
+    --tag-bg:rgba(30,107,114,0.08);
+    --red:#c0392b;
+    --red-bg:#fff8f7;
+  }
+
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; background:#0f2342; }
+  body {
+    font-family:'Source Serif 4', Georgia, serif;
+    background:var(--cream);
+    color:var(--text-dark);
+    font-size:17px;
+    line-height:1.78;
+  }
+
+  /* TOPBAR */
+  .topbar {
+    position:fixed; top:0; left:0; right:0; z-index:1000;
+    background:var(--navy); border-bottom:2px solid var(--gold);
+  }
+  .topbar-inner {
+    max-width:960px; margin:0 auto; padding:10px 20px;
+    display:flex; justify-content:space-between; align-items:center; gap:18px;
+    flex-direction:row !important; flex-wrap:nowrap !important;
+  }
+  .topbar-brand {
+    font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em;
+    text-transform:uppercase; color:var(--teal-light); margin-bottom:2px;
+  }
+  .topbar-title {
+    font-family:'Source Serif 4', serif; font-size:13px; font-weight:600;
+    color:#fff; line-height:1.2; white-space:nowrap; overflow:hidden;
+    text-overflow:ellipsis; max-width:70vw;
+  }
+
+  .ham-btn {
+    background:none; border:1px solid rgba(255,255,255,.28); border-radius:4px;
+    padding:6px 10px; cursor:pointer; flex-shrink:0; line-height:0;
+  }
+  .ham-btn:hover { border-color:rgba(255,255,255,.55); }
+  .ham-label {
+    font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.12em;
+    text-transform:uppercase; color:rgba(255,255,255,.85); margin-right:7px; vertical-align:middle;
+  }
+  .ham-bars { display:inline-flex; flex-direction:column; vertical-align:middle; gap:4px; }
+  .ham-bars span { display:block; width:18px; height:2px; background:#fff; border-radius:2px; }
+
+  .nav-dim {
+    display:none; position:fixed; inset:0; z-index:997; background:rgba(15,35,66,.40);
+  }
+  .nav-dim.open { display:block; }
+
+  .nav-overlay {
+    display:none; position:fixed; top:57px; left:0; z-index:998;
+    background:#fff; border-right:2px solid var(--gold); border-bottom:2px solid var(--gold);
+    box-shadow:4px 4px 24px rgba(15,35,66,.16); overflow-y:auto;
+    max-height:calc(100vh - 57px); width:560px; padding:24px 32px 36px;
+  }
+  .nav-overlay.open { display:block; }
+  .nav-cols { display:grid; grid-template-columns:1fr 1fr; gap:0 40px; }
+  .nav-group { margin-bottom:20px; }
+  .nav-group-label {
+    font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--teal); margin-bottom:8px;
+    padding-bottom:5px; border-bottom:1px solid var(--rule);
+  }
+  .nav-group a {
+    display:block; font-family:'Source Serif 4', serif; font-size:13px;
+    color:var(--text-dark); text-decoration:none; padding:5px 0;
+    border-bottom:1px solid rgba(216,207,196,.35); transition:color .12s;
+  }
+  .nav-group a:last-child { border-bottom:none; }
+  .nav-group a:hover { color:var(--teal); }
+  .nav-group a.current { color:var(--teal); font-weight:600; }
+
+  /* HEADER */
+  .site-header {
+    margin-top:57px; background:var(--navy); color:#fff; position:relative; overflow:hidden;
+  }
+  .header-stripe {
+    height:5px; background:linear-gradient(90deg,var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%);
+  }
+  .header-inner {
+    max-width:960px; margin:0 auto; padding:70px 20px 40px; position:relative; z-index:1;
+  }
+  .header-eyebrow {
+    font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.22em;
+    text-transform:uppercase; color:var(--teal-light); margin-bottom:12px;
+  }
+  .header-title {
+    font-family:'Playfair Display', serif; font-size:clamp(2rem,4.4vw,3rem);
+    line-height:1.12; margin-bottom:10px; color:#fff; font-weight:600;
+  }
+  .header-title .accent-line {
+    display:block; color:var(--gold-light); font-style:italic; font-weight:500;
+  }
+  .header-sub {
+    max-width:640px; color:rgba(255,255,255,.68); font-style:italic; font-weight:300;
+    line-height:1.6; margin-bottom:18px; font-size:1rem;
+  }
+  .header-note {
+    display:inline-block; margin-top:14px; font-family:'DM Mono', monospace; font-size:9px;
+    letter-spacing:.14em; text-transform:uppercase; color:rgba(232,184,109,.82);
+    text-decoration:none; border-bottom:1px solid rgba(232,184,109,.3);
+  }
+  .header-note:hover { border-bottom-color:rgba(232,184,109,.75); }
+  #framework-disclaimer { scroll-margin-top:160px; }
+
+  /* FRAMEWORK NOTICE */
+  .framework-notice { background:#fffbf2; border-top:1px solid rgba(200,146,58,0.25); border-bottom:1px solid rgba(200,146,58,0.25); }
+  .framework-notice-inner { max-width:900px; margin:0 auto; padding:20px 40px; display:flex; gap:16px; align-items:flex-start; }
+  .framework-notice-icon {
+    flex-shrink:0; margin-top:2px; width:20px; height:20px; border-radius:50%;
+    background:rgba(200,146,58,0.15); border:1px solid rgba(200,146,58,0.4);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'DM Mono', monospace; font-size:11px; font-weight:500; color:var(--gold); line-height:1;
+  }
+  .framework-notice-text { font-family:'Source Serif 4', serif; font-size:.88rem; color:#6b5a3a; line-height:1.65; }
+  .framework-notice-text strong { color:#4a3a1e; font-weight:600; }
+  .framework-notice-text a { color:var(--teal); text-decoration:none; border-bottom:1px solid rgba(30,107,114,0.3); }
+  .framework-notice-text a:hover { color:var(--navy); border-bottom-color:var(--navy); }
+
+  /* TOC */
+  .toc-bar { background:var(--warm-white); border-bottom:2px solid var(--rule); }
+  .toc-inner { max-width:900px; margin:0 auto; padding:24px 40px; }
+  .toc-label { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--text-light); margin-bottom:14px; }
+  .toc-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:4px 24px; }
+  .toc-link { font-family:'Source Serif 4', serif; font-size:.83rem; color:var(--teal); text-decoration:none; display:flex; align-items:baseline; gap:8px; padding:3px 0; transition:color .15s; }
+  .toc-link:hover { color:var(--navy); }
+  .toc-badge { font-family:'DM Mono', monospace; font-size:10px; color:var(--gold); flex-shrink:0; min-width:28px; }
+
+  /* MAIN */
+  .main-wrap { max-width:900px; margin:0 auto; padding:60px 40px 80px; }
+  .cascade-section { margin-bottom:64px; scroll-margin-top:20px; }
+  .section-header { display:flex; align-items:flex-start; gap:18px; margin-bottom:28px; padding-bottom:20px; border-bottom:2px solid var(--rule); }
+  .level-badge {
+    font-family:'DM Mono', monospace; font-size:11px; font-weight:500;
+    background:var(--navy); color:#fff; border-radius:4px; padding:5px 10px;
+    flex-shrink:0; margin-top:4px; letter-spacing:.08em; white-space:nowrap;
+  }
+  .level-badge.teal { background:var(--teal); }
+  .level-badge.gold { background:var(--gold); }
+  h2.section-title { font-family:'Playfair Display', Georgia, serif; font-size:1.55rem; font-weight:700; color:var(--navy); line-height:1.25; margin-bottom:6px; }
+  .section-subtitle { font-style:italic; font-weight:300; font-size:.95rem; color:var(--text-light); }
+
+  .node { background:var(--warm-white); border:1px solid var(--rule); border-radius:8px; padding:28px 32px; margin-bottom:20px; position:relative; }
+  .node::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; border-radius:8px 0 0 8px; background:var(--teal); }
+  .node.gold-accent::before { background:var(--gold); }
+  .node.navy-accent::before { background:var(--navy); }
+  .node.red-accent::before { background:var(--red); }
+  h3.node-title { font-family:'Playfair Display', Georgia, serif; font-size:1.1rem; font-weight:600; color:var(--navy); margin-bottom:14px; }
+  .node p { color:var(--text-mid); margin-bottom:12px; }
+  .node p:last-child { margin-bottom:0; }
+  .node strong { color:var(--navy); font-weight:600; }
+  .node em { color:var(--text-mid); }
+
+  .node ul, .node ol { margin:10px 0 14px 0; list-style:none; }
+  .node ul li, .node ol li { position:relative; padding-left:22px; margin-bottom:7px; color:var(--text-mid); font-size:.97rem; }
+  .node ul li::before { content:''; position:absolute; left:0; top:10px; width:7px; height:7px; border-radius:50%; background:var(--teal-light); }
+  .node ol { counter-reset:node-counter; }
+  .node ol li { counter-increment:node-counter; }
+  .node ol li::before { content:counter(node-counter); position:absolute; left:0; top:1px; font-family:'DM Mono', monospace; font-size:11px; color:var(--gold); font-weight:500; }
+
+  .callout { background:var(--accent-bg); border-left:3px solid var(--teal); border-radius:0 6px 6px 0; padding:14px 18px; margin:16px 0; font-size:.97rem; }
+  .callout p { color:var(--text-mid)!important; margin-bottom:0!important; }
+  .callout.gold { background:var(--gold-bg); border-left-color:var(--gold); }
+  .callout.navy { background:rgba(15,35,66,.06); border-left-color:var(--navy); }
+
+  /* CASE BOX */
+  .case-box {
+    background:var(--navy); color:#fff; border-radius:8px;
+    padding:28px 32px; margin:20px 0; position:relative;
+  }
+  .case-box::before { content:''; position:absolute; left:0; top:0; bottom:0; width:4px; border-radius:8px 0 0 8px; background:var(--gold); }
+  .case-box h3 { font-family:'Playfair Display', serif; font-size:1.05rem; font-weight:600; color:var(--gold-light); margin-bottom:14px; }
+  .case-box p { color:rgba(255,255,255,.80); font-size:.95rem; line-height:1.72; margin-bottom:10px; }
+  .case-box p:last-child { margin-bottom:0; }
+  .case-box strong { color:#fff; }
+  .case-box em { color:rgba(255,255,255,.65); }
+  .case-box .case-label {
+    font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--teal-light); margin-bottom:10px; display:block;
+  }
+
+  /* LAYER TABLE */
+  .layer-grid { display:flex; flex-direction:column; gap:8px; margin:16px 0; }
+  .layer-row {
+    display:grid; grid-template-columns:140px 1fr 1fr;
+    gap:0; border:1px solid var(--rule); border-radius:6px; overflow:hidden;
+    background:var(--warm-white);
+  }
+  .layer-label {
+    font-family:'DM Mono', monospace; font-size:13px; font-weight:500; letter-spacing:.04em;
+    text-transform:uppercase; background:var(--navy); color:#fff;
+    padding:14px 16px; display:flex; flex-direction:column; justify-content:center; gap:4px;
+  }
+  .layer-label .ln { font-size:11px; color:var(--teal-light); letter-spacing:.1em; }
+  .layer-break {
+    padding:14px 16px; border-right:1px solid var(--rule);
+    font-size:.95rem; color:var(--text-mid); line-height:1.55;
+  }
+  .layer-fix {
+    padding:14px 16px;
+    font-size:.95rem; color:var(--text-mid); line-height:1.55;
+  }
+  .layer-fix strong { color:var(--teal); font-weight:600; }
+  .layer-hdr {
+    display:grid; grid-template-columns:140px 1fr 1fr; gap:0;
+    font-family:'DM Mono', monospace; font-size:12px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--text-dark); font-weight:500;
+    padding:10px 16px; margin-bottom:4px;
+  }
+  .layer-hdr span:first-child { padding-left:0; }
+
+  /* SEQUENCE FLOW */
+  .seq-flow { display:flex; flex-direction:column; gap:0; margin:16px 0; }
+  .seq-step {
+    display:flex; align-items:flex-start; gap:18px;
+    padding:18px 22px; background:var(--warm-white);
+    border:1px solid var(--rule); border-radius:0; margin-bottom:0;
+    border-bottom:none; position:relative;
+  }
+  .seq-step:first-child { border-radius:6px 6px 0 0; }
+  .seq-step:last-child { border-radius:0 0 6px 6px; border-bottom:1px solid var(--rule); }
+  .seq-step.active { background:var(--accent-bg); border-color:var(--teal-light); }
+  .seq-step.active + .seq-step { border-top-color:var(--teal-light); }
+  .seq-num {
+    font-family:'DM Mono', monospace; font-size:13px; font-weight:500;
+    color:var(--gold); flex-shrink:0; margin-top:2px; min-width:24px;
+  }
+  .seq-content h4 { font-family:'Playfair Display', serif; font-size:.98rem; font-weight:600; color:var(--navy); margin-bottom:5px; }
+  .seq-content p { color:var(--text-mid); font-size:.93rem; margin:0; line-height:1.6; }
+  .seq-arrow { text-align:center; font-family:'DM Mono', monospace; font-size:16px; color:var(--teal-light); padding:4px 0; letter-spacing:0; }
+
+  /* ATP CHAIN */
+  .atp-chain {
+    display:flex; align-items:center; gap:0; flex-wrap:wrap;
+    background:var(--warm-white); border:1px solid var(--rule); border-radius:8px;
+    padding:20px 24px; margin:16px 0; overflow:hidden;
+  }
+  .atp-node {
+    font-family:'DM Mono', monospace; font-size:11px; font-weight:500;
+    background:var(--navy); color:#fff; border-radius:4px;
+    padding:7px 12px; white-space:nowrap; letter-spacing:.04em;
+  }
+  .atp-node.red { background:var(--red); }
+  .atp-node.gold { background:var(--gold); }
+  .atp-node.teal { background:var(--teal); }
+  .atp-arrow {
+    font-family:'DM Mono', monospace; font-size:12px; color:var(--text-light);
+    padding:0 8px; flex-shrink:0;
+  }
+  .atp-label {
+    font-family:'Source Serif 4', serif; font-size:.8rem; color:var(--text-light);
+    font-style:italic; padding:0 4px; white-space:nowrap;
+  }
+
+  .pathway-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:14px; }
+  .tag { font-family:'DM Mono', monospace; font-size:11px; letter-spacing:.04em; background:var(--tag-bg); color:var(--teal); border:1px solid rgba(30,107,114,0.22); border-radius:3px; padding:3px 9px; }
+
+  .two-col { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px; }
+  .mini-card { background:var(--cream); border:1px solid var(--rule); border-radius:6px; padding:16px 18px; }
+  .mini-card-label { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.15em; text-transform:uppercase; color:var(--text-light); margin-bottom:6px; }
+  .mini-card p { font-size:.93rem; color:var(--text-mid); margin:0; }
+
+  .section-divider { display:flex; align-items:center; gap:14px; margin:60px 0 52px; }
+  .section-divider span { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--text-light); white-space:nowrap; }
+  .section-divider::before, .section-divider::after { content:''; flex:1; height:1px; background:var(--rule); }
+
+  /* EVIDENCE TABLE */
+  .ev-table { width:100%; border-collapse:collapse; margin:16px 0; font-size:.91rem; }
+  .ev-table th { font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.12em; text-transform:uppercase; color:var(--text-light); padding:10px 14px; border-bottom:2px solid var(--rule); text-align:left; background:var(--warm-white); }
+  .ev-table td { padding:12px 14px; border-bottom:1px solid var(--rule); color:var(--text-mid); vertical-align:top; line-height:1.55; }
+  .ev-table tr:last-child td { border-bottom:none; }
+  .ev-table tr:nth-child(even) td { background:rgba(250,247,242,.6); }
+  .ev-badge { font-family:'DM Mono', monospace; font-size:10px; padding:3px 8px; border-radius:3px; white-space:nowrap; }
+  .ev-confirmed { background:rgba(30,107,114,.12); color:var(--teal); border:1px solid rgba(30,107,114,.25); }
+  .ev-strong { background:rgba(200,146,58,.12); color:#8a5c1a; border:1px solid rgba(200,146,58,.3); }
+  .ev-mechanism { background:rgba(15,35,66,.08); color:var(--navy); border:1px solid rgba(15,35,66,.15); }
+
+  /* FOOTER */
+  .site-footer { background:var(--navy); }
+  .footer-stripe { height:5px; background:linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%); }
+  .footer-inner { max-width:1080px; margin:0 auto; padding:56px 44px 44px; }
+  .footer-top { display:grid; grid-template-columns:1.15fr 0.95fr; gap:34px; align-items:start; padding-bottom:30px; border-bottom:1px solid rgba(255,255,255,0.10); }
+  .footer-brand { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--teal-light); margin-bottom:14px; }
+  .footer-title { font-family:'Playfair Display', Georgia, serif; font-size:clamp(1.8rem, 3vw, 2.35rem); line-height:1.14; color:rgba(255,255,255,0.96); margin-bottom:14px; }
+  .footer-tagline { color:rgba(255,255,255,0.74); line-height:1.72; max-width:620px; font-size:.98rem; }
+  .footer-actions { display:flex; flex-direction:column; align-items:flex-end; gap:16px; }
+  .footer-links { display:flex; flex-wrap:wrap; gap:12px; justify-content:flex-end; }
+  .footer-link { text-decoration:none; color:rgba(255,255,255,0.88); border:1px solid rgba(255,255,255,0.16); border-radius:999px; padding:10px 16px; font-size:.96rem; font-weight:600; transition:all .15s ease; }
+  .footer-link:hover { color:var(--teal-light); border-color:var(--teal-light); background:rgba(42,157,166,0.10); }
+  .footer-bottom { padding-top:24px; display:flex; flex-direction:column; gap:10px; }
+  .footer-disclaimer { color:rgba(255,255,255,0.60); line-height:1.68; font-size:.9rem; max-width:620px; margin-left:auto; text-align:right; }
+  .footer-meta { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,0.24); }
+
+  @media (max-width:980px) {
+    .footer-top { grid-template-columns:1fr; }
+    .footer-actions { align-items:flex-start; }
+    .footer-links { justify-content:flex-start; }
+    .footer-disclaimer { margin-left:0; text-align:left; }
+  }
+  @media (max-width:760px) {
+    .header-inner, .framework-notice-inner, .main-wrap, .footer-inner, .toc-inner { padding-left:20px; padding-right:20px; }
+    .layer-row { grid-template-columns:1fr; }
+    .layer-label { border-radius:6px 6px 0 0; }
+    .layer-break { border-right:none; border-bottom:1px solid var(--rule); }
+    .layer-hdr { display:none; }
+    .atp-chain { flex-direction:column; gap:6px; align-items:flex-start; }
+    .two-col { grid-template-columns:1fr; }
+  }
+  @media (max-width:720px) {
+    .nav-overlay { width:100%; border-left:none; border-radius:0; padding:16px 20px 28px; }
+    .nav-cols { grid-template-columns:1fr; gap:0; }
+  }
+</style>
+
+  <script async src="https://plausible.io/js/pa-ENY3upsKD_JIVtSN73pjk.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="294ecd79-19fb-4267-9be2-a7c83d57274d"></script>
+</head>
+<body>
+
+<div class="nav-dim" id="navDim"></div>
+
+<nav class="nav-overlay" id="navOverlay" aria-label="Site navigation">
+  <div class="nav-cols">
+    <div>
+      <div class="nav-group">
+        <div class="nav-group-label">Foundation</div>
+        <a href="index.html">Home Hub</a>
+        <a href="01_Molecular_Origins_Biology_of_Autism.html">01 — Molecular Origins</a>
+        <a href="02_Cascade_Map_Biology_of_Autism.html">02 — Cascade Map</a>
+        <a href="03_Cascade_Explained_Biology_of_Autism.html">03 — Cascade Explained</a>
+        <a href="04_Gprotein_Cascade_Biology_of_Autism.html">04 — G-Protein Cascade</a>
+        <a href="04B_Unlocking_the_Brake_Biology_of_Autism.html" class="current">04B — Unlocking the Brake</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Pathways</div>
+        <a href="05_Metabolic_Pathways_Map_Biology_of_Autism.html">05 — Pathways Map</a>
+        <a href="06_Metabolic_Pathways_Explained_Biology_of_Autism.html">06 — Pathways Explained</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Testing</div>
+        <a href="07_Testing_Strategy_Biology_of_Autism.html">07 — Testing Strategy</a>
+        <a href="07B_Test_Reference_Biology_of_Autism.html">07B — Test Reference</a>
+        <a href="07C_Interpreting_Results_Biology_of_Autism.html">07C — Interpreting Results</a>
+        <a href="07D_Talking_to_Your_Doctor_Biology_of_Autism.html">07D — Talking to Your Doctor</a>
+        <a href="07R_Regressive_Autism_Testing_Biology_of_Autism.html">07R — Regression Testing</a>
+      </div>
+    </div>
+    <div>
+      <div class="nav-group">
+        <div class="nav-group-label">Interventions</div>
+        <a href="08_Intervention_Logic_Biology_of_Autism.html">08 — Intervention Logic</a>
+        <a href="14_Immunoglobulin_Therapy_Biology_of_Autism.html">14 — Immunoglobulin Therapy</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Context</div>
+        <a href="09_FAQ_Biology_of_Autism.html">09 — FAQ</a>
+        <a href="11_Vaccine_Question_Biology_of_Autism.html">11 — Vaccine Question</a>
+        <a href="12_Parents_Guide_Biology_of_Autism.html">12 — Parents Guide</a>
+        <a href="13_Clinician_Guide_Biology_of_Autism.html">13 — Clinician Guide</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Evidence</div>
+        <a href="10_Evidence_and_Citations_Biology_of_Autism.html">10 — Evidence &amp; Citations</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Other Sections</div>
+        <a href="imig/index.html">IMIG Clinical Trial</a>
+        <a href="imig/mechanism.html">— The Mechanism</a>
+        <a href="imig/evidence.html">— The Evidence</a>
+        <a href="imig/trial.html">— The Trial</a>
+        <a href="research/index.html">Research Articles</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <div class="topbar-brand">Decoding Autism Now</div>
+      <div class="topbar-title">Biology of Autism — Unlocking the Somatostatin Brake</div>
+    </div>
+    <button class="ham-btn" id="hamBtn" aria-label="Open navigation" aria-expanded="false">
+      <span class="ham-label">Menu</span>
+      <span class="ham-bars"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="header-stripe"></div>
+  <div class="header-inner">
+    <div class="header-eyebrow">Decoding Autism Now · Document 04B</div>
+    <h1 class="header-title">
+      Biology of Autism —
+      <span class="accent-line">Unlocking the Somatostatin Brake</span>
+    </h1>
+    <p class="header-sub">The brake cannot be pushed through — it must be released. A six-layer infrastructure repair strategy, grounded in published biochemistry and neuroimmunology, for restoring the G-protein cascade before any peptide or immunological intervention can work.</p>
+    <a href="#framework-disclaimer" class="header-note">See framework disclaimer below</a>
+  </div>
+</header>
+
+<nav class="toc-bar" aria-label="Section index">
+  <div class="toc-inner">
+    <p class="toc-label">Sections at a glance</p>
+    <div class="toc-grid">
+      <a class="toc-link" href="#why-push-fails"><span class="toc-badge">—</span>Why Pushing Harder Fails</a>
+      <a class="toc-link" href="#empirical-anchor"><span class="toc-badge">01</span>What the Evidence Shows</a>
+      <a class="toc-link" href="#six-layers"><span class="toc-badge">02</span>Six Layers of the Unlock</a>
+      <a class="toc-link" href="#caffeine-experiment"><span class="toc-badge">03</span>Caffeine &amp; Methylation</a>
+      <a class="toc-link" href="#sequencing"><span class="toc-badge">04</span>Strategic Sequencing</a>
+      <a class="toc-link" href="#imig-preparation"><span class="toc-badge">05</span>Preparing for IMIG</a>
+    </div>
+  </div>
+</nav>
+
+<main class="main-wrap">
+
+  <!-- WHY PUSH FAILS -->
+  <section class="cascade-section" id="why-push-fails">
+    <div class="section-header">
+      <span class="level-badge teal">The Problem</span>
+      <div>
+        <h2 class="section-title">Why Pushing Harder on the Brake Fails</h2>
+        <p class="section-subtitle">The companion document to the mechanism — this one is about the unlock</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <p><a href="04_Gprotein_Cascade_Biology_of_Autism.html" style="color:var(--teal);"><em>When the Signal Cannot Get Through</em></a> established the mechanism: somatostatin locks adenylyl cyclase via Gαi inhibition, the ATP/adenosine inverse relationship reinforces that lock, and PDE4 upregulation degrades whatever cAMP briefly escapes. The six breaking points together create a system where the regulatory peptides that should carry the reset signal — VIP, secretin, oxytocin — cannot transmit durably even when the peptides themselves are present and the receptors are intact.</p>
+      <p>This document addresses the next question: <strong>how do you release the lock?</strong></p>
+      <p>The instinctive answer is to stimulate harder — to administer more of the peptide, at higher doses, more frequently. The biology of the locked cascade tells us precisely why this approach fails and ultimately makes things worse. It is blocking the signal because <strong>chronic neuroinflammation is holding it elevated</strong>. The brake is engaged because the immune system is still in crisis mode — not because somatostatin is unaware that secretin or VIP is trying to get through. Pressing harder on a peptide reset against an actively maintained somatostatin block does not release the brake — it desensitizes the receptors trying to send the signal, consuming the very biological capacity that would be needed once the brake is eventually released.</p>
+      <div class="callout gold">
+        <p>The somatostatin lock is a biological response to neuroinflammatory conditions. It can only be released by addressing those conditions. This is the fundamental strategic reorientation that four decades of peptide trials failed to make — not because the researchers were wrong about the biology, but because the upstream driver had not yet been assembled into a coherent intervention target.</p>
+      </div>
+    </div>
+
+    <div class="node gold-accent">
+      <h3 class="node-title">The Distinction That Changes Everything</h3>
+      <p>There is a precise difference between two biological situations that look identical from the outside:</p>
+      <div class="two-col">
+        <div class="mini-card">
+          <p class="mini-card-label">Situation A: Absent peptide</p>
+          <p>The signaling peptide (secretin, VIP, oxytocin) is genuinely deficient. Administration of the peptide restores the signal. More peptide = more signal, durably.</p>
+        </div>
+        <div class="mini-card">
+          <p class="mini-card-label">Situation B: Locked infrastructure</p>
+          <p>The peptide is present. The receptor is present. But the second messenger infrastructure is locked. Administration of the peptide produces a brief, partial response. Repeated administration desensitizes receptors.</p>
+        </div>
+      </div>
+      <p style="margin-top:16px;">The secretin trial literature documents Situation B. The initial responses were real — the biology is responsive, the pathway works. The rapid attenuation was not a failure of the peptide; it was the signature of a locked infrastructure that could not sustain the signal it briefly generated. Distinguishing these two situations determines whether the intervention target is the peptide supply or the signaling infrastructure.</p>
+      <div class="pathway-tags">
+        <span class="tag">Somatostatin / SST</span><span class="tag">Gαi inhibition</span><span class="tag">Receptor desensitization</span><span class="tag">Infrastructure failure</span><span class="tag">Neuroinflammation</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>Forty Years of Evidence</span></div>
+
+  <!-- EMPIRICAL ANCHOR -->
+  <section class="cascade-section" id="empirical-anchor">
+    <div class="section-header">
+      <span class="level-badge">Step 01</span>
+      <div>
+        <h2 class="section-title">What the Published Evidence Shows</h2>
+        <p class="section-subtitle">The secretin trial literature and clinical neuroimmunology converge on the same infrastructure failure pattern</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <p>The G-protein cascade failure framework is not constructed from theory alone. The published clinical and biochemical literature provides convergent evidence for each breaking point — and the secretin trial record, read through an infrastructure-failure lens rather than a simple efficacy lens, provides the clearest available clinical signal that the failure is in the second messenger system, not in the peptides themselves.</p>
+      <p>The key evidence comes from three distinct bodies of research: the <strong>secretin and oxytocin trial literature</strong> documenting initial response with rapid attenuation; <strong>neuroimmunological characterization</strong> of the NK cell and T-cell activation phenotype present in a subset of autism cases; and <strong>established biochemistry</strong> linking chronic neuroinflammation to each of the six breaking points through independent mechanisms.</p>
+    </div>
+
+    <div class="node gold-accent">
+      <h3 class="node-title">The Secretin Trial Record: A Success Misread as a Failure</h3>
+      <p>Horvath and colleagues (1998, <em>Journal of Pediatrics</em>) reported striking improvements in three children with autism following intravenous secretin during routine endoscopy — improvements in eye contact, alertness, and expressive language that prompted a wave of controlled trials. The controlled trials found that the improvements did not sustain across repeated administrations and did not reach statistical significance in blinded protocols. The field concluded: secretin does not work.</p>
+      <p>The infrastructure-failure framework reframes what those trials actually showed. The consistent pattern in the early observational literature — genuine multi-domain improvement on first or early administration, progressive attenuation with repetition — is precisely the clinical fingerprint of a signaling system that can respond to a stimulatory input but cannot sustain the response. This is receptor desensitization in a context of inadequate downstream infrastructure: the GPCR receives the secretin signal, Gαs activates, adenylyl cyclase is briefly stimulated — but the somatostatin lock, PDE4 upregulation, and ATP depletion mean the resulting cAMP pulse is too brief and too small to complete PKA-dependent downstream work. Repeated stimulation without infrastructure repair leads to receptor internalization — a rational cellular adaptation to a signal the downstream system cannot process.</p>
+      <div class="callout gold">
+        <p>The secretin trials did not fail to show an effect. They showed an effect that attenuated — which is a different finding. The field asked "does it work?" The infrastructure-failure framework asks "why did it stop working?" The second question has a precise mechanistic answer.</p>
+      </div>
+    </div>
+
+    <div class="node navy-accent">
+      <h3 class="node-title">The Neuroimmune Phenotype: What NK Cell Elevation Tells Us</h3>
+      <p>A consistent finding in neuroimmunological characterization of autism subgroups is elevated NK cell activity and skewed T-cell activation profiles — a chronic immune activation pattern distinct from classical immunodeficiency. Vargas et al. (2005, <em>Annals of Neurology</em>) documented neuroinflammatory markers in post-mortem brain tissue including activated microglia and elevated cytokines. Connolly et al. and others have documented aberrant NK cell activity in subgroups of children with autism spectrum conditions.</p>
+      <p>This chronic neuroimmune activation is the upstream driver of the somatostatin lock. TNF-α, IL-1β, and IL-6 — the primary cytokines of this inflammatory state — each independently upregulate PDE4 through NF-κB signaling. The same cytokine burden drives microglial activation, depletes the cellular ATP pool through immune cell metabolic demand, and generates the adenosine accumulation that constitutes the second independent inhibitory input to adenylyl cyclase. The neuroimmune phenotype is not a parallel finding to the signaling failure — it is the upstream driver of it.</p>
+      <div class="callout">
+        <p>Chronic NK cell and T-cell activation → elevated TNF-α/IL-1β/IL-6 → simultaneous upregulation of PDE4 (degrades cAMP), depletion of ATP (removes AC substrate), and accumulation of adenosine (adds second Gαi inhibitory input to AC). Three convergent mechanisms, one upstream source.</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <h3 class="node-title">The Convergence Across Breaking Points</h3>
+      <p>Each of the six breaking points described in <a href="04_Gprotein_Cascade_Biology_of_Autism.html" style="color:var(--teal);"><em>When the Signal Cannot Get Through</em></a> is independently supported by published biochemistry:</p>
+      <ul>
+        <li><strong>BP1 — Membrane oxidation:</strong> Glutathione depletion and oxidative membrane damage in autism have been documented by Chauhan &amp; Chauhan (2006) and James et al. (2004, 2006). GSTP1 variant prevalence and its role in reduced Phase II detoxification capacity is established in the pharmacogenomics literature.</li>
+        <li><strong>BP2 — GTP depletion:</strong> Mitochondrial dysfunction in autism is one of the most replicated biochemical findings in the field; Frye &amp; Rossignol (2011, <em>Molecular Psychiatry</em>) provide a systematic review. GTP availability as a downstream constraint on G-protein activation follows directly from established purine biochemistry.</li>
+        <li><strong>BP3 — Somatostatin lock and adenosine accumulation:</strong> SST elevation under chronic inflammatory conditions is established in the neuroendocrinology literature. Adenosine A1 receptor-mediated adenylyl cyclase inhibition is fundamental receptor pharmacology (Fredholm et al., 2001, <em>Pharmacological Reviews</em>).</li>
+        <li><strong>BP4 — PDE4 upregulation:</strong> Cytokine-driven PDE4 upregulation via NF-κB is well established (Souness et al., 2000; Jin &amp; Bhatt, 1996). The self-reinforcing loop between NF-κB, PDE4, and cAMP-mediated NF-κB suppression is mechanistically documented in the inflammation literature.</li>
+        <li><strong>BP5 — PKA ATP limitation:</strong> ATP as the obligate phosphate donor for PKA is fundamental biochemistry. Mitochondrial ATP depletion under inflammatory conditions is independently documented.</li>
+        <li><strong>BP6 — BDNF Val66Met:</strong> The Val66Met variant's impairment of activity-dependent BDNF secretion is extensively characterized (Egan et al., 2003, <em>Cell</em>; Chen et al., 2006). Exercise-driven BDNF enhancement in Met carriers is documented by Leckie et al. and others.</li>
+      </ul>
+      <div class="pathway-tags">
+        <span class="tag">Horvath 1998</span><span class="tag">Vargas 2005</span><span class="tag">James 2004/2006</span><span class="tag">Frye &amp; Rossignol 2011</span><span class="tag">Fredholm 2001</span><span class="tag">Egan 2003</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>The Unlock Strategy</span></div>
+
+  <!-- SIX LAYERS -->
+  <section class="cascade-section" id="six-layers">
+    <div class="section-header">
+      <span class="level-badge teal">Step 02</span>
+      <div>
+        <h2 class="section-title">Six Layers of the Unlock — Infrastructure Repair by Breaking Point</h2>
+        <p class="section-subtitle">Each breaking point has a specific repair logic — and several share common interventions</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <p>The six breaking points identified in <a href="04_Gprotein_Cascade_Biology_of_Autism.html" style="color:var(--teal);"><em>When the Signal Cannot Get Through</em></a> each have a corresponding repair target. The unlock strategy is not a single intervention — it is a layered approach where each layer addresses a specific node of the cascade failure simultaneously. The power of the approach comes from the convergence: several of the interventions address multiple breaking points at once, meaning the infrastructure repair compounds rather than requiring six separate parallel tracks.</p>
+    </div>
+
+    <div class="layer-hdr">
+      <span>Breaking Point</span>
+      <span>What's Failing</span>
+      <span>Repair Target</span>
+    </div>
+    <div class="layer-grid">
+
+      <div class="layer-row">
+        <div class="layer-label">
+          <span class="ln">BP 1</span>
+          <span>Membrane Coupling</span>
+        </div>
+        <div class="layer-break">
+          Oxidative stress from glutathione depletion damages membrane phospholipids. GPCRs lose coupling efficiency — the receptor may bind the peptide but the conformational change that activates Gαs is blunted before the signal begins.
+        </div>
+        <div class="layer-fix">
+          <strong>NAC + Glycine + Sulforaphane</strong> — the three-arm glutathione strategy. NAC provides cysteine (rate-limiting precursor), glycine provides the third glutathione amino acid, sulforaphane activates Nrf2 to upregulate GSTP1 transcription. Reducing membrane lipid peroxidation directly restores GPCR coupling efficiency. For individuals with GSTP1 I105V homozygous variant, sulforaphane is essential — it cannot fix the enzyme's reduced efficiency but increases the number of enzyme copies made.
+        </div>
+      </div>
+
+      <div class="layer-row">
+        <div class="layer-label">
+          <span class="ln">BP 2</span>
+          <span>GTP Pool</span>
+        </div>
+        <div class="layer-break">
+          GTP is synthesized from ATP via NDPK. When chronic mitochondrial stress depletes cellular ATP, GTP availability falls proportionally. The G-protein cannot fully activate without adequate GTP, stalling the cascade at its second step.
+        </div>
+        <div class="layer-fix">
+          <strong>Mitochondrial support + Magnesium</strong> — restoring ATP production upstream restores the GTP pool derived from ATP. Mg²⁺-ATP is the biologically active form of ATP for NDPK. Coenzyme Q10 supports electron transport chain function. B12 (hydroxy form in MTRR-impaired individuals) supports methylation-dependent mitochondrial function. The upstream cascade repair (gut → immune → kynurenine → NAD⁺) is the foundational mitochondrial restoration.
+        </div>
+      </div>
+
+      <div class="layer-row">
+        <div class="layer-label">
+          <span class="ln">BP 3</span>
+          <span>Adenylyl Cyclase Lock</span>
+        </div>
+        <div class="layer-break">
+          <em>The central breaking point.</em> Somatostatin → Gαi → adenylyl cyclase suppression (primary lock). ATP→ADP→AMP→adenosine accumulation → A1 receptor → second independent Gαi input (secondary lock). Low ATP simultaneously removes the substrate adenylyl cyclase needs even if it were active. Triple convergence on one enzyme.
+        </div>
+        <div class="layer-fix">
+          <strong>Reduce upstream neuroinflammation</strong> — SST elevation is driven by chronic immune activation. Reducing IDO1-driven tryptophan depletion, NK cell/cytokine burden, and microglial activation allows somatostatin to fall toward basal levels. <strong>Restore adenine nucleotide pool</strong> via magnesium (myokinase cofactor), sulforaphane (reduces inflammatory ATP demand), and mitochondrial support. <strong>Adenosine receptor antagonism</strong> was historically compensated by caffeine — see Section 03. Sulforaphane + magnesium is the mechanism-matched replacement strategy.
+        </div>
+      </div>
+
+      <div class="layer-row">
+        <div class="layer-label">
+          <span class="ln">BP 4</span>
+          <span>PDE4 / cAMP Degradation</span>
+        </div>
+        <div class="layer-break">
+          Neuroinflammatory cytokines — TNF-α, IL-1β, IL-6 — upregulate PDE4, which degrades cAMP. Whatever cAMP briefly escapes the somatostatin lock is immediately degraded before it can activate PKA sufficiently. The self-reinforcing loop: cytokines upregulate PDE4 → cAMP cannot sustain PKA activation → PKA cannot suppress NF-κB → NF-κB drives more cytokines.
+        </div>
+        <div class="layer-fix">
+          <strong>NF-κB suppression</strong> to reduce the cytokine-driven PDE4 upregulation. Primary interventions: sulforaphane (Nrf2/NF-κB suppressor, crosses the blood-brain barrier), butyrate (HDAC inhibitor, NF-κB suppressor, microglial calming agent), omega-3 EPA/DHA (reduces VLDL-triglyceride inflammatory substrate, specialized pro-resolving mediators). Luteolin targets both NF-κB and CD38 (the primary NAD⁺ consumer during immune activation). Breaking the NF-κB/PDE4 loop extends cAMP signal duration, allowing more complete PKA activation from whatever cAMP the partially unlocked AC generates.
+        </div>
+      </div>
+
+      <div class="layer-row">
+        <div class="layer-label">
+          <span class="ln">BP 5</span>
+          <span>PKA Phosphorylation</span>
+        </div>
+        <div class="layer-break">
+          Even when cAMP reaches PKA, PKA requires ATP to phosphorylate its target proteins. The same depleted ATP pool that constrained adenylyl cyclase in BP3 limits PKA's phosphorylation capacity. Energy deficit compounds signaling deficit at every step.
+        </div>
+        <div class="layer-fix">
+          <strong>Same as BP2 and BP3</strong> — ATP pool restoration is cumulative across all three breaking points. This is why the mitochondrial and magnesium interventions carry triple-level mechanistic weight. Mg²⁺ is the cofactor for PKA-mediated phosphorylation reactions as well as the myokinase salvage reaction (2 ADP → ATP + AMP). Magnesium glycinate or malate provides both the Mg²⁺ cofactor and additional glycine (glutathione precursor, NMDA co-agonist) from the glycinate form.
+        </div>
+      </div>
+
+      <div class="layer-row">
+        <div class="layer-label">
+          <span class="ln">BP 6</span>
+          <span>BDNF Consolidation</span>
+        </div>
+        <div class="layer-break">
+          Even when a brief signaling improvement occurs, structural encoding requires activity-dependent BDNF secretion via PKA→CREB signaling. The BDNF Val66Met variant impairs this secretion pathway. Brief functional gains fade not because they were illusory, but because the mechanism for making them permanent is constitutionally limited.
+        </div>
+        <div class="layer-fix">
+          <strong>Aerobic exercise</strong> — specifically shown to enhance activity-dependent BDNF secretion in Val66Met carriers, partially compensating for the variant's impairment of BDNF release. This is the one breaking point where no supplement fills the gap — the exercise-driven BDNF pathway is distinct from the secretion pathway impaired by Val66Met. <strong>Reducing neuroinflammatory suppression of BDNF</strong> is the complementary pharmacological angle: chronic neuroinflammation suppresses BDNF expression independently of Val66Met; reducing the inflammatory burden through the other five layers directly improves BDNF availability.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="node gold-accent" style="margin-top:24px;">
+      <h3 class="node-title">The Convergence: Why Sulforaphane Carries Triple Weight</h3>
+      <p>Several interventions address multiple breaking points simultaneously, which is why the protocol compounds rather than requiring parallel independent tracks. Sulforaphane is the most striking example of this convergence:</p>
+      <ul>
+        <li><strong>BP1 (membrane coupling):</strong> Nrf2 activation upregulates GSTP1 → increased glutathione conjugation → reduced membrane lipid peroxidation → restored GPCR coupling efficiency</li>
+        <li><strong>BP3 (adenosine axis):</strong> NF-κB suppression reduces neuroinflammatory ATP demand → less ATP depletion → less adenosine accumulation → reduced secondary A1-mediated adenylyl cyclase inhibition</li>
+        <li><strong>BP4 (PDE4 loop):</strong> NF-κB suppression reduces TNF-α/IL-1β/IL-6 production → reduced PDE4 upregulation → longer cAMP signal duration</li>
+        <li><strong>Blood-brain barrier penetration:</strong> Unlike most anti-inflammatory compounds, sulforaphane crosses the BBB to act on neuroinflammation directly at the central level where the somatostatin brake is engaged</li>
+      </ul>
+      <p>This is why sulforaphane ranks as the highest-priority addition to any protocol targeting the somatostatin lock — it is not one tool for one breaking point but a single compound engaging three of the six simultaneously.</p>
+      <div class="pathway-tags">
+        <span class="tag">Sulforaphane</span><span class="tag">Nrf2</span><span class="tag">NF-κB</span><span class="tag">GSTP1</span><span class="tag">PDE4</span><span class="tag">BBB penetration</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>Caffeine, Adenosine, and the Methylation Connection</span></div>
+
+  <!-- CAFFEINE EXPERIMENT -->
+  <section class="cascade-section" id="caffeine-experiment">
+    <div class="section-header">
+      <span class="level-badge gold">Step 03</span>
+      <div>
+        <h2 class="section-title">Caffeine as Adenosine Antagonist — and the Methylation Cycle Connection</h2>
+        <p class="section-subtitle">Two converging mechanisms that generate excess adenosine — and why the methylation cycle is a largely overlooked source</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <p>Caffeine's pharmacological mechanism is well established: it is a competitive non-selective antagonist at adenosine A1 and A2A receptors (Fredholm et al., 2001, <em>Pharmacological Reviews</em>). At A1 receptors — which couple to inhibitory Gαi proteins — adenosine suppresses adenylyl cyclase, reducing cAMP production. Caffeine blocks this inhibitory input, partially restoring adenylyl cyclase responsiveness to stimulatory inputs. At A2A receptors in striatum and prefrontal circuits, caffeine enhances dopaminergic signaling through the cAMP pathway, with well-documented effects on attention, processing speed, and executive function (Fisone et al., 2004, <em>European Journal of Pharmacology</em>).</p>
+      <p>The relevance to the somatostatin brake is direct: adenosine is one of the two simultaneous inhibitory inputs holding adenylyl cyclase suppressed at Breaking Point 3. The somatostatin Gαi lock is the first; accumulated adenosine activating A1 receptors is the second. Caffeine addresses the second of these two locks. It does not touch the somatostatin lock, the PDE4 upregulation, or the membrane oxidation at BP1. This is why caffeine's benefit, while real, is partial — it lifts one of three simultaneous brakes on adenylyl cyclase, leaving the other two in place.</p>
+    </div>
+
+    <div class="node gold-accent">
+      <h3 class="node-title">Where Adenosine Comes From: The Two Sources</h3>
+      <p>Understanding the unlock strategy for the adenosine axis requires understanding that adenosine excess in neuroinflammatory conditions has two distinct generating mechanisms — and both converge on the same adenylyl cyclase inhibitory node.</p>
+      <p><strong>Source 1 — ATP catabolism under inflammatory ATP depletion:</strong> The well-characterized degradation chain ATP → ADP → AMP → adenosine. Chronic neuroinflammation drives elevated ATP consumption by activated immune cells and stressed neurons, simultaneously impairing mitochondrial ATP regeneration. The result is a state of chronic adenosine excess from the energy side of purine metabolism.</p>
+      <p><strong>Source 2 — The methylation cycle: SAH hydrolysis to adenosine + homocysteine.</strong> This source is less widely discussed in the neuroinflammation context but is biochemically significant. S-adenosylhomocysteine (SAH) — the byproduct of every methylation reaction — is hydrolyzed by adenosylhomocysteinase (AHCY) to produce adenosine and homocysteine. When the methylation cycle is burdened — elevated SAM turnover, impaired SAH clearance, or constitutional AHCY insufficiency — SAH accumulates, and the AHCY-generated adenosine load increases proportionally.</p>
+      <div class="callout gold">
+        <p>The methylation cycle generates adenosine as a direct byproduct of every methyltransferase reaction. In individuals with impaired SAH clearance — whether from AHCY variants, MTRR impairment, or high methylation demand — this represents a constitutionally elevated adenosine load that adds to the neuroinflammatory adenosine burden at the same A1 receptor node. Two independent sources, one shared inhibitory target.</p>
+      </div>
+    </div>
+
+    <div class="node navy-accent">
+      <h3 class="node-title">The Methylation Cycle as an Adenosine Source — The Biochemistry</h3>
+      <p>The mechanistic chain is well established in the methylation literature (Cantoni, 1975; Chiang et al., 1996, <em>FASEB Journal</em>). SAM (S-adenosylmethionine) donates its methyl group in any methyltransferase reaction, producing SAH. SAH is then hydrolyzed by AHCY:</p>
+
+      <div class="atp-chain">
+        <span class="atp-node">SAM</span>
+        <span class="atp-arrow">→ (methylation) →</span>
+        <span class="atp-node">SAH</span>
+        <span class="atp-arrow">→ (AHCY) →</span>
+        <span class="atp-node red">Adenosine</span>
+        <span class="atp-arrow">+</span>
+        <span class="atp-node" style="background:var(--text-mid);">Homocysteine</span>
+      </div>
+
+      <p style="margin-top:16px;">The reaction is thermodynamically reversible and strongly favors SAH synthesis — meaning efficient clearance of both adenosine and homocysteine is required to drive it in the hydrolysis direction. When adenosine is not cleared efficiently (e.g., adenosine deaminase insufficiency, impaired cellular uptake) or homocysteine remethylation is blocked (MTRR variants, B12 insufficiency), SAH accumulates. Elevated SAH is itself a potent inhibitor of virtually all methyltransferase enzymes — creating a methylation stall that further elevates SAH, which further inhibits clearance, in a self-reinforcing loop first described by Cantoni and elaborated by James et al. in the autism methylation literature (James et al., 2004, <em>American Journal of Clinical Nutrition</em>; James et al., 2006, <em>American Journal of Medical Genetics</em>).</p>
+      <p>The adenosine generated by this pathway contributes directly to A1 receptor activation and adenylyl cyclase inhibition. In individuals with constitutionally elevated methylation cycle throughput — or impaired SAH clearance — the methylation cycle is generating a baseline adenosine load that operates independently of the neuroinflammatory ATP catabolism source. Both sources arrive at the same inhibitory receptor.</p>
+      <div class="callout">
+        <p>The therapeutic implication: supporting SAH clearance — through adequate AHCY cofactors (Mg²⁺, zinc), methylation cycle support (hydroxy-B12, low-dose methylfolate, TMG for BHMT backup) and avoiding agents that push SAH accumulation further — addresses the methylation-origin adenosine source, complementing the anti-inflammatory strategy targeting the ATP catabolism source.</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <h3 class="node-title">The Partial Benefit Problem — and What Full Restoration Requires</h3>
+      <p>Caffeine's documented benefit in autism-spectrum neuroinflammatory phenotypes is consistent with what the model predicts from partial adenosine antagonism. A 2021 review by Bhatt et al. (<em>Journal of Caffeine and Adenosine Research</em>) summarized the mechanism through which adenosine A2A receptor blockade improves prefrontal dopaminergic signaling via cAMP/PKA — the same pathway the somatostatin lock suppresses. Caffeine's benefit is real and pharmacologically coherent, but it is upstream-receptor-level compensation, not infrastructure repair.</p>
+      <p>The critical limitation: caffeine blocks the receptor that adenosine activates, but it does not reduce adenosine generation. The neuroinflammatory ATP catabolism continues generating adenosine. The methylation cycle SAH hydrolysis continues generating adenosine. The A1/A2A receptors are blocked from signaling — but the biochemical conditions that make adenosine excess a chronic problem are unchanged. This is why caffeine's benefit, though sustained over years, is partial rather than complete, and why it cannot substitute for the upstream interventions that address the adenosine generation itself.</p>
+      <p>Full restoration requires both: <strong>reducing adenosine generation</strong> (sulforaphane/anti-inflammatory to reduce ATP catabolism; methylation cycle support to reduce SAH-origin adenosine) and <strong>restoring the AC substrate pool</strong> (magnesium for myokinase salvage, mitochondrial support for ATP regeneration). Caffeine remains a rational bridging strategy while these upstream interventions are being established — but the upstream work is what the brake ultimately requires.</p>
+
+      <div class="atp-chain">
+        <span class="atp-node">ATP</span>
+        <span class="atp-arrow">→</span>
+        <span class="atp-node">ADP → AMP</span>
+        <span class="atp-arrow">→</span>
+        <span class="atp-node red">Adenosine</span>
+        <span class="atp-arrow">←</span>
+        <span class="atp-node" style="background:var(--text-mid);">SAH → AHCY</span>
+      </div>
+      <p style="margin-top:14px; font-size:.9rem; color:var(--text-light); font-style:italic;">Both pathways converge on the same adenosine pool. Caffeine blocks the downstream receptor. Infrastructure repair addresses both upstream sources.</p>
+
+      <div class="pathway-tags">
+        <span class="tag">Caffeine</span><span class="tag">Adenosine A1/A2A</span><span class="tag">SAH / AHCY</span><span class="tag">Methylation cycle</span><span class="tag">Homocysteine</span><span class="tag">Fredholm 2001</span><span class="tag">James 2004/2006</span><span class="tag">Cantoni 1975</span>
+      </div>
+    </div>
+
+    <div class="node">
+      <h3 class="node-title">Where in the Chain Each Intervention Acts</h3>
+      <p>The degradation chain, and where each compensatory intervention acts, maps as follows:</p>
+
+      <div class="atp-chain">
+        <span class="atp-node">ATP</span>
+        <span class="atp-arrow">→</span>
+        <span class="atp-node">ADP</span>
+        <span class="atp-arrow">→</span>
+        <span class="atp-node">AMP</span>
+        <span class="atp-arrow">→</span>
+        <span class="atp-node red">Adenosine</span>
+        <span class="atp-arrow">→</span>
+        <span class="atp-label">A1/A2A activation → Gαi → AC inhibition</span>
+      </div>
+
+      <p style="margin-top:16px;">Caffeine acts at the <strong>rightmost node</strong> — the receptor. It blocks where adenosine signals, but leaves adenosine production from both upstream sources (ATP catabolism and SAH hydrolysis) entirely unchanged. The sulforaphane/magnesium strategy acts at the <strong>leftmost node</strong> — reducing the neuroinflammatory ATP demand that generates the excess adenosine in the first place. The deeper the intervention in the chain, the more complete the compensation — but the further upstream the intervention, the longer the timeline to effect. This is why bridging with caffeine while building the upstream infrastructure is a rational transitional approach rather than an either/or choice.</p>
+
+      <div class="atp-chain" style="margin-top:12px;">
+        <span class="atp-node teal" style="font-size:9px; padding:6px 10px;">Sulforaphane<br>Reduces ATP demand</span>
+        <span class="atp-arrow">→</span>
+        <span class="atp-node" style="font-size:10px;">Less ATP<br>depleted</span>
+        <span class="atp-arrow">→</span>
+        <span class="atp-node teal" style="font-size:9px; padding:6px 10px;">Mg²⁺ Myokinase<br>2ADP→ATP+AMP</span>
+        <span class="atp-arrow">→</span>
+        <span class="atp-node" style="font-size:10px;">Less<br>adenosine</span>
+        <span class="atp-arrow">→</span>
+        <span class="atp-node teal" style="font-size:9px; padding:6px 10px; white-space:normal; max-width:120px; text-align:center;">Less A1/A2A<br>inhibition of AC</span>
+      </div>
+      <p style="margin-top:14px; font-size:.9rem; color:var(--text-light); font-style:italic;">Upstream repair addresses the source. Caffeine addresses the receptor. Both are valid positions in the chain — the upstream work is what produces lasting change.</p>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>Strategic Sequencing</span></div>
+
+  <!-- SEQUENCING -->
+  <section class="cascade-section" id="sequencing">
+    <div class="section-header">
+      <span class="level-badge">Step 04</span>
+      <div>
+        <h2 class="section-title">Strategic Sequencing: Infrastructure First, Then Signal</h2>
+        <p class="section-subtitle">Why the order of interventions matters as much as the interventions themselves</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <p>The six-layer unlock strategy described in Section 02 is not a list of parallel independent interventions — it is a <strong>staged sequence</strong> where earlier layers create the conditions that make later layers more effective. Understanding the sequencing argument is critical, because attempting to push through peptide-based signaling before the infrastructure is prepared repeats the failure mode of the secretin trials.</p>
+    </div>
+
+    <div class="seq-flow">
+      <div class="seq-step active">
+        <span class="seq-num">①</span>
+        <div class="seq-content">
+          <h4>Reduce upstream neuroinflammation — the SST driver</h4>
+          <p>Somatostatin rises in response to chronic immune activation. The upstream immune cascade — gut dysbiosis → mucosal immune failure → systemic immune activation → IDO1-driven tryptophan depletion → kynurenine/QUIN burden — is what is holding somatostatin elevated. Addressing gut ecology (butyrate, zinc carnosine, Bifidobacterium repletion, Vitamin D for VDR-driven sIgA restoration) reduces the chronic antigen translocation that feeds systemic immune activation. This is the foundational layer — without addressing it, every downstream intervention operates against an ongoing inflammatory signal that continuously reasserts the somatostatin lock.</p>
+        </div>
+      </div>
+      <div class="seq-arrow">↓</div>
+      <div class="seq-step active">
+        <span class="seq-num">②</span>
+        <div class="seq-content">
+          <h4>Repair the glutathione/membrane layer — the GPCR coupling foundation</h4>
+          <p>NAC + glycine + sulforaphane running simultaneously addresses membrane oxidation (BP1) and begins reducing the neuroinflammatory cytokine burden driving PDE4 (BP4). This layer can begin immediately — it does not require waiting for gut restoration. It also directly addresses any constitutional glutathione impairment from GSTP1 variants, which makes it both foundational and genetically targeted.</p>
+        </div>
+      </div>
+      <div class="seq-arrow">↓</div>
+      <div class="seq-step active">
+        <span class="seq-num">③</span>
+        <div class="seq-content">
+          <h4>Restore the adenine nucleotide pool — the AC substrate and salvage layer</h4>
+          <p>Magnesium (myokinase cofactor, Mg²⁺-ATP activator) and mitochondrial support address Breaking Points 2, 3, and 5 simultaneously. This layer becomes increasingly effective as Step ① reduces the inflammatory ATP demand that is depleting the pool in the first place. The two layers are mutually reinforcing: less inflammation means less ATP consumed by immune cells, means magnesium-supported myokinase salvage can do more with what is available.</p>
+        </div>
+      </div>
+      <div class="seq-arrow">↓</div>
+      <div class="seq-step active">
+        <span class="seq-num">④</span>
+        <div class="seq-content">
+          <h4>Break the PDE4/NF-κB self-reinforcing loop</h4>
+          <p>As the neuroinflammatory burden begins to reduce through Steps ① and ②, the PDE4 loop progressively weakens. This is not a separate intervention — it is the downstream consequence of the anti-inflammatory layers above. The practical effect: cAMP signals generated by whatever stimulatory peptide activity is present begin to last longer. The cascade starts transmitting partial signals where previously it generated none.</p>
+        </div>
+      </div>
+      <div class="seq-arrow">↓</div>
+      <div class="seq-step">
+        <span class="seq-num">⑤</span>
+        <div class="seq-content">
+          <h4>The brake releases — regulatory peptides can now transmit</h4>
+          <p>As somatostatin tone falls with reduced neuroinflammatory pressure, as adenosine accumulation is reduced, and as PDE4 upregulation recedes, the adenylyl cyclase becomes progressively more responsive to stimulatory inputs. The body's own VIP, secretin, and oxytocin — which were never absent, merely unable to transmit — begin to carry their signals. This is the restoration of the reset system the body already has.</p>
+        </div>
+      </div>
+      <div class="seq-arrow">↓</div>
+      <div class="seq-step">
+        <span class="seq-num">⑥</span>
+        <div class="seq-content">
+          <h4>Add exercise to address BDNF consolidation (BP6)</h4>
+          <p>With signaling infrastructure now partially restored, the gains that begin to emerge can begin to consolidate — but BDNF Val66Met limits activity-dependent BDNF secretion, reducing structural encoding. Aerobic exercise, specifically, has been shown to enhance BDNF secretion in Val66Met carriers through an exercise-driven pathway that partially compensates for the variant's impairment of the secretion mechanism. Structural gains become more durable as exercise-driven BDNF supplements the constitutionally limited activity-dependent pathway.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="node gold-accent" style="margin-top:24px;">
+      <h3 class="node-title">Why This Sequence Cannot Be Shortcut</h3>
+      <p>It is tempting to attempt Step ⑤ directly — to administer the peptide reset signals while bypassing the infrastructure repair. The secretin trial experience documents precisely why this fails: administering stimulatory peptides against an actively maintained somatostatin lock, into a system where PDE4 immediately degrades whatever cAMP the peptide generates, does not produce durable benefit. It produces brief transient improvement followed by receptor desensitization that reduces even the brief transient response over time.</p>
+      <p>The sequence is not slow caution — it is mechanistic necessity. Steps ① through ④ are not preparatory niceties; they are the conditions that determine whether Step ⑤ can work at all. An infrastructure prepared by Steps ① through ④ responds to peptide signaling the way a functional cascade should. An unprepared infrastructure responds the way 1998–2002 did: briefly, partially, and with progressive desensitization.</p>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>The Clinical Trial Bridge</span></div>
+
+  <!-- IMIG PREPARATION -->
+  <section class="cascade-section" id="imig-preparation">
+    <div class="section-header">
+      <span class="level-badge teal">Step 05</span>
+      <div>
+        <h2 class="section-title">Preparing for IMIG: Infrastructure Repair as a Prerequisite</h2>
+        <p class="section-subtitle">Why the supplement protocol is not just concurrent support — it is mechanistically preparatory to immunological intervention working at all</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <p>Intramuscular immunoglobulin (IMIG) therapy targets the upstream neuroimmune dysregulation that drives the locked cascade — the chronic NK cell and T-cell activation that maintains the neuroinflammatory cytokine burden responsible for the somatostatin lock, the PDE4 upregulation, and the ATP-depleting immune activation that generates adenosine accumulation. Where the supplement protocol addresses the cascade from the intracellular level upward, IMIG addresses it from the immune regulatory level downward. They are complementary, not alternatives.</p>
+      <p>This creates a strategic question that is rarely asked in clinical trial design: what is the relationship between the supplement protocol and IMIG? If a patient enters an IMIG trial with a fully intact, compromised second messenger infrastructure — depleted ATP, adenosine accumulation, PDE4 upregulation, oxidized GPCR membranes — will the downstream signaling benefits of IMIG's immune modulation be attenuated by the same infrastructure failure that attenuated the secretin signal in 1998?</p>
+      <p>The G-protein cascade framework gives a precise answer: <strong>yes.</strong></p>
+    </div>
+
+    <div class="node navy-accent">
+      <h3 class="node-title">The Preparation Argument</h3>
+      <p>IMIG modulates the upstream immune activation, but its downstream effects operate through the same second messenger pathways that the cascade failure has compromised. The anti-inflammatory effect of IMIG — the reduction in neuroinflammatory cytokine burden — will only produce improved downstream peptide and regulatory signaling if the infrastructure that signaling depends on has been prepared to receive it.</p>
+      <p>Consider the parallel with the secretin trials directly: IMIG-generated immune modulation reduces TNF-α and IL-1β — the same cytokines that upregulate PDE4. But if PDE4 is already constitutively elevated because the underlying ATP depletion and membrane oxidation have not been addressed, the reduction in cytokine-driven PDE4 upregulation will only partially restore cAMP duration. The intracellular conditions still attenuate every signal the improved immune environment generates.</p>
+      <p>The preparation argument is not slow caution — it is mechanistic sequencing. Running NAC + sulforaphane + magnesium before and concurrently with IMIG restores the glutathione/oxidative axis (BP1), partially restores the adenine nucleotide pool (BP3, BP5), and begins breaking the NF-κB/PDE4 self-reinforcing loop (BP4). These are the intracellular conditions that determine whether IMIG's upstream immune modulation can propagate into durable downstream functional benefit.</p>
+      <div class="callout gold">
+        <p>The supplement protocol is not a separate pathway running in parallel with IMIG — it is infrastructure preparation that determines the gain coefficient of whatever immune modulation IMIG achieves. The same infrastructure failure that made secretin trials look like failures would attenuate IMIG-generated signaling improvements if left unaddressed.</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <h3 class="node-title">The IMIG Target Phenotype — Defined Without Reference to Any Single Case</h3>
+      <p>IMIG, as developed by Fourie &amp; Armstrong (2024) and the emerging clinical literature on immunoglobulin therapy in autism, targets a specific biological phenotype — not the behavioral diagnosis of autism broadly, but the neuroimmune dysregulation subgroup characterized by:</p>
+      <ul>
+        <li><strong>Elevated NK cell activity</strong> — documented across multiple autism cohort studies as a consistent finding in a neuroimmune-dysregulated subgroup (Connolly et al.; Enstrom et al., 2009, <em>Brain, Behavior, and Immunity</em>)</li>
+        <li><strong>Aberrant T-cell activation profiles</strong> — skewed Th1/Th2/Th17 balance, reduced regulatory T-cell function, documented in the autism neuroimmunology literature (Ashwood et al., 2011, <em>Journal of Neuroimmunology</em>)</li>
+        <li><strong>Chronic neuroinflammatory cytokine elevation</strong> — TNF-α, IL-1β, IL-6, IL-17 persistently elevated in cerebrospinal fluid and peripheral blood in neuroimmune-dysregulated autism subgroups (Vargas et al., 2005; Careaga et al., 2017)</li>
+        <li><strong>Impaired antibody-mediated immune responses</strong> — suboptimal vaccine-antibody titers despite adequate vaccination history, consistent with immune dysregulation impairing normal B-cell response regulation</li>
+        <li><strong>Peptide signaling desensitization history</strong> — the rapid attenuation of benefit from secretin, oxytocin, or other cAMP-pathway peptides, which is the functional signature of the locked infrastructure that IMIG targets upstream</li>
+      </ul>
+      <p>Families and clinicians seeking to evaluate IMIG candidacy should work from this phenotypic profile — not from behavioral symptom severity alone. The relevant laboratory assessments are NK cell and lymphocyte subset panel, inflammatory cytokine markers, and immunoglobulin subclass levels, interpreted in the context of the cascade model and reviewed with a clinician experienced in neuroimmune dysregulation.</p>
+    </div>
+
+    <div class="node gold-accent">
+      <h3 class="node-title">The Integrated Three-Pathway Strategy</h3>
+      <p>The supplement protocol, mucosal immune restoration, and IMIG are not alternative approaches — they are complementary layers of a single integrated strategy, each addressing the locked cascade from a different level:</p>
+      <ul>
+        <li><strong>Supplement protocol</strong> addresses the intracellular infrastructure: glutathione/oxidative axis (BP1), ATP/adenosine pool (BP3, BP5), PDE4 loop (BP4), BDNF consolidation (BP6). Timeline: immediate, ongoing. No clinical trial enrollment required.</li>
+        <li><strong>Mucosal immune restoration</strong> addresses the gut-origin driver of systemic immune activation: sIgA restoration, Bifidobacterium repletion, butyrate production, tight junction integrity. Reducing antigen translocation reduces the chronic immune activation that holds somatostatin elevated. Timeline: months to years.</li>
+        <li><strong>IMIG</strong> addresses the systemic neuroimmune dysregulation directly — the NK cell/T-cell activation that drives the cytokine burden the supplement protocol and mucosal restoration are working to reduce from below. Timeline: clinical evaluation, then treatment cycles.</li>
+      </ul>
+      <p>The strategic sequence: begin supplement protocol immediately → initiate mucosal restoration concurrently → obtain NK/lymphocyte subset panel and current stool analysis within 30–60 days to establish baseline → pursue IMIG evaluation if the neuroimmune dysregulation phenotype is confirmed. Run all three pathways simultaneously once IMIG is initiated — the supplement protocol and mucosal restoration enhance the cellular environment in which IMIG operates, and IMIG addresses the upstream driver that the other two pathways cannot fully reach on their own.</p>
+      <div class="pathway-tags">
+        <span class="tag">IMIG</span><span class="tag">NK cell modulation</span><span class="tag">Fourie &amp; Armstrong 2024</span><span class="tag">Vargas 2005</span><span class="tag">Ashwood 2011</span><span class="tag">Neuroimmune dysregulation</span><span class="tag">Infrastructure preparation</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<aside id="framework-disclaimer" class="framework-notice" role="note">
+  <div class="framework-notice-inner">
+    <div class="framework-notice-icon">i</div>
+    <p class="framework-notice-text"><strong>Theoretical framework — not clinical guidance.</strong> The unlock strategy and intervention sequencing presented here integrates established biochemistry with published clinical research. Individual components — glutathione precursor supplementation, NF-κB suppression, myokinase/magnesium biochemistry, BDNF/Val66Met research, adenosine receptor pharmacology, methylation cycle biochemistry — are each supported by published research. The integrated framework as a coordinated autism intervention strategy has not been validated in large controlled clinical trials. It is a mechanistically grounded hypothesis for clinical discussion and practitioner evaluation. All intervention decisions — including any IMIG evaluation — require a qualified clinician with direct knowledge of the patient. For the evidence base underlying this suite, see the <a href="10_Evidence_and_Citations_Biology_of_Autism.html"><em>Evidence &amp; Citations</em></a> document. For the upstream cascade mechanism this document addresses, see <a href="04_Gprotein_Cascade_Biology_of_Autism.html"><em>When the Signal Cannot Get Through</em></a>.</p>
+  </div>
+</aside>
+
+<footer class="site-footer">
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">Decoding Autism Now</p>
+        <h2 class="footer-title">Biology of Autism — Unlocking the Somatostatin Brake</h2>
+        <p class="footer-tagline">The brake cannot be pushed through — it must be released. Six-layer infrastructure repair as the prerequisite for any peptide or immunological intervention to work effectively.</p>
+      </div>
+      <div class="footer-actions">
+        <div class="footer-links">
+          <a class="footer-link" href="index.html">Home</a>
+          <a class="footer-link" href="04_Gprotein_Cascade_Biology_of_Autism.html">The Mechanism</a>
+          <a class="footer-link" href="08_Intervention_Logic_Biology_of_Autism.html">Intervention Logic</a>
+          <a class="footer-link" href="14_Immunoglobulin_Therapy_Biology_of_Autism.html">IMIG Therapy</a>
+          <a class="footer-link" href="10_Evidence_and_Citations_Biology_of_Autism.html">Evidence</a>
+        </div>
+        <p class="footer-disclaimer">This content is for informational purposes only and should not be considered medical advice, diagnosis, or treatment. Always consult with a healthcare professional before making any changes to your health routines or treatment regimen.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-meta" style="color:rgba(255,255,255,0.40); margin-top:10px;">© 2025 Decoding Autism Now | All content is being shared with families, clinicians and researchers for educational purposes under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.55); text-decoration:underline;">Creative Commons CC BY-NC 4.0</a> — free to share with attribution, but not for commercial use.</p>
+      <p class="footer-meta">Biology of Autism — Unlocking the Somatostatin Brake | Decoding Autism Now</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('hamBtn');
+  var overlay = document.getElementById('navOverlay');
+  var dim = document.getElementById('navDim');
+  if (!btn) return;
+  function openNav() {
+    overlay.classList.add('open');
+    dim.classList.add('open');
+    btn.setAttribute('aria-expanded','true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeNav() {
+    overlay.classList.remove('open');
+    dim.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+    document.body.style.overflow = '';
+  }
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
+    overlay.classList.contains('open') ? closeNav() : openNav();
+  });
+  dim.addEventListener('click', closeNav);
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeNav(); });
+})();
+</script>
+
+</body>
+</html>
