@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Anatomy of Autism | Decoding Autism Now</title>
+<meta name="description" content="A systems biology dissection of immune-derived autism — two-layer model: convergent cascade mechanism and constitutional susceptibility architecture across seven tipping points. Working paper, Version 14d, May 2026.">
+<link rel="canonical" href="https://decodingautismnow.com/research/anatomy-of-autism.html">
+<meta property="og:title" content="The Anatomy of Autism | Decoding Autism Now">
+<meta property="og:description" content="A systems biology dissection of immune-derived autism. Working paper, May 2026.">
+<meta property="og:url" content="https://decodingautismnow.com/research/anatomy-of-autism.html">
+<meta property="og:type" content="article">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy:#0f2342;
+    --teal:#1e6b72;
+    --teal-light:#2a9da6;
+    --gold:#c8923a;
+    --gold-light:#e8b86d;
+    --cream:#faf7f2;
+    --warm-white:#ffffff;
+    --text-dark:#1a1a2e;
+    --text-mid:#3d4560;
+    --text-light:#6b7494;
+    --rule:#d8cfc4;
+    --accent-bg:#eef8f9;
+    --gold-bg:#fdf6ec;
+  }
+
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Source Serif 4', Georgia, serif; background:var(--cream); color:var(--text-dark); font-size:17px; line-height:1.82; }
+
+  /* TOPBAR */
+  .topbar { position:fixed; top:0; left:0; right:0; z-index:1000; background:var(--navy); border-bottom:2px solid var(--gold); }
+  .topbar-inner { max-width:960px; margin:0 auto; padding:10px 20px; display:flex; justify-content:space-between; align-items:center; gap:18px; }
+  .topbar-brand { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--teal-light); margin-bottom:2px; }
+  .topbar-title { font-family:'Source Serif 4', serif; font-size:13px; font-weight:600; color:#fff; line-height:1.2; }
+  .topbar-back { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.7); text-decoration:none; border:1px solid rgba(255,255,255,.25); border-radius:3px; padding:5px 10px; white-space:nowrap; }
+  .topbar-back:hover { color:#fff; border-color:rgba(255,255,255,.5); }
+
+  /* PAPER HERO */
+  .paper-hero { margin-top:57px; background:var(--navy); color:#fff; }
+  .hero-stripe { height:5px; background:linear-gradient(90deg,var(--teal) 0%,var(--teal-light) 50%,var(--gold) 100%); }
+  .hero-inner { max-width:840px; margin:0 auto; padding:60px 24px 48px; }
+  .hero-label { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--teal-light); margin-bottom:16px; }
+  .hero-title { font-family:'Playfair Display', serif; font-size:clamp(2.2rem,4.5vw,3.2rem); line-height:1.1; font-weight:700; color:#fff; margin-bottom:10px; }
+  .hero-subtitle { font-family:'Playfair Display', serif; font-size:1.1rem; font-style:italic; color:var(--gold-light); margin-bottom:28px; font-weight:400; }
+  .hero-meta { display:flex; flex-wrap:wrap; gap:20px; align-items:flex-start; }
+  .hero-meta-block { }
+  .meta-label { font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.45); margin-bottom:4px; }
+  .meta-value { font-family:'Source Serif 4', serif; font-size:.92rem; color:rgba(255,255,255,.85); }
+  .hero-status { display:inline-block; margin-top:24px; font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:rgba(232,184,109,.82); border:1px solid rgba(232,184,109,.35); border-radius:3px; padding:5px 12px; }
+
+  /* COMPANION NOTICE */
+  .companion-notice { background:rgba(30,107,114,0.07); border-top:1px solid rgba(30,107,114,0.2); border-bottom:1px solid rgba(30,107,114,0.2); }
+  .companion-inner { max-width:840px; margin:0 auto; padding:14px 24px; font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.08em; color:var(--teal); }
+  .companion-inner a { color:var(--teal); }
+
+  /* TOC */
+  .toc-wrap { background:var(--warm-white); border-bottom:2px solid var(--rule); }
+  .toc-inner { max-width:840px; margin:0 auto; padding:28px 24px; }
+  .toc-label { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--text-light); margin-bottom:16px; }
+  .toc-list { list-style:none; columns:2; column-gap:32px; }
+  .toc-list li { break-inside:avoid; margin-bottom:6px; }
+  .toc-list a { font-family:'Source Serif 4', serif; font-size:.85rem; color:var(--teal); text-decoration:none; display:flex; gap:8px; align-items:baseline; }
+  .toc-list a:hover { color:var(--navy); }
+  .toc-num { font-family:'DM Mono', monospace; font-size:10px; color:var(--gold); flex-shrink:0; min-width:22px; }
+
+  /* PAPER BODY */
+  .paper-wrap { max-width:840px; margin:0 auto; padding:60px 24px 100px; }
+
+  /* ABSTRACT */
+  .abstract-box { background:var(--warm-white); border:1px solid var(--rule); border-left:4px solid var(--teal); border-radius:0 8px 8px 0; padding:28px 32px; margin-bottom:56px; }
+  .abstract-title { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--teal); margin-bottom:20px; }
+  .abstract-section { margin-bottom:16px; }
+  .abstract-section:last-child { margin-bottom:0; }
+  .abstract-section-label { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--text-light); margin-bottom:6px; }
+  .abstract-section p { font-size:.93rem; color:var(--text-mid); line-height:1.72; }
+
+  /* SECTIONS */
+  .paper-section { margin-bottom:64px; scroll-margin-top:20px; }
+  .section-label { font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.22em; text-transform:uppercase; color:var(--teal); margin-bottom:10px; }
+  .section-mechanism { font-family:'DM Mono', monospace; font-size:10px; color:var(--gold); margin-bottom:8px; }
+  h2.section-heading { font-family:'Playfair Display', serif; font-size:1.65rem; font-weight:700; color:var(--navy); line-height:1.2; margin-bottom:20px; padding-bottom:16px; border-bottom:2px solid var(--rule); }
+  h3.sub-heading { font-family:'Playfair Display', serif; font-size:1.15rem; font-weight:600; color:var(--navy); margin:28px 0 12px; line-height:1.3; }
+  h4.sub-sub-heading { font-family:'Source Serif 4', serif; font-size:1rem; font-weight:600; color:var(--teal); margin:22px 0 10px; }
+
+  p { color:var(--text-mid); margin-bottom:16px; }
+  p:last-child { margin-bottom:0; }
+  strong { color:var(--navy); font-weight:600; }
+  em { color:var(--text-mid); }
+  a { color:var(--teal); text-decoration:none; border-bottom:1px solid rgba(30,107,114,.3); }
+  a:hover { color:var(--navy); border-bottom-color:var(--navy); }
+
+  /* CALLOUT */
+  .callout-bold { background:var(--navy); color:#fff; border-radius:6px; padding:20px 24px; margin:24px 0; font-family:'Playfair Display', serif; font-style:italic; font-size:1.05rem; line-height:1.65; color:rgba(255,255,255,.9); }
+  .callout-teal { background:var(--accent-bg); border-left:3px solid var(--teal); border-radius:0 6px 6px 0; padding:14px 18px; margin:20px 0; font-size:.95rem; }
+  .callout-teal p { color:var(--text-mid)!important; margin:0!important; }
+  .callout-gold { background:var(--gold-bg); border-left:3px solid var(--gold); border-radius:0 6px 6px 0; padding:14px 18px; margin:20px 0; font-size:.95rem; }
+  .callout-gold p { color:#5a3e1a!important; margin:0!important; }
+
+  /* THREE-STATE TABLE */
+  .state-table-wrap { overflow-x:auto; margin:20px 0; }
+  .state-table { width:100%; border-collapse:collapse; font-size:.85rem; }
+  .state-table th { background:var(--navy); color:#fff; font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.12em; text-transform:uppercase; padding:10px 14px; text-align:left; font-weight:500; }
+  .state-table td { padding:12px 14px; border-bottom:1px solid var(--rule); color:var(--text-mid); vertical-align:top; line-height:1.55; }
+  .state-table tr:nth-child(odd) td { background:var(--warm-white); }
+  .state-table tr:nth-child(even) td { background:var(--cream); }
+  .state-name { font-family:'DM Mono', monospace; font-size:10px; font-weight:600; color:var(--navy); display:block; margin-bottom:4px; }
+  .table-caption { font-family:'Source Serif 4', serif; font-size:.82rem; color:var(--text-light); font-style:italic; margin-top:10px; line-height:1.6; }
+
+  /* REFERENCES */
+  .references-section { border-top:2px solid var(--rule); margin-top:64px; padding-top:40px; }
+  .ref-list { list-style:none; margin-top:16px; }
+  .ref-list li { display:flex; gap:14px; margin-bottom:12px; font-size:.88rem; color:var(--text-mid); line-height:1.6; scroll-margin-top:20px; }
+  .ref-num { font-family:'DM Mono', monospace; font-size:10px; color:var(--gold); flex-shrink:0; min-width:28px; margin-top:2px; }
+  sup { font-family:'DM Mono', monospace; font-size:10px; }
+  sup a { border-bottom:none; color:var(--teal); }
+  sup a:hover { color:var(--navy); }
+
+  /* SECTION DIVIDER */
+  .section-divider { display:flex; align-items:center; gap:14px; margin:56px 0 48px; }
+  .section-divider span { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--text-light); white-space:nowrap; }
+  .section-divider::before, .section-divider::after { content:''; flex:1; height:1px; background:var(--rule); }
+
+  /* FOOTER */
+  .paper-footer { background:var(--navy); }
+  .footer-stripe { height:5px; background:linear-gradient(90deg,var(--teal) 0%,var(--teal-light) 50%,var(--gold) 100%); }
+  .footer-inner { max-width:840px; margin:0 auto; padding:40px 24px 32px; }
+  .footer-cite { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.1em; color:rgba(255,255,255,.45); line-height:1.8; margin-bottom:20px; }
+  .footer-links { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
+  .footer-link { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.75); text-decoration:none; border:1px solid rgba(255,255,255,.2); border-radius:3px; padding:6px 12px; }
+  .footer-link:hover { color:#fff; border-color:rgba(255,255,255,.45); }
+  .footer-meta { font-family:'DM Mono', monospace; font-size:.72rem; color:rgba(255,255,255,.3); line-height:1.7; }
+
+  @media (max-width:680px) {
+    .toc-list { columns:1; }
+    .hero-meta { flex-direction:column; gap:12px; }
+    .abstract-box { padding:20px; }
+    h2.section-heading { font-size:1.3rem; }
+  }
+  @media print {
+    .topbar { display:none; }
+    .paper-hero { margin-top:0; }
+    body { font-size:11pt; }
+    h2.section-heading { page-break-after:avoid; }
+    h3.sub-heading { page-break-after:avoid; }
+    .paper-section { page-break-inside:avoid; }
+  }
+</style>
+
+<script defer src="https://cloud.umami.is/script.js" data-website-id="294ecd79-19fb-4267-9be2-a7c83d57274d"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <div class="topbar-brand">Decoding Autism Now</div>
+      <div class="topbar-title">The Anatomy of Autism — Working Paper</div>
+    </div>
+    <a class="topbar-back" href="../research/research-articles.html">← Research</a>
+  </div>
+</div>
+
+<div class="paper-hero">
+  <div class="hero-stripe"></div>
+  <div class="hero-inner">
+    <div class="hero-label">Decoding Autism Now · Working Paper · Version 14d · May 2026</div>
+    <h1 class="hero-title">The Anatomy of Autism</h1>
+    <p class="hero-subtitle">A systems biology dissection of immune-derived autism</p>
+    <div class="hero-meta">
+      <div class="hero-meta-block">
+        <div class="meta-label">Author</div>
+        <div class="meta-value">Decoding Autism Now</div>
+      </div>
+      <div class="hero-meta-block">
+        <div class="meta-label">Status</div>
+        <div class="meta-value">Working document · Under expert review</div>
+      </div>
+      <div class="hero-meta-block">
+        <div class="meta-label">Date</div>
+        <div class="meta-value">May 2026</div>
+      </div>
+      <div class="hero-meta-block">
+        <div class="meta-label">Site</div>
+        <div class="meta-value">decodingautismnow.com</div>
+      </div>
+    </div>
+    <div class="hero-status">Working draft — prior to journal submission</div>
+  </div>
+</div>
+
+<div class="companion-notice">
+  <div class="companion-inner">Companion document: <em>Restoring the Somatostatin Signal in Immune-Derived ASD: Using IMIG, IVIG, and MSC Therapy as Parallel Pathways to Neuropeptide Cascade Recovery</em></div>
+</div>
+
+<nav class="toc-wrap" aria-label="Contents">
+  <div class="toc-inner">
+    <p class="toc-label">Contents</p>
+    <ul class="toc-list">
+      <li><a href="#abstract"><span class="toc-num">—</span>Abstract</a></li>
+      <li><a href="#introduction"><span class="toc-num">1</span>Introduction</a></li>
+      <li><a href="#three-states"><span class="toc-num">2</span>The Three Interneuron States</a></li>
+      <li><a href="#founding"><span class="toc-num">3</span>Founding Conditions</a></li>
+      <li><a href="#constitutional"><span class="toc-num">3B</span>Constitutional Susceptibility</a></li>
+      <li><a href="#pepsin"><span class="toc-num">4</span>Pepsin Failure &amp; Hidden Malnutrition</a></li>
+      <li><a href="#opioid"><span class="toc-num">5</span>Opioid Peptides &amp; Gut SST-28</a></li>
+      <li><a href="#cd26"><span class="toc-num">6</span>CD26, Adenosine &amp; Methylation</a></li>
+      <li><a href="#lps"><span class="toc-num">7</span>LPS Translocation &amp; Immune Activation</a></li>
+      <li><a href="#ido1"><span class="toc-num">8</span>IDO1, Kynurenine &amp; Excitotoxicity</a></li>
+      <li><a href="#nfkb"><span class="toc-num">9</span>NF-κB &amp; SST-14 Transcriptional Suppression</a></li>
+      <li><a href="#convergence"><span class="toc-num">10</span>Convergence &amp; the Biological Latch</a></li>
+      <li><a href="#neuropeptides"><span class="toc-num">11</span>Neuropeptide Cascade Disruption</a></li>
+      <li><a href="#phenotype"><span class="toc-num">12</span>The ASD Phenotype Cluster</a></li>
+      <li><a href="#synthesis"><span class="toc-num">13</span>Synthesis &amp; Clinical Implications</a></li>
+      <li><a href="#conclusion"><span class="toc-num">14</span>Conclusion</a></li>
+      <li><a href="#references"><span class="toc-num">—</span>References</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="paper-wrap">
+
+  <!-- ABSTRACT -->
+  <section id="abstract" class="paper-section">
+    <div class="abstract-box">
+      <div class="abstract-title">Abstract</div>
+
+      <div class="abstract-section">
+        <div class="abstract-section-label">Background</div>
+        <p>Autism spectrum disorder (ASD) is diagnosed in approximately 1 in 36 children in the United States and carries a four-to-one male predominance that has not been mechanistically explained. A significant subgroup presents with concurrent immune dysregulation, gastrointestinal dysfunction, sleep disruption, and metabolic abnormalities suggesting a shared biological origin distinct from primarily genetic or structural ASD subtypes. Decades of single-pathway clinical trials — including oxytocin, secretin, and immunoglobulin interventions — have produced inconsistent results in unselected populations, suggesting that the relevant patient subgroup has not been prospectively identified.</p>
+      </div>
+
+      <div class="abstract-section">
+        <div class="abstract-section-label">Hypothesis</div>
+        <p>We propose that a mechanistically distinct subgroup of ASD — here termed immune-derived autism (IDA) — arises from a converging multi-step biological cascade originating in gut pH dysregulation, progressing through immune activation and metabolic disruption, and converging on the silencing of somatostatin-14 (SST-14) interneurons in the cortex, hippocampus, and hypothalamus. SST-14 interneuron silencing disrupts the coordinated release of oxytocin, vasoactive intestinal peptide (VIP), and secretin — producing the social, sensory, sleep, gastrointestinal, cognitive, and motor features of the ASD phenotype cluster, and reducing neural plasticity.</p>
+      </div>
+
+      <div class="abstract-section">
+        <div class="abstract-section-label">Cascade Summary</div>
+        <p>The cascade proceeds through the following converging mechanisms: (1) gut pH elevation disabling pepsin-mediated proline bond cleavage, producing amino acid deficiency and intact opioid peptide fragments; (2) opioid peptides driving CCK-mediated gut SST-28 overactivation and simultaneously blocking CD26-mediated adenosine clearance; (3) adenosine accumulation rate-limiting the methionine synthase cycle and stalling methylation; (4) chronic immune activation through LPS translocation and cytokine elevation activating IDO1 and diverting tryptophan toward quinolinic acid; (5) direct cytokine-mediated NF-κB suppression of CREB and SST-14 gene transcription; (6) convergence of excitotoxic and transcriptional suppression on SST-14 interneurons, establishing a self-reinforcing biological latch; and (7) downstream neuropeptide cascade disruption producing the observable phenotype cluster.</p>
+      </div>
+
+      <div class="abstract-section">
+        <div class="abstract-section-label">Constitutional Susceptibility Architecture</div>
+        <p>The founding conditions are common across the general population. The cascade propagates only in individuals whose constitutional profile reduces biological headroom at multiple cascade steps simultaneously. Seven tipping points determine who crosses the cascade threshold: (1) gastric acid production capacity; (2) CD26/DPP-IV adenosine clearance capacity; (3) methylation cycle reserve; (4) inflammatory resolution capacity; (5) kynurenine pathway excitotoxic branch bias; (6) mitochondrial excitotoxic buffering reserve; and (7) HLA-mediated autoantibody susceptibility. The two-layer model — cascade mechanism and constitutional susceptibility architecture — together constitute the complete IDA framework. The same founding conditions, processed through different constitutional profiles, produce different outcomes. This explains why most children exposed to the same environmental pressures do not develop immune-derived autism.</p>
+      </div>
+
+      <div class="abstract-section">
+        <div class="abstract-section-label">The Estrogen-cAMP Compensatory Axis</div>
+        <p>Four linked papers establish the compensatory pathway explaining the four-to-one male-to-female ratio. Montminy et al. (PNAS 1986) identified the cyclic AMP response element (CRE) in the somatostatin gene promoter. Montminy et al. (J Neuroscience 1986) established that cAMP drives somatostatin mRNA accumulation in hypothalamic neurons. Aronica et al. (PNAS 1994) established non-classical estrogen activation of adenylyl cyclase. Qiu et al. (J Neuroscience 2003) characterized the complete Gq-mER → Gαq → PLC → DAG → PKCδ → adenylyl cyclase VII → cAMP chain in hypothalamic neurons by single-cell RT-PCR. Together these papers identify a compensatory cAMP pathway through which estradiol partially counteracts both NF-κB-mediated CREB suppression and adenosine-driven cAMP starvation in females. The absence of this pathway in prepubertal males provides a specific and testable molecular explanation for the four-to-one ratio.</p>
+      </div>
+
+      <div class="abstract-section">
+        <div class="abstract-section-label">Clinical Implications</div>
+        <p>Immune-derived autism is distinguishable from genetic and structural ASD subtypes by a biomarker panel including kynurenine-to-tryptophan ratio, cytokine profiles, neuronal autoantibody titers, lactate-to-pyruvate ratio, and red blood cell mineral analysis. Biomarker-stratified patient selection is the prerequisite for the interventional trial that prior unselected trials could not produce.</p>
+      </div>
+
+      <div class="abstract-section">
+        <div class="abstract-section-label">Conclusion</div>
+        <p>Immune-derived autism represents a biomarker-definable, mechanistically coherent, and clinically actionable subgroup of ASD. The two-layer model — cascade mechanism and constitutional susceptibility architecture — together provide the mechanistic foundation for prospective biomarker-stratified intervention trials, and offer a unified explanation for the phenotypic heterogeneity, treatment inconsistency, and male predominance that have characterized ASD research for three decades. The right question is not whether a given therapy helps autism. It is whether this intervention, in this biomarker-defined patient, with this constitutional profile, at this point along the three-state silencing spectrum, addresses the rate-limiting step in their particular cascade presentation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRODUCTION -->
+  <section id="introduction" class="paper-section">
+    <div class="section-label">Section 1</div>
+    <h2 class="section-heading">Introduction: A Convergent Cascade Model for Immune-Derived Autism</h2>
+
+    <p>Autism spectrum disorder does not have a single cause. A mechanistically distinct subgroup — immune-derived autism — has a single convergent mechanistic node through which a wide range of initiating insults produce the same downstream outcome.</p>
+
+    <p>The initiating insults described in this document are diverse. No two children with immune-derived autism necessarily share the same combination of founding conditions. Prenatal hormonal exposures, birth circumstances, environmental toxicants, genetic variants affecting acid production, nutritional depletions, and pathogenic infections may each contribute independently or in combination. Yet a significant proportion of affected children share the same outcome because all of these conditions, regardless of their origin, converge on the same series of intermediate mechanisms and arrive at the same convergent point: the silencing of somatostatin-14 interneurons in the cortex, hippocampus, and hypothalamus.</p>
+
+    <p>This convergence explains what has challenged autism researchers for decades. The phenotype appears heterogeneous from the outside because affected children entered the cascade at different points and through different combinations of initiating insults. The phenotype is consistent from the inside because all pathways converge on the same mechanistic node. The apparent heterogeneity of ASD reflects variation in the upstream cascade steps that drove SST-14 silencing — not variation in the downstream mechanism that produced the phenotype.</p>
+
+    <div class="callout-bold">The cascade is not a sequence of independent events. It is a set of simultaneously operating mechanisms converging on a single biological target.</div>
+  </section>
+
+  <!-- THREE STATES -->
+  <section id="three-states" class="paper-section">
+    <div class="section-label">Section 2</div>
+    <h2 class="section-heading">The Three Interneuron States: A Clinical Framework</h2>
+
+    <p>SST-14 interneuron silencing does not occur as a single discrete event. It progresses through three states that reflect the depth of the suppressive burden and determine which interventions are appropriate for a given patient.</p>
+
+    <p><strong>State 1 — transcriptional suppression:</strong> The interneuron's structural and metabolic machinery is intact but SST-14 gene expression has been suppressed by NF-κB-mediated cAMP response element-binding protein (CREB) inhibition and autoantibody-mediated surface receptor jamming. This is the most reversible state. Removal of the upstream immune burden — through immunoglobulin therapy — allows CREB to resume driving SST-14 expression, and functional recovery can be relatively rapid.</p>
+
+    <p><strong>State 2 — metabolic exhaustion:</strong> Chronic quinolinic acid-driven calcium overload and NAD⁺ depletion have damaged mitochondrial function in the interneuron. Even when transcriptional suppression is relieved by immune clearance, the interneuron cannot resume tonic firing because the mitochondrial substrate required to sustain it is depleted. State 2 requires both immune clearance and metabolic restoration before functional recovery is achievable.</p>
+
+    <p><strong>State 3 — structural loss:</strong> Progressive excitotoxic damage has produced partial interneuron loss. Trophic restoration through growth factors including IGF-1 and brain-derived neurotrophic factor (BDNF), combined with the A2 astrocyte polarization shift that mesenchymal stem cell (MSC) therapy promotes, represents the primary intervention pathway. The A1/A2 astrocyte reversibility established by Liddelow et al.<sup><a href="#ref9">[9]</a></sup> indicates that even State 3 is not irreversible, but recovery is slower and more dependent on the trophic environment.</p>
+
+    <div class="state-table-wrap">
+      <table class="state-table">
+        <thead>
+          <tr>
+            <th>State</th>
+            <th>Silencing mechanism</th>
+            <th>Key biomarkers</th>
+            <th>Primary intervention</th>
+            <th>Recovery trajectory</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="state-name">State 1</span>Transcriptional suppression</td>
+            <td>NF-κB-mediated CREB inhibition; autoantibody surface receptor jamming. Interneuron structurally intact.</td>
+            <td>Elevated K:T ratio; cytokine elevation (IL-6, TNF-α, IL-1β); autoantibody positive; homocysteine elevated; normal lactate:pyruvate</td>
+            <td>IMIG or IVIG; adjunct protocol (zinc, NAC, sulforaphane, NMN/NR, tributyrin, taurine)</td>
+            <td>Relatively rapid — weeks to months. Most reversible state.</td>
+          </tr>
+          <tr>
+            <td><span class="state-name">State 2</span>Metabolic exhaustion</td>
+            <td>Mitochondrial failure from chronic quinolinic acid calcium overload and NAD⁺ depletion. Gene expression recoverable; energy substrate depleted.</td>
+            <td>Elevated K:T ratio; elevated lactate:pyruvate; low plasma NAD⁺; elevated 8-isoprostane; cytokine elevation; autoantibody panel variable</td>
+            <td>Immune clearance (IMIG/IVIG) plus metabolic restoration: NAD⁺ precursors, mitochondrial support, MSC trophic support</td>
+            <td>Slower — months. Dependent on mitochondrial restoration alongside immune clearance.</td>
+          </tr>
+          <tr>
+            <td><span class="state-name">State 3</span>Structural loss</td>
+            <td>Partial interneuron loss from sustained excitotoxicity. A1 astrocyte polarisation removes trophic and synaptogenic support.</td>
+            <td>Elevated K:T ratio; low BDNF; reduced hevin/SPARCL1; A1 astrocyte markers elevated; lactate:pyruvate elevated</td>
+            <td>MSC trophic restoration (IGF-1, BDNF, A2 polarisation shift); adjunct protocol sustained; immune clearance to halt further loss</td>
+            <td>Longest — months to years. A1/A2 reversibility confirmed <sup><a href="#ref9">[9]</a></sup> but structural recovery is partial.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="table-caption">Table 1. Three-state SST-14 interneuron model: mechanistic basis, biomarker signature, and intervention selection. K:T, kynurenine-to-tryptophan ratio; NAD⁺, nicotinamide adenine dinucleotide; IMIG, intramuscular immunoglobulin; IVIG, intravenous immunoglobulin; MSC, mesenchymal stem cell therapy. Biomarker thresholds require prospective validation.</p>
+    </div>
+  </section>
+
+  <!-- FOUNDING CONDITIONS -->
+  <section id="founding" class="paper-section">
+    <div class="section-label">Section 3</div>
+    <h2 class="section-heading">Founding Conditions: Initiating Insults and Ongoing Drivers of Gut pH Dysregulation</h2>
+
+    <p>The cascade initiates when the gut environment shifts toward a higher-than-normal pH, disabling the enzymatic systems required for complete protein digestion. A wide range of independent conditions can produce this pH dysregulation, and in most affected individuals several operate simultaneously. The result is self-perpetuating: the pH elevation that initiates the cascade also generates conditions that maintain it, making resolution unlikely when only a single contributing factor is addressed.</p>
+
+    <h3 class="sub-heading">Prenatal and Perinatal Initiating Conditions</h3>
+
+    <h4 class="sub-sub-heading">Prenatal hormonal or immune disruption</h4>
+    <p>The enteric nervous system and hypothalamic-pituitary axis differentiate between weeks 5 and 12 of gestation. Exogenous hormones, maternal stress hormones, maternal infection, and maternal autoimmune conditions can all alter the development of the acid-producing parietal cell population before birth — producing a gut that enters postnatal life with reduced capacity for adequate hydrochloric acid (HCl) production.</p>
+
+    <h4 class="sub-sub-heading">Birth mode and microbial seeding</h4>
+    <p>Cesarean delivery bypasses the birth canal, eliminating the primary maternal microbial seeding event. Hospital-acquired streptococcal species — which directly block the CD26 receptor via streptokinase — can establish dysbiotic colonization from the first days of life, failing to seed the acid-producing commensal populations required for normal gut pH regulation.</p>
+
+    <h4 class="sub-sub-heading">Failure to establish nursing</h4>
+    <p>Breast milk contains oligosaccharides that selectively feed acid-producing commensal bacteria. Colostrum shapes early gut immune tolerance. The sucking reflex activates motilin via muscle contraction, establishing the migrating motor complex that drives gut motility from birth. Low muscle tone, premature birth, or formula dependence deprive the gut of these pH-regulating inputs simultaneously.</p>
+
+    <h4 class="sub-sub-heading">Oral contraceptive use and maternal nutritional depletion</h4>
+    <p>Combined oral contraceptive pills deplete B6, B12, folate, zinc, and magnesium. Zinc is specifically consequential: it is the essential cofactor for carbonic anhydrase, which generates the hydrogen ions parietal cells use to produce HCl. A woman conceiving shortly after stopping oral contraceptives may begin pregnancy with depleted reserves across all five nutrients.</p>
+
+    <h4 class="sub-sub-heading">Folate receptor antibodies</h4>
+    <p>Autoantibodies against folate receptor alpha block methylfolate transport into the brain and cerebrospinal fluid, producing cerebral folate deficiency independent of dietary folate status. This founding vulnerability compounds the methylation failure that adenosine accumulation produces later in the cascade, creating a dual methylation vulnerability from birth.</p>
+
+    <h4 class="sub-sub-heading">Genetic variants affecting acid production</h4>
+    <p>Polymorphisms in proton pump genes, carbonic anhydrase variants, and zinc transporter variants reduce parietal cell acid output from birth. methylenetetrahydrofolate reductase (MTHFR) polymorphisms — particularly the C677T variant, documented at elevated frequency in ASD populations<sup><a href="#ref20">[20,21]</a></sup> — reduce conversion of dietary folate to the active methylfolate form, compounding the adenosine-driven methylation bottleneck of the cascade.</p>
+
+    <h3 class="sub-heading">Environmental and Toxic Initiating Conditions</h3>
+
+    <h4 class="sub-sub-heading">Glyphosate exposure and microbiome depletion</h4>
+    <p>Glyphosate disrupts the shikimate pathway in bacteria, selectively depleting commensal species including Lactobacillus, Bifidobacterium, and Enterococcus faecalis while sparing many gram-negative LPS-producing pathogenic species. Maternal dietary exposure depletes the microbiome seed delivered at birth, favoring the LPS-producing ecology that elevates pH and initiates downstream pepsin failure.<sup><a href="#ref29">[29]</a></sup></p>
+
+    <h4 class="sub-sub-heading">Mercury and heavy metal exposure</h4>
+    <p>Mercury directly binds to the CD26 receptor site on lymphocyte immune cells, blocking adenosine deaminase (ADA) from binding and initiating the adenosine accumulation that rate-limits the methionine synthase cycle. Pre-1990s dental amalgam fillings, thimerosal, environmental mercury, and dietary fish exposure represent concurrent routes; effects are additive.</p>
+
+    <h4 class="sub-sub-heading">Organophosphate and organochlorine pesticide exposure</h4>
+    <p>Organophosphate pesticides inhibit acetylcholinesterase, producing muscarinic receptor downregulation that paradoxically reduces parietal cell acid responsiveness over time. Organophosphate flame retardants (OPFRs) — used in infant sleep surfaces under flammability regulations from 1975 to approximately 2015 — are detected in cord blood, confirming prenatal exposure through maternal body burden.</p>
+
+    <h4 class="sub-sub-heading">Viral disruption of adenylyl cyclase signaling</h4>
+    <p>Bordetella pertussis toxin locks inhibitory G-protein Gαi in inactive form, disrupting cAMP generation through the same pathway whose disruption by adenosine accumulation reduces SST-14 gene expression. Herpesviruses including cytomegalovirus and Epstein-Barr virus interact with G-protein regulatory components through similar mechanisms.</p>
+
+    <h3 class="sub-heading">Ongoing Drivers That Perpetuate pH Dysregulation</h3>
+
+    <p><strong>H. pylori infection</strong> alkalinises the stomach via urease-generated ammonia, directly elevating gastric pH and damaging parietal cells through inflammatory mechanisms. <strong>Recurrent streptococcal infections</strong> reintroduce streptokinase, which blocks the CD26 receptor by the same mechanism as opioid peptides and mercury — compounding cumulative CD26 blockade burden with each episode. <strong>Chronic sympathetic dominance</strong> suppresses vagal tone, reducing parietal cell acetylcholine stimulation and chronically lowering acid output. <strong>Proton pump inhibitor therapy</strong>, prescribed for reflux that often reflects low motility and fermentation pressure rather than acid overproduction, may relieve the surface symptom while deepening the underlying pH dysregulation.</p>
+
+    <p>Once CD26 is blocked by any mechanism, adenosine accumulates, the methionine synthase cycle slows, and the cellular energy available to drive parietal cell activity falls — perpetuating the pH elevation that initiated the opioid peptide accumulation independent of whether the original blocking agent remains present. This is the CD26 self-reinforcing loop.</p>
+  </section>
+
+  <!-- CONSTITUTIONAL SUSCEPTIBILITY -->
+  <section id="constitutional" class="paper-section">
+    <div class="section-label">Section 3B</div>
+    <div class="section-mechanism">Two-Layer Model · Constitutional Susceptibility Architecture</div>
+    <h2 class="section-heading">Constitutional Susceptibility: Why Only Certain Individuals Cross the Cascade Tipping Points</h2>
+
+    <p>One of the most important challenges to any multi-insult cascade model is the observation that most individuals exposed to the same founding conditions do not develop the condition being modeled. C-section delivery, formula feeding, antibiotic exposure, and glyphosate exposure describe a large fraction of the general pediatric population. Immune-derived autism affects a small minority. The constitutional susceptibility architecture is the answer to that question.</p>
+
+    <p>The model is not single-gene determinism. It is a constitutional profile — a combination of genetic, enzymatic, and immunological factors distributed across the cascade that together determine how much biological headroom remains at each step before that step fails. A child with reduced headroom at multiple cascade steps simultaneously has a constitutional burden that makes crossing each tipping point far more likely when the common environmental pressures arrive. The same founding conditions, processed through a different constitutional profile, do not produce the cascade.</p>
+
+    <h3 class="sub-heading">Tipping Point 1: Gastric Acid Production Capacity</h3>
+    <p>Constitutional factor: reduced baseline parietal cell acid output. ATP4A and ATP4B proton pump gene variants narrow the margin within which environmental pressures must operate to produce clinically significant pH elevation.<sup><a href="#ref42">[42]</a></sup> A child with constitutively reduced pump efficiency reaches the pepsin-inactivation threshold under environmental loads that leave most children below it. This tipping point currently carries Level 4 evidence for direct ASD-specific application — proton pump variant studies in ASD cohorts have not yet been published. The mechanistic logic is strong; the epidemiological anchor requires prospective study.</p>
+
+    <h3 class="sub-heading">Tipping Point 2: CD26/DPP-IV Adenosine Clearance Capacity</h3>
+    <p>Constitutional factor: constitutively reduced DPP-IV enzymatic efficiency. Bashir and Al-Ayadhi documented significantly lower plasma DPP-IV activity in ASD children versus controls.<sup><a href="#ref38">[38]</a></sup> EL-Alameey et al. replicated this and added the correlation with casein antibody titers — establishing that reduced DPP-IV activity and casomorphin-driven immune response co-occur in the same children.<sup><a href="#ref39">[39]</a></sup> Hunter et al. and Shattock et al. independently confirmed the pattern.<sup><a href="#ref40">[40,41]</a></sup> A child running at constitutively reduced DPP-IV efficiency has no reserve when casomorphin, streptokinase, and mercury simultaneously block remaining capacity. Level 1–2 evidence.</p>
+
+    <h3 class="sub-heading">Tipping Point 3: Methylation Cycle Reserve</h3>
+    <p>Constitutional factor: reduced methionine synthase cycle throughput. MTHFR C677T — documented at elevated frequency in ASD populations<sup><a href="#ref20">[20,21]</a></sup> — reduces methylfolate availability, compounding the adenosine-driven methylation bottleneck. A child with MTHFR C677T homozygous crosses the methylation failure threshold under adenosine loads that heterozygous children tolerate. Level 1 evidence for the variant; Level 2–3 for the causal pathway to IDA.</p>
+
+    <h3 class="sub-heading">Tipping Point 4: Inflammatory Resolution Capacity</h3>
+    <p>Constitutional factor: impaired capacity to actively terminate innate immune activation. Specialized pro-resolving mediators (SPMs) — resolvins, protectins, lipoxins — produced via ALOX5, ALOX12, and ALOX15 from omega-3 PUFA substrates are the active off-switch for innate immune activation.<sup><a href="#ref47">[47,48]</a></sup> A child with ALOX variants reducing SPM production capacity cannot actively terminate LPS-driven immune activation, which persists as the chronic cytokine state driving IDO1 and NF-κB. This is the most novel and least-evidenced tipping point — currently Level 4 for ASD-specific application. Direct ALOX variant studies in ASD populations have not yet been published.</p>
+
+    <h3 class="sub-heading">Tipping Point 5: Kynurenine Pathway Excitotoxic Branch Bias</h3>
+    <p>Constitutional factor: KMO variants determining the constitutional QUIN/KYNA ratio. KMO polymorphisms rs2275163 and rs1053230 are associated with altered kynurenic acid levels in schizophrenia cohorts — establishing that KMO genetic variation produces measurable differences in the QUIN/KYNA ratio in living humans.<sup><a href="#ref45">[45,46]</a></sup> A child with KMO variants favoring QUIN production crosses the excitotoxic threshold at lower IDO1 activation levels. Level 2 evidence from neuropsychiatric populations — direct ASD KMO variant data pending.</p>
+
+    <h3 class="sub-heading">Tipping Point 6: Mitochondrial Excitotoxic Buffering Reserve</h3>
+    <p>Constitutional factor: mitochondrial reserve capacity and antioxidant genetics. Frye, Rose, and colleagues documented that ASD lymphoblastoid cell lines exhibit abnormal mitochondrial reserve capacity and increased vulnerability to oxidative stress challenge at baseline.<sup><a href="#ref43">[43,44]</a></sup> Genetic variations in glutathione pathways — GPX1, GSTM1, SOD2 — correlate with behavioral outcomes. A child with reduced mitochondrial reserve crosses the State 1/State 2 boundary under quinolinic acid loads that children with adequate reserve tolerate in State 1. Level 2 evidence directly in ASD populations.</p>
+
+    <h3 class="sub-heading">Tipping Point 7: HLA-Mediated Autoantibody Susceptibility</h3>
+    <p>Constitutional factor: HLA class II architecture. HLA-DR and HLA-DQ alleles determine which self-mimicking peptides from casomorphin, streptokinase, and mercury-modified self proteins trigger autoantibody production through molecular mimicry. The same mechanism that produces anti-CD26 and anti-folate receptor autoantibodies in IDA children operates only in individuals whose HLA architecture presents those peptides as immunogenic. Level 2–3 evidence from autoimmune literature; ASD-specific HLA association data are emerging.</p>
+
+    <h3 class="sub-heading">The Constitutional Profile as Predictive Biomarker</h3>
+    <p>The seven tipping points can be operationalized as an additive constitutional burden score — the number of cascade steps at which an individual carries constitutional variants placing them at reduced headroom. A child with a high constitutional burden score is predictably more vulnerable to IDA cascade propagation under the same environmental exposures as a child with a low score. This score extends the diagnostic biomarker panel into a prospective susceptibility screen and is Testable Prediction 7 of the model.</p>
+  </section>
+
+  <!-- PEPSIN -->
+  <section id="pepsin" class="paper-section">
+    <div class="section-label">Section 4</div>
+    <div class="section-mechanism">Convergent Mechanism 1 · Upstream of all subsequent cascade steps</div>
+    <h2 class="section-heading">How Elevated Gut pH Disables Pepsin, Blocks Essential Amino Acid Release, and Produces Hidden Malnutrition</h2>
+
+    <h3 class="sub-heading">Pepsin pH dependence and proline bond cleavage failure</h3>
+    <p>Pepsin is the primary gastric protease responsible for cleaving the proline bonds in casein and gluten proteins. These proline bonds are unusually strong double-helical structures not readily cleaved by small intestinal proteases. Pepsin requires a pH of approximately 2.0 for optimal activity and becomes essentially inactive above pH 4.0. When founding conditions have elevated gastric pH above this threshold, pepsin cannot fulfill its primary digestive function regardless of dietary protein load.</p>
+    <p>The intact proline-bonded peptide fragments that accumulate are not nutritionally inert. Their rigid corkscrew geometry enables them to resist degradation by small intestinal proteases and to penetrate the intestinal mucosal wall — contributing to the intestinal permeability documented consistently in ASD populations.<sup><a href="#ref23">[23]</a></sup></p>
+
+    <h3 class="sub-heading">Essential amino acid deficiency and the hidden malnutrition state</h3>
+    <p>Three essential amino acids depend critically on pepsin-mediated proline bond cleavage: phenylalanine, tyrosine, and tryptophan. When pepsin cannot cleave the proline bonds containing them, no amount of dietary protein corrects the resulting deficiency — the building blocks remain locked in undigested peptide fragments excreted rather than absorbed.</p>
+    <p>The downstream consequence is <strong>hidden malnutrition</strong> — a child consuming an apparently adequate diet who is biochemically deficient in the three amino acid precursors of dopamine, norepinephrine, serotonin, and melatonin. This deficiency is not detectable by standard dietary assessment and requires amino acid panel testing.</p>
+    <p>The hidden malnutrition state establishes the first of two independent mechanisms through which tryptophan is depleted in immune-derived autism. The second — indoleamine 2,3-dioxygenase 1 (IDO1)-mediated tryptophan diversion — operates through a completely different mechanism but converges on the same endpoint. Tryptophan-dependent serotonin synthesis is simultaneously limited from above by failed digestion and from below by immune-driven enzymatic diversion.</p>
+  </section>
+
+  <!-- OPIOID PEPTIDES -->
+  <section id="opioid" class="paper-section">
+    <div class="section-label">Section 5</div>
+    <div class="section-mechanism">Convergent Mechanism 2A · Gut SST-28 overactivation arm</div>
+    <h2 class="section-heading">Opioid Peptide Accumulation and the CCK-Mediated Gut SST-28 Overactivation Cascade</h2>
+
+    <p>Casomorphin — derived from incompletely digested casein — and gliadorphin — derived from incompletely digested gluten — belong to a class of compounds termed exorphins: peptides originating outside the body that bind to opioid receptors. This binding initiates the first of two distinct cascade pathways.</p>
+
+    <h3 class="sub-heading">Opioid receptor binding and the food-seeking reinforcement loop</h3>
+    <p>Casomorphin and gliadorphin bind to mu-opioid receptors throughout the gut and brain, producing opioid-like effects and driving the body to upregulate cholecystokinin (CCK) as a homeostatic response. Two simultaneously operating mechanisms produce characteristic food selectivity: opioid receptor activation produces biochemical reward from dairy and wheat specifically; simultaneously, the body's homeostatic amino acid deficiency detection systems generate food-seeking signals directed toward protein-rich sources — which casein and gluten foods correctly represent. Both drives arrive at the same behavioral output simultaneously, explaining the food selectivity of affected children as a convergent biological phenomenon rather than a behavioral or sensory preference.</p>
+
+    <h3 class="sub-heading">CCK overactivation and gut SST-28 dysregulation</h3>
+    <p>Because the opioid peptide load is continuous rather than episodic, the normal CCK off-switch does not fire. Chronic CCK overactivation drives gut SST-28 — the 28-amino-acid form of somatostatin produced by intestinal D-cells — into sustained overexpression. SST-28 is the primary inhibitory regulator of the digestive hormone cascade: it suppresses gastrin, secretin, VIP, motilin, and gastric acid secretion. In immune-derived autism it becomes tonically and globally overactive, suppressing the entire digestive hormone cascade continuously.</p>
+
+    <div class="callout-bold">In the gut, SST-28 is overactive — tonically suppressing the digestive hormone cascade. In the brain, SST-14 is silenced — failing to coordinate the neuropeptide cascade. Same gene, same precursor, opposite dysfunction, sequential causation.</div>
+  </section>
+
+  <!-- CD26 -->
+  <section id="cd26" class="paper-section">
+    <div class="section-label">Section 6</div>
+    <div class="section-mechanism">Convergent Mechanism 2B · Methylation failure arm</div>
+    <h2 class="section-heading">CD26 Blockade, Adenosine Accumulation, and Methylation Cycle Impairment</h2>
+
+    <p>In parallel with the CCK-mediated SST-28 overactivation, the same casomorphin and gliadorphin peptides initiate a second mechanistically distinct cascade pathway through the CD26 receptor — sharing the same upstream trigger but producing entirely different downstream consequences that converge independently on SST-14 interneuron silencing.</p>
+
+    <h3 class="sub-heading">CD26 blockade and the adenosine clearance failure</h3>
+    <p>CD26 — also known as dipeptidyl peptidase IV (DPP-IV) — is a multifunctional membrane protein on the surface of lymphocyte immune cells that serves as the binding site for adenosine deaminase (ADA), the enzyme responsible for converting and clearing adenosine from the cell. Casomorphin and gliadorphin bind to the ADA receptor site on CD26, physically preventing ADA from docking and executing adenosine clearance. Streptokinase, mercury, and genetic CD26 receptor variants block the same site by the same mechanism — their effects are additive.<sup><a href="#ref23">[23]</a></sup></p>
+
+    <h3 class="sub-heading">Adenosine as rate limiter of the methionine synthase cycle</h3>
+    <p>Adenosine directly inhibits methionine synthase, the enzyme at the center of the methylation cycle that converts homocysteine back to methionine and regenerates S-adenosylmethionine (SAMe) — the universal methyl donor. When methionine synthase activity is rate-limited by adenosine, SAMe production falls and S-adenosylhomocysteine (SAH) accumulates. Elevated SAH competitively inhibits the methyltransferase enzymes that perform methylation reactions throughout the cell — simultaneously failing neurotransmitter regulation, immune cell switching, DNA methylation, and cellular energy production through phosphatidylcholine-dependent mitochondrial membrane integrity.</p>
+
+    <h3 class="sub-heading">Homocysteine accumulation as a biomarker of methylation failure</h3>
+    <p>Elevated plasma homocysteine with concurrent low plasma cysteine and reduced glutathione represents the laboratory fingerprint of the CD26-adenosine-methylation cascade mechanism. Homocysteine elevation in the presence of normal B12 and folate concentrations suggests functional B12 deficiency — adenosine rate-limiting the cycle despite adequate B12 — or folate receptor antibody-mediated delivery failure.</p>
+
+    <p>Physical markers of methylation insufficiency include joint hypermobility, elongated and hyperextensible fingers, pectus excavatum, pale or mottled skin, low muscle tone, fatigue disproportionate to activity, and reduced exercise tolerance. These reflect impaired collagen synthesis downstream of reduced glycine availability through the transsulfuration pathway — the same pathway that reduces cysteine availability for glutathione synthesis.</p>
+  </section>
+
+  <!-- LPS -->
+  <section id="lps" class="paper-section">
+    <div class="section-label">Section 7</div>
+    <div class="section-mechanism">Convergent Mechanism 3 · Primary immune activation input</div>
+    <h2 class="section-heading">Intestinal Barrier Disruption, LPS Translocation, and Systemic Immune Activation</h2>
+
+    <p>The compromised gut barrier does not merely allow peptide fragments into systemic circulation. It creates a conduit through which gram-negative bacterial cell wall components — specifically lipopolysaccharide (LPS) — enter systemic circulation continuously. This LPS translocation is the primary initiating event for the chronic systemic immune activation that drives the upstream IDO1 and nuclear factor kappa B (NF-κB) mechanisms of subsequent cascade steps.</p>
+
+    <p>LPS is one of the most potent known activators of the innate immune system. Even at nanogram concentrations it triggers toll-like receptor 4 (TLR4) pattern recognition receptor activation in macrophages and microglia, initiating the production of IL-1β, IL-6, TNF-α, and IFN-γ. Activated microglia produce IL-1α, TNF-α, and complement component C1q — the three signals that drive the astrocyte A1 polarization shift described in the convergence section.</p>
+  </section>
+
+  <!-- IDO1 -->
+  <section id="ido1" class="paper-section">
+    <div class="section-label">Section 8</div>
+    <div class="section-mechanism">Convergent Mechanism 4A · Excitotoxic arm of SST-14 silencing</div>
+    <h2 class="section-heading">IDO1 Activation, the Kynurenine Pathway, and Excitotoxic Pressure on SST-14 Interneurons</h2>
+
+    <p>The sustained elevation of IL-1β, IL-6, TNF-α, and IFN-γ generated by LPS translocation activates indoleamine 2,3-dioxygenase 1 (IDO1) — the first rate-limiting step in the kynurenine pathway, diverting tryptophan away from serotonin synthesis toward kynurenine and its downstream metabolites.</p>
+
+    <h3 class="sub-heading">IDO1-mediated tryptophan diversion and the double depletion mechanism</h3>
+    <p>The consequence is a double depletion operating from two independent directions simultaneously. From above — pepsin inactivation prevents tryptophan release from dietary proline-bonded protein. From below — IDO1 continuously diverts available tryptophan into the kynurenine pathway. Serotonin synthesis is simultaneously limited by impaired supply and active enzymatic diversion. The kynurenine-to-tryptophan ratio (K:T ratio) in plasma provides a direct quantitative measure of IDO1 activity; a K:T ratio above 0.030 is consistent with active IDO1-driven tryptophan diversion.</p>
+
+    <h3 class="sub-heading">Quinolinic acid production and excitotoxic calcium overload</h3>
+    <p>The kynurenine pathway bifurcates: the neuroprotective branch produces kynurenic acid through kynurenine aminotransferase; the neurotoxic branch, driven by kynurenine monooxygenase activated by the same pro-inflammatory cytokines driving IDO1, produces 3-hydroxykynurenine and ultimately quinolinic acid.</p>
+    <p>Quinolinic acid is a potent endogenous N-methyl-D-aspartate (NMDA) receptor agonist. Its overstimulation of NMDA receptors forces calcium entry into neurons at rates exceeding their mitochondrial buffering capacity. SST-14 interneurons are disproportionately vulnerable: they maintain tonic high-frequency firing demanding continuous ATP production, making them particularly sensitive to mitochondrial energy depletion from quinolinic acid-driven calcium overload.</p>
+
+    <h3 class="sub-heading">The disrupted NMDA magnesium block and AMPA disinhibition</h3>
+    <p>Under normal conditions, a magnesium ion occupying the NMDA receptor channel pore prevents calcium entry in the absence of simultaneous membrane depolarization. In immune-derived autism this protection is compromised simultaneously from two directions: magnesium depletion from malabsorption and methylation-dependent magnesium transport failure reduces the blocking ion concentration; AMPA receptor disinhibition from reduced SST-14 inhibitory tone provides persistent membrane depolarization that relieves the magnesium block independent of glutamate binding. Quinolinic acid then overstimulates NMDA receptors that are simultaneously unprotected and persistently depolarized, producing calcium overload substantially greater than either mechanism alone would generate.</p>
+
+    <h3 class="sub-heading">NAD⁺ depletion and mitochondrial energy failure</h3>
+    <p>Further downstream, quinolinic acid is converted to NAD⁺. Under chronic IDO1 activation, NAD⁺ consumption by mitochondrial stress response mechanisms exceeds the kynurenine pathway's replacement capacity. The result is cellular NAD⁺ depletion that further compromises the mitochondrial ATP production on which SST-14 tonic firing depends — a self-reinforcing energy failure in the cells most vulnerable to the excitotoxic pressure driving it.</p>
+  </section>
+
+  <!-- NF-κB -->
+  <section id="nfkb" class="paper-section">
+    <div class="section-label">Section 9</div>
+    <div class="section-mechanism">Convergent Mechanism 4B · Transcriptional arm of SST-14 silencing</div>
+    <h2 class="section-heading">Direct Cytokine-Mediated Suppression of SST-14 Gene Expression via NF-κB and CREB</h2>
+
+    <p>In parallel with the IDO1-kynurenine excitotoxic arm, the same inflammatory cytokines independently act on SST-14 interneurons through a transcriptional mechanism that directly suppresses SST-14 gene expression. These two arms share the same upstream cytokine trigger but operate through entirely different intracellular mechanisms.</p>
+
+    <h3 class="sub-heading">The NF-κB-CREB-SST-14 transcriptional suppression mechanism</h3>
+    <p>Pro-inflammatory cytokines activate NF-κB — nuclear factor kappa B — a master regulator of the cellular inflammatory response. NF-κB activation suppresses CREB — cAMP response element-binding protein — the transcription factor that drives SST-14 gene expression through the somatostatin gene's cyclic AMP response element (CRE, sequence 5'-TGACGTCA-3'), as documented by Montminy and colleagues.<sup><a href="#ref1">[1]</a></sup> The interneuron's structural and metabolic machinery remains largely intact. Its gene expression has been turned down by the immune environment surrounding it.</p>
+
+    <p>To understand why this suppression is so difficult for the cell to overcome, it is necessary to understand the two independent mechanisms by which it operates simultaneously.</p>
+
+    <h3 class="sub-heading">How CREB Activation Is Blocked: Two Independent Mechanisms</h3>
+    <p><strong>Mechanism A — NF-κB actively hijacks the transcriptional machinery.</strong> The somatostatin CRE requires not only CREB but a co-activator protein called CBP (CREB-binding protein) to initiate transcription. CBP is present in limited quantities within each cell and cannot be rapidly upregulated on demand. When pro-inflammatory cytokines activate NF-κB, NF-κB enters the nucleus and competes directly with CREB for CBP. Under chronic inflammatory conditions, NF-κB dominates this competition — redirecting CBP to serve the inflammatory transcriptional program rather than SST-14 gene expression. CREB is left at the CRE binding site without the co-activator it needs. Simultaneously, NF-κB recruits histone deacetylase (HDAC) enzymes to the chromatin surrounding the somatostatin gene promoter. HDACs remove acetyl groups from histone proteins, tightening the DNA winding and making the CRE physically less accessible to transcription machinery — an epigenetic layer of suppression on top of the CBP competition.<sup><a href="#ref1">[1]</a></sup></p>
+
+    <p><strong>Mechanism B — Adenosine starvation of the cAMP signal.</strong> CREB requires phosphorylation by protein kinase A (PKA) at its serine-133 residue to become active. PKA is activated by cyclic AMP (cAMP). cAMP is produced by adenylyl cyclase from ATP. Adenosine accumulation from CD26 blockade activates inhibitory Gαi-coupled adenosine receptors on SST-14 interneurons, suppressing adenylyl cyclase through Gαi. Reduced adenylyl cyclase activity reduces intracellular cAMP. Reduced cAMP reduces PKA-mediated CREB phosphorylation — independently of NF-κB. The somatostatin gene's CRE is deprived of its activating signal from an entirely different direction simultaneously.<sup><a href="#ref30">[30]</a></sup></p>
+
+    <p><strong>Why both mechanisms operating simultaneously is worse than either alone.</strong> Mechanism A suppresses CREB even when cAMP is present — by taking away CBP and burying the gene under epigenetic packaging. Mechanism B prevents cAMP from activating CREB in the first place. If only Mechanism A were operating, the cell might partially compensate by generating extra cAMP — flooding enough phosphorylated CREB into the nucleus that some might outcompete NF-κB for CBP. If only Mechanism B were operating, the cell could manage if the inflammatory environment were mild enough that NF-κB was not fully dominating CBP. Both operating simultaneously removes every compensatory route. The CRE lock is present. The CREB key exists. The CBP locksmith is in the cell. The electricity — cAMP — is somewhere in the grid. But the key has no power and the locksmith has been hired away. The SST-14 recipe goes unread.</p>
+
+    <p><strong>Where the estrogen compensatory axis fits.</strong> The Gq-mER estrogen pathway characterized by Qiu et al.<sup><a href="#ref35">[35]</a></sup> generates cAMP through a Gαq-mediated route entirely independent of the Gαi-mediated suppression that adenosine uses to cut the conventional cAMP supply. It bypasses Mechanism B but not Mechanism A. In females, this partial back-door electricity partially compensates for cAMP starvation — providing enough phosphorylated CREB that some manages to find CBP and maintain some SST-14 output. In prepubertal males, this back door is closed — opening only at puberty when aromatase converts testosterone to estradiol in the brain.</p>
+
+    <p>This transcriptional suppression is the most clinically reversible form of SST-14 silencing — the cellular machinery for recovery remains present. Remove the NF-κB-activating cytokine load and CBP is released; restore cAMP and CREB is phosphorylated; inhibit HDACs and chromatin accessibility is restored. This reversibility is the mechanistic basis for the clinical response to immunoglobulin therapy in State 1 patients.</p>
+
+    <h3 class="sub-heading">Autoantibody-mediated functional silencing</h3>
+    <p>Simultaneously, the chronically activated adaptive immune system produces autoantibodies against neural surface proteins on SST-14 interneurons, impairing membrane signal transduction even when some SST-14 peptide production is partially maintained. Transcriptional suppression reduces SST-14 production at the gene level; autoantibody binding impairs the functional output of whatever signaling remains.</p>
+
+  </section>
+
+  <!-- CONVERGENCE -->
+  <section id="convergence" class="paper-section">
+    <div class="section-label">Section 10</div>
+    <div class="section-mechanism">Convergent Mechanism 5 · The mechanistic node</div>
+    <h2 class="section-heading">Convergence on SST-14 Interneuron Silencing and the Self-Reinforcing Biological Latch</h2>
+
+    <p>The two arms of SST-14 silencing now arrive at the same cellular target simultaneously, along with epigenetic reinforcement from methylation failure and autoantibody-mediated surface receptor jamming. SST-14 interneurons are being suppressed at four independent levels simultaneously: metabolic depletion from quinolinic acid excitotoxicity, transcriptional suppression via NF-κB, reduced cAMP activation of CREB via adenosine, and surface receptor jamming via autoantibodies.</p>
+
+    <h3 class="sub-heading">The A1 astrocyte shift and the loss of neural plasticity</h3>
+    <p>Microglial activation driven by persistent LPS translocation and SST-14 loss of anti-inflammatory output produces IL-1α, TNF-α, and complement component C1q — the three signals that drive astrocyte polarization toward the A1 reactive phenotype. A2 astrocytes support synaptogenesis, produce BDNF and the synaptogenic proteins hevin and SPARCL1 that drive thalamocortical connectivity, and promote synaptic pruning accuracy. A1 reactive astrocytes suppress all of these functions.</p>
+    <p>The A1/A2 transition is not permanent. Liddelow et al.<sup><a href="#ref9">[9]</a></sup> established that the A1 reactive state is maintained by ongoing microglial signaling and reverses when those signals are removed — a direct rebuttal of the assumption that the adult brain's developmental window is irreversibly closed.</p>
+
+    <h3 class="sub-heading">The self-reinforcing biological latch</h3>
+    <p>SST-14 silencing removes the anti-inflammatory inhibitory tone that SST-14 interneurons normally exert on microglia and reactive astrocytes. When SST-14 output falls, microglial reactivity increases, A1 polarization deepens, cytokine levels rise, IDO1 activity increases, and excitotoxic pressure on the remaining SST-14 interneurons intensifies. The system cannot self-correct because the mechanism that should initiate correction — SST-14 anti-inflammatory output — is the mechanism that has been disabled.</p>
+
+    <div class="callout-bold">The right question is not whether a given therapy helps autism. It is whether this intervention, in this biomarker-defined patient, at this point in the cascade, addresses the mechanism that is active in that child.</div>
+  </section>
+
+  <!-- NEUROPEPTIDES -->
+  <section id="neuropeptides" class="paper-section">
+    <div class="section-label">Section 11</div>
+    <div class="section-mechanism">Convergent Mechanism 6 · Downstream of the node</div>
+    <h2 class="section-heading">Neuropeptide Cascade Disruption: Oxytocin, VIP, and Secretin</h2>
+
+    <h3 class="sub-heading">Oxytocin: loss of coordinated social salience signaling</h3>
+    <p>SST-14 interneurons in the paraventricular nucleus modulate the timing and amplitude of oxytocin release in response to social and safety signals. When SST-14 output is suppressed, oxytocin release becomes blunted, irregular, and uncoupled from social context. The clinical consequence is a motivational deficit at the neurochemical level — not the absence of social capacity but the absence of the signal that makes social interaction feel rewarding. The definitive null result from the SOARS-B trial<sup><a href="#ref7">[7]</a></sup> (n=290) confirms that exogenous oxytocin cannot restore the circuit timing and social-contextual coupling that SST-14 interneuron coordination provides.</p>
+
+    <h3 class="sub-heading">VIP: G-protein cascade failure across four biological systems</h3>
+    <p>Vasoactive intestinal peptide (VIP) signaling operates through the canonical G-protein cascade: receptor → Gαs → adenylyl cyclase → cAMP → protein kinase A (PKA) → CREB. In the immune-derived autism cascade this chain has been disrupted at three independent points simultaneously: adenosine-driven Gαi suppression of adenylyl cyclase; SST-14 silencing removing coordinating inhibitory tone; and NF-κB directly suppressing CREB.</p>
+    <p>The four systems simultaneously disrupted by VIP loss are: the suprachiasmatic nucleus circadian clock (producing the fragmented, arrhythmic sleep of ASD); cortical inhibitory interneuron networks (producing modality-nonspecific sensory processing abnormalities); enteric smooth muscle peristalsis (producing constipation and irregular transit); and pro-inflammatory cytokine suppression in the immune system (removing an anti-inflammatory brake at the moment most required).</p>
+
+    <h3 class="sub-heading">The estrogen-cAMP-CREB-SST14 compensatory axis and the male-to-female ratio</h3>
+    <p>Estradiol activates adenylyl cyclase through a non-classical membrane-initiated pathway: membrane-associated estrogen receptor alpha couples to Gαq, activates protein kinase C, upregulates adenylyl cyclase VII, and generates cAMP independently of the Gαi-mediated adenosine suppression.<sup><a href="#ref2">[2]</a></sup> Because the somatostatin gene contains a cyclic AMP response element (CRE),<sup><a href="#ref1">[1]</a></sup> this estradiol-generated cAMP drives SST-14 gene transcription through CREB — providing partially compensatory transcriptional activation that counteracts the NF-κB-mediated CREB suppression. A female carrying equivalent upstream cascade burden retains a degree of SST-14 expression that a male with identical biology cannot access. At puberty, testosterone-to-estradiol conversion through brain aromatase provides prepubertal males with their first access to this compensatory pathway — accounting for the spontaneous improvement in social and behavioral function that families frequently report at puberty in male autistic children.</p>
+
+    <h3 class="sub-heading">Secretin: compound failure from above and below</h3>
+    <p>Secretin faces disruption from two independent directions. From below: gut pH dysregulation prevents duodenal chyme from reaching the pH 4.2 threshold required for S-cell secretin release; gut SST-28 overactivation provides a second suppressive layer through paracrine D-cell signaling. From above: SST-14 silencing removes the central neural coordination that secretin signaling requires for its brain-side effects in the cerebellum, hippocampus, and hypothalamus.</p>
+    <p>The early positive signal from Horvath et al.<sup><a href="#ref3">[3]</a></sup> reflected intravenous delivery bypassing the blocked gut release mechanism entirely, delivering secretin to a genuinely secretin-deficient circuit. The subsequent 14 null RCTs<sup><a href="#ref4">[4,5]</a></sup> enrolled unselected populations, diluting the responsive secretin-deficient subgroup to statistical insignificance.</p>
+
+    <h3 class="sub-heading">Thalamic gating failure: a second mechanism for sensory dysregulation</h3>
+    <p>SST-14 interneuron silencing in the thalamic reticular nucleus (TRN) provides a second anatomically upstream mechanism for sensory processing abnormalities. The TRN gates sensory information flow from thalamic relay nuclei to primary sensory cortices across all sensory modalities except olfaction. When TRN SST-14 interneurons are silenced, the thalamic gate is held open continuously — producing the two-level sensory filtering failure, in series with cortical VIP-driven gain control failure, that explains both the severity and modality-nonspecific nature of ASD sensory processing abnormalities.</p>
+  </section>
+
+  <!-- PHENOTYPE -->
+  <section id="phenotype" class="paper-section">
+    <div class="section-label">Section 12</div>
+    <div class="section-mechanism">Convergent Mechanism 7 · Observable expression</div>
+    <h2 class="section-heading">The ASD Phenotype Cluster: Observable Expressions of Upstream Cascade Failure</h2>
+
+    <p>The clinical features of immune-derived autism are not a collection of independently caused characteristics. They are simultaneous downstream expressions of a unified upstream mechanism organized by the neuropeptide system whose loss produces each domain of impairment.</p>
+
+    <p><strong>Social motivation and emotional regulation</strong> — oxytocin pathway loss — reflects a motivational architecture failure rather than a structural inability to engage socially. Behavioral therapies providing external social scaffolding address the expression of the deficit; restoring upstream SST-14 interneuron coordination addresses its neurochemical source.</p>
+
+    <p><strong>Sensory processing, sleep architecture, and gut motility</strong> — VIP pathway loss — spans four systems simultaneously. Sleep disruption (affecting 40–80% of autistic individuals) reflects loss of VIP-mediated circadian oscillator synchronization. Sensory processing abnormalities reflect two-level filtering failure. GI motility disturbance reflects VIP-driven smooth muscle relaxation failure. Treating each domain as an independent problem requiring its own specialist and intervention addresses consequences without engaging the upstream failure producing all of them.</p>
+
+    <p><strong>Digestive function, cerebellar development, and gut-brain metabolism</strong> — secretin pathway loss — bridges gut and brain simultaneously. The cerebellar component produces motor coordination difficulties, simplified gait patterns including idiopathic toe walking, and impaired procedural learning.</p>
+
+    <p><strong>Cognitive rigidity and impaired neural plasticity</strong> — A1 astrocyte polarization — produces reduced synaptogenesis, impaired synaptic pruning accuracy, BDNF deficiency, and withdrawal of hevin/SPARCL1-mediated thalamocortical connectivity. As established by Liddelow et al.,<sup><a href="#ref9">[9]</a></sup> this A1 polarization state reverses when inflammatory signals are removed — challenging the clinical assumption that neural plasticity windows close irreversibly in early childhood.</p>
+  </section>
+
+  <!-- SYNTHESIS -->
+  <section id="synthesis" class="paper-section">
+    <div class="section-label">Section 13</div>
+    <h2 class="section-heading">Synthesis: The Convergent Cascade, Clinical Implications, and Testable Predictions</h2>
+
+    <h3 class="sub-heading">Why prior clinical trials failed to demonstrate benefit</h3>
+    <p>The trial literature for oxytocin, secretin, and immunoglobulin interventions in ASD has produced inconsistent results explained by two systematic design failures: intervention at a downstream rather than upstream mechanistic point, and enrollment of unselected populations that include non-immune-derived ASD subtypes.</p>
+    <p>The Frye et al. series on folinic acid in folate-receptor-antibody-positive ASD<sup><a href="#ref11">[11,12,13]</a></sup> represents the single published intervention producing consistent positive results — following directly from prospective biomarker-stratified patient selection identifying the subgroup for whom the specific biological mechanism targeted by the intervention is operative.</p>
+
+    <h3 class="sub-heading">Regressive autism and PANS/PANDAS as temporal expressions of the same cascade</h3>
+    <p>Regressive autism is not a mechanistically distinct subtype but a temporal expression of the cascade under threshold dynamics. Compensatory mechanisms may maintain adequate SST-14 interneuron output while cascade burden accumulates. A second biological challenge crosses the threshold at which SST-14 interneurons can no longer maintain coordinating output. The regression is the moment the threshold was crossed, not the moment pathology began.</p>
+    <p>Pediatric acute-onset neuropsychiatric syndrome (PANS) and its streptococcal-associated variant (PANDAS) represent the accelerated acute expression of the same cascade. Streptococcal molecular mimicry drives rapid autoantibody production against neural surface proteins on SST-14 interneurons and basal ganglia neurons — the same autoantibody mechanism that constitutes State 1 SST-14 surface receptor jamming in the chronic cascade.</p>
+
+    <h3 class="sub-heading">ADHD and AuDHD as regional variants of SST-14 silencing</h3>
+    <p>The clinical distinction between ASD and ADHD, and the high co-occurrence producing the AuDHD combined presentation, may reflect the regional distribution of SST-14 silencing: predominant prefrontal silencing produces ADHD-predominant features; predominant hypothalamic, amygdala, and sensory cortex silencing produces ASD-predominant features; extensive silencing across both regions produces the combined AuDHD presentation.</p>
+
+    <h3 class="sub-heading">Testable predictions arising from the convergent cascade model</h3>
+    <p>The model generates specific predictions testable in existing datasets and prospective biomarker studies: plasma quinolinic acid should correlate with SST-14 peptide levels in ASD populations; the K:T ratio should predict clinical response to immunoglobulin therapy;<sup><a href="#ref33">[33]</a></sup> lactate-to-pyruvate ratio should predict the requirement for mitochondrial restoration; female ASD individuals should show higher SST-14 peptide levels than males with equivalent cytokine and autoantibody profiles; autistic males with documented pubertal aromatase activity should show greater spontaneous improvement in SST-14-dependent outcomes.</p>
+
+    <h3 class="sub-heading">Implications beyond ASD</h3>
+    <p>SST-14 interneuron loss is one of the earliest and most consistent neuropathological findings in Alzheimer's disease, strongly correlating with episodic memory impairment.<sup><a href="#ref27">[27]</a></sup> Chronic intestinal inflammation and LPS translocation in Crohn's disease activate the same IDO1-kynurenine-quinolinic acid axis observed in the immune-derived autism cascade. Immune-derived autism, Crohn's disease, and late-onset Alzheimer's disease may represent different temporal and tissue-specific expressions of a shared metabolic-inflammatory diathesis centered on gut barrier dysfunction, kynurenine pathway activation, and SST interneuron impairment.</p>
+
+    <h3 class="sub-heading">Limitations and scope</h3>
+    <p>This document presents a mechanistic hypothesis integrating published primary literature across multiple biological systems. The complete cascade as an integrated model is novel and has not been prospectively tested as a unified framework. Individual mechanistic steps are supported by published primary literature; the integrated chain awaits prospective validation. The model does not claim to explain all autism spectrum disorder. Primarily genetic ASD subtypes — Fragile X, Rett syndrome, Angelman syndrome, tuberous sclerosis — involve mechanisms distinct from the immune-derived cascade described here.</p>
+    <p>The mechanistic links carry substantially different levels of empirical support. The IDO1-kynurenine pathway diversion, cytokine elevation, and downstream quinolinic acid excitotoxicity are strongly supported by multiple independent human ASD cohort studies with direct measurement. The CD26/DPP-IV blockade by casomorphin and gliadorphin is supported by in vitro binding demonstrations and indirect metabolomics evidence, though prospective human studies directly measuring the full sequence remain limited. The pepsin pH-dependence mechanism has not been prospectively tested in ASD populations as a primary cascade driver. Readers should interpret the document accordingly: downstream mechanisms are better evidenced than the upstream initiating sequence.</p>
+  </section>
+
+  <!-- CONCLUSION -->
+  <section id="conclusion" class="paper-section">
+    <div class="section-label">Section 14</div>
+    <h2 class="section-heading">Conclusion</h2>
+
+    <p>Immune-derived autism is produced by a converging multi-step biological cascade originating in gut pH dysregulation and arriving, through immune activation and metabolic disruption, at the silencing of SST-14 interneurons. The silencing of these interneurons simultaneously disrupts the coordinated release of oxytocin, VIP, and secretin, producing the social, sensory, sleep, gastrointestinal, motor, and cognitive features of the ASD phenotype cluster. The cascade is self-reinforcing, sex-differentiated by a specific molecular mechanism involving the estrogen-cAMP-CREB-SST14 compensatory axis, and reversible in the subset where the silencing mechanism remains transcriptional rather than structural.</p>
+
+    <p>Three decades of clinical trials in ASD have produced inconsistent results because they targeted downstream neuropeptide outputs rather than the upstream converging mechanism, and enrolled biologically heterogeneous populations rather than the biomarker-defined subgroup for whom each intervention was mechanistically relevant.</p>
+
+    <div class="callout-bold">The cascade can be interrupted at its convergent node. The trial can be designed. The patients can be selected by biomarker. The mechanistic architecture exists. What remains is to run the right trial in the right patients.</div>
+
+    <p style="margin-top:24px; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.1em; color:var(--text-light);">Companion document: <em>Restoring the Somatostatin Signal in Immune-Derived ASD: Using IMIG, IVIG, and MSC Therapy as Parallel Pathways to Neuropeptide Cascade Recovery</em> · decodingautismnow.com · May 2026</p>
+  </section>
+
+  <!-- REFERENCES -->
+  <section id="references" class="references-section">
+    <div class="section-label">References</div>
+    <h2 class="section-heading" style="font-size:1.3rem;">References</h2>
+    <ol class="ref-list">
+      <li id="ref1"><span class="ref-num">1.</span>Montminy MR, Sevarino KA, Wagner JA, Mandel G, Goodman RH. Identification of a cyclic-AMP-responsive element within the rat somatostatin gene. <em>Proc Natl Acad Sci USA.</em> 1986;83(18):6682–6686. PMID: 2875459.</li>
+      <li id="ref2"><span class="ref-num">2.</span>Aronica SM, Kraus WL, Katzenellenbogen BS. Estrogen action via the cAMP signaling pathway: stimulation of adenylate cyclase and cAMP-regulated gene transcription. <em>Proc Natl Acad Sci USA.</em> 1994;91(18):8517–8521. PMID: 8078914.</li>
+      <li id="ref3"><span class="ref-num">3.</span>Horvath K, Stefanatos G, Sokolski KN, Wachtel R, Nabors L, Tildon JT. Improved social and language skills after secretin administration in patients with autistic spectrum disorders. <em>J Assoc Acad Minor Phys.</em> 1998;9(1):9–15. PMID: 9585738.</li>
+      <li id="ref4"><span class="ref-num">4.</span>Sandler AD, Sutton KA, DeWeese J, Girardi MA, Sheppard V, Bodfish JW. Lack of benefit of a single dose of synthetic human secretin in the treatment of autism and pervasive developmental disorder. <em>N Engl J Med.</em> 1999;341(24):1801–1806. PMID: 10588965.</li>
+      <li id="ref5"><span class="ref-num">5.</span>Owley T, McMahon W, Cook EH, et al. Multisite, double-blind, placebo-controlled trial of porcine secretin in autism. <em>J Am Acad Child Adolesc Psychiatry.</em> 2001;40(11):1293–1299. PMID: 11699806.</li>
+      <li id="ref6"><span class="ref-num">6.</span>Guastella AJ, Einfeld SL, Gray KM, et al. Intranasal oxytocin improves emotion recognition for youth with autism spectrum disorders. <em>Biol Psychiatry.</em> 2010;67(7):692–694. PMID: 20110054.</li>
+      <li id="ref7"><span class="ref-num">7.</span>Sikich L, Kolevzon A, King BH, et al. Intranasal oxytocin in children and adolescents with autism spectrum disorder. <em>N Engl J Med.</em> 2021;385(16):1462–1473. PMID: 34644472.</li>
+      <li id="ref8"><span class="ref-num">8.</span>Ooi YP, Weng SJ, Kossowsky J, Gerger H, Sung M. Oxytocin and autism spectrum disorders: a systematic review and meta-analysis of randomized controlled trials. <em>Pharmacopsychiatry.</em> 2017;50(1):5–13. PMID: 27622539.</li>
+      <li id="ref9"><span class="ref-num">9.</span>Liddelow SA, Guttenplan KA, Clarke LE, et al. Neurotoxic reactive astrocytes are induced by activated microglia. <em>Nature.</em> 2017;541(7638):481–487. PMID: 28099414.</li>
+      <li id="ref10"><span class="ref-num">10.</span>Singh K, Connors SL, Macklin EA, et al. Sulforaphane treatment of autism spectrum disorder. <em>Proc Natl Acad Sci USA.</em> 2014;111(43):15550–15555. PMID: 25313065.</li>
+      <li id="ref11"><span class="ref-num">11.</span>Frye RE, Slattery J, Delhey L, et al. Folinic acid improves verbal communication in children with autism and language impairment: a randomized double-blind placebo-controlled trial. <em>Mol Psychiatry.</em> 2018;23(2):247–256. PMID: 27752075.</li>
+      <li id="ref12"><span class="ref-num">12.</span>Frye RE, Sequeira JM, Quadros EV, James SJ, Rossignol DA. Cerebral folate receptor autoantibodies in autism spectrum disorder. <em>Mol Psychiatry.</em> 2013;18(3):369–381. PMID: 22230883.</li>
+      <li id="ref13"><span class="ref-num">13.</span>Rossignol DA, Frye RE. Cerebral folate deficiency, folate receptor alpha autoantibodies and leucovorin treatment in autism spectrum disorders: a systematic review and meta-analysis. <em>J Pers Med.</em> 2021;11(11):1141. PMID: 34834493.</li>
+      <li id="ref14"><span class="ref-num">14.</span>James SJ, Cutler P, Melnyk S, et al. Metabolic biomarkers of increased oxidative stress and impaired methylation capacity in children with autism. <em>Am J Clin Nutr.</em> 2004;80(6):1611–1617. PMID: 15585776.</li>
+      <li id="ref15"><span class="ref-num">15.</span>James SJ, Melnyk S, Jernigan S, et al. Metabolic endophenotype and related genotypes are associated with oxidative stress in children with autism. <em>Am J Med Genet B Neuropsychiatr Genet.</em> 2006;141B(8):947–956. PMID: 16917939.</li>
+      <li id="ref16"><span class="ref-num">16.</span>Ashwood P, Krakowiak P, Hertz-Picciotto I, Hansen R, Pessah I, Van de Water J. Elevated plasma cytokines in autism spectrum disorders provide evidence of immune dysfunction and are associated with impaired behavioral outcome. <em>Brain Behav Immun.</em> 2011;25(1):40–45. PMID: 20705131.</li>
+      <li id="ref17"><span class="ref-num">17.</span>Launay JM, Leboyer M, Dutoit C, et al. Impact of IDO activation and alterations in the kynurenine pathway on hyperserotonemia, NAD+ production, and AhR activation in autism spectrum disorder. <em>Transl Psychiatry.</em> 2023;13(1):382. PMID: 38071324.</li>
+      <li id="ref18"><span class="ref-num">18.</span>Bryn V, Verkerk R, Skjeldal OH, Saugstad OD, Ormstad H. Kynurenine pathway in autism spectrum disorders in children. <em>Neuropsychobiology.</em> 2017;76(2):82–88. PMID: 29334690.</li>
+      <li id="ref19"><span class="ref-num">19.</span>Gevi F, Zolla L, Gabriele S, Persico AM. Urinary metabolomics of young Italian autistic children supports abnormal tryptophan and purine metabolism. <em>Mol Autism.</em> 2016;7:47. PMID: 27752316.</li>
+      <li id="ref20"><span class="ref-num">20.</span>Li Y, Qiu S, Shi J, et al. Association between MTHFR C677T/A1298C and susceptibility to autism spectrum disorders: a meta-analysis. <em>BMC Pediatr.</em> 2020;20(1):449. PMID: 32972375.</li>
+      <li id="ref21"><span class="ref-num">21.</span>Li CX, Liu YG, Che YP, et al. Association between MTHFR C677T polymorphism and susceptibility to autism spectrum disorders: a meta-analysis in Chinese Han population. <em>Front Pediatr.</em> 2021;9:598805. PMID: 33777860.</li>
+      <li id="ref22"><span class="ref-num">22.</span>Reichelt KL, Knivsberg AM. Can the pathophysiology of autism be explained by the nature of the discovered urine peptides? <em>Nutr Neurosci.</em> 2003;6(1):19–28.</li>
+      <li id="ref23"><span class="ref-num">23.</span>Vojdani A, Pangborn JB, Vojdani E, Cooper EL. Infections, toxic chemicals and dietary peptides binding to lymphocyte receptors and tissue enzymes are major instigators of autoimmunity in autism. <em>Int J Immunopathol Pharmacol.</em> 2003;16(3):189–199. PMID: 14611720.</li>
+      <li id="ref24"><span class="ref-num">24.</span>Stapleton HM, Klosterhaus S, Eagle S, et al. Detection of organophosphate flame retardants in furniture foam and U.S. house dust. <em>Environ Sci Technol.</em> 2009;43(19):7490–7495. PMID: 19848166.</li>
+      <li id="ref25"><span class="ref-num">25.</span>Carignan CC, Heiger-Bernays W, McClean MD, Webster TF. Flame retardant exposure among collegiate United States gymnasts. <em>Chemosphere.</em> 2015;139:14–19. PMID: 26210086.</li>
+      <li id="ref26"><span class="ref-num">26.</span>Waller R, Mandeya M, Viney E, Simpson JE, Wharton SB. Histological characterization of interneurons in Alzheimer disease reveals a loss of somatostatin interneurons in the temporal cortex. <em>Neuropathology.</em> 2020;40(4):336–346. PMID: 32232904.</li>
+      <li id="ref27"><span class="ref-num">27.</span>Davies P, Katzman R, Terry RD. Reduced somatostatin-like immunoreactivity in cerebral cortex from cases of Alzheimer disease and Alzheimer senile dementia. <em>Nature.</em> 1980;288(5788):279–280. PMID: 6107862.</li>
+      <li id="ref28"><span class="ref-num">28.</span>Liddelow SA, Barres BA. Reactive astrocytes: production, function, and therapeutic potential. <em>Immunity.</em> 2017;46(6):957–967. PMID: 28636962.</li>
+      <li id="ref29"><span class="ref-num">29.</span>Good P. Evidence the U.S. autism epidemic initiated by acetaminophen (Tylenol) is aggravated by oral antibiotic amoxicillin/clavulanate (Augmentin) and now exponentially by herbicide glyphosate (Roundup). <em>Clin Nutr ESPEN.</em> 2018;23:171–183. DOI: 10.1016/j.clnesp.2017.10.005.</li>
+      <li id="ref30"><span class="ref-num">30.</span>Chung FZ, Weber HW, Appleman MM. Extensive but reversible depletion of ATP via adenylate cyclase in rat adipocytes. <em>Proc Natl Acad Sci USA.</em> 1985;82(6):1614–1617. PMID: 2986155.</li>
+      <li id="ref31"><span class="ref-num">31.</span>Detel D, Batičić Pučar L, et al. Role of dipeptidyl peptidase IV/CD26 in inflammatory bowel disease. In: Karoui S, ed. <em>Inflammatory Bowel Disease – Advances in Pathogenesis and Management.</em> InTech; 2012:59–88.</li>
+      <li id="ref32"><span class="ref-num">32.</span>Luo YF, Lu L, Song HY, et al. Somatostatin-expressing interneurons of prefrontal cortex modulate social deficits in the Magel2 mouse model of autism. <em>Mol Autism.</em> 2025;16:15. DOI: 10.1186/s13229-025-00653-5.</li>
+      <li id="ref33"><span class="ref-num">33.</span>Almulla AF, Thipakorn Y, Tunvirachaisakul C, Maes M. The tryptophan catabolite or kynurenine pathway in autism spectrum disorder: a systematic review and meta-analysis. <em>Autism Res.</em> 2023;16(12):2302–2315. PMID: 37909397.</li>
+      <li id="ref34"><span class="ref-num">34.</span>Montminy MR, Sevarino KA, Wagner JA, Mandel G, Goodman RH. Characterization of a cyclic adenosine 3',5'-monophosphate-regulated enhancer of the somatostatin gene. <em>Science.</em> 1986;231(4745):1580–1583. PMID: 3006248.</li>
+      <li id="ref35"><span class="ref-num">35.</span>Qiu J, Bosch MA, Tobias SC, Grandy DK, Scanlan TS, Ronnekleiv OK, Kelly MJ. Rapid signaling of estrogen in hypothalamic neurons involves a novel G-protein-coupled estrogen receptor that activates protein kinase C. <em>J Neurosci.</em> 2003;23(29):9529–9540. PMID: 14573532.</li>
+      <li id="ref36"><span class="ref-num">36.</span>Roepke TA, Ronnekleiv OK, Kelly MJ. Physiological consequences of membrane-initiated estrogen signaling in the brain. <em>Front Biosci (Landmark Ed).</em> 2011;16:1560–1573. PMID: 21196248.</li>
+      <li id="ref37"><span class="ref-num">37.</span>Wang Y, Lu L, Song HY, et al. Somatostatin interneuron hypoactivity in medial prefrontal cortex produces social interaction deficits rescued by optogenetic activation. <em>Mol Autism.</em> 2025;16:18. DOI: 10.1186/s13229-025-00641-9.</li>
+      <li id="ref38"><span class="ref-num">38.</span>Bashir S, Al-Ayadhi L. Alterations in plasma dipeptidyl peptidase IV in autism: a pilot study. <em>Neurol Psychiatry Brain Res.</em> 2014;20(1):41–44.</li>
+      <li id="ref39"><span class="ref-num">39.</span>EL-Alameey IR, Ahmed HH, Eid IM, El-Dory G. Relationship of serum dipeptidyl peptidase-IV activity and anti-casein antibodies to gastrointestinal symptoms among children with autism spectrum disorder. <em>Open Access Maced J Med Sci.</em> 2018;6(5):785–791.</li>
+      <li id="ref40"><span class="ref-num">40.</span>Hunter LC, O'Hare A, Herron WJ, Fisher LA, Jones GE. Opioid peptides and dipeptidyl peptidase in autism. <em>Dev Med Child Neurol.</em> 2003;45(2):121–128. PMID: 12578238.</li>
+      <li id="ref41"><span class="ref-num">41.</span>Shattock P, Hooper M, Waring R. Opioid peptides and dipeptidyl peptidase in autism. <em>Dev Med Child Neurol.</em> 2004;46(5):357. [Letter]</li>
+      <li id="ref42"><span class="ref-num">42.</span>Calvete O, Reyes J, Zuñiga S, et al. Exome sequencing identifies ATP4A gene as responsible of an atypical familial type I gastric neuroendocrine tumour. <em>Hum Mol Genet.</em> 2015;24(10):2914–2922. PMID: 25652405.</li>
+      <li id="ref43"><span class="ref-num">43.</span>Frye RE, Rose S, Chacko J, et al. Oxidative stress induces mitochondrial dysfunction in a subset of autistic lymphoblastoid cell lines. <em>Transl Psychiatry.</em> 2014;4(3):e369. PMID: 24690722.</li>
+      <li id="ref44"><span class="ref-num">44.</span>Rossignol DA, Frye RE. Evidence linking oxidative stress, mitochondrial dysfunction, and inflammation in the brain of individuals with autism. <em>Front Physiol.</em> 2014;5:150. PMC4007168.</li>
+      <li id="ref45"><span class="ref-num">45.</span>Linderholm KR, Andersson A, Olsson SK, et al. Kynurenine 3-monooxygenase polymorphisms: relevance for kynurenic acid synthesis in patients with schizophrenia and healthy controls. <em>J Psychiatry Neurosci.</em> 2016;41(1):36–44. PMID: 26505143.</li>
+      <li id="ref46"><span class="ref-num">46.</span>Wonodi I, Schwarcz R. Cortical kynurenine pathway metabolism: a novel target for cognitive enhancement in schizophrenia. <em>Schizophr Bull.</em> 2010;36(2):211–218. PMID: 20147364.</li>
+      <li id="ref47"><span class="ref-num">47.</span>Serhan CN, Levy BD. Resolvins in inflammation: emergence of the pro-resolving superfamily of mediators. <em>J Clin Invest.</em> 2018;128(7):2657–2669. PMC6025982.</li>
+      <li id="ref48"><span class="ref-num">48.</span>Dalli J, Colas RA, Arnardottir H, Serhan CN. Janus-faced actions of DHA-derived specialized pro-resolving mediators as modulators of immune responses. <em>Semin Immunol.</em> 2022;59:101588.</li>
+      <li id="ref49"><span class="ref-num">49.</span>O'Neill LA, Dunne A, Edjeberg M, et al. The TLR4 D299G and T399I SNPs are constitutively active to up-regulate expression of Trif-dependent genes. <em>PLoS ONE.</em> 2014;9(10):e111161.</li>
+      <li id="ref50"><span class="ref-num">50.</span>Flanagan PK, Bhatt DL, Coughlin SR. Relevance of single-nucleotide polymorphisms in human TLR genes to infectious and inflammatory diseases and cancer. <em>Genes Immun.</em> 2014;15(2):199–209.</li>
+    </ol>
+  </section>
+
+</main>
+
+<footer class="paper-footer">
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-cite">Suggested citation (working document — update on publication):<br>Decoding Autism Now. The Anatomy of Autism: A systems biology dissection of immune-derived autism. Working document. decodingautismnow.com. May 2026.</div>
+    <div class="footer-links">
+      <a class="footer-link" href="../research/research-articles.html">← Research Hub</a>
+      <a class="footer-link" href="../03_Cascade_Explained_Biology_of_Autism.html">Cascade Explained</a>
+      <a class="footer-link" href="../14_Immunoglobulin_Therapy_Biology_of_Autism.html">Immunoglobulin Therapy</a>
+      <a class="footer-link" href="../07_Testing_Strategy_Biology_of_Autism.html">Testing Strategy</a>
+      <a class="footer-link" href="../10_Evidence_and_Citations_Biology_of_Autism.html">Evidence & Citations</a>
+    </div>
+    <div class="footer-meta">© 2026 Decoding Autism Now · CC BY-NC 4.0 · Working document prior to journal submission · decodingautismnow.com</div>
+  </div>
+</footer>
+
+</body>
+</html>
