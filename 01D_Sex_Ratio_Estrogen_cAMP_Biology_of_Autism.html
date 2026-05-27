@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biology of Autism — Why Four to One: The Sex Ratio Explained | Decoding Autism Now</title>
+<meta property="og:title" content="Biology of Autism — Why Four to One: The Sex Ratio Explained | Decoding Autism Now">
+<meta property="og:description" content="The four-to-one male predominance in autism has a specific molecular explanation — not diagnostic bias, not behavioral masking, but a compensatory pathway involving estradiol, adenylyl cyclase, and SST-14 gene transcription that females carry and prepubertal males do not.">
+<meta property="og:image" content="https://decodingautismnow.com/images/OG-01D.png">
+<meta property="og:url" content="https://decodingautismnow.com/01D_Sex_Ratio_Estrogen_cAMP_Biology_of_Autism.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Biology of Autism — Why Four to One: The Sex Ratio Explained | Decoding Autism Now">
+<meta name="twitter:description" content="A specific molecular explanation for the four-to-one male predominance in autism — the estrogen-cAMP-CREB-SST14 compensatory axis.">
+<meta name="twitter:image" content="https://decodingautismnow.com/images/OG-01D.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy:#0f2342;
+    --teal:#1e6b72;
+    --teal-light:#2a9da6;
+    --gold:#c8923a;
+    --gold-light:#e8b86d;
+    --cream:#faf7f2;
+    --warm-white:#ffffff;
+    --text-dark:#1a1a2e;
+    --text-mid:#3d4560;
+    --text-light:#6b7494;
+    --rule:#d8cfc4;
+    --accent-bg:#eef8f9;
+    --gold-bg:#fdf6ec;
+    --tag-bg:rgba(30,107,114,0.08);
+  }
+
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Source Serif 4', Georgia, serif; background:var(--cream); color:var(--text-dark); font-size:17px; line-height:1.78; }
+
+  .topbar { position:fixed; top:0; left:0; right:0; z-index:1000; background:var(--navy); border-bottom:2px solid var(--gold); }
+  .topbar-inner { max-width:960px; margin:0 auto; padding:10px 20px; display:flex; justify-content:space-between; align-items:center; flex-direction:row; flex-wrap:nowrap; gap:18px; }
+  .topbar-brand { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--teal-light); margin-bottom:2px; }
+  .topbar-title { font-family:'Source Serif 4', serif; font-size:14px; font-weight:600; color:#fff; line-height:1.2; }
+.sticky-docnav, .sticky-nav { display: none !important; }
+  html { background: #0f2342; }
+  .site-header, .hero, .shell-header { margin-top: 57px !important; }
+  .ham-btn { background:none; border:1px solid rgba(255,255,255,.28); border-radius:4px; padding:6px 10px; cursor:pointer; flex-shrink:0; line-height:0; }
+  .ham-btn:hover { border-color:rgba(255,255,255,.55); }
+  .ham-label { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.85); margin-right:7px; vertical-align:middle; }
+  .ham-bars { display:inline-flex; flex-direction:column; vertical-align:middle; gap:4px; }
+  .ham-bars span { display:block; width:18px; height:2px; background:#fff; border-radius:2px; }
+  .nav-dim { display:none; position:fixed; inset:0; z-index:997; background:rgba(15,35,66,.40); }
+  .nav-dim.open { display:block; }
+  .nav-overlay { display:none; position:fixed; top:57px; left:0; z-index:998; background:#fff; border-right:2px solid var(--gold); border-bottom:2px solid var(--gold); box-shadow:4px 4px 24px rgba(15,35,66,.16); overflow-y:auto; max-height:calc(100vh - 57px); width:560px; padding:24px 32px 36px; }
+  .nav-overlay.open { display:block; }
+  .nav-cols { display:grid; grid-template-columns:1fr 1fr; gap:0 40px; }
+  .nav-group { margin-bottom:20px; }
+  .nav-group-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:var(--teal); margin-bottom:8px; padding-bottom:5px; border-bottom:1px solid var(--rule); }
+  .nav-group a { display:block; font-family:'Source Serif 4',serif; font-size:13px; color:var(--text-dark); text-decoration:none; padding:5px 0; border-bottom:1px solid rgba(216,207,196,.35); transition:color .12s; }
+  .nav-group a:last-child { border-bottom:none; }
+  .nav-group a:hover { color:var(--teal); }
+  .nav-group a.current { color:var(--teal); font-weight:600; }
+  .topbar-inner { justify-content:space-between !important; align-items:center !important; flex-direction:row !important; flex-wrap:nowrap !important; }
+  .topbar-home { display:none !important; }
+  .topbar-title { font-size:13px !important; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:70vw; }
+  @media (max-width:720px) { .nav-overlay { width:100%; border-left:none; border-radius:0; padding:16px 20px 28px; } .nav-cols { grid-template-columns:1fr; gap:0; } }
+
+  .site-header { margin-top:57px; background:var(--navy); color:#fff; position:relative; overflow:hidden; }
+  .header-stripe { height:5px; background:linear-gradient(90deg,var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%); }
+  .header-inner { max-width:960px; margin:0 auto; padding:70px 20px 40px; position:relative; z-index:1; }
+  .header-eyebrow { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--teal-light); margin-bottom:12px; }
+  .header-title { font-family:'Playfair Display', serif; font-size:clamp(2rem,4.4vw,3rem); line-height:1.12; margin-bottom:10px; color:#fff; font-weight:600; }
+  .header-title .accent-line { display:block; color:var(--gold-light); font-style:italic; font-weight:500; }
+  .header-sub { max-width:640px; color:rgba(255,255,255,.68); font-style:italic; font-weight:300; line-height:1.6; margin-bottom:18px; font-size:1rem; }
+  .header-note { display:inline-block; margin-top:14px; font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:rgba(232,184,109,.82); text-decoration:none; border-bottom:1px solid rgba(232,184,109,.3); }
+  .header-note:hover { border-bottom-color:rgba(232,184,109,.75); }
+
+  .cascade-position { background:var(--warm-white); border-bottom:2px solid var(--rule); }
+  .cascade-position-inner { max-width:900px; margin:0 auto; padding:18px 40px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .cascade-pos-label { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--text-light); white-space:nowrap; }
+  .cascade-pos-arrow { font-family:'DM Mono', monospace; font-size:11px; color:var(--rule); }
+  .cascade-pos-step { font-family:'DM Mono', monospace; font-size:11px; background:var(--tag-bg); color:var(--teal); border:1px solid rgba(30,107,114,.22); border-radius:3px; padding:3px 10px; white-space:nowrap; }
+  .cascade-pos-step.active { background:rgba(200,146,58,.12); color:#7a4f10; border-color:rgba(200,146,58,.4); font-weight:500; }
+
+  .toc-bar { background:var(--cream); border-bottom:2px solid var(--rule); }
+  .toc-inner { max-width:900px; margin:0 auto; padding:24px 40px; }
+  .toc-label { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--text-light); margin-bottom:14px; }
+  .toc-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:4px 24px; }
+  .toc-link { font-family:'Source Serif 4', serif; font-size:.83rem; color:var(--teal); text-decoration:none; display:flex; align-items:baseline; gap:8px; padding:3px 0; transition:color .15s; }
+  .toc-link:hover { color:var(--navy); }
+  .toc-badge { font-family:'DM Mono', monospace; font-size:10px; color:var(--gold); flex-shrink:0; min-width:28px; }
+
+  .main-wrap { max-width:900px; margin:0 auto; padding:60px 40px 80px; }
+  .page-section { margin-bottom:64px; scroll-margin-top:20px; }
+  .section-header { display:flex; align-items:flex-start; gap:18px; margin-bottom:28px; padding-bottom:20px; border-bottom:2px solid var(--rule); }
+  .level-badge { font-family:'DM Mono', monospace; font-size:11px; font-weight:500; background:var(--navy); color:#fff; border-radius:4px; padding:5px 10px; flex-shrink:0; margin-top:4px; letter-spacing:.08em; white-space:nowrap; }
+  .level-badge.teal { background:var(--teal); }
+  .level-badge.gold { background:var(--gold); }
+  h2.section-title { font-family:'Playfair Display', Georgia, serif; font-size:1.55rem; font-weight:700; color:var(--navy); line-height:1.25; margin-bottom:6px; }
+  .section-subtitle { font-style:italic; font-weight:300; font-size:.95rem; color:var(--text-light); }
+
+  .node { background:var(--warm-white); border:1px solid var(--rule); border-radius:8px; padding:28px 32px; margin-bottom:20px; position:relative; }
+  .node::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; border-radius:8px 0 0 8px; background:var(--teal); }
+  .node.gold-accent::before { background:var(--gold); }
+  .node.navy-accent::before { background:var(--navy); }
+  h3.node-title { font-family:'Playfair Display', Georgia, serif; font-size:1.1rem; font-weight:600; color:var(--navy); margin-bottom:14px; }
+  .node p { color:var(--text-mid); margin-bottom:12px; }
+  .node p:last-child { margin-bottom:0; }
+  .node strong { color:var(--navy); font-weight:600; }
+  .node em { color:var(--text-mid); }
+  .node a { color:var(--teal); text-decoration:none; border-bottom:1px solid rgba(30,107,114,.3); }
+  .node a:hover { color:var(--navy); }
+  .node ul { margin:10px 0 14px 0; list-style:none; }
+  .node ul li { position:relative; padding-left:22px; margin-bottom:8px; color:var(--text-mid); font-size:.97rem; }
+  .node ul li::before { content:''; position:absolute; left:0; top:10px; width:7px; height:7px; border-radius:50%; background:var(--teal-light); }
+
+  .callout { background:var(--accent-bg); border-left:3px solid var(--teal); border-radius:0 6px 6px 0; padding:16px 20px; margin:18px 0; font-size:.97rem; }
+  .callout p { color:var(--text-mid)!important; margin-bottom:0!important; }
+  .callout.gold { background:var(--gold-bg); border-left-color:var(--gold); }
+  .callout.navy { background:rgba(15,35,66,.05); border-left-color:var(--navy); }
+
+  /* PATHWAY COMPARISON */
+  .pathway-compare { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:20px 0; }
+  .pathway-col { border-radius:8px; padding:22px 24px; }
+  .pathway-col.male { background:rgba(15,35,66,.06); border:1px solid rgba(15,35,66,.18); }
+  .pathway-col.female { background:rgba(200,146,58,.08); border:1px solid rgba(200,146,58,.28); }
+  .pathway-col-label { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.15em; text-transform:uppercase; margin-bottom:14px; font-weight:500; }
+  .pathway-col.male .pathway-col-label { color:var(--navy); }
+  .pathway-col.female .pathway-col-label { color:#7a4f10; }
+  .pathway-col ul { list-style:none; margin:0; }
+  .pathway-col ul li { font-size:.92rem; color:var(--text-mid); padding:7px 0; border-bottom:1px solid var(--rule); line-height:1.55; }
+  .pathway-col ul li:last-child { border-bottom:none; }
+  .pathway-col ul li::before { display:none; }
+  .pathway-col ul li .step-label { font-family:'DM Mono', monospace; font-size:10px; color:var(--text-light); display:block; margin-bottom:3px; }
+
+  /* SIGNAL CHAIN */
+  .signal-chain { margin:20px 0; }
+  .sc-step { display:flex; align-items:flex-start; gap:14px; padding:12px 0; border-bottom:1px solid var(--rule); }
+  .sc-step:last-child { border-bottom:none; }
+  .sc-molecule { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.08em; color:var(--gold); flex-shrink:0; min-width:100px; margin-top:3px; font-weight:500; text-transform:uppercase; }
+  .sc-arrow { color:var(--rule); flex-shrink:0; padding-top:3px; }
+  .sc-content p { margin:0; font-size:.93rem; color:var(--text-mid); line-height:1.6; }
+  .sc-content strong { color:var(--navy); }
+
+  /* TIMELINE */
+  .life-timeline { margin:20px 0; }
+  .lt-event { display:flex; gap:20px; padding:16px 0; border-bottom:1px solid var(--rule); align-items:flex-start; }
+  .lt-event:last-child { border-bottom:none; }
+  .lt-age { font-family:'DM Mono', monospace; font-size:11px; color:var(--gold); flex-shrink:0; min-width:110px; font-weight:500; padding-top:2px; }
+  .lt-content p { margin:0; font-size:.93rem; color:var(--text-mid); line-height:1.65; }
+  .lt-content strong { color:var(--navy); }
+
+  /* INSIGHT BOX */
+  .insight-box { background:var(--navy); color:rgba(255,255,255,.9); border-radius:8px; padding:24px 28px; margin:20px 0; }
+  .insight-box p { color:rgba(255,255,255,.82)!important; margin-bottom:8px!important; font-style:italic; line-height:1.7; }
+  .insight-box p:last-child { margin-bottom:0!important; }
+  .insight-box strong { color:var(--gold-light)!important; }
+
+  .pathway-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:18px; }
+  .tag { font-family:'DM Mono', monospace; font-size:11px; letter-spacing:.04em; background:var(--tag-bg); color:var(--teal); border:1px solid rgba(30,107,114,0.22); border-radius:3px; padding:3px 9px; }
+
+  .section-divider { display:flex; align-items:center; gap:14px; margin:56px 0 48px; }
+  .section-divider span { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--text-light); white-space:nowrap; }
+  .section-divider::before, .section-divider::after { content:''; flex:1; height:1px; background:var(--rule); }
+
+  .framework-notice { background:#fffbf2; border-top:1px solid rgba(200,146,58,0.25); border-bottom:1px solid rgba(200,146,58,0.25); }
+  .framework-notice-inner { max-width:900px; margin:0 auto; padding:20px 40px; display:flex; gap:16px; align-items:flex-start; }
+  .framework-notice-icon { flex-shrink:0; margin-top:2px; width:20px; height:20px; border-radius:50%; background:rgba(200,146,58,0.15); border:1px solid rgba(200,146,58,0.4); display:flex; align-items:center; justify-content:center; font-family:'DM Mono', monospace; font-size:11px; font-weight:500; color:var(--gold); line-height:1; }
+  .framework-notice-text { font-family:'Source Serif 4', serif; font-size:.88rem; color:#6b5a3a; line-height:1.65; }
+  .framework-notice-text strong { color:#4a3a1e; font-weight:600; }
+
+  .site-footer { background:var(--navy); }
+  .footer-stripe { height:5px; background:linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%); }
+  .footer-inner { max-width:1080px; margin:0 auto; padding:56px 44px 44px; }
+  .footer-top { display:grid; grid-template-columns:1.15fr 0.95fr; gap:34px; align-items:start; padding-bottom:30px; border-bottom:1px solid rgba(255,255,255,0.10); }
+  .footer-brand { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--teal-light); margin-bottom:14px; }
+  .footer-title { font-family:'Playfair Display', Georgia, serif; font-size:clamp(1.8rem, 3vw, 2.35rem); line-height:1.14; color:rgba(255,255,255,0.96); margin-bottom:14px; }
+  .footer-tagline { color:rgba(255,255,255,0.74); line-height:1.72; max-width:620px; font-size:.98rem; }
+  .footer-actions { display:flex; flex-direction:column; align-items:flex-end; gap:16px; }
+  .footer-links { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:8px; }
+  .footer-link { font-family:'DM Mono', monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.82); text-decoration:none; border:1px solid rgba(255,255,255,.20); border-radius:3px; padding:7px 14px; transition:border-color .15s, color .15s; }
+  .footer-link:hover { color:#fff; border-color:rgba(255,255,255,.50); }
+  .footer-disclaimer { font-size:.8rem; color:rgba(255,255,255,.42); line-height:1.6; text-align:right; max-width:340px; }
+  .footer-bottom { padding-top:24px; }
+  .footer-meta { font-family:'DM Mono', monospace; font-size:.75rem; color:rgba(255,255,255,.45); line-height:1.7; }
+
+  @media (max-width:760px) {
+    .header-inner, .main-wrap, .footer-inner, .toc-inner, .cascade-position-inner, .framework-notice-inner { padding-left:20px; padding-right:20px; }
+    .footer-top { grid-template-columns:1fr; }
+    .footer-actions { align-items:flex-start; }
+    .footer-disclaimer { text-align:left; }
+    .pathway-compare { grid-template-columns:1fr; }
+  }
+</style>
+
+<script defer src="https://cloud.umami.is/script.js" data-website-id="294ecd79-19fb-4267-9be2-a7c83d57274d"></script>
+</head>
+<body>
+
+<div class="nav-dim" id="navDim"></div>
+
+<nav class="nav-overlay" id="navOverlay" aria-label="Site navigation">
+  <div class="nav-cols">
+    <div>
+      <div class="nav-group">
+        <div class="nav-group-label">Foundation</div>
+        <a href="index.html">Home Hub</a>
+        <a href="01_Molecular_Origins_Biology_of_Autism.html">01 — Molecular Origins</a>
+        <a href="01B_Pepsin_Opioid_Peptides_Biology_of_Autism.html">01B — Pepsin &amp; Opioid Peptides</a>
+        <a href="01C_CD26_Adenosine_Methylation_Biology_of_Autism.html">01C — CD26, Adenosine &amp; Methylation</a>
+        <a href="01D_Sex_Ratio_Estrogen_cAMP_Biology_of_Autism.html" class="current">01D — Sex Ratio &amp; Estrogen-cAMP Axis</a>
+        <a href="02_Cascade_Map_Biology_of_Autism.html">02 — Cascade Map</a>
+        <a href="03_Cascade_Explained_Biology_of_Autism.html">03 — Cascade Explained</a>
+        <a href="04_Gprotein_Cascade_Biology_of_Autism.html">04 — G-Protein Cascade</a>
+        <a href="04B_Unlocking_the_Brake_Biology_of_Autism.html">04B — Unlocking the Brake</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Pathways</div>
+        <a href="05_Metabolic_Pathways_Map_Biology_of_Autism.html">05 — Pathways Map</a>
+        <a href="06_Metabolic_Pathways_Explained_Biology_of_Autism.html">06 — Pathways Explained</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Testing</div>
+        <a href="07_Testing_Strategy_Biology_of_Autism.html">07 — Testing Strategy</a>
+        <a href="07B_Test_Reference_Biology_of_Autism.html">07B — Test Reference</a>
+        <a href="07C_Interpreting_Results_Biology_of_Autism.html">07C — Interpreting Results</a>
+        <a href="07D_Talking_to_Your_Doctor_Biology_of_Autism.html">07D — Talking to Your Doctor</a>
+        <a href="07R_Regressive_Autism_Testing_Biology_of_Autism.html">07R — Regression Testing</a>
+      </div>
+    </div>
+    <div>
+      <div class="nav-group">
+        <div class="nav-group-label">Interventions</div>
+        <a href="08_Intervention_Logic_Biology_of_Autism.html">08 — Intervention Logic</a>
+        <a href="14_Immunoglobulin_Therapy_Biology_of_Autism.html">14 — Immunoglobulin Therapy</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Context</div>
+        <a href="09_FAQ_Biology_of_Autism.html">09 — FAQ</a>
+        <a href="11_Vaccine_Question_Biology_of_Autism.html">11 — Vaccine Question</a>
+        <a href="12_Parents_Guide_Biology_of_Autism.html">12 — Parents Guide</a>
+        <a href="12B_Autism_101_Biology_of_Autism.html">12B — Autism 101</a>
+        <a href="13_Clinician_Guide_Biology_of_Autism.html">13 — Clinician Guide</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Evidence</div>
+        <a href="10_Evidence_and_Citations_Biology_of_Autism.html">10 — Evidence &amp; Citations</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Other Sections</div>
+        <a href="imig/imig-overview.html">IMIG Clinical Trial</a>
+        <a href="imig/mechanism.html">— The Mechanism</a>
+        <a href="imig/evidence.html">— The Evidence</a>
+        <a href="imig/trial.html">— The Trial</a>
+        <a href="research/research-articles.html">Research Articles</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <div class="topbar-brand">Decoding Autism Now</div>
+      <div class="topbar-title">Biology of Autism — Why Four to One: The Sex Ratio Explained</div>
+    </div>
+    <button class="ham-btn" id="hamBtn" aria-label="Open navigation" aria-expanded="false">
+      <span class="ham-label">Menu</span>
+      <span class="ham-bars"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="header-stripe"></div>
+  <div class="header-inner">
+    <div class="header-eyebrow">Decoding Autism Now · Foundation Series</div>
+    <h1 class="header-title">
+      Biology of Autism —
+      <span class="accent-line">Why Four to One: The Sex Ratio Explained</span>
+    </h1>
+    <p class="header-sub">The four-to-one male predominance in autism has a specific molecular explanation. Not diagnostic bias. Not behavioral masking alone. A compensatory signaling pathway that females carry and prepubertal males do not — built from two papers published decades apart.</p>
+    <a href="#framework-disclaimer" class="header-note">See framework disclaimer below</a>
+  </div>
+</header>
+
+<div class="cascade-position">
+  <div class="cascade-position-inner">
+    <span class="cascade-pos-label">Connects to</span>
+    <span class="cascade-pos-arrow">›</span>
+    <span class="cascade-pos-step"><a href="01C_CD26_Adenosine_Methylation_Biology_of_Autism.html" style="color:inherit;text-decoration:none;">01C cAMP Suppression</a></span>
+    <span class="cascade-pos-arrow">›</span>
+    <span class="cascade-pos-step active">01D Sex Ratio — Estrogen-cAMP Axis</span>
+    <span class="cascade-pos-arrow">›</span>
+    <span class="cascade-pos-step"><a href="03_Cascade_Explained_Biology_of_Autism.html#sst14" style="color:inherit;text-decoration:none;">SST-14 Silencing</a></span>
+  </div>
+</div>
+
+<nav class="toc-bar" aria-label="Section index">
+  <div class="toc-inner">
+    <p class="toc-label">Sections at a glance</p>
+    <div class="toc-grid">
+      <a class="toc-link" href="#the-question"><span class="toc-badge">01</span>The Question the Field Has Not Answered</a>
+      <a class="toc-link" href="#two-papers"><span class="toc-badge">02</span>Two Papers, Decades Apart</a>
+      <a class="toc-link" href="#the-pathway"><span class="toc-badge">03</span>The Compensatory Pathway — Step by Step</a>
+      <a class="toc-link" href="#male-female"><span class="toc-badge">04</span>Male vs Female — Why the Difference Holds</a>
+      <a class="toc-link" href="#puberty"><span class="toc-badge">05</span>Puberty, Aromatase, and the Spontaneous Improvement</a>
+      <a class="toc-link" href="#predictions"><span class="toc-badge">06</span>Testable Predictions</a>
+    </div>
+  </div>
+</nav>
+
+<main class="main-wrap">
+
+  <!-- SECTION 01: THE QUESTION -->
+  <section class="page-section" id="the-question">
+    <div class="section-header">
+      <span class="level-badge teal">01</span>
+      <div>
+        <h2 class="section-title">The Question the Field Has Not Answered</h2>
+        <p class="section-subtitle">Four to one is one of the most robust epidemiological findings in autism research — and the least mechanistically explained</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <p>Autism spectrum disorder affects approximately four males for every one female across epidemiological studies conducted in dozens of countries over four decades. This ratio is one of the most consistently replicated findings in all of autism research — more consistent than any biomarker, more consistent than any behavioral measure, more consistent than the prevalence estimates themselves.</p>
+      <p>And yet the standard explanations offered for it are unsatisfying. <strong>Diagnostic bias</strong> — the idea that clinicians fail to diagnose autistic females — is real and contributes to ascertainment differences at the margin, but it cannot account for a fourfold ratio that holds even in research settings using identical diagnostic criteria. <strong>The "female protective effect"</strong> — the observation that females appear to require a higher genetic burden to reach diagnostic threshold — is a statistical description of the ratio, not a mechanistic explanation of it. <strong>Behavioral masking or camouflaging</strong> — females learning to suppress or hide autistic traits — is documented but accounts for diagnostic delay in already-symptomatic individuals, not for the underlying biological difference in prevalence.</p>
+      <div class="callout navy">
+        <p>None of these explanations specifies a molecular mechanism. The immune-derived autism cascade does. The explanation emerges from two papers — one published in 1986, one in 1994 — that were not connected to each other or to autism until the cascade framework brought them together.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>The molecular foundation</span></div>
+
+  <!-- SECTION 02: TWO PAPERS -->
+  <section class="page-section" id="two-papers">
+    <div class="section-header">
+      <span class="level-badge teal">02</span>
+      <div>
+        <h2 class="section-title">Two Papers, Decades Apart</h2>
+        <p class="section-subtitle">Each established one half of a molecular circuit. Neither was written with autism in mind.</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <h3 class="node-title">Montminy et al., PNAS 1986 — The Somatostatin CRE</h3>
+      <p>Marc Montminy and colleagues at the Salk Institute identified a specific DNA sequence — a <strong>cyclic AMP response element (CRE)</strong> — within the promoter region of the rat somatostatin gene. Their finding established that somatostatin gene transcription is directly driven by cAMP through a specific, identifiable binding site: when cAMP levels rise, protein kinase A (PKA) is activated, PKA phosphorylates cAMP response element-binding protein (CREB), and phosphorylated CREB binds the CRE to drive somatostatin gene expression.</p>
+      <p>The implication for the cascade: anything that reduces intracellular cAMP will reduce SST-14 gene transcription through this element. Adenosine accumulation — which suppresses adenylyl cyclase through Gαi — reduces cAMP and therefore directly reduces the signal driving SST-14 expression. This is the mechanism described on <a href="01C_CD26_Adenosine_Methylation_Biology_of_Autism.html">CD26, Adenosine &amp; Methylation</a>.</p>
+    </div>
+
+    <div class="node gold-accent">
+      <h3 class="node-title">Aronica et al., PNAS 1994 — The Estradiol-cAMP Pathway</h3>
+      <p>Suzanne Aronica and colleagues at the University of Illinois established that <strong>estradiol activates adenylyl cyclase through a non-classical, membrane-initiated pathway</strong> that is independent of the conventional nuclear estrogen receptor signaling. Their finding: membrane-associated estrogen receptor alpha (mERα) couples to Gαq, activates protein kinase C, upregulates adenylyl cyclase VII, and generates cAMP — <em>independently of the Gi-mediated suppression that adenosine is driving through the conventional receptor pathway.</em></p>
+      <p>The implication: estradiol can partially restore the cAMP that adenosine accumulation is suppressing, using a signaling route that the adenosine suppression mechanism does not reach. It does not fully compensate — the inflammatory nuclear factor kappa B (NF-κB) suppression of CREB is still operating — but it provides a partial upstream rescue of the cAMP signal that drives SST-14 gene transcription through the cyclic AMP response element (CRE) identified in <a href="../research/research-articles.html"><em>The Anatomy of Autism</em></a> (Montminy et al., PNAS 1986 — cited in full in our companion paper).</p>
+    </div>
+
+    <div class="insight-box">
+      <p><strong>The connection neither paper made:</strong> Montminy et al. (1986) established that SST-14 transcription depends on cAMP. Aronica et al. (1994) established that estradiol generates cAMP through a pathway adenosine cannot block. Together — as synthesised in <em>The Anatomy of Autism</em> — they define a compensatory axis: females with active estradiol signaling retain partial SST-14 transcriptional drive that males carrying identical upstream cascade burden cannot access. The four-to-one ratio is the population-level expression of this molecular asymmetry.</p>
+    </div>
+
+    <div class="pathway-tags">
+      <span class="tag">Montminy et al. 1986 PMID 2875459</span>
+      <span class="tag">Aronica et al. 1994 PMID 8078914</span>
+      <span class="tag">cAMP response element</span>
+      <span class="tag">Non-classical estrogen signaling</span>
+      <span class="tag">Adenylyl cyclase VII</span>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>How the compensatory pathway works</span></div>
+
+  <!-- SECTION 03: THE PATHWAY -->
+  <section class="page-section" id="the-pathway">
+    <div class="section-header">
+      <span class="level-badge teal">03</span>
+      <div>
+        <h2 class="section-title">The Compensatory Pathway — Step by Step</h2>
+        <p class="section-subtitle">How estradiol partially overrides adenosine-driven cAMP suppression to maintain SST-14 gene transcription</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <h3 class="node-title">The suppression mechanism — what the cascade imposes on both sexes</h3>
+      <p>In immune-derived autism, two independent mechanisms converge to suppress the cAMP that drives SST-14 gene transcription:</p>
+      <ul>
+        <li>Adenosine accumulated through CD26 blockade activates Gαi-coupled A1/A2A adenosine receptors, suppressing adenylyl cyclase and reducing cAMP production through the conventional G-protein pathway</li>
+        <li>NF-κB activated by inflammatory cytokines directly suppresses CREB at the transcription factor level, reducing SST-14 gene expression even when some cAMP signal remains</li>
+      </ul>
+      <p>Both mechanisms operate in males and females equally. The cascade burden is the same. What differs is what females have available to partially counteract the first of these two mechanisms.</p>
+    </div>
+
+    <div class="node gold-accent">
+      <h3 class="node-title">The estradiol compensatory signal chain</h3>
+
+      <div class="signal-chain">
+        <div class="sc-step">
+          <div class="sc-molecule">Estradiol</div>
+          <div class="sc-arrow">→</div>
+          <div class="sc-content"><p>Binds membrane-associated estrogen receptor alpha (mERα) at the cell surface — not the nuclear receptor that mediates classical genomic estrogen effects. This membrane-initiated pathway operates on a timescale of minutes, not hours.</p></div>
+        </div>
+        <div class="sc-step">
+          <div class="sc-molecule">mERα → Gαq</div>
+          <div class="sc-arrow">→</div>
+          <div class="sc-content"><p>mERα couples to the stimulatory G-protein Gαq and activates protein kinase C (PKC). This pathway is <strong>entirely separate</strong> from the Gαi-coupled adenosine receptor pathway that adenosine accumulation is using to suppress adenylyl cyclase. The two pathways do not compete at the receptor level — they operate on adenylyl cyclase from different directions.</p></div>
+        </div>
+        <div class="sc-step">
+          <div class="sc-molecule">PKC → AC VII</div>
+          <div class="sc-arrow">→</div>
+          <div class="sc-content"><p>PKC upregulates adenylyl cyclase isoform VII (AC VII), driving cAMP production through a route that Gαi cannot suppress — because Gαi acts on other AC isoforms, not AC VII. The estradiol signal generates cAMP through an AC isoform that is specifically resistant to the adenosine-driven suppression mechanism.</p></div>
+        </div>
+        <div class="sc-step">
+          <div class="sc-molecule">cAMP → PKA</div>
+          <div class="sc-arrow">→</div>
+          <div class="sc-content"><p>The estradiol-generated cAMP activates PKA. PKA phosphorylates CREB. Phosphorylated CREB binds the somatostatin gene's cyclic AMP response element (CRE) — documented by Montminy et al. (<a href="10_Evidence_and_Citations_Biology_of_Autism.html#sec15" style="color:var(--teal);">AoA-1 in Evidence &amp; Citations</a>) — and drives SST-14 gene transcription.</p></div>
+        </div>
+        <div class="sc-step">
+          <div class="sc-molecule">Result</div>
+          <div class="sc-arrow">→</div>
+          <div class="sc-content"><p><strong>Partial maintenance of SST-14 transcription</strong> despite adenosine-driven cAMP suppression. The NF-κB suppression of CREB is not overridden — the compensatory axis counteracts one of the two suppressive mechanisms, not both. The result is a higher SST-14 expression floor in females than in males carrying equivalent upstream cascade burden.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pathway-tags">
+      <span class="tag">mERα — membrane estrogen receptor alpha</span>
+      <span class="tag">Gαq / PKC</span>
+      <span class="tag">Adenylyl cyclase VII</span>
+      <span class="tag">cAMP → PKA → CREB</span>
+      <span class="tag">CRE / somatostatin gene</span>
+      <span class="tag">Partial SST-14 rescue</span>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>Why males and females differ</span></div>
+
+  <!-- SECTION 04: MALE VS FEMALE -->
+  <section class="page-section" id="male-female">
+    <div class="section-header">
+      <span class="level-badge gold">04</span>
+      <div>
+        <h2 class="section-title">Male vs Female — Why the Difference Holds</h2>
+        <p class="section-subtitle">Same cascade burden. Different SST-14 expression floor. Different clinical threshold.</p>
+      </div>
+    </div>
+
+    <div class="node navy-accent">
+      <div class="pathway-compare">
+        <div class="pathway-col male">
+          <div class="pathway-col-label">Prepubertal male</div>
+          <ul>
+            <li><span class="step-label">Cascade burden</span>Same founding conditions, same opioid peptide load, same adenosine accumulation, same NF-κB activation</li>
+            <li><span class="step-label">Estradiol</span>Absent or negligible before puberty. No mERα-Gαq-AC VII signaling. No compensatory cAMP generation.</li>
+            <li><span class="step-label">Gαi suppression</span>Adenosine-driven Gαi suppresses adenylyl cyclase. No alternative cAMP source available.</li>
+            <li><span class="step-label">SST-14 expression</span>Falls to the level determined by NF-κB + Gαi suppression combined. No floor from compensatory signaling.</li>
+            <li><span class="step-label">Clinical outcome</span>SST-14 silencing threshold reached at lower cascade burden. Autism phenotype expressed more readily.</li>
+          </ul>
+        </div>
+        <div class="pathway-col female">
+          <div class="pathway-col-label">Female — from early development</div>
+          <ul>
+            <li><span class="step-label">Cascade burden</span>Same founding conditions, same opioid peptide load, same adenosine accumulation, same NF-κB activation</li>
+            <li><span class="step-label">Estradiol</span>Present from fetal development onward in physiologically active concentrations. mERα-Gαq-AC VII pathway active.</li>
+            <li><span class="step-label">Gαi suppression</span>Still operating — adenosine still suppresses conventional AC isoforms. But AC VII generates compensatory cAMP that is Gαi-resistant.</li>
+            <li><span class="step-label">SST-14 expression</span>Maintained at a higher floor by the compensatory cAMP signal. Not fully rescued — NF-κB suppression of CREB still operates — but meaningfully elevated above the male baseline.</li>
+            <li><span class="step-label">Clinical outcome</span>Higher cascade burden required to cross the SST-14 silencing threshold. Autism phenotype expressed at lower rates with equivalent upstream biology.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout gold" style="margin-top:20px;">
+        <p><strong>The four-to-one ratio is the population-level expression of a threshold difference, not an absolute biological protection.</strong> Females with sufficient cascade burden — enough founding conditions, enough opioid peptide load, enough inflammatory activation — do cross the SST-14 silencing threshold and present with immune-derived autism. The compensatory axis raises the threshold; it does not eliminate the vulnerability. This correctly predicts that autistic females should show a higher burden of biomarker evidence — more severe methylation dysregulation, higher K:T ratios, stronger autoantibody profiles — than autistic males at the same diagnostic threshold. Published data are consistent with this prediction.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>What puberty changes — and why families observe it</span></div>
+
+  <!-- SECTION 05: PUBERTY -->
+  <section class="page-section" id="puberty">
+    <div class="section-header">
+      <span class="level-badge teal">05</span>
+      <div>
+        <h2 class="section-title">Puberty, Aromatase, and the Spontaneous Improvement</h2>
+        <p class="section-subtitle">Why many autistic boys improve at puberty — and what is actually happening molecularly</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <h3 class="node-title">The pubertal aromatase event</h3>
+      <p>One of the most consistent and least-explained clinical observations in autism is the pattern of spontaneous improvement in social communication, behavioral flexibility, and adaptive function that many families report in autistic boys at or around puberty — typically between ages 11 and 14. This is real, documented, and has not had a satisfying mechanistic explanation.</p>
+      <p>The estrogen-cAMP axis provides one. At puberty, rising testosterone in males is partially converted to estradiol in the brain by the enzyme <strong>aromatase</strong> — specifically expressed in hypothalamic and limbic neurons. This pubertal aromatase-derived estradiol gives prepubertal males their <strong>first meaningful access to the mERα-Gαq-AC VII-cAMP compensatory pathway</strong> that females have carried since early development.</p>
+      <p>For a male whose SST-14 interneurons have been held in transcriptional suppression partly by the absence of compensatory cAMP, the pubertal estradiol surge represents a genuine partial rescue signal — activating SST-14 gene transcription through the CRE at a moment when the inflammatory cascade burden may also be reducing with age-related immune maturation. The social, communicative, and behavioral improvements families report are the observable consequence of partial SST-14 brake release — not a behavioral or developmental phenomenon, but a molecular one.</p>
+    </div>
+
+    <div class="node">
+      <h3 class="node-title">The growth spurt component — IGF-1 and trophic support</h3>
+      <p>A second concurrent mechanism amplifies the pubertal improvement signal. The growth hormone and IGF-1 surge that accompanies pubertal growth spurts provides direct trophic support to metabolically suppressed SST-14 interneuron populations through IGF-1R signaling. IGF-1 supports neuronal survival, promotes mitochondrial function, and enhances the trophic environment in which SST-14 interneurons are attempting to recover function.</p>
+      <p>Families frequently describe skill emergence in autistic boys following growth spurts — not just at puberty but at earlier growth events between ages 5 and 9. The cascade framework interprets these as <strong>trophic rather than behavioral phenomena</strong>: the IGF-1 surge during rapid growth provides metabolic support that temporarily reduces State 2 metabolic exhaustion in SST-14 interneurons, allowing partial functional recovery that registers as observable behavioral improvement.</p>
+
+      <div class="life-timeline">
+        <div class="lt-event">
+          <div class="lt-age">Birth → 10 yrs<br>(prepubertal male)</div>
+          <div class="lt-content"><p>No meaningful estradiol. No mERα-AC VII compensatory cAMP. SST-14 transcription fully dependent on the conventional cAMP pathway — which adenosine accumulation is suppressing. SST-14 silencing threshold lower than in females. <strong>Primary window of autism phenotype expression.</strong></p></div>
+        </div>
+        <div class="lt-event">
+          <div class="lt-age">5–9 yrs<br>(growth spurts)</div>
+          <div class="lt-content"><p>Growth hormone and IGF-1 surges provide trophic support to metabolically stressed SST-14 interneurons. Families may observe temporary skill emergence or behavioral improvement following rapid growth. Not a cure — the suppressive cascade continues — but a trophic respite.</p></div>
+        </div>
+        <div class="lt-event">
+          <div class="lt-age">11–14 yrs<br>(puberty)</div>
+          <div class="lt-content"><p>Aromatase converts rising testosterone to estradiol in hypothalamic and limbic neurons. First access to mERα-Gαq-AC VII compensatory cAMP pathway. Combined with IGF-1 surge. Families frequently report improved social engagement, reduced rigidity, better communication. <strong>Molecular basis: partial SST-14 transcriptional rescue through the compensatory axis.</strong></p></div>
+        </div>
+        <div class="lt-event">
+          <div class="lt-age">Adulthood</div>
+          <div class="lt-content"><p>Sustained estradiol from aromatase activity maintains partial compensatory cAMP. State 1 patients may show continued gradual improvement if inflammatory burden reduces. State 2 and 3 patients require metabolic and trophic intervention beyond what the compensatory axis can provide. The axis narrows the gap — it does not close it.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pathway-tags">
+      <span class="tag">Aromatase</span>
+      <span class="tag">Pubertal estradiol</span>
+      <span class="tag">IGF-1 trophic support</span>
+      <span class="tag">Spontaneous pubertal improvement</span>
+      <span class="tag">Growth spurt skill emergence</span>
+      <span class="tag">SST-14 partial rescue</span>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>What this model predicts</span></div>
+
+  <!-- SECTION 06: PREDICTIONS -->
+  <section class="page-section" id="predictions">
+    <div class="section-header">
+      <span class="level-badge gold">06</span>
+      <div>
+        <h2 class="section-title">Testable Predictions</h2>
+        <p class="section-subtitle">A mechanistic explanation must generate predictions that can be confirmed or falsified — these are ours</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <p>The estrogen-cAMP-CREB-SST14 axis generates specific, testable predictions that distinguish it from explanatory hand-waving about "female protective effects." Each prediction below is falsifiable against existing or collectible data.</p>
+      <ul>
+        <li><strong>Autistic females should show higher biomarker burden than autistic males at equivalent diagnostic threshold.</strong> If females require more upstream cascade pressure to cross the SST-14 silencing threshold, those who do cross it should show measurably higher K:T ratios, more severe methylation dysregulation, stronger autoantibody profiles, and higher inflammatory cytokine levels than males at the same ADOS-2 or CARS severity level.</li>
+        <li><strong>Autistic males who show pubertal improvement should show higher aromatase activity or estradiol levels than those who do not.</strong> The pubertal improvement hypothesis is directly testable by correlating the degree of behavioral improvement with serum estradiol or aromatase activity measured at puberty onset.</li>
+        <li><strong>Autistic males with growth spurts should show skill emergence temporally correlated with IGF-1 surge.</strong> Prospective measurement of IGF-1 during growth spurts in autistic boys, correlated with parent-reported behavioral assessments at the same timepoints, would directly test the trophic hypothesis.</li>
+        <li><strong>Exogenous estradiol or aromatase induction should partially rescue SST-14 expression in male cell models carrying the inflammatory suppression load.</strong> In vitro: SST-14-expressing neurons under NF-κB and Gαi suppression should show partial transcriptional rescue when estradiol is added, specifically through the mERα-AC VII pathway and specifically blockable by AC VII inhibition rather than conventional ER antagonism.</li>
+        <li><strong>Girls who present with autistic regression should show lower estradiol-to-burden ratios than non-regressing girls with equivalent cascade biomarkers.</strong> If the compensatory axis is real, its failure in individual females should be predictable from the ratio of cascade burden to compensatory signal strength.</li>
+      </ul>
+
+      <div class="insight-box">
+        <p><strong>Why this matters beyond autism:</strong> The estrogen-cAMP-AC VII-SST14 axis may be relevant to any condition in which SST-14 interneuron function is compromised by inflammatory cAMP suppression. Alzheimer's disease involves early SST-14 interneuron loss as one of its most consistent neuropathological findings. The accelerated cognitive decline in women following menopause — when estradiol drops abruptly — may in part reflect loss of the same compensatory cAMP-SST14 transcriptional support that the cascade framework identifies in autism. Two apparently separate sex-differentiated neurodegenerative patterns may share a common molecular axis.</p>
+      </div>
+    </div>
+
+    <div class="pathway-tags">
+      <span class="tag">Testable predictions</span>
+      <span class="tag">Biomarker burden in females</span>
+      <span class="tag">Pubertal aromatase hypothesis</span>
+      <span class="tag">IGF-1 growth spurt correlation</span>
+      <span class="tag">AC VII rescue in vitro</span>
+      <span class="tag">Alzheimer's sex difference</span>
+      <span class="tag">Menopause SST-14</span>
+    </div>
+  </section>
+
+</main>
+
+<div class="framework-notice" id="framework-disclaimer">
+  <div class="framework-notice-inner">
+    <div class="framework-notice-icon">i</div>
+    <p class="framework-notice-text"><strong>Framework note:</strong> The estrogen-cAMP-CREB-SST14 axis described here connects two established published findings — Montminy et al. 1986 and Aronica et al. 1994 — in a novel way that has not been prospectively tested as an integrated explanation for ASD sex ratio. Each molecular step is supported by published primary literature. The integrated model as a primary driver of the 4:1 ratio is a testable hypothesis, not an established finding. The predictions on this page are presented as research agenda items awaiting prospective validation.</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">Decoding Autism Now</p>
+        <h2 class="footer-title">Biology of Autism — Why Four to One: The Sex Ratio Explained</h2>
+        <p class="footer-tagline">A specific molecular explanation for the four-to-one male predominance in autism — the estrogen-cAMP-CREB-SST14 compensatory axis, built from two papers published decades apart and never previously connected to the sex ratio question.</p>
+      </div>
+      <div class="footer-actions">
+        <div class="footer-links">
+          <a class="footer-link" href="index.html">Home</a>
+          <a class="footer-link" href="01C_CD26_Adenosine_Methylation_Biology_of_Autism.html">CD26 &amp; Methylation</a>
+          <a class="footer-link" href="03_Cascade_Explained_Biology_of_Autism.html">Cascade Explained</a>
+          <a class="footer-link" href="09_FAQ_Biology_of_Autism.html">FAQ</a>
+          <a class="footer-link" href="10_Evidence_and_Citations_Biology_of_Autism.html">Evidence</a>
+        </div>
+        <p class="footer-disclaimer">This content is for informational purposes only and should not be considered medical advice, diagnosis, or treatment. Always consult with a healthcare professional before making any changes to health routines or treatment regimens.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-meta" style="color:rgba(255,255,255,0.40); margin-top:10px;">© 2026 Decoding Autism Now | All content is shared with families, clinicians and researchers for educational purposes under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.55); text-decoration:underline;">Creative Commons CC BY-NC 4.0</a> — free to share with attribution, not for commercial use.</p>
+      <p class="footer-meta">Biology of Autism — Why Four to One: The Sex Ratio Explained | Decoding Autism Now</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('hamBtn');
+  var overlay = document.getElementById('navOverlay');
+  var dim = document.getElementById('navDim');
+  if (!btn) return;
+  function openNav() { overlay.classList.add('open'); dim.classList.add('open'); btn.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+  function closeNav() { overlay.classList.remove('open'); dim.classList.remove('open'); btn.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  btn.addEventListener('click', function(){ overlay.classList.contains('open') ? closeNav() : openNav(); });
+  dim.addEventListener('click', closeNav);
+  overlay.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeNav); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeNav(); });
+})();
+</script>
+
+</body>
+</html>

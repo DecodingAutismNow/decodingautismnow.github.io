@@ -331,7 +331,6 @@ html { background: #0f2342; }
   .footer-disclaimer { margin-left:0; text-align:left; }
 }
 </style>
-  <!-- Privacy-friendly analytics by Plausible -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="294ecd79-19fb-4267-9be2-a7c83d57274d"></script>
 </head>
 <body>
@@ -346,6 +345,9 @@ html { background: #0f2342; }
         <div class="nav-group-label">Foundation</div>
         <a href="index.html">Home Hub</a>
         <a href="01_Molecular_Origins_Biology_of_Autism.html">01 — Molecular Origins</a>
+        <a href="01B_Pepsin_Opioid_Peptides_Biology_of_Autism.html">01B — Pepsin &amp; Opioid Peptides</a>
+        <a href="01C_CD26_Adenosine_Methylation_Biology_of_Autism.html">01C — CD26, Adenosine &amp; Methylation</a>
+        <a href="01D_Sex_Ratio_Estrogen_cAMP_Biology_of_Autism.html">01D — Sex Ratio &amp; Estrogen-cAMP Axis</a>
         <a href="02_Cascade_Map_Biology_of_Autism.html">02 — Cascade Map</a>
         <a href="03_Cascade_Explained_Biology_of_Autism.html">03 — Cascade Explained</a>
         <a href="04_Gprotein_Cascade_Biology_of_Autism.html">04 — G-Protein Cascade</a>
@@ -376,6 +378,7 @@ html { background: #0f2342; }
         <a href="09_FAQ_Biology_of_Autism.html">09 — FAQ</a>
         <a href="11_Vaccine_Question_Biology_of_Autism.html">11 — Vaccine Question</a>
         <a href="12_Parents_Guide_Biology_of_Autism.html">12 — Parents Guide</a>
+        <a href="12B_Autism_101_Biology_of_Autism.html">12B — Autism 101</a>
         <a href="13_Clinician_Guide_Biology_of_Autism.html">13 — Clinician Guide</a>
       </div>
       <div class="nav-group">
@@ -432,6 +435,15 @@ html { background: #0f2342; }
 </header>
 
 <div class="page">
+<div style="background:#fef9ec; border-top:3px solid #c8923a; border-bottom:1px solid rgba(200,146,58,0.25); margin-bottom:0;">
+  <div style="max-width:900px; margin:0 auto; padding:18px 40px; display:flex; gap:16px; align-items:flex-start;">
+    <div style="flex-shrink:0; margin-top:2px; width:28px; height:28px; border-radius:50%; background:rgba(200,146,58,0.18); border:1.5px solid rgba(200,146,58,0.55); display:flex; align-items:center; justify-content:center; font-family:Georgia,serif; font-size:15px; font-weight:700; color:#7a4f10; line-height:1;">!</div>
+    <div>
+      <p style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#7a4f10; margin-bottom:8px; font-weight:600;">Safety &amp; Supervision — Required Reading</p>
+      <p style="font-family:'Source Serif 4',Georgia,serif; font-size:0.92rem; color:#5a3e1a; line-height:1.7; margin:0;">All interventions described on this page are <strong style="color:#3d2200;">investigational, off-label, and require qualified medical oversight</strong>. This framework is a research model — not a prescription. No supplement, immunological, or cellular therapy described here should be initiated without direct involvement of a physician who knows the individual patient. Forskolin and other cAMP-modulating agents carry specific cardiac and drug-interaction risks and must never be self-administered. MSC therapy and IMIG/IVIG are experimental for ASD in every jurisdiction and require specialist evaluation. <strong style="color:#3d2200;">When in doubt, consult before acting.</strong></p>
+    </div>
+  </div>
+</div>
 
   <!-- SECTION 1: CASCADE ENTRY POINT -->
   <div class="section-hdr">
@@ -445,11 +457,7 @@ html { background: #0f2342; }
   </h2>
 
   <p class="body-text">
-    Every intervention in the Biology of Autism framework addresses a node somewhere along the cascade —
-    from IDO1 inhibitors that reduce kynurenine shunting, to NAD⁺ precursors that restore SIRT1 function,
-    to compounds that target the somatostatin brake directly. Immunoglobulin therapy is different.
-    It acts <em>before the cascade loads</em> — at the level of the cytokine environment that drives
-    IDO1 upregulation in the first place.
+    Every intervention in the Biology of Autism framework addresses a node somewhere along the cascade — from NAD⁺ precursors that restore mitochondrial energy to the six-layer infrastructure repair protocol that unlocks the G-protein cascade. Immunoglobulin therapy is different. It acts <em>before the cascade loads at its convergent node</em> — at the level of the cytokine environment that drives both IDO1 activation and NF-κB-mediated SST-14 interneuron silencing simultaneously.
   </p>
 
   <div class="cascade-diagram">
@@ -464,8 +472,7 @@ html { background: #0f2342; }
         <div class="cascade-node-content">
           <div class="cascade-node-label" style="color:#2a9da6;">&#9654; IVIG / IMIG Entry Point</div>
           <div class="cascade-node-desc">
-            Suppresses IFN-&#947;, TNF-&#945;, IL-6 — the upstream cytokines that drive IDO1 activation.
-            Modulates microglial neuroinflammation. Addresses autoantibodies in immune-dysregulated subgroups.
+            Suppresses IFN-&#947;, TNF-&#945;, IL-6, IL-1&#946; — the upstream cytokines that drive both IDO1 activation and NF-&#954;B-mediated CREB suppression. Clears autoantibodies targeting SST-14 interneuron surface proteins. Reduces microglial A1 astrocyte-inducing signalling.
           </div>
         </div>
       </div>
@@ -476,10 +483,22 @@ html { background: #0f2342; }
           <div class="cascade-node-line"></div>
         </div>
         <div class="cascade-node-content">
-          <div class="cascade-node-label" style="color:var(--gold-light);">Level 2 — Immune Activation / IDO1</div>
+          <div class="cascade-node-label" style="color:var(--gold-light);">Arm A — IDO1 / Excitotoxic</div>
           <div class="cascade-node-desc">
-            Chronic neuroinflammation upregulates IDO1, diverting tryptophan into the
-            kynurenine pathway. QUIN accumulates. NMDA receptors are overactivated.
+            Inflammatory cytokines activate IDO1, diverting tryptophan into the kynurenine pathway. Quinolinic acid accumulates, overactivating NMDA receptors. Calcium overload depletes mitochondrial ATP in SST-14 interneurons. NAD⁺ is consumed faster than it can be replaced.
+          </div>
+        </div>
+      </div>
+
+      <div class="cascade-node active">
+        <div class="cascade-node-dot">
+          <div class="cascade-node-circle"></div>
+          <div class="cascade-node-line"></div>
+        </div>
+        <div class="cascade-node-content">
+          <div class="cascade-node-label" style="color:var(--gold-light);">Arm B — NF-&#954;B / Transcriptional Suppression</div>
+          <div class="cascade-node-desc">
+            The same cytokines activate NF-&#954;B, which directly suppresses CREB — the transcription factor that drives SST-14 gene expression through the somatostatin gene's cAMP response element. Autoantibodies jam SST-14 interneuron surface receptors simultaneously.
           </div>
         </div>
       </div>
@@ -490,24 +509,9 @@ html { background: #0f2342; }
           <div class="cascade-node-line"></div>
         </div>
         <div class="cascade-node-content">
-          <div class="cascade-node-label">Level 3 — NAD⁺ Depletion / SIRT1 Collapse</div>
+          <div class="cascade-node-label">Convergent Node — SST-14 Interneuron Silencing</div>
           <div class="cascade-node-desc">
-            Kynurenine pathway diversion reduces NAD⁺ availability. SIRT1 loses its cofactor.
-            All four SIRT1 regulatory programs fail simultaneously.
-          </div>
-        </div>
-      </div>
-
-      <div class="cascade-node downstream">
-        <div class="cascade-node-dot">
-          <div class="cascade-node-circle"></div>
-          <div class="cascade-node-line"></div>
-        </div>
-        <div class="cascade-node-content">
-          <div class="cascade-node-label">Level 4 — SST Brake / AC-cAMP Suppression</div>
-          <div class="cascade-node-desc">
-            Somatostatin rises as a compensatory response to inflammation, suppressing
-            adenylyl cyclase. The cAMP → PKA → CREB pathway collapses. BDNF expression falls.
+            Both arms arrive at the same target simultaneously. SST-14 interneurons in cortex, hippocampus, and hypothalamus lose their coordinating function. The biological latch engages.
           </div>
         </div>
       </div>
@@ -517,10 +521,9 @@ html { background: #0f2342; }
           <div class="cascade-node-circle"></div>
         </div>
         <div class="cascade-node-content">
-          <div class="cascade-node-label">Level 5–6 — Synaptic Regression / Reduced Plasticity</div>
+          <div class="cascade-node-label">Neuropeptide Cascade Disruption → Observable Phenotype</div>
           <div class="cascade-node-desc">
-            Without CREB-driven BDNF, synaptic architecture is not maintained or built.
-            The system locks into a low-plasticity state.
+            Oxytocin release blunted and uncoupled from social context. VIP G-protein signalling fails across four systems (circadian, sensory, gut motility, immune). Secretin faces compound failure. A1 astrocyte polarisation withdraws synaptogenic support.
           </div>
         </div>
       </div>
@@ -529,11 +532,13 @@ html { background: #0f2342; }
   </div>
 
   <p class="body-text">
-    The significance of this entry point is not merely positional — it is mechanistic. Treating downstream
-    consequences while the upstream inflammatory driver remains active is like addressing individual symptoms
-    of a leaking pipe without closing the valve. Immunoglobulin therapy targets the valve.
-    For children with documented immune dysregulation, it may be the most direct available intervention.
+    The significance of this entry point is not merely positional — it is mechanistic. IMIG and IVIG address the inflammatory cytokine environment that is simultaneously driving both arms of SST-14 silencing. Treating the downstream neuropeptide deficit while the upstream cytokine burden remains active is addressing symptoms of a valve that has not been closed. For children with documented immune dysregulation, immunoglobulin therapy targets the valve itself.
   </p>
+
+  <div style="margin: 0 0 32px 0; padding: 20px 28px; background:rgba(30,107,114,0.06); border-left:3px solid var(--teal); border-radius:0 6px 6px 0;">
+    <p style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:var(--teal); margin-bottom:8px; font-weight:600;">Companion Working Papers</p>
+    <p style="font-family:'Source Serif 4',serif; font-size:0.92rem; color:var(--text-mid); line-height:1.72; margin:0;">The mechanistic foundation for this page is developed in two companion working papers available at the <a href="research/research-articles.html" style="color:var(--teal); font-weight:600;">Research Articles</a> hub: <strong>The Anatomy of Autism</strong> (V14d) — presenting the two-layer model of cascade mechanism and constitutional susceptibility architecture with seven tipping points, the CREB/CBP/CRE transcriptional suppression dual-mechanism, and the estrogen-cAMP sex ratio explanation; and <strong>Restoring the Somatostatin Signal in Immune-Dysregulated ASD</strong> (V17) — the companion paper from which this page's three-state model, biomarker trial framework, and adjunct protocol rationale are drawn. Both are working documents under expert review prior to journal submission.</p>
+  </div>
 
   <!-- SECTION 2: IVIG EVIDENCE -->
   <div class="section-hdr">
@@ -645,7 +650,7 @@ html { background: #0f2342; }
     IVIG produces a high serum IgG peak within 24 hours, then declines over 3&ndash;4 weeks,
     creating oscillating inflammatory suppression. IMIG delivers a slower, sustained IgG
     elevation — a steady-state profile that may be mechanistically preferable for cascade biology,
-    where SIRT1 recovery, CREB/BDNF-dependent plasticity, and SST normalisation all require
+    where SST-14 transcriptional recovery, CREB/BDNF-dependent plasticity restoration, and autoantibody clearance all require
     weeks of consistently reduced neuroinflammation, not periodic windows of relief.</p>
   </div>
 
@@ -697,7 +702,7 @@ html { background: #0f2342; }
       The cascade model helps explain why the IVIG gain-loss pattern occurs — and why IMIG's
       pharmacokinetics may be mechanistically preferable rather than merely more convenient.
       <br><br>
-      SIRT1 recovery requires sustained NAD⁺ availability over weeks. CREB-driven BDNF
+      SST-14 transcriptional recovery requires weeks of consistently reduced NF-κB-driven CREB suppression. CREB-driven BDNF
       expression and the synaptic remodeling it enables operate on timescales of weeks to months —
       not 2-week windows between infusion troughs. The SST brake, which rises as a compensatory
       response to chronic neuroinflammation, requires <strong>weeks of consistently reduced inflammatory
@@ -820,19 +825,20 @@ html { background: #0f2342; }
       ASD subgroups would need to address the following:
       <br><br>
       <strong>Patient selection:</strong> Children aged 3–12 with ASD (DSM-5) and documented
-      neuroimmune markers — elevated inflammatory cytokines (IFN-&#947;, TNF-&#945;, IL-6),
-      IgG subclass abnormalities, or anti-brain autoantibodies. The cascade framework's
-      testing protocol (Doc 07 in this suite) provides an evidence-based pathway for identifying
-      this subpopulation.
+      neuroimmune markers — elevated K:T ratio, inflammatory cytokines (IFN-&#947;, TNF-&#945;, IL-6, IL-1&#946;),
+      IgG subclass abnormalities, or anti-brain autoantibodies. Two or more biomarker criteria met
+      constitutes the immune-derived autism subgroup designation. The <a href="07_Testing_Strategy_Biology_of_Autism.html" style="color:var(--teal);">Testing Strategy</a> page provides the full panel.
       <br><br>
-      <strong>Intervention:</strong> IMIG (16% IgG, 0.2 mL/kg) monthly for a minimum of 6 months.
+      <strong>Intervention:</strong> IMIG (16% IgG, 0.2 mL/kg) monthly for a minimum of 6 months,
+      with the adjunct metabolic protocol running concurrently from enrolment.
       Six months is the critical threshold — sufficient to assess whether sustained immunomodulation
-      produces the SIRT1 recovery, SST normalisation, and CREB/BDNF restoration that the
-      cascade model predicts.
+      produces the SST-14 transcriptional recovery, NF-&#954;B reduction, autoantibody clearance,
+      and neuropeptide cascade normalisation that the cascade model predicts.
       <br><br>
       <strong>Primary endpoints:</strong> ABC-Irritability subscale (established precedent from IVIG
-      literature). Secondary: pro-inflammatory cytokine levels, IDO1 metabolites (kynurenine/tryptophan
-      ratio), Social Responsiveness Scale, and functional independence measures.
+      literature). Secondary: K:T ratio, pro-inflammatory cytokine panel, autoantibody titres,
+      Social Responsiveness Scale, Vineland Adaptive Behaviour Scales, and functional independence measures.
+      Biomarker response should be co-primary with behavioural endpoints.
       <br><br>
       <strong>Infrastructure:</strong> The clinical, manufacturing, and regulatory infrastructure
       to conduct such a trial already exists.
@@ -847,6 +853,187 @@ html { background: #0f2342; }
     ASD subpopulation. No such approved treatment currently exists anywhere in the world.
   </p>
 
+  <!-- SECTION 6: THREE-STATE MODEL -->
+  <div class="section-hdr">
+    <div class="section-hdr-line"></div>
+    <div class="section-hdr-label">Section 06 — The Three-State Clinical Framework</div>
+    <div class="section-hdr-line"></div>
+  </div>
+
+  <h2 class="section-title">
+    <span class="num">06</span>Matching intervention to the depth of SST-14 interneuron silencing
+  </h2>
+
+  <p class="body-text">
+    Not all immune-derived autism presents the same suppressive burden at the SST-14 interneuron level. The three-state framework identifies where along the silencing spectrum a patient sits — and determines what combination of interventions is required. States are not mutually exclusive; a patient may show characteristics of more than one. The dominant state guides the sequencing decision.
+  </p>
+
+  <div class="comparison-table">
+    <table>
+      <thead>
+        <tr>
+          <th>State</th>
+          <th>Mechanism</th>
+          <th>Key biomarkers</th>
+          <th>Primary intervention</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>State 1</strong><br><span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--text-light);">Transcriptional suppression</span></td>
+          <td>NF-&#954;B-mediated CREB inhibition and autoantibody surface receptor jamming. Interneuron structurally and metabolically intact. Gene expression machinery recoverable.</td>
+          <td>Elevated K:T ratio; cytokine elevation (IL-6, TNF-&#945;, IL-1&#946;); autoantibody panel positive; lactate:pyruvate normal (&lt;20)</td>
+          <td>IMIG or IVIG — immune clearance is the rate-limiting intervention. Adjunct metabolic protocol running concurrently. Metabolic restoration not the primary constraint.</td>
+        </tr>
+        <tr>
+          <td><strong>State 2</strong><br><span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--text-light);">Metabolic exhaustion</span></td>
+          <td>Mitochondrial failure from chronic quinolinic acid calcium overload and NAD⁺ depletion. Gene expression recoverable; energy substrate depleted. Phosphatidylcholine depletion from SAMe insufficiency degrades membrane integrity.</td>
+          <td>Elevated K:T ratio; elevated lactate:pyruvate (&gt;25); low plasma NAD⁺; elevated 8-isoprostane; cytokine elevation</td>
+          <td>IMIG/IVIG + NAD⁺ precursors (NMN or NR) + mitochondrial support + methylation cycle restoration. Consider MSC trophic support for State 2 patients not responding to immune clearance alone.</td>
+        </tr>
+        <tr>
+          <td><strong>State 3</strong><br><span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--text-light);">Structural loss</span></td>
+          <td>Partial SST-14 interneuron loss from sustained excitotoxicity. A1 astrocyte polarisation removes hevin/SPARCL1, BDNF, and synaptogenic trophic support. A1 state is not permanent — reversal occurs when inflammatory signals are removed (Liddelow et al., Nature 2017).</td>
+          <td>Elevated K:T ratio; low plasma BDNF; elevated lactate:pyruvate; A1 astrocyte markers elevated; reduced hevin/SPARCL1 where measurable</td>
+          <td>IMIG/IVIG + MSC trophic restoration (IGF-1, BDNF, A1→A2 polarisation shift). Immune clearance to halt further loss. Infrastructure protocol as foundation. Longest recovery timeline — but not irreversible.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="body-text">
+    Why prior trials in unselected populations produced null results is directly explained by this framework. Unselected enrollment mixes State 1, State 2, State 3, and non-immune-derived ASD patients in approximately equal proportions. The responsive subgroup — State 1 and early State 2 — is diluted to statistical insignificance. The SOARS-B oxytocin trial (Sikich et al., NEJM 2021, n=290) and the secretin Cochrane review (14 null RCTs) both reflect this population-selection failure, not a failure of the underlying biology. The same principle applies to IVIG trials conducted without biomarker stratification.
+  </p>
+
+  <p class="body-text">
+    Independent genetic evidence for the State 2 model comes from Dr. Eric Morrow's research at the Lurie Autism Institute on glutamate pyruvate transaminase 2 (GPT2). Loss-of-function mutations in GPT2 — the mitochondrial enzyme that clears synaptic glutamate by converting it to alpha-ketoglutarate for TCA cycle entry — produce intellectual disability and reduced brain growth. In State 2 SST-14 interneurons already NAD⁺-depleted by IDO1 activation, impaired GPT2 function compounds the metabolic failure that prevents the cAMP→PKA→CREB→SST-14 transcriptional cycle from being energetically sustained. Dr. Morrow's work establishes the genetic proof-of-concept that mitochondrial-glutamate dysfunction at the synaptic level causes neurodevelopmental disability — the same mechanism the State 2 model proposes is occurring in acquired form through IDO1/kynurenine pathway activation in the broader immune-dysregulated ASD population.
+  </p>
+
+  <p class="body-text">
+    Convergent independent evidence for the upstream cAMP suppression mechanism comes from Robert Naviaux's cell danger response framework. Naviaux's 2017 phase I/II suramin trial (n=10) produced improvement across all three core ASD domains in all five treated participants at 6 weeks — with gains lost after suramin's 14–15 day half-life as upstream drivers continued. Suramin antagonizes P2Y receptors that couple through Gαi to suppress adenylyl cyclase — the identical Gαi-adenylyl cyclase suppression mechanism the cascade framework describes through the adenosine/CD26 arm. The CDR and the three-state SST-14 model represent convergent evidence from independent research lineages arriving at the same biological territory: G-protein cascade failure, mitochondrial exhaustion, and hypothalamic neuropeptide suppression.
+  </p>
+
+  <!-- SECTION 7: ADJUNCT PROTOCOL -->
+  <div class="section-hdr">
+    <div class="section-hdr-line"></div>
+    <div class="section-hdr-label">Section 07 — The Adjunct Metabolic Protocol</div>
+    <div class="section-hdr-line"></div>
+  </div>
+
+  <h2 class="section-title">
+    <span class="num">07</span>Six agents that prepare and sustain the intracellular environment for immunological intervention
+  </h2>
+
+  <p class="body-text">
+    IMIG modulates the upstream immune environment. The adjunct metabolic protocol addresses the intracellular cascade consequences that have accumulated while that immune environment was active. Neither is sufficient alone: IMIG without intracellular repair leaves the downstream infrastructure unable to transmit the signals that immune clearance enables; intracellular repair without immune clearance works against an ongoing inflammatory driver that continuously reasserts the suppressive burden. The two protocols are mechanistically complementary, not alternatives.
+  </p>
+
+  <div class="comparison-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Agent</th>
+          <th>Mechanism target</th>
+          <th>Cascade node addressed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Sulforaphane</strong><br><span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--text-light);">Highest priority</span></td>
+          <td>Nrf2 activation → GSTP1 upregulation → glutathione conjugation → reduced membrane lipid peroxidation (GPCR coupling restoration). NF-&#954;B suppression → reduced cytokine-driven PDE4 upregulation → longer cAMP signal duration. Blood-brain barrier penetration — acts centrally where the SST-14 brake is engaged.</td>
+          <td>BP1 membrane oxidation; BP4 PDE4 loop; BP3 adenosine axis (via reduced inflammatory ATP demand)</td>
+        </tr>
+        <tr>
+          <td><strong>NAC + Glycine</strong></td>
+          <td>NAC provides cysteine (rate-limiting glutathione precursor). Glycine provides the third glutathione amino acid. Together they restore the glutathione pool depleted by the transsulfuration bottleneck of methylation cycle failure. Glycine is also an NMDA co-agonist — relevant to quinolinic acid NMDA overactivation at SST-14 interneurons.</td>
+          <td>Glutathione restoration; transsulfuration pathway; NMDA receptor co-agonism</td>
+        </tr>
+        <tr>
+          <td><strong>NMN or NR</strong><br><span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--text-light);">(NAD⁺ precursors)</span></td>
+          <td>Direct NAD⁺ precursor supplementation restores the mitochondrial energy substrate depleted by IDO1 overactivation and consumed by mitochondrial stress responses. Particularly important for State 2 patients where NAD⁺ depletion has reached the level of compromising tonic SST-14 interneuron firing.</td>
+          <td>NAD⁺ depletion; mitochondrial ATP production; State 2 metabolic exhaustion</td>
+        </tr>
+        <tr>
+          <td><strong>Magnesium</strong><br><span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--text-light);">(glycinate or malate)</span></td>
+          <td>Essential cofactor for carbonic anhydrase (gastric HCl production), AHCY (SAH clearance), myokinase salvage (2ADP→ATP+AMP), and PKA-mediated phosphorylation. Addresses the adenine nucleotide pool at three breaking points simultaneously. Glycinate form provides additional glycine for glutathione synthesis.</td>
+          <td>BP2 GTP pool; BP3 AC substrate; BP5 PKA phosphorylation; gastric pH restoration</td>
+        </tr>
+        <tr>
+          <td><strong>Luteolin-PC</strong><br><span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--text-light);">(phosphatidylcholine complex)</span></td>
+          <td>Luteolin targets both NF-&#954;B (reducing cytokine-driven SST-14 transcriptional suppression) and CD38 (the primary NAD⁺-consuming enzyme during immune activation). The phosphatidylcholine complex improves bioavailability and provides PC directly — the SAMe-dependent mitochondrial membrane phospholipid that SAMe depletion has reduced.</td>
+          <td>NF-&#954;B / CREB suppression; NAD⁺ conservation; mitochondrial membrane integrity</td>
+        </tr>
+        <tr>
+          <td><strong>Tributyrin / Butyrate</strong></td>
+          <td>Butyrate is an HDAC inhibitor and NF-&#954;B suppressor produced by commensal gut bacteria from dietary fiber. It reduces the gut-origin inflammatory signal feeding systemic immune activation, calms microglial reactivity, and supports intestinal barrier integrity — reducing LPS translocation that maintains the cytokine burden driving both IDO1 and NF-&#954;B CREB suppression.</td>
+          <td>Gut barrier integrity; LPS translocation; NF-&#954;B suppression; microglial calming</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="body-text">
+    The sequencing principle: infrastructure repair begins immediately and runs concurrently with IMIG from the first treatment cycle. The supplement protocol does not wait for IMIG to produce immune clearance — it prepares the intracellular environment so that when immune clearance begins, the downstream signalling infrastructure is progressively more capable of transmitting the signals that reduced inflammatory burden enables. See <a href="04B_Unlocking_the_Brake_Biology_of_Autism.html" style="color:var(--teal);">Unlocking the Brake</a> for the full six-layer infrastructure repair sequence.
+  </p>
+
+  <!-- SECTION 8: MSC COMPARISON -->
+  <div class="section-hdr">
+    <div class="section-hdr-line"></div>
+    <div class="section-hdr-label">Section 08 — IMIG vs MSC Therapy</div>
+    <div class="section-hdr-line"></div>
+  </div>
+
+  <h2 class="section-title">
+    <span class="num">08</span>Two mechanistically distinct interventions — complementary, not competing
+  </h2>
+
+  <p class="body-text">
+    Mesenchymal stem cell (MSC) therapy has attracted growing research interest in ASD. Understanding how it relates to IMIG requires understanding what each intervention actually does at the mechanistic level — because they address different nodes in the cascade and are most appropriately understood as complementary rather than competing approaches.
+  </p>
+
+  <div class="comparison-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>IMIG / IVIG</th>
+          <th>MSC Therapy</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Primary mechanism</strong></td>
+          <td>IgG-mediated immunomodulation: neutralises pathological autoantibodies against SST-14 interneuron surface proteins; suppresses pro-inflammatory cytokine production (IFN-&#947;, TNF-&#945;, IL-6, IL-1&#946;); modulates NK cell and T-cell activation profiles; reduces the cytokine load driving both IDO1 excitotoxic arm and NF-&#954;B transcriptional suppression arm of SST-14 silencing.</td>
+          <td>Paracrine trophic support: MSCs do not engraft or replace neurons. They secrete IGF-1, BDNF, hepatocyte growth factor, and prostaglandin E2. They also shift astrocyte polarisation from A1 reactive toward A2 homeostatic — restoring hevin/SPARCL1 and synaptogenic support. Anti-inflammatory through IDO and PGE2 secretion, not through IgG-mediated mechanisms.</td>
+        </tr>
+        <tr>
+          <td><strong>State indication</strong></td>
+          <td>State 1 (primary); State 2 (primary + metabolic support); State 3 (combined with MSC)</td>
+          <td>State 2 (adjunct where metabolic exhaustion is rate-limiting); State 3 (primary addition — trophic restoration for interneuron populations that have lost their BDNF and synaptogenic environment)</td>
+        </tr>
+        <tr>
+          <td><strong>What it does not address</strong></td>
+          <td>Does not restore depleted NAD⁺, mitochondrial energy substrate, or trophic factors for surviving interneurons. Does not reverse A1 astrocyte polarisation directly — reduces the microglial signals driving it, allowing A2 recovery over time.</td>
+          <td>Does not clear pathological autoantibodies against SST-14 interneuron surface receptors. Does not directly suppress the cytokine-driven NF-&#954;B CREB suppression operating at the transcriptional level. Does not reduce the IDO1 excitotoxic quinolinic acid production.</td>
+        </tr>
+        <tr>
+          <td><strong>Evidence base in ASD</strong></td>
+          <td>Rossignol &amp; Frye 2021 meta-analysis (n=46 meta-analysis, 27 publications); Fourie &amp; Armstrong 2024 IMIG case report; multiple prospective and retrospective studies.</td>
+          <td>Preliminary — several small open-label trials showing safety signals and modest behavioural improvements. No published RCT in ASD as of 2025. Larger controlled studies underway.</td>
+        </tr>
+        <tr>
+          <td><strong>Cost and access</strong></td>
+          <td>IMIG: approximately $50–80 per treatment (NBI Intragam / Beriglobin equivalent). Monthly outpatient administration. Scalable globally including resource-limited settings.</td>
+          <td>Substantially higher — typically $5,000–$20,000 per treatment course. Requires specialised cell therapy facility. Access currently limited to research centres and private clinics.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="body-text">
+    The clinical decision logic: IMIG is the appropriate first-line biological intervention for biomarker-confirmed immune-derived autism across all three states — it addresses the upstream immune environment driving SST-14 silencing regardless of state. MSC therapy is the appropriate addition for State 2 patients not responding adequately to immune clearance alone, and the primary trophic addition for State 3 patients where interneuron population loss requires active restoration of the trophic environment. Running both simultaneously in State 3 addresses the cascade from two mechanistically independent directions: immune clearance halts ongoing damage while MSC trophic support rebuilds the environment for recovery.
+  </p>
+
 </div><!-- end .page -->
 
 <!-- FRAMEWORK NOTICE -->
@@ -854,17 +1041,8 @@ html { background: #0f2342; }
   <div class="framework-notice-inner">
     <div class="notice-icon">i</div>
     <p class="notice-text">
-      <strong>Theoretical framework — not clinical guidance.</strong>
-      The Autism Spectrum Disorder (ASD) Cascade is a systems-biology model integrating
-      peer-reviewed findings across immunology, metabolism, gut biology, and neuroscience
-      into a proposed mechanistic map. Individual components are supported by published research;
-      the full integrated cascade has not been validated as a unified model in large clinical trials.
-      This document summarises published peer-reviewed research on immunoglobulin therapy in ASD.
-      It is intended for educational purposes only and does not constitute medical advice.
-      All clinical decisions require qualified medical and specialist oversight.
-      Immunoglobulin therapy for ASD is investigational and not approved for this indication
-      in any jurisdiction. For the evidence base underlying the cascade framework, see the
-      <em>ASD Cascade Citations</em> document in this suite.
+      <strong>Framework note — not clinical guidance.</strong>
+      This page describes the immune-derived autism subgroup framework and the mechanistic rationale for immunoglobulin therapy within it. The cascade model integrates peer-reviewed findings across immunology, gastroenterology, neuroscience, and molecular biology; the full integrated cascade has not been validated as a unified model in a large controlled trial. The IVIG evidence base (Rossignol &amp; Frye 2021) and IMIG case report (Fourie &amp; Armstrong 2024) are published peer-reviewed research; they establish proof of mechanism and preliminary signal, not regulatory approval. Immunoglobulin therapy for ASD is investigational and not approved for this indication in any jurisdiction. All clinical decisions require qualified medical and specialist oversight. For the evidence base, see the <a href="10_Evidence_and_Citations_Biology_of_Autism.html" style="color:var(--teal);">Evidence &amp; Citations</a> page.
     </p>
   </div>
 </aside>
@@ -891,7 +1069,7 @@ html { background: #0f2342; }
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-meta" style="color:rgba(255,255,255,0.40); margin-top:10px;">© 2025 Decoding Autism Now | All content is being shared with families, clinicians and researchers for educational purposes under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.55); text-decoration:underline;">Creative Commons CC BY-NC 4.0</a> — free to share with attribution, but not for commercial use.</p>
+      <p class="footer-meta" style="color:rgba(255,255,255,0.40); margin-top:10px;">© 2026 Decoding Autism Now | All content is shared with families, clinicians and researchers for educational purposes under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.55); text-decoration:underline;">Creative Commons CC BY-NC 4.0</a> — free to share with attribution, not for commercial use.</p>
       <p class="footer-meta">Biology of Autism &mdash; Immunoglobulin Therapy | Decoding Autism Now | Key references: Rossignol &amp; Frye, J Pers Med 2021 &middot; Fourie &amp; Armstrong, Med Res Arch 2024</p>
     </div>
   </div>

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Autism 101 — The IDA Mechanism Explained for Families | Decoding Autism Now</title>
+<meta name="description" content="A plain-language explanation of how immune-derived autism silences the brain's coordination system — written for parents and families with no science background required.">
+<link rel="canonical" href="https://decodingautismnow.com/12B_Autism_101_Biology_of_Autism.html">
+
+<meta property="og:title" content="Autism 101 — The IDA Mechanism Explained for Families">
+<meta property="og:description" content="A plain-language explanation of how immune-derived autism silences the brain's coordination system — written for parents and families.">
+<meta property="og:image" content="https://decodingautismnow.com/images/OG-12.png">
+<meta property="og:url" content="https://decodingautismnow.com/12B_Autism_101_Biology_of_Autism.html">
+<meta property="og:type" content="article">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Autism 101 — The IDA Mechanism Explained for Families">
+<meta name="twitter:description" content="A plain-language explanation of how immune-derived autism silences the brain's coordination system.">
+<meta name="twitter:image" content="https://decodingautismnow.com/images/OG-12.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy:       #0f2342;
+    --teal:       #1e6b72;
+    --teal-light: #2a9da6;
+    --gold:       #c8923a;
+    --gold-light: #e8b86d;
+    --cream:      #faf7f2;
+    --warm-white: #ffffff;
+    --text-dark:  #1a1a2e;
+    --text-mid:   #3d4560;
+    --text-light: #6b7494;
+    --rule:       #d8cfc4;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; background: #0f2342; }
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    font-size: 17px;
+    line-height: 1.78;
+  }
+
+  /* TOPBAR */
+  .topbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: var(--navy); border-bottom: 2px solid var(--gold);
+  }
+  .topbar-inner {
+    max-width: 960px; margin: 0 auto; padding: 10px 20px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-direction: row; flex-wrap: nowrap; gap: 18px;
+  }
+  .topbar-brand { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 2px; }
+  .topbar-title { font-family: 'Source Serif 4', serif; font-size: 13px; font-weight: 600; color: #fff; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 70vw; }
+
+  /* HAMBURGER NAV */
+  .sticky-docnav, .sticky-nav { display: none !important; }
+  .site-header, .hero, .shell-header { margin-top: 57px !important; }
+
+  .ham-btn {
+    background: none; border: 1px solid rgba(255,255,255,.28);
+    border-radius: 4px; padding: 6px 10px; cursor: pointer;
+    flex-shrink: 0; line-height: 0;
+  }
+  .ham-btn:hover { border-color: rgba(255,255,255,.55); }
+  .ham-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.85); margin-right: 7px; vertical-align: middle; }
+  .ham-bars { display: inline-flex; flex-direction: column; vertical-align: middle; gap: 4px; }
+  .ham-bars span { display: block; width: 18px; height: 2px; background: #fff; border-radius: 2px; }
+
+  .nav-dim { display: none; position: fixed; inset: 0; z-index: 997; background: rgba(15,35,66,.40); }
+  .nav-dim.open { display: block; }
+  .nav-overlay {
+    display: none; position: fixed; top: 57px; left: 0; z-index: 998;
+    background: #fff; border-right: 2px solid var(--gold); border-bottom: 2px solid var(--gold);
+    box-shadow: 4px 4px 24px rgba(15,35,66,.16); overflow-y: auto;
+    max-height: calc(100vh - 57px); width: 560px; padding: 24px 32px 36px;
+  }
+  .nav-overlay.open { display: block; }
+  .nav-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+  .nav-group { margin-bottom: 20px; }
+  .nav-group-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; padding-bottom: 5px; border-bottom: 1px solid var(--rule); }
+  .nav-group a { display: block; font-family: 'Source Serif 4', serif; font-size: 13px; color: var(--text-dark); text-decoration: none; padding: 5px 0; border-bottom: 1px solid rgba(216,207,196,.35); transition: color .12s; }
+  .nav-group a:last-child { border-bottom: none; }
+  .nav-group a:hover { color: var(--teal); }
+  .nav-group a.current { color: var(--teal); font-weight: 600; }
+  .topbar-inner { justify-content: space-between !important; align-items: center !important; flex-direction: row !important; flex-wrap: nowrap !important; }
+  .topbar-home { display: none !important; }
+
+  @media (max-width: 720px) {
+    .nav-overlay { width: 100%; border-left: none; border-radius: 0; padding: 16px 20px 28px; }
+    .nav-cols { grid-template-columns: 1fr; gap: 0; }
+  }
+
+  /* HERO */
+  .site-header {
+    margin-top: 57px; background: var(--navy); color: #fff;
+    position: relative; overflow: hidden;
+  }
+  .header-stripe { height: 5px; background: linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%); }
+  .header-inner { max-width: 860px; margin: 0 auto; padding: 64px 20px 48px; position: relative; z-index: 1; }
+  .header-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 12px; }
+  .header-kicker { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: rgba(200,146,58,.85); margin-bottom: 16px; }
+  .header-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4.4vw, 2.8rem); line-height: 1.12; margin-bottom: 10px; color: #fff; font-weight: 600; }
+  .header-title .accent { display: block; color: var(--gold-light); font-style: italic; font-weight: 500; }
+  .header-sub { max-width: 600px; color: rgba(255,255,255,.68); font-style: italic; font-weight: 300; line-height: 1.65; font-size: 1rem; margin-bottom: 20px; }
+  .header-meta { display: flex; gap: 20px; flex-wrap: wrap; }
+  .header-badge { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.5); border: 1px solid rgba(255,255,255,.18); border-radius: 3px; padding: 5px 10px; }
+
+  /* FRAMEWORK NOTICE */
+  .framework-notice { background: #fffbf2; border-top: 1px solid rgba(200,146,58,0.25); border-bottom: 1px solid rgba(200,146,58,0.25); }
+  .framework-notice-inner { max-width: 860px; margin: 0 auto; padding: 18px 20px; display: flex; gap: 14px; align-items: flex-start; }
+  .framework-notice-icon { flex-shrink: 0; margin-top: 2px; width: 20px; height: 20px; border-radius: 50%; background: rgba(200,146,58,0.15); border: 1px solid rgba(200,146,58,0.4); display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; color: var(--gold); line-height: 1; }
+  .framework-notice-text { font-family: 'Source Serif 4', serif; font-size: .87rem; color: #6b5a3a; line-height: 1.65; }
+  .framework-notice-text strong { color: #4a3a1e; }
+  .framework-notice-text a { color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(30,107,114,0.3); }
+
+  /* MAIN */
+  .main-wrap { max-width: 740px; margin: 0 auto; padding: 64px 20px 80px; }
+
+  /* INTRO CALLOUT */
+  .intro-callout {
+    background: var(--navy); color: rgba(255,255,255,.9);
+    border-radius: 10px; padding: 32px 36px; margin-bottom: 52px;
+  }
+  .intro-callout-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 14px; }
+  .intro-callout p { font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,.85); margin-bottom: 10px; }
+  .intro-callout p:last-child { margin-bottom: 0; }
+  .intro-callout strong { color: var(--gold-light); }
+
+  /* SECTION */
+  .section { margin-bottom: 56px; }
+  .section-num { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+  .section h2 { font-family: 'Playfair Display', serif; font-size: 1.55rem; font-weight: 700; color: var(--navy); line-height: 1.25; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid var(--rule); }
+  .section p { color: var(--text-mid); margin-bottom: 14px; line-height: 1.78; }
+  .section p:last-child { margin-bottom: 0; }
+  .section strong { color: var(--navy); font-weight: 600; }
+  .section em { color: var(--text-mid); }
+
+  /* CHAIN BOX */
+  .chain-box {
+    background: var(--cream); border: 1px solid var(--rule);
+    border-left: 4px solid var(--teal); border-radius: 0 8px 8px 0;
+    padding: 20px 24px; margin: 20px 0; font-family: 'Source Serif 4', serif;
+    font-size: .95rem; color: var(--text-mid); line-height: 1.8;
+  }
+  .chain-box strong { color: var(--navy); }
+
+  /* CALLOUT */
+  .callout {
+    background: rgba(30,107,114,0.06); border-left: 3px solid var(--teal);
+    border-radius: 0 6px 6px 0; padding: 16px 20px; margin: 20px 0;
+    font-size: .97rem;
+  }
+  .callout p { color: var(--text-mid) !important; margin-bottom: 0 !important; }
+  .callout.gold { background: rgba(200,146,58,0.07); border-left-color: var(--gold); }
+  .callout.navy { background: rgba(15,35,66,0.06); border-left-color: var(--navy); }
+
+  /* CHARACTER CARDS */
+  .character-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 24px 0; }
+  .character-card {
+    background: var(--warm-white); border: 1px solid var(--rule);
+    border-radius: 8px; padding: 18px 20px;
+  }
+  .character-name { font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--teal); margin-bottom: 4px; }
+  .character-role { font-family: 'Playfair Display', serif; font-size: .95rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+  .character-desc { font-size: .88rem; color: var(--text-mid); line-height: 1.65; }
+
+  /* PROBLEM CARDS */
+  .problem-card {
+    background: var(--warm-white); border: 1px solid var(--rule);
+    border-radius: 8px; padding: 24px 28px; margin-bottom: 20px;
+    position: relative;
+  }
+  .problem-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; border-radius: 8px 0 0 8px; background: var(--gold); }
+  .problem-num { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+  .problem-title { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--navy); margin-bottom: 14px; }
+  .problem-card p { color: var(--text-mid); margin-bottom: 12px; line-height: 1.78; }
+  .problem-card p:last-child { margin-bottom: 0; }
+  .problem-card strong { color: var(--navy); font-weight: 600; }
+
+  /* TWO-SENTENCE BOX */
+  .two-sentence {
+    background: var(--navy); color: rgba(255,255,255,.9);
+    border-radius: 10px; padding: 32px 36px; margin: 40px 0;
+    text-align: center;
+  }
+  .two-sentence-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 16px; }
+  .two-sentence p { font-family: 'Playfair Display', serif; font-size: 1.15rem; line-height: 1.7; color: rgba(255,255,255,.88); font-style: italic; margin-bottom: 12px; }
+  .two-sentence p:last-child { margin-bottom: 0; }
+  .two-sentence strong { color: var(--gold-light); font-style: normal; }
+
+  /* NEXT STEPS */
+  .next-wrap { margin-top: 56px; padding-top: 40px; border-top: 2px solid var(--rule); }
+  .next-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--text-light); margin-bottom: 20px; }
+  .next-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .next-card {
+    display: block; text-decoration: none;
+    background: var(--warm-white); border: 1px solid var(--rule);
+    border-radius: 8px; padding: 20px 22px;
+    transition: border-color .15s, box-shadow .15s;
+  }
+  .next-card:hover { border-color: var(--teal); box-shadow: 0 2px 12px rgba(30,107,114,.1); }
+  .next-kicker { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; }
+  .next-card h3 { font-family: 'Playfair Display', serif; font-size: .98rem; font-weight: 600; color: var(--navy); margin-bottom: 6px; line-height: 1.3; }
+  .next-card p { font-size: .85rem; color: var(--text-light); line-height: 1.6; margin: 0; }
+  .next-link { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--teal); margin-top: 10px; display: block; }
+
+  /* FOOTER */
+  .site-footer { background: var(--navy); }
+  .footer-stripe { height: 5px; background: linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%); }
+  .footer-inner { max-width: 1080px; margin: 0 auto; padding: 56px 44px 44px; }
+  .footer-top { display: grid; grid-template-columns: 1.15fr 0.95fr; gap: 34px; align-items: start; padding-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.10); }
+  .footer-brand { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 14px; }
+  .footer-title { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.8rem, 3vw, 2.35rem); line-height: 1.14; color: rgba(255,255,255,0.96); margin-bottom: 14px; }
+  .footer-tagline { color: rgba(255,255,255,0.74); line-height: 1.72; max-width: 620px; font-size: .98rem; }
+  .footer-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 16px; }
+  .footer-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
+  .footer-link { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.82); text-decoration: none; border: 1px solid rgba(255,255,255,.20); border-radius: 3px; padding: 7px 14px; transition: border-color .15s, color .15s; }
+  .footer-link:hover { color: #fff; border-color: rgba(255,255,255,.50); }
+  .footer-disclaimer { font-size: .8rem; color: rgba(255,255,255,.42); line-height: 1.6; text-align: right; max-width: 340px; }
+  .footer-bottom { padding-top: 24px; }
+  .footer-meta { font-family: 'DM Mono', monospace; font-size: .75rem; color: rgba(255,255,255,.45); line-height: 1.7; }
+
+  /* RESPONSIVE */
+  @media (max-width: 760px) {
+    .main-wrap { padding: 48px 20px 60px; }
+    .character-grid, .next-grid { grid-template-columns: 1fr; }
+    .intro-callout, .two-sentence { padding: 24px 20px; }
+    .footer-inner { padding: 40px 20px 32px; }
+    .footer-top { grid-template-columns: 1fr; }
+    .footer-actions { align-items: flex-start; }
+    .footer-disclaimer { text-align: left; }
+  }
+</style>
+
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="294ecd79-19fb-4267-9be2-a7c83d57274d"></script>
+</head>
+<body>
+
+<div class="nav-dim" id="navDim"></div>
+
+<nav class="nav-overlay" id="navOverlay" aria-label="Site navigation">
+  <div class="nav-cols">
+    <div>
+      <div class="nav-group">
+        <div class="nav-group-label">Foundation</div>
+        <a href="index.html">Home Hub</a>
+        <a href="01_Molecular_Origins_Biology_of_Autism.html">01 — Molecular Origins</a>
+        <a href="01B_Pepsin_Opioid_Peptides_Biology_of_Autism.html">01B — Pepsin &amp; Opioid Peptides</a>
+        <a href="01C_CD26_Adenosine_Methylation_Biology_of_Autism.html">01C — CD26, Adenosine &amp; Methylation</a>
+        <a href="01D_Sex_Ratio_Estrogen_cAMP_Biology_of_Autism.html">01D — Sex Ratio &amp; Estrogen-cAMP Axis</a>
+        <a href="02_Cascade_Map_Biology_of_Autism.html">02 — Cascade Map</a>
+        <a href="03_Cascade_Explained_Biology_of_Autism.html">03 — Cascade Explained</a>
+        <a href="04_Gprotein_Cascade_Biology_of_Autism.html">04 — G-Protein Cascade</a>
+        <a href="04B_Unlocking_the_Brake_Biology_of_Autism.html">04B — Unlocking the Brake</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Pathways</div>
+        <a href="05_Metabolic_Pathways_Map_Biology_of_Autism.html">05 — Pathways Map</a>
+        <a href="06_Metabolic_Pathways_Explained_Biology_of_Autism.html">06 — Pathways Explained</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Testing</div>
+        <a href="07_Testing_Strategy_Biology_of_Autism.html">07 — Testing Strategy</a>
+        <a href="07B_Test_Reference_Biology_of_Autism.html">07B — Test Reference</a>
+        <a href="07C_Interpreting_Results_Biology_of_Autism.html">07C — Interpreting Results</a>
+        <a href="07D_Talking_to_Your_Doctor_Biology_of_Autism.html">07D — Talking to Your Doctor</a>
+        <a href="07R_Regressive_Autism_Testing_Biology_of_Autism.html">07R — Regression Testing</a>
+      </div>
+    </div>
+    <div>
+      <div class="nav-group">
+        <div class="nav-group-label">Interventions</div>
+        <a href="08_Intervention_Logic_Biology_of_Autism.html">08 — Intervention Logic</a>
+        <a href="14_Immunoglobulin_Therapy_Biology_of_Autism.html">14 — Immunoglobulin Therapy</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Context</div>
+        <a href="09_FAQ_Biology_of_Autism.html">09 — FAQ</a>
+        <a href="11_Vaccine_Question_Biology_of_Autism.html">11 — Vaccine Question</a>
+        <a href="12_Parents_Guide_Biology_of_Autism.html">12 — Parents Guide</a>
+        <a href="12B_Autism_101_Biology_of_Autism.html" class="current">12B — Autism 101</a>
+        <a href="13_Clinician_Guide_Biology_of_Autism.html">13 — Clinician Guide</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Evidence</div>
+        <a href="10_Evidence_and_Citations_Biology_of_Autism.html">10 — Evidence &amp; Citations</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Other Sections</div>
+        <a href="imig/imig-overview.html">IMIG Clinical Trial</a>
+        <a href="imig/mechanism.html">— The Mechanism</a>
+        <a href="imig/evidence.html">— The Evidence</a>
+        <a href="imig/trial.html">— The Trial</a>
+        <a href="research/research-articles.html">Research Articles</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <div class="topbar-brand">Decoding Autism Now</div>
+      <div class="topbar-title">Autism 101 — The IDA Mechanism Explained for Families</div>
+    </div>
+    <button class="ham-btn" id="hamBtn" aria-label="Open navigation" aria-expanded="false">
+      <span class="ham-label">Menu</span>
+      <span class="ham-bars"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="header-stripe"></div>
+  <div class="header-inner">
+    <div class="header-eyebrow">Decoding Autism Now · Parents Guide Part Two</div>
+    <div class="header-kicker">12B — Autism 101</div>
+    <h1 class="header-title">
+      The IDA Mechanism
+      <span class="accent">Explained for Families</span>
+    </h1>
+    <p class="header-sub">No science background required. This is the plain-language explanation of what goes wrong in immune-derived autism — told through a recipe book, a key, a locksmith, and a troublemaker who hires the locksmith away.</p>
+    <div class="header-meta">
+      <span class="header-badge">Plain Language</span>
+      <span class="header-badge">Parents &amp; Families</span>
+      <span class="header-badge">May 2026</span>
+    </div>
+  </div>
+</header>
+
+<div class="framework-notice" id="framework-disclaimer">
+  <div class="framework-notice-inner">
+    <div class="framework-notice-icon">i</div>
+    <div class="framework-notice-text">
+      <strong>For families and non-specialists.</strong> This page explains the core immune-derived autism (IDA) mechanism in plain language. The science behind it is developed in full in <a href="anatomy-of-autism.html">The Anatomy of Autism</a> working paper. This content is for educational purposes only and is not medical advice. Always consult a qualified healthcare professional for individual guidance.
+    </div>
+  </div>
+</div>
+
+<main class="main-wrap">
+
+  <!-- INTRO -->
+  <div class="intro-callout">
+    <div class="intro-callout-label">Start here</div>
+    <p>Your body has a <strong>recipe book</strong> inside every cell. The recipe for making the brain's coordinator — a molecule called <strong>SST-14</strong> — is written in that book.</p>
+    <p>The recipe has a <strong>lock</strong> on it. The lock is called the CRE. To open the lock and start making SST-14, the cell needs two things working together: a <strong>key</strong> and a <strong>locksmith</strong>.</p>
+    <p>In immune-derived autism, two things go wrong at the same time — and together they make it impossible to open the recipe book. SST-14 stops being made. And when SST-14 stops, the brain loses its coordination signal for social connection, sleep, sensory processing, and digestion — all at once.</p>
+  </div>
+
+  <!-- THE CAST -->
+  <section class="section">
+    <div class="section-num">The Cast</div>
+    <h2>Meet the Characters</h2>
+    <p>Before we explain what goes wrong, it helps to know who the main players are. Each one has a specific job in the normal healthy chain.</p>
+
+    <div class="character-grid">
+      <div class="character-card">
+        <div class="character-name">SST-14</div>
+        <div class="character-role">The Recipe — What Needs to Be Made</div>
+        <div class="character-desc">Somatostatin-14. The brain's coordinator. When SST-14 is being made normally it keeps social bonding, sleep, sensory regulation, and digestion all working in sync.</div>
+      </div>
+      <div class="character-card">
+        <div class="character-name">CRE</div>
+        <div class="character-role">The Lock on the Recipe Book</div>
+        <div class="character-desc">A specific sequence in the DNA that has to be opened before the SST-14 recipe can be read. The lock itself is never broken — it just can't be opened.</div>
+      </div>
+      <div class="character-card">
+        <div class="character-name">CREB</div>
+        <div class="character-role">The Key</div>
+        <div class="character-desc">The protein that fits the CRE lock. But CREB can only work as a key when it has been switched on first — and it needs electricity to switch on.</div>
+      </div>
+      <div class="character-card">
+        <div class="character-name">CBP</div>
+        <div class="character-role">The Locksmith — The Only One in Town</div>
+        <div class="character-desc">The co-worker that CREB needs to actually open the lock. CREB cannot open it alone. CBP cannot open it alone. Both must work together. There is only one CBP per cell.</div>
+      </div>
+      <div class="character-card">
+        <div class="character-name">cAMP</div>
+        <div class="character-role">The Electricity</div>
+        <div class="character-desc">The signal that switches CREB on. Without cAMP, CREB is just a key sitting on the counter with no power. Nothing happens.</div>
+      </div>
+      <div class="character-card">
+        <div class="character-name">NF-κB</div>
+        <div class="character-role">The Troublemaker</div>
+        <div class="character-desc">A master regulator of inflammation. In a healthy person it does important work briefly and then quiets down. In IDA, it moves in permanently — and it needs CBP too.</div>
+      </div>
+      <div class="character-card">
+        <div class="character-name">Adenosine</div>
+        <div class="character-role">The Electricity Cutter</div>
+        <div class="character-desc">Normally cleared from the cell during sleep. In IDA it builds up because the system that removes it has been jammed. Too much adenosine cuts the cAMP electricity supply.</div>
+      </div>
+      <div class="character-card">
+        <div class="character-name">HDACs</div>
+        <div class="character-role">The Packaging Crew</div>
+        <div class="character-desc">Workers hired by NF-κB to wrap the recipe book in extra layers. The recipe is still there — but it is now buried under heavy packaging, even harder to reach.</div>
+      </div>
+    </div>
+
+    <div class="chain-box">
+      <strong>The normal healthy chain:</strong><br>
+      Signal arrives → cAMP electricity turns on → CREB becomes the active key → CBP the locksmith arrives → key and locksmith open the CRE lock together → SST-14 recipe is read → SST-14 is made
+    </div>
+
+    <p>Simple. Elegant. Works perfectly when everything is healthy. In immune-derived autism, two separate problems disable this chain at the same time.</p>
+  </section>
+
+  <!-- PROBLEM 1 -->
+  <section class="section">
+    <div class="section-num">Problem One</div>
+    <h2>The Locksmith Gets Hired Away</h2>
+
+    <div class="problem-card">
+      <div class="problem-num">Problem 1 of 2</div>
+      <div class="problem-title">NF-κB moves in and steals CBP</div>
+      <p>When the immune system is chronically inflamed, the troublemaker NF-κB moves into the cell. NF-κB has its own work to do — running the inflammatory response — and it also needs CBP the locksmith to do that work.</p>
+      <p>Here is the critical problem: <strong>there is only one locksmith in the cell</strong>. CBP is present in limited amounts and cannot easily be increased on demand. When both CREB and NF-κB need CBP at the same time, they compete for the same locksmith. And NF-κB is bigger and louder. <strong>NF-κB wins. CBP goes off to work for NF-κB instead.</strong></p>
+      <p>CREB is left standing at the recipe book with the right key and no locksmith to help turn it. The lock stays closed.</p>
+      <p>NF-κB does one more thing to make the situation worse. It calls in the packaging crew — the HDACs — who wrap the recipe book in extra layers, compacting the pages so that even if CREB somehow got a locksmith, the book would be much harder to open. The recipe is still there, intact. But it is now buried under heavy packaging.</p>
+    </div>
+  </section>
+
+  <!-- PROBLEM 2 -->
+  <section class="section">
+    <div class="section-num">Problem Two</div>
+    <h2>Someone Cuts the Electricity</h2>
+
+    <div class="problem-card">
+      <div class="problem-num">Problem 2 of 2</div>
+      <div class="problem-title">Adenosine builds up and shuts off cAMP</div>
+      <p>Remember that CREB needs to be switched on by cAMP before it can work as a key at all. In immune-derived autism, <strong>adenosine builds up inside the cell</strong> because the system that normally clears it — the CD26 receptor — has been jammed by fragments of undigested casein and gluten, by streptococcal bacteria, and by mercury.</p>
+      <p>Adenosine sits on a receiver on the outside of the cell and sends a message inside: <strong>stop making cAMP</strong>. The cell listens. cAMP production falls. Without cAMP, CREB never gets switched on. The key never activates. It is still there. The lock is still there. The locksmith is still somewhere in the cell. But the key was never energized to begin with.</p>
+    </div>
+  </section>
+
+  <!-- WHY BOTH -->
+  <section class="section">
+    <div class="section-num">Why It Matters</div>
+    <h2>Why Having Both Problems at Once Is So Much Worse Than Having Just One</h2>
+
+    <p>If only Problem 1 existed — NF-κB stealing the locksmith — the cell could try to compensate. If enough cAMP built up and enough CREB got switched on, a large enough crowd of active CREB might outcompete NF-κB for the locksmith's attention. Not a perfect solution, but a partial workaround.</p>
+
+    <p>If only Problem 2 existed — adenosine cutting the electricity — the cell could manage if the inflammatory environment was mild enough that NF-κB wasn't completely dominating the locksmith's time. Some SST-14 production might squeeze through.</p>
+
+    <div class="callout">
+      <p>But with both problems happening simultaneously, every workaround is closed. <strong>Problem 1 takes away the locksmith. Problem 2 makes sure the key never gets energized to even try for the locksmith.</strong> The recipe for SST-14 sits there — intact, correct, accessible in principle — but never read. SST-14 production falls. The brain's coordination system loses its signal.</p>
+    </div>
+  </section>
+
+  <!-- GIRLS vs BOYS -->
+  <section class="section">
+    <div class="section-num">The Sex Ratio</div>
+    <h2>Why Girls Are More Protected Than Boys</h2>
+
+    <p>Girls have estrogen. Estrogen has a <strong>secret back door into the electricity system</strong> — a completely different wire that bypasses the one adenosine cut. This back door was discovered by a scientist named Qiu and colleagues in 2003. It runs through a different receptor and a different set of switches inside the cell, arriving at the same cAMP electricity supply through a route that adenosine cannot block.</p>
+
+    <p>So even when adenosine has cut the main power line, estrogen can trickle enough electricity through the back door to partially switch on CREB. Not fully — NF-κB has still hired away the locksmith, so even an activated CREB key still struggles to get the recipe book open. But enough gets through to keep some SST-14 production going.</p>
+
+    <p><strong>Boys don't have access to that back door before puberty.</strong> At puberty, testosterone in the brain gets converted to estrogen by an enzyme called aromatase — and for the first time, the back door opens for them too. That is the mechanistic reason why some boys with IDA show partial improvement at puberty. It is not behavioral maturation or learning to cope. It is the first time their brain gets access to the electricity bypass that girls have had all along.</p>
+
+    <div class="callout gold">
+      <p>This single molecular mechanism — the estrogen back door — explains the four-to-one male-to-female ratio in immune-derived autism. Same cascade burden. Different starting electricity supply.</p>
+    </div>
+  </section>
+
+  <!-- TWO SENTENCE VERSION -->
+  <div class="two-sentence">
+    <div class="two-sentence-label">The two-sentence version</div>
+    <p>The recipe for SST-14 is sitting there intact — but in IDA the electricity has been cut so the key never turns on, and <strong>the only locksmith in town has been hired away by the troublemaker</strong>, so even if the key somehow activated it still couldn't open the book.</p>
+    <p>To restore SST-14 production we need to <strong>remove the troublemaker</strong> (NF-κB) from the scene and <strong>restore the electricity</strong> (cAMP) to CREB by reducing the adenosine that is cutting it.</p>
+  </div>
+
+  <!-- WHAT THIS MEANS -->
+  <section class="section">
+    <div class="section-num">What This Means</div>
+    <h2>What Happens When SST-14 Is Restored</h2>
+
+    <p>SST-14 is not just one molecule doing one job. It is the upstream coordinator of three neuropeptide systems that work together:</p>
+
+    <ul style="margin: 16px 0 16px 20px; color: var(--text-mid);">
+      <li style="margin-bottom: 10px;"><strong style="color:var(--navy);">Oxytocin</strong> — the social bonding signal. When SST-14 is silenced, oxytocin release becomes blunted and uncoupled from social context. The motivation to connect doesn't fire reliably.</li>
+      <li style="margin-bottom: 10px;"><strong style="color:var(--navy);">VIP</strong> — the coordinator of sleep, sensory regulation, gut motility, and immune balance. All four systems lose their coordinating signal simultaneously.</li>
+      <li style="margin-bottom: 10px;"><strong style="color:var(--navy);">Secretin</strong> — the digestive coordinator. When SST-14 falls, secretin release is impaired from two directions at once, compounding the GI dysfunction.</li>
+    </ul>
+
+    <p>This is why the features of immune-derived autism appear as a cluster — social, sensory, sleep, and gastrointestinal features together — rather than as isolated symptoms. They share the same upstream cause. When that cause is addressed, the downstream systems have a chance to recover.</p>
+
+    <div class="callout navy">
+      <p>The intervention target is not the individual symptoms. It is the upstream mechanism that is silencing SST-14 — the troublemaker and the electricity cut — addressed simultaneously.</p>
+    </div>
+  </section>
+
+  <!-- NEXT STEPS -->
+  <div class="next-wrap">
+    <div class="next-label">Where to go next</div>
+    <div class="next-grid">
+      <a class="next-card" href="12_Parents_Guide_Biology_of_Autism.html">
+        <div class="next-kicker">Parents Guide</div>
+        <h3>12 — Parents Guide</h3>
+        <p>The broader parent-facing entry point to the Biology of Autism framework — patterns, symptoms, and where to start.</p>
+        <span class="next-link">Open Parents Guide →</span>
+      </a>
+      <a class="next-card" href="09_FAQ_Biology_of_Autism.html">
+        <div class="next-kicker">FAQ</div>
+        <h3>09 — Frequently Asked Questions</h3>
+        <p>Plain-language answers to the most common questions about the cascade, the science, and what it means for families.</p>
+        <span class="next-link">Open FAQ →</span>
+      </a>
+      <a class="next-card" href="anatomy-of-autism.html">
+        <div class="next-kicker">Working Paper</div>
+        <h3>The Anatomy of Autism — V14d</h3>
+        <p>The complete scientific paper behind this explanation — for those who want the full mechanistic detail and evidence base.</p>
+        <span class="next-link">Open Working Paper →</span>
+      </a>
+      <a class="next-card" href="08_Intervention_Logic_Biology_of_Autism.html">
+        <div class="next-kicker">Intervention Logic</div>
+        <h3>08 — Intervention Logic</h3>
+        <p>How the three-state clinical framework maps to intervention — what removes the troublemaker and restores the electricity.</p>
+        <span class="next-link">Open Intervention Logic →</span>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Decoding Autism Now</div>
+        <div class="footer-title">Autism 101 — The IDA Mechanism Explained for Families</div>
+        <p class="footer-tagline">A plain-language companion to the Biology of Autism framework — written for parents and families with no science background required.</p>
+      </div>
+      <div class="footer-actions">
+        <div class="footer-links">
+          <a class="footer-link" href="index.html">Home</a>
+          <a class="footer-link" href="12_Parents_Guide_Biology_of_Autism.html">Parents Guide</a>
+          <a class="footer-link" href="09_FAQ_Biology_of_Autism.html">FAQ</a>
+          <a class="footer-link" href="03_Cascade_Explained_Biology_of_Autism.html">Cascade</a>
+        </div>
+        <p class="footer-disclaimer">This content is for educational purposes only and is not intended as medical advice, diagnosis, or treatment guidance.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-meta" style="color:rgba(255,255,255,0.40); margin-top:10px;">© 2026 Decoding Autism Now | All content is shared with families, clinicians and researchers for educational purposes under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.55); text-decoration:underline;">Creative Commons CC BY-NC 4.0</a> — free to share with attribution, not for commercial use.</p>
+      <div class="footer-meta">Autism 101 — Biology of Autism | Decoding Autism Now</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('hamBtn');
+  var overlay = document.getElementById('navOverlay');
+  var dim = document.getElementById('navDim');
+  if (!btn) return;
+  function openNav() { overlay.classList.add('open'); dim.classList.add('open'); btn.setAttribute('aria-expanded','true'); document.body.style.overflow = 'hidden'; }
+  function closeNav() { overlay.classList.remove('open'); dim.classList.remove('open'); btn.setAttribute('aria-expanded','false'); document.body.style.overflow = ''; }
+  btn.addEventListener('click', function(){ overlay.classList.contains('open') ? closeNav() : openNav(); });
+  dim.addEventListener('click', closeNav);
+  overlay.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeNav); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeNav(); });
+})();
+</script>
+
+</body>
+</html>

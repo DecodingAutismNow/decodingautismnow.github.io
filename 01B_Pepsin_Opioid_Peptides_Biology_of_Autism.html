@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biology of Autism — Pepsin Failure, Opioid Peptides &amp; Hidden Malnutrition | Decoding Autism Now</title>
+<meta property="og:title" content="Biology of Autism — Pepsin Failure, Opioid Peptides &amp; Hidden Malnutrition | Decoding Autism Now">
+<meta property="og:description" content="How elevated gut pH disables a single digestive enzyme — and how that single failure produces opioid peptide accumulation, hidden amino acid deficiency, and the first steps of the immune-derived autism cascade.">
+<meta property="og:image" content="https://decodingautismnow.com/images/OG-01B.png">
+<meta property="og:url" content="https://decodingautismnow.com/01B_Pepsin_Opioid_Peptides_Biology_of_Autism.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Biology of Autism — Pepsin Failure, Opioid Peptides &amp; Hidden Malnutrition | Decoding Autism Now">
+<meta name="twitter:description" content="How elevated gut pH disables a single digestive enzyme — and how that single failure produces opioid peptide accumulation, hidden amino acid deficiency, and the first steps of the immune-derived autism cascade.">
+<meta name="twitter:image" content="https://decodingautismnow.com/images/OG-01B.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy:#0f2342;
+    --teal:#1e6b72;
+    --teal-light:#2a9da6;
+    --gold:#c8923a;
+    --gold-light:#e8b86d;
+    --cream:#faf7f2;
+    --warm-white:#ffffff;
+    --text-dark:#1a1a2e;
+    --text-mid:#3d4560;
+    --text-light:#6b7494;
+    --rule:#d8cfc4;
+    --accent-bg:#eef8f9;
+    --gold-bg:#fdf6ec;
+    --tag-bg:rgba(30,107,114,0.08);
+  }
+
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body {
+    font-family:'Source Serif 4', Georgia, serif;
+    background:var(--cream);
+    color:var(--text-dark);
+    font-size:17px;
+    line-height:1.78;
+  }
+
+  /* TOPBAR */
+  .topbar {
+    position:fixed; top:0; left:0; right:0; z-index:1000;
+    background:var(--navy); border-bottom:2px solid var(--gold);
+  }
+  .topbar-inner {
+    max-width:960px; margin:0 auto; padding:10px 20px;
+    display:flex; justify-content:space-between; align-items:center;
+    flex-direction:row; flex-wrap:nowrap; gap:18px;
+  }
+  .topbar-brand {
+    font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em;
+    text-transform:uppercase; color:var(--teal-light); margin-bottom:2px;
+  }
+  .topbar-title {
+    font-family:'Source Serif 4', serif; font-size:14px; font-weight:600;
+    color:#fff; line-height:1.2;
+  }
+
+    /* ── HAMBURGER NAV — all screen sizes ─────────────────────────────── */
+
+/* hide old pill row entirely */
+.sticky-docnav, .sticky-nav { display: none !important; }
+
+/* navy background so any sub-topbar gap matches hero, not cream body */
+html { background: #0f2342; }
+
+/* content sits just below topbar */
+.site-header, .hero, .shell-header { margin-top: 57px !important; }
+
+/* hamburger button */
+.ham-btn {
+  background: none;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+  line-height: 0;
+}
+.ham-btn:hover { border-color: rgba(255,255,255,.55); }
+.ham-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.85);
+  margin-right: 7px;
+  vertical-align: middle;
+}
+.ham-bars { display: inline-flex; flex-direction: column; vertical-align: middle; gap: 4px; }
+.ham-bars span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* dim layer */
+.nav-dim {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 997;
+  background: rgba(15,35,66,.40);
+}
+.nav-dim.open { display: block; }
+
+/* overlay panel */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  top: 57px;
+  left: 0;
+  z-index: 998;
+  background: #fff;
+  border-right: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  box-shadow: 4px 4px 24px rgba(15,35,66,.16);
+  overflow-y: auto;
+  max-height: calc(100vh - 57px);
+  width: 560px;
+  padding: 24px 32px 36px;
+}
+.nav-overlay.open { display: block; }
+
+/* two-column grid on desktop */
+.nav-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 40px;
+}
+
+.nav-group { margin-bottom: 20px; }
+.nav-group-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 8px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--rule);
+}
+.nav-group a {
+  display: block;
+  font-family: 'Source Serif 4', serif;
+  font-size: 13px;
+  color: var(--text-dark);
+  text-decoration: none;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(216,207,196,.35);
+  transition: color .12s;
+}
+.nav-group a:last-child { border-bottom: none; }
+.nav-group a:hover { color: var(--teal); }
+.nav-group a.current {
+  color: var(--teal);
+  font-weight: 600;
+}
+
+/* topbar: keep brand left, hamburger right */
+.topbar-inner {
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+}
+.topbar-home { display: none !important; }
+.topbar-title {
+  font-size: 13px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70vw;
+}
+
+/* mobile: full-width panel, single column */
+@media (max-width: 720px) {
+  .nav-overlay {
+    width: 100%;
+    border-left: none;
+    border-radius: 0;
+    padding: 16px 20px 28px;
+  }
+  .nav-cols { grid-template-columns: 1fr; gap: 0; }
+}
+
+  
+
+  /* HERO */
+  .site-header {
+    margin-top:57px; background:var(--navy); color:#fff; position:relative; overflow:hidden;
+  }
+  .header-stripe {
+    height:5px; background:linear-gradient(90deg,var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%);
+  }
+  .header-inner {
+    max-width:960px; margin:0 auto; padding:70px 20px 40px; position:relative; z-index:1;
+  }
+  .header-eyebrow {
+    font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.22em;
+    text-transform:uppercase; color:var(--teal-light); margin-bottom:12px;
+  }
+  .header-title {
+    font-family:'Playfair Display', serif; font-size:clamp(2rem,4.4vw,3rem);
+    line-height:1.12; margin-bottom:10px; color:#fff; font-weight:600;
+  }
+  .header-title .accent-line {
+    display:block; color:var(--gold-light); font-style:italic; font-weight:500;
+  }
+  .header-sub {
+    max-width:640px; color:rgba(255,255,255,.68); font-style:italic; font-weight:300;
+    line-height:1.6; margin-bottom:18px; font-size:1rem;
+  }
+  .header-note {
+    display:inline-block; margin-top:14px; font-family:'DM Mono', monospace; font-size:9px;
+    letter-spacing:.14em; text-transform:uppercase; color:rgba(232,184,109,.82);
+    text-decoration:none; border-bottom:1px solid rgba(232,184,109,.3);
+  }
+  .header-note:hover { border-bottom-color:rgba(232,184,109,.75); }
+
+  /* POSITION IN CASCADE BANNER */
+  .cascade-position {
+    background:var(--warm-white); border-bottom:2px solid var(--rule);
+  }
+  .cascade-position-inner {
+    max-width:900px; margin:0 auto; padding:18px 40px;
+    display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+  }
+  .cascade-pos-label {
+    font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--text-light); white-space:nowrap;
+  }
+  .cascade-pos-arrow {
+    font-family:'DM Mono', monospace; font-size:11px; color:var(--rule);
+  }
+  .cascade-pos-step {
+    font-family:'DM Mono', monospace; font-size:11px;
+    background:var(--tag-bg); color:var(--teal);
+    border:1px solid rgba(30,107,114,.22); border-radius:3px; padding:3px 10px;
+    white-space:nowrap;
+  }
+  .cascade-pos-step.active {
+    background:rgba(200,146,58,.12); color:#7a4f10;
+    border-color:rgba(200,146,58,.4); font-weight:500;
+  }
+
+  /* TOC */
+  .toc-bar { background:var(--cream); border-bottom:2px solid var(--rule); }
+  .toc-inner { max-width:900px; margin:0 auto; padding:24px 40px; }
+  .toc-label { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--text-light); margin-bottom:14px; }
+  .toc-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:4px 24px; }
+  .toc-link { font-family:'Source Serif 4', serif; font-size:.83rem; color:var(--teal); text-decoration:none; display:flex; align-items:baseline; gap:8px; padding:3px 0; transition:color .15s; }
+  .toc-link:hover { color:var(--navy); }
+  .toc-badge { font-family:'DM Mono', monospace; font-size:10px; color:var(--gold); flex-shrink:0; min-width:28px; }
+
+  /* MAIN */
+  .main-wrap { max-width:900px; margin:0 auto; padding:60px 40px 80px; }
+  .page-section { margin-bottom:64px; scroll-margin-top:20px; }
+
+  .section-header { display:flex; align-items:flex-start; gap:18px; margin-bottom:28px; padding-bottom:20px; border-bottom:2px solid var(--rule); }
+  .level-badge {
+    font-family:'DM Mono', monospace; font-size:11px; font-weight:500;
+    background:var(--navy); color:#fff; border-radius:4px; padding:5px 10px;
+    flex-shrink:0; margin-top:4px; letter-spacing:.08em; white-space:nowrap;
+  }
+  .level-badge.teal { background:var(--teal); }
+  .level-badge.gold { background:var(--gold); color:#fff; }
+  h2.section-title { font-family:'Playfair Display', Georgia, serif; font-size:1.55rem; font-weight:700; color:var(--navy); line-height:1.25; margin-bottom:6px; }
+  .section-subtitle { font-style:italic; font-weight:300; font-size:.95rem; color:var(--text-light); }
+
+  .node { background:var(--warm-white); border:1px solid var(--rule); border-radius:8px; padding:28px 32px; margin-bottom:20px; position:relative; }
+  .node::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; border-radius:8px 0 0 8px; background:var(--teal); }
+  .node.gold-accent::before { background:var(--gold); }
+  .node.navy-accent::before { background:var(--navy); }
+  h3.node-title { font-family:'Playfair Display', Georgia, serif; font-size:1.1rem; font-weight:600; color:var(--navy); margin-bottom:14px; }
+  .node p { color:var(--text-mid); margin-bottom:12px; }
+  .node p:last-child { margin-bottom:0; }
+  .node strong { color:var(--navy); font-weight:600; }
+  .node em { color:var(--text-mid); }
+
+  .node ul { margin:10px 0 14px 0; list-style:none; }
+  .node ul li { position:relative; padding-left:22px; margin-bottom:8px; color:var(--text-mid); font-size:.97rem; }
+  .node ul li::before { content:''; position:absolute; left:0; top:10px; width:7px; height:7px; border-radius:50%; background:var(--teal-light); }
+
+  .callout { background:var(--accent-bg); border-left:3px solid var(--teal); border-radius:0 6px 6px 0; padding:16px 20px; margin:18px 0; font-size:.97rem; }
+  .callout p { color:var(--text-mid)!important; margin-bottom:0!important; }
+  .callout.gold { background:var(--gold-bg); border-left-color:var(--gold); }
+  .callout.navy { background:rgba(15,35,66,.05); border-left-color:var(--navy); }
+
+  /* PH METER VISUAL */
+  .ph-scale {
+    margin:20px 0; background:var(--cream); border:1px solid var(--rule);
+    border-radius:8px; padding:20px 24px;
+  }
+  .ph-scale-label {
+    font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.15em;
+    text-transform:uppercase; color:var(--text-light); margin-bottom:12px;
+  }
+  .ph-bar-wrap { position:relative; margin:44px 0 10px; }
+  .ph-bar {
+    height:28px; border-radius:6px;
+    background:linear-gradient(to right,
+      #e74c3c 0%,
+      #e8864a 20%,
+      #d4a843 40%,
+      #8bc34a 55%,
+      #4caf50 70%,
+      #2196f3 85%,
+      #1565c0 100%
+    );
+    position:relative;
+  }
+  .ph-marker {
+    position:absolute; top:0; bottom:0; transform:translateX(-50%);
+    width:2px;
+  }
+  .ph-marker-label {
+    position:absolute; bottom:calc(100% + 6px); transform:translateX(-50%);
+    font-family:'DM Mono', monospace; font-size:10px; white-space:nowrap;
+    background:var(--cream); padding:2px 6px; border-radius:3px;
+    border:1px solid var(--rule);
+  }
+  .ph-zone-labels { display:flex; justify-content:space-between; font-family:'DM Mono', monospace; font-size:10px; color:var(--text-light); margin-top:6px; }
+  .ph-legend { display:flex; gap:20px; margin-top:14px; flex-wrap:wrap; }
+  .ph-legend-item { display:flex; align-items:center; gap:7px; font-family:'DM Mono', monospace; font-size:10px; color:var(--text-mid); }
+  .ph-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+
+  /* AMINO ACID FLOW */
+  .aa-flow { display:grid; grid-template-columns:1fr auto 1fr; gap:0; align-items:stretch; margin:20px 0; }
+  .aa-col {
+    background:var(--warm-white); border:1px solid var(--rule); border-radius:8px;
+    padding:18px 20px;
+  }
+  .aa-col-label {
+    font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.12em;
+    text-transform:uppercase; margin-bottom:10px;
+  }
+  .aa-col-label.good { color:var(--teal); }
+  .aa-col-label.bad { color:#b03a2e; }
+  .aa-col ul { list-style:none; margin:0; }
+  .aa-col ul li { font-size:.92rem; color:var(--text-mid); padding:8px 0 8px 0; border-bottom:1px solid var(--rule); position:static; }
+  .aa-col ul li:last-child { border-bottom:none; }
+  .aa-col ul li::before { display:none; }
+  .aa-arrow {
+    display:flex; align-items:center; justify-content:center;
+    padding:0 12px; font-size:1.4rem; color:var(--rule);
+  }
+
+  /* OPIOID LOOP */
+  .opioid-loop {
+    background:var(--navy); border-radius:8px; padding:24px 28px; margin:20px 0;
+    color:rgba(255,255,255,.88);
+  }
+  .opioid-loop-title {
+    font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.18em;
+    text-transform:uppercase; color:var(--gold-light); margin-bottom:16px;
+  }
+  .opioid-step {
+    display:flex; gap:14px; padding:10px 0; border-bottom:1px solid rgba(255,255,255,.08);
+    align-items:flex-start;
+  }
+  .opioid-step:last-child { border-bottom:none; }
+  .opioid-step-num {
+    font-family:'DM Mono', monospace; font-size:11px; color:var(--gold-light);
+    flex-shrink:0; min-width:20px; margin-top:2px;
+  }
+  .opioid-step p { margin:0; font-size:.95rem; color:rgba(255,255,255,.80); line-height:1.6; }
+  .opioid-step strong { color:#fff; }
+
+  /* BIOMARKER CARD */
+  .biomarker-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:12px; margin:16px 0; }
+  .biomarker-card {
+    background:var(--warm-white); border:1px solid var(--rule); border-radius:6px;
+    padding:14px 16px; border-top:3px solid var(--teal);
+  }
+  .biomarker-card.gold-top { border-top-color:var(--gold); }
+  .biomarker-name { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--navy); margin-bottom:6px; font-weight:500; }
+  .biomarker-desc { font-size:.88rem; color:var(--text-mid); line-height:1.55; }
+
+  /* INSIGHT BOX */
+  .insight-box {
+    background:var(--navy); color:rgba(255,255,255,.9); border-radius:8px;
+    padding:24px 28px; margin:20px 0;
+  }
+  .insight-box p { color:rgba(255,255,255,.82)!important; margin-bottom:8px!important; font-style:italic; line-height:1.7; }
+  .insight-box p:last-child { margin-bottom:0!important; }
+  .insight-box strong { color:var(--gold-light)!important; }
+
+  .pathway-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:18px; }
+  .tag { font-family:'DM Mono', monospace; font-size:11px; letter-spacing:.04em; background:var(--tag-bg); color:var(--teal); border:1px solid rgba(30,107,114,0.22); border-radius:3px; padding:3px 9px; }
+
+  .section-divider { display:flex; align-items:center; gap:14px; margin:56px 0 48px; }
+  .section-divider span { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--text-light); white-space:nowrap; }
+  .section-divider::before, .section-divider::after { content:''; flex:1; height:1px; background:var(--rule); }
+
+  /* FOOTER */
+  .site-footer { background:var(--navy); }
+  .footer-stripe { height:5px; background:linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%); }
+  .footer-inner { max-width:1080px; margin:0 auto; padding:56px 44px 44px; }
+  .footer-top { display:grid; grid-template-columns:1.15fr 0.95fr; gap:34px; align-items:start; padding-bottom:30px; border-bottom:1px solid rgba(255,255,255,0.10); }
+  .footer-brand { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--teal-light); margin-bottom:14px; }
+  .footer-title { font-family:'Playfair Display', Georgia, serif; font-size:clamp(1.8rem, 3vw, 2.35rem); line-height:1.14; color:rgba(255,255,255,0.96); margin-bottom:14px; }
+  .footer-tagline { color:rgba(255,255,255,0.74); line-height:1.72; max-width:620px; font-size:.98rem; }
+  .footer-actions { display:flex; flex-direction:column; align-items:flex-end; gap:16px; }
+  .footer-links { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:8px; }
+  .footer-link { font-family:'DM Mono', monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.82); text-decoration:none; border:1px solid rgba(255,255,255,.20); border-radius:3px; padding:7px 14px; transition:border-color .15s, color .15s; }
+  .footer-link:hover { color:#fff; border-color:rgba(255,255,255,.50); }
+  .footer-disclaimer { font-size:.8rem; color:rgba(255,255,255,.42); line-height:1.6; text-align:right; max-width:340px; }
+  .footer-bottom { padding-top:24px; }
+  .footer-meta { font-family:'DM Mono', monospace; font-size:.75rem; color:rgba(255,255,255,.45); line-height:1.7; }
+
+  /* FRAMEWORK NOTICE */
+  .framework-notice { background:#fffbf2; border-top:1px solid rgba(200,146,58,0.25); border-bottom:1px solid rgba(200,146,58,0.25); }
+  .framework-notice-inner { max-width:900px; margin:0 auto; padding:20px 40px; display:flex; gap:16px; align-items:flex-start; }
+  .framework-notice-icon {
+    flex-shrink:0; margin-top:2px; width:20px; height:20px; border-radius:50%;
+    background:rgba(200,146,58,0.15); border:1px solid rgba(200,146,58,0.4);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'DM Mono', monospace; font-size:11px; font-weight:500; color:var(--gold); line-height:1;
+  }
+  .framework-notice-text { font-family:'Source Serif 4', serif; font-size:.88rem; color:#6b5a3a; line-height:1.65; }
+  .framework-notice-text strong { color:#4a3a1e; font-weight:600; }
+  .framework-notice-text a { color:var(--teal); text-decoration:none; border-bottom:1px solid rgba(30,107,114,0.3); }
+
+  /* RESPONSIVE */
+  @media (max-width:760px) {
+    .header-inner, .main-wrap, .footer-inner, .toc-inner, .cascade-position-inner, .framework-notice-inner { padding-left:20px; padding-right:20px; }
+    .footer-top { grid-template-columns:1fr; }
+    .footer-actions { align-items:flex-start; }
+    .footer-disclaimer { text-align:left; }
+    .aa-flow { grid-template-columns:1fr; }
+    .aa-arrow { display:none; }
+  }
+  @media (max-width:680px) {
+    .footer-link { font-size:.88rem; padding:8px 13px; }
+    .biomarker-grid { grid-template-columns:1fr 1fr; }
+    .cascade-position-inner { gap:8px; }
+  }
+</style>
+
+<script defer src="https://cloud.umami.is/script.js" data-website-id="294ecd79-19fb-4267-9be2-a7c83d57274d"></script>
+</head>
+<body>
+
+<div class="nav-dim" id="navDim"></div>
+
+<nav class="nav-overlay" id="navOverlay" aria-label="Site navigation">
+  <div class="nav-cols">
+    <div>
+      <div class="nav-group">
+        <div class="nav-group-label">Foundation</div>
+        <a href="index.html">Home Hub</a>
+        <a href="01_Molecular_Origins_Biology_of_Autism.html">01 — Molecular Origins</a>
+        <a href="01B_Pepsin_Opioid_Peptides_Biology_of_Autism.html" class="current">01B — Pepsin &amp; Opioid Peptides</a>
+        <a href="01C_CD26_Adenosine_Methylation_Biology_of_Autism.html">01C — CD26, Adenosine &amp; Methylation</a>
+        <a href="02_Cascade_Map_Biology_of_Autism.html">02 — Cascade Map</a>
+        <a href="03_Cascade_Explained_Biology_of_Autism.html">03 — Cascade Explained</a>
+        <a href="04_Gprotein_Cascade_Biology_of_Autism.html">04 — G-Protein Cascade</a>
+        <a href="04B_Unlocking_the_Brake_Biology_of_Autism.html">04B — Unlocking the Brake</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Pathways</div>
+        <a href="05_Metabolic_Pathways_Map_Biology_of_Autism.html">05 — Pathways Map</a>
+        <a href="06_Metabolic_Pathways_Explained_Biology_of_Autism.html">06 — Pathways Explained</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Testing</div>
+        <a href="07_Testing_Strategy_Biology_of_Autism.html">07 — Testing Strategy</a>
+        <a href="07B_Test_Reference_Biology_of_Autism.html">07B — Test Reference</a>
+        <a href="07C_Interpreting_Results_Biology_of_Autism.html">07C — Interpreting Results</a>
+        <a href="07D_Talking_to_Your_Doctor_Biology_of_Autism.html">07D — Talking to Your Doctor</a>
+        <a href="07R_Regressive_Autism_Testing_Biology_of_Autism.html">07R — Regression Testing</a>
+      </div>
+    </div>
+    <div>
+      <div class="nav-group">
+        <div class="nav-group-label">Interventions</div>
+        <a href="08_Intervention_Logic_Biology_of_Autism.html">08 — Intervention Logic</a>
+        <a href="14_Immunoglobulin_Therapy_Biology_of_Autism.html">14 — Immunoglobulin Therapy</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Context</div>
+        <a href="09_FAQ_Biology_of_Autism.html">09 — FAQ</a>
+        <a href="11_Vaccine_Question_Biology_of_Autism.html">11 — Vaccine Question</a>
+        <a href="12_Parents_Guide_Biology_of_Autism.html">12 — Parents Guide</a>
+        <a href="12B_Autism_101_Biology_of_Autism.html">12B — Autism 101</a>
+        <a href="13_Clinician_Guide_Biology_of_Autism.html">13 — Clinician Guide</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Evidence</div>
+        <a href="10_Evidence_and_Citations_Biology_of_Autism.html">10 — Evidence &amp; Citations</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Other Sections</div>
+        <a href="imig/imig-overview.html">IMIG Clinical Trial</a>
+        <a href="imig/mechanism.html">— The Mechanism</a>
+        <a href="imig/evidence.html">— The Evidence</a>
+        <a href="imig/trial.html">— The Trial</a>
+        <a href="research/research-articles.html">Research Articles</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <div class="topbar-brand">Decoding Autism Now</div>
+      <div class="topbar-title">Biology of Autism — Pepsin, Opioid Peptides &amp; Hidden Malnutrition</div>
+    </div>
+    <button class="ham-btn" id="hamBtn" aria-label="Open navigation" aria-expanded="false">
+      <span class="ham-label">Menu</span>
+      <span class="ham-bars"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="header-stripe"></div>
+  <div class="header-inner">
+    <div class="header-eyebrow">Decoding Autism Now · Foundation Series</div>
+    <h1 class="header-title">
+      Biology of Autism —
+      <span class="accent-line">Pepsin, Opioid Peptides &amp; Hidden Malnutrition</span>
+    </h1>
+    <p class="header-sub">How elevated gut pH disables a single digestive enzyme — and how that one failure initiates opioid peptide accumulation, amino acid deficiency, and the first two arms of the immune-derived autism cascade.</p>
+    <a href="#framework-disclaimer" class="header-note">See framework disclaimer below</a>
+  </div>
+</header>
+
+<div class="cascade-position">
+  <div class="cascade-position-inner">
+    <span class="cascade-pos-label">Position in cascade</span>
+    <span class="cascade-pos-arrow">›</span>
+    <span class="cascade-pos-step"><a href="01_Molecular_Origins_Biology_of_Autism.html" style="color:inherit;text-decoration:none;">01 Founding Conditions</a></span>
+    <span class="cascade-pos-arrow">›</span>
+    <span class="cascade-pos-step active">01B Pepsin Failure &amp; Opioid Peptides</span>
+    <span class="cascade-pos-arrow">›</span>
+    <span class="cascade-pos-step"><a href="01C_CD26_Adenosine_Methylation_Biology_of_Autism.html" style="color:inherit;text-decoration:none;">01C CD26 &amp; Methylation</a></span>
+    <span class="cascade-pos-arrow">›</span>
+    <span class="cascade-pos-step"><a href="03_Cascade_Explained_Biology_of_Autism.html" style="color:inherit;text-decoration:none;">03 Immune Activation</a></span>
+  </div>
+</div>
+
+<nav class="toc-bar" aria-label="Section index">
+  <div class="toc-inner">
+    <p class="toc-label">Sections at a glance</p>
+    <div class="toc-grid">
+      <a class="toc-link" href="#pepsin"><span class="toc-badge">01</span>The pH-Pepsin Mechanism</a>
+      <a class="toc-link" href="#malnutrition"><span class="toc-badge">02</span>Hidden Malnutrition</a>
+      <a class="toc-link" href="#opioid-peptides"><span class="toc-badge">03</span>Opioid Peptides &amp; Food Selectivity</a>
+      <a class="toc-link" href="#cck-sst28"><span class="toc-badge">04</span>CCK Overactivation &amp; Gut SST-28</a>
+      <a class="toc-link" href="#two-arms"><span class="toc-badge">05</span>Two Arms, One Trigger</a>
+      <a class="toc-link" href="#biomarkers"><span class="toc-badge">06</span>Biomarkers for This Mechanism</a>
+    </div>
+  </div>
+</nav>
+
+<main class="main-wrap">
+
+  <!-- SECTION 01: PH PEPSIN -->
+  <section class="page-section" id="pepsin">
+    <div class="section-header">
+      <span class="level-badge teal">01</span>
+      <div>
+        <h2 class="section-title">The pH-Pepsin Mechanism</h2>
+        <p class="section-subtitle">Why a single pH shift disables protein digestion entirely</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <h3 class="node-title">Pepsin's narrow operating window</h3>
+      <p>Pepsin is the stomach's primary digestive protease — the enzyme responsible for breaking down the proline bonds in proteins, including those in casein (dairy) and gluten (wheat). It has a narrow operational window: pepsin requires a gastric pH of approximately <strong>2.0</strong> for optimal activity and becomes essentially inactive above <strong>pH 4.0</strong>.</p>
+      <p>When the founding conditions described on the <a href="01_Molecular_Origins_Biology_of_Autism.html">Molecular Origins</a> page have elevated gastric pH above this threshold — through reduced parietal cell hydrochloric acid (HCl) output, H. pylori infection, proton pump inhibitor (PPI) therapy, chronic sympathetic dominance, or combinations of these — pepsin cannot fulfill its digestive function regardless of how much protein the child eats.</p>
+    </div>
+
+    <div class="node">
+      <div class="ph-scale">
+        <p class="ph-scale-label">Gastric pH and pepsin activity</p>
+        <div class="ph-bar-wrap">
+          <div class="ph-bar">
+            <div class="ph-marker" style="left:15%; background:var(--navy);">
+              <span class="ph-marker-label" style="color:var(--navy); left:0;">pH 2 — pepsin optimal</span>
+            </div>
+            <div class="ph-marker" style="left:45%; background:var(--gold);">
+              <span class="ph-marker-label" style="color:#7a4f10; left:0;">pH 4 — pepsin inactive</span>
+            </div>
+          </div>
+        </div>
+        <div class="ph-zone-labels">
+          <span>pH 1 (highly acidic)</span>
+          <span>pH 4</span>
+          <span>pH 7 (neutral)</span>
+        </div>
+        <div class="ph-legend">
+          <div class="ph-legend-item"><div class="ph-dot" style="background:#e8864a;"></div>Pepsin active zone (pH 1.5–3.5)</div>
+          <div class="ph-legend-item"><div class="ph-dot" style="background:var(--gold);"></div>Deactivation threshold (pH 4)</div>
+          <div class="ph-legend-item"><div class="ph-dot" style="background:#4caf50;"></div>Pepsin fully inactive (pH 4+)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="node">
+      <h3 class="node-title">Why proline bonds are the critical target</h3>
+      <p>Casein and gluten proteins contain an unusually high density of proline residues. Proline's unique cyclic structure creates rigid, corkscrew-shaped peptide bonds that are highly resistant to the proteases operating further along the small intestine. <strong>Pepsin is the only enzyme that can effectively cleave these proline bonds under normal digestive conditions.</strong> When pepsin is deactivated by elevated pH, proline-bonded peptide fragments from casein and gluten survive digestion intact — there is no downstream enzyme capable of finishing the job pepsin left undone.</p>
+      <p>These intact fragments do not simply pass harmlessly through. Their rigid corkscrew structure serves a double function: it resists small intestinal proteases that would otherwise degrade them, and it allows the intact peptide to mechanically penetrate the intestinal mucosal wall — contributing to the intestinal permeability consistently documented in ASD populations. The peptide enters systemic circulation through the compromised barrier, biologically active and structurally intact.</p>
+
+      <div class="callout">
+        <p>This is why dietary elimination of casein and gluten can produce observable changes in some affected children — not because these foods are inherently toxic, but because <strong>when pepsin cannot do its job, these proteins specifically generate bioactive peptide fragments</strong> that drive downstream cascade mechanisms. The problem is the pH. The food is the substrate.</p>
+      </div>
+    </div>
+
+    <div class="pathway-tags">
+      <span class="tag">Pepsin pH 2.0 optimum</span>
+      <span class="tag">Inactive above pH 4.0</span>
+      <span class="tag">Proline bond cleavage</span>
+      <span class="tag">Casein / gluten proteins</span>
+      <span class="tag">Intestinal permeability</span>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>Downstream of pepsin failure</span></div>
+
+  <!-- SECTION 02: HIDDEN MALNUTRITION -->
+  <section class="page-section" id="malnutrition">
+    <div class="section-header">
+      <span class="level-badge teal">02</span>
+      <div>
+        <h2 class="section-title">Hidden Malnutrition</h2>
+        <p class="section-subtitle">Eating enough protein — and still being amino acid deficient</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <h3 class="node-title">Three essential amino acids trapped in undigested protein</h3>
+      <p>Three essential amino acids depend critically on pepsin-mediated proline bond cleavage for their release from dietary protein: <strong>phenylalanine</strong>, <strong>tyrosine</strong>, and <strong>tryptophan</strong>. These are classified as essential because the human body cannot synthesize them internally — they must be obtained entirely from dietary protein.</p>
+      <p>When pepsin is deactivated by elevated gut pH, the proline bonds that lock these amino acids inside casein and gluten proteins cannot be broken. The amino acids remain trapped inside undigested peptide fragments that pass through the gut and are excreted rather than absorbed. No amount of dietary protein corrects this — the problem is not the quantity of protein consumed but the pH environment that has disabled the enzyme required to release what that protein contains.</p>
+      <p>The result is <strong>hidden malnutrition</strong>: a child consuming an apparently complete diet who is biochemically deficient in three amino acids that the body cannot produce on its own and can no longer extract from food. Standard dietary assessment measures what is eaten — not what is absorbed. This deficiency does not show up on a food diary. It shows up on an amino acid panel.</p>
+    </div>
+
+    <div class="node gold-accent">
+      <h3 class="node-title">What these three amino acids produce</h3>
+
+      <div class="aa-flow">
+        <div class="aa-col">
+          <div class="aa-col-label good">When available</div>
+          <ul>
+            <li><strong>Phenylalanine →</strong> precursor to tyrosine and dopamine</li>
+            <li><strong>Tyrosine →</strong> dopamine → norepinephrine → epinephrine</li>
+            <li><strong>Tryptophan →</strong> serotonin → melatonin</li>
+            <li><strong>Tryptophan →</strong> NAD⁺ via kynurenine salvage pathway</li>
+          </ul>
+        </div>
+        <div class="aa-arrow">→</div>
+        <div class="aa-col">
+          <div class="aa-col-label bad">When deficient</div>
+          <ul>
+            <li>Dopamine signaling insufficiency</li>
+            <li>Norepinephrine dysregulation</li>
+            <li>Serotonin depletion</li>
+            <li>Melatonin insufficiency — sleep disruption</li>
+            <li>NAD⁺ substrate deficit</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="node">
+      <h3 class="node-title">The double tryptophan depletion</h3>
+      <p>Tryptophan occupies a uniquely critical position in the cascade because it faces depletion from two independent directions simultaneously.</p>
+      <p><strong>From above</strong> — pepsin inactivation prevents tryptophan release from proline-bonded dietary protein, reducing the supply entering circulation. This is the mechanism described on this page.</p>
+      <p><strong>From below</strong> — once the immune activation described in the next cascade steps establishes itself, the enzyme indoleamine 2,3-dioxygenase 1 (IDO1) continuously diverts whatever tryptophan does reach systemic circulation into the kynurenine pathway, depleting it before it can be converted to serotonin.</p>
+      <p>The result is that serotonin synthesis is simultaneously limited by impaired supply <em>and</em> active enzymatic diversion. This explains why serotonin depletion in immune-derived autism is so clinically consistent and so resistant to dietary correction alone — the problem is operating at two independent points in the supply chain at once.</p>
+
+      <div class="insight-box">
+        <p><strong>The hidden malnutrition insight for parents:</strong> Standard dietary assessment measures what a child eats. It does not measure what a child absorbs. A child consuming adequate dietary protein while unable to cleave proline bonds will show normal dietary intake records and deficient amino acid panel results simultaneously. The deficiency is invisible to the usual assessment tools — which is why it is called hidden malnutrition.</p>
+      </div>
+    </div>
+
+    <div class="pathway-tags">
+      <span class="tag">Phenylalanine deficiency</span>
+      <span class="tag">Tyrosine deficiency</span>
+      <span class="tag">Tryptophan deficiency</span>
+      <span class="tag">Dopamine precursor deficit</span>
+      <span class="tag">Serotonin depletion</span>
+      <span class="tag">Melatonin insufficiency</span>
+      <span class="tag">Double tryptophan depletion</span>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>What the intact peptides do</span></div>
+
+  <!-- SECTION 03: OPIOID PEPTIDES -->
+  <section class="page-section" id="opioid-peptides">
+    <div class="section-header">
+      <span class="level-badge gold">03</span>
+      <div>
+        <h2 class="section-title">Opioid Peptides and the Food Selectivity Loop</h2>
+        <p class="section-subtitle">Why the body drives toward the very foods that deepen the problem</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <h3 class="node-title">Casomorphin and gliadorphin — exorphins from incomplete digestion</h3>
+      <p>The intact peptide fragments that accumulate when pepsin cannot cleave proline bonds are not nutritionally inert. Casomorphin — derived from incompletely digested casein — and gliadorphin — derived from incompletely digested gluten — belong to a class of compounds called <strong>exorphins</strong>: peptides originating outside the body that bind to opioid receptors.</p>
+      <p>Casomorphin and gliadorphin bind to mu-opioid receptors throughout the gut and brain, producing opioid-like effects including dulled pain perception, altered mood, and food-seeking behavior. These are not trace effects — the receptor binding is specific, documented, and drives measurable behavioral consequences.</p>
+    </div>
+
+    <div class="node gold-accent">
+      <h3 class="node-title">Why the body seeks more of the problem food</h3>
+      <p>Two drives arrive at the same behavioral output simultaneously, explaining the characteristic and often intense food selectivity of affected children as a <strong>convergent biological phenomenon</strong> — not a behavioral preference or sensory quirk.</p>
+
+      <div class="opioid-loop">
+        <div class="opioid-loop-title">The convergent food-seeking loop</div>
+        <div class="opioid-step">
+          <span class="opioid-step-num">1</span>
+          <p><strong>Opioid reward signal:</strong> Casomorphin and gliadorphin bind mu-opioid receptors, producing biochemical reward from the foods that generate them — dairy and wheat. The body learns that these foods produce a neurochemical response it has come to depend on.</p>
+        </div>
+        <div class="opioid-step">
+          <span class="opioid-step-num">2</span>
+          <p><strong>Amino acid deficiency detection:</strong> The body's homeostatic systems detect low circulating phenylalanine, tyrosine, and tryptophan and generate food-seeking signals directed toward protein-rich sources — which dairy and wheat correctly represent. The body is seeking the nutrients it is deficient in.</p>
+        </div>
+        <div class="opioid-step">
+          <span class="opioid-step-num">3</span>
+          <p><strong>The trap:</strong> The digestive mechanism that should release those nutrients is the same mechanism that is generating the deficiency. Eating more dairy and wheat in response to both signals deepens the opioid peptide load and the amino acid deficit simultaneously. The food-seeking behavior is biologically rational — and biologically counterproductive.</p>
+        </div>
+        <div class="opioid-step">
+          <span class="opioid-step-num">4</span>
+          <p><strong>The resistance to elimination:</strong> When families remove dairy and wheat, the opioid withdrawal effect from casomorphin and gliadorphin produces genuine behavioral distress — heightened agitation, disrupted sleep, increased rigidity — that is often misread as evidence that the diet is harmful. It is instead evidence that the opioid receptor dependency was real. The behavioral deterioration during a casein- and gluten-free transition is mechanistically identical to what occurs when someone dependent on opioid street drugs stops taking them: the receptor sites accustomed to stimulation go unstimulated, and the nervous system reacts accordingly. The distress is withdrawal — not dietary harm.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pathway-tags">
+      <span class="tag">Casomorphin</span>
+      <span class="tag">Gliadorphin</span>
+      <span class="tag">Mu-opioid receptor binding</span>
+      <span class="tag">Food selectivity mechanism</span>
+      <span class="tag">Exorphins</span>
+      <span class="tag">GFCF diet rationale</span>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>The first arm of SST-14 silencing</span></div>
+
+  <!-- SECTION 04: CCK / SST-28 -->
+  <section class="page-section" id="cck-sst28">
+    <div class="section-header">
+      <span class="level-badge teal">04</span>
+      <div>
+        <h2 class="section-title">CCK Overactivation and Gut SST-28 Dysregulation</h2>
+        <p class="section-subtitle">How persistent opioid receptor activation locks the digestive hormone cascade into a suppressed state</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <h3 class="node-title">The CCK feedback mechanism — and why it breaks</h3>
+      <p>Cholecystokinin exists in two functionally distinct receptor forms. <strong>CCK-A receptors</strong> are expressed in the gut wall and on vagal afferent nerve fibers — they govern satiety signaling, gallbladder contraction, pancreatic enzyme release, and the activation of gut somatostatin. <strong>CCK-B receptors</strong> are expressed in the brain, where CCK acts as a neurotransmitter modulating anxiety, pain, and reward circuits. The mechanism described here is specifically a CCK-A gut event — it is the peripheral digestive arm being chronically overstimulated, not the brain's CCK-B signaling.</p>
+      <p>Under normal conditions, the CCK-A feedback cycle is episodic and self-terminating: food intake raises CCK-A, which activates gut somatostatin, which suppresses further CCK-A release as digestion winds down. The cycle resets between meals. The key feature is that food — not a persistent molecular signal — is the driver, so the feedback loop has a natural off-switch.</p>
+      <p>Casomorphin and gliadorphin remove that natural off-switch. Because these opioid peptide fragments persist in the gut between meals — not cleared by the disabled pepsin mechanism that generated them — they provide a continuous CCK-A stimulus that food intake does not. The body reads this as a perpetual digestive demand and upregulates CCK synthesis accordingly. SST-28 is driven into tonic overexpression not because digestion is continuously happening, but because a molecular signal that normally accompanies digestion has become structurally permanent.</p>
+    </div>
+
+    <div class="node navy-accent">
+      <h3 class="node-title">Tonic gut SST-28 overexpression — suppressing the entire digestive cascade</h3>
+      <p>Chronic CCK-A overactivation drives gut SST-28 — the 28-amino-acid form of somatostatin produced by intestinal D-cells — into sustained overexpression. SST-28 is the primary inhibitory regulator of the digestive hormone cascade. Under normal conditions it provides episodic, self-limiting inhibition coordinated with the digestive cycle.</p>
+      <p>In immune-derived autism, SST-28 becomes <strong>tonically and globally overactive</strong>, suppressing the entire digestive hormone cascade continuously. The consequences compound each other:</p>
+      <ul>
+        <li>Gastric acid output falls — further elevating pH and further compounding pepsin inactivation. The mechanism that initiated the cascade is now perpetuated by the cascade itself.</li>
+        <li>Secretin release fails — S-cells in the duodenum release secretin only when luminal acid drops the pH below 4.2. With gastric acid suppressed by overactive SST-28 and gut pH chronically elevated, that threshold is never reached. Secretin goes unreleased not because the S-cells are damaged, but because the pH signal that should trigger them never arrives.</li>
+        <li>vasoactive intestinal peptide (VIP)-driven gut motility is reduced — contributing to slow transit, constipation, and irregular bowel function</li>
+        <li>Motilin-stimulated peristalsis is impaired — the migrating motor complex that drives gut emptying between meals weakens</li>
+        <li>Gastrin suppression reduces the parietal cell stimulation needed for acid recovery</li>
+      </ul>
+
+      <div class="callout gold">
+        <p><strong>Same gene, opposite dysfunction:</strong> In the gut, SST-28 is tonically overactive — suppressing the digestive hormone cascade. In the brain, SST-14 is being silenced — failing to coordinate the release of oxytocin, VIP, and secretin from the neuropeptide cascade. Same gene. Same precursor. Opposite dysfunction in two different compartments. The gut dysfunction is the initiating event; the brain dysfunction is the eventual convergent outcome.</p>
+      </div>
+    </div>
+
+    <div class="pathway-tags">
+      <span class="tag">CCK overactivation</span>
+      <span class="tag">Gut SST-28 overexpression</span>
+      <span class="tag">Digestive hormone suppression</span>
+      <span class="tag">Secretin suppression</span>
+      <span class="tag">VIP-driven motility failure</span>
+      <span class="tag">Gastric acid feedback loop</span>
+      <span class="tag">Motilin suppression</span>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>Where the two arms diverge</span></div>
+
+  <!-- SECTION 05: TWO ARMS -->
+  <section class="page-section" id="two-arms">
+    <div class="section-header">
+      <span class="level-badge gold">05</span>
+      <div>
+        <h2 class="section-title">Two Arms, One Trigger</h2>
+        <p class="section-subtitle">The CCK/SST-28 arm and the CD26/adenosine arm — both initiated by opioid peptide accumulation, both converging independently on SST-14 silencing</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <p>The opioid peptides casomorphin and gliadorphin initiate not one but <strong>two mechanistically distinct downstream cascade pathways</strong>. They share the same upstream trigger — pepsin inactivation and opioid peptide accumulation — but produce entirely different biochemical consequences that converge independently on the same outcome: SST-14 interneuron silencing in the brain.</p>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:20px;">
+        <div style="background:var(--warm-white); border:1px solid var(--rule); border-radius:8px; padding:20px 22px; border-top:3px solid var(--teal);">
+          <div style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--teal); margin-bottom:10px;">Arm 2A — CCK / Gut SST-28</div>
+          <p style="font-size:.92rem; color:var(--text-mid); margin:0; line-height:1.65;">Opioid receptor activation → CCK-A overactivation → gut SST-28 tonic overexpression → digestive hormone cascade suppression. Described on this page.</p>
+        </div>
+        <div style="background:var(--warm-white); border:1px solid var(--rule); border-radius:8px; padding:20px 22px; border-top:3px solid var(--gold);">
+          <div style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#7a4f10; margin-bottom:10px;">Arm 2B — CD26 / Methylation</div>
+          <p style="font-size:.92rem; color:var(--text-mid); margin:0; line-height:1.65;">Casomorphin and gliadorphin block the CD26 receptor → adenosine accumulation → methionine synthase rate-limiting → methylation cycle failure. Described on <a href="01C_CD26_Adenosine_Methylation_Biology_of_Autism.html">CD26, Adenosine &amp; Methylation</a>.</p>
+        </div>
+      </div>
+
+      <p style="margin-top:20px;">Both arms proceed in parallel from the same triggering event. Neither waits for the other. A child with elevated opioid peptide load is simultaneously accumulating gut SST-28 overactivation and adenosine-driven methylation failure — two distinct biochemical crises advancing concurrently toward the same convergent node.</p>
+      <p>This parallel structure is why single-target interventions characteristically produce partial improvement followed by plateau: addressing one arm does not arrest the other.</p>
+    </div>
+
+    <div class="callout">
+      <p>The full cascade from this point — lipopolysaccharide (LPS) translocation, IDO1 activation, nuclear factor kappa B (NF-κB) transcriptional suppression, and SST-14 interneuron silencing — is described on the <a href="03_Cascade_Explained_Biology_of_Autism.html">Cascade Explained</a> page. The CD26 arm is described in detail on <a href="01C_CD26_Adenosine_Methylation_Biology_of_Autism.html">CD26, Adenosine &amp; Methylation</a>.</p>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>Identifying this mechanism in the clinic</span></div>
+
+  <!-- SECTION 06: BIOMARKERS -->
+  <section class="page-section" id="biomarkers">
+    <div class="section-header">
+      <span class="level-badge teal">06</span>
+      <div>
+        <h2 class="section-title">Biomarkers for This Mechanism</h2>
+        <p class="section-subtitle">Laboratory findings that identify pepsin failure, opioid peptide accumulation, and hidden malnutrition</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <p>The pepsin failure and opioid peptide mechanism is not detectable by standard dietary assessment. It requires specific laboratory investigation. The following findings, in combination, constitute a strong biomarker signal for this mechanism as the operative upstream driver.</p>
+
+      <div class="biomarker-grid">
+        <div class="biomarker-card">
+          <div class="biomarker-name">Amino acid panel</div>
+          <div class="biomarker-desc">Low plasma phenylalanine, tyrosine, and tryptophan in the context of apparently adequate dietary protein intake. The diagnostic fingerprint of pepsin inactivation — the building blocks are present in the diet but not reaching circulation.</div>
+        </div>
+        <div class="biomarker-card gold-top">
+          <div class="biomarker-name">Urinary opioid peptides</div>
+          <div class="biomarker-desc">Casomorphin and gliadorphin detectable in urine. Confirms that intact opioid peptide fragments have crossed the gut barrier and entered systemic circulation. Elevated in a significant subset of ASD children on casein- and gluten-containing diets.</div>
+        </div>
+        <div class="biomarker-card">
+          <div class="biomarker-name">Intestinal permeability (lactulose/mannitol)</div>
+          <div class="biomarker-desc">Elevated lactulose-to-mannitol ratio confirms gut barrier compromise — the permeability through which intact peptides and LPS are entering systemic circulation. Often called the "leaky gut" test.</div>
+        </div>
+        <div class="biomarker-card gold-top">
+          <div class="biomarker-name">Plasma serotonin / urinary 5-HIAA</div>
+          <div class="biomarker-desc">Paradoxically, peripheral serotonin may be elevated (from excess gut production) while central serotonin is depleted. Urinary 5-HIAA reflects overall serotonin turnover. Low central serotonin cannot be directly measured but is inferred from the tryptophan double depletion mechanism.</div>
+        </div>
+        <div class="biomarker-card">
+          <div class="biomarker-name">Gastric pH assessment</div>
+          <div class="biomarker-desc">Stool pH (proxy), H. pylori breath test, or clinical history of reflux treated with acid suppression all provide indirect evidence of the pH dysregulation driving pepsin inactivation. Elevated stool pH suggests insufficient gastric acid reaching the colon.</div>
+        </div>
+        <div class="biomarker-card gold-top">
+          <div class="biomarker-name">dipeptidyl peptidase IV (DPP-IV) / CD26 activity</div>
+          <div class="biomarker-desc">Reduced DPP-IV enzymatic activity in serum or plasma has been documented in ASD populations and reflects the CD26 blockade initiated by opioid peptide binding — connecting Arm 2A and Arm 2B from the same upstream source.</div>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:20px;">
+        <p>These biomarkers do not replace clinical assessment. They direct it. A child presenting with amino acid deficiency, detectable urinary peptides, and elevated gut permeability markers has a measurable, mechanistically coherent upstream driver that informs a specific intervention sequence — not a collection of unrelated laboratory abnormalities. See the <a href="07_Testing_Strategy_Biology_of_Autism.html">Testing Strategy</a> and <a href="07B_Test_Reference_Biology_of_Autism.html">Test Reference</a> pages for full guidance on ordering and interpreting these tests.</p>
+      </div>
+    </div>
+
+    <div class="pathway-tags">
+      <span class="tag">Amino acid panel</span>
+      <span class="tag">Urinary peptides</span>
+      <span class="tag">Intestinal permeability</span>
+      <span class="tag">Plasma phenylalanine</span>
+      <span class="tag">Plasma tryptophan</span>
+      <span class="tag">DPP-IV activity</span>
+      <span class="tag">H. pylori</span>
+      <span class="tag">Lactulose/mannitol ratio</span>
+    </div>
+  </section>
+
+</main>
+
+<div class="framework-notice" id="framework-disclaimer">
+  <div class="framework-notice-inner">
+    <div class="framework-notice-icon">i</div>
+    <p class="framework-notice-text"><strong>Framework note:</strong> This page describes mechanisms proposed within the immune-derived autism (IDA) subgroup framework. Individual mechanistic steps are supported by published primary literature; the integrated cascade as a complete model awaits prospective validation. The model does not claim to explain all autism. It is a research framework, not a clinical protocol. Always work with qualified medical professionals before pursuing any laboratory testing or dietary changes.</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">Decoding Autism Now</p>
+        <h2 class="footer-title">Biology of Autism — Pepsin, Opioid Peptides &amp; Hidden Malnutrition</h2>
+        <p class="footer-tagline">How elevated gut pH disables a single digestive enzyme — and how that one failure initiates opioid peptide accumulation, amino acid deficiency, and the first two arms of the immune-derived autism cascade.</p>
+      </div>
+      <div class="footer-actions">
+        <div class="footer-links">
+          <a class="footer-link" href="index.html">Home</a>
+          <a class="footer-link" href="01_Molecular_Origins_Biology_of_Autism.html">Molecular Origins</a>
+          <a class="footer-link" href="01C_CD26_Adenosine_Methylation_Biology_of_Autism.html">CD26 &amp; Methylation</a>
+          <a class="footer-link" href="03_Cascade_Explained_Biology_of_Autism.html">Cascade Explained</a>
+          <a class="footer-link" href="07_Testing_Strategy_Biology_of_Autism.html">Testing</a>
+          <a class="footer-link" href="10_Evidence_and_Citations_Biology_of_Autism.html">Evidence</a>
+        </div>
+        <p class="footer-disclaimer">This content is for informational purposes only and should not be considered medical advice, diagnosis, or treatment. Always consult with a healthcare professional before making any changes to health routines or treatment regimens.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-meta" style="color:rgba(255,255,255,0.40); margin-top:10px;">© 2026 Decoding Autism Now | All content is shared with families, clinicians and researchers for educational purposes under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.55); text-decoration:underline;">Creative Commons CC BY-NC 4.0</a> — free to share with attribution, not for commercial use.</p>
+      <p class="footer-meta">Biology of Autism — Pepsin, Opioid Peptides &amp; Hidden Malnutrition | Decoding Autism Now</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('hamBtn');
+  var overlay = document.getElementById('navOverlay');
+  var dim = document.getElementById('navDim');
+  if (!btn) return;
+  function openNav() {
+    overlay.classList.add('open');
+    dim.classList.add('open');
+    btn.setAttribute('aria-expanded','true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeNav() {
+    overlay.classList.remove('open');
+    dim.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+    document.body.style.overflow = '';
+  }
+  btn.addEventListener('click', function(){
+    overlay.classList.contains('open') ? closeNav() : openNav();
+  });
+  dim.addEventListener('click', closeNav);
+  overlay.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', closeNav);
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closeNav();
+  });
+})();
+</script>
+
+</body>
+</html>

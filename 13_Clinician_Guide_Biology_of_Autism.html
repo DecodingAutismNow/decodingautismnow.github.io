@@ -773,7 +773,6 @@ html { background: #0f2342; }
 }
 
 </style>
-  <!-- Privacy-friendly analytics by Plausible -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="294ecd79-19fb-4267-9be2-a7c83d57274d"></script>
 </head>
 <body>
@@ -787,6 +786,9 @@ html { background: #0f2342; }
         <div class="nav-group-label">Foundation</div>
         <a href="index.html">Home Hub</a>
         <a href="01_Molecular_Origins_Biology_of_Autism.html">01 — Molecular Origins</a>
+        <a href="01B_Pepsin_Opioid_Peptides_Biology_of_Autism.html">01B — Pepsin &amp; Opioid Peptides</a>
+        <a href="01C_CD26_Adenosine_Methylation_Biology_of_Autism.html">01C — CD26, Adenosine &amp; Methylation</a>
+        <a href="01D_Sex_Ratio_Estrogen_cAMP_Biology_of_Autism.html">01D — Sex Ratio &amp; Estrogen-cAMP Axis</a>
         <a href="02_Cascade_Map_Biology_of_Autism.html">02 — Cascade Map</a>
         <a href="03_Cascade_Explained_Biology_of_Autism.html">03 — Cascade Explained</a>
         <a href="04_Gprotein_Cascade_Biology_of_Autism.html">04 — G-Protein Cascade</a>
@@ -817,6 +819,7 @@ html { background: #0f2342; }
         <a href="09_FAQ_Biology_of_Autism.html">09 — FAQ</a>
         <a href="11_Vaccine_Question_Biology_of_Autism.html">11 — Vaccine Question</a>
         <a href="12_Parents_Guide_Biology_of_Autism.html">12 — Parents Guide</a>
+        <a href="12B_Autism_101_Biology_of_Autism.html">12B — Autism 101</a>
         <a href="13_Clinician_Guide_Biology_of_Autism.html" class="current">13 — Clinician Guide</a>
       </div>
       <div class="nav-group">
@@ -869,92 +872,268 @@ html { background: #0f2342; }
   <div class="guide-nav-inner">
     <span class="guide-label">On this page</span>
     <a class="guide-link" href="#framing">Clinical Framing</a>
-    <a class="guide-link" href="#domains">Core Domains</a>
-    <a class="guide-link" href="#workflow">How to Use It</a>
-    <a class="guide-link" href="#next-steps">Where to Go Next</a>
+    <a class="guide-link" href="#three-state">Three-State Framework</a>
+    <a class="guide-link" href="#biomarkers">Biomarker Panel</a>
+    <a class="guide-link" href="#cascade-map">Cascade Staging</a>
+    <a class="guide-link" href="#workflow">Clinical Workflow</a>
+    <a class="guide-link" href="#next-steps">When to Refer</a>
   </div>
 </nav>
+
+<div style="background:#fef9ec; border-top:3px solid #c8923a; border-bottom:1px solid rgba(200,146,58,0.25); margin-bottom:0;">
+  <div style="max-width:900px; margin:0 auto; padding:18px 40px; display:flex; gap:16px; align-items:flex-start;">
+    <div style="flex-shrink:0; margin-top:2px; width:28px; height:28px; border-radius:50%; background:rgba(200,146,58,0.18); border:1.5px solid rgba(200,146,58,0.55); display:flex; align-items:center; justify-content:center; font-family:Georgia,serif; font-size:15px; font-weight:700; color:#7a4f10; line-height:1;">!</div>
+    <div>
+      <p style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#7a4f10; margin-bottom:8px; font-weight:600;">Safety &amp; Supervision — Required Reading</p>
+      <p style="font-family:'Source Serif 4',Georgia,serif; font-size:0.92rem; color:#5a3e1a; line-height:1.7; margin:0;">All interventions described on this page are <strong style="color:#3d2200;">investigational, off-label, and require qualified medical oversight</strong>. This framework is a research model — not a prescription. No supplement, immunological, or cellular therapy described here should be initiated without direct involvement of a physician who knows the individual patient. Forskolin and other cAMP-modulating agents carry specific cardiac and drug-interaction risks and must never be self-administered. MSC therapy and IMIG/IVIG are experimental for ASD in every jurisdiction and require specialist evaluation. <strong style="color:#3d2200;">When in doubt, consult before acting.</strong></p>
+    </div>
+  </div>
+</div>
 
 <div class="notice-wrap" id="framework-disclaimer">
   <div class="notice-inner">
     <div class="notice-icon">i</div>
     <div class="notice-text">
-      <strong>Theoretical framework — not clinical guidance.</strong> The Autism Spectrum Disorder (ASD) Cascade is a systems-biology model integrating peer-reviewed findings across immunology, metabolism, gut biology, and neuroscience into a proposed mechanistic map. Individual components are supported by published research; the full integrated cascade has not been validated as a unified model in large clinical trials. This framework is intended for research and educational purposes — not as a diagnostic tool or treatment protocol. All intervention decisions require qualified clinical oversight. For the evidence base, see the ASD Cascade citations document within this suite.
+      <strong>Framework note — not clinical guidance.</strong> The immune-derived autism cascade is a systems-biology model integrating peer-reviewed findings across immunology, gastroenterology, neuroscience, and molecular biology. Individual mechanistic steps are supported by published primary literature; the full integrated cascade has not been validated as a unified model in a large controlled trial. This framework is intended as a clinical reasoning scaffold — not a diagnostic tool or prescriptive treatment protocol. All intervention decisions require qualified clinical oversight with direct knowledge of the individual patient.
     </div>
   </div>
 </div>
 
 <main class="main-wrap">
+
   <section id="framing">
     <div class="chapter-divider"><span>Clinical Framing</span></div>
     <div class="frame-grid">
       <div class="card">
         <div class="card-pad">
-          <div class="card-kicker">Use Case</div>
-          <h2 class="card-title">This guide translates the model into a structured way of thinking.</h2>
+          <div class="card-kicker">The Subgroup</div>
+          <h2 class="card-title">Immune-derived autism — a mechanistically distinct, biomarker-definable subgroup</h2>
           <div class="card-text">
-            <p>The full Biology of Autism site proposes a systems-level cascade linking gut biology, immune signaling, excitatory pressure, cellular stress, and changing neurobehavioral output. For clinicians, its value is not in offering a fixed protocol. Its value is in organizing heterogeneous findings into a more coherent map.</p>
-            <p>This page treats the framework as a reasoning scaffold: a way to notice recurring clusters, stage where the system may be under greatest stress, and think more clearly about sequence rather than symptom-by-symptom fragmentation.</p>
-            <p>The deeper pathway and intervention pages remain canonical. This guide is an entry point into their practical use.</p>
+            <p>The immune-derived autism (IDA) cascade does not describe all autism. It describes a subgroup in which a multi-step biological cascade — originating in gut pH dysregulation and converging on SST-14 interneuron silencing — produces the ASD phenotype cluster.</p>
+            <p>The clinical utility of the cascade framework is not in providing a fixed protocol. It is in giving the heterogeneous symptom picture a coherent upstream structure — one that allows intervention to be sequenced logically rather than symptom by symptom across disconnected specialties.</p>
+            <p>The key identifiers for this subgroup: elevated inflammatory biomarkers, measurable methylation cycle disruption, and the characteristic clinical fingerprint that gains from peptide or behavioral interventions attenuate over time — the signature of a locked second messenger infrastructure.</p>
+            <p><strong>Two-layer model.</strong> The AofA paper (V14d) presents the IDA framework as a two-layer model: the convergent cascade mechanism (seven converging steps from gut pH to SST-14 silencing) and the constitutional susceptibility architecture (seven tipping points that determine who the cascade propagates in). The cascade explains the mechanism; the constitutional profile explains the selection. Most children exposed to the same founding conditions do not develop IDA because their constitutional profile at one or more tipping points provides sufficient headroom. A child presenting with IDA typically carries reduced headroom at multiple tipping points simultaneously: ATP4A/ATP4B proton pump variants, constitutively low DPP-IV, MTHFR C677T, KMO excitotoxic branch bias, reduced mitochondrial reserve, or HLA-mediated autoantibody susceptibility. This constitutional profile is both an explanatory tool and an emerging biomarker — Testable Prediction 7 of the model.</p>
+            <p style="margin-top:12px; padding:12px 16px; background:rgba(30,107,114,0.07); border-left:3px solid var(--teal); border-radius:0 4px 4px 0; font-size:0.9rem;"><strong>Important:</strong> This is a research-informed model for a biologically defined subgroup. It does not explain all autism. Large-scale prospective validation studies are needed. All clinical decisions require qualified medical oversight with direct knowledge of the individual patient. The two-layer model and constitutional susceptibility architecture are developed in full in <a href="anatomy-of-autism.html" style="color:var(--teal);">The Anatomy of Autism</a> (working paper, V14d, May 2026).</p>
           </div>
         </div>
       </div>
 
       <div class="card highlight-box">
         <div class="card-pad">
-          <div class="card-kicker">Working Principle</div>
-          <h2 class="card-title">The model is most useful when it clarifies order.</h2>
+          <div class="card-kicker">The Central Question</div>
+          <h2 class="card-title">Which domain is most upstream — and what order of support is most coherent?</h2>
           <div class="card-text">
-            <p>Patients often present with mixed findings across sleep, GI function, behavior, immune activity, sensory regulation, and developmental variability. This framework asks whether those are better understood as interdependent outputs of stressed signaling networks rather than separate silos.</p>
-            <p>Clinically, that means the question is often not “Which isolated symptom matters most?” but “Which domain may be most upstream right now, and what order of support is most coherent?”</p>
+            <p>Children with immune-derived autism characteristically present to multiple specialists simultaneously: gastroenterologist for GI dysfunction, sleep specialist for sleep architecture disruption, OT for sensory processing, speech therapist for communication. None of these presentations is wrong. All are real downstream expressions of the same upstream mechanism.</p>
+            <p>The cascade framework identifies these as parallel outputs of one biological failure — and locates which domain is driving the others rather than treating each domain as independently primary.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="domains">
-    <div class="chapter-divider"><span>Core Domains to Track</span></div>
-    <div class="domains-grid">
-      <article class="domain-card">
-        <div class="domain-kicker">Upstream</div>
-        <h3>Trigger and body-load domain</h3>
-        <p>Track digestive instability, mucosal stress, immune activation, illness sensitivity, inflammatory burden, and environmental load. This domain often provides the earliest clue that downstream excitatory and behavioral shifts are not primary.</p>
+  <section id="three-state">
+    <div class="chapter-divider"><span>The Three-State Clinical Framework</span></div>
+
+    <div class="card">
+      <div class="card-pad">
+        <div class="card-kicker">Staging</div>
+        <h2 class="card-title">How deeply are the SST-14 interneurons silenced?</h2>
+        <div class="card-text">
+          <p>The three-state framework identifies where along the SST-14 silencing spectrum a patient sits. States reflect the mechanism and depth of interneuron suppression — not behavioural severity, which is an imprecise proxy for biological state. A non-verbal child may be State 1 if cascade burden is primarily transcriptional; a higher-functioning child may be State 2 if metabolic exhaustion has accumulated. States are not mutually exclusive — the dominant state guides intervention priority.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="domains-grid" style="grid-template-columns: 1fr 1fr 1fr; margin-top: 0;">
+
+      <article class="domain-card" style="border-top: 3px solid var(--teal);">
+        <div class="domain-kicker" style="color: var(--teal);">State 1 — Most Reversible</div>
+        <h3>Transcriptional suppression</h3>
+        <p><strong>Mechanism:</strong> Two independent mechanisms suppress SST-14 transcription simultaneously. Mechanism A: NF-κB outcompetes CREB for CBP (CREB-binding protein), the co-activator both require — redirecting CBP to the inflammatory transcriptional program while simultaneously recruiting HDAC enzymes to compact chromatin around the somatostatin gene promoter. Mechanism B: adenosine accumulation from CD26 blockade activates Gαi-coupled receptors, suppressing adenylyl cyclase, depleting cAMP, and preventing PKA-mediated CREB phosphorylation independently of Mechanism A. Both mechanisms operating simultaneously removes all compensatory routes. The interneuron is structurally and metabolically intact — recovery is primarily rate-limited by immune clearance.</p>
+        <p style="margin-top:10px;"><strong>Clinical pattern:</strong> Gains that plateau; rapid attenuation of improvement from novel interventions; elevated inflammatory markers on workup.</p>
+        <p style="margin-top:10px;"><strong>Key biomarkers:</strong> Elevated K:T ratio; cytokine elevation; autoantibody positive; L:P ratio normal (&lt;20).</p>
+        <p style="margin-top:10px;"><strong>Primary intervention:</strong> Infrastructure repair + IMIG/IVIG for immune clearance and autoantibody reduction.</p>
       </article>
 
-      <article class="domain-card">
-        <div class="domain-kicker">Intermediate</div>
-        <h3>Excitatory and regulatory domain</h3>
-        <p>Look for signs of sensory amplification, sleep disruption, irritability, variability, and reduced flexibility. In the model, these may reflect changing network regulation rather than isolated behavioral phenomena.</p>
+      <article class="domain-card" style="border-top: 3px solid var(--gold);">
+        <div class="domain-kicker" style="color: #7a4f10;">State 2 — Metabolic Exhaustion</div>
+        <h3>Mitochondrial failure</h3>
+        <p><strong>Mechanism:</strong> Sustained quinolinic acid NMDA overactivation has depleted mitochondrial ATP. NAD&#8314; consumption exceeds replacement. SAMe insufficiency has degraded mitochondrial membrane integrity through phosphatidylcholine depletion.</p>
+        <p style="margin-top:10px;"><strong>Clinical pattern:</strong> Disproportionate fatigue; low muscle tone; poor stamina; sleep that does not restore energy; constipation and GI dysmotility prominent.</p>
+        <p style="margin-top:10px;"><strong>Key biomarkers:</strong> Elevated K:T ratio; elevated L:P (&gt;25); low plasma NAD&#8314;; elevated 8-isoprostane; elevated homocysteine.</p>
+        <p style="margin-top:10px;"><strong>Primary intervention:</strong> Infrastructure repair + IMIG/IVIG + NAD&#8314; precursors + mitochondrial support + methylation restoration. Consider MSC trophic support.</p>
       </article>
 
-      <article class="domain-card">
-        <div class="domain-kicker">Downstream</div>
-        <h3>Signaling and repair domain</h3>
-        <p>Consider whether chronic stress may be impairing the system’s ability to stabilize, adapt, and recover. This domain matters when progress becomes inconsistent, plateaus persist, or the system seems unable to reset.</p>
+      <article class="domain-card" style="border-top: 3px solid var(--navy);">
+        <div class="domain-kicker" style="color: var(--navy);">State 3 — Structural Loss</div>
+        <h3>Interneuron loss + A1 astrocyte polarisation</h3>
+        <p><strong>Mechanism:</strong> Partial SST-14 interneuron loss. Microglial A1 astrocyte-inducing signalling has withdrawn hevin/SPARCL1, BDNF, and synaptogenic support. A1 state reverses when inflammatory signals are removed (Liddelow et al., Nature 2017).</p>
+        <p style="margin-top:10px;"><strong>Clinical pattern:</strong> Long-standing severe presentation; regression during illness; limited response even to intensive intervention; low BDNF.</p>
+        <p style="margin-top:10px;"><strong>Key biomarkers:</strong> Elevated K:T ratio; low BDNF; elevated L:P; A1 markers elevated; reduced hevin/SPARCL1.</p>
+        <p style="margin-top:10px;"><strong>Primary intervention:</strong> Infrastructure repair + IMIG/IVIG + MSC trophic restoration (IGF-1, BDNF, A1&#8594;A2 shift).</p>
       </article>
     </div>
   </section>
 
+  <section id="biomarkers">
+    <div class="chapter-divider"><span>Biomarker Panel</span></div>
+    <div class="card">
+      <div class="card-pad">
+        <div class="card-kicker">Laboratory Investigation</div>
+        <h2 class="card-title">The mechanistically organised IDA biomarker panel</h2>
+        <div class="card-text">
+          <p>Two or more positive criteria constitute a strong signal for the immune-derived autism subgroup. The combination of K:T elevation + cytokine elevation + homocysteine elevation + autoantibody positivity is the core enrolment criterion for the biomarker-stratified trial framework.</p>
+        </div>
+
+        <table style="width:100%; border-collapse:collapse; margin-top:20px; font-size:0.85rem; font-family:'Source Serif 4',serif;">
+          <thead>
+            <tr>
+              <th style="background:var(--navy); color:#fff; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; padding:10px 12px; text-align:left;">Biomarker</th>
+              <th style="background:var(--navy); color:#fff; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; padding:10px 12px; text-align:left;">Finding</th>
+              <th style="background:var(--navy); color:#fff; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; padding:10px 12px; text-align:left;">Cascade mechanism</th>
+              <th style="background:var(--navy); color:#fff; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; padding:10px 12px; text-align:left;">State</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top;"><strong>K:T ratio</strong></td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:#3d4560;">&#8593; Elevated</td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:#3d4560;">IDO1 activation; tryptophan diversion; quinolinic acid production</td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:#3d4560;">All</td></tr>
+            <tr><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top;"><strong>Cytokine panel (IL-6, TNF-&#945;, IL-1&#946;)</strong></td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top; color:#3d4560;">&#8593; Two or more elevated</td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top; color:#3d4560;">Active NF-&#954;B inflammatory environment; IDO1 and CREB suppression drivers</td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top; color:#3d4560;">All</td></tr>
+            <tr><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top;"><strong>Neural autoantibody panel</strong></td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:#3d4560;">&#8593; Positive titres</td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:#3d4560;">SST-14 interneuron surface receptor jamming</td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:#3d4560;">State 1 primary</td></tr>
+            <tr><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top;"><strong>Plasma homocysteine</strong></td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top; color:#3d4560;">&#8593; Elevated with normal B12/folate</td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top; color:#3d4560;">Adenosine rate-limiting methionine synthase; methylation cycle stall</td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top; color:#3d4560;">All</td></tr>
+            <tr><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top;"><strong>Lactate:pyruvate ratio</strong></td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:#3d4560;">&#8593; &gt;25 = State 2 indicator</td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:#3d4560;">Mitochondrial dysfunction; calcium overload from quinolinic acid NMDA activation</td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:#3d4560;">States 2/3</td></tr>
+            <tr><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top;"><strong>Plasma NAD&#8314;</strong></td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top; color:#3d4560;">&#8595; Low</td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top; color:#3d4560;">IDO1 overactivation consuming NAD&#8314; faster than kynurenine pathway can replace it</td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top; color:#3d4560;">State 2 primary</td></tr>
+            <tr><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top;"><strong>Plasma BDNF</strong></td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:#3d4560;">&#8595; Low</td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:#3d4560;">A1 astrocyte polarisation withdrawing BDNF; CREB suppression reducing BDNF transcription</td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:#3d4560;">State 3 primary</td></tr>
+            <tr><td style="padding:9px 12px; background:#faf7f2; vertical-align:top;"><strong>RBC glutathione</strong></td><td style="padding:9px 12px; background:#faf7f2; vertical-align:top; color:#3d4560;">&#8595; Depleted</td><td style="padding:9px 12px; background:#faf7f2; vertical-align:top; color:#3d4560;">Transsulfuration bottleneck from methylation failure; reduced antioxidant defence</td><td style="padding:9px 12px; background:#faf7f2; vertical-align:top; color:#3d4560;">All</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="cascade-map">
+    <div class="chapter-divider"><span>Cascade Staging — Clinical Signals at Each Level</span></div>
+    <div class="card">
+      <div class="card-pad">
+        <div class="card-kicker">Systems Map</div>
+        <h2 class="card-title">Reading the cascade as a clinical reasoning tool</h2>
+        <div class="card-text">
+          <p>The cascade has seven recognisable stages. Knowing where a patient sits identifies which biomarkers are most likely abnormal and which intervention domains have the highest leverage.</p>
+        </div>
+
+        <table style="width:100%; border-collapse:collapse; margin-top:16px; font-size:0.85rem; font-family:'Source Serif 4',serif;">
+          <thead>
+            <tr>
+              <th style="background:var(--navy); color:#fff; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; padding:10px 12px; text-align:left; width:22%;">Stage</th>
+              <th style="background:var(--navy); color:#fff; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; padding:10px 12px; text-align:left;">Clinical signals</th>
+              <th style="background:var(--navy); color:#fff; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; padding:10px 12px; text-align:left; width:22%;">Key resource</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top;"><strong>Founding conditions</strong></td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:#3d4560;">C-section, formula feeding, recurrent strep, H. pylori, OCP zinc depletion, MTHFR variants, organophosphate exposure — often in birth and family history.</td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top;"><a href="01_Molecular_Origins_Biology_of_Autism.html" style="color:var(--teal);">Molecular Origins</a></td></tr>
+            <tr><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top;"><strong>Pepsin failure + opioid peptides</strong></td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top; color:#3d4560;">Intense dairy/wheat selectivity; low plasma Phe/Tyr/Trp despite adequate diet; urinary casomorphin/gliadorphin positive; reduced DPP-IV activity.</td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top;"><a href="01B_Pepsin_Opioid_Peptides_Biology_of_Autism.html" style="color:var(--teal);">Pepsin &amp; Opioid Peptides</a></td></tr>
+            <tr><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top;"><strong>CD26 / methylation failure</strong></td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:#3d4560;">Elevated homocysteine (normal B12/folate); joint hypermobility; fatigue disproportionate to activity; GSTP1 or MTRR variants; recurrent strep history; mercury exposure.</td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top;"><a href="01C_CD26_Adenosine_Methylation_Biology_of_Autism.html" style="color:var(--teal);">CD26 &amp; Methylation</a></td></tr>
+            <tr><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top;"><strong>LPS / IDO1 / NF-&#954;B</strong></td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top; color:#3d4560;">Elevated K:T ratio; cytokine elevation; elevated LPS-binding protein or zonulin; GI dysbiosis; IgG subclass abnormalities; infectious regression trigger.</td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top;"><a href="03_Cascade_Explained_Biology_of_Autism.html" style="color:var(--teal);">Cascade Explained</a></td></tr>
+            <tr><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top;"><strong>SST-14 interneuron silencing</strong></td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:#3d4560;">Positive autoantibody panel; elevated QUIN; elevated L:P; low NAD&#8314;. Pattern of gains with rapid attenuation — the clinical fingerprint of locked second messenger infrastructure.</td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top;"><a href="04B_Unlocking_the_Brake_Biology_of_Autism.html" style="color:var(--teal);">Unlocking the Brake</a></td></tr>
+            <tr><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top;"><strong>Neuropeptide disruption</strong></td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top; color:#3d4560;">Social motivational deficit; modality-nonspecific sensory processing abnormalities; sleep architecture disruption (40&#8211;80%); constipation and delayed gastric emptying; motor coordination difficulties.</td><td style="padding:9px 12px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top;"><a href="03_Cascade_Explained_Biology_of_Autism.html#neuropeptides" style="color:var(--teal);">Cascade Explained</a></td></tr>
+            <tr><td style="padding:9px 12px; background:#fff; vertical-align:top;"><strong>Self-reinforcing latch</strong></td><td style="padding:9px 12px; background:#fff; vertical-align:top; color:#3d4560;">No spontaneous improvement over extended periods; regression during illness; partial intervention response consistently followed by return to baseline; progressive narrowing of behavioural repertoire.</td><td style="padding:9px 12px; background:#fff; vertical-align:top;"><a href="06_Metabolic_Pathways_Explained_Biology_of_Autism.html#latch" style="color:var(--teal);">Metabolic Pathways</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
   <section id="workflow">
-    <div class="chapter-divider"><span>How to Use the Framework</span></div>
+    <div class="chapter-divider"><span>Six-Step Clinical Workflow</span></div>
     <div class="workflow-grid">
+
       <div class="step-card">
         <div class="step-num">01</div>
-        <h3>Recognize clusters, not isolated symptoms.</h3>
-        <p>Use the model to group findings across body systems. Look for repeated combinations and timing relationships rather than treating GI, sensory, sleep, and behavior as unrelated categories.</p>
+        <h3>Screen for the IDA subgroup</h3>
+        <p>Collect birth and feeding history, infectious history (recurrent strep especially), dietary pattern and food selectivity, family autoimmune history, maternal OCP use. Order: K:T ratio, cytokine panel, plasma homocysteine, neural autoantibody panel, RBC glutathione. Two or more positive criteria = IDA subgroup signal.</p>
       </div>
 
       <div class="step-card">
         <div class="step-num">02</div>
-        <h3>Stage where the system appears most stressed.</h3>
-        <p>Ask whether the dominant signal is upstream load, intermediate excitatory dysregulation, or downstream signaling exhaustion. The model becomes more clinically useful when applied as staged reasoning rather than a fixed template.</p>
+        <h3>Stage the interneuron state</h3>
+        <p>Add lactate:pyruvate ratio, plasma NAD&#8314;, plasma BDNF, and plasma quinolinic acid. Normal L:P + positive autoantibodies = State 1. Elevated L:P + low NAD&#8314; = State 2. Low BDNF + elevated L:P = State 3 component. Dominant state guides intervention priority.</p>
       </div>
 
       <div class="step-card">
         <div class="step-num">03</div>
-        <h3>Use intervention pages for sequence, not protocol.</h3>
-        <p>The intervention logic and pathway pages are best used to guide order, interpretation, and clinical questions — not as prescriptive treatment rules. Their strength is in helping support decisions become more coherent.</p>
+        <h3>Identify upstream drivers still active</h3>
+        <p>H. pylori testing; stool microbiome analysis; gut permeability (lactulose:mannitol or zonulin); urinary casomorphin/gliadorphin. Active upstream drivers must be addressed — infrastructure repair works against a persistent signal if the source is not reduced.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <h3>Begin infrastructure repair immediately</h3>
+        <p>Sulforaphane, NAC+glycine, magnesium, and tributyrin can begin while full results are pending. These reduce inflammatory and oxidative burden across all three states without requiring state-specific determination. See <a href="04B_Unlocking_the_Brake_Biology_of_Autism.html" style="color:var(--teal);">Unlocking the Brake</a> for sequencing.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">05</div>
+        <h3>Consider immune evaluation for IMIG candidacy</h3>
+        <p>Order: IgG subclass panel, NK cell and lymphocyte subset panel, specific polysaccharide antibody titres. The IDA biomarker combination with positive autoantibodies and cytokine elevation identifies the IMIG-responsive subgroup. Refer to a clinician experienced in neuroimmune dysregulation. See <a href="14_Immunoglobulin_Therapy_Biology_of_Autism.html" style="color:var(--teal);">Immunoglobulin Therapy</a>.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">06</div>
+        <h3>Monitor biomarkers, not just behaviour</h3>
+        <p>K:T ratio trending down, homocysteine falling, cytokine panel normalising — biomarker response is evidence the upstream cascade is being addressed. Behavioural improvement follows biomarker improvement with a lag of weeks to months depending on state. Repeat the core panel at 3 and 6 months.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="next-steps">
+    <div class="chapter-divider"><span>When to Refer</span></div>
+    <div class="card">
+      <div class="card-pad">
+        <div class="card-kicker">Referral Guidance</div>
+        <h2 class="card-title">Clinicians experienced in this model — who to involve and when</h2>
+        <div class="card-text">
+          <p>The cascade framework requires multi-disciplinary involvement. No single specialist covers the full clinical picture — the value of the framework is in coordinating across disciplines around a shared mechanistic understanding. The following referral signals and specialist types are most relevant.</p>
+          <table style="width:100%; border-collapse:collapse; margin-top:16px; font-size:0.88rem; font-family:'Source Serif 4',serif;">
+            <thead>
+              <tr>
+                <th style="background:var(--navy); color:#fff; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; padding:10px 14px; text-align:left; width:30%;">Referral trigger</th>
+                <th style="background:var(--navy); color:#fff; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; padding:10px 14px; text-align:left; width:35%;">Specialist type</th>
+                <th style="background:var(--navy); color:#fff; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; padding:10px 14px; text-align:left;">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:10px 14px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:#3d4560;">Positive autoantibody panel, IgG subclass abnormalities, recurrent infections, IMIG/IVIG candidacy evaluation</td>
+                <td style="padding:10px 14px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:var(--navy);"><strong>Paediatric or adult neuroimmunologist</strong></td>
+                <td style="padding:10px 14px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:#3d4560;">Essential for IMIG/IVIG candidacy assessment. Request specific polysaccharide antibody titres, NK cell panel, and Cunningham Panel if PANS/PANDAS is suspected.</td>
+              </tr>
+              <tr>
+                <td style="padding:10px 14px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top; color:#3d4560;">Elevated homocysteine, low SAMe:SAH, MTHFR/AHCY variants, folate receptor antibodies, methylation cycle failure</td>
+                <td style="padding:10px 14px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top; color:var(--navy);"><strong>Functional or integrative medicine physician</strong> experienced in methylation protocols</td>
+                <td style="padding:10px 14px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top; color:#3d4560;">MAPS (Medical Academy of Pediatric Special Needs) physicians are specifically trained in the metabolic and immune frameworks relevant to this cascade. Seek practitioners familiar with James et al. 2004/2006 methylation biomarker protocols.</td>
+              </tr>
+              <tr>
+                <td style="padding:10px 14px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:#3d4560;">GI dysmotility, constipation, suspected H. pylori, dysbiosis, gut permeability, secretin failure pattern</td>
+                <td style="padding:10px 14px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:var(--navy);"><strong>Paediatric gastroenterologist</strong> experienced with ASD-associated GI dysfunction</td>
+                <td style="padding:10px 14px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:#3d4560;">H. pylori testing and eradication, motility assessment, and gut microbiome analysis are within standard GI scope. Explain the pepsin/pH mechanism — most GI physicians will recognise the clinical picture even if they haven't encountered the cascade framing.</td>
+              </tr>
+              <tr>
+                <td style="padding:10px 14px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top; color:#3d4560;">Elevated L:P ratio, low NAD⁺, mitochondrial dysfunction markers, hypotonia, fatigue disproportionate to activity</td>
+                <td style="padding:10px 14px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top; color:var(--navy);"><strong>Metabolic/mitochondrial specialist</strong> or clinical biochemist</td>
+                <td style="padding:10px 14px; border-bottom:1px solid #d8cfc4; background:#faf7f2; vertical-align:top; color:#3d4560;">State 2 and State 3 patients with elevated L:P ratios warrant specialist metabolic assessment to rule out primary mitochondrial disease and to guide the NAD⁺ and phosphatidylcholine restoration protocol safely.</td>
+              </tr>
+              <tr>
+                <td style="padding:10px 14px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:#3d4560;">Acute-onset regression, OCD, tics, or neuropsychiatric symptoms following infection — suspected PANS/PANDAS</td>
+                <td style="padding:10px 14px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:var(--navy);"><strong>PANS/PANDAS specialist</strong> or child and adolescent psychiatrist with neuroimmune experience</td>
+                <td style="padding:10px 14px; border-bottom:1px solid #d8cfc4; background:#fff; vertical-align:top; color:#3d4560;">Cunningham Panel, ASO titre, anti-DNase B, streptococcal culture, and complement levels. IMIG candidacy evaluation is time-sensitive in acute PANS — the window for intervention before structural changes accumulate is narrower than in the chronic ASD presentation.</td>
+              </tr>
+              <tr>
+                <td style="padding:10px 14px; background:#faf7f2; vertical-align:top; color:#3d4560;">MSC therapy consideration — State 2 not responding to immune clearance, or State 3 with low BDNF and structural loss</td>
+                <td style="padding:10px 14px; background:#faf7f2; vertical-align:top; color:var(--navy);"><strong>Cell therapy specialist</strong> at an academic medical centre conducting ASD MSC trials</td>
+                <td style="padding:10px 14px; background:#faf7f2; vertical-align:top; color:#3d4560;">MSC therapy for ASD is experimental. Only engage through registered clinical trials or academic research programmes with IRB oversight. Avoid commercial cell therapy clinics offering MSC without formal trial infrastructure.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </section>
@@ -962,28 +1141,43 @@ html { background: #0f2342; }
   <section id="next-steps">
     <div class="chapter-divider"><span>Where to Go Next</span></div>
     <div class="next-grid">
-      <a class="next-card" href="08_Intervention_Logic_Biology_of_Autism.html">
-        <div class="next-kicker">Intervention Logic</div>
-        <h3>See how the framework handles sequence.</h3>
-        <p>Use this page when you want the clearest bridge from systems interpretation into staged intervention logic.</p>
-        <div class="next-link">Open Intervention Logic →</div>
+      <a class="next-card" href="anatomy-of-autism.html">
+        <div class="next-kicker">Working Paper — V14d</div>
+        <h3>The Anatomy of Autism — two-layer model and constitutional susceptibility</h3>
+        <p>The complete mechanistic foundation: convergent cascade, seven tipping points, Mechanism A/B dual CREB suppression, ten testable predictions. Under expert review prior to journal submission.</p>
+        <div class="next-link">Open The Anatomy of Autism &#8594;</div>
       </a>
 
-      <a class="next-card" href="06_Metabolic_Pathways_Explained_Biology_of_Autism.html">
-        <div class="next-kicker">Pathways</div>
-        <h3>Go deeper into the biological mechanisms.</h3>
-        <p>Use the pathways page when you want the molecular detail underlying the cascade and its clinical implications.</p>
-        <div class="next-link">Open Molecular Pathways →</div>
+      <a class="next-card" href="08_Intervention_Logic_Biology_of_Autism.html">
+        <div class="next-kicker">Intervention Logic</div>
+        <h3>Three-state framework + full intervention table</h3>
+        <p>Compounds mapped to cascade nodes with evidence tiers, dosing ranges, and sequencing logic.</p>
+        <div class="next-link">Open Intervention Logic &#8594;</div>
+      </a>
+
+      <a class="next-card" href="14_Immunoglobulin_Therapy_Biology_of_Autism.html">
+        <div class="next-kicker">Immunoglobulin Therapy</div>
+        <h3>IVIG and IMIG — evidence, mechanism, and trial design</h3>
+        <p>Three-state table, adjunct protocol, IMIG vs MSC comparison, and the trial that needs to happen.</p>
+        <div class="next-link">Open Immunoglobulin Therapy &#8594;</div>
       </a>
 
       <a class="next-card" href="07_Testing_Strategy_Biology_of_Autism.html">
-        <div class="next-kicker">Testing Bridge</div>
-        <h3>Connect observations to lab reasoning.</h3>
-        <p>Use this page when you want to connect the framework to testing, interpretation, and biologic direction-finding.</p>
-        <div class="next-link">Open Testing Bridge →</div>
+        <div class="next-kicker">Testing Strategy</div>
+        <h3>Full biomarker panel and ordering guidance</h3>
+        <p>Which tests identify the subgroup, stage the cascade, and monitor treatment response.</p>
+        <div class="next-link">Open Testing Strategy &#8594;</div>
+      </a>
+
+      <a class="next-card" href="06_Metabolic_Pathways_Explained_Biology_of_Autism.html">
+        <div class="next-kicker">Metabolic Pathways</div>
+        <h3>Full mechanistic reference — P1 through P9</h3>
+        <p>The molecular detail behind every cascade node — for clinicians who want the biochemistry behind the clinical picture.</p>
+        <div class="next-link">Open Metabolic Pathways &#8594;</div>
       </a>
     </div>
   </section>
+
 </main>
 
 <footer class="site-footer">
@@ -993,7 +1187,7 @@ html { background: #0f2342; }
       <div>
         <div class="footer-brand">Decoding Autism Now</div>
         <div class="footer-title">Biology of Autism — Clinician Guide</div>
-        <p class="footer-tagline">A clinician-facing entry point into the same core model used across the full suite, with emphasis on structure, staging, and sequence.</p>
+        <p class="footer-tagline">A clinician-facing guide to the immune-derived autism cascade — the three-state clinical framework, biomarker panel, cascade staging table, and six-step clinical workflow for the immune-derived autism subgroup.</p>
       </div>
       <div class="footer-actions">
         <div class="footer-links">
@@ -1007,7 +1201,7 @@ html { background: #0f2342; }
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-meta" style="color:rgba(255,255,255,0.40); margin-top:10px;">© 2025 Decoding Autism Now | All content is being shared with families, clinicians and researchers for educational purposes under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.55); text-decoration:underline;">Creative Commons CC BY-NC 4.0</a> — free to share with attribution, but not for commercial use.</p>
+      <p class="footer-meta" style="color:rgba(255,255,255,0.40); margin-top:10px;">© 2026 Decoding Autism Now | All content is shared with families, clinicians and researchers for educational purposes under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.55); text-decoration:underline;">Creative Commons CC BY-NC 4.0</a> — free to share with attribution, not for commercial use.</p>
       <div class="footer-meta">Clinician Guide — Biology of Autism | Decoding Autism Now</div>
     </div>
   </div>
