@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The SST-14 Restoration Protocol | Decoding Autism Now</title>
+<meta name="description" content="A sequenced five-month supplement cascade addressing SST-14 transcriptional suppression through convergent molecular angles. Clinical working paper V3, May 2026.">
+<link rel="canonical" href="https://decodingautismnow.com/research/sst-protocol.html">
+<meta property="og:title" content="The SST-14 Restoration Protocol | Decoding Autism Now">
+<meta property="og:description" content="A mechanistic framework for SST-14 transcriptional restoration through a sequenced five-month supplement cascade. Clinical working paper V3, May 2026.">
+<meta property="og:url" content="https://decodingautismnow.com/research/sst-protocol.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://decodingautismnow.com/research/images/OG-research.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy:#0f2342;
+    --teal:#1e6b72;
+    --teal-light:#2a9da6;
+    --gold:#c8923a;
+    --gold-light:#e8b86d;
+    --cream:#faf7f2;
+    --warm-white:#ffffff;
+    --text-dark:#1a1a2e;
+    --text-mid:#3d4560;
+    --text-light:#6b7494;
+    --rule:#d8cfc4;
+    --accent-bg:#eef8f9;
+    --gold-bg:#fdf6ec;
+  }
+
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Source Serif 4', Georgia, serif; background:var(--cream); color:var(--text-dark); font-size:17px; line-height:1.82; }
+
+  .topbar { position:fixed; top:0; left:0; right:0; z-index:1000; background:var(--navy); border-bottom:2px solid var(--gold); }
+  .topbar-inner { max-width:960px; margin:0 auto; padding:10px 20px; display:flex; justify-content:space-between; align-items:center; gap:18px; }
+  .topbar-brand { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--teal-light); margin-bottom:2px; }
+  .topbar-title { font-family:'Source Serif 4', serif; font-size:13px; font-weight:600; color:#fff; line-height:1.2; }
+  .topbar-back { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.7); text-decoration:none; border:1px solid rgba(255,255,255,.25); border-radius:3px; padding:5px 10px; white-space:nowrap; }
+  .topbar-back:hover { color:#fff; border-color:rgba(255,255,255,.5); }
+
+  .paper-hero { margin-top:57px; background:var(--navy); color:#fff; }
+  .hero-stripe { height:5px; background:linear-gradient(90deg,var(--gold) 0%,var(--gold-light) 50%,var(--teal) 100%); }
+  .hero-inner { max-width:840px; margin:0 auto; padding:60px 24px 48px; }
+  .hero-label { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--gold-light); margin-bottom:16px; }
+  .hero-title { font-family:'Playfair Display', serif; font-size:clamp(2.0rem,4vw,2.9rem); line-height:1.12; font-weight:700; color:#fff; margin-bottom:10px; }
+  .hero-subtitle { font-family:'Playfair Display', serif; font-size:1.05rem; font-style:italic; color:var(--teal-light); margin-bottom:28px; font-weight:400; }
+  .hero-meta { display:flex; flex-wrap:wrap; gap:20px; align-items:flex-start; }
+  .meta-label { font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.45); margin-bottom:4px; }
+  .meta-value { font-family:'Source Serif 4', serif; font-size:.92rem; color:rgba(255,255,255,.85); }
+  .hero-status { display:inline-block; margin-top:24px; font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:rgba(232,184,109,.82); border:1px solid rgba(232,184,109,.35); border-radius:3px; padding:5px 12px; }
+
+  .companion-notice { background:rgba(200,146,58,0.07); border-top:1px solid rgba(200,146,58,0.2); border-bottom:1px solid rgba(200,146,58,0.2); }
+  .companion-inner { max-width:840px; margin:0 auto; padding:14px 24px; font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.08em; color:var(--gold); }
+  .companion-inner a { color:var(--gold); }
+
+  .toc-wrap { background:var(--warm-white); border-bottom:2px solid var(--rule); }
+  .toc-inner { max-width:840px; margin:0 auto; padding:28px 24px; }
+  .toc-label { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--text-light); margin-bottom:16px; }
+  .toc-list { list-style:none; columns:2; column-gap:32px; }
+  .toc-list li { break-inside:avoid; margin-bottom:6px; }
+  .toc-list a { font-family:'Source Serif 4', serif; font-size:.85rem; color:var(--teal); text-decoration:none; display:flex; gap:8px; align-items:baseline; }
+  .toc-list a:hover { color:var(--navy); }
+  .toc-num { font-family:'DM Mono', monospace; font-size:10px; color:var(--gold); flex-shrink:0; min-width:22px; }
+
+  .paper-wrap { max-width:840px; margin:0 auto; padding:60px 24px 100px; }
+
+  .disclaimer-box { background:var(--gold-bg); border:1px solid rgba(200,146,58,.3); border-left:4px solid var(--gold); border-radius:0 8px 8px 0; padding:20px 24px; margin-bottom:48px; }
+  .disclaimer-box p { font-size:.88rem; color:#6b4c1e; line-height:1.7; }
+  .disclaimer-box strong { color:#4a3210; }
+
+  .paper-section { margin-bottom:64px; }
+  .section-label { font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:6px; }
+  .section-mechanism { font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:var(--text-light); margin-bottom:10px; }
+  .section-heading { font-family:'Playfair Display', serif; font-size:1.8rem; font-weight:700; color:var(--navy); line-height:1.2; margin-bottom:24px; padding-bottom:14px; border-bottom:2px solid var(--rule); }
+  .sub-heading { font-family:'Playfair Display', serif; font-size:1.2rem; font-weight:600; color:var(--navy); margin:28px 0 12px; }
+  .body-text { color:var(--text-mid); margin-bottom:16px; line-height:1.82; }
+
+  .callout { background:var(--accent-bg); border-left:3px solid var(--teal); padding:16px 20px; margin:20px 0; border-radius:0 6px 6px 0; }
+  .callout p { font-size:.95rem; color:var(--text-mid); margin:0; line-height:1.72; }
+  .callout.gold { background:var(--gold-bg); border-left-color:var(--gold); }
+
+  /* MONTH CASCADE */
+  .cascade-grid { display:grid; grid-template-columns:1fr; gap:0; margin:24px 0; }
+  .cascade-month { display:grid; grid-template-columns:80px 1fr; gap:0; position:relative; }
+  .cascade-month::before { content:''; position:absolute; left:39px; top:52px; bottom:-1px; width:2px; background:var(--rule); z-index:0; }
+  .cascade-month:last-child::before { display:none; }
+  .month-marker { display:flex; flex-direction:column; align-items:center; padding-top:16px; position:relative; z-index:1; }
+  .month-dot { width:22px; height:22px; border-radius:50%; background:var(--teal); border:3px solid var(--cream); flex-shrink:0; }
+  .month-dot.gold { background:var(--gold); }
+  .month-label { font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.1em; text-transform:uppercase; color:var(--text-light); margin-top:6px; text-align:center; }
+  .month-content { padding:14px 0 28px 20px; }
+  .month-title { font-family:'Playfair Display', serif; font-size:1.05rem; font-weight:700; color:var(--navy); margin-bottom:6px; }
+  .month-compound { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--teal); margin-bottom:8px; }
+  .month-desc { font-size:.9rem; color:var(--text-mid); line-height:1.7; }
+
+  /* CONVERGENCE TABLE */
+  .paper-table { width:100%; border-collapse:collapse; margin:20px 0; font-size:.88rem; }
+  .paper-table th { background:var(--navy); color:#fff; font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.12em; text-transform:uppercase; padding:10px 12px; text-align:left; }
+  .paper-table td { padding:10px 12px; border-bottom:1px solid var(--rule); color:var(--text-mid); vertical-align:top; line-height:1.6; }
+  .paper-table tr:nth-child(even) td { background:rgba(250,247,242,.6); }
+  .table-caption { font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.12em; text-transform:uppercase; color:var(--text-light); margin-bottom:8px; }
+
+  /* BIOMARKER PANEL */
+  .biomarker-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:20px 0; }
+  .biomarker-card { background:var(--warm-white); border:1px solid var(--rule); border-radius:6px; padding:16px; }
+  .bm-name { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--teal); margin-bottom:4px; }
+  .bm-threshold { font-family:'DM Mono', monospace; font-size:.82rem; color:var(--navy); margin-bottom:6px; font-weight:500; }
+  .bm-rationale { font-size:.83rem; color:var(--text-mid); line-height:1.6; }
+
+  .paper-footer { background:var(--navy); }
+  .footer-stripe { height:5px; background:linear-gradient(90deg,var(--gold) 0%,var(--gold-light) 50%,var(--teal) 100%); }
+  .footer-inner { max-width:840px; margin:0 auto; padding:40px 24px 32px; }
+  .footer-brand { font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.2em; text-transform:uppercase; color:var(--teal-light); margin-bottom:8px; }
+  .footer-title { font-family:'Playfair Display', serif; font-size:1.2rem; color:rgba(255,255,255,.9); margin-bottom:8px; }
+  .footer-meta { font-family:'DM Mono', monospace; font-size:.75rem; color:rgba(255,255,255,.38); line-height:1.7; margin-top:16px; }
+
+  @media (max-width:760px) {
+    .toc-list { columns:1; }
+    .biomarker-grid { grid-template-columns:1fr; }
+    .cascade-month { grid-template-columns:60px 1fr; }
+    .month-dot { width:18px; height:18px; }
+    .cascade-month::before { left:29px; }
+  }
+</style>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="294ecd79-19fb-4267-9be2-a7c83d57274d"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <div class="topbar-brand">Decoding Autism Now · Research</div>
+      <div class="topbar-title">The SST-14 Restoration Protocol</div>
+    </div>
+    <a href="research-articles.html" class="topbar-back">← Research Hub</a>
+  </div>
+</div>
+
+<article class="paper-hero">
+  <div class="hero-stripe"></div>
+  <div class="hero-inner">
+    <div class="hero-label">Decoding Autism Now · Clinical Working Paper · Version 3 · May 2026</div>
+    <h1 class="hero-title">The SST-14 Restoration Protocol</h1>
+    <p class="hero-subtitle">IMIG, Metabolic Preparation, and Direct cAMP Activation as a Synergistic Combination</p>
+    <div class="hero-meta">
+      <div class="hero-meta-block">
+        <div class="meta-label">Document type</div>
+        <div class="meta-value">Clinical working paper · Mechanistic hypothesis for scientific discussion</div>
+      </div>
+      <div class="hero-meta-block">
+        <div class="meta-label">Version</div>
+        <div class="meta-value">Version 3 · May 22, 2026</div>
+      </div>
+      <div class="hero-meta-block">
+        <div class="meta-label">Companion papers</div>
+        <div class="meta-value">The Anatomy of Autism (V14d) · SST-14 Restoration White Paper (V17)</div>
+      </div>
+    </div>
+    <div class="hero-status">Clinical working paper — not medical advice</div>
+  </div>
+</article>
+
+<div class="companion-notice">
+  <div class="companion-inner">
+    Protocol companion to: <a href="sst-restoration-paper.html">Restoring the Somatostatin Signal (V17)</a> and <a href="anatomy-of-autism.html">The Anatomy of Autism (V14d)</a>. Mechanistic framework only — see disclaimer below.
+  </div>
+</div>
+
+<nav class="toc-wrap" aria-label="Table of contents">
+  <div class="toc-inner">
+    <div class="toc-label">Contents</div>
+    <ol class="toc-list">
+      <li><a href="#argument"><span class="toc-num">1</span>The Central Argument</a></li>
+      <li><a href="#context"><span class="toc-num">2</span>Biological Context</a></li>
+      <li><a href="#suppression"><span class="toc-num">3</span>The Transcriptional Suppression Problem</a></li>
+      <li><a href="#imig"><span class="toc-num">4</span>How IMIG Addresses the Suppression</a></li>
+      <li><a href="#cascade"><span class="toc-num">5</span>The Supplement Cascade</a></li>
+      <li><a href="#sequencing"><span class="toc-num">7</span>Sequencing Logic — Why Order Matters</a></li>
+      <li><a href="#synergy"><span class="toc-num">9</span>IMIG + Cascade — Synergistic Combination</a></li>
+      <li><a href="#signals"><span class="toc-num">11</span>Expected Clinical Signals</a></li>
+      <li><a href="#conclusion"><span class="toc-num">12</span>Conclusion</a></li>
+    </ol>
+  </div>
+</nav>
+
+<main class="paper-wrap">
+
+  <div class="disclaimer-box">
+    <p><strong>Important:</strong> This document presents a mechanistic hypothesis for scientific discussion. It does not constitute medical advice, a treatment protocol, or a clinical recommendation. All therapeutic decisions must be made by qualified healthcare professionals with direct knowledge of the individual patient. The compounds discussed are presented in the context of their established molecular biology and published human safety data. No specific dosing recommendations are made in this document. Large-scale validation studies are required before any component of this framework can be considered established clinical practice.</p>
+  </div>
+
+  <!-- SECTION 1 -->
+  <section id="argument" class="paper-section">
+    <div class="section-label">Section 1</div>
+    <h2 class="section-heading">The Central Argument</h2>
+
+    <p class="body-text">Intramuscular immunoglobulin therapy (IMIG) is proposed as a treatment for immune-derived autism (IDA) through a specific mechanism: it removes the autoantibody and chronic immune activation load that is suppressing SST-14 interneuron transcription through NF-κB and the cytokine-driven CBP competition at the somatostatin gene CRE. What IMIG cannot do is simultaneously address the adenosine-driven adenylyl cyclase suppression that is starving CREB of cAMP from a second independent direction.</p>
+
+    <p class="body-text">This document presents the mechanistic argument that a carefully sequenced supplement cascade can address the same final common pathway — SST-14 transcriptional restoration — through convergent but distinct molecular angles. No single compound addresses both suppression mechanisms simultaneously. But a sequenced combination can address both through five different molecular angles, while simultaneously building the metabolic infrastructure that SST-14 interneuron recovery requires.</p>
+
+    <div class="callout gold">
+      <p>The strongest clinical use case for the supplement cascade is not as a replacement for IMIG but as its designed companion — building the metabolic and signaling infrastructure that maximizes IMIG effectiveness before and during immunoglobulin therapy, and providing an accessible alternative for patients who cannot access IMIG.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section id="context" class="paper-section">
+    <div class="section-label">Section 2</div>
+    <div class="section-mechanism">Who IDA affects · Constitutional susceptibility · The biological latch</div>
+    <h2 class="section-heading">Biological Context</h2>
+
+    <h3 class="sub-heading">2.1 The Founding Conditions</h3>
+    <p class="body-text">The biological cascade leading to SST-14 silencing originates in gut pH dysregulation. Multiple common environmental conditions produce this dysregulation simultaneously: C-section delivery bypassing vaginal microbiome seeding; formula feeding replacing breast milk oligosaccharides; antibiotic exposure disrupting commensal bacteria; maternal oral contraceptive use depleting zinc and compromising parietal cell carbonic anhydrase function; early H. pylori infection alkalinizing the gastric environment directly.</p>
+
+    <p class="body-text">Elevated gut pH above 4.0 disables pepsin-mediated proline bond cleavage. Intact casomorphin and gliadorphin fragments — opioid peptides from incompletely digested casein and gluten — accumulate, penetrate the gut barrier, block the CD26 receptor where adenosine deaminase docks, and activate CCK-driven SST-28 overexpression in intestinal D-cells simultaneously. Adenosine accumulates. The methionine synthase cycle slows. LPS crosses the compromised gut barrier into systemic circulation. The innate immune alarm activates. NF-κB moves in. The two transcriptional suppression mechanisms are now both active.</p>
+
+    <h3 class="sub-heading">2.2 Constitutional Susceptibility — Why Only Some Individuals Cross the Threshold</h3>
+    <p class="body-text">The founding conditions described above are common across the general pediatric population. Most children exposed to them do not develop IDA. The reason is constitutional biology: the genetically and immunologically determined capacity at each cascade step determines how much environmental load the system can absorb before that step fails. Seven tipping points have been identified — gastric acid production capacity, CD26/DPP-IV adenosine clearance capacity, methylation cycle reserve, inflammatory resolution capacity, kynurenine pathway excitotoxic branch bias, mitochondrial excitotoxic buffering reserve, and HLA-mediated autoantibody susceptibility.</p>
+
+    <h3 class="sub-heading">2.3 The Self-Reinforcing Biological Latch — Why the Protocol Requires Months</h3>
+    <p class="body-text">A critical feature of IDA that determines the expected timeline is the self-reinforcing latch. SST-14 interneurons normally provide anti-inflammatory inhibitory tone to microglia and suppress the A1 reactive astrocyte state. When SST-14 production falls, microglial activation increases, cytokine production rises, NF-κB activates more strongly, CREB is suppressed further, SST-14 production falls further. The system cannot self-correct because the correction mechanism has been disabled.</p>
+
+    <p class="body-text">The implication for the protocol timeline is direct: unwinding a self-reinforcing latch requires sustained multi-angle intervention over months, not weeks. Each compound in the cascade reduces a different component of the suppression simultaneously. The biological latch unwinds gradually — and the first observable functional signals of SST-14 restoration typically emerge 8–16 weeks into a well-implemented protocol.</p>
+
+    <h3 class="sub-heading">2.4 Patient Selection — Who This Protocol Is Designed For</h3>
+    <p class="body-text">The protocol is most appropriate for patients in the IDA biomarker-defined subgroup. The following biomarker panel identifies the highest-probability responders:</p>
+
+    <div class="biomarker-grid">
+      <div class="biomarker-card">
+        <div class="bm-name">K:T Ratio</div>
+        <div class="bm-threshold">K:T &gt; 0.08 (HPLC-MS/MS)</div>
+        <div class="bm-rationale">Active IDO1-driven tryptophan diversion. The single most important biomarker — confirms the mechanism driving NAD⁺ depletion and quinolinic acid excitotoxicity.</div>
+      </div>
+      <div class="biomarker-card">
+        <div class="bm-name">Cytokine Elevation</div>
+        <div class="bm-threshold">Any 2 of IL-1β, IL-6, TNF-α above 90th percentile for age</div>
+        <div class="bm-rationale">Confirms the NF-κB-activating inflammatory load suppressing CREB at the somatostatin gene CRE. Primary State 1 mechanism driver.</div>
+      </div>
+      <div class="biomarker-card">
+        <div class="bm-name">Neural Autoantibody Panel</div>
+        <div class="bm-threshold">Cunningham Panel — any positive</div>
+        <div class="bm-rationale">Anti-tubulin IgG, anti-lysoganglioside GM1, anti-dopamine D1/D2L, CaM Kinase II ≥130 units. Primary State 1 indicator and strongest predictor of immunotherapy response.</div>
+      </div>
+      <div class="biomarker-card">
+        <div class="bm-name">Lactate:Pyruvate Ratio</div>
+        <div class="bm-threshold">L:P &gt; 25</div>
+        <div class="bm-rationale">Mitochondrial respiratory chain dysfunction. State 2 indicator — determines whether NMN/NR and taurine are urgently required or supportive additions.</div>
+      </div>
+      <div class="biomarker-card">
+        <div class="bm-name">Plasma Quinolinic Acid</div>
+        <div class="bm-threshold">Elevated vs. age-matched controls</div>
+        <div class="bm-rationale">Direct excitotoxic driver of SST-14 metabolic stress. Guides NMN/NR dosing urgency.</div>
+      </div>
+      <div class="biomarker-card">
+        <div class="bm-name">Homocysteine</div>
+        <div class="bm-threshold">&gt; 10 μmol/L</div>
+        <div class="bm-rationale">Laboratory fingerprint of CD26-driven methionine synthase rate-limitation and methylation cycle failure. Validates the hydroxy-B12 and folinic acid additions.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section id="suppression" class="paper-section">
+    <div class="section-label">Section 3</div>
+    <div class="section-mechanism">Mechanism A · Mechanism B · Why both must be addressed</div>
+    <h2 class="section-heading">The SST-14 Transcriptional Suppression Problem</h2>
+
+    <p class="body-text">The SST-14 Restoration white paper identifies two independent mechanisms that simultaneously silence SST-14 gene transcription in IDA:</p>
+
+    <p class="body-text"><strong>Mechanism 1 — NF-κB-mediated CREB suppression.</strong> Chronic pro-inflammatory cytokines activate NF-κB, which competes with CREB for the co-activator CBP (CREB-binding protein). CBP is present in limited quantities and cannot be rapidly upregulated. NF-κB wins this competition under chronic inflammatory conditions, redirecting CBP to the inflammatory transcriptional program. Without CBP, CREB cannot open the CRE lock on the somatostatin gene promoter. Simultaneously, NF-κB recruits HDAC enzymes to compact the chromatin around the CRE, making the lock physically harder to reach.</p>
+
+    <p class="body-text"><strong>Mechanism 2 — Adenosine-driven adenylyl cyclase suppression.</strong> Casomorphin and gliadorphin block the CD26 receptor where adenosine deaminase docks, preventing adenosine clearance. Accumulated adenosine activates inhibitory Gαi-coupled receptors on SST-14 interneurons, suppressing adenylyl cyclase. Less adenylyl cyclase activity means less cAMP. Less cAMP means PKA cannot phosphorylate CREB. Unphosphorylated CREB cannot bind the CRE or recruit CBP even if CBP were available.</p>
+
+    <div class="callout">
+      <p>These two mechanisms operate independently and simultaneously. This is critical to understanding why single-target interventions have historically produced transient benefits that plateau — pushing through one locked door while the other remains locked from an entirely different direction.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section id="imig" class="paper-section">
+    <div class="section-label">Section 4</div>
+    <h2 class="section-heading">How IMIG Addresses the Suppression</h2>
+
+    <p class="body-text">IMIG works upstream of both suppression mechanisms through immune modulation. Passive transfer of regulatory antibodies dampens NK cell and T-cell overactivation, reducing the pro-inflammatory cytokine production that drives NF-κB activation (Mechanism 1 relief from upstream). FcγRIIB upregulation reduces IL-6, TNF-α, and IFN-γ — the cytokines that activate IDO1, maintaining tryptophan depletion and NAD⁺ insufficiency. Reduction in autoantibody-mediated receptor disruption at neuronal surfaces may partially restore G-protein coupling efficiency, improving adenylyl cyclase responsiveness (indirect Mechanism 2 relief).</p>
+
+    <p class="body-text">IMIG's power is that it addresses the root cause of Mechanism 1 directly — the chronic immune activation that sustains NF-κB. It works from the top down. The supplement cascade works from the bottom up and laterally, targeting downstream nodes of both mechanisms simultaneously. Together they provide convergent multi-angle attack on the same final target.</p>
+  </section>
+
+  <!-- SECTION 5: CASCADE -->
+  <section id="cascade" class="paper-section">
+    <div class="section-label">Section 5</div>
+    <div class="section-mechanism">Five molecular angles · Two suppression mechanisms</div>
+    <h2 class="section-heading">The Supplement Cascade — Five Molecular Angles</h2>
+
+    <p class="body-text">The supplement cascade targets the same two suppression mechanisms through five distinct molecular angles of attack. The key insight is that these compounds do not merely reduce inflammation generally — each addresses a specific node in either the NF-κB-CBP-CREB pathway or the CD26-adenosine-adenylyl cyclase-cAMP pathway.</p>
+
+    <h3 class="sub-heading">Angle One — Reducing NF-κB Activation (Mechanism 1 Relief)</h3>
+    <p class="body-text"><strong>Sulforaphane</strong> activates Nrf2, upregulating antioxidant enzyme production and simultaneously inhibiting NF-κB activity through Nrf2-dependent suppression of NF-κB nuclear translocation. Singh et al. (PNAS 2014) demonstrated significant improvements in SRS and ABC scores in a randomized controlled trial of sulforaphane in ASD. Sulforaphane does not replace immunoglobulin therapy's autoantibody and cytokine modulation — but it reduces the ongoing cytokine-driven NF-κB activation that both IMIG and sulforaphane are working to suppress from different angles.</p>
+
+    <p class="body-text"><strong>Luteolin</strong> inhibits mast cell degranulation, reduces microglial activation, and downregulates NF-κB signaling through multiple pathways including IκB kinase inhibition. It also inhibits CD38 — the primary NADase competing with SIRT1 for the NAD⁺ pool — providing a second mechanism of action relevant to Mechanism 2. Theoharides et al. documented significant improvements in ASD behavioral measures in a clinical study of luteolin-containing formulation.</p>
+
+    <h3 class="sub-heading">Angle Two — Restoring the NAD⁺/cAMP Axis (Mechanism 2 Relief)</h3>
+    <p class="body-text"><strong>NMN and NR</strong> (nicotinamide mononucleotide and nicotinamide riboside) are NAD⁺ precursors that bypass the rate-limiting synthetic steps to directly replenish cellular NAD⁺. This addresses the Mechanism 2 arm at the mitochondrial energy level: IDO1-driven tryptophan diversion depletes NAD⁺, preventing the SST-14 interneuron from maintaining the tonic high-frequency firing required for coordinated neuropeptide cascade output. NMN/NR does not directly restore adenylyl cyclase activity, but it restores the ATP substrate that adenylyl cyclase requires, and the NAD⁺/SIRT1 axis that modulates the inflammatory response.</p>
+
+    <p class="body-text"><strong>Forskolin</strong> is a direct adenylyl cyclase activator — the only supplement in the cascade that directly addresses the adenylyl cyclase suppression at the enzymatic level. Seamon and Daly (1986) established its mechanism as direct activation of the catalytic subunit of adenylyl cyclase, increasing intracellular cAMP independently of G-protein coupling. This is the most direct downstream address of Mechanism 2 in the cascade: when adenosine has suppressed adenylyl cyclase through Gαi, forskolin bypasses the Gαi suppression to activate the enzyme directly. Forskolin is the terminal compound in the cascade precisely because its direct adenylyl cyclase activation is most effective when NF-κB has already been reduced by sulforaphane and luteolin, and when NAD⁺ has been restored by NMN/NR.</p>
+
+    <h3 class="sub-heading">Angle Three — Senolytic SASP Clearance</h3>
+    <p class="body-text"><strong>Fisetin</strong> is a senotherapeutic flavonoid that selectively clears senescent cells through apoptosis induction. Senescent cells produce the senescence-associated secretory phenotype (SASP) — a chronic low-grade inflammatory secretome that contributes to NF-κB activation independently of the acute immune response that IMIG and sulforaphane target. Yousefzadeh et al. (EBioMedicine 2018) demonstrated that fisetin extends healthspan and reduces inflammatory markers in aging models. In the IDA context, SASP clearance removes a chronic upstream inflammatory input that neither immunotherapy nor acute NF-κB suppression addresses.</p>
+  </section>
+
+  <!-- SECTION 7: SEQUENCING -->
+  <section id="sequencing" class="paper-section">
+    <div class="section-label">Section 7</div>
+    <div class="section-mechanism">Mechanistically determined order · Each compound prepares for the next</div>
+    <h2 class="section-heading">Sequencing Logic — Why Order Matters</h2>
+
+    <p class="body-text">The supplement cascade is not a stack of simultaneous additions. It is a staged biological preparation in which each compound creates better conditions for the next. The sequence is mechanistically determined — not arbitrary.</p>
+
+    <div class="cascade-grid">
+      <div class="cascade-month">
+        <div class="month-marker">
+          <div class="month-dot"></div>
+          <div class="month-label">Month 1</div>
+        </div>
+        <div class="month-content">
+          <div class="month-compound">Sulforaphane</div>
+          <div class="month-title">Reduce NF-κB and Oxidative Burden</div>
+          <div class="month-desc">Begins NF-κB suppression and Nrf2-driven antioxidant upregulation. Reduces the cytokine-driven inflammatory load that is maintaining CREB suppression at the somatostatin CRE. Creates a lower-NF-κB environment in which subsequent compounds operate more effectively. Sulforaphane is placed first because NF-κB reduction is prerequisite to CBP availability for CREB — nothing downstream is more effective until this burden begins to lift.</div>
+        </div>
+      </div>
+      <div class="cascade-month">
+        <div class="month-marker">
+          <div class="month-dot"></div>
+          <div class="month-label">Month 2</div>
+        </div>
+        <div class="month-content">
+          <div class="month-compound">NMN or NR</div>
+          <div class="month-title">Restore NAD⁺ and Mitochondrial Energy</div>
+          <div class="month-desc">Once NF-κB is partially reduced by sulforaphane, NAD⁺ precursor repletion can begin restoring the mitochondrial energy capacity depleted by IDO1-driven tryptophan diversion. Added second because NAD⁺ repletion in a still-highly-inflamed environment has reduced effectiveness — the IDO1 enzyme that is depleting NAD⁺ is still heavily activated until NF-κB begins to fall. Restoring NAD⁺ now prepares the interneuron's energy infrastructure for the cAMP restoration that arrives in Month 5.</div>
+        </div>
+      </div>
+      <div class="cascade-month">
+        <div class="month-marker">
+          <div class="month-dot gold"></div>
+          <div class="month-label">Month 3</div>
+        </div>
+        <div class="month-content">
+          <div class="month-compound">Luteolin</div>
+          <div class="month-title">CD38 Inhibition and Microglial Calming</div>
+          <div class="month-desc">Added third for two simultaneous reasons: CD38 inhibition protects the NAD⁺ pool being rebuilt by NMN/NR (CD38 is the primary NADase competing for NAD⁺ during immune activation), and microglial calming reduces the upstream cytokine production that sulforaphane has been addressing. The combination of sulforaphane + luteolin attacking NF-κB from two different molecular angles simultaneously is more effective than either alone.</div>
+        </div>
+      </div>
+      <div class="cascade-month">
+        <div class="month-marker">
+          <div class="month-dot gold"></div>
+          <div class="month-label">Month 4</div>
+        </div>
+        <div class="month-content">
+          <div class="month-compound">Fisetin</div>
+          <div class="month-title">Senescent Cell Clearance — SASP Removal</div>
+          <div class="month-desc">Added fourth after the acute inflammatory burden has been partially reduced. Fisetin's senolytic mechanism requires apoptosis induction in senescent cells — a process that is more effective when the broader inflammatory environment has been calmed by three months of sulforaphane and luteolin. Clearing SASP at this stage removes a chronic upstream inflammatory input that neither immunotherapy nor acute NF-κB suppression addresses, reducing the residual inflammatory burden before forskolin's direct cAMP activation arrives.</div>
+        </div>
+      </div>
+      <div class="cascade-month">
+        <div class="month-marker">
+          <div class="month-dot gold"></div>
+          <div class="month-label">Month 5</div>
+        </div>
+        <div class="month-content">
+          <div class="month-compound">Forskolin</div>
+          <div class="month-title">Direct Adenylyl Cyclase Activation</div>
+          <div class="month-desc">Added last — the terminal compound — because direct adenylyl cyclase activation is most effective when the environment has been prepared by the preceding four months. With NF-κB reduced (sulforaphane + luteolin), NAD⁺ restored (NMN/NR + luteolin CD38 inhibition), and SASP cleared (fisetin), the SST-14 interneuron is in the best available condition to respond to a direct cAMP stimulus. Forskolin bypasses the Gαi adenosine suppression of adenylyl cyclase to directly activate the enzyme — the most direct molecular address of Mechanism 2 in the entire cascade.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9: SYNERGY -->
+  <section id="synergy" class="paper-section">
+    <div class="section-label">Section 9</div>
+    <div class="section-mechanism">Top-down meets bottom-up · Infrastructure preparation argument</div>
+    <h2 class="section-heading">IMIG and the Supplement Cascade — A Synergistic Combination</h2>
+
+    <p class="body-text">The supplement cascade and IMIG are not competing therapeutic strategies. They are convergent interventions that attack the same two suppression mechanisms from opposite directions simultaneously. When both are running, every node of the suppression is being addressed from at least two independent directions at once.</p>
+
+    <div class="table-caption">Convergence Table — IMIG vs. Supplement Cascade at Each Suppression Node</div>
+    <table class="paper-table">
+      <thead>
+        <tr><th>Suppression Node</th><th>IMIG Mechanism</th><th>Cascade Mechanism</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>NF-κB activation (cytokine-driven)</td><td>Reduces IL-1β, IL-6, TNF-α upstream via FcγRIIB upregulation and Treg induction</td><td>Sulforaphane: Nrf2-mediated NF-κB suppression. Luteolin: IκB kinase inhibition + microglial calming</td></tr>
+        <tr><td>CBP competition at somatostatin CRE</td><td>Reduces NF-κB activation → less competition for CBP</td><td>Tributyrin/butyrate: HDAC inhibition → histone acetylation → CRE accessibility restored independently of CBP competition</td></tr>
+        <tr><td>CD38-mediated NAD⁺ drain</td><td>Reduces cytokine-driven CD38 expression indirectly</td><td>Luteolin: direct CD38 expression downregulation. NMN/NR: replenishes NAD⁺ faster than CD38 drains it</td></tr>
+        <tr><td>IDO1-driven NAD⁺ depletion</td><td>Reduces IL-6, IFN-γ that activate IDO1</td><td>NMN/NR: bypasses IDO1 depletion by direct NAD⁺ precursor provision</td></tr>
+        <tr><td>Adenosine accumulation (CD26 blockade)</td><td>Clears anti-CD26 autoantibodies that block DPP-IV function</td><td>Zinc: restores parietal cell acid production upstream, reducing opioid peptide generation. Fisetin: reduces SASP-driven adenosine production</td></tr>
+        <tr><td>Adenylyl cyclase Gαi suppression</td><td>Indirect: reduces adenosine by reducing the conditions generating it</td><td>Forskolin: direct adenylyl cyclase activation bypassing Gαi suppression entirely</td></tr>
+        <tr><td>SASP chronic inflammatory input</td><td>Not directly addressed by immunoglobulin therapy</td><td>Fisetin: senolytic clearance of SASP-producing senescent cells</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-heading">The Infrastructure Preparation Argument</h3>
+    <p class="body-text">The most important synergy argument is about what the supplement cascade does to prepare the biological environment before IMIG is initiated. IMIG releases the transcriptional brake. But the brake release is only as effective as the infrastructure beneath it. SST-14 interneurons that have been running in a NAD⁺-depleted, glutathione-insufficient, SASP-inflamed environment for years cannot immediately resume tonic high-frequency firing the moment NF-κB begins to recede — even if the transcriptional suppression is lifted.</p>
+
+    <p class="body-text">Running the supplement cascade for two to four months before IMIG initiation builds that infrastructure. It ensures that when IMIG begins removing the transcriptional ceiling, the metabolic floor is already in place to respond. The expected clinical result is a faster and more complete IMIG response than would be achieved without the preparatory cascade.</p>
+  </section>
+
+  <!-- SECTION 11: SIGNALS -->
+  <section id="signals" class="paper-section">
+    <div class="section-label">Section 11</div>
+    <h2 class="section-heading">Expected Clinical Signals of SST-14 Restoration</h2>
+
+    <p class="body-text">If the supplement cascade is producing meaningful SST-14 transcriptional restoration, the following functional signals would be expected over a 3–12 month trajectory. These are the same signals expected from IMIG in State 1 and State 2 patients — the signal profile reflects the shared molecular target, not the specific intervention producing it.</p>
+
+    <div class="callout">
+      <p><strong>Sleep architecture improvement (typically earliest — 8–16 weeks).</strong> SST-14 interneurons contribute to NREM slow-wave sleep generation through their role in VIP-mediated cortical disinhibition. Improved sleep quality, consolidation, and night-waking reduction are often the earliest observable functional signals of partial SST-14 restoration. This is mechanistically predicted and clinically useful as an early response indicator.</p>
+    </div>
+
+    <div class="callout">
+      <p><strong>Gastrointestinal motility improvement (8–20 weeks).</strong> VIP is a key enteric neurotransmitter — its upstream coordination through SST-14 output affects gut motility, secretion timing, and mucosal immune tone. Improvements in constipation regularity, stool consistency, and post-meal discomfort reflect partial VIP cascade restoration.</p>
+    </div>
+
+    <div class="callout">
+      <p><strong>Sensory processing shifts (12–24 weeks).</strong> SST-14 interneurons gate long-range thalamocortical inputs at pyramidal neuron distal dendrites — controlling the signal-to-noise ratio of sensory integration. Reduced sensory defensiveness, improved tolerance of previously aversive stimuli, and less sensory-seeking behavior reflect partial restoration of this gating function.</p>
+    </div>
+
+    <div class="callout">
+      <p><strong>Social engagement and communicative spontaneity (16–40 weeks).</strong> The social and communicative improvements are typically later-emerging because they depend on coordinated oxytocin pulsatility restoration in response to genuine social stimuli — a more complex downstream output requiring more complete SST-14 interneuron recovery. Earlier social improvements often manifest as reduced anxiety in social contexts before active social engagement increases.</p>
+    </div>
+
+    <p class="body-text">The absence of these signals after a well-implemented 6-month protocol should prompt biomarker reassessment — checking whether the K:T ratio and cytokine panel have moved, whether homocysteine has normalized, and whether the Cunningham Panel autoantibodies have changed. If biomarkers have not moved, the upstream driving conditions remain active and the protocol is operating against an unaddressed source.</p>
+  </section>
+
+  <!-- SECTION 12: CONCLUSION -->
+  <section id="conclusion" class="paper-section">
+    <div class="section-label">Section 12</div>
+    <h2 class="section-heading">Conclusion</h2>
+
+    <p class="body-text">The SST-14 transcriptional suppression problem has two independent mechanisms. IMIG addresses both through upstream immune modulation — clearing the autoantibody and cytokine load that drives both NF-κB activation and IDO1-driven adenosine accumulation. The supplement cascade addresses both mechanisms through convergent bottom-up and lateral interventions: sulforaphane and luteolin attacking NF-κB from two molecular angles; NMN/NR and luteolin-CD38 inhibition restoring the NAD⁺ axis; fisetin clearing the SASP chronic inflammatory background; and forskolin directly activating adenylyl cyclase to bypass the Gαi suppression that no other compound in the cascade directly addresses.</p>
+
+    <p class="body-text">The two pathways converge on the same molecular target: phosphorylated CREB occupying the CRE binding site on the somatostatin gene promoter, driving SST-14 transcription, restoring tonic interneuron output, and allowing the downstream neuropeptide cascade — oxytocin, VIP, secretin — to recover its upstream coordination.</p>
+
+    <div class="callout gold">
+      <p>IMIG is the more powerful upstream intervention when it is accessible. The supplement cascade is not a substitute for IMIG where IMIG is indicated and available — it is a mechanistically grounded companion that maximizes IMIG effectiveness and a scientifically coherent alternative for patients outside trial access. This is the case for treating IDA not as a single-intervention problem but as a multi-target cascade that benefits from convergent attack from both directions simultaneously.</p>
+    </div>
+  </section>
+
+</main>
+
+<div style="background:var(--cream); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); padding:18px 0;">
+  <div style="max-width:840px; margin:0 auto; padding:0 24px;">
+    <p style="font-family:'Source Serif 4',serif; font-size:.82rem; color:var(--text-light); line-height:1.65; font-style:italic; margin:0;">Medical Disclaimer: This document presents a mechanistic hypothesis for scientific discussion. It does not constitute medical advice, a treatment protocol, or a clinical recommendation. All therapeutic decisions must be made by qualified healthcare professionals with direct knowledge of the individual patient. Large-scale validation studies are required before any component of this framework can be considered established clinical practice.</p>
+  </div>
+</div>
+
+<footer class="paper-footer">
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-brand">Decoding Autism Now · Research</div>
+    <div class="footer-title">The SST-14 Restoration Protocol</div>
+    <p class="footer-meta">Clinical Working Paper V3 · May 2026 · <a href="research-articles.html" style="color:rgba(255,255,255,.5);">Research Hub</a> · <a href="../index.html" style="color:rgba(255,255,255,.5);">decodingautismnow.com</a></p>
+    <p class="footer-meta" style="margin-top:10px; color:rgba(255,255,255,0.40);">© 2026 Decoding Autism Now | All content is shared with families, clinicians and researchers for educational purposes under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.55); text-decoration:underline;">Creative Commons CC BY-NC 4.0</a> — free to share with attribution, not for commercial use.</p>
+  </div>
+</footer>
+
+</body>
+</html>
