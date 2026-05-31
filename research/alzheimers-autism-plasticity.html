@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autism and Alzheimer's — Two Sides of a Plasticity Problem | Decoding Autism Now</title>
+<meta name="description" content="One condition fails to open plasticity or keep it open. The other has plasticity closing prematurely later in life. The shared biology of synaptic remodeling failure and what connects them mechanistically.">
+<link rel="canonical" href="https://decodingautismnow.com/research/alzheimers-autism-plasticity.html">
+<meta property="og:title" content="Autism and Alzheimer's — Two Sides of a Plasticity Problem">
+<meta property="og:description" content="The shared biology of synaptic remodeling failure across two of the most prevalent neurological conditions of our time.">
+<meta property="og:url" content="https://decodingautismnow.com/research/alzheimers-autism-plasticity.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://decodingautismnow.com/research/images/OG-alzheimers-autism.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script defer src="https://cloud.umami.is/script.js" data-website-id="294ecd79-19fb-4267-9be2-a7c83d57274d"></script>
+
+<style>
+  :root {
+    --navy:#0f2342;
+    --teal:#1e6b72;
+    --teal-light:#2a9da6;
+    --gold:#c8923a;
+    --gold-light:#e8b86d;
+    --cream:#faf7f2;
+    --warm-white:#ffffff;
+    --text-dark:#1a1a2e;
+    --text-mid:#3d4560;
+    --text-light:#6b7494;
+    --rule:#d8cfc4;
+    --accent-bg:#eef8f9;
+    --gold-bg:#fdf6ec;
+  }
+
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Source Serif 4', Georgia, serif; background:var(--cream); color:var(--text-dark); font-size:17px; line-height:1.82; }
+
+  .topbar { position:fixed; top:0; left:0; right:0; z-index:1000; background:var(--navy); border-bottom:2px solid var(--gold); }
+  .topbar-inner { max-width:960px; margin:0 auto; padding:10px 20px; display:flex; justify-content:space-between; align-items:center; gap:18px; }
+  .topbar-brand { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--teal-light); margin-bottom:2px; }
+  .topbar-title { font-family:'Source Serif 4', serif; font-size:13px; font-weight:600; color:#fff; line-height:1.2; }
+  .topbar-back { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.7); text-decoration:none; border:1px solid rgba(255,255,255,.25); border-radius:3px; padding:5px 10px; white-space:nowrap; }
+  .topbar-back:hover { color:#fff; border-color:rgba(255,255,255,.5); }
+
+  .paper-hero { margin-top:57px; background:var(--navy); color:#fff; }
+  .hero-stripe { height:5px; background:linear-gradient(90deg,var(--teal) 0%,var(--teal-light) 50%,var(--gold) 100%); }
+  .hero-inner { max-width:840px; margin:0 auto; padding:60px 24px 48px; }
+  .hero-label { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--teal-light); margin-bottom:16px; }
+  .hero-title { font-family:'Playfair Display', serif; font-size:clamp(2.2rem,4.5vw,3.2rem); line-height:1.1; font-weight:700; color:#fff; margin-bottom:10px; }
+  .hero-subtitle { font-family:'Playfair Display', serif; font-size:1.1rem; font-style:italic; color:var(--gold-light); margin-bottom:28px; font-weight:400; }
+  .hero-meta { display:flex; flex-wrap:wrap; gap:20px; align-items:flex-start; }
+  .meta-label { font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.45); margin-bottom:4px; }
+  .meta-value { font-family:'Source Serif 4', serif; font-size:.92rem; color:rgba(255,255,255,.85); }
+  .hero-status { display:inline-block; margin-top:24px; font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:rgba(232,184,109,.82); border:1px solid rgba(232,184,109,.35); border-radius:3px; padding:5px 12px; }
+
+  .toc-wrap { background:var(--warm-white); border-bottom:2px solid var(--rule); }
+  .toc-inner { max-width:840px; margin:0 auto; padding:28px 24px; }
+  .toc-label { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--text-light); margin-bottom:16px; }
+  .toc-list { list-style:none; columns:2; column-gap:32px; }
+  .toc-list li { break-inside:avoid; margin-bottom:6px; }
+  .toc-list a { font-family:'Source Serif 4', serif; font-size:.85rem; color:var(--teal); text-decoration:none; display:flex; gap:8px; align-items:baseline; }
+  .toc-list a:hover { color:var(--navy); }
+  .toc-num { font-family:'DM Mono', monospace; font-size:10px; color:var(--gold); flex-shrink:0; min-width:22px; }
+
+  .paper-wrap { max-width:840px; margin:0 auto; padding:60px 24px 100px; }
+
+  .abstract-box { background:var(--warm-white); border:1px solid var(--rule); border-left:4px solid var(--teal); border-radius:0 8px 8px 0; padding:28px 32px; margin-bottom:56px; }
+  .abstract-title { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--teal); margin-bottom:20px; }
+  .abstract-section { margin-bottom:16px; }
+  .abstract-section:last-child { margin-bottom:0; }
+  .abstract-section-label { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--text-light); margin-bottom:6px; }
+  .abstract-section p { font-size:.93rem; color:var(--text-mid); line-height:1.72; }
+
+  .paper-section { margin-bottom:64px; scroll-margin-top:20px; }
+  .section-label { font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.22em; text-transform:uppercase; color:var(--teal); margin-bottom:10px; }
+  h2.section-heading { font-family:'Playfair Display', serif; font-size:1.65rem; font-weight:700; color:var(--navy); line-height:1.2; margin-bottom:20px; padding-bottom:16px; border-bottom:2px solid var(--rule); }
+  h3.sub-heading { font-family:'Playfair Display', serif; font-size:1.15rem; font-weight:600; color:var(--navy); margin:28px 0 12px; line-height:1.3; }
+
+  p { color:var(--text-mid); margin-bottom:16px; }
+  p:last-child { margin-bottom:0; }
+  strong { color:var(--navy); font-weight:600; }
+  em { color:var(--text-mid); }
+  a { color:var(--teal); text-decoration:none; border-bottom:1px solid rgba(30,107,114,.3); }
+  a:hover { color:var(--navy); border-bottom-color:var(--navy); }
+
+  .callout-bold { background:var(--navy); border-radius:6px; padding:20px 24px; margin:24px 0; font-family:'Playfair Display', serif; font-style:italic; font-size:1.05rem; line-height:1.65; color:rgba(255,255,255,.9); }
+  .callout-teal { background:var(--accent-bg); border-left:3px solid var(--teal); border-radius:0 6px 6px 0; padding:14px 18px; margin:20px 0; font-size:.95rem; }
+  .callout-teal p { color:var(--text-mid)!important; margin:0!important; }
+  .callout-gold { background:var(--gold-bg); border-left:3px solid var(--gold); border-radius:0 6px 6px 0; padding:14px 18px; margin:20px 0; font-size:.95rem; }
+  .callout-gold p { color:#5a3e1a!important; margin:0!important; }
+
+  .pathogen-grid { display:grid; grid-template-columns:1fr; gap:14px; margin:20px 0 28px; }
+  .pathogen-card { background:var(--warm-white); border:1px solid var(--rule); border-left:4px solid var(--teal); border-radius:0 8px 8px 0; padding:18px 22px; }
+  .pathogen-label { font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:var(--teal); display:block; margin-bottom:6px; }
+  .pathogen-card h3 { font-family:'Playfair Display', serif; font-size:1rem; font-weight:700; color:var(--navy); margin-bottom:8px; }
+  .pathogen-card p { font-size:.92rem; margin:0; line-height:1.68; }
+  .stat-highlight { display:inline-block; background:rgba(200,146,58,.1); border:1px solid rgba(200,146,58,.3); border-radius:3px; padding:.05em .4em; font-family:'DM Mono',monospace; font-size:.82em; color:var(--navy); font-weight:500; }
+
+  .cascade-box { background:var(--navy); border-radius:8px; padding:24px 28px; margin:24px 0 28px; }
+  .cascade-title { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--teal-light); margin-bottom:20px; }
+  .cascade-steps { display:flex; flex-direction:column; }
+  .cascade-step { display:flex; align-items:flex-start; gap:14px; }
+  .cascade-connector { display:flex; flex-direction:column; align-items:center; flex-shrink:0; width:24px; }
+  .cascade-dot { width:11px; height:11px; border-radius:50%; background:var(--teal-light); border:2px solid var(--teal); flex-shrink:0; margin-top:5px; }
+  .cascade-dot-gold { width:11px; height:11px; border-radius:50%; background:var(--gold-light); border:2px solid var(--gold); flex-shrink:0; margin-top:5px; }
+  .cascade-line { width:2px; flex:1; min-height:20px; background:rgba(42,157,166,.3); margin:3px 0; }
+  .cascade-step:last-child .cascade-line { display:none; }
+  .cascade-text { padding-bottom:16px; }
+  .cascade-text strong { font-family:'DM Mono', monospace; font-size:.75rem; letter-spacing:.04em; color:var(--gold-light); display:block; margin-bottom:3px; font-weight:500; }
+  .cascade-text span { font-size:.88rem; color:rgba(250,247,242,.75); line-height:1.55; }
+
+  .table-wrap { overflow-x:auto; margin:20px 0 28px; }
+  .compare-table { width:100%; border-collapse:collapse; font-size:.85rem; }
+  .compare-table th { background:var(--navy); color:#fff; font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.12em; text-transform:uppercase; padding:10px 14px; text-align:left; font-weight:500; }
+  .compare-table th:first-child { color:var(--teal-light); }
+  .compare-table td { padding:11px 14px; border-bottom:1px solid var(--rule); color:var(--text-mid); vertical-align:top; line-height:1.55; }
+  .compare-table tr:nth-child(odd) td { background:var(--warm-white); }
+  .compare-table tr:nth-child(even) td { background:var(--cream); }
+  .compare-table td:first-child { font-family:'DM Mono', monospace; font-size:.75rem; color:var(--teal); font-weight:500; }
+
+  .references-section { border-top:2px solid var(--rule); margin-top:64px; padding-top:40px; }
+  .ref-entry { display:flex; gap:14px; margin-bottom:18px; scroll-margin-top:20px; }
+  .ref-num { font-family:'DM Mono', monospace; font-size:10px; color:var(--gold); flex-shrink:0; min-width:28px; margin-top:3px; }
+  .ref-body { font-size:.88rem; color:var(--text-mid); line-height:1.72; }
+  .ref-body em { font-style:italic; color:var(--text-mid); }
+  sup { font-family:'DM Mono', monospace; font-size:10px; }
+  sup a { border-bottom:none; color:var(--teal); }
+  sup a:hover { color:var(--navy); }
+
+  .disclaimer-box { background:var(--gold-bg); border:1px solid rgba(200,146,58,.25); border-radius:6px; padding:18px 22px; margin-top:40px; font-size:.83rem; color:#5a3e1a; line-height:1.65; font-family:'DM Mono', monospace; letter-spacing:.02em; }
+
+  .paper-footer { background:var(--navy); }
+  .footer-stripe { height:5px; background:linear-gradient(90deg,var(--teal) 0%,var(--teal-light) 50%,var(--gold) 100%); }
+  .footer-inner { max-width:840px; margin:0 auto; padding:40px 24px 32px; }
+  .footer-cite { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.1em; color:rgba(255,255,255,.45); line-height:1.8; margin-bottom:20px; }
+  .footer-links { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
+  .footer-link { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.75); text-decoration:none; border:1px solid rgba(255,255,255,.2); border-radius:3px; padding:6px 12px; }
+  .footer-link:hover { color:#fff; border-color:rgba(255,255,255,.45); }
+  .footer-meta { font-family:'DM Mono', monospace; font-size:.72rem; color:rgba(255,255,255,.3); line-height:1.7; }
+
+  @media (max-width:680px) {
+    .toc-list { columns:1; }
+    .hero-meta { flex-direction:column; gap:12px; }
+    .abstract-box { padding:20px; }
+    h2.section-heading { font-size:1.3rem; }
+    .compare-table { font-size:.78rem; }
+  }
+  @media print {
+    .topbar { display:none; }
+    .paper-hero { margin-top:0; }
+    body { font-size:11pt; }
+    h2.section-heading { page-break-after:avoid; }
+    .paper-section { page-break-inside:avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <div class="topbar-brand">Decoding Autism Now</div>
+      <div class="topbar-title">Autism and Alzheimer's &#8212; Two Sides of a Plasticity Problem</div>
+    </div>
+    <a class="topbar-back" href="../research/research-articles.html">&#8592; Research</a>
+  </div>
+</div>
+
+<div class="paper-hero">
+  <div class="hero-stripe"></div>
+  <div class="hero-inner">
+    <div class="hero-label">Decoding Autism Now &#183; Research Article &#183; May 2026</div>
+    <h1 class="hero-title">Autism and Alzheimer&#8217;s &#8212;<br>Two Sides of a Plasticity Problem</h1>
+    <p class="hero-subtitle">The shared biology of synaptic remodeling failure and what connects them mechanistically</p>
+    <div class="hero-meta">
+      <div class="hero-meta-block">
+        <div class="meta-label">Author</div>
+        <div class="meta-value">Quay Stoner</div>
+      </div>
+      <div class="hero-meta-block">
+        <div class="meta-label">Project</div>
+        <div class="meta-value">Decoding Autism Now</div>
+      </div>
+      <div class="hero-meta-block">
+        <div class="meta-label">Date</div>
+        <div class="meta-value">May 2026</div>
+      </div>
+      <div class="hero-meta-block">
+        <div class="meta-label">Category</div>
+        <div class="meta-value">Neurodegenerative Overlap</div>
+      </div>
+    </div>
+    <div class="hero-status">Research article &#183; decodingautismnow.com</div>
+  </div>
+</div>
+
+<div class="toc-wrap">
+  <div class="toc-inner">
+    <div class="toc-label">Contents</div>
+    <ul class="toc-list">
+      <li><a href="#mystery"><span class="toc-num">01</span>The Mystery That Wasn&#8217;t</a></li>
+      <li><a href="#renovation"><span class="toc-num">02</span>The Brain&#8217;s Renovation System</a></li>
+      <li><a href="#alzheimers"><span class="toc-num">03</span>Alzheimer&#8217;s: Plasticity Closing Down</a></li>
+      <li><a href="#autism"><span class="toc-num">04</span>Autism: Plasticity Failing to Open</a></li>
+      <li><a href="#architecture"><span class="toc-num">05</span>The Shared Biological Architecture</a></li>
+      <li><a href="#implications"><span class="toc-num">06</span>Why This Matters Beyond Biology</a></li>
+      <li><a href="#humility"><span class="toc-num">07</span>A Note on Complexity and Humility</a></li>
+      <li><a href="#references"><span class="toc-num">Ref</span>References</a></li>
+    </ul>
+  </div>
+</div>
+
+<main>
+<div class="paper-wrap">
+
+  <div class="abstract-box">
+    <div class="abstract-title">Abstract</div>
+    <div class="abstract-section">
+      <div class="abstract-section-label">Background</div>
+      <p>Alzheimer&#8217;s disease and autism spectrum disorder are conventionally treated as unrelated conditions separated by the full arc of the human lifespan. This article proposes that both represent expressions of the same underlying failure in synaptic plasticity regulation, driven by a shared mechanistic cascade: chronic immune activation, microglial priming, IDO1-mediated kynurenine pathway dysregulation, quinolinic acid excess, and NMDA receptor over-stimulation.</p>
+    </div>
+    <div class="abstract-section">
+      <div class="abstract-section-label">Key Argument</div>
+      <p>In Alzheimer&#8217;s, this cascade is triggered in late life by reactivating latent pathogens &#8212; principally HSV-1, cytomegalovirus, and <em>Porphyromonas gingivalis</em> &#8212; and results in progressive destruction of established synaptic architecture. In autism, the same cascade is triggered prenatally or in early childhood by maternal infection or immune activation and disrupts the calibration of a nervous system still under construction. The direction of plasticity failure differs; the machinery is identical.</p>
+    </div>
+    <div class="abstract-section">
+      <div class="abstract-section-label">Significance</div>
+      <p>This convergence reframes both conditions as neurodevelopmental and neurodegenerative expressions of a single immune-metabolic failure mode, with implications for prevention, intervention timing, and therapeutic target identification across the lifespan.</p>
+    </div>
+  </div>
+
+  <section class="paper-section" id="mystery">
+    <div class="section-label">Section 01</div>
+    <h2 class="section-heading">The Mystery That Wasn&#8217;t</h2>
+    <p>Picture two patients. The first is an 80-year-old woman who spent decades as a sharp, engaged professional. Over the past few years her family has watched her drift &#8212; losing words, losing memories, losing herself. Her neurologist finds amyloid plaques and tau tangles and delivers the diagnosis: Alzheimer&#8217;s disease.</p>
+    <p>The second is a three-year-old boy. He spoke his first words on schedule. Then, somewhere around his second birthday, the words stopped coming. He no longer responds to his name. He moves through the house in repetitive loops, unreachable in ways his parents struggle to explain. His developmental paediatrician delivers the diagnosis: autism spectrum disorder.</p>
+    <p>Two diagnoses. Two entirely different phases of life. Two conditions that medical textbooks have never placed in the same chapter.</p>
+    <p>And yet. Buried in the molecular biology of both conditions &#8212; in the firing patterns of immune cells, in the chemistry of a single amino acid pathway, in the architecture of synapses that either fail to form properly or fail to hold &#8212; lies a story only now becoming visible. Alzheimer&#8217;s and autism are not mirror images of each other. But they are, in a very precise sense, expressions of the same underlying failure. The same machinery. The same cascade. Different clocks.</p>
+    <div class="callout-bold">&#8220;We are not looking at two diseases. We are looking at one failure mode, expressed at opposite ends of a life.&#8221;</div>
+  </section>
+
+  <section class="paper-section" id="renovation">
+    <div class="section-label">Section 02</div>
+    <h2 class="section-heading">The Brain&#8217;s Renovation System</h2>
+    <p>To understand what goes wrong in both conditions, you first need to understand what the healthy brain is trying to do. The brain is not a static structure. It is constantly remodelling itself &#8212; strengthening connections that are used, pruning away connections that are not, adjusting the sensitivity of receiving neurons to match the signals coming in. This process, <strong>synaptic plasticity</strong>, is the biological basis of learning, memory, and development.</p>
+    <p>The cells primarily responsible for this renovation work are <strong>microglia</strong> &#8212; the brain&#8217;s resident immune cells. Microglia survey the neural landscape continuously, tagging weak or damaged synapses for removal, clearing cellular debris, and maintaining the chemical environment that allows healthy neurons to communicate. When the brain is working well, microglia are precise, regulated, and responsive. They renovate when renovation is needed. They stand down when the work is done.</p>
+    <p>The molecular system that governs when microglia activate and when they stand down runs through the <strong>kynurenine pathway</strong> &#8212; a metabolic cascade that begins with the amino acid tryptophan and, under inflammatory conditions, produces a neurotoxic compound called <strong>quinolinic acid (QUIN)</strong>. QUIN is a potent activator of <strong>NMDA receptors</strong>, the voltage-gated channels that control calcium entry into neurons and regulate the strength of synaptic connections.</p>
+    <p>In a healthy brain, QUIN is produced in tiny, tightly controlled amounts. In a brain under chronic immune activation, IDO1 &#8212; the enzyme that opens the kynurenine pathway &#8212; is switched on continuously, flooding neural tissue with QUIN, over-exciting NMDA receptors, and creating sustained excitotoxicity that damages and destroys synapses.</p>
+    <div class="callout-teal"><p>This is the shared machinery. It operates in both Alzheimer&#8217;s disease and autism spectrum disorder. What differs is the trigger, the developmental timing, and the direction of the damage.</p></div>
+  </section>
+
+  <section class="paper-section" id="alzheimers">
+    <div class="section-label">Section 03</div>
+    <h2 class="section-heading">Alzheimer&#8217;s: When Infection Closes Plasticity Down</h2>
+    <p>For decades, the dominant theory of Alzheimer&#8217;s was structural: amyloid plaques accumulate, tau protein tangles, neurons die. The assumption was that plaques were the problem &#8212; clear them, and you stop the disease. After 99.6% of amyloid-targeting clinical trials failed, researchers were forced to ask a harder question: what causes the plaques in the first place?</p>
+    <p>The answer emerging from the literature is, at its core, an <strong>infection story</strong>. Amyloid-beta (A&#946;), long considered purely pathological, has been reframed by researchers at Harvard and elsewhere as an <strong>antimicrobial peptide</strong> &#8212; part of the brain&#8217;s innate immune defence.<sup><a href="#ref2">2</a></sup> When a pathogen breaches the blood-brain barrier, A&#946; is deployed to entrap and neutralise it. Under normal circumstances, the immune system clears the threat, the A&#946; is reabsorbed, and the episode ends. When the immune system cannot fully clear the pathogen &#8212; particularly in an ageing brain whose defences are waning &#8212; A&#946; keeps being produced. The intended defence becomes the source of damage.</p>
+    <p>Three pathogens have accumulated the strongest evidence as chronic triggers of this process:</p>
+    <div class="pathogen-grid">
+      <div class="pathogen-card">
+        <span class="pathogen-label">Herpesvirus &#183; HSV-1</span>
+        <h3>Herpes Simplex Virus Type 1</h3>
+        <p>Present as a latent infection in the trigeminal ganglia of approximately two-thirds of adults, HSV-1 periodically reactivates in the ageing brain. Each reactivation triggers microglial activation, promotes A&#946; and tau accumulation, and fires the kynurenine pathway. Critically, patients receiving antiviral therapy for HSV-1 show a <span class="stat-highlight">40&#8211;50% reduced risk of developing dementia</span> &#8212; a treatment-response signal that edges the relationship firmly toward causal.<sup><a href="#ref4">4</a></sup></p>
+      </div>
+      <div class="pathogen-card">
+        <span class="pathogen-label">Oral Bacterium &#183; P. gingivalis</span>
+        <h3>Porphyromonas gingivalis</h3>
+        <p>The keystone bacterium of chronic gum disease has been detected directly in the brain tissue of Alzheimer&#8217;s patients. Its toxic enzymes &#8212; <strong>gingipains</strong> &#8212; have been found co-localised with tau tangles and amyloid plaques, with levels correlating with disease severity. Oral infection in mouse models produces brain colonisation, increased A&#946; production, and cognitive decline.<sup><a href="#ref3">3</a></sup></p>
+      </div>
+      <div class="pathogen-card">
+        <span class="pathogen-label">Herpesvirus &#183; CMV</span>
+        <h3>Cytomegalovirus</h3>
+        <p>Carried latently by the majority of adults, CMV was demonstrated in 2025 research to accelerate cognitive decline in Alzheimer&#8217;s-susceptible animals. Treatment with antiviral medication during the <em>chronic</em> phase of infection <span class="stat-highlight">completely reversed</span> the virus-driven cognitive deterioration &#8212; confirming that chronic, not acute, infection is the operative variable.<sup><a href="#ref6">6</a></sup></p>
+      </div>
+    </div>
+    <p>The mechanism in each case is the same. Chronic, low-grade infection primes microglia into a state of persistent activation. Activated microglia drive the kynurenine pathway. QUIN over-stimulates NMDA receptors. Synaptic connections are destabilised, long-term potentiation &#8212; the molecular basis of memory formation &#8212; is suppressed. Plasticity closes down. The brain loses its ability to remodel itself, and the architecture of a lifetime of memory begins to dissolve.</p>
+  </section>
+
+  <section class="paper-section" id="autism">
+    <div class="section-label">Section 04</div>
+    <h2 class="section-heading">Autism: When Plasticity Fails to Open</h2>
+    <p>Now hold that mechanism &#8212; and wind the clock back 75 years.</p>
+    <p>The same pathogens that drive Alzheimer&#8217;s disease in the ageing brain are, when they act on a <em>developing</em> nervous system, implicated in autism. Congenital CMV infection &#8212; the most common congenital infection worldwide, affecting more than <span class="stat-highlight">1 in 200 live births</span> &#8212; is a recognised cause of autism spectrum disorders.<sup><a href="#ref7">7</a></sup> When CMV crosses the placenta during pregnancy, it colonises neural tissue at precisely the developmental window when the foetal brain&#8217;s synaptic architecture is being built. The same microglial priming. The same kynurenine pathway activation. The same QUIN-driven NMDA over-stimulation &#8212; but now applied not to a brain that is losing its connections, but to a brain that is still deciding which connections to make.</p>
+    <p>Beyond specific pathogens, the broader phenomenon of <strong>maternal immune activation (MIA)</strong> &#8212; the foetal brain&#8217;s exposure to its mother&#8217;s inflammatory state during a vulnerable developmental period &#8212; has been established as one of the most significant environmental risk factors for autism.<sup><a href="#ref8">8</a></sup> The mechanism runs directly through the kynurenine pathway: maternal infection activates IDO1, raises kynurenine metabolite levels across the placenta, and exposes the foetal brain to an excitotoxic environment during the precise window of synaptic formation.<sup><a href="#ref9">9</a></sup></p>
+    <p>The regulatory balance between excitatory and inhibitory signalling &#8212; the E/I ratio that underlies coherent sensory processing, language, and social cognition &#8212; is set incorrectly from the outset. Rather than plasticity closing down, it <strong>fails to open properly</strong>.</p>
+    <div class="callout-gold"><p>This may explain one of autism&#8217;s most clinically puzzling features: the divergence between children who present with disruption from birth versus those who develop apparently normally and then regress. In the congenital infection model, the insult precedes development &#8212; the E/I ratio is miscalibrated before the first synapse forms. In the postnatal cascade model, there is a period of normal development before the cascade reaches the brain. Same machinery. Different entry point. Different clinical presentation.</p></div>
+  </section>
+
+  <section class="paper-section" id="architecture">
+    <div class="section-label">Section 05</div>
+    <h2 class="section-heading">The Shared Biological Architecture</h2>
+    <p>Mapped side by side, the mechanistic overlap is striking. The common pathway in both conditions runs through five sequential steps before developmental context determines the direction of outcome:</p>
+    <div class="cascade-box">
+      <div class="cascade-title">The Common Pathway &#8212; Operating in Both Conditions</div>
+      <div class="cascade-steps">
+        <div class="cascade-step">
+          <div class="cascade-connector"><div class="cascade-dot"></div><div class="cascade-line"></div></div>
+          <div class="cascade-text"><strong>Step 1 &#8212; Trigger</strong><span>Chronic infection or immune activation: viral (HSV-1, CMV), bacterial (P. gingivalis), or maternal immune activation crossing the placenta</span></div>
+        </div>
+        <div class="cascade-step">
+          <div class="cascade-connector"><div class="cascade-dot"></div><div class="cascade-line"></div></div>
+          <div class="cascade-text"><strong>Step 2 &#8212; Microglial Priming</strong><span>Persistent microglial activation; renovation machinery locked in hyperactivation; unable to stand down</span></div>
+        </div>
+        <div class="cascade-step">
+          <div class="cascade-connector"><div class="cascade-dot"></div><div class="cascade-line"></div></div>
+          <div class="cascade-text"><strong>Step 3 &#8212; Kynurenine Pathway</strong><span>IDO1 upregulation &#8594; tryptophan diverted &#8594; kynurenine accumulation &#8594; quinolinic acid (QUIN) excess</span></div>
+        </div>
+        <div class="cascade-step">
+          <div class="cascade-connector"><div class="cascade-dot"></div><div class="cascade-line"></div></div>
+          <div class="cascade-text"><strong>Step 4 &#8212; NMDA Excitotoxicity</strong><span>QUIN over-stimulates NMDA receptors &#8594; calcium dysregulation &#8594; LTP suppression &#8594; synaptic instability</span></div>
+        </div>
+        <div class="cascade-step">
+          <div class="cascade-connector"><div class="cascade-dot-gold"></div></div>
+          <div class="cascade-text"><strong>Outcome &#8212; Determined by Developmental Timing</strong><span>Late life: destruction of established synaptic architecture (Alzheimer&#8217;s). Early development: miscalibration of forming architecture (autism)</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr><th>Feature</th><th>Alzheimer&#8217;s &#8212; Late Life</th><th>Autism &#8212; Prenatal / Early</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Primary infectious suspects</td><td>HSV-1, CMV, <em>P. gingivalis</em></td><td>CMV, HSV-2, rubella, maternal bacterial infection</td></tr>
+          <tr><td>Immune effector</td><td>Microglial hyperactivation in mature brain</td><td>Foetal microglial priming via maternal immune activation</td></tr>
+          <tr><td>Molecular pathway</td><td>IDO1 &#8594; kynurenine &#8594; QUIN &#8594; NMDA excitotoxicity</td><td>Identical pathway; different developmental context</td></tr>
+          <tr><td>Antimicrobial peptide role</td><td>A&#946; deployed as AMP; pathological when unresolved</td><td>Analogous foetal CNS immune peptide evidence emerging</td></tr>
+          <tr><td>Plasticity direction</td><td>Closes prematurely in established circuits</td><td>Fails to open fully in forming circuits</td></tr>
+          <tr><td>Genetic amplifier</td><td>APOE4 &#8212; impaired lipid-mediated pathogen clearance</td><td>CNTNAP2, MET, SHANK3 &#8212; immune-adjacent variants</td></tr>
+          <tr><td>Clinical result</td><td>Neurodegeneration of a lifetime of memory</td><td>Disrupted E/I calibration of a developing nervous system</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="paper-section" id="implications">
+    <div class="section-label">Section 06</div>
+    <h2 class="section-heading">Why This Matters Beyond Biology</h2>
+    <h3 class="sub-heading">For Alzheimer&#8217;s Research</h3>
+    <p>The infectious hypothesis reframes the entire intervention timeline. If chronic subclinical infection is the upstream trigger &#8212; not the amyloid accumulation, which is a downstream consequence &#8212; then antiviral and antimicrobial strategies in at-risk individuals (particularly APOE4 carriers, who have impaired pathogen clearance) become the most underexplored prevention lever in neurodegenerative medicine. The 40&#8211;50% dementia risk reduction seen with antiviral treatment for HSV-1 is not a small signal. The complete reversal of CMV-driven cognitive decline in a 2025 mouse model study points in the same direction.<sup><a href="#ref4">4,</a> <a href="#ref6">6</a></sup></p>
+    <h3 class="sub-heading">For Autism Research</h3>
+    <p>The same reframing suggests that the gut-immune-brain cascade driving the kynurenine pathway in autistic children is not a unique pathology of autism &#8212; it is the same immune machinery that, when activated late in life, produces Alzheimer&#8217;s disease. This positions autism as a neurodevelopmental expression of a fundamentally immune and metabolic disorder, not primarily a genetic one. Genetics determines susceptibility and severity. The immune cascade determines expression.</p>
+    <h3 class="sub-heading">For Both Fields Together</h3>
+    <p>The fact that the same molecular pathway &#8212; IDO1, kynurenine, quinolinic acid, NMDA &#8212; sits at the mechanistic centre of both conditions suggests that therapeutic strategies targeting this pathway may have relevance across the lifespan. What works to dampen pathological NMDA over-activation in an autistic child may, in principle, speak to the same over-activation driving synaptic loss in an Alzheimer&#8217;s patient. The shared cascade is not merely of theoretical interest &#8212; it is a therapeutic target that both fields are, as yet, pursuing independently of each other.</p>
+    <div class="callout-bold">&#8220;The plasticity framing is precise. One condition fails to open plasticity, or never opens it fully. The other has plasticity closing prematurely, decades before it should. Both are failures of the same renovation system.&#8221;</div>
+  </section>
+
+  <section class="paper-section" id="humility">
+    <div class="section-label">Section 07</div>
+    <h2 class="section-heading">A Note on Complexity and Humility</h2>
+    <p>This framework should not be mistaken for a complete explanation of either condition. Both autism and Alzheimer&#8217;s are heterogeneous. Not every case of Alzheimer&#8217;s has a detectable infectious trigger. Not every autistic child has a history of maternal infection or early inflammatory cascade. Genetics, environmental exposures, mitochondrial function, and individual immune response variation all shape how, when, and whether these cascades activate.</p>
+    <p>What the infectious and immune frameworks provide is not a final answer &#8212; but a coherent mechanistic spine onto which the known biology of both conditions can be organised. This is another shade in the spectrum of understanding for both illnesses: a thread that connects two bodies of research that have, until recently, had no shared language.</p>
+    <p>In fields that have spent decades searching for disease-modifying interventions without a clear causal map to navigate by, a coherent mechanistic spine &#8212; even a partial one &#8212; is exactly what progress requires.</p>
+    <div class="disclaimer-box">Medical Disclaimer: This content is for informational and research purposes only and should not be considered medical advice, diagnosis, or treatment. Always consult with a qualified healthcare professional before making any changes to health routines or treatment regimens. Content licensed under CC BY-NC 4.0. &#169; 2026 Decoding Autism Now.</div>
+  </section>
+
+  <section class="references-section" id="references">
+    <div class="section-label">References</div>
+    <h2 class="section-heading">References</h2>
+
+    <div class="ref-entry" id="ref1">
+      <span class="ref-num">1.</span>
+      <div class="ref-body">
+        Itzhaki RF, Lathe R, Balin BJ, et al. Microbes and Alzheimer&#8217;s disease. <em>Journal of Alzheimer&#8217;s Disease.</em> 2016;51(4):979&#8211;984. PMID: 26836286.
+      </div>
+    </div>
+
+    <div class="ref-entry" id="ref2">
+      <span class="ref-num">2.</span>
+      <div class="ref-body">
+        Soscia SJ, Kirby JE, Washicosky KJ, et al. The Alzheimer&#8217;s disease-associated amyloid &#946;-protein is an antimicrobial peptide. <em>PLoS ONE.</em> 2010;5(3):e9505. PMID: 20209079. DOI: 10.1371/journal.pone.0009505.
+      </div>
+    </div>
+
+    <div class="ref-entry" id="ref3">
+      <span class="ref-num">3.</span>
+      <div class="ref-body">
+        Dominy SS, Lynch C, Ermini F, et al. <em>Porphyromonas gingivalis</em> in Alzheimer&#8217;s disease brains: evidence for disease causation and treatment with small-molecule inhibitors. <em>Science Advances.</em> 2019;5(1):eaau3333. DOI: 10.1126/sciadv.aau3333.
+      </div>
+    </div>
+
+    <div class="ref-entry" id="ref4">
+      <span class="ref-num">4.</span>
+      <div class="ref-body">
+        Tzeng NS, Chung CH, Lin FH, et al. Anti-herpetic medications and reduced risk of dementia in patients with herpes simplex virus infections &#8212; a nationwide, population-based cohort study in Taiwan. <em>Neurotherapeutics.</em> 2018;15(2):417&#8211;429. PMID: 29488144. DOI: 10.1007/s13311-018-0611-x.
+      </div>
+    </div>
+
+    <div class="ref-entry" id="ref5">
+      <span class="ref-num">5.</span>
+      <div class="ref-body">
+        Barron AE, Bhatt DL, Bhatt NS, et al. The dysregulation of innate immunity by <em>Porphyromonas gingivalis</em> as a unifying mechanistic hypothesis in the etiology of Alzheimer&#8217;s disease. <em>Journal of Internal Medicine.</em> 2026;299(3):328&#8211;348.
+      </div>
+    </div>
+
+    <div class="ref-entry" id="ref6">
+      <span class="ref-num">6.</span>
+      <div class="ref-body">
+        Li DY, Choi ES, Bao X. HSV-1 as a potential driver of Alzheimer&#8217;s disease: mechanisms, evidence, and therapeutic implications. <em>Pathogens.</em> 2025;14(10):1022. DOI: 10.3390/pathogens14101022.
+      </div>
+    </div>
+
+    <div class="ref-entry" id="ref7">
+      <span class="ref-num">7.</span>
+      <div class="ref-body">
+        Cheeran MC, Lokensgard JR, Schleiss MR. Neuropathogenesis of congenital cytomegalovirus infection: disease mechanisms and prospects for intervention. <em>Clinical Microbiology Reviews.</em> 2009;22(1):99&#8211;126. PMID: 19136436. DOI: 10.1128/CMR.00023-08.
+      </div>
+    </div>
+
+    <div class="ref-entry" id="ref8">
+      <span class="ref-num">8.</span>
+      <div class="ref-body">
+        Masi A, Breen EJ, Alvares GA, et al. Maternal immune activation and the kynurenine pathway: implications for autism spectrum disorder and schizophrenia. <em>Brain, Behavior and Immunity.</em> 2021;97:1&#8211;13. PMID: 34274508. DOI: 10.1016/j.bbi.2021.07.008.
+      </div>
+    </div>
+
+    <div class="ref-entry" id="ref9">
+      <span class="ref-num">9.</span>
+      <div class="ref-body">
+        Hasegawa M, Houdou S, Mito T, et al. Maternal immune activation induces neurodevelopmental impairments through alterations in the tryptophan-kynurenine pathway in the placenta. <em>Biochemical and Biophysical Research Communications.</em> 2024;737:150922. DOI: 10.1016/j.bbrc.2024.150922.
+      </div>
+    </div>
+
+    <div class="ref-entry" id="ref10">
+      <span class="ref-num">10.</span>
+      <div class="ref-body">
+        Savitz J. The kynurenine pathway: a finger in every pie. <em>Molecular Psychiatry.</em> 2020;25(1):131&#8211;147. PMID: 30980044. DOI: 10.1038/s41380-018-0221-9.
+      </div>
+    </div>
+
+    <div class="ref-entry" id="ref11">
+      <span class="ref-num">11.</span>
+      <div class="ref-body">
+        Tu S, Okamoto S, Lipton SA, Xu H. Oligomeric A&#946;-induced synaptic dysfunction in Alzheimer&#8217;s disease. <em>Molecular Neurodegeneration.</em> 2014;9:48. PMID: 25394486. DOI: 10.1186/1750-1326-9-48.
+      </div>
+    </div>
+
+    <div class="ref-entry" id="ref12">
+      <span class="ref-num">12.</span>
+      <div class="ref-body">
+        Fulop T, Witkowski JM, Bourgade K, et al. Can an infection hypothesis explain the beta amyloid hypothesis of Alzheimer&#8217;s disease? <em>Frontiers in Aging Neuroscience.</em> 2019;10:295. PMID: 31611784. DOI: 10.3389/fnagi.2018.00224.
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</main>
+
+<footer class="paper-footer">
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-cite">Suggested citation:<br>Stoner Q. Autism and Alzheimer&#8217;s &#8212; Two Sides of a Plasticity Problem. Decoding Autism Now. decodingautismnow.com/research/alzheimers-autism-plasticity.html. May 2026.</div>
+    <div class="footer-links">
+      <a class="footer-link" href="../research/research-articles.html">&#8592; Research Hub</a>
+      <a class="footer-link" href="../03_Cascade_Explained_Biology_of_Autism.html">Cascade Explained</a>
+      <a class="footer-link" href="../06_Metabolic_Pathways_Explained_Biology_of_Autism.html">Metabolic Pathways</a>
+      <a class="footer-link" href="../14_Immunoglobulin_Therapy_Biology_of_Autism.html">Immunoglobulin Therapy</a>
+      <a class="footer-link" href="../10_Evidence_and_Citations_Biology_of_Autism.html">Evidence &amp; Citations</a>
+    </div>
+    <div class="footer-meta">&#169; 2026 Decoding Autism Now &#183; CC BY-NC 4.0 &#183; decodingautismnow.com</div>
+  </div>
+</footer>
+
+</body>
+</html>
