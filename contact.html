@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Decoding Autism Now</title>
+<meta name="description" content="Get in touch with Decoding Autism Now — for families, clinicians, researchers, and collaboration inquiries.">
+<meta property="og:title" content="Contact | Decoding Autism Now">
+<meta property="og:description" content="Get in touch with Decoding Autism Now — for families, clinicians, researchers, and collaboration inquiries.">
+<meta property="og:image" content="https://decodingautismnow.com/images/OG-index.png">
+<meta property="og:url" content="https://decodingautismnow.com/contact.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://decodingautismnow.com/images/OG-index.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:       #0f2342;
+    --teal:       #1e6b72;
+    --teal-light: #2a9da6;
+    --gold:       #c8923a;
+    --gold-light: #e8b86d;
+    --cream:      #faf7f2;
+    --warm-white: #ffffff;
+    --text-dark:  #1a1a2e;
+    --text-mid:   #3d4560;
+    --text-light: #6b7494;
+    --rule:       #d8cfc4;
+    --accent-bg:  #eef8f9;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  /* ── TOPBAR ─────────────────────────────────────── */
+  .topbar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: #0f2342;
+    border-bottom: 2px solid #c8923a;
+  }
+  .topbar-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+  }
+  .topbar-brand {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #2a9da6;
+    margin-bottom: 2px;
+  }
+  .topbar-title {
+    font-family: 'Source Serif 4', serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 70vw;
+  }
+  .ham-btn {
+    background: none;
+    border: 1px solid rgba(255,255,255,.28);
+    border-radius: 4px;
+    padding: 6px 10px;
+    cursor: pointer;
+    flex-shrink: 0;
+    line-height: 0;
+  }
+  .ham-btn:hover { border-color: rgba(255,255,255,.55); }
+  .ham-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.85);
+    margin-right: 7px;
+    vertical-align: middle;
+  }
+  .ham-bars { display: inline-flex; flex-direction: column; vertical-align: middle; gap: 4px; }
+  .ham-bars span { display: block; width: 18px; height: 2px; background: #fff; border-radius: 2px; }
+
+  /* ── NAV OVERLAY ─────────────────────────────────── */
+  .nav-dim {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 997;
+    background: rgba(15,35,66,.40);
+  }
+  .nav-dim.open { display: block; }
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    top: 57px; left: 0;
+    z-index: 998;
+    background: #fff;
+    border-right: 2px solid var(--gold);
+    border-bottom: 2px solid var(--gold);
+    box-shadow: 4px 4px 24px rgba(15,35,66,.16);
+    overflow-y: auto;
+    max-height: calc(100vh - 57px);
+    width: 560px;
+    padding: 24px 32px 36px;
+  }
+  .nav-overlay.open { display: block; }
+  .nav-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+  .nav-group { margin-bottom: 20px; }
+  .nav-group-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 8px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav-group a {
+    display: block;
+    font-family: 'Source Serif 4', serif;
+    font-size: 13px;
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(216,207,196,.35);
+    transition: color .12s;
+  }
+  .nav-group a:last-child { border-bottom: none; }
+  .nav-group a:hover { color: var(--teal); }
+  .nav-group a.current { color: var(--teal); font-weight: 600; }
+  @media (max-width: 720px) {
+    .nav-overlay { width: 100%; border-left: none; padding: 16px 20px 28px; }
+    .nav-cols { grid-template-columns: 1fr; gap: 0; }
+  }
+
+  /* ── HEADER ─────────────────────────────────────── */
+  .site-header {
+    background: var(--navy);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    margin-top: 57px;
+  }
+  .header-stripe {
+    height: 5px;
+    background: linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%);
+  }
+  .header-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 64px 20px 48px;
+    position: relative;
+    z-index: 1;
+  }
+  .header-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    margin-bottom: 12px;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 700;
+    line-height: 1.15;
+    color: #fff;
+    margin-bottom: 16px;
+  }
+  .hero-title .accent-line {
+    display: block;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--gold-light);
+  }
+  .header-subtitle {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.65);
+    max-width: 560px;
+    line-height: 1.6;
+  }
+
+  /* ── MAIN ────────────────────────────────────────── */
+  .main-wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 56px 20px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  @media (max-width: 720px) {
+    .main-wrap { grid-template-columns: 1fr; gap: 36px; }
+  }
+
+  /* ── INQUIRY TYPE CARDS ──────────────────────────── */
+  .inquiry-intro {
+    grid-column: 1 / -1;
+  }
+  .inquiry-intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .inquiry-intro p {
+    color: var(--text-mid);
+    max-width: 620px;
+    line-height: 1.7;
+  }
+
+  .inquiry-types {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+  @media (max-width: 720px) {
+    .inquiry-types { grid-template-columns: 1fr; }
+  }
+  .inquiry-card {
+    background: var(--warm-white);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 18px 20px;
+    cursor: pointer;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    position: relative;
+  }
+  .inquiry-card:hover { border-color: var(--teal); box-shadow: 0 2px 12px rgba(30,107,114,0.08); }
+  .inquiry-card.selected {
+    border-color: var(--teal);
+    border-width: 2px;
+    box-shadow: 0 2px 16px rgba(30,107,114,0.12);
+  }
+  .inquiry-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .inquiry-icon {
+    font-size: 22px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .inquiry-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .inquiry-desc {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.55;
+  }
+
+  /* ── FORM ────────────────────────────────────────── */
+  .form-col { }
+  .form-group { margin-bottom: 20px; }
+  .form-group label {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-mid);
+    margin-bottom: 6px;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    font-family: 'Source Serif 4', serif;
+    font-size: 15px;
+    color: var(--text-dark);
+    background: var(--warm-white);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 10px 14px;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    outline: none;
+    line-height: 1.5;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(30,107,114,0.1);
+  }
+  .form-group textarea { resize: vertical; min-height: 140px; }
+  .form-group select { cursor: pointer; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 520px) { .form-row { grid-template-columns: 1fr; } }
+
+  .submit-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: var(--teal);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 13px 28px;
+    cursor: pointer;
+    transition: background 0.15s;
+    width: 100%;
+    margin-top: 4px;
+  }
+  .submit-btn:hover { background: var(--navy); }
+  .submit-btn:disabled { background: var(--text-light); cursor: not-allowed; }
+
+  /* Success/error states */
+  .form-success {
+    display: none;
+    background: var(--accent-bg);
+    border: 1px solid var(--teal);
+    border-radius: 8px;
+    padding: 28px 24px;
+    text-align: center;
+  }
+  .form-success.visible { display: block; }
+  .form-success h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--teal);
+    margin-bottom: 8px;
+  }
+  .form-success p { color: var(--text-mid); font-size: 15px; }
+
+  /* ── SIDEBAR INFO ────────────────────────────────── */
+  .info-col { }
+  .info-block {
+    background: var(--warm-white);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+  .info-block-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .info-block h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .info-block p {
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.65;
+  }
+  .info-block p + p { margin-top: 8px; }
+  .info-block a { color: var(--teal); text-decoration: none; }
+  .info-block a:hover { text-decoration: underline; }
+  .response-time {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    color: var(--text-light);
+  }
+  .response-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--teal-light);
+    flex-shrink: 0;
+  }
+
+  /* ── DISCLAIMER ──────────────────────────────────── */
+  .framework-notice {
+    background: var(--navy);
+    border-top: 3px solid var(--gold);
+  }
+  .framework-notice-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px 20px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .notice-icon {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .notice-text {
+    font-size: 13px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.65;
+  }
+  .notice-text strong { color: rgba(255,255,255,0.9); }
+
+  /* ── FOOTER ──────────────────────────────────────── */
+  .site-footer { background: var(--navy); }
+  .footer-stripe {
+    height: 5px;
+    background: linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 50%, var(--gold) 100%);
+  }
+  .footer-inner { max-width: 960px; margin: 0 auto; padding: 48px 20px 36px; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.15fr 0.95fr;
+    gap: 34px;
+    align-items: start;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+  }
+  .footer-brand {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #2a9da6;
+    margin-bottom: 10px;
+  }
+  .footer-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: rgba(255,255,255,0.96);
+    margin-bottom: 8px;
+  }
+  .footer-tagline { color: rgba(255,255,255,0.55); font-size: 0.88rem; line-height: 1.6; }
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+    justify-content: flex-end;
+  }
+  .footer-link {
+    text-decoration: none;
+    color: rgba(255,255,255,0.88);
+    border: 1px solid rgba(255,255,255,0.16);
+    border-radius: 999px;
+    padding: 9px 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.15s;
+  }
+  .footer-link:hover { color: #2a9da6; border-color: #2a9da6; }
+  .footer-disclaimer {
+    color: rgba(255,255,255,0.45);
+    font-size: 0.82rem;
+    line-height: 1.6;
+    text-align: right;
+  }
+  .footer-bottom { padding-top: 18px; }
+  .footer-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.22);
+    line-height: 1.8;
+  }
+  @media (max-width: 720px) {
+    .footer-top { grid-template-columns: 1fr; }
+    .footer-links { justify-content: flex-start; }
+    .footer-disclaimer { text-align: left; }
+  }
+</style>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="294ecd79-19fb-4267-9be2-a7c83d57274d"></script>
+</head>
+<body>
+
+<div class="nav-dim" id="navDim"></div>
+
+<nav class="nav-overlay" id="navOverlay" aria-label="Site navigation">
+  <div class="nav-cols">
+    <div>
+      <div class="nav-group">
+        <div class="nav-group-label">Foundation</div>
+        <a href="index.html">Home Hub</a>
+        <a href="01_Molecular_Origins_Biology_of_Autism.html">01 — Molecular Origins</a>
+        <a href="01B_Pepsin_Opioid_Peptides_Biology_of_Autism.html">01B — Pepsin &amp; Opioid Peptides</a>
+        <a href="01C_CD26_Adenosine_Methylation_Biology_of_Autism.html">01C — CD26, Adenosine &amp; Methylation</a>
+        <a href="01D_Sex_Ratio_Estrogen_cAMP_Biology_of_Autism.html">01D — Sex Ratio &amp; Estrogen-cAMP Axis</a>
+        <a href="02_Cascade_Map_Biology_of_Autism.html">02 — Cascade Map</a>
+        <a href="03_Cascade_Explained_Biology_of_Autism.html">03 — Cascade Explained</a>
+        <a href="04_Gprotein_Cascade_Biology_of_Autism.html">04 — G-Protein Cascade</a>
+        <a href="04B_Unlocking_the_Brake_Biology_of_Autism.html">04B — Somatostatin Signals</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Pathways</div>
+        <a href="05_Metabolic_Pathways_Map_Biology_of_Autism.html">05 — Pathways Map</a>
+        <a href="06_Metabolic_Pathways_Explained_Biology_of_Autism.html">06 — Pathways Explained</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Testing</div>
+        <a href="07_Testing_Strategy_Biology_of_Autism.html">07 — Testing Strategy</a>
+        <a href="07B_Test_Reference_Biology_of_Autism.html">07B — Test Reference</a>
+        <a href="07C_Interpreting_Results_Biology_of_Autism.html">07C — Interpreting Results</a>
+        <a href="07D_Talking_to_Your_Doctor_Biology_of_Autism.html">07D — Talking to Your Doctor</a>
+        <a href="07R_Regressive_Autism_Testing_Biology_of_Autism.html">07R — Regression Testing</a>
+      </div>
+    </div>
+    <div>
+      <div class="nav-group">
+        <div class="nav-group-label">Interventions</div>
+        <a href="08_Intervention_Logic_Biology_of_Autism.html">08 — Intervention Logic</a>
+        <a href="14_Immunoglobulin_Therapy_Biology_of_Autism.html">14 — Immunoglobulin Therapy</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Context</div>
+        <a href="09_FAQ_Biology_of_Autism.html">09 — FAQ</a>
+        <a href="11_Vaccine_Question_Biology_of_Autism.html">11 — Vaccine Question</a>
+        <a href="12_Parents_Guide_Biology_of_Autism.html">12 — Parents Guide</a>
+        <a href="12B_Autism_101_Biology_of_Autism.html">12B — Autism 101</a>
+        <a href="13_Clinician_Guide_Biology_of_Autism.html">13 — Clinician Guide</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Evidence</div>
+        <a href="10_Evidence_and_Citations_Biology_of_Autism.html">10 — Evidence &amp; Citations</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Other Sections</div>
+        <a href="imig/imig-overview.html">IMIG Clinical Trial</a>
+        <a href="imig/mechanism.html">— The Mechanism</a>
+        <a href="imig/evidence.html">— The Evidence</a>
+        <a href="imig/trial.html">— The Trial</a>
+        <a href="research/research-articles.html">Research Articles</a>
+        <a href="contact.html" class="current">Contact</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <div class="topbar-brand">Decoding Autism Now</div>
+      <div class="topbar-title">Contact</div>
+    </div>
+    <button class="ham-btn" id="hamBtn" aria-label="Open navigation" aria-expanded="false">
+      <span class="ham-label">Menu</span>
+      <span class="ham-bars"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="header-stripe"></div>
+  <div class="header-inner">
+    <div class="header-eyebrow">Decoding Autism Now</div>
+    <h1 class="hero-title">Get in touch<span class="accent-line">We read every message</span></h1>
+    <p class="header-subtitle">Whether you are a family navigating a new diagnosis, a clinician with a clinical question, or a researcher interested in the IDA framework — there is a place for your inquiry here.</p>
+  </div>
+</header>
+
+<main class="main-wrap">
+
+  <div class="inquiry-intro">
+    <h2>What brings you here?</h2>
+    <p>Select the category that best fits your inquiry. This helps us direct your message to the right person and respond more usefully.</p>
+  </div>
+
+  <!-- Inquiry type selector -->
+  <div class="inquiry-types" id="inquiryTypes">
+    <label class="inquiry-card selected" id="card-family">
+      <input type="radio" name="inquiry_type" value="Family / Parent" checked>
+      <span class="inquiry-icon">👨‍👩‍👧</span>
+      <span class="inquiry-label">Family / Parent</span>
+      <span class="inquiry-desc">Questions about the IDA framework, the cascade, supplements, or finding a clinician familiar with this approach.</span>
+    </label>
+    <label class="inquiry-card" id="card-clinician">
+      <input type="radio" name="inquiry_type" value="Clinician / Researcher">
+      <span class="inquiry-icon">🔬</span>
+      <span class="inquiry-label">Clinician / Researcher</span>
+      <span class="inquiry-desc">Scientific questions, clinical implementation, or interest in the research program and framework documentation.</span>
+    </label>
+    <label class="inquiry-card" id="card-collab">
+      <input type="radio" name="inquiry_type" value="Collaboration / Media">
+      <span class="inquiry-icon">🤝</span>
+      <span class="inquiry-label">Collaboration / Media</span>
+      <span class="inquiry-desc">Research collaboration, speaking, media inquiries, or partnership opportunities related to the IDA program.</span>
+    </label>
+  </div>
+
+  <!-- Contact form -->
+  <div class="form-col">
+    <form id="contactForm" action="https://formspree.io/f/xqevnbyj" method="POST">
+
+      <!-- Hidden field carries the selected inquiry type -->
+      <input type="hidden" name="inquiry_type" id="hiddenInquiryType" value="Family / Parent">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="firstName">First name *</label>
+          <input type="text" id="firstName" name="first_name" required placeholder="First name">
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last name *</label>
+          <input type="text" id="lastName" name="last_name" required placeholder="Last name">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email address *</label>
+        <input type="email" id="email" name="email" required placeholder="your@email.com">
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject *</label>
+        <input type="text" id="subject" name="subject" required placeholder="Brief description of your inquiry">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" required placeholder="Please share as much context as you find helpful. For families, including your child's age and primary concerns helps us respond more usefully."></textarea>
+      </div>
+
+      <!-- Honeypot anti-spam field — hidden from humans -->
+      <input type="text" name="_gotcha" style="display:none">
+
+      <!-- Formspree redirect after submission -->
+      <input type="hidden" name="_next" value="https://decodingautismnow.com/contact-thanks.html">
+
+      <button type="submit" class="submit-btn" id="submitBtn">Send message</button>
+
+    </form>
+
+    <!-- Success message shown via JS if no redirect -->
+    <div class="form-success" id="formSuccess">
+      <h3>Message received</h3>
+      <p>Thank you for reaching out. We read every message and will respond as promptly as we can — typically within a few business days.</p>
+    </div>
+  </div>
+
+  <!-- Sidebar info -->
+  <div class="info-col">
+
+    <div class="info-block">
+      <div class="info-block-label">About this site</div>
+      <h3>Decoding Autism Now</h3>
+      <p>Decoding Autism Now publishes the Biology of Autism (BoA) / Immune-Derived Autism (IDA) framework — a systems-biology cascade model connecting gut pH dysregulation, immune activation, IDO1/kynurenine pathway dysregulation, SST-14 interneuron suppression, and neuropeptide cascade failure to the observable ASD phenotype.</p>
+      <p>All framework documentation is available at no cost at <a href="index.html">decodingautismnow.com</a>.</p>
+      <div class="response-time">
+        <span class="response-dot"></span>
+        Typical response: within a few business days
+      </div>
+    </div>
+
+    <div class="info-block">
+      <div class="info-block-label">For families</div>
+      <h3>Where to start</h3>
+      <p>If you are new to the framework, the <a href="12_Parents_Guide_Biology_of_Autism.html">Parent's Guide</a> and <a href="09_FAQ_Biology_of_Autism.html">FAQ</a> pages are the best starting points. The <a href="research/l179-three-intervention-model.html">L1-79 analysis</a> includes a <a href="research/L179_Parent_Guide_2026.pdf">downloadable plain-language PDF</a> written for families to share with their child's physician.</p>
+    </div>
+
+    <div class="info-block">
+      <div class="info-block-label">For clinicians &amp; researchers</div>
+      <h3>Framework documentation</h3>
+      <p>The full cascade model is documented across the <a href="index.html">Biology of Autism suite</a>. Peer-reviewed anchor publication: Fourie &amp; Armstrong, <em>Medical Research Archives</em> 12(10), 2024. <a href="https://doi.org/10.18103/mra.v12i10.5984" target="_blank" rel="noopener">doi:10.18103/mra.v12i10.5984</a></p>
+    </div>
+
+    <div class="info-block">
+      <div class="info-block-label">Important</div>
+      <h3>Not clinical guidance</h3>
+      <p>Decoding Autism Now does not provide medical advice, diagnosis, or treatment recommendations for individual cases. All clinical decisions require qualified physician oversight. The IDA framework is a research-informed theoretical model.</p>
+    </div>
+
+  </div>
+
+</main>
+
+<aside class="framework-notice" role="note">
+  <div class="framework-notice-inner">
+    <div class="notice-icon">i</div>
+    <p class="notice-text">
+      <strong>Theoretical framework — not clinical guidance.</strong>
+      The Biology of Autism / IDA cascade is a systems-biology model integrating peer-reviewed findings across immunology, metabolism, gut biology, and neuroscience into a proposed mechanistic map. Individual components are supported by published research; the full integrated cascade has not been validated as a unified model in large clinical trials. It is intended as a research-informed framework — not a diagnostic tool or treatment protocol. All intervention decisions require qualified clinical oversight.
+    </p>
+  </div>
+</aside>
+
+<footer class="site-footer">
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">Decoding Autism Now</p>
+        <h2 class="footer-title">Contact</h2>
+        <p class="footer-tagline">Translating autism biology for families, clinicians, and researchers.</p>
+      </div>
+      <div>
+        <div class="footer-links">
+          <a class="footer-link" href="index.html">Home</a>
+          <a class="footer-link" href="contact.html">Contact</a>
+          <a class="footer-link" href="09_FAQ_Biology_of_Autism.html">FAQ</a>
+          <a class="footer-link" href="research/research-articles.html">Research</a>
+          <a class="footer-link" href="imig/imig-overview.html">IMIG Trial</a>
+        </div>
+        <p class="footer-disclaimer">This content is for informational purposes only and should not be considered medical advice, diagnosis, or treatment. Always consult with a qualified healthcare professional before making any changes to care or treatment.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-meta" style="color:rgba(255,255,255,0.40); margin-top:10px;">© 2026 Decoding Autism Now | All content is shared with families, clinicians and researchers for educational purposes under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.55); text-decoration:underline;">Creative Commons CC BY-NC 4.0</a> — free to share with attribution, not for commercial use.</p>
+      <p class="footer-meta">Contact | Decoding Autism Now</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Nav hamburger
+  var btn = document.getElementById('hamBtn');
+  var overlay = document.getElementById('navOverlay');
+  var dim = document.getElementById('navDim');
+  if (btn) {
+    function openNav() { overlay.classList.add('open'); dim.classList.add('open'); btn.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+    function closeNav() { overlay.classList.remove('open'); dim.classList.remove('open'); btn.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+    btn.addEventListener('click', function(){ overlay.classList.contains('open') ? closeNav() : openNav(); });
+    dim.addEventListener('click', closeNav);
+    overlay.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeNav); });
+    document.addEventListener('keydown', function(e){ if (e.key==='Escape') closeNav(); });
+  }
+
+  // Inquiry type card selection
+  var cards = document.querySelectorAll('.inquiry-card');
+  var hiddenField = document.getElementById('hiddenInquiryType');
+  cards.forEach(function(card) {
+    card.addEventListener('click', function() {
+      cards.forEach(function(c){ c.classList.remove('selected'); });
+      card.classList.add('selected');
+      var radio = card.querySelector('input[type="radio"]');
+      if (radio) {
+        radio.checked = true;
+        hiddenField.value = radio.value;
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
