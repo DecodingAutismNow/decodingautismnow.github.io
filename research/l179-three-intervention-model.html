@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L1-79 and the Three-Intervention Model | Decoding Autism Now</title>
+<meta name="description" content="What the first drug to show clinical improvement in autism's core symptoms reveals about the IDA cascade — and why it might only be part of the answer.">
+<meta property="og:title" content="L1-79 and the Three-Intervention Model | Decoding Autism Now">
+<meta property="og:description" content="A complete mechanistic analysis of L1-79, the IDA cascade, and the synergy hypothesis for combination therapy with IMIG and the priming protocol.">
+<meta property="og:url" content="https://decodingautismnow.com/research/l179-three-intervention-model.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://decodingautismnow.com/images/OG-l179-three-intervention-model.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:      #0f2342;
+    --teal:      #1e6b72;
+    --teal-light:#2a9da6;
+    --gold:      #c8923a;
+    --gold-light:#e8b86d;
+    --cream:     #faf7f2;
+    --bg:        #f7f5f0;
+    --ink:       #1a1a2e;
+    --text-mid:  #3d4560;
+    --text-light:#6b7494;
+    --rule:      #d8cfc4;
+  }
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; background:#0f2342; }
+  body { background:var(--bg); font-family:'Source Serif 4',Georgia,serif; color:var(--ink); font-size:16px; line-height:1.8; }
+
+  /* Topbar */
+  .topbar { position:fixed; top:0; left:0; right:0; background:var(--navy); border-bottom:2px solid var(--gold); z-index:1000; }
+  .topbar-inner { max-width:960px; margin:0 auto; padding:10px 20px; display:flex; justify-content:space-between; align-items:center; gap:18px; }
+  .topbar-brand { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:var(--teal-light); margin-bottom:2px; }
+  .topbar-title { font-family:'Source Serif 4',Georgia,serif; font-size:13px; font-weight:600; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:70vw; }
+  .ham-btn { background:none; border:1px solid rgba(255,255,255,.28); border-radius:4px; padding:6px 10px; cursor:pointer; flex-shrink:0; line-height:0; }
+  .ham-btn:hover { border-color:rgba(255,255,255,.55); }
+  .ham-label { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.85); margin-right:7px; vertical-align:middle; }
+  .ham-bars { display:inline-flex; flex-direction:column; vertical-align:middle; gap:4px; }
+  .ham-bars span { display:block; width:18px; height:2px; background:#fff; border-radius:2px; }
+
+  /* Nav overlay */
+  .nav-dim { display:none; position:fixed; inset:0; z-index:997; background:rgba(15,35,66,.40); }
+  .nav-dim.open { display:block; }
+  .nav-overlay { display:none; position:fixed; top:57px; left:0; z-index:998; background:#fff; border-right:2px solid var(--gold); border-bottom:2px solid var(--gold); box-shadow:4px 4px 24px rgba(15,35,66,.16); overflow-y:auto; max-height:calc(100vh - 57px); width:560px; padding:24px 32px 36px; }
+  .nav-overlay.open { display:block; }
+  .nav-cols { display:grid; grid-template-columns:1fr 1fr; gap:0 40px; }
+  .nav-group { margin-bottom:20px; }
+  .nav-group-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:var(--teal); margin-bottom:8px; padding-bottom:5px; border-bottom:1px solid var(--rule); }
+  .nav-group a { display:block; font-family:'Source Serif 4',serif; font-size:13px; color:var(--ink); text-decoration:none; padding:5px 0; border-bottom:1px solid rgba(216,207,196,.35); transition:color .12s; }
+  .nav-group a:last-child { border-bottom:none; }
+  .nav-group a:hover { color:var(--teal); }
+  .nav-group a.current { color:var(--teal); font-weight:600; }
+  @media (max-width:720px) { .nav-overlay { width:100%; border-left:none; padding:16px 20px 28px; } .nav-cols { grid-template-columns:1fr; gap:0; } }
+
+  /* Header */
+  .site-header { margin-top:57px; background:var(--navy); color:#fff; position:relative; overflow:hidden; }
+  .header-stripe { height:5px; background:linear-gradient(90deg,#1e6b72 0%,#2a9da6 50%,#c8923a 100%); }
+  .header-inner { max-width:960px; margin:0 auto; padding:70px 20px 50px; }
+  .header-eyebrow { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:var(--teal-light); margin-bottom:14px; }
+  .header-title { font-family:'Playfair Display',Georgia,serif; font-size:clamp(32px,4vw,52px); font-weight:700; line-height:1.15; color:#fff; margin:0 0 10px; }
+  .header-accent { display:block; color:var(--gold-light); font-style:italic; font-weight:400; }
+  .header-sub { font-size:1.05rem; color:rgba(255,255,255,0.72); line-height:1.7; max-width:680px; margin-top:14px; }
+  .header-status { display:inline-flex; align-items:center; gap:8px; margin-top:28px; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold-light); border:1px solid rgba(232,184,109,0.35); border-radius:999px; padding:7px 16px; }
+  .status-dot { width:7px; height:7px; border-radius:50%; background:var(--gold-light); }
+
+  /* Breadcrumb */
+  .breadcrumb { background:#fff; border-bottom:1px solid var(--rule); padding:10px 20px; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; color:var(--text-light); }
+  .breadcrumb a { color:var(--teal); text-decoration:none; }
+  .breadcrumb a:hover { text-decoration:underline; }
+  .breadcrumb span { margin:0 6px; }
+
+  /* Main */
+  .main-wrap { max-width:960px; margin:0 auto; padding:56px 20px 80px; }
+
+  /* Section divider */
+  .section-divider { display:flex; align-items:center; gap:16px; margin:0 0 36px; }
+  .section-divider-line { flex:1; height:1px; background:var(--rule); }
+  .section-divider-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.18em; text-transform:uppercase; color:var(--text-light); white-space:nowrap; }
+
+  /* TOC */
+  .toc-wrap { background:#fff; border:1px solid var(--rule); border-radius:8px; padding:24px 28px; margin-bottom:48px; }
+  .toc-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.18em; text-transform:uppercase; color:var(--text-light); margin-bottom:14px; }
+  .toc-grid { display:grid; grid-template-columns:1fr 1fr; gap:4px 32px; }
+  .toc-grid a { font-family:'Source Serif 4',serif; font-size:14px; color:var(--teal); text-decoration:none; padding:4px 0; border-bottom:1px solid rgba(216,207,196,.35); display:block; }
+  .toc-grid a:hover { color:var(--navy); }
+  @media (max-width:600px) { .toc-grid { grid-template-columns:1fr; } }
+
+  /* Body typography */
+  .body-section { margin-bottom:56px; }
+  .body-section h2 { font-family:'Playfair Display',Georgia,serif; font-size:1.65rem; font-weight:700; color:var(--navy); margin-bottom:6px; line-height:1.25; }
+  .body-section .section-num { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.18em; text-transform:uppercase; color:var(--teal-light); margin-bottom:8px; }
+  .body-section h3 { font-family:'Playfair Display',serif; font-size:1.15rem; font-weight:700; color:var(--teal); margin:28px 0 10px; }
+  .body-section p { margin-bottom:16px; color:var(--text-mid); line-height:1.8; }
+  .body-section p strong { color:var(--ink); }
+  .body-section ul { padding-left:20px; margin-bottom:16px; }
+  .body-section li { margin-bottom:10px; color:var(--text-mid); line-height:1.7; }
+  .body-section li strong { color:var(--ink); }
+
+  /* Rule under h2 */
+  .h2-rule { height:2px; background:linear-gradient(90deg,var(--teal) 0%,transparent 100%); margin-bottom:24px; }
+
+  /* Note box */
+  .note-box { background:rgba(200,146,58,0.07); border-left:3px solid var(--gold); border-radius:0 6px 6px 0; padding:16px 20px; margin:24px 0; }
+  .note-box-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); margin-bottom:8px; }
+  .note-box p { font-size:0.9rem; color:var(--text-mid); line-height:1.7; margin:0; }
+  .note-box p + p { margin-top:8px; }
+
+  /* Pull quote */
+  .pull-quote { border-left:3px solid var(--teal); padding:12px 20px; margin:24px 0; font-style:italic; font-size:1.05rem; color:var(--teal); line-height:1.6; }
+
+  /* Triad cards */
+  .triad { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; margin:24px 0; }
+  .triad-card { background:#fff; border:1px solid var(--rule); border-radius:8px; padding:20px; position:relative; overflow:hidden; }
+  .triad-card-stripe { position:absolute; top:0; left:0; right:0; height:3px; }
+  .tc-coral .triad-card-stripe { background:#8b3a24; }
+  .tc-teal .triad-card-stripe { background:var(--teal); }
+  .tc-purple .triad-card-stripe { background:#4a3a8a; }
+  .triad-card h4 { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:8px; }
+  .tc-coral h4 { color:#8b3a24; }
+  .tc-teal h4 { color:var(--teal); }
+  .tc-purple h4 { color:#4a3a8a; }
+  .triad-card p { font-size:0.85rem; color:var(--text-mid); line-height:1.6; margin:0; }
+  @media (max-width:680px) { .triad { grid-template-columns:1fr; } }
+
+  /* State table */
+  .state-table { width:100%; border-collapse:collapse; margin:20px 0; font-size:0.88rem; }
+  .state-table th { background:var(--navy); color:#fff; font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.12em; text-transform:uppercase; padding:10px 14px; text-align:left; }
+  .state-table td { padding:12px 14px; border-bottom:1px solid var(--rule); vertical-align:top; line-height:1.6; color:var(--text-mid); }
+  .state-table tr:nth-child(even) td { background:#fff; }
+  .state-badge { font-family:'DM Mono',monospace; font-size:9px; font-weight:bold; letter-spacing:0.08em; padding:3px 8px; border-radius:999px; white-space:nowrap; }
+  .s1 { background:#d4edda; color:#155724; }
+  .s2 { background:#fff3cd; color:#856404; }
+  .s3 { background:#f8d7da; color:#721c24; }
+
+  /* Outcomes grid */
+  .outcomes { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin:20px 0; }
+  .outcome-item { background:#fff; border:1px solid var(--rule); border-radius:6px; padding:14px; }
+  .outcome-item strong { display:block; font-family:'DM Mono',monospace; font-size:9px; text-transform:uppercase; letter-spacing:0.1em; color:var(--teal); margin-bottom:6px; }
+  .outcome-item span { font-size:0.85rem; color:var(--text-mid); line-height:1.55; }
+  @media (max-width:680px) { .outcomes { grid-template-columns:1fr; } }
+
+  /* Gap items */
+  .gap-item { background:#fff; border:1px solid var(--rule); border-left:3px solid var(--gold); border-radius:0 8px 8px 0; padding:16px 20px; margin-bottom:16px; }
+  .gap-item h4 { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); margin-bottom:8px; }
+  .gap-item p { font-size:0.88rem; color:var(--text-mid); line-height:1.7; margin:0; }
+
+  /* Results table */
+  .results-table { width:100%; border-collapse:collapse; margin:20px 0; font-size:0.88rem; }
+  .results-table th { background:rgba(30,107,114,0.1); color:var(--teal); font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.12em; text-transform:uppercase; padding:10px 14px; text-align:left; border-bottom:2px solid var(--teal); }
+  .results-table td { padding:10px 14px; border-bottom:1px solid var(--rule); vertical-align:top; color:var(--text-mid); }
+  .results-table td:first-child { font-weight:600; color:var(--ink); }
+  .sig { color:#155724; font-family:'DM Mono',monospace; font-size:10px; }
+  .trend { color:#856404; font-family:'DM Mono',monospace; font-size:10px; }
+  .ns { color:var(--text-light); font-family:'DM Mono',monospace; font-size:10px; }
+
+  /* Footer */
+  .site-footer { background:var(--navy); }
+  .footer-stripe { height:5px; background:linear-gradient(90deg,#1e6b72 0%,#2a9da6 50%,#c8923a 100%); }
+  .footer-inner { max-width:960px; margin:0 auto; padding:48px 20px 36px; }
+  .footer-top { display:grid; grid-template-columns:1.15fr 0.95fr; gap:34px; align-items:start; padding-bottom:24px; border-bottom:1px solid rgba(255,255,255,0.10); }
+  .footer-brand { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#2a9da6; margin-bottom:10px; }
+  .footer-title { font-family:'Playfair Display',serif; font-size:1.3rem; color:rgba(255,255,255,0.96); margin-bottom:8px; }
+  .footer-tagline { color:rgba(255,255,255,0.55); font-size:0.88rem; line-height:1.6; }
+  .footer-links { display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-end; margin-bottom:12px; }
+  .footer-link { text-decoration:none; color:rgba(255,255,255,0.88); border:1px solid rgba(255,255,255,0.16); border-radius:999px; padding:7px 13px; font-size:0.85rem; font-weight:600; transition:all 0.15s; }
+  .footer-link:hover { color:#2a9da6; border-color:#2a9da6; }
+  .footer-disclaimer { color:rgba(255,255,255,0.45); font-size:0.82rem; line-height:1.6; text-align:right; }
+  .footer-bottom { padding-top:18px; }
+  .footer-meta { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.22); }
+  @media (max-width:720px) { .footer-top { grid-template-columns:1fr; } .footer-links { justify-content:flex-start; } .footer-disclaimer { text-align:left; } }
+</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://decodingautismnow.com/images/OG-l179-three-intervention-model.png">
+</head>
+<body>
+
+<div class="nav-dim" id="navDim"></div>
+<nav class="nav-overlay" id="navOverlay" aria-label="Site navigation">
+  <div class="nav-cols">
+    <div>
+      <div class="nav-group">
+        <div class="nav-group-label">Foundation</div>
+        <a href="../index.html">Home Hub</a>
+        <a href="../01_Molecular_Origins_Biology_of_Autism.html">01 — Molecular Origins</a>
+        <a href="../01B_Pepsin_Opioid_Peptides_Biology_of_Autism.html">01B — Pepsin &amp; Opioid Peptides</a>
+        <a href="../01C_CD26_Adenosine_Methylation_Biology_of_Autism.html">01C — CD26, Adenosine &amp; Methylation</a>
+        <a href="../01D_Sex_Ratio_Estrogen_cAMP_Biology_of_Autism.html">01D — Sex Ratio &amp; Estrogen-cAMP Axis</a>
+        <a href="../02_Cascade_Map_Biology_of_Autism.html">02 — Cascade Map</a>
+        <a href="../03_Cascade_Explained_Biology_of_Autism.html">03 — Cascade Explained</a>
+        <a href="../04_Gprotein_Cascade_Biology_of_Autism.html">04 — G-Protein Cascade</a>
+        <a href="../04B_Unlocking_the_Brake_Biology_of_Autism.html">04B — Unlocking the Brake</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Pathways</div>
+        <a href="../05_Metabolic_Pathways_Map_Biology_of_Autism.html">05 — Pathways Map</a>
+        <a href="../06_Metabolic_Pathways_Explained_Biology_of_Autism.html">06 — Pathways Explained</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Testing</div>
+        <a href="../07_Testing_Strategy_Biology_of_Autism.html">07 — Testing Strategy</a>
+        <a href="../07B_Test_Reference_Biology_of_Autism.html">07B — Test Reference</a>
+        <a href="../07C_Interpreting_Results_Biology_of_Autism.html">07C — Interpreting Results</a>
+        <a href="../07D_Talking_to_Your_Doctor_Biology_of_Autism.html">07D — Talking to Your Doctor</a>
+        <a href="../07R_Regressive_Autism_Testing_Biology_of_Autism.html">07R — Regression Testing</a>
+      </div>
+    </div>
+    <div>
+      <div class="nav-group">
+        <div class="nav-group-label">Interventions</div>
+        <a href="../08_Intervention_Logic_Biology_of_Autism.html">08 — Intervention Logic</a>
+        <a href="../14_Immunoglobulin_Therapy_Biology_of_Autism.html">14 — Immunoglobulin Therapy</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Context</div>
+        <a href="../09_FAQ_Biology_of_Autism.html">09 — FAQ</a>
+        <a href="../11_Vaccine_Question_Biology_of_Autism.html">11 — Vaccine Question</a>
+        <a href="../12_Parents_Guide_Biology_of_Autism.html">12 — Parents Guide</a>
+        <a href="../12B_Autism_101_Biology_of_Autism.html">12B — Autism 101</a>
+        <a href="../13_Clinician_Guide_Biology_of_Autism.html">13 — Clinician Guide</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Other Sections</div>
+        <a href="../imig/imig-overview.html">IMIG Clinical Trial</a>
+        <a href="research-articles.html">Research Articles</a>
+        <a href="l179-three-intervention-model.html" class="current">L1-79 Analysis</a>
+        <a href="../10_Evidence_and_Citations_Biology_of_Autism.html">Evidence &amp; Citations</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <div class="topbar-brand">Decoding Autism Now</div>
+      <div class="topbar-title">L1-79 and the Three-Intervention Model</div>
+    </div>
+    <button class="ham-btn" id="hamBtn" aria-label="Open navigation" aria-expanded="false">
+      <span class="ham-label">Menu</span>
+      <span class="ham-bars"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</div>
+
+<div class="breadcrumb">
+  <a href="../index.html">Home</a><span>›</span>
+  <a href="research-articles.html">Research Articles</a><span>›</span>
+  L1-79 and the Three-Intervention Model
+</div>
+
+<header class="site-header">
+  <div class="header-stripe"></div>
+  <div class="header-inner">
+    <div class="header-eyebrow">Research Analysis · July 2026</div>
+    <h1 class="header-title">L1-79 and the Three-Intervention Model<span class="header-accent">What the first autism drug reveals about the IDA cascade — and why it might only be part of the answer</span></h1>
+    <p class="header-sub">A complete mechanistic analysis of Yamo Pharmaceuticals' Phase 2 results, the Vineland-3 subdomain pattern as IDA-confirmatory evidence, long-term risk considerations, and the synergy hypothesis for combination therapy with the IMIG priming protocol and IMIG therapy.</p>
+    <div class="header-status"><span class="status-dot"></span>Clinical Analysis · Decoding Autism Now · July 2026</div>
+  </div>
+</header>
+
+<main class="main-wrap">
+
+  <!-- TOC -->
+  <div class="toc-wrap">
+    <div class="toc-label">Contents</div>
+    <div class="toc-grid">
+      <a href="#cascade">1. What is happening inside the body</a>
+      <a href="#consequences">2. When the regulatory system fails</a>
+      <a href="#l179">3. What L1-79 does — and why it helps</a>
+      <a href="#limits">4. What L1-79 cannot fix</a>
+      <a href="#triad">5. The three-intervention model</a>
+      <a href="#window">6. The window of reversibility</a>
+      <a href="#gaps">7. Remaining program gaps</a>
+      <a href="#status">8. Current research status</a>
+      <a href="#download">9. Download parent guide (PDF)</a>
+    </div>
+  </div>
+
+  <!-- SECTION 1 -->
+  <div class="body-section" id="cascade">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Section 01 — The cascade</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Section 01</div>
+    <h2>What is happening inside the body</h2>
+    <div class="h2-rule"></div>
+
+    <p>The brain maintains its regulatory balance through a group of specialized cells called <strong>SST-14 interneurons</strong> — the traffic controllers of cortical and limbic function. Their job is to prevent signaling from running too fast and too loud, to filter sensory input, and to coordinate the release of the social hormones that make connection feel rewarding. In immune-derived autism, these cells cannot produce enough somatostatin because the instructions to make it are blocked at the genetic level.</p>
+
+    <p>The methylation cycle — the body's system for switching genes on and off using a methyl donor called SAM (S-adenosylmethionine) — is insufficiently functional to maintain SST-14 transcription under the metabolic load the cascade imposes. In some individuals, constitutional genetic variants in enzymes like <strong>AHCY (adenosylhomocysteinase)</strong> further reduce the methylation floor available, making the individual more susceptible to cascade progression under any inflammatory insult.</p>
+
+    <h3>Multiple upstream insults — insufficient metabolic headroom</h3>
+
+    <p>The cascade can be entered from several upstream sources. What determines whether progression occurs is not any single insult but whether the individual has sufficient metabolic headroom to absorb it. These upstream insults include:</p>
+
+    <ul>
+      <li><strong>Gut microbiome disruption and impaired protein digestion</strong> — often following repeated early antibiotic courses — produces opioid-like peptides (casomorphins, gliadorphins) and LPS translocation that activate the immune system and drive the downstream cascade.</li>
+      <li><strong>Environmental toxin exposure</strong> — heavy metals, organophosphate pesticides, and phthalates directly impair methylation cycle function and mitochondrial integrity, reducing available headroom before any other insult occurs.</li>
+      <li><strong>Maternal immune activation during pregnancy</strong> — inflammatory conditions in the mother can pre-load the IDO1/kynurenine pathway in the developing fetus, reducing headroom from the beginning of life.</li>
+      <li><strong>Concentrated immune activation events in genetically susceptible individuals</strong> — in children with reduced metabolic reserve due to constitutional methylation impairment or other genetic factors, any concentrated immune activation during a critical developmental window may be sufficient to tip the cascade. This is a statement about individual susceptibility, not population-level causation.</li>
+    </ul>
+
+    <p>Whatever the triggering source, the downstream mechanism is the same. Chronic immune activation switches on <strong>IDO1 (indoleamine 2,3-dioxygenase 1)</strong>, which diverts tryptophan away from serotonin production into the kynurenine pathway. One product — <strong>quinolinic acid</strong> — is directly neurotoxic to SST-14 interneurons in excess. Simultaneously, NF-κB inflammatory signaling competes with CREB at the CBP coactivator, blocking SST-14 promoter transcription. The traffic controller cells lose from both directions at once.</p>
+
+    <div class="note-box">
+      <div class="note-box-label">Framework note</div>
+      <p>The Biology of Autism cascade model — developed at Decoding Autism Now — maps this full chain of events from multiple upstream insults through immune activation, IDO1, methylation failure, and SST-14 suppression to the observable clinical phenotype. Every mechanistic step is independently grounded in published and reproducible science. The full cascade documentation is available in <em>The Anatomy of Autism</em> at decodingautismnow.com.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="body-section" id="consequences">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Section 02 — Regulatory failure</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Section 02</div>
+    <h2>When the regulatory system fails</h2>
+    <div class="h2-rule"></div>
+
+    <p>When SST-14 production falls, several things happen simultaneously. Understanding them explains the specific clinical pattern of immune-derived autism — including which social skills are most affected and why.</p>
+
+    <h3>Catecholamine excess</h3>
+    <p>Dopamine and norepinephrine build up because the SST-14 regulatory braking system has been removed. This excess produces sensory overload, difficulty filtering social information, heightened anxiety, and behavioral patterns that reflect a nervous system running without adequate regulatory architecture.</p>
+
+    <h3>The neuropeptide triad fails</h3>
+    <p>Three hormones — VIP, oxytocin, and secretin — are all downstream of SST-14 interneuron function. Their failure produces the most clinically recognizable features of the IDA phenotype, yet they are almost entirely absent from mainstream autism treatment discussions.</p>
+
+    <ul>
+      <li><strong>VIP (vasoactive intestinal peptide)</strong> — despite its name, VIP is the upstream conductor of the entire social neuropeptide architecture. It synchronizes cortical oscillations in the gamma frequency range (30–80 Hz) that underlie coherent social perception, face processing, and the integration of sensory streams into unified social experience. VIP neurons in the hypothalamus provide the primary drive to oxytocin-releasing paraventricular nucleus neurons — VIP tells the hypothalamus when and how much oxytocin to release in response to social context. VIP is also the master signal of the suprachiasmatic nucleus, governing circadian clock synchronization. Without VIP, cortical timing degrades, oxytocin release becomes unpredictable, and circadian rhythm loses its synchronization signal.</li>
+      <li><strong>Oxytocin</strong> governs affiliative bonding, social trust, reciprocal engagement, and the reward encoding of social experience. It must be released at the right moment, in the right amount, in response to social context — a function driven by VIP. This is why exogenous oxytocin nasal spray has produced inconsistent results in clinical trials: adding substrate into a system whose release architecture is broken does not reliably restore function.</li>
+      <li><strong>Secretin</strong> coordinates gut-brain neuropeptide signaling, pancreatic enzyme release, and intestinal motility. The 1998 Horvath observation of behavioral improvement following secretin infusion during endoscopy generated significant clinical interest. Subsequent controlled trials were inconsistent — because secretin is one element of a three-part coordinating system. Administering it without restoring VIP and oxytocin is a one-legged intervention into a three-legged architecture.</li>
+    </ul>
+
+    <div class="pull-quote">The one-legged stool principle: single-pathway interventions against a multi-tier regulatory cascade consistently produce partial, unstable, non-reproducible outcomes. This applies to secretin trials, to exogenous oxytocin, and — as detailed below — to L1-79 monotherapy.</div>
+
+    <h3>Gut SST-28 overactivity</h3>
+    <p>The gut isoform of somatostatin — <strong>SST-28</strong>, produced by intestinal D-cells — runs in the opposite direction from brain SST-14. Where brain SST-14 is suppressed and producing too little, gut SST-28 is overdriven and not being properly turned off. Multiple mechanisms contribute simultaneously:</p>
+    <ul>
+      <li>Opioid peptides from incomplete casein and gluten digestion activate mu-opioid receptors on gut D-cells, driving SST-28 into excess output</li>
+      <li>Chronic cortisol elevation from constitutively active HPA axis activation maintains the gut's stress-induced appetite suppression signal continuously rather than only during actual stress</li>
+      <li>Zinc deficiency removes the mineral-dependent pulsatile regulation of SST-28 release, allowing it to run without its normal moderator</li>
+      <li>Gut dysbiosis — particularly Clostridia overgrowth — produces metabolites that directly stimulate D-cell SST-28 secretion independently of the opioid peptide pathway</li>
+    </ul>
+    <p>The result is chronic appetite suppression, restricted dietary tolerance, slowed motility, reduced gastric acid output, and impaired digestive coordination — not behavioral in origin but metabolic.</p>
+
+    <h3>Sleep disruption</h3>
+    <p>VIP is the principal neurotransmitter of the suprachiasmatic nucleus. When VIP drive is impaired, SCN synchronization fails — producing the near-universal sleep disruption in IDA that is typically attributed to melatonin deficiency but is more accurately a VIP-driven circadian clock failure. Melatonin supplementation addresses the downstream consequence; VIP restoration is the mechanism.</p>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="body-section" id="l179">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Section 03 — L1-79 mechanism and evidence</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Section 03</div>
+    <h2>What L1-79 does — and why it helps</h2>
+    <div class="h2-rule"></div>
+
+    <p>L1-79 (DL-α-methyltyrosine; AMPT) is an oral <strong>tyrosine hydroxylase (TH) inhibitor</strong> developed by Yamo Pharmaceuticals. Tyrosine hydroxylase catalyzes the committed, rate-limiting step in catecholamine biosynthesis — the conversion of L-tyrosine to L-DOPA. By inhibiting this step, L1-79 reduces total catecholamine synthesis non-selectively across dopamine, norepinephrine, and epinephrine.</p>
+
+    <p>In a brain where SST-14 interneurons have failed, catecholamine excess has been building unchecked. L1-79 reduces that excess. The result is a pharmacologically quieter neural environment in which social signals can be perceived and responded to more effectively.</p>
+
+    <h3>Phase 2 trial results — NCT05067582</h3>
+    <p>The 12-week randomized, double-blind, placebo-controlled crossover trial enrolled 58 adolescents and young adults (ages 12–21) with ASD at eight US sites. A statistically significant carryover and sequence effect rendered the crossover design analytically unusable — all primary and secondary efficacy analyses were confined to Period 1 (n = 23 active, n = 21 placebo).</p>
+
+    <table class="results-table">
+      <thead>
+        <tr><th>Measure</th><th>LS Mean Difference</th><th>p-value</th><th>Result</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Vineland-3 Socialization Standard Score</td><td>7.94 points</td><td>0.01</td><td><span class="sig">Significant</span></td></tr>
+        <tr><td>Play and Leisure subdomain</td><td>2.8 points</td><td>0.01</td><td><span class="sig">Significant</span></td></tr>
+        <tr><td>Interpersonal Relationships subdomain</td><td>1.5 points</td><td>0.1453</td><td><span class="trend">Trend only</span></td></tr>
+        <tr><td>Coping Skills subdomain</td><td>0.42 points</td><td>0.60</td><td><span class="ns">No effect</span></td></tr>
+        <tr><td>CGI-S (clinician-rated severity)</td><td>0.62 points</td><td>0.016</td><td><span class="sig">Significant</span></td></tr>
+        <tr><td>CaGI-3P Symptoms 1, 2, 3</td><td>0.60 / 0.48 / 0.61</td><td>&lt;0.05 all</td><td><span class="sig">Significant</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3>The subdomain fingerprint — IDA-confirmatory evidence</h3>
+    <p>The gradient across subdomains — strong Play and Leisure, trend-only Interpersonal Relationships, no Coping Skills effect — is the IDA cascade's mechanistic signature. <strong>Play is the most dopaminergically-driven subdomain.</strong> Interpersonal Relationships is the most oxytocin-dependent. Coping Skills requires flexible social cognition downstream of the full neuropeptide cascade.</p>
+
+    <p>This pattern is precisely what the IDA model predicts for catecholamine suppression without neuropeptide cascade restoration — and it was predicted by the framework prior to the trial results being available. This predictive validity is an independent scientific credential of the cascade model.</p>
+
+    <h3>The carryover as biological signal</h3>
+    <p>AMPT has a half-life of 7–9 hours. A six-week washout represents approximately 1,000 half-lives — pharmacokinetic drug presence is negligible. The observed carryover is therefore <strong>biological, not pharmacokinetic</strong>: empirical evidence that L1-79 triggered persistent biological state changes during treatment. The most probable mechanism is partial SST-14 metabolic recovery in State 1 individuals whose interneurons had their catecholamine demand reduced for 12 weeks. This is the direct empirical basis for the therapeutic window hypothesis developed in Section 5.</p>
+
+    <div class="note-box">
+      <div class="note-box-label">Regulatory note</div>
+      <p>L1-79 is an investigational drug and has not been approved by the FDA. Safety and efficacy have not been established. It will require a physician prescription upon approval — metyrosine (the parent molecule, Demser) has been Rx-only since FDA approval in 1979. Monitoring is required given cardiovascular, endocrine, and neuropsychiatric considerations identified in the Phase 2 safety data.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="body-section" id="limits">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Section 04 — Limitations</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Section 04</div>
+    <h2>What L1-79 cannot fix</h2>
+    <div class="h2-rule"></div>
+
+    <p>L1-79 addresses a downstream consequence of the IDA cascade — catecholamine excess — without addressing the cascade itself. This has specific clinical implications that matter for long-term patient management.</p>
+
+    <ul>
+      <li><strong>It does not restore SST-14 interneuron regulatory architecture.</strong> The transcriptional blockade on SST-14 production remains. L1-79 reduces the metabolic demand those cells are under, which may allow partial recovery, but the upstream immune and methylation drivers continue operating.</li>
+      <li><strong>It does not restore VIP, oxytocin, or secretin.</strong> All three depend on SST-14 interneuron function. The deeper social bonding, reciprocal engagement, and gut-brain coordination that require these hormones remain impaired during L1-79 monotherapy.</li>
+      <li><strong>It does not address the immune driver.</strong> IDO1 activation and kynurenine pathway dysregulation continue during treatment, generating ongoing quinolinic acid excitotoxicity. SST-14 interneurons may continue progressing toward more severely compromised states while behavioral presentation appears improved.</li>
+      <li><strong>It does not fix the methylation cycle.</strong> The SAM:SAH ratio impairment simultaneously suppressing SST-14 transcription and every other methylation-dependent CNS process is not addressed by the L1-79 mechanism.</li>
+      <li><strong>The improvements are largely contingent on continued treatment</strong> in the absence of upstream intervention. When L1-79 is stopped, catecholamine excess returns as the unaddressed immune driver reasserts full IDO1 activation.</li>
+    </ul>
+
+    <p>Long-term risks invisible in a 12-week trial window include: adolescent neurodevelopmental architecture disruption from sustained TH inhibition during prefrontal maturation; homeostatic TH upregulation producing rebound hyperdopaminergic states at drug cessation; prolactin elevation and endocrine consequences during the adolescent peak bone mass window; and immune-NE axis disruption — norepinephrine (NE) provides critical immunomodulatory signaling through β-adrenergic receptors on lymphocytes, macrophages, and NK cells, and sustained NE suppression may paradoxically worsen the upstream immune dysfunction driving the disorder while behavioral presentation appears improved.</p>
+  </div>
+
+  <!-- SECTION 5 -->
+  <div class="body-section" id="triad">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Section 05 — The three-intervention model</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Section 05</div>
+    <h2>The three-intervention model</h2>
+    <div class="h2-rule"></div>
+
+    <p>The central hypothesis of this analysis is that L1-79, the IMIG priming protocol, and IMIG therapy are <strong>specifically synergistic interventions</strong> — each addressing a distinct rate-limiting constraint on SST-14 interneuron recovery that the others cannot reach.</p>
+
+    <div class="triad">
+      <div class="triad-card tc-coral">
+        <div class="triad-card-stripe"></div>
+        <h4>L1-79 (AMPT)</h4>
+        <p>Reduces catecholamine metabolic demand on exhausted SST-14 interneurons. Opens a biological recovery window by decreasing the energetic burden those cells carry from regulatory failure-driven catecholamine excess.</p>
+      </div>
+      <div class="triad-card tc-teal">
+        <div class="triad-card-stripe"></div>
+        <h4>IMIG Priming Protocol</h4>
+        <p>Elevates the metabolic floor (NMN/NAD+), suppresses NF-κB from below (luteolin — six independent mechanisms), restores cAMP-PKA-CREB transcriptional drive by bypassing Gi-coupled suppression (forskolin), and supports the methylation cycle (hydroxocobalamin, sulforaphane/NRF2).</p>
+      </div>
+      <div class="triad-card tc-purple">
+        <div class="triad-card-stripe"></div>
+        <h4>IMIG Therapy</h4>
+        <p>Removes the upstream immune-inflammatory transcriptional ceiling. Normalizes IDO1 activation, reduces quinolinic acid excitotoxicity, resolves NF-κB/CBP competition at the SST-14 promoter, and restores BDNF-TrkB synaptic plasticity as quinolinic acid load falls.</p>
+      </div>
+    </div>
+
+    <h3>Why this is specifically synergistic</h3>
+    <p>SST-14 interneuron transcriptional suppression has two principal rate-limiting constraints operating through distinct molecular mechanisms. The first is the <strong>upstream immune-inflammatory transcriptional block</strong> — IDO1-derived excitotoxicity and NF-κB/CBP competition at the SST-14 promoter — addressed by IMIG and luteolin from above and below. The second is the <strong>metabolic-energetic exhaustion floor</strong> — chronic catecholamine excess depleting ATP and exhausting mitochondrial reserve — addressed by L1-79 reducing the demand ceiling and NMN raising the supply floor. Removing one constraint while leaving the other produces only partial recovery. Both addressed simultaneously creates conditions for genuine SST-14 restoration that no subset of the three interventions achieves in isolation.</p>
+
+    <h3>The therapeutic window that does not close</h3>
+    <p>L1-79 opens a biological recovery window in SST-14 interneurons — but the window closes when catecholamine excess reasserts as the upstream immune driver restores IDO1 activation. IMIG, delivered during or immediately following the L1-79 treatment period, prevents this closure by removing the upstream driver before it reasserts. The priming protocol maintains the metabolic floor and NF-κB suppression throughout. The combined open window, paired with structured behavioral intervention, creates conditions for <strong>Hebbian synaptic consolidation</strong> — neurons that fire together during social interaction physically strengthen their connections, producing durable gains that persist beyond the treatment period.</p>
+
+    <h3>Predicted outcomes of the combination program</h3>
+    <div class="outcomes">
+      <div class="outcome-item"><strong>VIP restoration</strong><span>Cortical oscillation synchronization, hypothalamic oxytocin drive, circadian (SCN) entrainment — all dependent on SST-14 interneuron recovery</span></div>
+      <div class="outcome-item"><strong>Oxytocin entrainment</strong><span>Contextually appropriate release enabling genuine affiliative bonding and reciprocal social engagement — not achievable with exogenous administration</span></div>
+      <div class="outcome-item"><strong>Secretin signaling</strong><span>Gut-brain neuropeptide axis re-coordinated; digestive function and gut motility normalized</span></div>
+      <div class="outcome-item"><strong>Sleep normalization</strong><span>VIP-driven SCN circadian synchronization restored — not melatonin supplementation but mechanism restoration</span></div>
+      <div class="outcome-item"><strong>Appetite expansion</strong><span>Gut SST-28 overactivity diminishes as opioid peptide load reduces; dietary tolerance improves across multiple food groups</span></div>
+      <div class="outcome-item"><strong>Durable social learning</strong><span>Hebbian consolidation of social circuits during the open therapeutic window — structural synaptic changes that persist after treatment</span></div>
+    </div>
+
+    <h3>Falsifiable predictions distinguishing combination from monotherapy</h3>
+    <ul>
+      <li>The <strong>Interpersonal Relationships subdomain</strong> of the Vineland-3 should show significant improvement with combination therapy — the oxytocin-dependent domain showing only trend-level improvement with L1-79 monotherapy. This is a specific directional prediction with pre-specified mechanistic logic.</li>
+      <li>The <strong>L1-79 carryover effect</strong> should be substantially larger and more durable with combination treatment, because IMIG prevents the upstream reassertion that closes the recovery window.</li>
+      <li><strong>IDA biomarker-positive individuals</strong> — those with confirmed IDO1 activation, elevated neuroinflammatory cytokines, and kynurenine pathway dysregulation — should show disproportionate benefit from combination vs. L1-79 monotherapy.</li>
+      <li>Measurable improvements in <strong>oxytocin release patterning, VIP plasma levels, and BDNF elevation</strong> should distinguish combination from monotherapy, reflecting neuropeptide cascade restoration that L1-79 alone cannot produce.</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 6 -->
+  <div class="body-section" id="window">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Section 06 — Reversibility</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Section 06</div>
+    <h2>The window of reversibility</h2>
+    <div class="h2-rule"></div>
+
+    <p>SST-14 interneurons in immune-derived autism exist along a continuum of compromise. The state at time of intervention significantly determines the ceiling of recovery achievable — and the speed of that recovery.</p>
+
+    <table class="state-table">
+      <thead>
+        <tr><th>State</th><th>Condition</th><th>Recovery potential</th><th>Intervention need</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="state-badge s1">State 1</span></td>
+          <td>Transcriptional suppression; structurally intact</td>
+          <td>Most direct path to recovery if upstream driver removed and methylation supported</td>
+          <td>IMIG + priming protocol; L1-79 reduces metabolic demand</td>
+        </tr>
+        <tr>
+          <td><span class="state-badge s2">State 2</span></td>
+          <td>Metabolic exhaustion; mitochondrial compromise</td>
+          <td>Recovery possible with metabolic floor support; requires longer timeline</td>
+          <td>NMN/mitochondrial support added to full three-intervention program</td>
+        </tr>
+        <tr>
+          <td><span class="state-badge s3">State 3</span></td>
+          <td>Structural damage; significant interneuron loss</td>
+          <td>Recovery is possible but slower, more demanding, and less complete than earlier states. Not a closed door — hevin/SPARC astrocyte synaptogenic restoration, PNN remodeling, and BDNF-TrkB normalization through IDO1 resolution all support plasticity reopening even in significantly damaged brain.</td>
+          <td>Full three-intervention program; extended timeline; intensive behavioral intervention essential during the recovery window</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>The transition from States 1 and 2 toward State 3 is driven by ongoing quinolinic acid excitotoxicity from the unaddressed IDO1 reaction — which continues during L1-79 monotherapy. Using L1-79 without addressing the upstream immune driver may reduce visible symptoms while the underlying progression continues. Early, comprehensive intervention produces the most direct path to recovery and preserves the full range of reversibility.</p>
+  </div>
+
+  <!-- SECTION 7 -->
+  <div class="body-section" id="gaps">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Section 07 — Remaining gaps</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Section 07</div>
+    <h2>Remaining program gaps</h2>
+    <div class="h2-rule"></div>
+
+    <p>The three-intervention model addresses the most important elements of the IDA cascade. Several gaps remain that current interventions do not close.</p>
+
+    <div class="gap-item">
+      <h4>Constitutional methylation impairment — AHCY</h4>
+      <p>Some individuals carry genetic variants in AHCY (adenosylhomocysteinase; gene: <em>AHCY</em>) that impair SAH (S-adenosylhomocysteine) clearance constitutionally. SAH accumulation competitively inhibits every methyltransferase reaction simultaneously, including SST-14 transcription. The current three-intervention program reduces SAH generation from demand-side inputs but cannot restore AHCY enzyme function. This is the single most important unresolved gap in the program for genetically vulnerable individuals. Development of a targeted AHCY therapeutic — through small molecule enzyme stabilization, mRNA-based enzyme delivery, or adenosine kinase pathway enhancement — represents the next pharmacological horizon for this population.</p>
+    </div>
+
+    <div class="gap-item">
+      <h4>Gut entry point — pH, pepsin, and opioid peptide load</h4>
+      <p>Gut pH dysregulation, incomplete protein digestion, and casomorphin/gliadorphin production remain active unless dietary intervention is part of the program. No pharmacological agent currently addresses this directly. Casein and gluten elimination reduces the opioid peptide load at source — the most impactful single dietary intervention available.</p>
+    </div>
+
+    <div class="gap-item">
+      <h4>DPP-IV / adenosine clearance</h4>
+      <p>CD26/DPP-IV impairment produces adenosine accumulation that suppresses the cAMP-PKA-CREB drive to SST-14 transcription through A1/A2A Gi-coupled receptor signaling, independently of the inflammatory pathway. Elevated adenosine may also blunt IMIG's immunological impact through A2A-mediated immunosuppression. Forskolin in the priming protocol bypasses this downstream, but the clearance impairment itself is not directly resolved by any current component.</p>
+    </div>
+
+    <div class="gap-item">
+      <h4>IDA subgroup prevalence — not yet formally established</h4>
+      <p>The proportion of DSM-5 ASD cases attributable to the IDA pattern is not yet formally established. The framework proposes it may represent anywhere from 25% to 75% of those meeting diagnostic criteria — a range that can only be resolved through biomarker-stratified clinical investigation. This question is central to the scientific case for a future biomarker-stratified trial.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 8 -->
+  <div class="body-section" id="status">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Section 08 — Research status</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Section 08</div>
+    <h2>Current research status</h2>
+    <div class="h2-rule"></div>
+
+    <p>Decoding Autism Now is developing the scientific and clinical foundation underlying the IDA framework. The three-intervention synergy hypothesis — combining L1-79, the IMIG priming protocol, and IMIG — is an active area of scientific inquiry being advanced for possible future investigation. No combined trial is currently planned or in active design. The only published clinical investigation of IMIG therapy in autism to date is Fourie &amp; Armstrong (<em>Medical Research Archives</em> 12(10), 2024; DOI: 10.18103/mra.v12i10.5984), which provides the empirical clinical foundation for the IMIG component of the proposed synergy model.</p>
+
+    <p>The synergy hypothesis advanced in this analysis — and the specific biomarker stratification and outcome measures it implies — represents a future research direction that would require formal scientific agreement, funding, and regulatory planning before any trial could be proposed. The IDA framework documentation at decodingautismnow.com provides the full scientific foundation underlying this analysis.</p>
+
+    <div class="note-box">
+      <div class="note-box-label">IDA biomarker panel — terminology note</div>
+      <p>The IDA biomarker composite is a proposed research stratification tool, not an established clinical test. Immune-Derived Autism (IDA) is not yet a formally recognized diagnostic classification, and no standardized IDA biomarker panel currently exists as an orderable test at any clinical laboratory. Each component assay is individually available through reference laboratories — kynurenine:tryptophan ratio, quinolinic acid (Mayo Clinic Laboratories, test code QUIN), cytokine multiplex (Luminex), and neopterin through specialty labs. Combined diagnostic utility for IDA subgroup identification is a research question to be addressed in future clinical investigation.</p>
+    </div>
+
+    <p>For research inquiries or to learn more about the IDA framework, visit <a href="../index.html" style="color:var(--teal);">decodingautismnow.com</a>.</p>
+  </div>
+
+  <!-- DOWNLOAD SECTION -->
+  <div class="body-section" id="download">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Section 09 — Parent resource</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Section 09</div>
+    <h2>Download the parent guide</h2>
+    <div class="h2-rule"></div>
+    <p>The full content of this page is available as a plain-language PDF guide written for parents and families — suitable for sharing with your child's physician or keeping for reference.</p>
+    <p style="font-size:0.88rem; color:var(--text-mid); line-height:1.7;">
+      This document is shared for educational purposes under the 
+      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" style="color:var(--teal);">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0)</a>. 
+      You are free to share and redistribute this document in any medium or format, provided you give appropriate 
+      credit to Decoding Autism Now and include a link to the original source. You may not use this material 
+      for commercial purposes, and you may not distribute modified versions of it.
+    </p>
+    <a href="L179_Parent_Guide_2026.pdf"
+       style="display:inline-flex; align-items:center; gap:10px; margin-top:16px;
+              background:var(--teal); color:#fff; text-decoration:none;
+              font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.1em;
+              text-transform:uppercase; padding:13px 22px; border-radius:3px;
+              transition:background 0.2s;"
+       onmouseover="this.style.background='#0f2342'"
+       onmouseout="this.style.background='#1e6b72'">
+      &#8595;&nbsp; Download PDF — Understanding the New Autism Drug: L1-79
+    </a>
+    <p style="font-size:0.78rem; color:var(--text-light); margin-top:10px;">PDF · 13 pages · July 2026 · Decoding Autism Now</p>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">Decoding Autism Now</p>
+        <h2 class="footer-title">L1-79 and the Three-Intervention Model</h2>
+        <p class="footer-tagline">A mechanistic analysis of the IDA cascade and the synergy hypothesis for combination therapy.</p>
+      </div>
+      <div>
+        <div class="footer-links">
+          <a class="footer-link" href="../index.html">Home Hub</a>
+          <a class="footer-link" href="research-articles.html">Research Articles</a>
+          <a class="footer-link" href="../imig/imig-overview.html">IMIG Trial</a>
+          <a class="footer-link" href="#download">Download PDF</a>
+        </div>
+        <p class="footer-disclaimer">For educational and research purposes only. Not clinical guidance. Not medical advice.</p>
+      </div>
+    </div>
+    <div class="footer-bottom" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+      <p class="footer-meta">Decoding Autism Now &nbsp;·&nbsp; decodingautismnow.com &nbsp;·&nbsp; July 2026</p>
+      <p style="font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.28); line-height:1.6;">
+        All content shared for educational purposes under 
+        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" 
+           style="color:rgba(255,255,255,0.45); text-decoration:underline;">Creative Commons CC BY-NC-ND 4.0</a>
+        &nbsp;&#8212;&nbsp; Free to share with attribution &nbsp;&#8212;&nbsp; Not for commercial use &nbsp;&#8212;&nbsp; No derivative works
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script defer src="https://cloud.umami.is/script.js" data-website-id="294ecd79-19fb-4267-9be2-a7c83d57274d"></script>
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var overlay=document.getElementById('navOverlay');
+  var dim=document.getElementById('navDim');
+  if(!btn)return;
+  function openNav(){overlay.classList.add('open');dim.classList.add('open');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+  function closeNav(){overlay.classList.remove('open');dim.classList.remove('open');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+  btn.addEventListener('click',function(){overlay.classList.contains('open')?closeNav():openNav();});
+  dim.addEventListener('click',closeNav);
+  overlay.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeNav);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeNav();});
+})();
+</script>
+</body>
+</html>
