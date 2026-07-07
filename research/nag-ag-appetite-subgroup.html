@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The NAG/AG Appetite Subgroup Hypothesis | Decoding Autism Now</title>
+<meta name="description" content="Two immunologically distinct subgroups within ASD, distinguished by appetite phenotype: a locked, IFN-γ-dominant cascade and a dynamic, TNF-α-dominant cascade, converging on the same SST-14 endpoint through different mechanisms.">
+<meta property="og:title" content="The NAG/AG Appetite Subgroup Hypothesis | Decoding Autism Now">
+<meta property="og:description" content="Why appetite phenotype in ASD may be a surface readout of upstream cytokine dominance — and why the two pathways it reveals need different recovery strategies.">
+<meta property="og:url" content="https://decodingautismnow.com/research/nag-ag-appetite-subgroup.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://decodingautismnow.com/images/OG-nag-ag-appetite-subgroup.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:      #0f2342;
+    --teal:      #1e6b72;
+    --teal-light:#2a9da6;
+    --gold:      #c8923a;
+    --gold-light:#e8b86d;
+    --cream:     #faf7f2;
+    --bg:        #f7f5f0;
+    --ink:       #1a1a2e;
+    --text-mid:  #3d4560;
+    --text-light:#6b7494;
+    --rule:      #d8cfc4;
+  }
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; background:#0f2342; }
+  body { background:var(--bg); font-family:'Source Serif 4',Georgia,serif; color:var(--ink); font-size:16px; line-height:1.8; }
+
+  /* Topbar */
+  .topbar { position:fixed; top:0; left:0; right:0; background:var(--navy); border-bottom:2px solid var(--gold); z-index:1000; }
+  .topbar-inner { max-width:960px; margin:0 auto; padding:10px 20px; display:flex; justify-content:space-between; align-items:center; gap:18px; }
+  .topbar-brand { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:var(--teal-light); margin-bottom:2px; }
+  .topbar-title { font-family:'Source Serif 4',Georgia,serif; font-size:13px; font-weight:600; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:70vw; }
+  .ham-btn { background:none; border:1px solid rgba(255,255,255,.28); border-radius:4px; padding:6px 10px; cursor:pointer; flex-shrink:0; line-height:0; }
+  .ham-btn:hover { border-color:rgba(255,255,255,.55); }
+  .ham-label { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.85); margin-right:7px; vertical-align:middle; }
+  .ham-bars { display:inline-flex; flex-direction:column; vertical-align:middle; gap:4px; }
+  .ham-bars span { display:block; width:18px; height:2px; background:#fff; border-radius:2px; }
+
+  /* Nav overlay */
+  .nav-dim { display:none; position:fixed; inset:0; z-index:997; background:rgba(15,35,66,.40); }
+  .nav-dim.open { display:block; }
+  .nav-overlay { display:none; position:fixed; top:57px; left:0; z-index:998; background:#fff; border-right:2px solid var(--gold); border-bottom:2px solid var(--gold); box-shadow:4px 4px 24px rgba(15,35,66,.16); overflow-y:auto; max-height:calc(100vh - 57px); width:560px; padding:24px 32px 36px; }
+  .nav-overlay.open { display:block; }
+  .nav-cols { display:grid; grid-template-columns:1fr 1fr; gap:0 40px; }
+  .nav-group { margin-bottom:20px; }
+  .nav-group-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:var(--teal); margin-bottom:8px; padding-bottom:5px; border-bottom:1px solid var(--rule); }
+  .nav-group a { display:block; font-family:'Source Serif 4',serif; font-size:13px; color:var(--ink); text-decoration:none; padding:5px 0; border-bottom:1px solid rgba(216,207,196,.35); transition:color .12s; }
+  .nav-group a:last-child { border-bottom:none; }
+  .nav-group a:hover { color:var(--teal); }
+  .nav-group a.current { color:var(--teal); font-weight:600; }
+  @media (max-width:720px) { .nav-overlay { width:100%; border-left:none; padding:16px 20px 28px; } .nav-cols { grid-template-columns:1fr; gap:0; } }
+
+  /* Header */
+  .site-header { margin-top:57px; background:var(--navy); color:#fff; position:relative; overflow:hidden; }
+  .header-stripe { height:5px; background:linear-gradient(90deg,#1e6b72 0%,#2a9da6 50%,#c8923a 100%); }
+  .header-inner { max-width:960px; margin:0 auto; padding:70px 20px 50px; }
+  .header-eyebrow { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:var(--teal-light); margin-bottom:14px; }
+  .header-title { font-family:'Playfair Display',Georgia,serif; font-size:clamp(32px,4vw,52px); font-weight:700; line-height:1.15; color:#fff; margin:0 0 10px; }
+  .header-accent { display:block; color:var(--gold-light); font-style:italic; font-weight:400; }
+  .header-sub { font-size:1.05rem; color:rgba(255,255,255,0.72); line-height:1.7; max-width:680px; margin-top:14px; }
+  .header-status { display:inline-flex; align-items:center; gap:8px; margin-top:28px; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold-light); border:1px solid rgba(232,184,109,0.35); border-radius:999px; padding:7px 16px; }
+  .status-dot { width:7px; height:7px; border-radius:50%; background:var(--gold-light); }
+
+  /* Breadcrumb */
+  .breadcrumb { background:#fff; border-bottom:1px solid var(--rule); padding:10px 20px; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em; color:var(--text-light); }
+  .breadcrumb a { color:var(--teal); text-decoration:none; }
+  .breadcrumb a:hover { text-decoration:underline; }
+  .breadcrumb span { margin:0 6px; }
+
+  /* Main */
+  .main-wrap { max-width:960px; margin:0 auto; padding:56px 20px 80px; }
+
+  /* Section divider */
+  .section-divider { display:flex; align-items:center; gap:16px; margin:0 0 36px; }
+  .section-divider-line { flex:1; height:1px; background:var(--rule); }
+  .section-divider-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.18em; text-transform:uppercase; color:var(--text-light); white-space:nowrap; }
+
+  /* TOC */
+  .toc-wrap { background:#fff; border:1px solid var(--rule); border-radius:8px; padding:24px 28px; margin-bottom:48px; }
+  .toc-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.18em; text-transform:uppercase; color:var(--text-light); margin-bottom:14px; }
+  .toc-grid { display:grid; grid-template-columns:1fr 1fr; gap:4px 32px; }
+  .toc-grid a { font-family:'Source Serif 4',serif; font-size:14px; color:var(--teal); text-decoration:none; padding:4px 0; border-bottom:1px solid rgba(216,207,196,.35); display:block; }
+  .toc-grid a:hover { color:var(--navy); }
+  @media (max-width:600px) { .toc-grid { grid-template-columns:1fr; } }
+
+  /* Body typography */
+  .body-section { margin-bottom:56px; }
+  .body-section h2 { font-family:'Playfair Display',Georgia,serif; font-size:1.65rem; font-weight:700; color:var(--navy); margin-bottom:6px; line-height:1.25; }
+  .body-section .section-num { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.18em; text-transform:uppercase; color:var(--teal-light); margin-bottom:8px; }
+  .body-section h3 { font-family:'Playfair Display',serif; font-size:1.15rem; font-weight:700; color:var(--teal); margin:28px 0 10px; }
+  .body-section p { margin-bottom:16px; color:var(--text-mid); line-height:1.8; }
+  .body-section p strong { color:var(--ink); }
+  .body-section ul { padding-left:20px; margin-bottom:16px; }
+  .body-section li { margin-bottom:10px; color:var(--text-mid); line-height:1.7; }
+  .body-section li strong { color:var(--ink); }
+
+  /* Rule under h2 */
+  .h2-rule { height:2px; background:linear-gradient(90deg,var(--teal) 0%,transparent 100%); margin-bottom:24px; }
+
+  /* Note box */
+  .note-box { background:rgba(200,146,58,0.07); border-left:3px solid var(--gold); border-radius:0 6px 6px 0; padding:16px 20px; margin:24px 0; }
+  .note-box-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); margin-bottom:8px; }
+  .note-box p { font-size:0.9rem; color:var(--text-mid); line-height:1.7; margin:0; }
+  .note-box p + p { margin-top:8px; }
+
+  /* Warning box (contraindication) */
+  .warn-box { background:rgba(139,58,36,0.06); border-left:3px solid #8b3a24; border-radius:0 6px 6px 0; padding:16px 20px; margin:24px 0; }
+  .warn-box-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.14em; text-transform:uppercase; color:#8b3a24; margin-bottom:8px; }
+  .warn-box p { font-size:0.9rem; color:var(--text-mid); line-height:1.7; margin:0; }
+
+  /* Pull quote */
+  .pull-quote { border-left:3px solid var(--teal); padding:12px 20px; margin:24px 0; font-style:italic; font-size:1.05rem; color:var(--teal); line-height:1.6; }
+
+  /* Two-column fork comparison */
+  .fork-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:24px 0; }
+  .fork-card { background:#fff; border:1px solid var(--rule); border-radius:8px; padding:22px; position:relative; overflow:hidden; }
+  .fork-card-stripe { position:absolute; top:0; left:0; right:0; height:3px; }
+  .fc-nag .fork-card-stripe { background:#8b3a24; }
+  .fc-ag .fork-card-stripe { background:var(--teal); }
+  .fork-card h4 { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:10px; }
+  .fc-nag h4 { color:#8b3a24; }
+  .fc-ag h4 { color:var(--teal); }
+  .fork-card p { font-size:0.88rem; color:var(--text-mid); line-height:1.65; margin-bottom:10px; }
+  .fork-card ul { padding-left:18px; margin:0; }
+  .fork-card li { font-size:0.86rem; color:var(--text-mid); line-height:1.6; margin-bottom:6px; }
+  @media (max-width:680px) { .fork-grid { grid-template-columns:1fr; } }
+
+  /* State/data table */
+  .state-table { width:100%; border-collapse:collapse; margin:20px 0; font-size:0.82rem; }
+  .state-table th { background:var(--navy); color:#fff; font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; padding:9px 10px; text-align:left; }
+  .state-table td { padding:9px 10px; border-bottom:1px solid var(--rule); vertical-align:top; line-height:1.55; color:var(--text-mid); }
+  .state-table tr:nth-child(even) td { background:#fff; }
+  .state-badge { font-family:'DM Mono',monospace; font-size:9px; font-weight:bold; letter-spacing:0.08em; padding:3px 8px; border-radius:999px; white-space:nowrap; display:inline-block; }
+  .s-nag { background:#f8d7da; color:#721c24; }
+  .s-ag { background:#d4edda; color:#155724; }
+
+  /* Gap items */
+  .gap-item { background:#fff; border:1px solid var(--rule); border-left:3px solid var(--gold); border-radius:0 8px 8px 0; padding:16px 20px; margin-bottom:16px; }
+  .gap-item h4 { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); margin-bottom:8px; }
+  .gap-item p { font-size:0.88rem; color:var(--text-mid); line-height:1.7; margin:0; }
+
+  /* Footer */
+  .site-footer { background:var(--navy); }
+  .footer-stripe { height:5px; background:linear-gradient(90deg,#1e6b72 0%,#2a9da6 50%,#c8923a 100%); }
+  .footer-inner { max-width:960px; margin:0 auto; padding:48px 20px 36px; }
+  .footer-top { display:grid; grid-template-columns:1.15fr 0.95fr; gap:34px; align-items:start; padding-bottom:24px; border-bottom:1px solid rgba(255,255,255,0.10); }
+  .footer-brand { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#2a9da6; margin-bottom:10px; }
+  .footer-title { font-family:'Playfair Display',serif; font-size:1.3rem; color:rgba(255,255,255,0.96); margin-bottom:8px; }
+  .footer-tagline { color:rgba(255,255,255,0.55); font-size:0.88rem; line-height:1.6; }
+  .footer-links { display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-end; margin-bottom:12px; }
+  .footer-link { text-decoration:none; color:rgba(255,255,255,0.88); border:1px solid rgba(255,255,255,0.16); border-radius:999px; padding: 9px 15px; font-size: 0.9rem; font-weight:600; transition:all 0.15s; }
+  .footer-link:hover { color:#2a9da6; border-color:#2a9da6; }
+  .footer-disclaimer { color:rgba(255,255,255,0.45); font-size:0.82rem; line-height:1.6; text-align:right; }
+  .footer-bottom { padding-top:18px; }
+  .footer-meta { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.22); }
+  @media (max-width:720px) { .footer-top { grid-template-columns:1fr; } .footer-links { justify-content:flex-start; } .footer-disclaimer { text-align:left; } }
+</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://decodingautismnow.com/images/OG-nag-ag-appetite-subgroup.png">
+</head>
+<body>
+
+<div class="nav-dim" id="navDim"></div>
+<nav class="nav-overlay" id="navOverlay" aria-label="Site navigation">
+  <div class="nav-cols">
+    <div>
+      <div class="nav-group">
+        <div class="nav-group-label">Foundation</div>
+        <a href="../index.html">Home Hub</a>
+        <a href="../01_Molecular_Origins_Biology_of_Autism.html">01 — Molecular Origins</a>
+        <a href="../01B_Pepsin_Opioid_Peptides_Biology_of_Autism.html">01B — Pepsin &amp; Opioid Peptides</a>
+        <a href="../01C_CD26_Adenosine_Methylation_Biology_of_Autism.html">01C — CD26, Adenosine &amp; Methylation</a>
+        <a href="../01D_Sex_Ratio_Estrogen_cAMP_Biology_of_Autism.html">01D — Sex Ratio &amp; Estrogen-cAMP Axis</a>
+        <a href="../02_Cascade_Map_Biology_of_Autism.html">02 — Cascade Map</a>
+        <a href="../03_Cascade_Explained_Biology_of_Autism.html">03 — Cascade Explained</a>
+        <a href="../04_Gprotein_Cascade_Biology_of_Autism.html">04 — G-Protein Cascade</a>
+        <a href="../04B_Unlocking_the_Brake_Biology_of_Autism.html">04B — Unlocking the Brake</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Pathways</div>
+        <a href="../05_Metabolic_Pathways_Map_Biology_of_Autism.html">05 — Pathways Map</a>
+        <a href="../06_Metabolic_Pathways_Explained_Biology_of_Autism.html">06 — Pathways Explained</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Testing</div>
+        <a href="../07_Testing_Strategy_Biology_of_Autism.html">07 — Testing Strategy</a>
+        <a href="../07B_Test_Reference_Biology_of_Autism.html">07B — Test Reference</a>
+        <a href="../07C_Interpreting_Results_Biology_of_Autism.html">07C — Interpreting Results</a>
+        <a href="../07D_Talking_to_Your_Doctor_Biology_of_Autism.html">07D — Talking to Your Doctor</a>
+        <a href="../07R_Regressive_Autism_Testing_Biology_of_Autism.html">07R — Regression Testing</a>
+      </div>
+    </div>
+    <div>
+      <div class="nav-group">
+        <div class="nav-group-label">Interventions</div>
+        <a href="../08_Intervention_Logic_Biology_of_Autism.html">08 — Intervention Logic</a>
+        <a href="../14_Immunoglobulin_Therapy_Biology_of_Autism.html">14 — Immunoglobulin Therapy</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Context</div>
+        <a href="../09_FAQ_Biology_of_Autism.html">09 — FAQ</a>
+        <a href="../11_Vaccine_Question_Biology_of_Autism.html">11 — Vaccine Question</a>
+        <a href="../12_Parents_Guide_Biology_of_Autism.html">12 — Parents Guide</a>
+        <a href="../12B_Autism_101_Biology_of_Autism.html">12B — Autism 101</a>
+        <a href="../13_Clinician_Guide_Biology_of_Autism.html">13 — Clinician Guide</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Other Sections</div>
+        <a href="../imig/imig-overview.html">IMIG Clinical Trial</a>
+        <a href="research-articles.html">Research Articles</a>
+        <a href="nag-ag-appetite-subgroup.html" class="current">NAG/AG Appetite Subgroups</a>
+        <a href="alzheimers-autism-plasticity.html">Autism &amp; Alzheimer's</a>
+        <a href="l179-three-intervention-model.html">L1-79 Analysis</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../10_Evidence_and_Citations_Biology_of_Autism.html">Evidence &amp; Citations</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <div class="topbar-brand">Decoding Autism Now</div>
+      <div class="topbar-title">The NAG/AG Appetite Subgroup Hypothesis</div>
+    </div>
+    <button class="ham-btn" id="hamBtn" aria-label="Open navigation" aria-expanded="false">
+      <span class="ham-label">Menu</span>
+      <span class="ham-bars"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</div>
+
+<div class="breadcrumb">
+  <a href="../index.html">Home</a><span>›</span>
+  <a href="research-articles.html">Research Articles</a><span>›</span>
+  The NAG/AG Appetite Subgroup Hypothesis
+</div>
+
+<header class="site-header">
+  <div class="header-stripe"></div>
+  <div class="header-inner">
+    <div class="header-eyebrow">Hypothesis Paper · Version 3 · June 2026</div>
+    <h1 class="header-title">The NAG/AG Appetite Subgroup Hypothesis<span class="header-accent">Two immune pathways, two mechanisms, one convergent endpoint — why appetite phenotype may be a readout of which cytokine dominates the cascade</span></h1>
+    <p class="header-sub">Roughly half of individuals with ASD show persistent food refusal; the other half show hyperphagia. This paper proposes that the split is not behavioral — it is the surface expression of two immunologically distinct pathways, an IFN-γ-dominant <strong>No-Appetite Group (NAG)</strong> and a TNF-α-dominant <strong>Appetite Group (AG)</strong>, that converge on the same SST-14 interneuron endpoint through mechanistically different — and differently reversible — routes.</p>
+    <div class="header-status"><span class="status-dot"></span>Hypothesis Paper · Decoding Autism Now · June 2026</div>
+  </div>
+</header>
+
+<main class="main-wrap">
+
+  <!-- TOC -->
+  <div class="toc-wrap">
+    <div class="toc-label">Contents</div>
+    <div class="toc-grid">
+      <a href="#divergence">1. A bifurcation nobody stratified on</a>
+      <a href="#polarity">2. The somatostatin polarity framework</a>
+      <a href="#fork">3. The immune fork — locked vs. dynamic</a>
+      <a href="#hinge">4. The cAMP molecular hinge</a>
+      <a href="#hormones">5. Hormonal profiles &amp; methylation</a>
+      <a href="#biomarkers">6. Biomarker panel &amp; predictions</a>
+      <a href="#treatment">7. Treatment implications</a>
+      <a href="#study">8. Proposed study &amp; open questions</a>
+      <a href="#related">9. Related reading</a>
+    </div>
+  </div>
+
+  <!-- SECTION 1 -->
+  <div class="body-section" id="divergence">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Section 01 — The observation</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Section 01</div>
+    <h2>A bifurcation nobody stratified on</h2>
+    <div class="h2-rule"></div>
+
+    <p>Efforts to find reproducible ASD subgroups have pursued regression history, GI comorbidity, immune markers, and copy-number variants — with limited replication across cohorts. One candidate variable has gone largely unexamined: appetite. It is directly observable, reliably reported by caregivers without specialist training, and doesn't require neuropsychological assessment — yet the field has generally filed appetite differences under sensory processing or food selectivity rather than asking whether a deeper immunological divergence sits underneath.</p>
+
+    <p>More than fifteen years of longitudinal clinical observation in community ASD support settings reveals a consistent, previously unexplained split: roughly half of individuals show persistent limited appetite and apparent absence of hunger drive; the other half show hyperphagia — constant food-seeking, inability to recognize satiety, and tendency toward overweight. These are not two ends of a continuum; they present as discrete poles. And the appetite split doesn't travel alone — the hyperphagic group tends toward better motor coordination, more normal gait, and stronger social engagement, and does not present the characteristic under-methylation phenotype seen in the food-refusing group.</p>
+
+    <div class="note-box">
+      <div class="note-box-label">The central hypothesis</div>
+      <p>Appetite phenotype in ASD is not a behavioral epiphenomenon. It is a surface readout of upstream cytokine dominance — specifically, <strong>IFN-γ dominance in the No-Appetite Group (NAG)</strong> versus <strong>TNF-α dominance in the Appetite Group (AG)</strong>. This single fork in the immune cascade is proposed to explain the co-clustering of appetite, motor, social, and metabolic differences as expressions of one underlying mechanism rather than a collection of independent variables.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="body-section" id="polarity">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Section 02 — Somatostatin polarity</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Section 02</div>
+    <h2>The somatostatin polarity framework</h2>
+    <div class="h2-rule"></div>
+
+    <p>Somatostatin is encoded by a single gene but processed into two bioactive forms with opposite territories: <strong>SST-28</strong>, predominating in the gut as a satiety signal, and <strong>SST-14</strong>, predominating in cortical interneurons as the pacemaker of gamma oscillation — the rhythm underlying social cognition, sensory gating, and executive function.</p>
+
+    <p>In the established IDA cascade, gut pH failure drives pepsin/DPP-IV disruption, producing opioid peptide excess and LPS translocation. LPS activates IDO1 and NF-κB; NF-κB sequesters the transcriptional co-activator CBP away from CREB, silencing SST-14. In parallel, gut SST-28 activity shifts — and here is the hinge of the whole framework: <strong>brain and peripheral somatostatin signaling exert opposite effects on circulating ghrelin</strong> via the SST2 receptor subtype. Central SST2 activation increases ghrelin; peripheral SST2 activation suppresses it. The direction of SST-28 dysregulation in the gut therefore determines appetite phenotype directly — hyperactive SST-28 suppresses ghrelin (no hunger signal, NAG), suppressed SST-28 lets ghrelin run high (insatiable hunger, AG).</p>
+
+    <div class="pull-quote">Appetite phenotype is a direct downstream readout of SST-28 polarity in the gut — and that polarity is determined by which immune arm dominates upstream.</div>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="body-section" id="fork">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Section 03 — The fork</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Section 03</div>
+    <h2>The immune fork — convergent NF-κB, divergent architecture</h2>
+    <div class="h2-rule"></div>
+
+    <p>Both pathways elevate NF-κB and both silence SST-14 through CBP sequestration from CREB — in that narrow sense they converge. But the routes to NF-κB elevation are structurally different in ways that produce profoundly different cascade persistence, metabolic consequences, and treatment responsiveness.</p>
+
+    <div class="fork-grid">
+      <div class="fork-card fc-nag">
+        <div class="fork-card-stripe"></div>
+        <h4>NAG — the locked cascade</h4>
+        <p><strong>IFN-γ</strong> is the primary inducer of IDO1 transcription via ISRE elements in the IDO1 promoter. IDO1 diverts tryptophan into the kynurenine pathway; kynurenine metabolites activate AhR, which transcriptionally induces <em>further</em> IDO1 — a self-sustaining positive feedback loop that keeps NF-κB active independently of the original trigger.</p>
+        <ul>
+          <li>Tryptophan depleted → serotonin synthesis collapsed</li>
+          <li>KYN/TRP ratio elevated (&gt;5%)</li>
+          <li>AhR/IDO1 loop sustains NF-κB after immune trigger clears</li>
+          <li>SST-28 hyperactive → ghrelin suppressed → no appetite</li>
+          <li>Methyl donor pool depleted systemically</li>
+          <li><strong>Removing the immune trigger does not break the loop</strong></li>
+        </ul>
+      </div>
+      <div class="fork-card fc-ag">
+        <div class="fork-card-stripe"></div>
+        <h4>AG — the dynamic cascade</h4>
+        <p><strong>TNF-α</strong> activates NF-κB through the canonical IKK pathway — TNF-R1 binding, IκBα phosphorylation, p65/p50 nuclear translocation — without requiring IDO1 as an intermediate. The AhR/IDO1 feedback loop is never engaged. NF-κB tracks the ongoing TNF-α signal directly.</p>
+        <ul>
+          <li>IDO1 inactive → tryptophan preserved → hyperserotonemia unmasked</li>
+          <li>KYN/TRP ratio normal (&lt;5%)</li>
+          <li>SAM depletion localized to macrophage compartment only</li>
+          <li>SST-28 suppressed → ghrelin elevated → persistent hyperphagia</li>
+          <li>SST-14 compromised, but less completely and more dynamically</li>
+          <li><strong>When the TNF-α signal resolves, the cascade resolves with it</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <p>This distinction is clinically load-bearing, not academic. A locked cascade requires breaking the AhR/IDO1 feedback loop as a prerequisite to functional recovery — even after immune clearance. A dynamic cascade resolves more directly when the upstream immune signal is addressed. This predicts a faster, more complete IMIG response in AG, and the need for adjunctive IDO1-pathway intervention in NAG to reach an equivalent outcome.</p>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="body-section" id="hinge">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Section 04 — The molecular hinge</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Section 04</div>
+    <h2>The cAMP and adenylyl cyclase axis</h2>
+    <div class="h2-rule"></div>
+
+    <p>The locked-vs-dynamic distinction becomes most precise at the level of adenylyl cyclase. Two Gαi-coupled inputs converge on its suppression: casomorphin/gliadorphin opioid peptides at mu-opioid receptors, and adenosine accumulation (from CD26/DPP-IV blockade by the same peptides) at A1/A2A receptors. Both inputs together substantially collapse cAMP production.</p>
+
+    <p>The amplitude of the opioid-peptide input depends on the severity of gut pH failure. In NAG, full gut pH dysregulation produces maximum opioid peptide excess — the Gαi input is fully engaged, adenylyl cyclase is substantially suppressed, and cAMP is effectively collapsed: PKA cannot activate CREB, and SST-14 transcription is near-zero. In AG, gut pH failure is proposed to be less complete — a lower opioid burden partially engages the Gαi input without saturating it, so adenylyl cyclase retains residual activity, cAMP is reduced but not collapsed, and SST-14 transcription is dampened but present. This is the molecular basis for AG's better motor coordination and stronger social engagement — not a separate phenomenon, but a direct expression of partially preserved cAMP/PKA/CREB/SST-14 signaling.</p>
+
+    <h3>The forskolin prediction</h3>
+    <p>Forskolin bypasses both Gαi inputs by activating the adenylyl cyclase catalytic subunit directly. In NAG, where adenylyl cyclase is maximally suppressed, forskolin provides a large gain from a deeply depressed baseline. In AG, where partial activity already exists, the same intervention produces a smaller delta from a higher starting point. This predicts <strong>forskolin produces a larger observable effect in NAG than in AG</strong> — a testable, clinically observable subgroup indicator available before the full biomarker panel.</p>
+
+    <h3>The estrogen compensatory axis</h3>
+    <p>A parallel route to SST-14 transcription — Gq-mER → Gαq → PLC → DAG → PKCδ → AC7 → cAMP → PKA → CREB — bypasses the Gαi block entirely and is proposed to explain the roughly 4:1 male-to-female ASD ratio (females carry a partial compensatory mechanism males lack). This bypass is predicted to be more effective in AG than NAG: against a partial Gαi block, the AC7 contribution restores a meaningful fraction of total cAMP; against a near-complete block, it represents a smaller fraction of what's been lost. This predicts the <strong>male-to-female ratio within AG will run closer to 2:1–3:1</strong> rather than 4:1 — a checkable demographic prediction against existing appetite-stratified epidemiological data.</p>
+  </div>
+
+  <!-- SECTION 5 -->
+  <div class="body-section" id="hormones">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Section 05 — Hormones &amp; methylation</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Section 05</div>
+    <h2>Differential hormonal profiles &amp; the methylation intersection</h2>
+    <div class="h2-rule"></div>
+
+    <p>The clinical observation that AG individuals lack NAG's characteristic under-methylation phenotype is explained by mechanistically different routes to methyl-donor depletion. In NAG, continuous tryptophan diversion into kynurenine draws methionine-cycle intermediates into compensatory reactions, producing <strong>systemic SAM/SAH depression</strong> — a global deficit visible in peripheral blood. In AG, IDO1 is inactive and tryptophan metabolism is preserved; instead, TNF-α-driven macrophage activation consumes SAM locally for histone methylation at inflammatory gene promoters, producing <strong>compartment-specific depletion</strong> that doesn't show up on standard peripheral methylation panels. The AG individual looks methylation-normal — not because methylation is healthier, but because the depletion is localized rather than global.</p>
+
+    <div class="fork-grid">
+      <div class="fork-card fc-nag">
+        <div class="fork-card-stripe"></div>
+        <h4>NAG hormonal profile</h4>
+        <ul>
+          <li>Serotonin — depleted (hyperserotonemia masked by IDO1 competition)</li>
+          <li>Melatonin — impaired synthesis, disrupted circadian regulation</li>
+          <li>Oxytocin — suppressed via hypothalamic serotonin depletion</li>
+          <li>Ghrelin — low, consistent with SST-28 hyperactivation</li>
+          <li>VIP/secretin — substantially reduced via SST-14 silencing</li>
+        </ul>
+      </div>
+      <div class="fork-card fc-ag">
+        <div class="fork-card-stripe"></div>
+        <h4>AG hormonal profile</h4>
+        <ul>
+          <li>Serotonin — elevated (hyperserotonemia unmasked by absent IDO1)</li>
+          <li><strong>Oxytocin — paradoxically suppressed</strong> despite elevated serotonin: chronic serotonin desensitizes the 5-HT1A autoreceptors that would drive its release</li>
+          <li><strong>Ghrelin — chronically elevated</strong>, and may be providing partial hippocampal neuroprotection via BDNF-dependent GHS-R1a signaling</li>
+          <li>VIP/secretin — reduced, but less completely than NAG</li>
+        </ul>
+      </div>
+    </div>
+
+    <p style="font-size:0.85rem; color:var(--text-light);">A second, independent appetite-control layer — the CCK/vagal satiety reflex — is also differentially affected: in NAG, SST-28 hyperactivation creates a "double satiety lock" by blocking CCK release entirely; in AG, CCK is released normally but TNF-α progressively desensitizes vagal CCK-1R signaling, so the post-ingestive satiety brake is present but blunted — a second, independent driver of AG hyperphagia alongside elevated ghrelin.</p>
+  </div>
+
+  <!-- SECTION 6 -->
+  <div class="body-section" id="biomarkers">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Section 06 — Biomarkers</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Section 06</div>
+    <h2>Proposed biomarker panel &amp; testable predictions</h2>
+    <div class="h2-rule"></div>
+
+    <p>Every marker below is measurable with existing clinical laboratory infrastructure — no novel assays required.</p>
+
+    <table class="state-table">
+      <thead><tr><th>Marker</th><th><span class="state-badge s-nag">NAG</span></th><th><span class="state-badge s-ag">AG</span></th></tr></thead>
+      <tbody>
+        <tr><td><strong>KYN/TRP ratio</strong> — primary separator</td><td>Elevated (&gt;5%)</td><td>Normal (&lt;5%)</td></tr>
+        <tr><td><strong>Whole-blood serotonin</strong> — primary separator</td><td>Normal/low (IDO1 masking)</td><td>Elevated (unmasked)</td></tr>
+        <tr><td>Plasma IFN-γ / TNF-α</td><td>IFN-γ elevated; TNF-α low/normal</td><td>TNF-α elevated; IFN-γ low/normal</td></tr>
+        <tr><td>Fasting acyl ghrelin</td><td>Low</td><td>Elevated / high-normal</td></tr>
+        <tr><td>SAM/SAH ratio</td><td>Low — systemic</td><td>Preserved systemically (macrophage-localized only)</td></tr>
+        <tr><td>Adenylyl cyclase activity</td><td>Substantially suppressed — cAMP collapsed</td><td>Partially preserved — reduced, not collapsed</td></tr>
+        <tr><td>SST-14 (brain, inferred)</td><td>Substantially silenced</td><td>Dampened but partially preserved</td></tr>
+        <tr><td>IMIG response (predicted)</td><td>Partial — needs adjunctive IDO1 intervention</td><td>More complete — no self-sustaining loop to break</td></tr>
+      </tbody>
+    </table>
+
+    <p>A KYN/TRP threshold of 5% has been reported with IDO1 activation present in roughly 58.7% of a published ASD cohort — notably close to the NAG prevalence this framework's clinical observations would predict. Combined with whole-blood serotonin, these two markers alone should correctly classify most individuals at intake.</p>
+
+    <h3>Two headline testable predictions</h3>
+    <ul>
+      <li><strong>Forskolin response magnitude</strong> — larger observable cAMP-dependent effect in NAG (bigger delta from a depressed baseline) than in AG.</li>
+      <li><strong>Post-IMIG appetite direction</strong> — NAG individuals should show appetite <em>emergence</em>; AG individuals should show satiety-regulation emergence (recognizing fullness for the first time). If this directional split is observed in a mixed IMIG cohort, it confirms the hypothesis clinically without requiring the full biomarker panel.</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 7 -->
+  <div class="body-section" id="treatment">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Section 07 — Treatment implications</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Section 07</div>
+    <h2>Treatment implications</h2>
+    <div class="h2-rule"></div>
+
+    <p>The core principle: standard ASD supplement protocols applied uniformly across both subgroups are likely misdirected in AG — and, in at least one specific case, potentially harmful.</p>
+
+    <div class="warn-box">
+      <div class="warn-box-label">Contraindication — AG</div>
+      <p><strong>Tryptophan and 5-HTP are commonly used in ASD supplement protocols and are potentially contraindicated in AG.</strong> Where tryptophan metabolism is intact and serotonin is already elevated, adding more precursor worsens hyperserotonemia — risking increased GI dysmotility and behavioral dysregulation. This should be stated explicitly at intake for anyone identified as AG on biomarker screening, before any standard protocol is applied.</p>
+    </div>
+
+    <h3>Shared across both groups</h3>
+    <p>Luteolin (NF-κB suppression regardless of which arm activated it), forskolin (adenylyl cyclase bypass — larger effect in NAG), sulforaphane (Nrf2/oxidative stress, plus IDO1-modulating properties that matter more in NAG), low-dose naltrexone (reduces mu-opioid receptor activation in both), and hydroxocobalamin (methylation support — methylcobalamin remains contraindicated in slow-COMT individuals regardless of subgroup).</p>
+
+    <h3>NAG-specific priorities</h3>
+    <p>IDO1 pathway modulation (EGCG, resveratrol) to break the AhR/IDO1 feedback loop — a prerequisite for cascade resolution that continues driving NF-κB even after immune clearance; tryptophan restoration only <em>after</em> IDO1 activity has been reduced, since premature supplementation simply feeds more kynurenine production; and aggressive systemic methylation support given the global methyl-donor depletion characteristic of the IDO1-active state.</p>
+
+    <h3>AG-specific priorities</h3>
+    <p>TNF-α modulation (omega-3, curcumin, low-dose naltrexone) as the primary upstream target; and caution around ghrelin normalization post-IMIG — if elevated ghrelin is providing partial neuroprotective compensation via hippocampal GHS-R1a signaling, cognitive function should be tracked alongside metabolic normalization rather than treating the drop as an unambiguous win.</p>
+
+    <h3>Recovery trajectories differ, too</h3>
+    <p><strong>NAG — sequential:</strong> IMIG clears immune load → IDO1 subsides → AhR loop gradually breaks → NF-κB resolves → SST-14 recovers → appetite emerges as SST-28 normalizes. Each step depends on the prior one completing. <strong>AG — spring release:</strong> IMIG reduces TNF-α load → NF-κB resolves more directly, with no loop to break → SST-14 recovers → satiety regulation emerges, amplified by the partial cAMP/PKA axis already present. This is a more elastic recovery — the system retains enough residual signaling capacity to rebound relatively quickly.</p>
+  </div>
+
+  <!-- SECTION 8 -->
+  <div class="body-section" id="study">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Section 08 — Study design &amp; honesty</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Section 08</div>
+    <h2>The proposed study — and what isn't established yet</h2>
+    <div class="h2-rule"></div>
+
+    <p>The hypothesis generates a critical experiment that doesn't yet exist in the published literature: a cross-sectional cohort study co-measuring fasting acyl ghrelin and KYN/TRP ratio in an appetite-stratified ASD cohort. No intervention, no novel assays — a single blood draw in 40–60 caregiver-classified NAG/AG participants, with primary outcome being whether KYN/TRP threshold status co-segregates with appetite classification and ghrelin direction as predicted. This is executable now within existing academic pediatric neurology infrastructure, without dedicated research funding beyond standard laboratory costs.</p>
+
+    <div class="note-box">
+      <div class="note-box-label">What requires prospective validation</div>
+      <p>This is a hypothesis-generating document. Open questions include: whether AG's better SST-14 function (inferred from motor/gait/social observation) holds up under direct measurement (EEG gamma coherence or CSF SST-14); whether IFN-γ and TNF-α are genuinely mutually exclusive dominant cytokines across individuals, rather than both elevated as reported elsewhere in the ASD literature; whether NAG truly has more severe gut pH failure than AG, as the framework's foundational assumption requires; and whether the proposed CCK-B central anxiety mechanism and ghrelin neuroprotection hypothesis hold up to direct measurement. The observational basis itself derives from longitudinal community clinical contact, not a structured epidemiological study — formal phenotyping with standardized instruments in a clinical cohort is the necessary next step.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 9 -->
+  <div class="body-section" id="related">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Section 09 — Related reading</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Section 09</div>
+    <h2>Related reading</h2>
+    <div class="h2-rule"></div>
+
+    <ul>
+      <li><a href="anatomy-of-autism.html" style="color:var(--teal);">The Anatomy of Autism</a> — the foundational cascade model this hypothesis builds from.</li>
+      <li><a href="sst-restoration-paper.html" style="color:var(--teal);">Restoring the Somatostatin Signal in Immune-Dysregulated ASD</a> — the primary SST-14 restoration framework.</li>
+      <li><a href="l179-three-intervention-model.html" style="color:var(--teal);">L1-79 and the Three-Intervention Model</a> — where forskolin's differential NAG/AG response prediction connects to the broader intervention framework.</li>
+      <li><a href="../imig/imig-overview.html" style="color:var(--teal);">The IMIG Clinical Trial</a> — where NAG/AG stratification would inform trial design and endpoint selection.</li>
+      <li><a href="alzheimers-autism-plasticity.html" style="color:var(--teal);">Autism and Alzheimer's — Two Sides of a Plasticity Problem</a> — the shared plasticity biology underlying why SST-14 recovery differs by cascade state, relevant to both NAG and AG.</li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">Decoding Autism Now</p>
+        <h2 class="footer-title">The NAG/AG Appetite Subgroup Hypothesis</h2>
+        <p class="footer-tagline">Two immune pathways, one convergent endpoint — appetite as a readout of upstream cytokine dominance.</p>
+      </div>
+      <div>
+        <div class="footer-links">
+          <a class="footer-link" href="../index.html">Home Hub</a>
+          <a class="footer-link" href="research-articles.html">Research Articles</a>
+          <a class="footer-link" href="../imig/imig-overview.html">IMIG Trial</a>
+          <a class="footer-link" href="../contact.html">Contact</a>
+        </div>
+        <p class="footer-disclaimer">For educational and research purposes only. Not clinical guidance. Not medical advice.</p>
+      </div>
+    </div>
+    <div class="footer-bottom" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+      <p class="footer-meta">Decoding Autism Now &nbsp;·&nbsp; decodingautismnow.com &nbsp;·&nbsp; June 2026</p>
+      <p style="font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.28); line-height:1.6;">
+        All content shared for educational purposes under 
+        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" 
+           style="color:rgba(255,255,255,0.45); text-decoration:underline;">Creative Commons CC BY-NC-ND 4.0</a>
+        &nbsp;&#8212;&nbsp; Free to share with attribution &nbsp;&#8212;&nbsp; Not for commercial use &nbsp;&#8212;&nbsp; No derivative works
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script defer src="https://cloud.umami.is/script.js" data-website-id="294ecd79-19fb-4267-9be2-a7c83d57274d"></script>
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var overlay=document.getElementById('navOverlay');
+  var dim=document.getElementById('navDim');
+  if(!btn)return;
+  function openNav(){overlay.classList.add('open');dim.classList.add('open');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+  function closeNav(){overlay.classList.remove('open');dim.classList.remove('open');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+  btn.addEventListener('click',function(){overlay.classList.contains('open')?closeNav():openNav();});
+  dim.addEventListener('click',closeNav);
+  overlay.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeNav);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeNav();});
+})();
+</script>
+</body>
+</html>
