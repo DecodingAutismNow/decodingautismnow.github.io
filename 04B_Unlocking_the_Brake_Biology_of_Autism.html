@@ -226,15 +226,18 @@
     font-family:'DM Mono', monospace; font-size:13px; font-weight:500; letter-spacing:.04em;
     text-transform:uppercase; background:var(--navy); color:#fff;
     padding:14px 16px; display:flex; flex-direction:column; justify-content:center; gap:4px;
+    overflow-wrap:break-word; word-break:break-word;
   }
   .layer-label .ln { font-size:11px; color:var(--teal-light); letter-spacing:.1em; }
   .layer-break {
     padding:14px 16px; border-right:1px solid var(--rule);
     font-size:.95rem; color:var(--text-mid); line-height:1.55;
+    overflow-wrap:break-word; word-break:break-word;
   }
   .layer-fix {
     padding:14px 16px;
     font-size:.95rem; color:var(--text-mid); line-height:1.55;
+    overflow-wrap:break-word; word-break:break-word;
   }
   .layer-fix strong { color:var(--teal); font-weight:600; }
   .layer-hdr {
@@ -545,7 +548,7 @@
       <ul>
         <li><strong>BP1 — Membrane oxidation:</strong> Glutathione depletion and oxidative membrane damage in autism have been documented by Chauhan &amp; Chauhan (2006) and James et al. (2004, 2006). GSTP1 variant prevalence and its role in reduced Phase II detoxification capacity is established in the pharmacogenomics literature.</li>
         <li><strong>BP2 — GTP depletion:</strong> Mitochondrial dysfunction in autism is one of the most replicated biochemical findings in the field; Frye &amp; Rossignol (2011, <em>Molecular Psychiatry</em>) provide a systematic review. GTP availability as a downstream constraint on G-protein activation follows directly from established purine biochemistry.</li>
-        <li><strong>BP3 — Somatostatin lock and adenosine accumulation:</strong> SST elevation under chronic inflammatory conditions is established in the neuroendocrinology literature. Adenosine A1 receptor-mediated adenylyl cyclase inhibition is fundamental receptor pharmacology (Fredholm et al., 2001, <em>Pharmacological Reviews</em>).</li>
+        <li><strong>BP3 — SST-14 silencing and adenosine accumulation:</strong> NF-κB-mediated suppression of CREB-driven SST-14 transcription under chronic inflammatory conditions is established molecular biology. Adenosine A1 receptor-mediated adenylyl cyclase inhibition is fundamental receptor pharmacology (Fredholm et al., 2001, <em>Pharmacological Reviews</em>).</li>
         <li><strong>BP4 — PDE4 upregulation:</strong> Cytokine-driven PDE4 upregulation via NF-κB is well established (Souness et al., 2000; Jin &amp; Bhatt, 1996). The self-reinforcing loop between NF-κB, PDE4, and cAMP-mediated NF-κB suppression is mechanistically documented in the inflammation literature.</li>
         <li><strong>BP5 — PKA ATP limitation:</strong> ATP as the obligate phosphate donor for PKA is fundamental biochemistry. Mitochondrial ATP depletion under inflammatory conditions is independently documented.</li>
         <li><strong>BP6 — BDNF Val66Met:</strong> The Val66Met variant's impairment of activity-dependent BDNF secretion is extensively characterized (Egan et al., 2003, <em>Cell</em>; Chen et al., 2006). Exercise-driven BDNF enhancement in Met carriers is documented by Leckie et al. and others.</li>
@@ -611,10 +614,10 @@
           <span>Adenylyl Cyclase Lock</span>
         </div>
         <div class="layer-break">
-          <em>The central breaking point.</em> Somatostatin → Gαi → adenylyl cyclase suppression (primary lock). ATP→ADP→AMP→adenosine accumulation → A1 receptor → second independent Gαi input (secondary lock). Low ATP simultaneously removes the substrate adenylyl cyclase needs even if it were active. Triple convergence on one enzyme.
+          <em>The central breaking point.</em> NF-κB → CBP competition + HDAC chromatin compaction silences SST-14 transcription directly (primary lock) — independent of cAMP. ATP→ADP→AMP→adenosine accumulation → A1 receptor → Gαi suppression of adenylyl cyclase (secondary lock); mu-opioid receptor activation by casomorphin/gliadorphin adds a third, additive Gαi input. Low ATP simultaneously removes the substrate adenylyl cyclase needs even if it were active. Multiple convergence on the same interneuron.
         </div>
         <div class="layer-fix">
-          <strong>Reduce upstream neuroinflammation</strong> — SST elevation is driven by chronic immune activation. Reducing IDO1-driven tryptophan depletion, NK cell/cytokine burden, and microglial activation allows somatostatin to fall toward basal levels. <strong>Restore adenine nucleotide pool</strong> via magnesium (myokinase cofactor), sulforaphane (reduces inflammatory ATP demand), and mitochondrial support. <strong>Adenosine receptor antagonism</strong> was historically compensated by caffeine — see Section 03. Sulforaphane + magnesium is the mechanism-matched replacement strategy.
+          <strong>Reduce upstream neuroinflammation</strong> — NF-κB-mediated SST-14 silencing is driven by chronic immune activation. Reducing IDO1-driven tryptophan depletion, NK cell/cytokine burden, and microglial activation relieves the NF-κB/CBP competition and allows CREB to resume driving SST-14 transcription. <strong>Restore adenine nucleotide pool</strong> via magnesium (myokinase cofactor), sulforaphane (reduces inflammatory ATP demand), and mitochondrial support. <strong>Adenosine receptor antagonism</strong> was historically compensated by caffeine — see Section 03. Sulforaphane + magnesium is the mechanism-matched replacement strategy.
         </div>
       </div>
 
@@ -798,8 +801,8 @@
       <div class="seq-step active">
         <span class="seq-num">①</span>
         <div class="seq-content">
-          <h4>Reduce upstream neuroinflammation — the SST driver</h4>
-          <p>Somatostatin rises in response to chronic immune activation. The upstream immune cascade — gut dysbiosis → mucosal immune failure → systemic immune activation → IDO1-driven tryptophan depletion → kynurenine/QUIN burden — is what is holding somatostatin elevated. Addressing gut ecology (butyrate, zinc carnosine, Bifidobacterium repletion, Vitamin D for VDR-driven sIgA restoration) reduces the chronic antigen translocation that feeds systemic immune activation. This is the foundational layer — without addressing it, every downstream intervention operates against an ongoing inflammatory signal that continuously reasserts the somatostatin lock.</p>
+          <h4>Reduce upstream neuroinflammation — the SST-14 silencing driver</h4>
+          <p>SST-14 interneurons are silenced in response to chronic immune activation — via NF-κB's competition with CREB for CBP, and via the adenosine/opioid-driven Gαi suppression of adenylyl cyclase. The upstream immune cascade — gut dysbiosis → mucosal immune failure → systemic immune activation → IDO1-driven tryptophan depletion → kynurenine/QUIN burden — is what is holding SST-14 silenced. Addressing gut ecology (butyrate, zinc carnosine, Bifidobacterium repletion, Vitamin D for VDR-driven sIgA restoration) reduces the chronic antigen translocation that feeds systemic immune activation. This is the foundational layer — without addressing it, every downstream intervention operates against an ongoing inflammatory signal that continuously reasserts the SST-14 silencing lock.</p>
         </div>
       </div>
       <div class="seq-arrow">↓</div>
