@@ -158,6 +158,8 @@
   .footer-bottom { padding-top:18px; }
   .footer-meta { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.22); }
   @media (max-width:720px) { .footer-top { grid-template-columns:1fr; } .footer-links { justify-content:flex-start; } .footer-disclaimer { text-align:left; } }
+
+  .table-wrap { overflow-x:auto; margin:20px 0; }
 </style>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://decodingautismnow.com/images/OG-nag-ag-appetite-subgroup.png">
@@ -244,10 +246,10 @@
 <header class="site-header">
   <div class="header-stripe"></div>
   <div class="header-inner">
-    <div class="header-eyebrow">Hypothesis Paper · Version 3 · June 2026</div>
-    <h1 class="header-title">The NAG/AG Appetite Subgroup Hypothesis<span class="header-accent">Two immune pathways, two mechanisms, one convergent endpoint — why appetite phenotype may be a readout of which cytokine dominates the cascade</span></h1>
+    <div class="header-eyebrow">Hypothesis Paper · Version 5 · August 2026</div>
+    <h1 class="header-title">The NAG/AG Appetite Subgroup Hypothesis<span class="header-accent">The NAG/AG immunological divergence — locked and dynamic cascade states as two distinct ASD metabolic-immune phenotypes</span></h1>
     <p class="header-sub">Roughly half of individuals with ASD show persistent food refusal; the other half show hyperphagia. This paper proposes that the split is not behavioral — it is the surface expression of two immunologically distinct pathways, an IFN-γ-dominant <strong>No-Appetite Group (NAG)</strong> and a TNF-α-dominant <strong>Appetite Group (AG)</strong>, that converge on the same SST-14 interneuron endpoint through mechanistically different — and differently reversible — routes.</p>
-    <div class="header-status"><span class="status-dot"></span>Hypothesis Paper · Decoding Autism Now · June 2026</div>
+    <div class="header-status"><span class="status-dot"></span>Hypothesis Paper · Decoding Autism Now · Version 5 · August 2026</div>
   </div>
 </header>
 
@@ -261,264 +263,625 @@
       <a href="#polarity">2. The somatostatin polarity framework</a>
       <a href="#fork">3. The immune fork — locked vs. dynamic</a>
       <a href="#hinge">4. The cAMP molecular hinge</a>
-      <a href="#hormones">5. Hormonal profiles &amp; methylation</a>
-      <a href="#biomarkers">6. Biomarker panel &amp; predictions</a>
-      <a href="#treatment">7. Treatment implications</a>
-      <a href="#study">8. Proposed study &amp; open questions</a>
-      <a href="#related">9. Related reading</a>
+      <a href="#hormones-appetite">5. Appetite axes — CCK, vagal signaling &amp; GLP-1</a>
+      <a href="#methylation">6. The methylation intersection</a>
+      <a href="#hormones">7. Differential hormonal profiles</a>
+      <a href="#sst14">8. Brain SST-14 — same mechanism, different severity</a>
+      <a href="#biomarkers">9. Biomarker panel</a>
+      <a href="#predictions">10. Testable predictions</a>
+      <a href="#study">11. Proposed observational study</a>
+      <a href="#treatment">12. Treatment implications</a>
+      <a href="#limitations">13. Limitations &amp; open questions</a>
+      <a href="#conclusion">14. Conclusion</a>
+      <a href="#references">10. References</a>
+    </div>
+  </div>
+  
+
+  <div class="body-section" id="abstract-sec">
+    <div class="note-box">
+      <div class="note-box-label">Abstract</div>
+      <p>Autism spectrum disorder (ASD) presents with marked heterogeneity in metabolic, immune, and behavioral profiles that standard diagnostic instruments are not designed to capture. This hypothesis paper proposes that two immunologically distinct subgroups exist within the ASD population, distinguished by appetite phenotype: a No-Appetite Group (NAG) characterized by food refusal and anorexia, and an Appetite Group (AG) characterized by hyperphagia and inability to self-limit. We propose this divergence reflects a fundamental fork in the upstream immune cascade — specifically, IFN-γ dominance in the NAG versus TNF-α dominance in the AG. This cytokine polarity determines differential IDO1 activation, which drives opposite effects on the somatostatin axis: gut SST-28 hyperactivation in NAG versus suppression in AG, producing opposite peripheral ghrelin states and therefore opposite appetite phenotypes. The same SST-28 polarity is proposed to gate two post-ingestive satiety hormones in parallel — cholecystokinin (CCK) from I-cells and glucagon-like peptide-1 (GLP-1) from L-cells via SSTR5 — so that food is hormonally invisible in NAG, while AG combines unrestrained ghrelin with released-but-vagally-blunted CCK and GLP-1. Critically, the two pathways converge on NF-κB-mediated CBP sequestration and SST-14 interneuron silencing — but through mechanistically distinct routes with profoundly different persistence characteristics. In the NAG, the IDO1/kynurenine/AhR positive feedback loop creates a locked, self-sustaining cascade in which adenylyl cyclase is substantially suppressed, cAMP is collapsed, and SST-14 transcription is near-zero. In the AG, TNF-α activates NF-κB without engaging IDO1, producing a dynamic cascade that tracks the inflammatory signal, preserves partial adenylyl cyclase activity, and leaves SST-14 partially functional. This mechanistic distinction explains the motor, social, and methylation differences between the two groups observed clinically, predicts differential IMIG response trajectories, and establishes that standard ASD supplement and intervention protocols applied uniformly across both subgroups are likely misdirected in the AG — most critically, tryptophan and 5-HTP supplementation is potentially contraindicated in the AG due to pre-existing hyperserotonemia. GLP-1 receptor agonism is flagged as an AG-specific candidate (pharmacologic area-postrema access independent of vagal integrity) and as predicted directional harm in NAG; this prediction does not yet carry the same evidential weight as the tryptophan/5-HTP contraindication. A comprehensive biomarker panel and proposed observational study are presented, with fasting GLP-1 added as a secondary measure on the existing single-draw design and postprandial GLP-1 reserved for a deferred mixed-meal sub-study.</p>
     </div>
   </div>
 
-  <!-- SECTION 1 -->
   <div class="body-section" id="divergence">
     <div class="section-divider">
       <div class="section-divider-line"></div>
-      <div class="section-divider-label">Section 01 — The observation</div>
+      <div class="section-divider-label">Section 01</div>
       <div class="section-divider-line"></div>
     </div>
     <div class="section-num">Section 01</div>
-    <h2>A bifurcation nobody stratified on</h2>
+    <h2>1. Background and Observational Basis</h2>
     <div class="h2-rule"></div>
-
-    <p>Efforts to find reproducible ASD subgroups have pursued regression history, GI comorbidity, immune markers, and copy-number variants — with limited replication across cohorts. One candidate variable has gone largely unexamined: appetite. It is directly observable, reliably reported by caregivers without specialist training, and doesn't require neuropsychological assessment — yet the field has generally filed appetite differences under sensory processing or food selectivity rather than asking whether a deeper immunological divergence sits underneath.</p>
-
-    <p>More than fifteen years of longitudinal clinical observation in community ASD support settings reveals a consistent, previously unexplained split: roughly half of individuals show persistent limited appetite and apparent absence of hunger drive; the other half show hyperphagia — constant food-seeking, inability to recognize satiety, and tendency toward overweight. These are not two ends of a continuum; they present as discrete poles. And the appetite split doesn't travel alone — the hyperphagic group tends toward better motor coordination, more normal gait, and stronger social engagement, and does not present the characteristic under-methylation phenotype seen in the food-refusing group.</p>
-
-    <div class="note-box">
-      <div class="note-box-label">The central hypothesis</div>
-      <p>Appetite phenotype in ASD is not a behavioral epiphenomenon. It is a surface readout of upstream cytokine dominance — specifically, <strong>IFN-γ dominance in the No-Appetite Group (NAG)</strong> versus <strong>TNF-α dominance in the Appetite Group (AG)</strong>. This single fork in the immune cascade is proposed to explain the co-clustering of appetite, motor, social, and metabolic differences as expressions of one underlying mechanism rather than a collection of independent variables.</p>
-    </div>
+    <p>Autism spectrum disorder encompasses extraordinary biological heterogeneity beneath a unified diagnostic label. Efforts to identify reproducible subgroups have pursued regression history, gastrointestinal comorbidity, immune activation markers, and genetic copy number variants, yet no stratification criterion has achieved consistent replication across independent cohorts. This failure is increasingly attributed not to the absence of meaningful biological subgroups, but to the use of behavioral and cognitive instruments — designed to capture the phenotypic surface of ASD — as the primary classification tool. Instruments that measure social communication deficit and restricted behavior by definition cannot separate individuals whose identical surface phenotype arises from mechanistically distinct underlying biology.</p>
+    <p>Appetite behavior represents a largely unexplored stratification variable. It is directly observable, reliably reportable by caregivers without specialist training, and does not require neuropsychological assessment. Its potential biological significance has been systematically underestimated because the field has attributed eating differences in ASD to sensory processing variation, food selectivity, or behavioral routine — without investigating whether a deeper immunological divergence is responsible. The present hypothesis proposes that appetite phenotype in ASD is not a behavioral epiphenomenon but a surface readout of upstream cytokine dominance, and that this cytokine dominance is both measurable and mechanistically explanatory of a broader cluster of metabolic, motor, and social differences between subgroups.</p>
+    <p>A substantial body of clinical observation in community ASD support group settings — spanning more than fifteen years of longitudinal participant contact — reveals a consistent and previously unexplained bifurcation in eating behavior among individuals with ASD. Roughly half of observed participants display persistent limited appetite and apparent absence of hunger drive; the other half display hyperphagia — constant seeking of food, inability to recognize satiety, and tendency toward overweight. These two phenotypes are not distributed along a continuum but appear to represent discrete poles. Critically, the appetite difference is not the only observed divergence. The hyperphagic (AG) individuals tend to display better motor coordination, more normal gait, better balance, and stronger social engagement, and do not present with the characteristic under-methylation phenotype seen in the food-refusing (NAG) group. This co-clustering of appetite, motor, social, and metabolic features suggests a common upstream mechanism separating the two groups — not a collection of independent variables.</p>
   </div>
 
-  <!-- SECTION 2 -->
   <div class="body-section" id="polarity">
     <div class="section-divider">
       <div class="section-divider-line"></div>
-      <div class="section-divider-label">Section 02 — Somatostatin polarity</div>
+      <div class="section-divider-label">Section 02</div>
       <div class="section-divider-line"></div>
     </div>
     <div class="section-num">Section 02</div>
-    <h2>The somatostatin polarity framework</h2>
+    <h2>2. The Somatostatin Polarity Framework</h2>
     <div class="h2-rule"></div>
-
-    <p>Somatostatin is encoded by a single gene but processed into two bioactive forms with opposite territories: <strong>SST-28</strong>, predominating in the gut as a satiety signal, and <strong>SST-14</strong>, predominating in cortical interneurons as the pacemaker of gamma oscillation — the rhythm underlying social cognition, sensory gating, and executive function.</p>
-
-    <p>In the established IDA cascade, gut pH failure drives pepsin/DPP-IV disruption, producing opioid peptide excess and LPS translocation. LPS activates IDO1 and NF-κB; NF-κB sequesters the transcriptional co-activator CBP away from CREB, silencing SST-14. In parallel, gut SST-28 activity shifts — and here is the hinge of the whole framework: <strong>brain and peripheral somatostatin signaling exert opposite effects on circulating ghrelin</strong> via the SST2 receptor subtype. Central SST2 activation increases ghrelin; peripheral SST2 activation suppresses it. The direction of SST-28 dysregulation in the gut therefore determines appetite phenotype directly — hyperactive SST-28 suppresses ghrelin (no hunger signal, NAG), suppressed SST-28 lets ghrelin run high (insatiable hunger, AG).</p>
-
-    <div class="pull-quote">Appetite phenotype is a direct downstream readout of SST-28 polarity in the gut — and that polarity is determined by which immune arm dominates upstream.</div>
+    <p>The Immune-Derived Autism (IDA) cascade positions somatostatin dysregulation as the critical neuroimmune bridge between peripheral immune activation and the core ASD phenotype. Somatostatin is encoded by a single gene but processed into two principal bioactive forms: SST-28, predominating in the gastrointestinal tract as a potent satiety signal, and SST-14, predominating in cortical interneurons as the pacemaker of gamma oscillation — the neural rhythm underlying social cognition, sensory gating, and executive function.</p>
+    <p>In the established IDA cascade, gut pH failure drives pepsin/DPP-IV disruption, producing opioid peptide excess and LPS translocation. LPS activates IDO1 and NF-κB. NF-κB sequesters the transcriptional co-activator CBP away from CREB, silencing SST-14 interneurons. In parallel, gut SST-28 becomes hyperactive — signaling persistent satiety and eliminating hunger drive.</p>
+    <p>Brain and peripheral somatostatin signaling exert opposite effects on circulating ghrelin via SST2 receptor subtype<sup>[<a href="#ref1">1</a>]</sup>. Central SST2 activation increases ghrelin; peripheral SST2 activation suppresses ghrelin. The direction of SST dysregulation therefore determines the appetite phenotype. In the NAG, gut SST-28 hyperactivation suppresses peripheral ghrelin — no hunger signal results. In the AG, gut SST-28 is suppressed — ghrelin runs high, producing insatiable hunger. The appetite phenotype is a direct downstream readout of SST-28 polarity in the gut, and that polarity is determined by which immune arm is dominant upstream.</p>
   </div>
 
-  <!-- SECTION 3 -->
   <div class="body-section" id="fork">
     <div class="section-divider">
       <div class="section-divider-line"></div>
-      <div class="section-divider-label">Section 03 — The fork</div>
+      <div class="section-divider-label">Section 03</div>
       <div class="section-divider-line"></div>
     </div>
     <div class="section-num">Section 03</div>
-    <h2>The immune fork — convergent NF-κB, divergent architecture</h2>
+    <h2>3. The Immune Fork: Convergent NF-κB, Divergent Cascade Architecture</h2>
     <div class="h2-rule"></div>
-
-    <p>Both pathways elevate NF-κB and both silence SST-14 through CBP sequestration from CREB — in that narrow sense they converge. But the routes to NF-κB elevation are structurally different in ways that produce profoundly different cascade persistence, metabolic consequences, and treatment responsiveness.</p>
-
-    <div class="fork-grid">
-      <div class="fork-card fc-nag">
-        <div class="fork-card-stripe"></div>
-        <h4>NAG — the locked cascade</h4>
-        <p><strong>IFN-γ</strong> is the primary inducer of IDO1 transcription via ISRE elements in the IDO1 promoter. IDO1 diverts tryptophan into the kynurenine pathway; kynurenine metabolites activate AhR, which transcriptionally induces <em>further</em> IDO1 — a self-sustaining positive feedback loop that keeps NF-κB active independently of the original trigger.</p>
-        <ul>
-          <li>Tryptophan depleted → serotonin synthesis collapsed</li>
-          <li>KYN/TRP ratio elevated (&gt;5%)</li>
-          <li>AhR/IDO1 loop sustains NF-κB after immune trigger clears</li>
-          <li>SST-28 hyperactive → ghrelin suppressed → no appetite</li>
-          <li>Methyl donor pool depleted systemically</li>
-          <li><strong>Removing the immune trigger does not break the loop</strong></li>
-        </ul>
-      </div>
-      <div class="fork-card fc-ag">
-        <div class="fork-card-stripe"></div>
-        <h4>AG — the dynamic cascade</h4>
-        <p><strong>TNF-α</strong> activates NF-κB through the canonical IKK pathway — TNF-R1 binding, IκBα phosphorylation, p65/p50 nuclear translocation — without requiring IDO1 as an intermediate. The AhR/IDO1 feedback loop is never engaged. NF-κB tracks the ongoing TNF-α signal directly.</p>
-        <ul>
-          <li>IDO1 inactive → tryptophan preserved → hyperserotonemia unmasked</li>
-          <li>KYN/TRP ratio normal (&lt;5%)</li>
-          <li>SAM depletion localized to macrophage compartment only</li>
-          <li>SST-28 suppressed → ghrelin elevated → persistent hyperphagia</li>
-          <li>SST-14 compromised, but less completely and more dynamically</li>
-          <li><strong>When the TNF-α signal resolves, the cascade resolves with it</strong></li>
-        </ul>
-      </div>
-    </div>
-
-    <p>This distinction is clinically load-bearing, not academic. A locked cascade requires breaking the AhR/IDO1 feedback loop as a prerequisite to functional recovery — even after immune clearance. A dynamic cascade resolves more directly when the upstream immune signal is addressed. This predicts a faster, more complete IMIG response in AG, and the need for adjunctive IDO1-pathway intervention in NAG to reach an equivalent outcome.</p>
+    <p>A fundamental question this hypothesis must address is whether the NAG and AG pathways truly converge or run in parallel. Both elevate NF-κB and both silence SST-14 through CBP sequestration from CREB. In that narrow mechanistic sense they converge. But the routes to NF-κB elevation are structurally different in ways that produce profoundly different cascade persistence, metabolic consequences, and treatment responsiveness. Understanding this distinction is the key to the entire framework.</p>
+    <h3>The IFN-γ Dominant Route (NAG) — The Locked Cascade</h3>
+    <p>IFN-γ is the primary inducer of IDO1 transcription via interferon-stimulated response elements (ISRE) in the IDO1 promoter<sup>[<a href="#ref2">2</a>]</sup>. IDO1 diverts tryptophan away from serotonin synthesis and into the kynurenine pathway. Kynurenine metabolites activate the aryl hydrocarbon receptor (AhR), which transcriptionally induces further IDO1 expression<sup>[<a href="#ref3">3</a>]</sup> — creating a self-sustaining positive feedback loop. AhR also directly activates NF-κB, sustaining CBP sequestration independently of the original immune trigger. Critically, IFN-γ directly drives somatostatin upregulation<sup>[<a href="#ref4">4</a>]</sup>, and elevated gut SST-28 suppresses peripheral ghrelin via gastric D-cell paracrine action<sup>[<a href="#ref1">1</a>]</sup>. The full consequence of this locked architecture:</p>
+    <ul>
+      <li><p>IDO1 active → tryptophan depleted → serotonin synthesis collapsed → whole-blood serotonin normal or low</p></li>
+      <li><p>KYN/TRP ratio elevated (&gt;5%) — measurable by existing plasma assay<sup>[<a href="#ref7">7</a>]</sup></p></li>
+      <li><p>AhR/IDO1 feedback loop sustains NF-κB even after initial immune trigger is reduced</p></li>
+      <li><p>SST-28 hyperactive → ghrelin suppressed → no appetite</p></li>
+      <li><p>Methyl donor pool depleted systemically — global SAM/SAH ratio depression</p></li>
+      <li><p>NF-κB sustained → SST-14 substantially silenced → severe motor, social, cognitive impairment</p></li>
+      <li><p>Cascade state: locked — removing the immune trigger does not break the loop; the AhR/IDO1 cycle perpetuates NF-κB independently</p></li>
+    </ul>
+    <h3>The TNF-α Dominant Route (AG) — The Dynamic Cascade</h3>
+    <p>TNF-α activates NF-κB through the canonical IKK pathway — binding TNF-R1, phosphorylating IκBα, and releasing p65/p50 for nuclear translocation<sup>[<a href="#ref5">5</a>]</sup> — without requiring IDO1 as an intermediate. Crucially, this route does not engage the AhR/IDO1 feedback loop. There is no self-sustaining metabolic cycle. NF-κB activation tracks directly with the ongoing TNF-α signal — when that signal is reduced, NF-κB resolves. The IFN-γ → SST → ghrelin suppression chain is not engaged. The full consequence:</p>
+    <ul>
+      <li><p>IDO1 inactive → tryptophan preserved → serotonin synthesis intact → hyperserotonemia unmasked</p></li>
+      <li><p>KYN/TRP ratio normal (&lt;5%)</p></li>
+      <li><p>SST-28 suppressed → ghrelin elevated → persistent hyperphagia</p></li>
+      <li><p>SAM depletion localized to macrophage compartment (TNF-driven one-carbon metabolism) rather than systemic<sup>[<a href="#ref6">6</a>]</sup></p></li>
+      <li><p>NF-κB via TNF-R1 → SST-14 compromised but less completely than in NAG, and more dynamically</p></li>
+      <li><p>Better motor coordination and social engagement — consistent with partial SST-14 preservation</p></li>
+      <li><p>Cascade state: dynamic — NF-κB tracks the inflammatory signal; removing it allows the cascade to resolve without metabolic loop intervention</p></li>
+    </ul>
+    <h3>Why the Distinction Matters Clinically</h3>
+    <p>The locked vs dynamic distinction is not merely academic — it determines what intervention is required and what recovery looks like. A locked cascade requires breaking the AhR/IDO1 feedback loop as a prerequisite to functional recovery, even after immune clearance. A dynamic cascade resolves more directly when the upstream immune signal is addressed. This predicts faster and more complete IMIG response in the AG, and the need for adjunctive IDO1 pathway intervention in the NAG to achieve equivalent outcomes.</p>
   </div>
 
-  <!-- SECTION 4 -->
   <div class="body-section" id="hinge">
     <div class="section-divider">
       <div class="section-divider-line"></div>
-      <div class="section-divider-label">Section 04 — The molecular hinge</div>
+      <div class="section-divider-label">Section 04</div>
       <div class="section-divider-line"></div>
     </div>
     <div class="section-num">Section 04</div>
-    <h2>The cAMP and adenylyl cyclase axis</h2>
+    <h2>4. The cAMP and Adenylyl Cyclase Axis — The Molecular Hinge</h2>
     <div class="h2-rule"></div>
-
-    <p>The locked-vs-dynamic distinction becomes most precise at the level of adenylyl cyclase. Two Gαi-coupled inputs converge on its suppression: casomorphin/gliadorphin opioid peptides at mu-opioid receptors, and adenosine accumulation (from CD26/DPP-IV blockade by the same peptides) at A1/A2A receptors. Both inputs together substantially collapse cAMP production.</p>
-
-    <p>The amplitude of the opioid-peptide input depends on the severity of gut pH failure. In NAG, full gut pH dysregulation produces maximum opioid peptide excess — the Gαi input is fully engaged, adenylyl cyclase is substantially suppressed, and cAMP is effectively collapsed: PKA cannot activate CREB, and SST-14 transcription is near-zero. In AG, gut pH failure is proposed to be less complete — a lower opioid burden partially engages the Gαi input without saturating it, so adenylyl cyclase retains residual activity, cAMP is reduced but not collapsed, and SST-14 transcription is dampened but present. This is the molecular basis for AG's better motor coordination and stronger social engagement — not a separate phenomenon, but a direct expression of partially preserved cAMP/PKA/CREB/SST-14 signaling.</p>
-
-    <h3>The forskolin prediction</h3>
-    <p>Forskolin bypasses both Gαi inputs by activating the adenylyl cyclase catalytic subunit directly. In NAG, where adenylyl cyclase is maximally suppressed, forskolin provides a large gain from a deeply depressed baseline. In AG, where partial activity already exists, the same intervention produces a smaller delta from a higher starting point. This predicts <strong>forskolin produces a larger observable effect in NAG than in AG</strong> — a testable, clinically observable subgroup indicator available before the full biomarker panel.</p>
-
-    <h3>The estrogen compensatory axis</h3>
-    <p>A parallel route to SST-14 transcription — Gq-mER → Gαq → PLC → DAG → PKCδ → AC7 → cAMP → PKA → CREB — bypasses the Gαi block entirely and is proposed to explain the roughly 4:1 male-to-female ASD ratio (females carry a partial compensatory mechanism males lack). This bypass is predicted to be more effective in AG than NAG: against a partial Gαi block, the AC7 contribution restores a meaningful fraction of total cAMP; against a near-complete block, it represents a smaller fraction of what's been lost. This predicts the <strong>male-to-female ratio within AG will run closer to 2:1–3:1</strong> rather than 4:1 — a checkable demographic prediction against existing appetite-stratified epidemiological data.</p>
+    <p>The distinction between locked and dynamic cascade states becomes most precise at the level of adenylyl cyclase and cAMP signaling. This is the molecular hinge on which every downstream difference between NAG and AG turns.</p>
+    <h3>The Two Gαi Inputs to Adenylyl Cyclase Suppression</h3>
+    <p>In the established IDA cascade, two Gαi-coupled inputs converge on adenylyl cyclase suppression. First, casomorphin and gliadorphin — opioid peptides produced by incomplete protein digestion under gut pH failure — activate mu-opioid receptors (MOR). All opioid receptors couple exclusively to inhibitory Gi/Go proteins, and MOR activation suppresses adenylyl cyclase by releasing the Gαi subunit<sup>[<a href="#ref8">8</a>, <a href="#ref9">9</a>]</sup>. Second, CD26/DPP-IV blockade by these same opioid peptides impairs adenosine metabolism, driving adenosine accumulation and activation of A1/A2A receptors — also Gαi-coupled — providing a second additive suppressive input on adenylyl cyclase. Both inputs together substantially collapse cAMP production, preventing PKA-mediated CREB phosphorylation and therefore SST-14 transcription.</p>
+    <h3>Why the Opioid Peptide Burden Differs Between NAG and AG</h3>
+    <p>The amplitude of MOR-mediated Gαi input depends on the opioid peptide burden, which depends on the severity of gut pH failure and pepsin/DPP-IV disruption. The IDA framework proposes that gut pH failure is the founding event in the cascade. In the NAG, full gut pH dysregulation produces maximum opioid peptide excess — the MOR input to adenylyl cyclase is fully engaged. In the AG, gut pH failure is proposed to be less complete — producing a lower opioid peptide burden that partially engages MOR but does not fully saturate the Gαi input to adenylyl cyclase. Additionally, TNF-α directly suppresses DPP-IV expression, contributing to opioid peptide accumulation in the AG through a different route — but the magnitude of this suppression is likely less than the substrate overwhelm seen in full NAG-type gut pH failure.</p>
+    <h3>The Consequence: Collapsed vs Partially Preserved cAMP</h3>
+    <p>In the NAG, both Gαi inputs are maximally engaged — adenylyl cyclase is substantially suppressed and cAMP is effectively collapsed. PKA cannot activate CREB. SST-14 transcription is near-zero. The neuropeptide cascade — oxytocin, VIP, secretin — dependent on SST-14 interneuron integrity, fails near-completely. This is the locked state at the molecular level: the cAMP axis cannot drive recovery because it has been removed from functional signaling.</p>
+    <p>In the AG, the lower opioid peptide burden means MOR engagement is partial. Adenylyl cyclase retains residual activity. cAMP is reduced but not collapsed. PKA retains some activity. CREB can still be phosphorylated at a low level. SST-14 transcription is dampened but present. The neuropeptide cascade is impaired but partially functional. This is the molecular basis for the better motor coordination, gait, and social engagement observed in the AG — these are not separate phenomena but direct expressions of partial cAMP/PKA/CREB/SST-14 preservation.</p>
+    <h3>The Forskolin Prediction</h3>
+    <p>Forskolin bypasses both Gαi inputs by directly activating the adenylyl cyclase catalytic subunit, restoring cAMP production regardless of MOR or A1/A2A receptor state<sup>[<a href="#ref10">10</a>]</sup>. In the NAG, where adenylyl cyclase is maximally suppressed, forskolin provides a large gain from a deeply depressed baseline — a substantial and clinically observable cAMP restoration. In the AG, where adenylyl cyclase retains partial activity, forskolin still operates but the delta from baseline is smaller because baseline cAMP is already elevated relative to NAG. This predicts that forskolin produces a larger observable effect in NAG than in AG — a testable prediction that could be used clinically as a preliminary subgroup indicator before the full biomarker panel is available.</p>
+    <h3>The Estrogen Compensatory Axis</h3>
+    <p>The estrogen compensatory axis provides an alternative route to SST-14 transcription via Gq-mER → Gαq → PLC → DAG → PKCδ → AC7 → cAMP → PKA → CREB, bypassing the Gαi block entirely<sup>[<a href="#ref11">11</a>]</sup>. This axis explains the 4:1 male-to-female ratio in ASD — females have a partial compensatory mechanism that males lack. Critically, this bypass is more effective in the AG than in the NAG: when the Gαi block is only partial (AG), the estrogen-driven AC7 contribution restores a meaningful proportion of total cAMP. When the Gαi block is near-complete (NAG), the AC7 contribution represents a smaller fraction of total suppressed capacity. This predicts that the male-to-female ratio within the AG will be closer to 2:1 or 3:1 rather than the 4:1 seen in the general ASD population — a testable demographic prediction that could be checked against existing epidemiological data stratified by appetite phenotype.</p>
   </div>
 
-  <!-- SECTION 5 -->
-  <div class="body-section" id="hormones">
+  <div class="body-section" id="hormones-appetite">
     <div class="section-divider">
       <div class="section-divider-line"></div>
-      <div class="section-divider-label">Section 05 — Hormones &amp; methylation</div>
+      <div class="section-divider-label">Section 05</div>
       <div class="section-divider-line"></div>
     </div>
     <div class="section-num">Section 05</div>
-    <h2>Differential hormonal profiles &amp; the methylation intersection</h2>
+    <h2>5. Gut-Brain Appetite Axes — CCK, Vagal Transmission, and GLP-1</h2>
     <div class="h2-rule"></div>
-
-    <p>The clinical observation that AG individuals lack NAG's characteristic under-methylation phenotype is explained by mechanistically different routes to methyl-donor depletion. In NAG, continuous tryptophan diversion into kynurenine draws methionine-cycle intermediates into compensatory reactions, producing <strong>systemic SAM/SAH depression</strong> — a global deficit visible in peripheral blood. In AG, IDO1 is inactive and tryptophan metabolism is preserved; instead, TNF-α-driven macrophage activation consumes SAM locally for histone methylation at inflammatory gene promoters, producing <strong>compartment-specific depletion</strong> that doesn't show up on standard peripheral methylation panels. The AG individual looks methylation-normal — not because methylation is healthier, but because the depletion is localized rather than global.</p>
-
-    <div class="fork-grid">
-      <div class="fork-card fc-nag">
-        <div class="fork-card-stripe"></div>
-        <h4>NAG hormonal profile</h4>
-        <ul>
-          <li>Serotonin — depleted (hyperserotonemia masked by IDO1 competition)</li>
-          <li>Melatonin — impaired synthesis, disrupted circadian regulation</li>
-          <li>Oxytocin — suppressed via hypothalamic serotonin depletion</li>
-          <li>Ghrelin — low, consistent with SST-28 hyperactivation</li>
-          <li>VIP/secretin — substantially reduced via SST-14 silencing</li>
-        </ul>
-      </div>
-      <div class="fork-card fc-ag">
-        <div class="fork-card-stripe"></div>
-        <h4>AG hormonal profile</h4>
-        <ul>
-          <li>Serotonin — elevated (hyperserotonemia unmasked by absent IDO1)</li>
-          <li><strong>Oxytocin — paradoxically suppressed</strong> despite elevated serotonin: chronic serotonin desensitizes the 5-HT1A autoreceptors that would drive its release</li>
-          <li><strong>Ghrelin — chronically elevated</strong>, and may be providing partial hippocampal neuroprotection via BDNF-dependent GHS-R1a signaling</li>
-          <li>VIP/secretin — reduced, but less completely than NAG</li>
-        </ul>
-      </div>
-    </div>
-
-    <p style="font-size:0.85rem; color:var(--text-light);">A second, independent appetite-control layer — the CCK/vagal satiety reflex — is also differentially affected: in NAG, SST-28 hyperactivation creates a "double satiety lock" by blocking CCK release entirely; in AG, CCK is released normally but TNF-α progressively desensitizes vagal CCK-1R signaling, so the post-ingestive satiety brake is present but blunted — a second, independent driver of AG hyperphagia alongside elevated ghrelin.</p>
+    <p>The appetite difference between NAG and AG is not solely determined by the SST-28/ghrelin axis. Two further, independently important post-ingestive satiety systems — cholecystokinin (CCK) and glucagon-like peptide-1 (GLP-1) — operate in parallel with ghrelin and are differentially affected in the two subgroups. CCK and the vagal satiety reflex are developed in Sections 5.1–5.5. Section 5.6 extends the same D-cell SST-28 brake, by homologous SSTR5 mechanism, to L-cell GLP-1.</p>
+    <h3>CCK as the Primary Post-Ingestive Satiety Signal</h3>
+    <p>Cholecystokinin is released from enteroendocrine I-cells in the duodenum in response to fat and protein arriving from the stomach. CCK binding to CCK-1 receptors (CCK-1R, formerly CCK-A receptors) on vagal afferent nerve endings activates the vagal satiety pathway<sup>[<a href="#ref12">12</a>, <a href="#ref13">13</a>]</sup>. This signal travels via vagal afferents to the nucleus tractus solitarius and from there to the hypothalamus, generating the subjective experience of fullness and meal termination. CCK-1R signaling on vagal afferents is therefore the primary peripheral satiety brake after food intake begins.</p>
+    <h3>The NAG: A Double Satiety Lock</h3>
+    <p>In the NAG, the gut SST-28 hyperactivation that suppresses ghrelin also directly inhibits CCK release from I-cells via D-cell paracrine signaling. This creates a double satiety lock: SST-28 provides a constant satiety signal even in the fasted state (via ghrelin suppression), and simultaneously prevents CCK from being released post-ingestion (eliminating the post-prandial satiety signal). The result is a system with no hunger signal and no need for the vagal satiety reflex — food is physiologically invisible to these individuals. The vagal afferent pathway is not defective; it simply has nothing to relay because CCK is not being released.</p>
+    <h3>The AG: CCK Released but Vagal Signaling Disrupted</h3>
+    <p>In the AG, SST-28 suppression removes the inhibitory brake on CCK release from I-cells. CCK is produced and released in response to meals. However, TNF-α directly modulates vagal afferent sensitivity. The vagus nerve is a key component of the cholinergic anti-inflammatory pathway — vagal efferents suppress TNF-α release from macrophages via alpha-7 nicotinic acetylcholine receptors<sup>[<a href="#ref14">14</a>, <a href="#ref15">15</a>]</sup>. The relationship is bidirectional: chronic TNF-α elevation in the AG gut environment progressively desensitizes vagal CCK-1R signaling, impairing the post-ingestive satiety reflex<sup>[<a href="#ref16">16</a>]</sup>. CCK is released after meals, but its vagal satiety signal is blunted. Ghrelin is chronically elevated. The AG individual thus has two independent mechanisms simultaneously driving hyperphagia — unrestrained ghrelin and impaired CCK/vagal satiety transmission.</p>
+    <h3>Central CCK-B Receptor Implications</h3>
+    <p>CCK also functions as a neurotransmitter centrally via CCK-B receptors, where it is involved in anxiety modulation, satiety integration, and pain signaling. In the AG, where peripheral CCK-1R vagal transmission is impaired, CCK may accumulate in the periphery and gain greater central access via CCK-B, potentially contributing to the anxiety profiles commonly observed in this subgroup. This is a secondary and speculative mechanism at this stage, but it is mechanistically coherent with the central CCK-B pharmacology literature and warrants investigation.</p>
+    <h3>Secretin and the SST-CCK Interaction</h3>
+    <p>Secretin is also released from duodenal S-cells in response to acid and stimulates somatostatin release from antral D-cells<sup>[<a href="#ref17">17</a>]</sup>. In the existing IDA framework, secretin IV delivery circumvents the S-cell pH gate and has been shown to produce transient improvement — consistent with the hypothesis that the S-cell gate is closed in vivo by the alkaline gut pH failure. In the AG, where SST-28 is suppressed and CCK is released, the secretin-somatostatin interaction at the antral level may behave differently than in the NAG. This dimension requires further investigation as part of the observational study proposed in Section 11. Secretin, CCK, and GLP-1 all sit in the same D-cell somatostatin neighborhood developed in Sections 5.2–5.3 and 5.6: secretin stimulates D-cell somatostatin release, which brakes I-cell CCK and, via SSTR5, L-cell GLP-1. The NAG/AG behavior of the secretin–somatostatin interaction should be read together with Section 5.6, not as an isolated finding.</p>
+    <h3>GLP-1 as a Third Gut-Brain Appetite Axis</h3>
+    <p>The SST-28/D-cell brake described in Sections 5.2 and 5.3 for CCK extends, by homologous mechanism, to a second gut hormone: glucagon-like peptide-1 (GLP-1), secreted by L-cells in response to nutrient ingestion. This section develops that extension. Somatostatin, acting preferentially through SSTR5, is a well-documented paracrine and endocrine inhibitor of L-cell GLP-1 secretion, established across rodent culture, colonic tissue, and pharmacologic models spanning more than two decades. Whether this loop is anatomically as tight at human ileal L-cells as the D-cell/I-cell arrangement already invoked for CCK is inferred from animal and culture data rather than demonstrated directly in ASD or human meal-satiety preparations, and is stated at that confidence level throughout.</p>
+    <h3>Somatostatin-28 as the Operative Inhibitor of L-Cell GLP-1</h3>
+    <p>Somatostatin-28 (S-28) inhibits GLP-1 secretion via somatostatin receptor subtype 5 (SSTR5) far more potently than SST-14, with an EC50 roughly 500-fold lower for S-28 across a panel of receptor-selective analogs in fetal rat intestinal cultures<sup>[<a href="#ref23">23</a>]</sup>. The same study identified a reciprocal feedback loop: GLP-1 itself stimulates S-28 secretion, which is then autoregulated by SSTR5 activation. This specificity for S-28 over S-14 is directly relevant to the cascade architecture developed in Sections 2–4, since S-28 is the gut-resident isoform this framework already identifies as the driver of NAG/AG bifurcation, while SST-14 is reserved for the distinct downstream CNS interneuron silencing mechanism.</p>
+    <p>Direct in vivo confirmation comes from a mouse study combining SSTR2/SSTR5 antagonism with perfused intestine preparations, which found that somatostatin exerts strong tonic inhibition of GLP-1 secretion preferentially through SSTR5, that antagonizing SSTR2 and SSTR5 together increased both GLP-1 and somatostatin secretion, and that the reciprocal somatostatin response was itself GLP-1 receptor-dependent<sup>[<a href="#ref24">24</a>]</sup>. This is the closest available analog to the D-cell/I-cell paracrine loop already invoked for CCK in Section 5.3 — an intact-tissue, receptor-antagonism demonstration of tonic SST-mediated restraint on L-cell GLP-1 output, in the same species and a comparable intestinal preparation.</p>
+    <p>A separate line of pharmacologic and colonic tissue evidence corroborates the SSTR5 mechanism from a different angle. In rat proximal colon, selective SSTR5 antagonism lowers the threshold at which GLP-1 and short-chain fatty acids accelerate peristalsis, and GLP-1-positive epithelial cells were found to coexpress SSTR5<sup>[<a href="#ref25">25</a>]</sup>. This is colonic motility data, not a duodenal or ileal meal-satiety preparation, and should be read as further functional and anatomical support for an SSTR5 brake on GLP-1-producing cells generally, rather than as direct evidence of the same satiety-signaling circuit CCK uses. In parallel, a review of L-cell secretory regulation notes that paracrine somatostatin restrains L-cell GLP-1 output and identifies somatostatin receptor antagonism as a candidate route to therapeutically increase endogenous GLP-1 secretion<sup>[<a href="#ref26">26</a>]</sup> — independent confirmation, from a pharmacology-development perspective, that the SST brake on L-cells is treated as physiologically real and clinically actionable in the broader endocrinology literature.</p>
+    <p>The molecular mechanism reinforces the cAMP-collapse architecture developed in Section 4. In an L-cell line, SSTR5 activation by the SSTR5-preferring agonist pasireotide suppressed GLP-1 secretion through Gi-dependent inhibition of cAMP, sufficient to functionally block the Gs-coupled secretory pathway in that model<sup>[<a href="#ref27">27</a>]</sup>. This demonstrates the mechanism at the receptor-signaling level; it does not by itself establish that endogenous gut SST-28 achieves the same degree of suppression in human L-cells in vivo. The same Gi/cAMP logic Section 4 applies to interneuron SST-14 transcription applies, by homology, to L-cell hormone output — a second tissue in which the proposed NAG/AG cAMP axis would be expected to produce an observable secretory consequence, pending direct measurement in this population.</p>
+    <h3>Applying the NAG/AG Fork</h3>
+    <p><strong>In the NAG,</strong> gut SST-28 hyperactivation would be expected to engage the SSTR5 brake on L-cells as it does on I-cells, suppressing GLP-1 secretion alongside CCK. Together with the orexigenic suppression already described for ghrelin, this yields concordant silencing across all three gut-brain appetite axes — the orexigenic signal (ghrelin) and both major post-ingestive satiety hormones (CCK, GLP-1) — consistent with the existing framing that food is physiologically invisible in this subgroup at the level of gut-hormone signaling generally, not only at the CCK-specific mechanism described in Section 5.2.</p>
+    <p><strong>In the AG,</strong> SST-28 suppression would be expected to release the SSTR5 brake on L-cells as it does on I-cells, allowing GLP-1 secretion in response to meals — paralleling the CCK release proposed in Section 5.3. However, GLP-1 receptor is expressed on vagal afferent terminals subject to the same chronic TNF-α-driven desensitization mechanism proposed for CCK-1R in Section 5.3. The local paracrine route by which L-cell GLP-1 signals satiety via adjacent vagal afferents would therefore be expected to be blunted in parallel with CCK, by the same proposed mechanism.</p>
+    <h3>A Pharmacologic, Not Endogenous, Asymmetry: The Area Postrema Route</h3>
+    <p>Long-acting GLP-1 receptor agonists (semaglutide-class) reach the area postrema and adjacent brainstem structures directly, independent of vagal afferent integrity, because they are protease-resistant and circulate at concentrations sufficient to act at circumventricular organs that lack a complete blood-brain barrier. This is well established and is the accepted pharmacologic rationale for the central appetite effects of this drug class.</p>
+    <p>This bypass should not be extended to endogenous, meal-released GLP-1 without qualification. Native GLP-1 has a circulating half-life of roughly one to two minutes and is understood in the broader literature primarily as a local paracrine signal acting on adjacent vagal afferents, not as a hormone that reliably reaches the area postrema at physiological postprandial concentrations. If TNF-α desensitizes vagal GLP-1R and CCK-1R terminals in the AG as proposed in Section 5.6.2, endogenous GLP-1 does not automatically retain a working bypass route through the area postrema — that bypass is best understood as a property of the pharmacologic drug class at supraphysiological exposure, not a general property of the hormone at meal-released levels. Whether sufficiently elevated endogenous L-cell output could partially engage this route in a subset of AG individuals is a testable prediction, not a mechanism already established, and should not be used to explain within-AG severity variability until postprandial GLP-1 is measured in this population.</p>
+    <h3>GLP-1 Receptor Agonism as a Candidate AG-Specific Intervention</h3>
+    <p>If the pharmacologic area-postrema route in Section 5.6.3 is engaged at the receptor-agonist exposure levels used clinically, GLP-1 receptor agonist pharmacology would be expected to produce a satiety effect in AG individuals through a route that does not depend on vagal afferent integrity — a mechanistically distinct rationale from CCK-directed intervention, worth flagging as a candidate direction for the AG-specific priorities in Section 12.4. GLP-1 receptor agonists have documented anti-inflammatory effects on macrophage populations, including suppression of NF-κB-driven cytokine output; if this generalizes to the AG's TNF-α-dominant gut and vagal compartment, GLP-1 agonism could plausibly act on the upstream inflammatory driver in addition to the appetite symptom, though this transfer from systemic macrophage biology to the AG's specific tissue compartment is a second, unconfirmed hypothesis layered on the first. This proposal requires the same prospective validation standard already applied to the CCK-B central anxiety mechanism (Section 5.4) and the ghrelin neuroprotection hypothesis (Section 7.2). Fasting and postprandial GLP-1, stratified by appetite phenotype, has not been measured in this population and is added to the biomarker panel in Section 9 and the observational study in Section 11.</p>
+    <h3>Predicted Harm in NAG</h3>
+    <p>GLP-1 receptor agonism is predicted to be directionally harmful in the NAG and mechanistically non-contributory to loop-breaking. As established in Section 5.6.2, GLP-1 secretion, CCK release, and ghrelin signaling are all expected to be suppressed in this subgroup by the SST-28/SSTR5 brake — food is already physiologically invisible before any intervention is introduced. Introducing a GLP-1 receptor agonist into this state would not correct a deficit; it would layer a pharmacologically forced satiety signal, plus slowed gastric emptying, onto a system in which appetite suppression is already at or near its ceiling. The predicted clinical consequence is a worsening of the presenting NAG symptom and increased risk of the nutritional and growth complications food refusal already produces in this subgroup. This is the same directional category of subgroup-discordant risk as tryptophan/5-HTP administration in the AG (Section 12.4): an intervention appropriate for one subgroup and predicted to be harmful in the other.</p>
+    <p>This prediction is not yet supported by the same evidential weight as the tryptophan/5-HTP contraindication, which rests on an already-established AG biomarker (hyperserotonemia). No GLP-1 measurements by appetite phenotype exist in this population, and no direct evidence of GLP-1-receptor-agonist exposure or outcome in NAG-classified individuals exists. Until appetite-stratified GLP-1 data are available, GLP-1 receptor agonism should not be used empirically in biomarker-classified NAG, and any off-label or consumer exposure should be treated as a safety flag to note at intake rather than as a confirmed contraindication carrying the same evidentiary status as Section 12.4.</p>
+    <p>A second, independent consideration is mechanistic futility rather than harm. The NAG's core lesion is the self-sustaining IDO1/kynurenine/AhR feedback loop and the near-complete Gαi-mediated collapse of adenylyl cyclase (Sections 3.1, 4.3) — mechanisms upstream of and structurally distinct from GLP-1 signaling. A GLP-1 receptor agonist, whatever its effect on appetite, would not be expected to engage IDO1, AhR, or the Gαi block on adenylyl cyclase, and should not be substituted for, or assumed to contribute toward, the NAG-specific priorities already outlined in Section 12.3.</p>
   </div>
 
-  <!-- SECTION 6 -->
-  <div class="body-section" id="biomarkers">
+  <div class="body-section" id="methylation">
     <div class="section-divider">
       <div class="section-divider-line"></div>
-      <div class="section-divider-label">Section 06 — Biomarkers</div>
+      <div class="section-divider-label">Section 06</div>
       <div class="section-divider-line"></div>
     </div>
     <div class="section-num">Section 06</div>
-    <h2>Proposed biomarker panel &amp; testable predictions</h2>
+    <h2>6. The Methylation Intersection</h2>
     <div class="h2-rule"></div>
-
-    <p>Every marker below is measurable with existing clinical laboratory infrastructure — no novel assays required.</p>
-
-    <table class="state-table">
-      <thead><tr><th>Marker</th><th><span class="state-badge s-nag">NAG</span></th><th><span class="state-badge s-ag">AG</span></th></tr></thead>
-      <tbody>
-        <tr><td><strong>KYN/TRP ratio</strong> — primary separator</td><td>Elevated (&gt;5%)</td><td>Normal (&lt;5%)</td></tr>
-        <tr><td><strong>Whole-blood serotonin</strong> — primary separator</td><td>Normal/low (IDO1 masking)</td><td>Elevated (unmasked)</td></tr>
-        <tr><td>Plasma IFN-γ / TNF-α</td><td>IFN-γ elevated; TNF-α low/normal</td><td>TNF-α elevated; IFN-γ low/normal</td></tr>
-        <tr><td>Fasting acyl ghrelin</td><td>Low</td><td>Elevated / high-normal</td></tr>
-        <tr><td>SAM/SAH ratio</td><td>Low — systemic</td><td>Preserved systemically (macrophage-localized only)</td></tr>
-        <tr><td>Adenylyl cyclase activity</td><td>Substantially suppressed — cAMP collapsed</td><td>Partially preserved — reduced, not collapsed</td></tr>
-        <tr><td>SST-14 (brain, inferred)</td><td>Substantially silenced</td><td>Dampened but partially preserved</td></tr>
-        <tr><td>IMIG response (predicted)</td><td>Partial — needs adjunctive IDO1 intervention</td><td>More complete — no self-sustaining loop to break</td></tr>
-      </tbody>
-    </table>
-
-    <p>A KYN/TRP threshold of 5% has been reported with IDO1 activation present in roughly 58.7% of a published ASD cohort — notably close to the NAG prevalence this framework's clinical observations would predict. Combined with whole-blood serotonin, these two markers alone should correctly classify most individuals at intake.</p>
-
-    <h3>Two headline testable predictions</h3>
-    <ul>
-      <li><strong>Forskolin response magnitude</strong> — larger observable cAMP-dependent effect in NAG (bigger delta from a depressed baseline) than in AG.</li>
-      <li><strong>Post-IMIG appetite direction</strong> — NAG individuals should show appetite <em>emergence</em>; AG individuals should show satiety-regulation emergence (recognizing fullness for the first time). If this directional split is observed in a mixed IMIG cohort, it confirms the hypothesis clinically without requiring the full biomarker panel.</li>
-    </ul>
+    <p>The clinical observation that AG individuals do not present with the characteristic under-methylation phenotype of NAG individuals is explained by mechanistically different routes to methyl donor depletion in each group.</p>
+    <p>In the NAG, IDO1 activation continuously diverts tryptophan into kynurenine, depleting the substrate pool available for serotonin and melatonin synthesis and drawing methionine cycle intermediates into compensatory reactions. The result is systemic SAM/SAH ratio depression — a global methylation deficit visible across cell compartments and measurable in peripheral blood. Jon Pangborn's framing — that methylation in the brain is the most important biochemical function in the human body — is particularly relevant here: the NAG's systemic methyl donor depletion impairs brain methylation at the most fundamental level.</p>
+    <p>In the AG, IDO1 is not activated and tryptophan metabolism is preserved. However, TNF-α-driven macrophage activation requires and consumes SAM for histone methylation at inflammatory gene promoters to sustain IL-1β and TNF production<sup>[<a href="#ref6">6</a>]</sup>. This creates compartment-specific SAM depletion within the macrophage without producing the systemic deficit visible in peripheral measurements. The AG individual therefore appears relatively normal on standard methylation assessment — not because the methylation system is healthier, but because the depletion mechanism is localized rather than global. Whole-blood SAM/SAH ratio is predicted to cleanly separate the two subgroups and to correlate with KYN/TRP ratio within each group.</p>
   </div>
 
-  <!-- SECTION 7 -->
-  <div class="body-section" id="treatment">
+  <div class="body-section" id="hormones">
     <div class="section-divider">
       <div class="section-divider-line"></div>
-      <div class="section-divider-label">Section 07 — Treatment implications</div>
+      <div class="section-divider-label">Section 07</div>
       <div class="section-divider-line"></div>
     </div>
     <div class="section-num">Section 07</div>
-    <h2>Treatment implications</h2>
+    <h2>7. Differential Hormonal Profiles</h2>
     <div class="h2-rule"></div>
-
-    <p>The core principle: standard ASD supplement protocols applied uniformly across both subgroups are likely misdirected in AG — and, in at least one specific case, potentially harmful.</p>
-
-    <div class="warn-box">
-      <div class="warn-box-label">Contraindication — AG</div>
-      <p><strong>Tryptophan and 5-HTP are commonly used in ASD supplement protocols and are potentially contraindicated in AG.</strong> Where tryptophan metabolism is intact and serotonin is already elevated, adding more precursor worsens hyperserotonemia — risking increased GI dysmotility and behavioral dysregulation. This should be stated explicitly at intake for anyone identified as AG on biomarker screening, before any standard protocol is applied.</p>
-    </div>
-
-    <h3>Shared across both groups</h3>
-    <p>Luteolin (NF-κB suppression regardless of which arm activated it), forskolin (adenylyl cyclase bypass — larger effect in NAG), sulforaphane (Nrf2/oxidative stress, plus IDO1-modulating properties that matter more in NAG), low-dose naltrexone (reduces mu-opioid receptor activation in both), and hydroxocobalamin (methylation support — methylcobalamin remains contraindicated in slow-COMT individuals regardless of subgroup).</p>
-
-    <h3>NAG-specific priorities</h3>
-    <p>IDO1 pathway modulation (EGCG, resveratrol) to break the AhR/IDO1 feedback loop — a prerequisite for cascade resolution that continues driving NF-κB even after immune clearance; tryptophan restoration only <em>after</em> IDO1 activity has been reduced, since premature supplementation simply feeds more kynurenine production; and aggressive systemic methylation support given the global methyl-donor depletion characteristic of the IDO1-active state.</p>
-
-    <h3>AG-specific priorities</h3>
-    <p>TNF-α modulation (omega-3, curcumin, low-dose naltrexone) as the primary upstream target; and caution around ghrelin normalization post-IMIG — if elevated ghrelin is providing partial neuroprotective compensation via hippocampal GHS-R1a signaling, cognitive function should be tracked alongside metabolic normalization rather than treating the drop as an unambiguous win.</p>
-
-    <h3>Recovery trajectories differ, too</h3>
-    <p><strong>NAG — sequential:</strong> IMIG clears immune load → IDO1 subsides → AhR loop gradually breaks → NF-κB resolves → SST-14 recovers → appetite emerges as SST-28 normalizes. Each step depends on the prior one completing. <strong>AG — spring release:</strong> IMIG reduces TNF-α load → NF-κB resolves more directly, with no loop to break → SST-14 recovers → satiety regulation emerges, amplified by the partial cAMP/PKA axis already present. This is a more elastic recovery — the system retains enough residual signaling capacity to rebound relatively quickly.</p>
+    <p>The two immune arms produce not just different metabolic states but different hormonal landscapes — each with its own secondary consequences for neurological function.</p>
+    <h3>NAG Hormonal Profile</h3>
+    <p>In the NAG, IDO1 activation depletes tryptophan — the precursor to serotonin, melatonin, and a substrate for the methionine cycle. The hormonal consequence is systemic:</p>
+    <ul>
+      <li><p>Serotonin — depleted peripherally and centrally; hyperserotonemia is masked by IDO1 competition for tryptophan</p></li>
+      <li><p>Melatonin — impaired synthesis; disrupted circadian regulation</p></li>
+      <li><p>Oxytocin — suppressed via hypothalamic serotonin depletion (IDO1 reduces the serotonin input to oxytocin neurons)</p></li>
+      <li><p>Ghrelin — low, consistent with SST-28 hyperactivation</p></li>
+      <li><p>GLP-1 — predicted low (fasting and postprandial), consistent with SST-28/SSTR5 brake on L-cells (Section 5.6)</p></li>
+      <li><p>VIP and secretin — substantially reduced via SST-14 silencing of the interneuron cascade</p></li>
+    </ul>
+    <h3>AG Hormonal Profile</h3>
+    <p>In the AG, the hormonal picture is fundamentally different — and produces paradoxes that require mechanistic explanation:</p>
+    <ul>
+      <li><p>Serotonin — elevated (hyperserotonemia unmasked by absent IDO1 competition). Elevated peripheral serotonin drives GI dysmotility, potentially worsening gut permeability and sustaining LPS translocation that feeds TNF-α production — a secondary feedback loop specific to the AG</p></li>
+      <li><p>Oxytocin — paradoxically suppressed despite elevated serotonin. Acutely, 5-HT1A receptor activation promotes oxytocin release. However, chronic serotonin elevation desensitizes 5-HT1A autoreceptors<sup>[<a href="#ref18">18</a>]</sup> — the very receptors that would drive oxytocin release. The AG individual therefore ends up with oxytocin deficiency through a completely different mechanism than the NAG, without the serotonin depletion that drives it in NAG.</p></li>
+      <li><p>Ghrelin — chronically elevated. Beyond driving hyperphagia, acyl ghrelin has documented neuroprotective and neurogenic properties: it crosses the blood-brain barrier, binds GHS-R1a in the hippocampus, promotes hippocampal neurogenesis via BDNF-dependent mechanisms, enhances long-term potentiation, and modulates dopamine signaling in the substantia nigra<sup>[<a href="#ref19">19</a>, <a href="#ref20">20</a>]</sup>. Chronically elevated ghrelin in the AG may therefore be providing partial neuroprotective compensation for SST-14 interneuron dysfunction — complicating the interpretation of simply normalizing it downward post-IMIG.</p></li>
+      <li><p>GLP-1 — predicted normal or elevated secretion once the SST-28/SSTR5 brake is released, with the behavioral satiety response predicted to be blunted by the same TNF-α-driven vagal desensitization proposed for CCK-1R (Section 5.6.2). This is a secretion/response dissociation, not a secretory failure.</p></li>
+      <li><p>VIP and secretin — reduced via SST-14 suppression, but less completely than in NAG due to partial SST-14 preservation</p></li>
+    </ul>
   </div>
 
-  <!-- SECTION 8 -->
-  <div class="body-section" id="study">
+  <div class="body-section" id="sst14">
     <div class="section-divider">
       <div class="section-divider-line"></div>
-      <div class="section-divider-label">Section 08 — Study design &amp; honesty</div>
+      <div class="section-divider-label">Section 08</div>
       <div class="section-divider-line"></div>
     </div>
     <div class="section-num">Section 08</div>
-    <h2>The proposed study — and what isn't established yet</h2>
+    <h2>8. Brain SST-14 in NAG versus AG — Same Mechanism, Different Severity</h2>
     <div class="h2-rule"></div>
-
-    <p>The hypothesis generates a critical experiment that doesn't yet exist in the published literature: a cross-sectional cohort study co-measuring fasting acyl ghrelin and KYN/TRP ratio in an appetite-stratified ASD cohort. No intervention, no novel assays — a single blood draw in 40–60 caregiver-classified NAG/AG participants, with primary outcome being whether KYN/TRP threshold status co-segregates with appetite classification and ghrelin direction as predicted. This is executable now within existing academic pediatric neurology infrastructure, without dedicated research funding beyond standard laboratory costs.</p>
-
-    <div class="note-box">
-      <div class="note-box-label">What requires prospective validation</div>
-      <p>This is a hypothesis-generating document. Open questions include: whether AG's better SST-14 function (inferred from motor/gait/social observation) holds up under direct measurement (EEG gamma coherence or CSF SST-14); whether IFN-γ and TNF-α are genuinely mutually exclusive dominant cytokines across individuals, rather than both elevated as reported elsewhere in the ASD literature; whether NAG truly has more severe gut pH failure than AG, as the framework's foundational assumption requires; and whether the proposed CCK-B central anxiety mechanism and ghrelin neuroprotection hypothesis hold up to direct measurement. The observational basis itself derives from longitudinal community clinical contact, not a structured epidemiological study — formal phenotyping with standardized instruments in a clinical cohort is the necessary next step.</p>
-    </div>
+    <p>A critical question is whether SST-14 is disrupted identically in both subgroups. The immediate mechanism — NF-κB-mediated CBP sequestration away from CREB, preventing SST-14 gene transcription — is shared. But the degree and reversibility of that disruption differ substantially.</p>
+    <p>In the NAG, the AhR/IDO1 feedback loop amplifies NF-κB continuously and independently of the original immune trigger. CBP sequestration is sustained and deep. SST-14 transcription is near-zero. The interneurons that gate gamma oscillation are substantially silenced — producing the severe motor dyspraxia, gait disturbance, sensory processing failures, and social cognition deficits characteristic of the more severely affected ASD population.</p>
+    <p>In the AG, NF-κB is elevated via TNF-R1 but tracks the inflammatory signal rather than running autonomously. CBP sequestration is present but fluctuates with inflammatory state. SST-14 transcription is dampened but not zero. This produces a different interneuron phenotype — gamma oscillation integrity is impaired but partially preserved, yielding better motor coordination, more normal gait, and stronger social engagement. The SST-14 disruption is mechanistically identical in type but different in severity and — critically — in reversibility. Reducing TNF-α signal in the AG allows NF-κB to resolve and SST-14 to recover without requiring the metabolic loop to be broken first.</p>
+    <p>This distinction also explains why the same NF-κB-targeting interventions produce better outcomes in the AG — not because the mechanism is different, but because the cascade has not locked, and therefore retains the capacity to self-correct when the upstream driver is removed.</p>
   </div>
 
-  <!-- SECTION 9 -->
-  <div class="body-section" id="related">
+  <div class="body-section" id="biomarkers">
     <div class="section-divider">
       <div class="section-divider-line"></div>
-      <div class="section-divider-label">Section 09 — Related reading</div>
+      <div class="section-divider-label">Section 09</div>
       <div class="section-divider-line"></div>
     </div>
     <div class="section-num">Section 09</div>
+    <h2>9. Proposed Biomarker Panel</h2>
+    <div class="h2-rule"></div>
+    <p>The following panel is proposed for stratifying ASD individuals into NAG and AG subgroups. All measurements are achievable with existing clinical laboratory infrastructure; no novel assays are required.</p>
+    <div class="table-wrap" style="overflow-x:auto;">
+    <table class="state-table">
+      <thead><tr><th><strong>Biomarker / Feature</strong></th><th><strong>NAG — IFN-γ Dominant / Locked Cascade</strong></th><th><strong>AG — TNF-α Dominant / Dynamic Cascade</strong></th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>KYN/TRP ratio</strong></td>
+          <td>Elevated (>5% threshold)</td>
+          <td>Normal (<5%)</td>
+        </tr>
+        <tr>
+          <td><strong>Plasma IFN-γ</strong></td>
+          <td>Elevated</td>
+          <td>Low / normal</td>
+        </tr>
+        <tr>
+          <td><strong>Plasma TNF-α</strong></td>
+          <td>Low / normal</td>
+          <td>Elevated</td>
+        </tr>
+        <tr>
+          <td><strong>Plasma tryptophan</strong></td>
+          <td>Depleted</td>
+          <td>Preserved</td>
+        </tr>
+        <tr>
+          <td><strong>Fasting acyl ghrelin</strong></td>
+          <td>Low</td>
+          <td>Elevated or high-normal</td>
+        </tr>
+        <tr>
+          <td><strong>Whole-blood serotonin</strong></td>
+          <td>Normal (IDO1 masking)</td>
+          <td>Elevated (hyperserotonemia unmasked)</td>
+        </tr>
+        <tr>
+          <td><strong>SAM/SAH ratio</strong></td>
+          <td>Low — systemic depletion</td>
+          <td>Relatively preserved systemically</td>
+        </tr>
+        <tr>
+          <td><strong>IDO1 activity</strong></td>
+          <td>Active</td>
+          <td>Inactive</td>
+        </tr>
+        <tr>
+          <td><strong>Adenylyl cyclase</strong></td>
+          <td>Substantially suppressed — cAMP collapsed</td>
+          <td>Partially preserved — cAMP reduced but not collapsed</td>
+        </tr>
+        <tr>
+          <td><strong>Gut SST-28</strong></td>
+          <td>Hyperactive — ghrelin suppressed</td>
+          <td>Suppressed — ghrelin elevated</td>
+        </tr>
+        <tr>
+          <td><strong>Fasting GLP-1</strong></td>
+          <td>Low — suppressed via SST-28/SSTR5 brake on L-cells</td>
+          <td>Normal or elevated — brake released</td>
+        </tr>
+        <tr>
+          <td><strong>Postprandial GLP-1 response</strong></td>
+          <td>Blunted — minimal rise on already-low baseline</td>
+          <td>Robust secretion; behavioral/satiety response predicted blunted (vagal TNF-α desensitization)</td>
+        </tr>
+        <tr>
+          <td><strong>CCK/vagal satiety axis</strong></td>
+          <td>Double-locked: SST-28 blocks CCK release</td>
+          <td>CCK released; vagal CCK-A desensitized by TNF-α</td>
+        </tr>
+        <tr>
+          <td><strong>SST-14 (brain)</strong></td>
+          <td>Substantially silenced — locked</td>
+          <td>Dampened but partially preserved — dynamic</td>
+        </tr>
+        <tr>
+          <td><strong>Neuropeptide cascade</strong></td>
+          <td>Near-complete failure</td>
+          <td>Impaired but partially functional</td>
+        </tr>
+        <tr>
+          <td><strong>Methylation status</strong></td>
+          <td>Under-methylated — systemic</td>
+          <td>Relatively normal — macrophage-localised</td>
+        </tr>
+        <tr>
+          <td><strong>Appetite phenotype</strong></td>
+          <td>No appetite / food refusal</td>
+          <td>Hyperphagia / cannot self-limit</td>
+        </tr>
+        <tr>
+          <td><strong>Motor coordination</strong></td>
+          <td>Dyspraxic / toe-walking</td>
+          <td>Better coordinated / normal gait</td>
+        </tr>
+        <tr>
+          <td><strong>ASD severity (scales)</strong></td>
+          <td>More severe (SRS, ADOS)</td>
+          <td>Less severe on standard scales</td>
+        </tr>
+        <tr>
+          <td><strong>Cascade state</strong></td>
+          <td>Locked — self-sustaining via AhR/IDO1</td>
+          <td>Dynamic — tracks inflammatory signal</td>
+        </tr>
+        <tr>
+          <td><strong>IMIG response</strong></td>
+          <td>Partial — adjunctive IDO1 intervention needed</td>
+          <td>More complete — cascade lacks self-sustaining loop</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:0.85rem; color:var(--text-light);"><em>Footnote. The AG postprandial-GLP-1 pattern — normal/robust secretion paired with a predicted blunted behavioral response — mirrors the secretion/vagal-response dissociation already described in the CCK/vagal row. Both reflect the AG core lesion proposed in Section 5.3: the hormone is released, but TNF-α-driven vagal desensitization is proposed to blunt its downstream signal. This is a family of related findings under the AG mechanism, not an isolated anomaly. Postprandial GLP-1 is a table prediction; it is not part of the primary single-draw study in Section 11 (see 11.1 follow-on sub-study).</em></p>
+    <p>Primary separators (highest confidence): KYN/TRP ratio and whole-blood serotonin. A KYN/TRP ratio threshold of 5% has been validated in published ASD cohorts with IDO1 activation present in 58.7% of the ASD population studied<sup>[<a href="#ref7">7</a>]</sup> — a figure remarkably consistent with the NAG prevalence suggested by this framework. These two measurements alone should correctly classify the majority of individuals.</p>
+    <p>Secondary confirmation: IFN-γ vs TNF-α dominance direction, fasting acyl ghrelin (not total ghrelin — acyl form is the biologically active appetite signal), SAM/SAH ratio, and fasting GLP-1 (SST-28-consistent polarity relative to ghrelin).</p>
+    <p>Functional indicators: Adenylyl cyclase activity (indirectly assessed via cAMP challenge response), vagal tone (heart rate variability), motor coordination assessment, and appetite phenotype caregiver report.</p>
+  </div>
+
+  <div class="body-section" id="predictions">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Section 10</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Section 10</div>
+    <h2>10. Testable Predictions</h2>
+    <div class="h2-rule"></div>
+    <div class="table-wrap" style="overflow-x:auto;">
+    <table class="state-table">
+      <thead><tr><th><strong>NAG Prediction</strong></th><th><strong>AG Prediction</strong></th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>KYN/TRP &gt; 5% will co-segregate with low fasting acyl ghrelin and food refusal in NAG</strong></td>
+          <td>KYN/TRP < 5% will co-segregate with elevated fasting acyl ghrelin and hyperphagia in AG</td>
+        </tr>
+        <tr>
+          <td><strong>Whole-blood serotonin will be normal or low in NAG (IDO1 masking hyperserotonemia)</strong></td>
+          <td>Whole-blood serotonin will be elevated in AG (hyperserotonemia unmasked by absent IDO1)</td>
+        </tr>
+        <tr>
+          <td><strong>IFN-γ will be the dominant elevated cytokine; TNF-α will be low or normal in NAG</strong></td>
+          <td>TNF-α will be the dominant elevated cytokine; IFN-γ will be low or normal in AG</td>
+        </tr>
+        <tr>
+          <td><strong>SAM/SAH ratio will be globally depressed across cell compartments in NAG</strong></td>
+          <td>SAM/SAH ratio will be depressed only in the macrophage compartment in AG</td>
+        </tr>
+        <tr>
+          <td><strong>Forskolin will produce a larger observable cAMP-dependent effect in NAG than AG (larger delta from depressed baseline)</strong></td>
+          <td>Forskolin will produce a measurable but smaller effect in AG (partial adenylyl cyclase activity already present)</td>
+        </tr>
+        <tr>
+          <td><strong>Male-to-female ratio will approximate 4:1 in NAG (estrogen bypass less effective against full lock)</strong></td>
+          <td>Male-to-female ratio will approximate 2:1 to 3:1 in AG (estrogen bypass more effective against partial suppression)</td>
+        </tr>
+        <tr>
+          <td><strong>Fasting GLP-1 will be low, with a blunted postprandial rise, consistent with SST-28/SSTR5 braking of L-cells</strong></td>
+          <td>Fasting GLP-1 will be normal or elevated (brake released); postprandial secretion preserved but behavioral satiety response predicted blunted by vagal TNF-α desensitization</td>
+        </tr>
+        <tr>
+          <td><strong>Post-IMIG: NAG subjects will show appetite emergence; methylation improvement; require adjunctive IDO1 intervention for full cascade resolution</strong></td>
+          <td>Post-IMIG: AG subjects will show satiety regulation emergence; faster and more complete response without adjunctive IDO1 therapy</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <div class="body-section" id="study">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Section 11</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Section 11</div>
+    <h2>11. Proposed Observational Study</h2>
+    <div class="h2-rule"></div>
+    <p>The hypothesis generates a critical experiment that does not yet exist in the published literature: a cross-sectional cohort study co-measuring fasting acyl ghrelin and KYN/TRP ratio in an appetite-stratified ASD cohort. This study requires no intervention, no novel assays, and no specialized infrastructure beyond standard clinical laboratory access.</p>
+    <h3>Study Design</h3>
+    <ul>
+      <li><p>Design: Cross-sectional observational; single fasting blood draw per participant in the primary cohort</p></li>
+      <li><p>Sample size: 40–60 ASD-diagnosed individuals; powered for bimodal biomarker distribution detection</p></li>
+      <li><p>Stratification: Caregiver-reported appetite phenotype using a standardized appetite assessment instrument at intake; NAG and AG classifications made prior to laboratory analysis</p></li>
+      <li><p>Primary measurements: Fasting acyl ghrelin (plasma); KYN/TRP ratio (plasma); whole-blood serotonin</p></li>
+      <li><p>Secondary measurements: IFN-γ and TNF-α (plasma); SAM/SAH ratio; IDO1 activity proxy (neopterin or kynurenine); plasma tryptophan; fasting GLP-1 (plasma, same draw)</p></li>
+      <li><p>Phenotype variables: Motor coordination assessment; gait observation; Social Responsiveness Scale score; sex/gender</p></li>
+      <li><p>Analysis: Blinded laboratory analysis; primary outcome is co-segregation of KYN/TRP threshold status with appetite group assignment and fasting ghrelin direction</p></li>
+    </ul>
+    <h3>Postprandial GLP-1 — Deferred Follow-On Sub-Study</h3>
+    <p>Postprandial GLP-1 response cannot be captured within the existing single-fasting-draw design and is not included in the primary 40–60-participant cohort. It is proposed as a deferred follow-on sub-study: a standardized mixed-meal tolerance test with GLP-1 sampled at a fixed post-meal interval (e.g., 30 minutes), conducted in a subset of participants already classified as NAG or AG from the primary cohort's fasting biomarkers. This keeps the primary study's single-draw feasibility intact while preserving the postprandial prediction as a testable secondary claim.</p>
+    <h3>Primary Outcome</h3>
+    <p>KYN/TRP ratio above 5% threshold will co-segregate with caregiver-classified NAG status and low fasting acyl ghrelin. KYN/TRP below threshold will co-segregate with AG status and elevated fasting acyl ghrelin. Confirmation of this co-segregation would validate the central mechanistic claim of the hypothesis.</p>
+    <p>As a secondary measure, fasting GLP-1 is predicted to show SST-28-consistent polarity across the same NAG/AG split already defined by ghrelin and KYN/TRP: low fasting GLP-1 in the NAG (same direction as low ghrelin — both silenced by the SST-28 brake), and normal-to-elevated fasting GLP-1 in the AG (opposite polarity to elevated ghrelin, because ghrelin and GLP-1 sit at opposite ends of the orexigenic/anorexigenic axis, but the same SST-28 brake is released in both cases). A positive finding would strengthen confidence in the primary ghrelin/KYN-TRP outcome without functioning as an independent claim. Postprandial GLP-1 response, tested separately in the follow-on sub-study, would further test the AG-specific secretion/response dissociation predicted in Section 5.6.</p>
+    <h3>Secondary Outcomes</h3>
+    <ul>
+      <li><p>IFN-γ/TNF-α dominance direction will track with KYN/TRP-defined subgroup assignment</p></li>
+      <li><p>Whole-blood serotonin will be inversely associated with KYN/TRP ratio across the cohort</p></li>
+      <li><p>Male-to-female ratio will differ between NAG and AG subgroups in the predicted direction</p></li>
+      <li><p>Motor coordination and SRS severity will be worse in the KYN/TRP-elevated subgroup</p></li>
+      <li><p>Fasting GLP-1 will show SST-28-consistent polarity with the ghrelin/KYN-TRP split (low in NAG; normal or elevated in AG)</p></li>
+    </ul>
+    <h3>Why This Study Is Feasible Now</h3>
+    <p>No intervention is required. Existing ASD clinical registries and support group networks provide ready access to potential participants. Caregiver appetite assessment requires no specialist training and can be completed at intake. The laboratory panel is available at standard clinical reference laboratories. Fasting GLP-1 uses the same draw. The study could be initiated within existing academic pediatric neurology or developmental pediatrics infrastructure without dedicated research funding beyond standard laboratory costs. The mixed-meal GLP-1 sub-study is optional and does not condition primary-cohort feasibility.</p>
+  </div>
+
+  <div class="body-section" id="treatment">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Section 12</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Section 12</div>
+    <h2>12. Treatment Implications</h2>
+    <div class="h2-rule"></div>
+    <h3>The Core Principle: Biomarker Stratification Before Intervention</h3>
+    <p>The NAG/AG framework establishes that standard ASD supplement and intervention protocols applied uniformly across both subgroups are likely misdirected in the AG and potentially harmful. The KYN/TRP ratio and whole-blood serotonin, as a two-marker preliminary screen at clinical intake, would allow intervention to be directed appropriately before any protocol is initiated.</p>
+    <h3>Shared Interventions — Relevant to Both Groups</h3>
+    <ul>
+      <li><p>Luteolin: NF-κB suppression via upstream mast cell stabilization and PKC-θ/AP-1/JNK inhibition. Relevant regardless of which arm activated NF-κB.</p></li>
+      <li><p>Forskolin: Adenylyl cyclase bypass of the Gαi block. Relevant to both groups; effect magnitude will be larger in NAG (more depressed baseline) than AG.</p></li>
+      <li><p>Sulforaphane: Nrf2 activation reduces oxidative stress driving NF-κB in both groups; additional IDO1-modulating properties are a bonus in NAG.</p></li>
+      <li><p>Low-dose naltrexone: Reduces mu-opioid receptor activation by casomorphin/gliadorphin, partially relieving Gαi suppression of adenylyl cyclase in both groups; independently, at low dose, naltrexone also antagonizes TLR4 on glial cells, an anti-inflammatory action distinct from and additive to its opioid-receptor effect<sup>[<a href="#ref22">22</a>]</sup>.</p></li>
+      <li><p>Hydroxocobalamin: Methylation support in both groups (methylcobalamin contraindicated in slow COMT individuals regardless of subgroup).</p></li>
+    </ul>
+    <h3>NAG-Specific Priorities</h3>
+    <ul>
+      <li><p>IDO1 pathway modulation: EGCG, resveratrol, and 1-methyltryptophan analogs have documented IDO1 inhibitory properties. Breaking the IDO1/KYN/AhR feedback loop is a prerequisite for cascade resolution in NAG — without it, NF-κB continues to be driven even after immune clearance.</p></li>
+      <li><p>Tryptophan support: Once IDO1 activity is reduced, tryptophan restoration via dietary sources or supplementation may support serotonin and melatonin synthesis recovery. Timing is critical — premature supplementation before IDO1 modulation may simply drive more kynurenine production.</p></li>
+      <li><p>Aggressive systemic methylation support: SAM precursors, methylfolate, hydroxocobalamin — addressing the global methyl donor depletion that is characteristic of the IDO1-active state.</p></li>
+      <li><p>GLP-1 receptor agonism — predicted-harm flag, not a protocol item: Do not use empirically in biomarker-classified NAG. Off-label or consumer exposure should be noted at intake. This is not a confirmed contraindication at the evidential weight of Section 12.4 tryptophan/5-HTP in AG (see Section 5.6.5).</p></li>
+    </ul>
+    <h3>AG-Specific Priorities</h3>
+    <ul>
+      <li><p>TNF-α modulation: Omega-3 fatty acids (EPA/DHA), curcumin, and low-dose naltrexone reduce TNF-α via NF-κB pathway suppression — for naltrexone, via TLR4 antagonism on glial cells rather than its opioid-receptor activity<sup>[<a href="#ref22">22</a>]</sup>. These are the primary upstream targets in AG.</p></li>
+      <li><p>Tryptophan and 5-HTP — CONTRAINDICATED in AG: These are commonly used in ASD supplement protocols. In the AG, where tryptophan metabolism is intact and serotonin is already elevated, tryptophan or 5-HTP supplementation will worsen hyperserotonemia. This risks increased GI dysmotility, potential serotonin syndrome interactions, and behavioral dysregulation. This contraindication should be stated explicitly at clinical intake for any individual identified as AG on biomarker screening.</p></li>
+      <li><p>Caution regarding ghrelin normalization: Chronically elevated ghrelin in the AG may be providing partial neuroprotective and neurogenic compensation via hippocampal GHS-R1a signaling. Post-IMIG ghrelin normalization should be monitored carefully, and cognitive function tracked alongside metabolic normalization to ensure the neuroprotective contribution of elevated ghrelin is not abruptly lost.</p></li>
+      <li><p>GLP-1 receptor agonism — candidate only, not a protocol item: Pharmacologic area-postrema access provides a satiety route that does not depend on vagal afferent integrity (Section 5.6.3–5.6.4). This is a mechanistically distinct rationale worth considering after appetite-stratified GLP-1 measurement, not an intervention to initiate from this document.</p></li>
+    </ul>
+    <h3>IMIG Response and Recovery Trajectories</h3>
+    <p>IMIG operates by clearing the chronic immunoglobulin load that sustains NF-κB activation. Both subgroups share the NF-κB/SST-14 mechanism and both should respond to IMIG — but the response trajectories will diverge.</p>
+    <ul>
+      <li><p>NAG recovery — sequential steps: IMIG clears immune load → IDO1 activation subsides → AhR loop gradually breaks → NF-κB resolves → CBP releases to CREB → SST-14 transcription recovers → neuropeptide cascade rebuilds. Adjunctive IDO1 pathway intervention accelerates the loop-breaking step. Appetite emerges as SST-28 normalizes downward and ghrelin recovers. Methylation status improves systemically. This is a multi-step recovery process with each step dependent on the prior one completing.</p></li>
+      <li><p>AG recovery — spring release: IMIG reduces TNF-α load → NF-κB resolves more directly without loop to break → CBP releases to CREB → SST-14 transcription recovers → neuropeptide cascade rebuilds. The partial cAMP/PKA axis already present amplifies the recovery. Satiety regulation emerges — the individual begins to recognize fullness for the first time. This is a more elastic recovery; the system has enough residual signaling capacity to rebound toward normal function relatively quickly.</p></li>
+    </ul>
+    <p>Appetite normalization direction — emergence of hunger in NAG versus emergence of satiety regulation in AG — is proposed as a secondary metabolic endpoint in any IMIG trial that includes both subgroups. If KYN/TRP-classified NAG individuals develop appetite post-IMIG and KYN/TRP-classified AG individuals develop satiety regulation post-IMIG, the hypothesis is confirmed at the clinical level without requiring additional mechanistic measurement.</p>
+    <h3>Supplement Table — Shared vs Subgroup-Specific</h3>
+    <div class="table-wrap" style="overflow-x:auto;">
+    <table class="state-table">
+      <thead><tr><th><strong>Agent</strong></th><th><strong>NAG</strong></th><th><strong>AG</strong></th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Luteolin</strong></td>
+          <td>Shared — NF-κB suppression regardless of upstream arm</td>
+          <td>Shared — NF-κB suppression regardless of upstream arm</td>
+        </tr>
+        <tr>
+          <td><strong>Forskolin</strong></td>
+          <td>Shared — adenylyl cyclase bypass of full Gαi block; larger response delta</td>
+          <td>Shared — adenylyl cyclase bypass of partial Gαi block; smaller delta</td>
+        </tr>
+        <tr>
+          <td><strong>Sulforaphane</strong></td>
+          <td>Shared (Nrf2/oxidative stress) + IDO1 modulation</td>
+          <td>Shared (Nrf2/oxidative stress); IDO1 effect less critical</td>
+        </tr>
+        <tr>
+          <td><strong>EGCG / Resveratrol</strong></td>
+          <td>NAG priority — direct IDO1 inhibitory properties</td>
+          <td>Less relevant — IDO1 not active in AG</td>
+        </tr>
+        <tr>
+          <td><strong>Tryptophan / 5-HTP</strong></td>
+          <td>NAG: may support serotonin recovery post-IDO1 normalization</td>
+          <td>AG: CONTRAINDICATED — worsens hyperserotonemia</td>
+        </tr>
+        <tr>
+          <td><strong>Omega-3 / Curcumin</strong></td>
+          <td>Less critical — TNF-α not dominant arm</td>
+          <td>AG priority — direct TNF-α reduction via NF-κB</td>
+        </tr>
+        <tr>
+          <td><strong>SAM / Methylfolate</strong></td>
+          <td>NAG priority — systemic methyl donor replenishment</td>
+          <td>Less urgent systemically; macrophage compartment only</td>
+        </tr>
+        <tr>
+          <td><strong>Hydroxocobalamin</strong></td>
+          <td>Shared — methylation support (avoid methylcobalamin in slow COMT)</td>
+          <td>Shared — methylation support</td>
+        </tr>
+        <tr>
+          <td><strong>Low-dose naltrexone</strong></td>
+          <td>Shared — reduces opioid peptide MOR activation</td>
+          <td>Shared — reduces opioid peptide MOR activation</td>
+        </tr>
+        <tr>
+          <td><strong>GLP-1 receptor agonist</strong></td>
+          <td>Predicted-harm flag — do not use empirically; not a confirmed contraindication at 12.4 weight</td>
+          <td>Candidate only after stratified GLP-1 measurement — not a protocol item</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <div class="body-section" id="limitations">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Section 13</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Section 13</div>
+    <h2>13. Limitations and Open Questions</h2>
+    <div class="h2-rule"></div>
+    <p>This is a hypothesis-generating document. The following elements require prospective validation:</p>
+    <ul>
+      <li><p>SST-14 differential silencing: The claim that AG individuals have meaningfully better SST-14 function is inferred from motor, gait, and social behavioral observations. Direct measurement — gamma oscillation coherence via EEG or CSF SST-14 levels in appetite-stratified cohorts — has not been performed.</p></li>
+      <li><p>IFN-γ / TNF-α mutual exclusivity: Published ASD literature reports both cytokines elevated across the ASD population without stratifying them as inversely dominant within subgroups. The hypothesis requires that IFN-γ and TNF-α are mutually dominant across individuals — a pattern not yet explicitly tested.</p></li>
+      <li><p>Gut pH failure amplitude as founding variable: The proposal that NAG individuals have more severe gut pH failure than AG individuals is a foundational assumption that requires direct measurement of gastric pH, pepsin activity, and opioid peptide levels across appetite-stratified cohorts.</p></li>
+      <li><p>CCK-B central anxiety mechanism: The proposal that peripheral CCK accumulation produces CCK-B mediated central anxiety effects in the AG is mechanistically coherent but speculative. Direct CCK plasma measurement in appetite-stratified ASD cohorts would be required to test it.</p></li>
+      <li><p>Ghrelin neuroprotection in AG: The proposal that chronically elevated ghrelin provides partial hippocampal neuroprotection in the AG is based on published ghrelin neurobiology but has not been tested in the ASD context. Post-IMIG cognitive monitoring is required to assess the clinical significance of ghrelin normalization.</p></li>
+      <li><p>GLP-1 polarity by appetite group: No fasting or postprandial GLP-1 measurements stratified by NAG/AG (or by KYN/TRP) exist in this population. Section 5.6 is inferred from rodent culture, perfused-intestine, colonic-motility, and L-cell-line data plus the existing SST-28 architecture; it is not yet constrained by ASD GLP-1 data.</p></li>
+      <li><p>GLP-1 receptor agonist risk in neurodevelopment: Pediatric and neurodevelopmental risks of GLP-1 receptor agonist exposure (lean mass, linear growth, GI tolerability) fall outside the scope of this paper and cannot be inferred from the adult obesity literature in which this drug class was developed. The AG-candidate and NAG-harm flags in Sections 5.6.4–5.6.5 are mechanistic predictions, not prescribing guidance.</p></li>
+      <li><p>Observational basis: The appetite phenotype observations underlying this hypothesis derive from longitudinal clinical contact in a community ASD support setting, not a structured epidemiological study. Formal phenotyping with standardized appetite assessment instruments in a clinical cohort is required.</p></li>
+      <li><p>Acyl vs total ghrelin: Published ASD ghrelin studies have generally measured total ghrelin without separating acyl (appetite-active) and des-acyl forms. Future studies must specify acyl ghrelin measurement.</p></li>
+    </ul>
+  </div>
+
+  <div class="body-section" id="conclusion">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Section 14</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Section 14</div>
+    <h2>14. Conclusion</h2>
+    <div class="h2-rule"></div>
+    <p>We propose that appetite phenotype in ASD is a surface readout of upstream cytokine dominance, and that this dominance determines the architecture of the entire downstream cascade. Two immunologically distinct subgroups — NAG (IFN-γ dominant, IDO1-active, locked cascade) and AG (TNF-α dominant, IDO1-inactive, dynamic cascade) — both produce ASD phenotype through convergent NF-κB-mediated SST-14 silencing, but diverge at every upstream and parallel level: the degree of adenylyl cyclase suppression, the character of somatostatin dysregulation, the direction of ghrelin modulation, the completeness of neuropeptide cascade failure, the presence or absence of a self-sustaining metabolic feedback loop, the methylation deficit character, and the hormonal landscape including the paradoxical oxytocin deficiency mechanism in the AG and the homologous CCK/GLP-1 satiety-axis fork developed in Section 5.</p>
+    <p>The locked vs dynamic cascade distinction is not merely descriptive — it predicts differential treatment requirements, different IMIG response trajectories, different adjunctive intervention priorities, and at least one important supplement contraindication (tryptophan/5-HTP in the AG) that uniform treatment protocols currently ignore. A second, lower-weight directional warning applies to GLP-1 receptor agonism in NAG; an AG-specific candidate rationale exists via pharmacologic area-postrema access, contingent on prospective GLP-1 measurement.</p>
+    <p>The proposed biomarker panel — anchored by KYN/TRP ratio and whole-blood serotonin — is measurable now, using existing clinical infrastructure, in any ASD cohort. The critical experiment is a single cross-sectional study co-measuring fasting acyl ghrelin and KYN/TRP ratio in an appetite-stratified ASD cohort, with fasting GLP-1 on the same draw as a secondary polarity check. That study does not exist. Its execution represents the first direct test of the SST-28/ghrelin/cytokine subgroup hypothesis and could be initiated within existing academic clinical infrastructure without dedicated research funding beyond standard laboratory costs.</p>
+    <p>If validated, the NAG/AG framework transforms appetite phenotype from an unexplained behavioral variable into a diagnostic stratification criterion with direct implications for immune-targeted treatment design, trial endpoint selection, adjunctive intervention prioritization, supplement protocol safety, and personalized intervention strategy across the ASD population.</p>
+  </div>
+
+
+  <!-- RELATED READING -->
+  <div class="body-section" id="related">
+    <div class="section-divider">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Related reading</div>
+      <div class="section-divider-line"></div>
+    </div>
+    <div class="section-num">Related reading</div>
     <h2>Related reading</h2>
     <div class="h2-rule"></div>
 
     <ul>
       <li><a href="anatomy-of-autism.html" style="color:var(--teal);">The Anatomy of Autism</a> — the foundational cascade model this hypothesis builds from.</li>
-      <li><a href="sst-restoration-paper.html" style="color:var(--teal);">Reversing SST-14 Silencing in Immune-Derived Autism</a> — the primary SST-14 restoration framework.</li>
+      <li><a href="sst-restoration-paper.html" style="color:var(--teal);">Restoring the Somatostatin Signal in Immune-Derived Autism</a> — the primary SST-14 restoration framework.</li>
       <li><a href="l179-three-intervention-model.html" style="color:var(--teal);">L1-79 and the Three-Intervention Model</a> — where forskolin's differential NAG/AG response prediction connects to the broader intervention framework.</li>
       <li><a href="../imig/imig-overview.html" style="color:var(--teal);">The IMIG Clinical Trial</a> — where NAG/AG stratification would inform trial design and endpoint selection.</li>
       <li><a href="alzheimers-autism-plasticity.html" style="color:var(--teal);">Autism and Alzheimer's — Two Sides of a Plasticity Problem</a> — the shared plasticity biology underlying why SST-14 recovery differs by cascade state, relevant to both NAG and AG.</li>
     </ul>
+  </div>
+
+  <!-- SECTION 10: REFERENCES -->
+  <div class="body-section" id="references">
+    <div class="section-divider"><div class="section-divider-line"></div><div class="section-divider-label">References</div><div class="section-divider-line"></div></div>
+    <div class="section-num">References</div>
+    <h2>References</h2>
+    <div class="h2-rule"></div>
+    <ol style="list-style:none; padding:0;">
+      <li id="ref1" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[1]</span><span>Schalla MA, Stengel A. Activation of somatostatin 2 receptors in the brain and the periphery induces opposite changes in circulating ghrelin levels: functional implications. Front Endocrinol. 2013;3:178.</span></li>
+      <li id="ref2" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[2]</span><span>Robinson CM, Hale PT, Carlin JM. The role of NF-κB and STAT1 in the induction of IDO1 by interferon-γ. J Interferon Cytokine Res. 2005;25(8):508–516.</span></li>
+      <li id="ref3" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[3]</span><span>Platten M, Nollen EAA, Röhrig UF, Fallarino F, Opitz CA. Tryptophan metabolism as a common therapeutic target in cancer, neurodegeneration, and beyond. Nat Rev Drug Discov. 2019;18(5):379–401.</span></li>
+      <li id="ref4" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[4]</span><span>Stutte S, Ruf J, Kugler I, et al. Type I interferon-mediated induction of somatostatin leads to suppression of ghrelin and appetite thereby promoting viral immunity in mice. Brain Behav Immun. 2021;95:429–443.</span></li>
+      <li id="ref5" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[5]</span><span>Liu T, Zhang L, Joo D, Sun SC. NF-κB signaling in inflammation. Signal Transduct Target Ther. 2017;2:17023.</span></li>
+      <li id="ref6" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[6]</span><span>Liu PS, Wang H, Li X, et al. α-ketoglutarate orchestrates macrophage activation through metabolic and epigenetic reprogramming. Nat Immunol. 2017;18(9):985–994.</span></li>
+      <li id="ref7" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[7]</span><span>Delorme R, Ey E, Toro R, et al. Impact of IDO activation and alterations in the kynurenine pathway on hyperserotonemia, NAD+ production, and AhR activation in autism spectrum disorder. Transl Psychiatry. 2023;13(1):393.</span></li>
+      <li id="ref8" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[8]</span><span>Frontiers in Neuroscience. Molecular and cellular basis of mu-opioid receptor signaling: mechanisms underlying tolerance and dependence development. Front Neurosci. 2025;19:1597922.</span></li>
+      <li id="ref9" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[9]</span><span>Casomorphin and gliadorphin as ligands for opioid receptors: inhibitory G-protein coupling and adenylyl cyclase suppression. In: Diet and Autism. 2013. [Review]</span></li>
+      <li id="ref10" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[10]</span><span>Seamon KB, Padgett W, Daly JW. Forskolin: unique diterpene activator of adenylate cyclase in membranes and in intact cells. Proc Natl Acad Sci USA. 1981;78(6):3363–3367.</span></li>
+      <li id="ref11" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[11]</span><span>Qiu J, Bosch MA, Tobias SC, et al. Rapid signaling of estrogen in hypothalamic neurons involves a novel G-protein-coupled estrogen receptor that activates protein kinase C. J Neurosci. 2003;23(29):9529–9540.</span></li>
+      <li id="ref12" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[12]</span><span>Rehfeld JF. Cholecystokinin — from local gut hormone to ubiquitous messenger. Front Endocrinol. 2017;8:47.</span></li>
+      <li id="ref13" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[13]</span><span>Cummings DE, Overduin J. Gastrointestinal regulation of food intake. J Clin Invest. 2007;117(1):13–23.</span></li>
+      <li id="ref14" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[14]</span><span>Bonaz B, Bazin T, Pellissier S. The vagus nerve at the interface of the microbiota-gut-brain axis. Front Neurosci. 2018;12:49.</span></li>
+      <li id="ref15" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[15]</span><span>Breit S, Kupferberg A, Rogler G, Hasler G. Vagus nerve as modulator of the brain-gut axis in psychiatric and inflammatory disorders. Front Psychiatry. 2018;9:44.</span></li>
+      <li id="ref16" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[16]</span><span>de Lartigue G, Barbier de la Serre C, Espero E, Lee J, Raybould HE. Leptin resistance in vagal afferent neurons inhibits cholecystokinin signaling and satiation in diet-induced obese rats. PLoS One. 2012;7(3):e32967.</span></li>
+      <li id="ref17" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[17]</span><span>McIntosh CH, Pederson RA, Koop H, Brown JC. Effect of cholecystokinin and secretin on somatostatin release from cultured antral cells. Gastroenterology. 1993;104(5):1320–1327.</span></li>
+      <li id="ref18" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[18]</span><span>Piñeyro G, Blier P. Autoregulation of serotonin neurons: role in antidepressant drug action. Pharmacol Rev. 1999;51(3):533–591.</span></li>
+      <li id="ref19" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[19]</span><span>Nass R, Farhy LS, Liu J, et al. The neurocognitive effects of ghrelin-induced signaling on the hippocampus: a promising approach to Alzheimer's disease. PMC. 2018;PMC6235652.</span></li>
+      <li id="ref20" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[20]</span><span>Gibb FW, Littlejohn CM, Walker BR, et al. Ghrelin acylation — a post-translational tuning mechanism regulating adult hippocampal neurogenesis. PMC. 2022;PMC8909677.</span></li>
+      <li id="ref21" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[21]</span><span>Fourie PR, Armstrong C. Intravenous immunoglobulin in autism spectrum disorder: a case series. Med Res Arch. 2024;12(10).</span></li>
+      <li id="ref22" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[22]</span><span>Younger J, Parkitny L, McLain D. The use of low-dose naltrexone (LDN) as a novel anti-inflammatory treatment for chronic pain. Clin Rheumatol. 2014;33(4):451–459. DOI: <a href="https://doi.org/10.1007/s10067-014-2517-2" target="_blank" rel="noopener">10.1007/s10067-014-2517-2</a>. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/24526250/" target="_blank" rel="noopener">24526250</a>.</span></li>
+      <li id="ref23" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[23]</span><span>Chisholm C, Greenberg GR. Somatostatin-28 regulates GLP-1 secretion via somatostatin receptor subtype 5 in rat intestinal cultures. Am J Physiol Endocrinol Metab. 2002;283(2):E311–E317. DOI: <a href="https://doi.org/10.1152/ajpendo.00434.2001" target="_blank" rel="noopener">10.1152/ajpendo.00434.2001</a>.</span></li>
+      <li id="ref24" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[24]</span><span>Jepsen SL, Grunddal KV, Wewer Albrechtsen NJ, et al. Paracrine crosstalk between intestinal L- and D-cells controls secretion of glucagon-like peptide-1 in mice. Am J Physiol Endocrinol Metab. 2019;317(6):E1081–E1093. DOI: <a href="https://doi.org/10.1152/ajpendo.00239.2019" target="_blank" rel="noopener">10.1152/ajpendo.00239.2019</a>.</span></li>
+      <li id="ref25" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[25]</span><span>Nakamori H, Hosoi F, Hashitani H. Inhibitory effects of somatostatin on glucagon-like peptide-1-mediated acceleration of peristalsis in the rat proximal colon. Am J Physiol Gastrointest Liver Physiol. 2026;330(3):G256–G269. DOI: <a href="https://doi.org/10.1152/ajpgi.00189.2025" target="_blank" rel="noopener">10.1152/ajpgi.00189.2025</a>.</span></li>
+      <li id="ref26" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[26]</span><span>Holst JJ, Jepsen SL, Modvig I. GLP-1 - Incretin and pleiotropic hormone with pharmacotherapy potential. Increasing secretion of endogenous GLP-1 for diabetes and obesity therapy. Curr Opin Pharmacol. 2022;63:102189. DOI: <a href="https://doi.org/10.1016/j.coph.2022.102189" target="_blank" rel="noopener">10.1016/j.coph.2022.102189</a>. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/35231672/" target="_blank" rel="noopener">35231672</a>.</span></li>
+      <li id="ref27" style="display:flex; gap:12px; margin-bottom:10px; font-size:.9rem; color:var(--text-mid);"><span style="font-family:'DM Mono',monospace; color:var(--gold); flex-shrink:0;">[27]</span><span>Sato J, Manaka K, Horikoshi H, et al. Insights into GLP-1 and insulin secretion mechanisms in pasireotide-induced hyperglycemia highlight effectiveness of Gs-targeting diabetes treatment. Sci Rep. 2025;15(1):9494. DOI: <a href="https://doi.org/10.1038/s41598-025-90896-2" target="_blank" rel="noopener">10.1038/s41598-025-90896-2</a>.</span></li>
+    </ol>
   </div>
 
 </main>
