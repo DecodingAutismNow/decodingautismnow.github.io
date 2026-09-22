@@ -312,6 +312,7 @@ body {
 .nt-sirt1   { background: #e8eef5; border-color: #4a7aac; color: var(--sirt1); }
 .nt-glia    { background: #e8f5ee; border-color: #4aac6a; color: var(--glia); }
 .nt-synapse { background: #f5e8f2; border-color: #ac4a8e; color: var(--synapse); }
+.nt-cresol  { background: #e6f2f0; border-color: #1e6b72; color: #1e6b72; }
 .nt-multi   { background: #f0f0f0; border-color: #aaa; color: #444; }
 
 .compound { font-family: 'Playfair Display', serif; font-size: 1.08rem; font-weight: 600; color: var(--ink); }
@@ -387,6 +388,18 @@ body {
   background: #fff8e8; border: 1.5px solid #c8a84b;
   border-radius: 3px; padding: 5px 8px;
   font-size: 0.82rem; line-height: 1.65; color: #5a4a1a;
+}
+
+.research-gap {
+  background: #f2f7f7; border: 1.5px solid #1e6b72;
+  border-radius: 4px; padding: 14px 16px;
+  font-size: 0.9rem; line-height: 1.75; color: #123c40;
+  margin: 6px 0 0;
+}
+.research-gap strong.rg-label {
+  display: block; font-family: 'DM Mono', monospace;
+  font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: #1e6b72; margin-bottom: 8px;
 }
 
 .col-node { width: 130px; }
@@ -718,6 +731,7 @@ html { background: #0f2342; }
         <a href="07C_Interpreting_Results_Biology_of_Autism.html">07C — Interpreting Results</a>
         <a href="07D_Talking_to_Your_Doctor_Biology_of_Autism.html">07D — Talking to Your Doctor</a>
         <a href="07R_Regressive_Autism_Testing_Biology_of_Autism.html">07R — Regression Testing</a>
+        <a href="07E_Advanced_Testing_Biology_of_Autism.html">07E — Advanced Testing</a>
       </div>
     </div>
     <div>
@@ -937,7 +951,14 @@ html { background: #0f2342; }
           2024) showed positive parental-rated outcomes in 6 of 7 children with level 2 ASD.<br><br>
           <em>See <a href="14_Immunoglobulin_Therapy_Biology_of_Autism.html"
           style="color:var(--teal);font-weight:600;">Biology of Autism — Immunoglobulin Therapy</a>
-          for the full mechanistic argument, IVIG vs IMIG pharmacokinetics, and trial context.</em>
+          for the full mechanistic argument, IVIG vs IMIG pharmacokinetics, and trial context.</em><br><br>
+          <div class="research-gap"><strong class="rg-label">Hypothesized extension — not yet tested</strong>
+          Reduced chronic inflammation via IMIG may resync SST-28 signaling and restore pepsin/gastric-pH
+          function, addressing p-cresol/p-cresyl sulfate (PCS) elevation at its upstream substrate source
+          (see <a href="research/ida-testing-protocol.html" style="color:var(--teal);font-weight:600;">The
+          IDA Testing Protocol</a>). Whether substrate correction alone is sufficient, or whether an
+          already-established p-cresol-producing bacterial population requires direct intervention
+          regardless of substrate correction, is unresolved and not yet studied.</div>
         </td>
         <td class="dose">
           <strong>IVIG:</strong> 0.4&ndash;2 g/kg IV; requires infusion centre, medical supervision.
@@ -952,6 +973,64 @@ html { background: #0f2342; }
         </td>
         <td><span class="ev-badge ev-human">Human Case Series</span><br><br>
             <span class="ev-badge ev-rct">Meta-Analysis (IVIG)</span></td>
+      </tr>
+
+      <!-- GUT SUBSTRATE REDUCTION — AST-120 / AB-2004 -->
+      <tr>
+        <td><span class="node-tag nt-cresol">Methylation /<br>Catecholamine</span></td>
+        <td>
+          <div class="compound">AST-120 / AB-2004</div>
+          <div class="compound-sub">Oral gut-restricted carbon adsorbent</div>
+        </td>
+        <td class="mech">
+          Binds p-cresol and p-cresyl sulfate (PCS) precursors in the gut before systemic absorption,
+          lowering circulating metabolite burden without altering gut bacterial composition or restoring
+          enzymatic clearance capacity. Open-label phase 1b/2a trial in ASD adolescents (Stewart Campbell
+          et al., <em>Nature Medicine</em>, 2022) demonstrated safety, target engagement (reduced circulating
+          p-cresol/PCS and related metabolites), and post-hoc improvement in anxiety and irritability
+          measures.<br><br>
+          <em>Mechanistically a substrate-reduction approach — addresses production burden, not clearance
+          capacity. See <a href="research/ida-testing-protocol.html"
+          style="color:var(--teal);font-weight:600;">The IDA Testing Protocol</a> for the upstream/downstream
+          distinction this maps to.</em>
+        </td>
+        <td class="dose">
+          Investigational; not commercially available for this indication. Dosed per open-label trial
+          protocol — oral, gut-restricted, non-systemic.
+          <div class="dose-advisory"><strong>&#9888; Investigational:</strong> Phase 1b/2a safety and target-engagement
+          data only. Not an approved therapy. Efficacy for core ASD symptoms not established.</div>
+        </td>
+        <td><span class="ev-badge ev-human">Human Trial (Ph1b/2a)</span></td>
+      </tr>
+
+      <!-- PST-P / SULFATION CLEARANCE — DOWNSTREAM, OPEN QUESTION -->
+      <tr>
+        <td><span class="node-tag nt-cresol">Methylation /<br>Catecholamine</span></td>
+        <td>
+          <div class="compound">PST-P / Sulfation Clearance</div>
+          <div class="compound-sub">Downstream branch — no proposed intervention</div>
+        </td>
+        <td class="mech">
+          <div class="research-gap"><strong class="rg-label">Open research question</strong>
+          No established intervention exists for this branch in ASD populations. A child whose p-cresol/PCS
+          elevation reflects impaired clearance capacity (low platelet PST-P activity) rather than excess
+          substrate has no proposed intervention in this framework. Whether this requires direct support
+          for sulfation capacity, sulfate availability, or another approach entirely has not been
+          investigated in this population.<br><br>
+          One recent, mechanistically relevant lead: TMAO miscompartmentalization has been linked to
+          impaired chaperoning of PST-M/PST-P enzyme function, and urea administration restored
+          biochemical parameters and improved behavior in a rat ASD model (Launay et al., <em>iScience</em>,
+          2026) — not yet tested in humans or specifically for p-cresol clearance, but the first evidence
+          that this kind of enzyme dysfunction may be reversible in principle. Flagged as an emerging
+          research direction, not a treatment.<br><br>
+          See the free p-cresol:PCS ratio and platelet PST-P assay in
+          <a href="research/ida-testing-protocol.html" style="color:var(--teal);font-weight:600;">The IDA
+          Testing Protocol</a> for how this branch is identified.</div>
+        </td>
+        <td class="dose">
+          <em style="color:var(--muted);">Not applicable — no intervention proposed.</em>
+        </td>
+        <td><span class="ev-badge ev-animal">Animal / Preclinical</span><br><br>Mechanism only</td>
       </tr>
 
 
