@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The IDA Testing Protocol: Testing for Mechanism, Not Just Presence | Decoding Autism Now</title>
+<meta name="description" content="A six-axis testing panel operationalizing the testable predictions in The Anatomy of Autism — built to answer not just whether a gut-derived marker is elevated, but which specific mechanism is active, and what that means for treatment.">
+<link rel="canonical" href="https://decodingautismnow.com/research/ida-testing-protocol.html">
+<meta property="og:title" content="The IDA Testing Protocol: Testing for Mechanism, Not Just Presence | Decoding Autism Now">
+<meta property="og:description" content="A six-axis panel built to answer not just 'is something wrong' but 'which specific lesion, and what does that mean for treatment.'">
+<meta property="og:url" content="https://decodingautismnow.com/research/ida-testing-protocol.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://decodingautismnow.com/images/OG-testing-protocol.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy:#0f2342;
+    --teal:#1e6b72;
+    --teal-light:#2a9da6;
+    --gold:#c8923a;
+    --gold-light:#e8b86d;
+    --cream:#faf7f2;
+    --warm-white:#ffffff;
+    --text-dark:#1a1a2e;
+    --text-mid:#3d4560;
+    --text-light:#6b7494;
+    --rule:#d8cfc4;
+    --accent-bg:#eef8f9;
+    --gold-bg:#fdf6ec;
+  }
+
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Source Serif 4', Georgia, serif; background:var(--cream); color:var(--text-dark); font-size:17px; line-height:1.82; }
+
+  .topbar { position:fixed; top:0; left:0; right:0; z-index:1000; background:var(--navy); border-bottom:2px solid var(--gold); }
+  .topbar-inner { max-width:960px; margin:0 auto; padding:10px 20px; display:flex; justify-content:space-between; align-items:center; gap:18px; }
+  .topbar-brand { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--teal-light); margin-bottom:2px; }
+  .topbar-title { font-family:'Source Serif 4', serif; font-size:13px; font-weight:600; color:#fff; line-height:1.2; }
+  .topbar-back { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.7); text-decoration:none; border:1px solid rgba(255,255,255,.25); border-radius:3px; padding:5px 10px; white-space:nowrap; }
+  .topbar-back:hover { color:#fff; border-color:rgba(255,255,255,.5); }
+
+  .paper-hero { margin-top:57px; background:var(--navy); color:#fff; }
+  .hero-stripe { height:5px; background:linear-gradient(90deg,var(--teal) 0%,var(--teal-light) 50%,var(--gold) 100%); }
+  .hero-inner { max-width:840px; margin:0 auto; padding:60px 24px 48px; }
+  .hero-label { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--teal-light); margin-bottom:16px; }
+  .hero-title { font-family:'Playfair Display', serif; font-size:clamp(2.2rem,4.5vw,3.2rem); line-height:1.1; font-weight:700; color:#fff; margin-bottom:10px; }
+  .hero-subtitle { font-family:'Playfair Display', serif; font-size:1.1rem; font-style:italic; color:var(--gold-light); margin-bottom:28px; font-weight:400; }
+  .hero-meta { display:flex; flex-wrap:wrap; gap:20px; align-items:flex-start; }
+  .hero-meta-block { }
+  .meta-label { font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.45); margin-bottom:4px; }
+  .meta-value { font-family:'Source Serif 4', serif; font-size:.92rem; color:rgba(255,255,255,.85); }
+  .hero-status { display:inline-block; margin-top:24px; font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:rgba(232,184,109,.82); border:1px solid rgba(232,184,109,.35); border-radius:3px; padding:5px 12px; }
+
+  .companion-notice { background:rgba(30,107,114,0.07); border-top:1px solid rgba(30,107,114,0.2); border-bottom:1px solid rgba(30,107,114,0.2); }
+  .companion-inner { max-width:840px; margin:0 auto; padding:14px 24px; font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.08em; color:var(--teal); }
+  .companion-inner a { color:var(--teal); }
+
+  .toc-wrap { background:var(--warm-white); border-bottom:2px solid var(--rule); }
+  .toc-inner { max-width:840px; margin:0 auto; padding:28px 24px; }
+  .toc-label { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--text-light); margin-bottom:16px; }
+  .toc-list { list-style:none; columns:2; column-gap:32px; }
+  .toc-list li { break-inside:avoid; margin-bottom:6px; }
+  .toc-list a { font-family:'Source Serif 4', serif; font-size:.85rem; color:var(--teal); text-decoration:none; display:flex; gap:8px; align-items:baseline; }
+  .toc-list a:hover { color:var(--navy); }
+  .toc-num { font-family:'DM Mono', monospace; font-size:10px; color:var(--gold); flex-shrink:0; min-width:22px; }
+
+  .paper-wrap { max-width:840px; margin:0 auto; padding:60px 24px 100px; }
+
+  .paper-section { margin-bottom:64px; scroll-margin-top:20px; }
+  h2.section-heading { font-family:'Playfair Display', serif; font-size:1.65rem; font-weight:700; color:var(--navy); line-height:1.2; margin-bottom:20px; padding-bottom:16px; border-bottom:2px solid var(--rule); }
+  h3.sub-heading { font-family:'Playfair Display', serif; font-size:1.15rem; font-weight:600; color:var(--navy); margin:28px 0 12px; line-height:1.3; }
+
+  p { color:var(--text-mid); margin-bottom:16px; }
+  p:last-child { margin-bottom:0; }
+  strong { color:var(--navy); font-weight:600; }
+  em { color:var(--text-mid); }
+  a { color:var(--teal); text-decoration:none; border-bottom:1px solid rgba(30,107,114,.3); }
+  a:hover { color:var(--navy); border-bottom-color:var(--navy); }
+
+  .callout-bold { background:var(--navy); color:#fff; border-radius:6px; padding:20px 24px; margin:24px 0; font-family:'Playfair Display', serif; font-style:italic; font-size:1.05rem; line-height:1.65; color:rgba(255,255,255,.9); }
+  .callout-gold { background:var(--gold-bg); border-left:3px solid var(--gold); border-radius:0 6px 6px 0; padding:14px 18px; margin:20px 0; font-size:.95rem; }
+  .callout-gold p { color:#5a3e1a!important; margin:0!important; }
+
+  .state-table-wrap { overflow-x:auto; margin:20px 0; }
+  .state-table { width:100%; border-collapse:collapse; font-size:.85rem; }
+  .state-table th { background:var(--navy); color:#fff; font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.12em; text-transform:uppercase; padding:10px 14px; text-align:left; font-weight:500; }
+  .state-table td { padding:12px 14px; border-bottom:1px solid var(--rule); color:var(--text-mid); vertical-align:top; line-height:1.55; }
+  .state-table tr:nth-child(odd) td { background:var(--warm-white); }
+  .state-table tr:nth-child(even) td { background:var(--cream); }
+  .state-name { font-family:'DM Mono', monospace; font-size:10px; font-weight:600; color:var(--navy); display:block; margin-bottom:4px; }
+  .table-caption { font-family:'Source Serif 4', serif; font-size:.82rem; color:var(--text-light); font-style:italic; margin-top:10px; line-height:1.6; }
+  .tier-tag { font-family:'DM Mono', monospace; font-size:.75rem; color:var(--teal); font-style:italic; }
+
+  .companion-note { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.1em; color:var(--text-light); margin-top:24px; }
+
+  .paper-footer { background:var(--navy); }
+  .footer-stripe { height:5px; background:linear-gradient(90deg,var(--teal) 0%,var(--teal-light) 50%,var(--gold) 100%); }
+  .footer-inner { max-width:840px; margin:0 auto; padding:40px 24px 32px; }
+  .footer-cite { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.1em; color:rgba(255,255,255,.45); line-height:1.8; margin-bottom:20px; }
+  .footer-links { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
+  .footer-link { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.75); text-decoration:none; border:1px solid rgba(255,255,255,.2); border-radius:3px; padding:6px 12px; }
+  .footer-link:hover { color:#fff; border-color:rgba(255,255,255,.45); }
+  .footer-meta { font-family:'DM Mono', monospace; font-size:.72rem; color:rgba(255,255,255,.3); line-height:1.7; }
+
+  @media (max-width:680px) {
+    .toc-list { columns:1; }
+    .hero-meta { flex-direction:column; gap:12px; }
+    h2.section-heading { font-size:1.3rem; }
+  }
+  @media print {
+    .topbar { display:none; }
+    .paper-hero { margin-top:0; }
+    body { font-size:11pt; }
+    h2.section-heading { page-break-after:avoid; }
+    .paper-section { page-break-inside:avoid; }
+  }
+</style>
+
+<script defer src="https://cloud.umami.is/script.js" data-website-id="294ecd79-19fb-4267-9be2-a7c83d57274d"></script>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://decodingautismnow.com/images/OG-testing-protocol.png">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <div class="topbar-brand">Decoding Autism Now</div>
+      <div class="topbar-title">The IDA Testing Protocol — Research Article</div>
+    </div>
+    <a class="topbar-back" href="../research/research-articles.html">← Research</a>
+  </div>
+</div>
+
+<div class="paper-hero">
+  <div class="hero-stripe"></div>
+  <div class="hero-inner">
+    <div class="hero-label">Decoding Autism Now · Research Article</div>
+    <h1 class="hero-title">The IDA Testing Protocol: Testing for Mechanism, Not Just Presence</h1>
+    <p class="hero-subtitle">A six-axis panel built to answer not just "is something wrong" but "which specific lesion, and what does that mean for treatment"</p>
+    <div class="hero-meta">
+      <div class="hero-meta-block">
+        <div class="meta-label">Authors</div>
+        <div class="meta-value">Quay Stoner — Decoding Autism Now</div>
+      </div>
+      <div class="hero-meta-block">
+        <div class="meta-label">Companion to</div>
+        <div class="meta-value">The Anatomy of Immune-Derived Autism (AofA)</div>
+      </div>
+      <div class="hero-meta-block">
+        <div class="meta-label">Date</div>
+        <div class="meta-value">September 2026</div>
+      </div>
+      <div class="hero-meta-block">
+        <div class="meta-label">Site</div>
+        <div class="meta-value">decodingautismnow.com</div>
+      </div>
+    </div>
+    <div class="hero-status">Research article — operationalizing AofA's testable predictions</div>
+  </div>
+</div>
+
+<div class="companion-notice">
+  <div class="companion-inner">Companion document: <a href="anatomy-of-autism.html"><em>The Anatomy of Immune-Derived Autism</em></a> — this article operationalizes AofA's eleven testable predictions into a working diagnostic panel.</div>
+</div>
+
+<nav class="toc-wrap" aria-label="Contents">
+  <div class="toc-inner">
+    <p class="toc-label">Contents</p>
+    <ul class="toc-list">
+      <li><a href="#intro"><span class="toc-num">—</span>From Hypothesis to Panel</a></li>
+      <li><a href="#panel"><span class="toc-num">1</span>Six Axes, Twenty-One Markers</a></li>
+      <li><a href="#worked-example"><span class="toc-num">2</span>A Worked Example: p-Cresol</a></li>
+      <li><a href="#other-work"><span class="toc-num">3</span>Other Work in This Space</a></li>
+      <li><a href="#principle"><span class="toc-num">4</span>The Principle Across All Six Axes</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="paper-wrap">
+
+  <section id="intro" class="paper-section">
+    <h2 class="section-heading">From Hypothesis to Panel</h2>
+    <p><em>The Anatomy of Autism</em> (AofA) lays out the Immune-Derived Autism (IDA) framework as a set of testable predictions — specific, falsifiable claims about what should be measurable in a child's blood, urine, or platelets if the model is correct. The testing protocol below is the direct operational extension of that work: a panel built to test those predictions in practice, organized around the same six biological axes the framework identifies as independently contributing to the IDA cascade.</p>
+    <p>The organizing principle throughout is the same one that runs through AofA itself: autism is not one biological event, and a single marker rarely tells the whole story. Different children may be driven by different combinations of these six systems — which is why the panel is built in axes, not as one pass/fail test.</p>
+  </section>
+
+  <section id="panel" class="paper-section">
+    <h2 class="section-heading">Six Axes, Twenty-One Markers</h2>
+    <p>Table 1 summarizes the panel. Each marker's evidence tier follows AofA's own four-level grading (Level 1: multiple independent human ASD cohorts; Level 2: established molecular biology with ASD application; Level 3: in vitro/indirect evidence; Level 4: mechanistically plausible, not yet prospectively tested), plus two additional statuses for markers not yet at Level 1: <em>testable prediction</em> (specific, model-generated, not yet run) and <em>hypothesis-stage</em> (proposed but not yet validated in this population).</p>
+
+    <div class="state-table-wrap">
+      <table class="state-table">
+        <thead>
+          <tr>
+            <th style="width:15%">Axis</th>
+            <th style="width:33%">What it looks for</th>
+            <th style="width:13%">Sample</th>
+            <th style="width:39%">Representative markers</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="state-name">Immune / Kynurenine</span></td>
+            <td>Immune activation driving a specific pathway (IDO1/kynurenine) known to silence a key inhibitory brain signal</td>
+            <td>Blood</td>
+            <td>K:T ratio, cytokine panel, autoantibody panel, QUIN/KYNA ratio <span class="tier-tag">(Level 1)</span></td>
+          </tr>
+          <tr>
+            <td><span class="state-name">Mitochondrial / Energetic</span></td>
+            <td>Whether cellular energy production is under strain, compounding immune effects</td>
+            <td>Blood</td>
+            <td>Lactate:pyruvate ratio, plasma NAD⁺ <span class="tier-tag">(Level 2–3)</span></td>
+          </tr>
+          <tr>
+            <td><span class="state-name">Methylation / Catecholamine</span></td>
+            <td>Gut-derived compounds interfering with dopamine/norepinephrine production, and the body's capacity to clear them</td>
+            <td>Blood, urine</td>
+            <td>SAM/SAH ratio, p-cresol, p-cresyl sulfate, PST-P activity <span class="tier-tag">(Level 1)</span>; free p-cresol:PCS ratio <span class="tier-tag">(testable prediction)</span></td>
+          </tr>
+          <tr>
+            <td><span class="state-name">Astrocyte / Neurotrophic</span></td>
+            <td>Whether brain support cells have shifted into a reactive, less protective state</td>
+            <td>Blood, CSF</td>
+            <td>BDNF, hevin/SPARCL1 expression, A1 astrocyte markers <span class="tier-tag">(Level 2)</span></td>
+          </tr>
+          <tr>
+            <td><span class="state-name">Gut Hormone / Appetite</span></td>
+            <td>Whether distinct appetite patterns reflect two different underlying immune subtypes</td>
+            <td>Blood</td>
+            <td>Whole-blood serotonin, fasting acyl ghrelin, fasting GLP-1 <span class="tier-tag">(hypothesis-stage)</span></td>
+          </tr>
+          <tr>
+            <td><span class="state-name">GI Enzymatic</span></td>
+            <td>Whether a specific enzyme deficiency is allowing food-derived peptides to build up and act on the brain</td>
+            <td>Blood</td>
+            <td>DPP-IV activity <span class="tier-tag">(Level 1)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-caption"><em>Table 1. The IDA testing panel across six biological axes. Evidence tiers follow AofA's four-level grading (see AofA, Limitations and Scope). K:T, kynurenine-to-tryptophan ratio; PCS, p-cresyl sulfate; PST-P, phenol sulfotransferase (phenol-sulfating isoform); QUIN/KYNA, quinolinic acid/kynurenic acid ratio.</em></p>
+
+    <p>Each axis identifies a distinct, independently actionable finding — a child can test positive on one axis and not another, and the model predicts that different combinations call for different treatment emphasis, not a single uniform protocol.</p>
+  </section>
+
+  <section id="worked-example" class="paper-section">
+    <h2 class="section-heading">A Worked Example: Why "Elevated" Isn't the End of the Question</h2>
+    <p>The Methylation/Catecholamine axis illustrates a principle that applies across the whole panel, and it's worth walking through in detail because it's the clearest case where a single number can actively mislead.</p>
+
+    <p>p-Cresol is produced when gut bacteria ferment the amino acid tyrosine that escaped digestion. The body converts most of it into p-cresyl sulfate (PCS) for excretion — in fact, free p-cresol is barely measurable in urine at all; the detectable pool is almost entirely the converted form. Both forms reach the brain and directly interfere with the enzymes that produce dopamine and norepinephrine.</p>
+
+    <p>This is not an isolated case. The same pepsin-failure mechanism that lets undigested tyrosine reach the colon also lets undigested phenylalanine reach it — and gut bacteria degrade each along its own path: tyrosine to p-cresol and p-cresyl sulfate, phenylalanine to phenylacetic acid and phenylacetylglutamine. AofA's precursor-starvation mechanism already names both amino acids as jointly depleted; the metabolite side of the picture follows the same shared substrate. Phenylalanine-derived metabolites are not yet part of the formal panel above, but the same upstream/downstream question the p-cresol work raises should apply to them as well, and we expect to extend the Methylation/Catecholamine axis to include them as that work develops.</p>
+
+    <p>Here is the part a single "elevated p-cresol" reading cannot resolve:</p>
+
+    <div class="state-table-wrap">
+      <table class="state-table">
+        <thead>
+          <tr>
+            <th style="width:40%">Question</th>
+            <th style="width:24%">Single elevated reading</th>
+            <th style="width:36%">Full panel (ratio + PST-P)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Is gut-derived catecholamine risk present?</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Is the cause too much production (substrate/bacterial), or too little clearance?</td>
+            <td>Cannot tell</td>
+            <td>Yes — free p-cresol:PCS ratio</td>
+          </tr>
+          <tr>
+            <td>Is the body's own clearance capacity (PST-P enzyme) working?</td>
+            <td>Cannot tell</td>
+            <td>Yes — direct platelet assay</td>
+          </tr>
+          <tr>
+            <td>Does this map to an actual catecholamine synthesis problem?</td>
+            <td>Cannot tell</td>
+            <td>Yes — paired with DBH activity</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-caption"><em>Table 2. What a single elevated reading can and cannot resolve, versus the full panel. Phenylalanine's parallel bacterial metabolites — phenylacetic acid and phenylacetylglutamine — raise the same upstream/downstream question and are candidates for future inclusion in this axis.</em></p>
+
+    <p>A child whose p-cresol is elevated because of excess bacterial production, and a child whose p-cresol is elevated because their sulfation capacity can't keep up, will show the identical single number — but they need different treatment. The first points toward diet and gut microbiome composition. The second points toward supporting clearance capacity directly; treating the gut in that child addresses nothing, because the gut was never the bottleneck.</p>
+  </section>
+
+  <section id="other-work" class="paper-section">
+    <h2 class="section-heading">Other Work in This Space</h2>
+    <p>Multi-metabolite urinary screening for autism has advanced meaningfully in the past year. Flynn, Adams, and colleagues at Arizona State University have published both a comprehensive review of p-cresol's effects in autism and a multi-site study proposing a diagnostic approach — the "MDM System™" — that classifies children by counting how many of over twenty gut-derived metabolites exceed a healthy reference range, reporting strong sensitivity and specificity in their cohort. Their own data, notably, found phenylacetylglutamine among the metabolites with the strongest separation between ASD and typically developing children — independent confirmation that this second amino acid pathway matters too. This is genuine, valuable progress toward objective biomarkers in a field that has relied entirely on behavioral diagnosis.</p>
+
+    <p>That work and the panel described here were developed independently and answer different questions. The MDM System™ is built to detect whether elevated gut-derived metabolite burden is present. It does not distinguish, for any individual elevated metabolite, whether that elevation reflects excess production or impaired clearance — free p-cresol and p-cresyl sulfate are counted as separate, independent markers rather than interpreted as a ratio.</p>
+  </section>
+
+  <section id="principle" class="paper-section">
+    <h2 class="section-heading">The Principle Across All Six Axes</h2>
+    <div class="callout-bold">
+      The same logic that applies to p-cresol — and, we expect, to its phenylalanine-derived counterparts — applies to every axis in the panel: a positive result identifies that something is active. It does not, by itself, identify which specific mechanism is responsible or what should be done about it. That second layer — mechanism, not just presence — is what the full IDA testing protocol is built to provide, and why it's structured as six independent axes rather than a single combined score.
+    </div>
+    <p class="companion-note">This article describes a hypothesis-generating diagnostic framework. Several markers above are Level 1–2 evidence from independent human cohort studies; others are testable predictions or hypothesis-stage proposals not yet validated in this population, as indicated throughout. Educational content — not a substitute for individualized medical advice. Full mechanistic basis, evidence-level rationale, and citations: <em>The Anatomy of Autism</em>.</p>
+  </section>
+
+</main>
+
+<footer class="paper-footer">
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-cite">Suggested citation:<br>Stoner Q. The IDA Testing Protocol: Testing for Mechanism, Not Just Presence. Decoding Autism Now. decodingautismnow.com. 2026.</div>
+    <div class="footer-links">
+      <a class="footer-link" href="../research/research-articles.html">← Research Hub</a>
+      <a class="footer-link" href="anatomy-of-autism.html">The Anatomy of Autism</a>
+      <a class="footer-link" href="../contact.html">Contact</a>
+      <a class="footer-link" href="../07_Testing_Strategy_Biology_of_Autism.html">Testing Strategy</a>
+      <a class="footer-link" href="../10_Evidence_and_Citations_Biology_of_Autism.html">Evidence &amp; Citations</a>
+    </div>
+    <div class="footer-meta">© 2026 Decoding Autism Now · CC BY-NC 4.0 · decodingautismnow.com</div>
+  </div>
+</footer>
+
+</body>
+</html>
