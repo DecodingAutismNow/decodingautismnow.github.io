@@ -94,12 +94,13 @@
   .body-list li { margin-bottom:8px; }
   p:last-child { margin-bottom:0; }
   strong { color:var(--navy); font-weight:600; }
+  .callout-bold strong, .callout-bold em { color:rgba(255,255,255,.9); }
   em { color:var(--text-mid); }
   a { color:var(--teal); text-decoration:none; border-bottom:1px solid rgba(30,107,114,.3); }
   a:hover { color:var(--navy); border-bottom-color:var(--navy); }
 
   /* CALLOUT */
-  .callout-bold { background:var(--navy); color:#fff; border-radius:6px; padding:20px 24px; margin:24px 0; font-family:'Playfair Display', serif; font-style:italic; font-size:1.05rem; line-height:1.65; color:rgba(255,255,255,.9); }
+  .callout-bold { background:var(--navy); color:rgba(255,255,255,.9); border-radius:6px; padding:20px 24px; margin:24px 0; font-family:'Playfair Display', serif; font-style:italic; font-size:1.05rem; line-height:1.65; }
   .callout-teal { background:var(--accent-bg); border-left:3px solid var(--teal); border-radius:0 6px 6px 0; padding:14px 18px; margin:20px 0; font-size:.95rem; }
   .callout-teal p { color:var(--text-mid)!important; margin:0!important; }
   .callout-gold { background:var(--gold-bg); border-left:3px solid var(--gold); border-radius:0 6px 6px 0; padding:14px 18px; margin:20px 0; font-size:.95rem; }
@@ -156,7 +157,7 @@
 
   /* FIGURES + V17d ADDITIONS */
   .paper-figure { margin:28px 0 32px; }
-  .paper-figure a { border-bottom:none; display:block; }
+  .paper-figure > a { border-bottom:none; display:block; }
   .paper-figure img { display:block; width:100%; max-width:100%; height:auto; border:1px solid var(--rule); border-radius:6px; background:#fff; }
   .paper-figure figcaption { font-family:'Source Serif 4', serif; font-size:.82rem; color:var(--text-light); font-style:italic; margin-top:10px; line-height:1.6; }
   .state-table tr.row-speculative td { background:var(--gold-bg) !important; }
