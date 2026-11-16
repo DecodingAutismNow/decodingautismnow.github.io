@@ -4,15 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | Decoding Autism Now</title>
-<meta name="description" content="Get in touch with Decoding Autism Now — for families, clinicians, researchers, and collaboration inquiries.">
+<meta name="description" content="Get in touch with Decoding Autism Now — contact details for the website and the IMIG clinical trial.">
 <meta property="og:title" content="Contact | Decoding Autism Now">
-<meta property="og:description" content="Get in touch with Decoding Autism Now — for families, clinicians, researchers, and collaboration inquiries.">
+<meta property="og:description" content="Get in touch with Decoding Autism Now — contact details for the website and the IMIG clinical trial.">
 <meta property="og:image" content="https://decodingautismnow.com/images/OG-index.png">
 <meta property="og:url" content="https://decodingautismnow.com/contact.html">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://decodingautismnow.com/images/OG-index.png">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="site-header.css">
 <style>
   :root {
     --navy:       #0f2342;
@@ -599,88 +600,36 @@
   <div class="header-stripe"></div>
   <div class="header-inner">
     <div class="header-eyebrow">Decoding Autism Now</div>
-    <h1 class="hero-title">Get in touch<span class="accent-line">We read every message</span></h1>
-    <p class="header-subtitle">Whether you are a family navigating a new diagnosis, a clinician with a clinical question, or a researcher interested in the IDA framework — there is a place for your inquiry here.</p>
+    <h1 class="hero-title">Get in touch<span class="accent-line">Reach us directly</span></h1>
+    <p class="header-subtitle">For questions about the website or the framework, contact Quay Stoner. For the IMIG clinical trial, contact Dr. Pieter Fourie.</p>
   </div>
 </header>
 
 <main class="main-wrap">
 
-  <div class="inquiry-intro">
-    <h2>What brings you here?</h2>
-    <p>Select the category that best fits your inquiry. This helps us direct your message to the right person and respond more usefully.</p>
-  </div>
-
-  <!-- Inquiry type selector -->
-  <div class="inquiry-types" id="inquiryTypes">
-    <label class="inquiry-card selected" id="card-family">
-      <input type="radio" name="inquiry_type" value="Family / Parent" checked>
-      <span class="inquiry-icon">👨‍👩‍👧</span>
-      <span class="inquiry-label">Family / Parent</span>
-      <span class="inquiry-desc">Questions about the IDA framework, the cascade, supplements, or finding a clinician familiar with this approach.</span>
-    </label>
-    <label class="inquiry-card" id="card-clinician">
-      <input type="radio" name="inquiry_type" value="Clinician / Researcher">
-      <span class="inquiry-icon">🔬</span>
-      <span class="inquiry-label">Clinician / Researcher</span>
-      <span class="inquiry-desc">Scientific questions, clinical implementation, or interest in the research program and framework documentation.</span>
-    </label>
-    <label class="inquiry-card" id="card-collab">
-      <input type="radio" name="inquiry_type" value="Collaboration / Media">
-      <span class="inquiry-icon">🤝</span>
-      <span class="inquiry-label">Collaboration / Media</span>
-      <span class="inquiry-desc">Research collaboration, speaking, media inquiries, or partnership opportunities related to the IDA program.</span>
-    </label>
-  </div>
-
-  <!-- Contact form -->
+  <!-- Direct contact (no web form: nothing is collected or sent through a third-party service) -->
   <div class="form-col">
-    <form id="contactForm" action="https://formspree.io/f/xqevnbyj" method="POST">
 
-      <!-- Hidden field carries the selected inquiry type -->
-      <input type="hidden" name="inquiry_type" id="hiddenInquiryType" value="Family / Parent">
-
-      <div class="form-row">
-        <div class="form-group">
-          <label for="firstName">First name *</label>
-          <input type="text" id="firstName" name="first_name" required placeholder="First name">
-        </div>
-        <div class="form-group">
-          <label for="lastName">Last name *</label>
-          <input type="text" id="lastName" name="last_name" required placeholder="Last name">
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="email">Email address *</label>
-        <input type="email" id="email" name="email" required placeholder="your@email.com">
-      </div>
-
-      <div class="form-group">
-        <label for="subject">Subject *</label>
-        <input type="text" id="subject" name="subject" required placeholder="Brief description of your inquiry">
-      </div>
-
-      <div class="form-group">
-        <label for="message">Message *</label>
-        <textarea id="message" name="message" required placeholder="Please share as much context as you find helpful. For families, including your child's age and primary concerns helps us respond more usefully."></textarea>
-      </div>
-
-      <!-- Honeypot anti-spam field — hidden from humans -->
-      <input type="text" name="_gotcha" style="display:none">
-
-      <!-- Formspree redirect after submission -->
-      <input type="hidden" name="_next" value="https://decodingautismnow.com/contact-thanks.html">
-
-      <button type="submit" class="submit-btn" id="submitBtn">Send message</button>
-
-    </form>
-
-    <!-- Success message shown via JS if no redirect -->
-    <div class="form-success" id="formSuccess">
-      <h3>Message received</h3>
-      <p>Thank you for reaching out. We read every message and will respond as promptly as we can — typically within a few business days.</p>
+    <div class="info-block">
+      <div class="info-block-label">General &amp; science communication</div>
+      <h3>Quay Stoner</h3>
+      <p>Founder, Decoding Autism Now. Questions about the website, the framework documentation, collaboration, or media.</p>
+      <p><a href="mailto:quay@decodingautismnow.com">quay@decodingautismnow.com</a></p>
     </div>
+
+    <div class="info-block">
+      <div class="info-block-label">Clinical trial &amp; clinical questions</div>
+      <h3>Dr. Pieter Rousseau Fourie</h3>
+      <p>Principal Investigator, IMIG controlled pilot study. Funders, physicians, researchers and press interested in the trial or in clinical protocol details, and anyone with a speaking or presentation request, should contact Dr. Fourie directly. Details are on the <a href="imig/contact.html">IMIG Trial contact page</a>.</p>
+      <p><a href="mailto:pieter@innovation4life.com">pieter@innovation4life.com</a></p>
+    </div>
+
+    <div class="info-block">
+      <div class="info-block-label">Privacy</div>
+      <h3>Please keep medical details out of email</h3>
+      <p>This site has no contact form and stores no messages. If you write to us by email, please do not include personal medical information.</p>
+    </div>
+
   </div>
 
   <!-- Sidebar info -->
@@ -691,10 +640,6 @@
       <h3>Decoding Autism Now</h3>
       <p>Decoding Autism Now publishes the Biology of Autism (BoA) / Immune-Derived Autism (IDA) framework — a systems-biology cascade model connecting gut pH dysregulation, immune activation, IDO1/kynurenine pathway dysregulation, SST-14 interneuron suppression, and neuropeptide cascade failure to the observable ASD phenotype.</p>
       <p>All framework documentation is available at no cost at <a href="index.html">decodingautismnow.com</a>.</p>
-      <div class="response-time">
-        <span class="response-dot"></span>
-        Typical response: within a few business days
-      </div>
     </div>
 
     <div class="info-block">
@@ -771,20 +716,6 @@
     document.addEventListener('keydown', function(e){ if (e.key==='Escape') closeNav(); });
   }
 
-  // Inquiry type card selection
-  var cards = document.querySelectorAll('.inquiry-card');
-  var hiddenField = document.getElementById('hiddenInquiryType');
-  cards.forEach(function(card) {
-    card.addEventListener('click', function() {
-      cards.forEach(function(c){ c.classList.remove('selected'); });
-      card.classList.add('selected');
-      var radio = card.querySelector('input[type="radio"]');
-      if (radio) {
-        radio.checked = true;
-        hiddenField.value = radio.value;
-      }
-    });
-  });
 })();
 </script>
 </body>

@@ -1,0 +1,61 @@
+/* Shared page-header standard for Decoding Autism Now.
+   Loaded after each page's own styles so every title block looks the same.
+   Reference design: 09_FAQ (Playfair Display title, gold slanted second line, light Source Serif subtitle). */
+
+/* ---- Title (all page types) ---- */
+.site-header h1,
+section.hero h1,
+.hero-inner h1 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: clamp(2rem, 4.4vw, 3rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.12 !important;
+  color: #fff !important;
+  margin-bottom: 10px !important;
+}
+
+/* ---- Gold second line of the title ---- */
+.site-header h1 > span,
+.site-header h1 > em,
+section.hero h1 > span,
+section.hero h1 > em {
+  display: block !important;
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  color: #e8b86d !important;
+}
+
+/* ---- Subtitle under the title (series pages) ---- */
+.site-header .header-sub,
+.site-header .header-subtitle,
+.site-header .hero-sub,
+.site-header .hero-subtitle,
+.site-header .hero-tagline,
+section.hero .header-sub,
+section.hero .header-subtitle,
+section.hero .hero-sub,
+section.hero .hero-subtitle,
+section.hero .hero-tagline {
+  font-family: 'Source Serif 4', Georgia, serif !important;
+  font-style: italic !important;
+  font-weight: 300 !important;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  color: rgba(255, 255, 255, 0.68) !important;
+  max-width: 640px !important;
+  margin-bottom: 18px !important;
+}
+
+/* ---- Research papers using the series header (L1-79, NAG/AG):
+   gold line matches the paper-hero subtitle on the other research pages ---- */
+.site-header h1.paper-title > span {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  font-size: 1.1rem !important;
+  line-height: 1.5 !important;
+  color: #e8b86d !important;
+  margin-top: 10px !important;
+  margin-bottom: 18px !important;
+}
